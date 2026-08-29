@@ -1,0 +1,57 @@
+/* ============================================================
+   PALETA PERSONALIZADA: DUOC ARQUITETURA & ENGENHARIA
+   Tema Dark Base + Acentos em Dourado Ocre (#DAA520)
+   ============================================================ */
+
+:root,
+[data-md-color-scheme="slate"] {
+  /* Dourado Ocre do cliente */
+  --duoc-gold: #DAA520;
+  --duoc-gold-hover: #b8860b;
+  --duoc-gold-light: rgba(218, 165, 32, 0.15);
+
+  /* Sobrescrevendo variáveis do Material for MkDocs */
+  --md-primary-fg-color: #16181d;          /* Header e topo escuro sofisticado */
+  --md-primary-fg-color--light: #20242c;
+  --md-primary-fg-color--dark: #0f1013;
+
+  --md-accent-fg-color: var(--duoc-gold);  /* Elementos interativos e botões */
+  --md-accent-fg-color--transparent: var(--duoc-gold-light);
+
+  --md-typeset-a-color: var(--duoc-gold);  /* Links no texto */
+}
+
+/* Realce dourado na aba de navegação ativa */
+.md-tabs__link--active,
+.md-nav__link--active {
+  color: var(--duoc-gold) !important;
+  font-weight: 600;
+}
+
+/* Linha inferior indicadora de aba */
+.md-tabs__link--active {
+  border-bottom: 2px solid var(--duoc-gold);
+}
+
+/* Botões estilizados com o Dourado DUOC */
+.md-button--primary {
+  background-color: var(--duoc-gold) !important;
+  border-color: var(--duoc-gold) !important;
+  color: #121212 !important;
+  font-weight: 700;
+}
+
+.md-button--primary:hover {
+  background-color: var(--duoc-gold-hover) !important;
+  border-color: var(--duoc-gold-hover) !important;
+}
+
+/* Admonitions/Avisos customizados com a cor do cliente */
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: var(--duoc-gold);
+}
+.md-typeset .tip > .admonition-title,
+.md-typeset .tip > summary {
+  background-color: var(--duoc-gold-light);
+}
