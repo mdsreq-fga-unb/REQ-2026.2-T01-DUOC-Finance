@@ -1,7 +1,7 @@
 # 2. Solução Proposta
 
 ## 2.1 Objetivo Geral do Produto
-O objetivo geral deste projeto é otimizar e reestruturar os fluxos operacionais, gerenciais e de pessoal da DUOC Arquitetura e Engenharia, mitigando a fragmentação de dados, retrabalho administrativo e riscos de passivos trabalhistas por meio de uma solução digital integrada de Departamento Pessoal e Gestão Financeira. Com essa iniciativa, busca-se estabelecer o controle preciso de custos de mão de obra por contrato (via registro estruturado de RVT) e assegurar a governança e conformidade legal das operações da empresa, servindo como uma alavanca estratégica de eficiência e rentabilidade para os sócios da organização.
+O objetivo geral deste projeto é prover visibilidade financeira e conformidade trabalhista à DUOC por meio da centralização e correlação direta do registro de horas técnicas (RVT) com o custo real de pessoal por contrato.
 
 ---
 

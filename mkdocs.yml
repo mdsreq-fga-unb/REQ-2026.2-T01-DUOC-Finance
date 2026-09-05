@@ -32,6 +32,7 @@ extra_css:
 
 markdown_extensions:
   - admonition
+  - md_in_html
   - pymdownx.details
   - pymdownx.superfences
   - tables
@@ -42,4 +43,5 @@ nav:
   - Visão do Produto e Projeto:
       - Visão Geral: visao-produto/index.md
       - 1. Cenário Atual do Cliente e do Negócio: visao-produto/cap-1.md
+      - 1.4 Problema e Diagrama de Ishikawa: visao-produto/capitulo-1/1.4-problema-ishikawa.md
       - 2. Solução Proposta: visao-produto/cap-2.md

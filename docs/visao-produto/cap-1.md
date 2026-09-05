@@ -27,19 +27,7 @@ A DUOC opera em um modelo híbrido e multidisciplinar, atendendo a projetos resi
 ---
 
 ## 1.4 Identificação da Oportunidade ou Problema
-A DUOC Arquitetura e Engenharia LTDA enfrenta uma expressiva complexidade técnica na execução de suas obras e projetos. No entanto, o crescimento acelerado de sua carteira de contratos evidenciou um gargalo administrativo e operacional crítico: a dependência de processos manuais e descentralizados para a gestão do tempo de trabalho das equipes (Relatório de Viagem Técnica RVT) e para o processamento financeiro corporativo. Atualmente, a coexistência de planilhas isoladas para o controle de Departamento Pessoal e de fluxo financeiro gera severas vulnerabilidades gerenciais, elevados riscos de passivos trabalhistas e a total impossibilidade de mapear a margem de lucro e o custo real de mão de obra técnica alocada em cada obra.
-
-<figure markdown="span">
-  ![Diagrama de Ishikawa - DUOC Finance](../assets/images/ishikawa.png){ width="90%" }
-  <figcaption>Figura 2: Diagrama de Causa e Efeito (Ishikawa) dos gargalos administrativos.</figcaption>
-</figure>
-
-A verdadeira oportunidade deste projeto consiste na reestruturação e na blindagem operacional das rotinas administrativas da DUOC, eliminando desperdício de tempo técnico, mitigando falhas de fechamento e provendo inteligência de negócios para a tomada de decisões estratégicas dos sócios. Esse objetivo será alcançado por meio da resolução sistêmica dos seguintes problemas fundamentais:
-
-* **Inconsistência Crônica de Dados:** A dispersão das informações operacionais em planilhas desconectadas para controle de ponto, concessão de férias e apuração de horas de campo (RVT) resulta em frequentes divergências de dados e redundância sistemática de lançamentos (retrabalho).
-* **Vulnerabilidade no Fechamento Financeiro:** O processamento manual da folha de pagamento, comissões por contrato, reembolsos de despesas e encargos trabalhistas/previdenciários expõe o escritório a erros de cálculo e potenciais autuações fiscais.
-* **Opacidade na Rentabilidade de Contratos:** A falta de integração entre a alocação de horas da equipe de engenharia/arquitetura e o fluxo de caixa administrativo impede a identificação precisa do custo real de cada projeto, dificultando a precificação de novos serviços.
-* **Fragilidade em Segurança da Informação e LGPD:** O tráfego de dados sensíveis (pessoais, contratuais e salariais) por canais informais (como e-mails e mensagens de WhatsApp) ocorre sem controle rígido de acesso, comprometendo a confidencialidade e violando as diretrizes legais da LGPD.
+O problema central é a inconsistência gerencial e a opacidade na apuração da rentabilidade de contratos da DUOC, causadas pela fragmentação dos registros operacionais (RVT e ponto) em ferramentas desconectadas. O detalhamento do problema, do Diagrama de Ishikawa e das suas causas está na [Seção 1.4 detalhada](capitulo-1/1.4-problema-ishikawa.md).
 
 ---
 
