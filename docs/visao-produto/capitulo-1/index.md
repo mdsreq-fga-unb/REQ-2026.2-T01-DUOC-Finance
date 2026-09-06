@@ -18,6 +18,5 @@ Para sustentar este diagnóstico, foram produzidos e integrados os seguintes art
 2. [1.2 Introdução ao Negócio e Contexto Operacional](1.2-negocio-contexto.md)
 3. [1.3 Rich Picture (Fluxo Sociotécnico)](1.3-rich-picture.md)
 4. [1.4 Declaração do Problema e Diagrama de Ishikawa](1.4-problema-ishikawa.md)
-5. [1.5 Desafios do Projeto](1.5-desafios-projeto.md)
-6. [1.6 Mapa de Stakeholders](1.6-mapa-stakeholders.md)
+5. [1.5 Desafios do Projeto e 1.6 Mapa de Stakeholders](1.5-desafios-stakeholders.md)
 7. [1.7 Segmentação de Clientes e Perfis de Interação](1.7-segmentacao.md)

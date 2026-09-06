@@ -49,8 +49,7 @@ nav:
     - '1.2 Introdução ao Negócio e Contexto Operacional': visao-produto/capitulo-1/1.2-negocio-contexto.md
     - '1.3 Rich Picture': visao-produto/capitulo-1/1.3-rich-picture.md
     - '1.4 Problema e Ishikawa': visao-produto/capitulo-1/1.4-problema-ishikawa.md
-    - '1.5 Desafios do Projeto': visao-produto/capitulo-1/1.5-desafios-projeto.md
-    - '1.6 Mapa de Stakeholders': visao-produto/capitulo-1/1.6-mapa-stakeholders.md
+    - '1.5 Desafios do Projeto e 1.6 Mapa de Stakeholders': visao-produto/capitulo-1/1.5-desafios-stakeholders.md
     - '1.7 Segmentação de Clientes': visao-produto/capitulo-1/1.7-segmentacao.md
   - 'Capítulo 2 - Solução Proposta':
     - 'Sobre o Capítulo': visao-produto/capitulo-2/index.md
