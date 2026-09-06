@@ -33,13 +33,50 @@ extra_css:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - tables
   - attr_list
 
 nav:
-  - Início: index.md
-  - Visão do Produto e Projeto:
-      - Visão Geral: visao-produto/index.md
-      - 1. Cenário Atual do Cliente e do Negócio: visao-produto/cap-1.md
-      - 2. Solução Proposta: visao-produto/cap-2.md
+  - Home: index.md
+  - 'Capítulo 1 - Cenário Atual':
+    - 'Sobre o Capítulo': visao-produto/capitulo-1/index.md
+    - '1.1 Identificação do Cliente': visao-produto/capitulo-1/1.1-cliente-negocio.md
+    - '1.2 Introdução ao Negócio e Contexto Operacional': visao-produto/capitulo-1/1.2-negocio-contexto.md
+    - '1.3 Rich Picture': visao-produto/capitulo-1/1.3-rich-picture.md
+    - '1.4 Problema e Ishikawa': visao-produto/capitulo-1/1.4-problema-ishikawa.md
+    - '1.5 Desafios do Projeto': visao-produto/capitulo-1/1.5-desafios-projeto.md
+    - '1.6 Mapa de Stakeholders': visao-produto/capitulo-1/1.6-mapa-stakeholders.md
+    - '1.7 Segmentação de Clientes': visao-produto/capitulo-1/1.7-segmentacao.md
+  - 'Capítulo 2 - Solução Proposta':
+    - 'Sobre o Capítulo': visao-produto/capitulo-2/index.md
+    - '2.1 e 2.2 Objetivos do produto': visao-produto/capitulo-2/2.1-2.2-objetivos.md
+    - '2.3 Características': visao-produto/capitulo-2/2.3-caracteristicas.md
+    - '2.4 Tecnologias': visao-produto/capitulo-2/2.4-tecnologias.md
+    - '2.5 Pesquisa de Merccado e Análise Competitiva': visao-produto/capitulo-2/2.5-pesquisa-mercado.md
+    - '2.6 Viabilidade da Proposta': visao-produto/capitulo-2/2.6-viabilidade-mvp.md
+    - '2.7 Benefícios Esperados': visao-produto/capitulo-2/2.7-beneficios.md
+  - 'Capítulo 3 - Intervenção Social':
+    - 'Sobre o Capítulo': intervencao-social/index.md
+    - '3.1 Impactos Pretendidos': intervencao-social/3.1-impactos-pretendidos.md
+    - '3.2 Efeitos Emergentes': intervencao-social/3.2-efeitos-emergentes.md
+  - 'Capítulo 4 - Estratégias de ESW':
+    - 'Sobre o Capítulo': estrategias-esw/index.md
+    - '4.1 Estratégia Priorizada': estrategias-esw/4.1-estrategia.md
+    - '4.2 Quadro Comparativo': estrategias-esw/4.2-quadro-comparativo.md
+    - '4.3 Justificativa': estrategias-esw/4.3-justificativa.md
+  - 'Capítulo 5 - Engenharia de Requisitos':
+    - 'Sobre o Capítulo': engenharia-requisitos/index.md
+    - '5.1 Atividades e Técnicas': engenharia-requisitos/5.1-atividades-tecnicas.md
+    - '5.2 Mapeamento ao Processo': engenharia-requisitos/5.2-mapeamento-processo.md
+  - 'Capítulo 6 - Cronograma': cronograma/index.md
+  - 'Capítulo 7 - Interação com Cliente':
+    - 'Sobre o Capítulo': interacao-cliente/index.md
+    - '7.1 Equipe e Comunicação': interacao-cliente/7.1-equipe-comunicacao.md
+    - '7.3 Processo de Validação': interacao-cliente/7.3-validacao.md
+  - 'Capítulo 11 - Lições Aprendidas': licoes-aprendidas/index.md
+  - 'Capítulo 12 - Referências': referencias/index.md
