@@ -1,0 +1,2824 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação de Requisitos de Software — DUOC Arquitetura e Engenharia">
+      
+      
+        <meta name="author" content="Equipe Cascata Ágil">
+      
+      
+      
+        <link rel="prev" href="../referencias/">
+      
+      
+        <link rel="next" href="reuniao-01/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Painel Geral de Atas - Cascata Ágil</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#painel-geral-de-atas-e-pautas-de-reunioes" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Cascata Ágil" class="md-header__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cascata Ágil
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Painel Geral de Atas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Alternar para modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Alternar para modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Cascata Ágil" class="md-nav__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Cascata Ágil
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 1 - Cenário Atual
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Capítulo 1 - Cenário Atual
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre o Capítulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-1/1.1-cliente-negocio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 Identificação do Cliente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-1/1.2-negocio-contexto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2 Introdução ao Negócio e Contexto Operacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-1/1.3-rich-picture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3 Rich Picture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-1/1.4-problema-ishikawa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4 Problema e Ishikawa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-1/1.5-desafios-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.5 Desafios do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-1/1.6-mapa-stakeholders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.6 Mapa de Stakeholders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-1/1.7-segmentacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.7 Segmentação de Clientes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 2 - Solução Proposta
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Capítulo 2 - Solução Proposta
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre o Capítulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-2/2.1-2.2-objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1 e 2.2 Objetivos do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-2/2.3-caracteristicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3 Características
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-2/2.4-tecnologias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4 Tecnologias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-2/2.5-pesquisa-mercado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5 Pesquisa de Mercado e Análise Competitiva
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-2/2.6-viabilidade-mvp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6 Viabilidade da Proposta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/capitulo-2/2.7-beneficios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7 Benefícios Esperados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 3 - Intervenção Social
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Capítulo 3 - Intervenção Social
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intervencao-social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre o Capítulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intervencao-social/3.1-impactos-pretendidos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.1 Impactos Pretendidos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intervencao-social/3.2-efeitos-emergentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.2 Efeitos Emergentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 4 - Estratégias de ESW
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Capítulo 4 - Estratégias de ESW
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estrategias-esw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre o Capítulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estrategias-esw/4.1-estrategia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1 Estratégia Priorizada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estrategias-esw/4.2-quadro-comparativo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2 Quadro Comparativo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estrategias-esw/4.3-justificativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.3 Justificativa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 5 - Engenharia de Requisitos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Capítulo 5 - Engenharia de Requisitos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engenharia-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre o Capítulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engenharia-requisitos/5.1-atividades-tecnicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.1 Atividades e Técnicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engenharia-requisitos/5.2-mapeamento-processo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.2 Mapeamento ao Processo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 6 - Cronograma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 7 - Interação com Cliente
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Capítulo 7 - Interação com Cliente
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interacao-cliente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre o Capítulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interacao-cliente/7.1-composicao-equipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.1 Composição da Equipe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interacao-cliente/7.2-comunicacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.2 Comunicação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interacao-cliente/7.3-validacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.3 Processo de Validação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 8 - Requisitos (Unidade 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dor-dod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 9 - DoR e DoD (Unidade 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 10 - Backlog (Unidade 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licoes-aprendidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 11 - Lições Aprendidas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../referencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 12 - Referências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atas de Reuniões
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atas de Reuniões
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painel Geral de Atas
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painel Geral de Atas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quadro-resumo-das-reunioes-realizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quadro Resumo das Reuniões Realizadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acesso-rapido-as-atas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acesso Rápido às Atas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consulta-unificada-por-abas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consulta Unificada por Abas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consulta Unificada por Abas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ata-da-reuniao-01-elicitacao-inicial-definicao-de-escopo-e-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ata da Reunião 01: Elicitação Inicial, Definição de Escopo e MVP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ata da Reunião 01: Elicitação Inicial, Definição de Escopo e MVP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-resumo-executivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Resumo Executivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-pautas-e-deliberacoes-centrais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Pautas e Deliberações Centrais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-proximas-etapas-e-acoes-imediatas-action-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Próximas Etapas e Ações Imediatas (Action Items)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-rastreabilidade-e-minutagem-da-reuniao-log-de-discussao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Rastreabilidade e Minutagem da Reunião (Log de Discussão)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ata-da-reuniao-02-alinhamento-metodologico-e-engenharia-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ata da Reunião 02: Alinhamento Metodológico e Engenharia de Requisitos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ata da Reunião 02: Alinhamento Metodológico e Engenharia de Requisitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pauta-1-diagnostico-do-cenario-atual-e-analise-sociotecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Pauta 1: Diagnóstico do Cenário Atual e Análise Sociotécnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-pauta-2-definicao-do-escopo-tecnico-do-mvp-e-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Pauta 2: Definição do Escopo Técnico do MVP e Arquitetura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-pauta-3-engenharia-de-requisitos-critica-dos-niveis-de-abstracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Pauta 3: Engenharia de Requisitos (Crítica dos Níveis de Abstração)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-pauta-4-decisoes-de-processo-e-stack-tecnologica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Pauta 4: Decisões de Processo e Stack Tecnológica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-pauta-5-governanca-do-repositorio-e-organizacao-do-trabalho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Pauta 5: Governança do Repositório e Organização do Trabalho
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-acoes-imediatas-action-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Ações Imediatas (Action Items)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reuniao-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 01 (05/09/2026)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reuniao-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 02 (07/09/2026)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entregas do Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entregas do Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painel Geral de Entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas/entrega-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 1 (Ponto de Controle 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas/entrega-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 2 (Ponto de Controle 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas/entrega-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 3 (Ponto de Controle 3)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas/entrega-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 4 (Ponto de Controle 4)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quadro-resumo-das-reunioes-realizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quadro Resumo das Reuniões Realizadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acesso-rapido-as-atas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acesso Rápido às Atas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consulta-unificada-por-abas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consulta Unificada por Abas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consulta Unificada por Abas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ata-da-reuniao-01-elicitacao-inicial-definicao-de-escopo-e-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ata da Reunião 01: Elicitação Inicial, Definição de Escopo e MVP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ata da Reunião 01: Elicitação Inicial, Definição de Escopo e MVP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-resumo-executivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Resumo Executivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-pautas-e-deliberacoes-centrais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Pautas e Deliberações Centrais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-proximas-etapas-e-acoes-imediatas-action-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Próximas Etapas e Ações Imediatas (Action Items)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-rastreabilidade-e-minutagem-da-reuniao-log-de-discussao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Rastreabilidade e Minutagem da Reunião (Log de Discussão)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ata-da-reuniao-02-alinhamento-metodologico-e-engenharia-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ata da Reunião 02: Alinhamento Metodológico e Engenharia de Requisitos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ata da Reunião 02: Alinhamento Metodológico e Engenharia de Requisitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pauta-1-diagnostico-do-cenario-atual-e-analise-sociotecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Pauta 1: Diagnóstico do Cenário Atual e Análise Sociotécnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-pauta-2-definicao-do-escopo-tecnico-do-mvp-e-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Pauta 2: Definição do Escopo Técnico do MVP e Arquitetura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-pauta-3-engenharia-de-requisitos-critica-dos-niveis-de-abstracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Pauta 3: Engenharia de Requisitos (Crítica dos Níveis de Abstração)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-pauta-4-decisoes-de-processo-e-stack-tecnologica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Pauta 4: Decisões de Processo e Stack Tecnológica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-pauta-5-governanca-do-repositorio-e-organizacao-do-trabalho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Pauta 5: Governança do Repositório e Organização do Trabalho
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-acoes-imediatas-action-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Ações Imediatas (Action Items)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegação" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Atas de Reuniões
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="painel-geral-de-atas-e-pautas-de-reunioes">Painel Geral de Atas e Pautas de Reuniões</h1>
+<p>Em conformidade com o modelo de governança e os ritos de comunicação formalizados no <a href="../interacao-cliente/7.2-comunicacao/">7.2 Comunicação</a> (notadamente a diretriz de <strong>Registro de Atas e Decisões</strong>), esta seção constitui o repositório oficial das atas de reunião, pautas prévias, deliberações de escopo e listas de ações imediatas (<em>Action Items</em>) acordadas entre a equipe <strong>Cascata Ágil</strong> e a cliente parceira <strong>Maria Beatryz Vieira de Sousa</strong>, bem como alinhamentos internos de engenharia da equipe.</p>
+<hr />
+<h2 id="quadro-resumo-das-reunioes-realizadas">Quadro Resumo das Reuniões Realizadas</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Reunião</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: left;">Natureza da Sessão</th>
+<th style="text-align: left;">Participantes Principais</th>
+<th style="text-align: left;">Principais Decisões e Entregas</th>
+<th style="text-align: center;">Ata Detalhada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Reunião 01</strong></td>
+<td style="text-align: center;">05/09/2026</td>
+<td style="text-align: left;">Elicitação Inicial, Escopo e MVP</td>
+<td style="text-align: left;">Equipe Cascata Ágil e Maria Beatryz</td>
+<td style="text-align: left;">Delimitação do escopo central, exclusão do módulo de estoque, LGPD com dados sintéticos e hospedagem na Vercel</td>
+<td style="text-align: center;"><a href="reuniao-01/">Acessar Ata 01</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Reunião 02</strong></td>
+<td style="text-align: center;">07/09/2026</td>
+<td style="text-align: left;">Alinhamento Metodológico e ESW</td>
+<td style="text-align: left;">Equipe Cascata Ágil</td>
+<td style="text-align: left;">Diagnóstico sociotécnico, integração com auditor.ia, modelo RBAC, Framework RAD, TypeScript/Supabase e Git Flow</td>
+<td style="text-align: center;"><a href="reuniao-02/">Acessar Ata 02</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="acesso-rapido-as-atas">Acesso Rápido às Atas</h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 11.11V5a2 2 0 0 0-2-2h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h6.11c1.26 1.24 2.98 2 4.89 2 3.87 0 7-3.13 7-7 0-1.91-.76-3.63-2-4.89M12 3c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1M5 19V5h2v2h10V5h2v4.68c-.91-.43-1.92-.68-3-.68H7v2h4.1c-.6.57-1.06 1.25-1.42 2H7v2h2.08c-.05.33-.08.66-.08 1 0 1.08.25 2.09.68 3zm11 2c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m.5-4.75 2.86 1.69-.75 1.22L15 17v-5h1.5z"/></svg></span> <strong><a href="reuniao-01/">Reunião 01 — Elicitação de Escopo e MVP (05/09/2026)</a></strong></p>
+<hr />
+<p>Primeiro alinhamento oficial com a cliente Maria Beatryz. Definição do escopo financeiro e de pessoal (CLT e diaristas), proteção de dados sensíveis (LGPD), infraestrutura na Vercel e log de minutagem da discussão.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-7 0a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1M7 7h10V5h2v14H5V5h2zm.5 6.5L9 12l2 2 4.5-4.5L17 11l-6 6z"/></svg></span> <strong><a href="reuniao-02/">Reunião 02 — Alinhamento Metodológico e ESW (07/09/2026)</a></strong></p>
+<hr />
+<p>Alinhamento interno de engenharia. Diagnóstico de fragmentação de planilhas, integração do ponto via <em>auditor.ia</em>, adoção do Framework RAD, definição da stack (TypeScript, Supabase, Shadcn UI) e governança Git Flow.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="consulta-unificada-por-abas">Consulta Unificada por Abas</h2>
+<p>Selecione a aba desejada para consultar a ata completa diretamente nesta página:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Reunião 01 (05/09/2026) — Elicitação de Escopo e MVP</label><label for="__tabbed_1_2">Reunião 02 (07/09/2026) — Alinhamento Metodológico e Engenharia de Requisitos</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h3 id="ata-da-reuniao-01-elicitacao-inicial-definicao-de-escopo-e-mvp">Ata da Reunião 01: Elicitação Inicial, Definição de Escopo e MVP</h3>
+<ul>
+<li><strong>Projeto:</strong> DUOC Finance</li>
+<li><strong>Equipe:</strong> Cascata Ágil</li>
+<li><strong>Data da Sessão:</strong> 05 de Setembro de 2026</li>
+<li><strong>Participantes:</strong> Equipe Cascata Ágil e Cliente Parceira Maria Beatryz Vieira de Sousa</li>
+<li><strong>Objetivo da Sessão:</strong> Elicitação preliminar de necessidades, definição do escopo central do sistema, alinhamento sobre proteção de dados (LGPD) e diretrizes para entrega de Produto Mínimo Viável (MVP).</li>
+</ul>
+<hr />
+<h4 id="1-resumo-executivo">1. Resumo Executivo</h4>
+<p>A reunião estabeleceu o direcionamento do escopo inicial para o desenvolvimento do <strong>DUOC Finance</strong>, um sistema web integrado de gestão financeira e de departamento pessoal. O principal compromisso é substituir a dependência de planilhas manuais e descentralizadas por uma plataforma estruturada com metodologia de entregas periódicas. Para viabilizar a entrega no semestre acadêmico, deliberou-se expressamente pela exclusão do módulo de controle de estoque do escopo do MVP.</p>
+<hr />
+<h4 id="2-pautas-e-deliberacoes-centrais">2. Pautas e Deliberações Centrais</h4>
+<ul>
+<li>
+<p><strong>Escopo e Objetivo Central:</strong></p>
+<ul>
+<li>Transição da gestão descentralizada em planilhas para um sistema web unificado, padronizando os fluxos de dados internos.</li>
+<li>Foco concentrado na gestão de pessoal (colaboradores CLT e diaristas de campo) e acompanhamento financeiro de despesas e receitas.</li>
+<li><strong>Exclusão de Escopo:</strong> Decisão consensual de não incluir o controle de estoque de materiais na versão inicial, blindando os esforços no núcleo financeiro e de pessoal.</li>
+</ul>
+</li>
+<li>
+<p><strong>Privacidade de Dados e Conformidade com a LGPD:</strong></p>
+<ul>
+<li>Devido à sensibilidade de dados pessoais, contratos e salários, ficou acordado que os ambientes de desenvolvimento e teste utilizarão estritamente dados sintéticos (mockados/fictícios), eliminando riscos de exposição de informações reais de clientes e colaboradores.</li>
+</ul>
+</li>
+<li>
+<p><strong>Estratégia de MVP e Entregas Periódicas:</strong></p>
+<ul>
+<li>Adoção de metodologia de entregas periódicas (RAD), assegurando que incrementos funcionais sejam validados progressivamente pela cliente, mantendo o escopo controlado e flexível para evoluções futuras.</li>
+</ul>
+</li>
+<li>
+<p><strong>Infraestrutura, Hospedagem e Domínio:</strong></p>
+<ul>
+<li>A DUOC já possui domínio próprio registrado e licenças de software ativas.</li>
+<li>A hospedagem da aplicação será realizada na plataforma <strong>Vercel</strong>, utilizando servidor disponível para redirecionamento a partir do site institucional já existente da empresa.</li>
+<li>A documentação de engenharia de software foi planejada para migração definitiva para o <strong>GitHub Pages (MkDocs)</strong> (<em>Docs as Code</em>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Gestão de Pessoal e Modelos de Contratação:</strong></p>
+<ul>
+<li>Necessidade de suporte arquitetural a dois regimes distintos:<ol>
+<li><strong>Colaboradores CLT:</strong> Salário mensal, controle de ponto e benefícios.</li>
+<li><strong>Diaristas:</strong> Prestadores externos de serviço em campo com ciclo de apuração e pagamento quinzenal.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Integração Financeira e Conciliação Bancária:</strong></p>
+<ul>
+<li>Mapeada a alta complexidade do fluxo financeiro atual, que envolve diversas abas de planilhas para o registro de entradas, saídas e pagamentos.</li>
+<li>Definiu-se como meta a implementação futura de conciliação bancária via Open Banking para automatizar o controle de contas a pagar e a receber.</li>
+</ul>
+</li>
+<li>
+<p><strong>Metodologia de Planejamento e Arquitetura:</strong></p>
+<ul>
+<li>Condução de uma fase preliminar de planejamento estruturado de requisitos ("Sprint Zero" / Planejamento de Requisitos do RAD), apoiada pela literatura recomendada e auxílio de ferramentas de IA para modelagem.</li>
+<li>A definição final da stack tecnológica e da arquitetura detalhada foi estrategicamente postergada para o término e validação do levantamento de requisitos.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="3-proximas-etapas-e-acoes-imediatas-action-items">3. Próximas Etapas e Ações Imediatas (Action Items)</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Ação Determinada</th>
+<th style="text-align: left;">Responsável</th>
+<th style="text-align: left;">Objetivo / Descrição</th>
+<th style="text-align: left;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Gerar dados fictícios (Mock)</strong></td>
+<td style="text-align: left;">Eric Araújo</td>
+<td style="text-align: left;">Gerar planilhas com dados sintéticos simulados para desenvolvimento do sistema, garantindo conformidade com a LGPD.</td>
+<td style="text-align: left;">Concluído</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Revisar e consolidar requisitos</strong></td>
+<td style="text-align: left;">Eric Araújo</td>
+<td style="text-align: left;">Revisar a lista de necessidades operacionais com a cliente e compartilhar o documento consolidado com a equipe.</td>
+<td style="text-align: left;">Concluído</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Migrar objetivos e documentação</strong></td>
+<td style="text-align: left;">Equipe (O grupo)</td>
+<td style="text-align: left;">Migrar objetivos do projeto e backlog para o GitHub Pages (MkDocs), abandonando documentos externos dispersos.</td>
+<td style="text-align: left;">Concluído</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Estudo bibliográfico de Requisitos</strong></td>
+<td style="text-align: left;">Equipe (O grupo)</td>
+<td style="text-align: left;">Leitura dos 4 primeiros capítulos do livro de referência e conversão em requisitos funcionais e não funcionais.</td>
+<td style="text-align: left;">Concluído</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="4-rastreabilidade-e-minutagem-da-reuniao-log-de-discussao">4. Rastreabilidade e Minutagem da Reunião (Log de Discussão)</h4>
+<ul>
+<li><code>00:08:08</code> — <strong>Documentação e Potencial Comercial:</strong> Elaboração estruturada dos requisitos via IA e discussão sobre a possibilidade futura de comercializar o sistema por meio de contratos de prestação de serviços.</li>
+<li><code>00:08:54</code> — <strong>Problema Central e Domínio Registrado:</strong> Identificação dos gargalos operacionais gerados pelo excesso de planilhas; confirmação de domínio registrado e licenças sob posse da DUOC.</li>
+<li><code>00:10:00</code> — <strong>Hospedagem na Vercel:</strong> Definição da Vercel como infraestrutura de hospedagem, integrando o sistema ao site institucional existente via alteração de rotas de acesso.</li>
+<li><code>00:10:40</code> — <strong>Gestão de Pessoal (CLT e Diaristas):</strong> Levantamento das necessidades de folha de pagamento e separação entre mensalistas CLT e diaristas quinzenais de obras.</li>
+<li><code>00:11:44</code> — <strong>Privacidade e LGPD:</strong> Decisão formal sobre a utilização de base de dados mascarada/sintética durante o desenvolvimento para blindagem de dados sensíveis.</li>
+<li><code>00:12:29</code> — <strong>Complexidade Financeira:</strong> Diagnóstico da fragmentação de entradas, saídas e pagamentos em múltiplas abas de planilhas.</li>
+<li><code>00:13:26</code> — <strong>Automação Bancária:</strong> Prospecção de integrações via Open Banking para automatizar contas a pagar e receber.</li>
+<li><code>00:14:21</code> — <strong>Exclusão Formal de Estoque:</strong> Deliberação unânime de corte do módulo de estoque do escopo do projeto, concentrando o foco nas demandas financeiras e de pessoal.</li>
+<li><code>00:15:27</code> — <strong>Processo de Elicitação e Git Pages:</strong> Alinhamento contínuo liderado por Eric Araújo junto à cliente e início da migração do backlog para o Git Pages.</li>
+<li><code>00:16:16</code> — <strong>Sprint Zero e Planejamento:</strong> Utilização da base teórica recomendada e suporte de inteligência artificial para estruturação dos requisitos.</li>
+<li><code>00:17:10</code> — <strong>Critério de Estabilidade de Escopo:</strong> Princípio de consolidar e aprovar um planejamento sólido antes de avançar para a implementação técnica.</li>
+<li><code>00:17:59</code> — <strong>Arquitetura e Ambientes:</strong> Debate sobre conteinerização (Docker) para mitigar divergências de ambiente e decisão de postergar a stack final para após a homologação das especificações.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<h3 id="ata-da-reuniao-02-alinhamento-metodologico-e-engenharia-de-requisitos">Ata da Reunião 02: Alinhamento Metodológico e Engenharia de Requisitos</h3>
+<ul>
+<li><strong>Projeto:</strong> DUOC Finance</li>
+<li><strong>Equipe:</strong> Cascata Ágil</li>
+<li><strong>Data da Sessão:</strong> 07 de Setembro de 2026</li>
+<li><strong>Contexto:</strong> Planejamento da Unidade 1 e Definição da Baseline de Escopo</li>
+<li><strong>Objetivo da Sessão:</strong> Diagnóstico sociotécnico, definição da estratégia metodológica (RAD), consolidação da stack tecnológica, alinhamento dos níveis de abstração de requisitos e governança do repositório.</li>
+</ul>
+<hr />
+<h4 id="1-pauta-1-diagnostico-do-cenario-atual-e-analise-sociotecnica">1. Pauta 1: Diagnóstico do Cenário Atual e Análise Sociotécnica</h4>
+<ul>
+<li><strong>Gargalo Informacional e Operacional:</strong><ul>
+<li>O principal entrave operacional na DUOC Arquitetura e Engenharia reside na fragmentação e opacidade dos fluxos de dados. Fluxo de caixa, ponto de pessoal, horas técnicas, controle de diaristas e benefícios estão distribuídos em múltiplas planilhas concorrentes e descentralizadas.</li>
+<li><strong>Vulnerabilidade de Dados:</strong> Inexistência de controle de permissões por perfil ou trilha de auditoria; todos os usuários possuem acesso irrestrito às planilhas, podendo alterar fórmulas e lançamentos sem qualquer rastreabilidade.</li>
+<li><strong>Sobrecarga Administrativa:</strong> O fechamento mensal da folha e a apuração de custos exigem conferências manuais redundantes provocadas pela duplicação de dados de bonificações e reembolsos.</li>
+</ul>
+</li>
+<li><strong>Fator de Intervenção Social:</strong><ul>
+<li>Análise do impacto sociocultural da transição digital na empresa. Constatou-se que o software deve ser concebido para simplificar a rotina de quem opera no canteiro e no escritório, com interface limpa e intuitiva que supere a inércia do hábito das planilhas, engajando os colaboradores no lançamento tempestivo de informações.</li>
+</ul>
+</li>
+<li><strong>Alinhamento com Ferramentas Existentes:</strong><ul>
+<li>Identificou-se que a empresa já adota a solução <em>auditor.ia</em> para controle de ponto por reconhecimento fotográfico facial.</li>
+<li><strong>Decisão Arquitetural:</strong> O DUOC Finance não desenvolverá um sistema de marcação de ponto redundante; seu foco será disponibilizar um dashboard integrado que consuma as presenças homologadas e execute a apropriação financeira dessas horas aos contratos de obras.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="2-pauta-2-definicao-do-escopo-tecnico-do-mvp-e-arquitetura">2. Pauta 2: Definição do Escopo Técnico do MVP e Arquitetura</h4>
+<ul>
+<li><strong>Visão Modular baseada em Perfis (RBAC):</strong><ul>
+<li>Unificação da automação de folha de pagamento e cálculo de comissões.</li>
+<li>Implementação de Controle de Acesso Baseado em Papéis (<em>Role-Based Access Control</em> — RBAC): a densidade de informações exibida varia dinamicamente segundo a credencial do usuário (ex.: o Sócio Administrador acompanha a rentabilidade consolidada de contratos; o Colaborador de Campo acessa exclusivamente suas próprias horas e solicitações de reembolso).</li>
+</ul>
+</li>
+<li><strong>Desafios de Engenharia de Dados:</strong><ul>
+<li>A modelagem do banco relacional representa o ponto de maior complexidade lógica do projeto, devendo suportar:<ol>
+<li>Cadastro centralizado de funcionários, diaristas e tabela de benefícios.</li>
+<li>Correlação direta entre o Relatório de Viagem Técnica (RVT), o deslocamento em campo e o custo real de mão de obra alocada em cada contrato.</li>
+<li>Módulo CRUD com regras de apropriação e rateio automático de despesas de transporte e alimentação.</li>
+</ol>
+</li>
+<li>Para acelerar a Célula Frontend no início da fase de construção rápida, a equipe adotará a estratégia de mockar a API de dados.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="3-pauta-3-engenharia-de-requisitos-critica-dos-niveis-de-abstracao">3. Pauta 3: Engenharia de Requisitos (Crítica dos Níveis de Abstração)</h4>
+<ul>
+<li><strong>Purificação dos Objetivos Específicos (OEs):</strong><ul>
+<li>Constatou-se que alguns OEs continham termos técnicos descritivos do "como" implementar, violando a Pirâmide de Abstração de Requisitos.</li>
+<li><strong>Diretriz Corretiva:</strong> Os OEs devem permanecer rigorosamente no nível de negócio e necessidades dos stakeholders ("o quê" e "por quê"), sem vincular telas, bibliotecas ou comandos de código.</li>
+<li>A especificação técnica e funcional deve residir exclusivamente nas Características do Produto (CARs).</li>
+</ul>
+</li>
+<li><strong>Readequação da OE4 (Segurança e LGPD):</strong><ul>
+<li>A meta de conformidade plena e exaustiva com a LGPD foi considerada ampla demais para a janela temporal do MVP acadêmico. O escopo foi delimitado para a centralização protegida de dados de pessoal e autenticação com RBAC, mantendo políticas de privacidade extensivas como horizonte futuro.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="4-pauta-4-decisoes-de-processo-e-stack-tecnologica">4. Pauta 4: Decisões de Processo e Stack Tecnológica</h4>
+<ul>
+<li><strong>Estratégia de Engenharia de Software:</strong><ul>
+<li><strong>Abordagem Metodológica:</strong> Abordagem Híbrida.</li>
+<li><strong>Ciclo de Vida:</strong> Iterativo e Incremental.</li>
+<li><strong>Processo de Desenvolvimento:</strong> <em>Rapid Application Development</em> (Framework RAD).</li>
+<li><strong>Justificativa:</strong> Premência de validações frequentes de protótipos de alta fidelidade no Figma com a cliente Maria Beatryz, otimizando a produtividade do time ao longo do semestre.</li>
+</ul>
+</li>
+<li><strong>Stack Tecnológica Oficializada:</strong><ul>
+<li><strong>Linguagem Base:</strong> TypeScript (fortalecimento de tipagem estática e segurança em tempo de compilação).</li>
+<li><strong>Backend / BaaS &amp; Banco de Dados:</strong> Supabase (PostgreSQL relacional robusto, autenticação nativa, row-level security e geração rápida de endpoints RESTful).</li>
+<li><strong>Frontend SPA:</strong> React ou Angular (a ser definido por votação interna da Célula de Construção).</li>
+<li><strong>Biblioteca de Componentes UI:</strong> Shadcn UI (aceleração na criação de tabelas ricas, dashboards e interfaces responsivas com design elegante).</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="5-pauta-5-governanca-do-repositorio-e-organizacao-do-trabalho">5. Pauta 5: Governança do Repositório e Organização do Trabalho</h4>
+<ul>
+<li><strong>Git Flow e Rastreabilidade:</strong><ul>
+<li><strong>Gestão de Tarefas (GitHub Issues):</strong> Estrutura orientada a Épicos. Cada capítulo da documentação de requisitos (Capítulos 3 a 7) corresponde a uma Issue principal, acompanhada de sub-issues para cada artefato específico.</li>
+<li><strong>Padrão de Commits:</strong> Adoção estrita de <em>Conventional Commits</em> (ex.: <code>feat:</code>, <code>docs:</code>, <code>fix:</code>, <code>refactor:</code>).</li>
+<li><strong>Gestão de Branches:</strong> Ramificações por funcionalidade/documento, com integração obrigatória via <em>Pull Request</em> revisado na branch <code>develop</code> antes de qualquer merge na <code>main</code>.</li>
+<li><strong>Planejamento de Entregas:</strong> Cronograma rigorosamente sincronizado com os <em>milestones</em> das Unidades Acadêmicas da disciplina na UnB.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="6-acoes-imediatas-action-items">6. Ações Imediatas (Action Items)</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Atividade Determinada</th>
+<th style="text-align: left;">Responsável</th>
+<th style="text-align: left;">Prazo Limite</th>
+<th style="text-align: left;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Redigir introduções modulares (Sobre) nos Capítulos 3 a 7</strong></td>
+<td style="text-align: left;">Gabriel</td>
+<td style="text-align: left;">10/Set</td>
+<td style="text-align: left;">Em andamento</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lançar enquete técnica de Frontend no grupo</strong></td>
+<td style="text-align: left;">Liderança do Projeto</td>
+<td style="text-align: left;">Imediato</td>
+<td style="text-align: left;">Concluído</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ajustar nível de abstração das OEs e CARs no Capítulo 2</strong></td>
+<td style="text-align: left;">Eric Araújo</td>
+<td style="text-align: left;">11/Set</td>
+<td style="text-align: left;">Em andamento</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Configurar infraestrutura no Supabase e mock de dados</strong></td>
+<td style="text-align: left;">Gabriel / Matheus Camargo</td>
+<td style="text-align: left;">14/Set</td>
+<td style="text-align: left;">A iniciar</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Prototipagem de média fidelidade de faturamento no Figma</strong></td>
+<td style="text-align: left;">Paulo Nery</td>
+<td style="text-align: left;">14/Set</td>
+<td style="text-align: left;">A iniciar</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: left;">Descrição</th>
+<th style="text-align: left;">Autor(es)</th>
+<th style="text-align: left;">Revisor(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>1.0</code></td>
+<td style="text-align: center;">07/09/2026</td>
+<td style="text-align: left;">Criação do Painel Geral de Atas e migração para seção independente na navegação</td>
+<td style="text-align: left;">Eric Araújo</td>
+<td style="text-align: left;">Matheus Ribeiro</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/js/nav-search.js"></script>
+      
+    
+  </body>
+</html>

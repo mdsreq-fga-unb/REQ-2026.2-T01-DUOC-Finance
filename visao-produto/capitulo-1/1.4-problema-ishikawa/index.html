@@ -13,26 +13,28 @@
       
       
       
+        <link rel="prev" href="../1.3-rich-picture/">
       
-        <link rel="next" href="visao-produto/capitulo-1/">
+      
+        <link rel="next" href="../1.5-desafios-projeto/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Cascata Ágil</title>
+        <title>1.4 Problema e Ishikawa - Cascata Ágil</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="assets/css/extra.css">
+      <link rel="stylesheet" href="../../../assets/css/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#duoc-finance" class="md-skip">
+        <a href="#14-diagnostico-do-problema-e-diagrama-de-ishikawa" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -94,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="." title="Cascata Ágil" class="md-header__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
+    <a href="../../.." title="Cascata Ágil" class="md-header__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              1.4 Problema e Ishikawa
             
           </span>
         </div>
@@ -220,7 +222,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Cascata Ágil" class="md-nav__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
+    <a href="../../.." title="Cascata Ágil" class="md-nav__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -235,37 +237,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -281,92 +256,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#portal-de-governanca-requisitos-e-engenharia-de-software" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Portal de Governança, Requisitos e Engenharia de Software
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#escopo-do-repositorio-e-frentes-de-trabalho" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Escopo do Repositório e Frentes de Trabalho
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parceria-institucional-e-contexto-real" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parceria Institucional e Contexto Real
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#estrutura-de-navegacao-da-documentacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Estrutura de Navegação da Documentação
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#equipe-de-engenharia-cascata-agil" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Equipe de Engenharia (Cascata Ágil)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#historico-de-versao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Histórico de Versão
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -375,18 +264,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -407,7 +298,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -425,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-1/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -453,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-1/1.1-cliente-negocio/" class="md-nav__link">
+      <a href="../1.1-cliente-negocio/" class="md-nav__link">
         
   
   
@@ -481,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-1/1.2-negocio-contexto/" class="md-nav__link">
+      <a href="../1.2-negocio-contexto/" class="md-nav__link">
         
   
   
@@ -509,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-1/1.3-rich-picture/" class="md-nav__link">
+      <a href="../1.3-rich-picture/" class="md-nav__link">
         
   
   
@@ -534,10 +425,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="visao-produto/capitulo-1/1.4-problema-ishikawa/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4 Problema e Ishikawa
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -553,6 +471,137 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaracao-do-problema-central" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Declaração do Problema Central
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-de-causa-e-efeito-ishikawa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de Causa e Efeito (Ishikawa)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagrama de Causa e Efeito (Ishikawa)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analise-das-causas-raiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análise das Causas-Raiz
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Análise das Causas-Raiz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métodos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tecnologia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pessoas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pessoas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medição
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintese-das-causas-e-efeitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Síntese das Causas e Efeitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -565,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-1/1.5-desafios-projeto/" class="md-nav__link">
+      <a href="../1.5-desafios-projeto/" class="md-nav__link">
         
   
   
@@ -593,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-1/1.6-mapa-stakeholders/" class="md-nav__link">
+      <a href="../1.6-mapa-stakeholders/" class="md-nav__link">
         
   
   
@@ -621,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-1/1.7-segmentacao/" class="md-nav__link">
+      <a href="../1.7-segmentacao/" class="md-nav__link">
         
   
   
@@ -703,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-2/" class="md-nav__link">
+      <a href="../../capitulo-2/" class="md-nav__link">
         
   
   
@@ -731,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-2/2.1-2.2-objetivos/" class="md-nav__link">
+      <a href="../../capitulo-2/2.1-2.2-objetivos/" class="md-nav__link">
         
   
   
@@ -759,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-2/2.3-caracteristicas/" class="md-nav__link">
+      <a href="../../capitulo-2/2.3-caracteristicas/" class="md-nav__link">
         
   
   
@@ -787,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-2/2.4-tecnologias/" class="md-nav__link">
+      <a href="../../capitulo-2/2.4-tecnologias/" class="md-nav__link">
         
   
   
@@ -815,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-2/2.5-pesquisa-mercado/" class="md-nav__link">
+      <a href="../../capitulo-2/2.5-pesquisa-mercado/" class="md-nav__link">
         
   
   
@@ -843,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-2/2.6-viabilidade-mvp/" class="md-nav__link">
+      <a href="../../capitulo-2/2.6-viabilidade-mvp/" class="md-nav__link">
         
   
   
@@ -871,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="visao-produto/capitulo-2/2.7-beneficios/" class="md-nav__link">
+      <a href="../../capitulo-2/2.7-beneficios/" class="md-nav__link">
         
   
   
@@ -953,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intervencao-social/" class="md-nav__link">
+      <a href="../../../intervencao-social/" class="md-nav__link">
         
   
   
@@ -981,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intervencao-social/3.1-impactos-pretendidos/" class="md-nav__link">
+      <a href="../../../intervencao-social/3.1-impactos-pretendidos/" class="md-nav__link">
         
   
   
@@ -1009,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intervencao-social/3.2-efeitos-emergentes/" class="md-nav__link">
+      <a href="../../../intervencao-social/3.2-efeitos-emergentes/" class="md-nav__link">
         
   
   
@@ -1091,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="estrategias-esw/" class="md-nav__link">
+      <a href="../../../estrategias-esw/" class="md-nav__link">
         
   
   
@@ -1119,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="estrategias-esw/4.1-estrategia/" class="md-nav__link">
+      <a href="../../../estrategias-esw/4.1-estrategia/" class="md-nav__link">
         
   
   
@@ -1147,7 +1196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="estrategias-esw/4.2-quadro-comparativo/" class="md-nav__link">
+      <a href="../../../estrategias-esw/4.2-quadro-comparativo/" class="md-nav__link">
         
   
   
@@ -1175,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="estrategias-esw/4.3-justificativa/" class="md-nav__link">
+      <a href="../../../estrategias-esw/4.3-justificativa/" class="md-nav__link">
         
   
   
@@ -1257,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="engenharia-requisitos/" class="md-nav__link">
+      <a href="../../../engenharia-requisitos/" class="md-nav__link">
         
   
   
@@ -1285,7 +1334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="engenharia-requisitos/5.1-atividades-tecnicas/" class="md-nav__link">
+      <a href="../../../engenharia-requisitos/5.1-atividades-tecnicas/" class="md-nav__link">
         
   
   
@@ -1313,7 +1362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="engenharia-requisitos/5.2-mapeamento-processo/" class="md-nav__link">
+      <a href="../../../engenharia-requisitos/5.2-mapeamento-processo/" class="md-nav__link">
         
   
   
@@ -1348,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cronograma/" class="md-nav__link">
+      <a href="../../../cronograma/" class="md-nav__link">
         
   
   
@@ -1422,7 +1471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="interacao-cliente/" class="md-nav__link">
+      <a href="../../../interacao-cliente/" class="md-nav__link">
         
   
   
@@ -1450,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="interacao-cliente/7.1-composicao-equipe/" class="md-nav__link">
+      <a href="../../../interacao-cliente/7.1-composicao-equipe/" class="md-nav__link">
         
   
   
@@ -1478,7 +1527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="interacao-cliente/7.2-comunicacao/" class="md-nav__link">
+      <a href="../../../interacao-cliente/7.2-comunicacao/" class="md-nav__link">
         
   
   
@@ -1506,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="interacao-cliente/7.3-validacao/" class="md-nav__link">
+      <a href="../../../interacao-cliente/7.3-validacao/" class="md-nav__link">
         
   
   
@@ -1541,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="requisitos/" class="md-nav__link">
+      <a href="../../../requisitos/" class="md-nav__link">
         
   
   
@@ -1568,7 +1617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dor-dod/" class="md-nav__link">
+      <a href="../../../dor-dod/" class="md-nav__link">
         
   
   
@@ -1595,7 +1644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="backlog/" class="md-nav__link">
+      <a href="../../../backlog/" class="md-nav__link">
         
   
   
@@ -1622,7 +1671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="licoes-aprendidas/" class="md-nav__link">
+      <a href="../../../licoes-aprendidas/" class="md-nav__link">
         
   
   
@@ -1649,7 +1698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="referencias/" class="md-nav__link">
+      <a href="../../../referencias/" class="md-nav__link">
         
   
   
@@ -1723,7 +1772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atas/" class="md-nav__link">
+      <a href="../../../atas/" class="md-nav__link">
         
   
   
@@ -1751,7 +1800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atas/reuniao-01/" class="md-nav__link">
+      <a href="../../../atas/reuniao-01/" class="md-nav__link">
         
   
   
@@ -1779,7 +1828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atas/reuniao-02/" class="md-nav__link">
+      <a href="../../../atas/reuniao-02/" class="md-nav__link">
         
   
   
@@ -1861,7 +1910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="entregas/" class="md-nav__link">
+      <a href="../../../entregas/" class="md-nav__link">
         
   
   
@@ -1889,7 +1938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="entregas/entrega-1/" class="md-nav__link">
+      <a href="../../../entregas/entrega-1/" class="md-nav__link">
         
   
   
@@ -1917,7 +1966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="entregas/entrega-2/" class="md-nav__link">
+      <a href="../../../entregas/entrega-2/" class="md-nav__link">
         
   
   
@@ -1945,7 +1994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="entregas/entrega-3/" class="md-nav__link">
+      <a href="../../../entregas/entrega-3/" class="md-nav__link">
         
   
   
@@ -1973,7 +2022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="entregas/entrega-4/" class="md-nav__link">
+      <a href="../../../entregas/entrega-4/" class="md-nav__link">
         
   
   
@@ -2028,10 +2077,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#portal-de-governanca-requisitos-e-engenharia-de-software" class="md-nav__link">
+  <a href="#declaracao-do-problema-central" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Portal de Governança, Requisitos e Engenharia de Software
+        Declaração do Problema Central
       
     </span>
   </a>
@@ -2039,46 +2088,91 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#escopo-do-repositorio-e-frentes-de-trabalho" class="md-nav__link">
+  <a href="#diagrama-de-causa-e-efeito-ishikawa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Escopo do Repositório e Frentes de Trabalho
+        Diagrama de Causa e Efeito (Ishikawa)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagrama de Causa e Efeito (Ishikawa)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analise-das-causas-raiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análise das Causas-Raiz
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Análise das Causas-Raiz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métodos
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#parceria-institucional-e-contexto-real" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#tecnologia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parceria Institucional e Contexto Real
+        Tecnologia
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#estrutura-de-navegacao-da-documentacao" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#pessoas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estrutura de Navegação da Documentação
+        Pessoas
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#equipe-de-engenharia-cascata-agil" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#medicao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Equipe de Engenharia (Cascata Ágil)
+        Medição
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintese-das-causas-e-efeitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Síntese das Causas e Efeitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2111,6 +2205,46 @@
   
 
 
+  <nav class="md-path" aria-label="Navegação" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Capítulo 1 - Cenário Atual
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
@@ -2118,124 +2252,54 @@
 
 
 
-<h1 id="duoc-finance">DUOC Finance</h1>
-<h2 id="portal-de-governanca-requisitos-e-engenharia-de-software">Portal de Governança, Requisitos e Engenharia de Software</h2>
-<p>Este portal hospeda a documentação técnica e os artefatos de engenharia de requisitos desenvolvidos para a plataforma <strong>DUOC Finance</strong>. O projeto é conduzido pela equipe <strong>Cascata Ágil</strong> no âmbito da disciplina de <strong>Requisitos de Software</strong> da <strong>Universidade de Brasília (UnB - Campus Gama)</strong> durante o semestre letivo de 2026.2.</p>
-<div class="admonition info">
-<p class="admonition-title">Documentação em Desenvolvimento</p>
-<p>Este repositório e seu respectivo portal de documentação encontram-se em fase ativa de construção, evolução e refinamento sistemático. Os conteúdos aqui apresentados são atualizados incrementalmente em conformidade com o cronograma das Unidades Acadêmicas (Unidades 1, 2 e 3) e as interações contínuas de validação com o cliente parceiro.</p>
-</div>
+<h1 id="14-diagnostico-do-problema-e-diagrama-de-ishikawa">1.4 Diagnóstico do Problema e Diagrama de Ishikawa</h1>
+<h2 id="declaracao-do-problema-central">Declaração do Problema Central</h2>
+<blockquote>
+<p><strong>"A inconsistência gerencial e a opacidade na apuração da rentabilidade de contratos da DUOC, causadas pela fragmentação de registros operacionais (RVT e ponto) em ferramentas desconectadas."</strong></p>
+</blockquote>
 <hr />
-<h2 id="escopo-do-repositorio-e-frentes-de-trabalho">Escopo do Repositório e Frentes de Trabalho</h2>
-<p>O projeto adota uma abordagem híbrida de engenharia de software e está estruturado em duas frentes complementares:</p>
-<ul>
-<li><strong>Hub de Engenharia de Requisitos:</strong> Centralização de todas as atividades do ciclo de vida de requisitos (elicitação, análise sociotécnica, especificação, verificação por pares, validação com o cliente e matrizes de rastreabilidade bidirecional).</li>
-<li><strong>Base de Desenvolvimento de Software:</strong> Repositório que comporta o código-fonte da aplicação, arquitetura de banco de dados, fluxos de integração e implantação contínua (CI/CD) e a codificação progressiva do MVP funcional.</li>
-</ul>
+<h2 id="diagrama-de-causa-e-efeito-ishikawa">Diagrama de Causa e Efeito (Ishikawa)</h2>
+<p><img alt="Diagrama de Ishikawa" src="../../../assets/images/diagrama_ishikawa_duoc.png" /></p>
 <hr />
-<h2 id="parceria-institucional-e-contexto-real">Parceria Institucional e Contexto Real</h2>
-<p>A solução de software foi concebida a partir de um diagnóstico de dores reais vivenciadas no cotidiano operacional da empresa parceira, buscando viabilizar uma transformação organizacional positiva e sustentável.</p>
+<h3 id="analise-das-causas-raiz">Análise das Causas-Raiz</h3>
+<p>O problema central resulta da combinação de quatro categorias de causas representadas no diagrama:</p>
+<h4 id="metodos">Métodos</h4>
+<p>A DUOC não possui um fluxo padronizado e integrado para registrar, validar e fechar os Relatórios de Viagem Técnica (RVT), as despesas e as informações de pessoal. A entrega dos registros ocorre em momentos e formatos diferentes, e a conferência se concentra no fechamento mensal. Isso provoca retrabalho, atrasos e maior risco de divergências entre o trabalho realizado, o valor pago e o custo atribuído ao contrato.</p>
+<h4 id="tecnologia">Tecnologia</h4>
+<p>Os registros de RVT, ponto, despesas e folha ficam distribuídos em planilhas e canais de comunicação que não funcionam como uma base única. A ausência de integração impede o cruzamento direto entre horas técnicas e custos de pessoal, dificulta a recuperação do histórico e aumenta a exposição de informações operacionais e salariais. Também limita a aplicação de perfis de acesso e de uma trilha de auditoria adequada.</p>
+<h4 id="pessoas">Pessoas</h4>
+<p>As equipes de campo e do escritório possuem diferentes níveis de familiaridade com ferramentas digitais e trabalham sob pressão de prazos operacionais. Sem um processo simples e uniforme, o registro formal pode ser adiado ou preenchido de maneira incompleta. A necessidade de conferir manualmente informações de diferentes fontes ainda sobrecarrega a liderança e concentra o conhecimento em poucas pessoas, dificultando a continuidade do processo.</p>
+<h4 id="medicao">Medição</h4>
+<p>Os dados disponíveis não são consolidados em indicadores de custo e rentabilidade por contrato. Como as horas técnicas não estão diretamente relacionadas ao custo real de pessoal, a gestão recebe uma visão tardia e incompleta da margem de cada projeto. A falta de métricas atualizadas prejudica a precificação, o acompanhamento de desvios e a tomada de decisões financeiras.</p>
+<h3 id="sintese-das-causas-e-efeitos">Síntese das Causas e Efeitos</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Dimensão Organizacional</th>
-<th style="text-align: left;">Detalhamento Institucional</th>
+<th style="text-align: left;">Categoria</th>
+<th style="text-align: left;">Causa principal</th>
+<th style="text-align: left;">Efeito direto na operação</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Cliente Parceiro</strong></td>
-<td style="text-align: left;">DUOC Arquitetura e Engenharia LTDA (CNPJ: <code>53.616.784/0001-43</code>)</td>
+<td style="text-align: left;"><strong>Métodos</strong></td>
+<td style="text-align: left;">Registros e validações sem fluxo padronizado</td>
+<td style="text-align: left;">Retrabalho, atrasos e divergências no fechamento</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Representante Focal</strong></td>
-<td style="text-align: left;">Maria Beatryz Vieira de Sousa</td>
+<td style="text-align: left;"><strong>Tecnologia</strong></td>
+<td style="text-align: left;">Ferramentas desconectadas e sem base integrada</td>
+<td style="text-align: left;">Perda de histórico, baixa rastreabilidade e risco de acesso indevido</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Atividade Principal</strong></td>
-<td style="text-align: left;">Serviços multidisciplinares de arquitetura, engenharia estrutural, instalações prediais e gestão de obras.</td>
+<td style="text-align: left;"><strong>Pessoas</strong></td>
+<td style="text-align: left;">Diferentes níveis de letramento digital e sobrecarga da liderança</td>
+<td style="text-align: left;">Registros incompletos e dependência de conhecimento concentrado</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Escopo do MVP</strong></td>
-<td style="text-align: left;">Plataforma digital integrada de controle de departamento pessoal e custos de mão de obra. O sistema automatiza a folha de pagamento, correlaciona relatórios de viagem técnica (RVT) com custos reais de projetos e assegura a conformidade legal com a Lei Geral de Proteção de Dados (LGPD).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Endereço Eletrônico</strong></td>
-<td style="text-align: left;"><a href="https://www.duoc.eng.br/">https://www.duoc.eng.br/</a></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="estrutura-de-navegacao-da-documentacao">Estrutura de Navegação da Documentação</h2>
-<p>Para facilitar a auditoria e leitura dos artefatos pelo corpo docente e pelas partes interessadas, a documentação está organizada de forma modular de acordo com as seguintes seções estruturadas:</p>
-<ul>
-<li><strong>Capítulo 1 - Cenário Atual:</strong> Diagnóstico das dores operacionais, identificação institucional, diagramas analíticos (Rich Picture e Ishikawa), mapeamento de stakeholders e análise de perfis de usabilidade.</li>
-<li><strong>Capítulo 2 - Solução Proposta:</strong> Visão do produto, objetivos de negócio, tabela de características (CARs), justificativa de tecnologias e arquitetura, pesquisa de concorrentes, viabilidade e benefícios esperados.</li>
-<li><strong>Capítulo 3 - Intervenção Social:</strong> Análise sociotécnica das transformações corporativas planejadas e contingenciamento de efeitos colaterais comportamentais no ambiente de trabalho.</li>
-<li><strong>Capítulo 4 - Estratégias de ESW:</strong> Decisões metodológicas de processo de software, ciclo de vida iterativo e incremental e quadro comparativo de processos.</li>
-<li><strong>Capítulo 5 - Engenharia de Requisitos:</strong> Práticas e técnicas adotadas nas seis atividades de ER e mapeamento cronológico integrado às 4 fases do processo RAD.</li>
-<li><strong>Capítulo 6 - Cronograma:</strong> Planejamento temporal preliminar e divisão dos marcos de entregas da disciplina.</li>
-<li><strong>Capítulo 7 - Interação com Cliente:</strong> Atribuição de papéis da equipe de engenharia, planos e canais de comunicação interna/externa e ritos de validação sociotécnica.</li>
-<li><strong>Capítulo 8 - Requisitos de Software:</strong> Especificação de requisitos funcionais (RF) e não funcionais (RNF) sob o modelo FURPS+ <em>(a ser entregue na Unidade 2)</em>.</li>
-<li><strong>Capítulo 9 - DoR e DoD:</strong> Acordos de trabalho para definição de pronto para desenvolvimento e pronto para entrega <em>(a ser entregue na Unidade 2)</em>.</li>
-<li><strong>Capítulo 10 - Backlog do Produto:</strong> Backlog geral de histórias de usuário e priorização de MVP via MoSCoW <em>(a ser entregue na Unidade 2)</em>.</li>
-<li><strong>Capítulo 11 - Lições Aprendidas:</strong> Retrospectivas consolidadas de processo e aprendizados práticos adquiridos pela equipe ao fim de cada ciclo avaliativo.</li>
-<li><strong>Capítulo 12 - Referências:</strong> Base teórica e bibliografia de suporte técnico e metodológico sob as normas da ABNT e IEEE.</li>
-</ul>
-<hr />
-<h2 id="equipe-de-engenharia-cascata-agil">Equipe de Engenharia (Cascata Ágil)</h2>
-<p>Os integrantes da equipe dividem suas responsabilidades operacionais e de governança para assegurar a consistência técnica dos artefatos e o cumprimento das entregas do MVP:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Integrante</th>
-<th style="text-align: center;">Matrícula</th>
-<th style="text-align: left;">Atribuição Principal no Projeto</th>
-<th style="text-align: center;">Canal de Contato</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Eric Araújo</strong></td>
-<td style="text-align: center;">200064053</td>
-<td style="text-align: left;">Product Owner (PO) e Engenheiro de Requisitos, Interface Estratégica e Visão de Produto</td>
-<td style="text-align: center;"><a href="https://github.com/EricAraujoBsB">@EricAraujoBsB</a></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Matheus Ribeiro Szervinsk</strong></td>
-<td style="text-align: center;">231011749</td>
-<td style="text-align: left;">Scrum Master (SM), Co-PO e Engenheiro de Requisitos, Facilitação e Modelagem</td>
-<td style="text-align: center;"><a href="https://github.com/szervinsk">@szervinsk</a></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Matheus Saraiva Camargo</strong></td>
-<td style="text-align: center;">241011475</td>
-<td style="text-align: left;">Arquiteto de Software, Modelagem de Banco de Dados Relacional e Infraestrutura</td>
-<td style="text-align: center;"><a href="https://github.com/Matheus-S-Camargo">@Matheus-S-Camargo</a></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Gustavo</strong></td>
-<td style="text-align: center;">241025659</td>
-<td style="text-align: left;">Gestão de Qualidade (QA), Automação de Testes e Governança DoR/DoD</td>
-<td style="text-align: center;"><a href="https://github.com/Gustavo2703">@Gustavo2703</a></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Giovana Ferreira</strong></td>
-<td style="text-align: center;">231034707</td>
-<td style="text-align: left;">Interface Humano-Computador (IHC), Design UI/UX e Frontend React</td>
-<td style="text-align: center;"><a href="https://github.com/gih7915">@gih7915</a></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Carlos Gabriel</strong></td>
-<td style="text-align: center;">242015450</td>
-<td style="text-align: left;">Interface Humano-Computador (IHC), Design UI/UX e Frontend React (Mobile-First)</td>
-<td style="text-align: center;"><a href="https://github.com/cgbriel28">@cgbriel28</a></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Paulo Nery</strong></td>
-<td style="text-align: center;">221008740</td>
-<td style="text-align: left;">Engenheiro Backend, APIs RESTful e Motor de Regras Financeiras</td>
-<td style="text-align: center;"><a href="https://github.com/Pnery2004">@Pnery2004</a></td>
+<td style="text-align: left;"><strong>Medição</strong></td>
+<td style="text-align: left;">Ausência de indicadores consolidados por contrato</td>
+<td style="text-align: left;">Opacidade sobre custos, margens e desvios financeiros</td>
 </tr>
 </tbody>
 </table>
@@ -2255,30 +2319,16 @@
 <tr>
 <td style="text-align: center;"><code>1.0</code></td>
 <td style="text-align: center;">05/09/2026</td>
-<td style="text-align: left;">Criação da página inicial do portal de governança e documentação</td>
-<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
-<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+<td style="text-align: left;">Elaboração do Diagrama de Ishikawa e categorização das causas-raiz</td>
+<td style="text-align: left;">Paulo Nery</td>
+<td style="text-align: left;">Matheus Ribeiro</td>
 </tr>
 <tr>
 <td style="text-align: center;"><code>1.1</code></td>
 <td style="text-align: center;">07/09/2026</td>
-<td style="text-align: left;">Atualização da estrutura com capítulos 8 a 10 e padronização dos integrantes</td>
-<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
-<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>1.2</code></td>
-<td style="text-align: center;">07/09/2026</td>
-<td style="text-align: left;">Alinhamento do portal com a estratégia metodológica RAD</td>
-<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
-<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>1.3</code></td>
-<td style="text-align: center;">07/09/2026</td>
-<td style="text-align: left;">Inclusão do papel de Engenheiro de Requisitos para Eric e Matheus</td>
-<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
-<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+<td style="text-align: left;">Correção ortográfica e inclusão de histórico de versão</td>
+<td style="text-align: left;">Matheus Ribeiro</td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
@@ -2337,14 +2387,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
-        <script src="assets/js/nav-search.js"></script>
+        <script src="../../../assets/js/nav-search.js"></script>
       
     
   </body>
