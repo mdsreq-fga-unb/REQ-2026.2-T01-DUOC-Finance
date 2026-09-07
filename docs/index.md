@@ -40,9 +40,12 @@ Para facilitar a auditoria e leitura dos artefatos pelo corpo docente e pelas pa
 *   **Capítulo 2 - Solução Proposta:** Visão do produto, objetivos de negócio, tabela de características (CARs), justificativa de tecnologias e arquitetura, pesquisa de concorrentes, viabilidade e benefícios esperados.
 *   **Capítulo 3 - Intervenção Social:** Análise sociotécnica das transformações corporativas planejadas e contingenciamento de efeitos colaterais comportamentais no ambiente de trabalho.
 *   **Capítulo 4 - Estratégias de ESW:** Decisões metodológicas de processo de software, ciclo de vida iterativo e incremental e quadro comparativo de processos.
-*   **Capítulo 5 - Engenharia de Requisitos:** Práticas e técnicas adotadas nas seis atividades de ER e mapeamento cronológico integrado às Sprints de desenvolvimento.
+*   **Capítulo 5 - Engenharia de Requisitos:** Práticas e técnicas adotadas nas seis atividades de ER e mapeamento cronológico integrado às 4 fases do processo RAD.
 *   **Capítulo 6 - Cronograma:** Planejamento temporal preliminar e divisão dos marcos de entregas da disciplina.
 *   **Capítulo 7 - Interação com Cliente:** Atribuição de papéis da equipe de engenharia, planos e canais de comunicação interna/externa e ritos de validação sociotécnica.
+*   **Capítulo 8 - Requisitos de Software:** Especificação de requisitos funcionais (RF) e não funcionais (RNF) sob o modelo FURPS+ *(a ser entregue na Unidade 2)*.
+*   **Capítulo 9 - DoR e DoD:** Acordos de trabalho para definição de pronto para desenvolvimento e pronto para entrega *(a ser entregue na Unidade 2)*.
+*   **Capítulo 10 - Backlog do Produto:** Backlog geral de histórias de usuário e priorização de MVP via MoSCoW *(a ser entregue na Unidade 2)*.
 *   **Capítulo 11 - Lições Aprendidas:** Retrospectivas consolidadas de processo e aprendizados práticos adquiridos pela equipe ao fim de cada ciclo avaliativo.
 *   **Capítulo 12 - Referências:** Base teórica e bibliografia de suporte técnico e metodológico sob as normas da ABNT e IEEE.
 
@@ -54,10 +57,22 @@ Os integrantes da equipe dividem suas responsabilidades operacionais e de govern
 
 | Integrante | Matrícula | Atribuição Principal no Projeto | Canal de Contato |
 | :--- | :---: | :--- | :---: |
-| **Gabriel** | 242015450 | Engenharia de Requisitos, Elicitação e Modelagem de Negócio | [@cgbriel28](https://github.com/cgbriel28) |
-| **Eric Araújo** | 200064053 | Arquitetura de Software, Modelagem e Definições de Processo | [@EricAraujoBsB](https://github.com/EricAraujoBsB) |
-| **Giovanna** | 231034707 | Gestão de Qualidade, Verificação por Pares e Engenharia de Testes | [@gih7915](https://github.com/gih7915) |
-| **Gustavo** | 241025659 | Desenvolvimento de Software (Frontend e Mobile) | [@Gustavo2703](https://github.com/Gustavo2703) |
-| **Szervinsk** | 231011749 | Engenharia de Requisitos, Elicitação e Interface com Cliente | [@szervinsk](https://github.com/szervinsk) |
-| **Matheus Camargo** | 241011475 | Engenharia de Software, Desenvolvimento de APIs e Backend | [@Matheus-S-Camargo](https://github.com/Matheus-S-Camargo) |
-| **Paulo Nery** | 221008740 | Interface Humano-Computador, Design UI/UX e Protótipos | [@Pnery2004](https://github.com/Pnery2004) |
+| **Eric Araújo** | 200064053 | Product Owner (PO) e Engenheiro de Requisitos, Interface Estratégica e Visão de Produto | [@EricAraujoBsB](https://github.com/EricAraujoBsB) |
+| **Matheus Ribeiro Szervinsk** | 231011749 | Scrum Master (SM), Co-PO e Engenheiro de Requisitos, Facilitação e Modelagem | [@szervinsk](https://github.com/szervinsk) |
+| **Matheus Saraiva Camargo** | 241011475 | Arquiteto de Software, Modelagem de Banco de Dados Relacional e Infraestrutura | [@Matheus-S-Camargo](https://github.com/Matheus-S-Camargo) |
+| **Gustavo** | 241025659 | Gestão de Qualidade (QA), Automação de Testes e Governança DoR/DoD | [@Gustavo2703](https://github.com/Gustavo2703) |
+| **Giovana Ferreira** | 231034707 | Interface Humano-Computador (IHC), Design UI/UX e Frontend React | [@gih7915](https://github.com/gih7915) |
+| **Carlos Gabriel** | 242015450 | Interface Humano-Computador (IHC), Design UI/UX e Frontend React (Mobile-First) | [@cgbriel28](https://github.com/cgbriel28) |
+| **Paulo Nery** | 221008740 | Engenheiro Backend, APIs RESTful e Motor de Regras Financeiras | [@Pnery2004](https://github.com/Pnery2004) |
+
+
+---
+
+## Histórico de Versão
+
+| Versão | Data | Descrição | Autor(es) | Revisor(es) |
+| :---: | :---: | :--- | :--- | :--- |
+| `1.0` | 05/09/2026 | Criação da página inicial do portal de governança e documentação | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
+| `1.1` | 07/09/2026 | Atualização da estrutura com capítulos 8 a 10 e padronização dos integrantes | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
+| `1.2` | 07/09/2026 | Alinhamento do portal com a estratégia metodológica RAD | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
+| `1.3` | 07/09/2026 | Inclusão do papel de Engenheiro de Requisitos para Eric e Matheus | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |

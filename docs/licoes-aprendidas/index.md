@@ -2,50 +2,62 @@
 
 ## Registro Corporativo de Retrospectivas e Melhoria Contínua
 
-### Instrucoes para a Redacao
-A equipe Cascada Agil deve registrar nesta secao as licoes aprendidas ao longo do ciclo de vida do projeto DUOC Finance, documentando de maneira formal e analitica os pontos fortes observados, as vulnerabilidades ou gargalos identificados e os planos de acao corretiva implementados em cada um dos tres marcos avaliativos da disciplina de Requisitos de Software.
+Nesta seção, a equipe **Cascata Ágil** registra de forma transparente as lições aprendidas e retrospectivas conduzidas ao longo do ciclo de vida do projeto **DUOC Finance**. O objetivo é documentar os pontos fortes observados, as vulnerabilidades ou gargalos identificados e os planos de ação corretiva implementados em cada marco avaliativo da disciplina de Requisitos de Software.
 
 ---
 
-### Marco Avaliativo 1: Unidade 1 (Planejamento, Visão de Produto e Elicitação Preliminar)
+## Marco Avaliativo 1: Unidade 1 (Planejamento, Visão de Produto e Elicitação Preliminar)
 
-#### Perguntas Norteadoras
-1. Quais foram as principais facilidades e dificuldades na compreensao do modelo de negocio e nas primeiras entrevistas com a cliente Maria Beatryz?
-2. Como a utilizacao do Rich Picture e do Ishikawa contribuiu para desmistificar o problema real da empresa?
-3. Quais ajustes na comunicacao interna e na organizacao do repositorio Git/MkDocs foram necessarios apos os primeiros feedbacks docentes?
+Na Unidade 1, a equipe realizou a imersão inicial no ecossistema da DUOC Arquitetura e Engenharia, diagnosticando dores operacionais e estabelecendo as fundações metodológicas e de arquitetura do sistema.
 
-| Dimensao de Avaliacao | Diagnostico Realizado pela Equipe | Acao de Melhoria Tecnica Implementada |
+| Dimensão de Avaliação | Diagnóstico Realizado pela Equipe | Ação de Melhoria Técnica Implementada |
 | :--- | :--- | :--- |
-| **Pontos Fortes (O que funcionou bem)** | [Registrar pontos positivos, ex: engajamento da cliente e agilidade na documentacao] | Manter a cadencia e estruturar pautas objetivas para as proximas sessoes. |
-| **Pontos Fracos (Gargalos e Dificuldades)** | [Registrar desafios, ex: calibracao inicial de escopo e alinhamento de conceitos tecnicos] | Realizar sessoes de refinamento interno de requisitos antes das entregas. |
-| **Licoes Aprendidas (Aprendizado pratico)** | [Sintetizar aprendizado sobre relacao cliente-time e aplicacao de tecnicas de ER] | [Acao derivada para as proximas sprints] |
+| **Pontos Fortes (O que funcionou bem)** | Excelente receptividade e engajamento da cliente parceira Maria Beatryz; rápida convergência na modelagem do Rich Picture e Ishikawa; estruturação eficiente do ambiente *Docs as Code* via MkDocs com automação no GitHub Actions. | Manter a cadência quinzenal de reuniões síncronas e estruturar pautas objetivas com 24h de antecedência para as sessões de validação. |
+| **Pontos Fracos (Gargalos e Dificuldades)** | Dificuldade inicial para calibrar as fronteiras de escopo do MVP (risco de incorporar módulos de engenharia civil em detrimento do núcleo financeiro); divergências preliminares na padronização de formatação e escrita entre os integrantes. | Instituição de checklists rigorosos de inspeção baseados no método Fagan e fluxo obrigatório de revisão por pares (*Peer Review*) antes de qualquer merge. |
+| **Lições Aprendidas (Aprendizado Prático)** | A delimitação prévia e estrita do MVP é indispensável para a viabilidade do projeto semestral. A validação visual precoce (Rich Picture) elimina ambiguidades conceituais que poderiam persistir até a implementação. | Focar na prototipação navegável no Figma antes de iniciar qualquer modelagem de persistência na Unidade 2. |
 
 ---
 
-### Marco Avaliativo 2: Unidade 2 (Modelagem de Requisitos, Prototipação e Construção Inicial)
+## Marco Avaliativo 2: Unidade 2 (Elicitação Aprofundada, FURPS+ e Gestão de Backlog)
 
-#### Perguntas Norteadoras
-1. Como foi a experiencia de validar prototipos navegaveis no Figma antes do desenvolvimento de banco de dados?
-2. Quais desafios surgiram na definicao de cenarios BDD (Gherkin) e na quebra de historias de usuario?
-3. Como a equipe lidou com a transicao para a codificacao do core em ScrumXP?
+*(Seção a ser consolidada ao término das entregas e da retrospectiva da Unidade 2).*
 
-| Dimensao de Avaliacao | Diagnostico Realizado pela Equipe | Acao de Melhoria Tecnica Implementada |
+| Dimensão de Avaliação | Diagnóstico Previsto | Ação de Melhoria Técnica |
 | :--- | :--- | :--- |
-| **Pontos Fortes (O que funcionou bem)** | [Registrar pontos positivos da fase de prototipagem e modelagem relacional] | [Acao de sustentacao] |
-| **Pontos Fracos (Gargalos e Dificuldades)** | [Registrar dificuldades na implementacao ou divergencias de layout] | [Plano de acao corretiva] |
-| **Licoes Aprendidas (Aprendizado pratico)** | [Sintetizar aprendizado sobre design centrado no usuario e arquitetura de dados] | [Acao derivada para a Unidade 3] |
+| **Pontos Fortes** | *A registrar ao final do ciclo da Unidade 2.* | *A definir.* |
+| **Pontos Fracos** | *A registrar ao final do ciclo da Unidade 2.* | *A definir.* |
+| **Lições Aprendidas** | *A registrar ao final do ciclo da Unidade 2.* | *A definir.* |
 
 ---
 
-### Marco Avaliativo 3: Unidade 3 (Construção Financeira, V&V e Encerramento do MVP)
+## Marco Avaliativo 3: Unidade 3 (Design do Usuário RAD, Validação de Interfaces e Construção Rápida)
 
-#### Perguntas Norteadoras
-1. De que forma os testes automatizados unitarios e de integracao preveniram falhas criticas nos calculos da folha de pagamento?
-2. Quais foram os principais aprendizados da conducao dos Testes de Aceitacao de Usuario (UAT) com a gestora Maria Beatryz?
-3. Qual e a avaliacao global da maturidade da equipe na integracao da Engenharia de Requisitos com o desenvolvimento de software real?
+*(Seção a ser consolidada ao término das entregas e da retrospectiva da Unidade 3).*
 
-| Dimensao de Avaliacao | Diagnostico Realizado pela Equipe | Acao de Melhoria Tecnica Implementada |
+| Dimensão de Avaliação | Diagnóstico Previsto | Ação de Melhoria Técnica |
 | :--- | :--- | :--- |
-| **Pontos Fortes (O que funcionou bem)** | [Registrar pontos altos da entrega funcional, testes automatizados e aceite do cliente] | [Acao de consolidacao] |
-| **Pontos Fracos (Gargalos e Dificuldades)** | [Registrar desafios finais de deploy, performance ou documentacao de encerramento] | [Recomendacao para projetos futuros] |
-| **Licoes Aprendidas (Aprendizado pratico)** | [Sintese final sobre entrega de valor de negocio e formacao em engenharia de software] | [Conclusao institucional da equipe] |
+| **Pontos Fortes** | *A registrar ao final do ciclo da Unidade 3.* | *A definir.* |
+| **Pontos Fracos** | *A registrar ao final do ciclo da Unidade 3.* | *A definir.* |
+| **Lições Aprendidas** | *A registrar ao final do ciclo da Unidade 3.* | *A definir.* |
+
+---
+
+## Marco Avaliativo 4: Unidade 4 (Construção Final, V&V, UAT e Transição / Cutover)
+
+*(Seção a ser consolidada ao término das entregas e da retrospectiva da Unidade 4).*
+
+| Dimensão de Avaliação | Diagnóstico Previsto | Ação de Melhoria Técnica |
+| :--- | :--- | :--- |
+| **Pontos Fortes** | *A registrar ao final do ciclo da Unidade 4.* | *A definir.* |
+| **Pontos Fracos** | *A registrar ao final do ciclo da Unidade 4.* | *A definir.* |
+| **Lições Aprendidas** | *A registrar ao final do ciclo da Unidade 4.* | *A definir.* |
+
+---
+
+## Histórico de Versão
+
+| Versão | Data | Descrição | Autor(es) | Revisor(es) |
+| :---: | :---: | :--- | :--- | :--- |
+| `1.0` | 05/09/2026 | Estruturação inicial do template de retrospectivas e melhoria contínua | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
+| `1.1` | 07/09/2026 | Registro formal das lições aprendidas da Unidade 1 e padronização | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
+| `1.2` | 07/09/2026 | Reestruturação dos marcos de retrospectiva para contemplar as 4 Unidades letivas | Matheus Ribeiro | Eric Araújo |
