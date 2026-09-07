@@ -21,16 +21,15 @@
   --md-typeset-a-color: var(--duoc-gold);  /* Links no texto */
 }
 
-/* Realce dourado na aba de navegação ativa */
-.md-tabs__link--active,
+/* Realce dourado no menu lateral de navegação */
 .md-nav__link--active {
   color: var(--duoc-gold) !important;
   font-weight: 600;
 }
 
-/* Linha inferior indicadora de aba */
-.md-tabs__link--active {
-  border-bottom: 2px solid var(--duoc-gold);
+.md-sidebar--primary .md-nav__link--active {
+  border-left: 2px solid var(--duoc-gold);
+  padding-left: 0.5rem;
 }
 
 /* Botões estilizados com o Dourado DUOC */
@@ -55,3 +54,286 @@
 .md-typeset .tip > summary {
   background-color: var(--duoc-gold-light);
 }
+
+/* ============================================================
+   ALINHAMENTO DE TEXTO: JUSTIFICADO
+   Aplica alinhamento justificado a todos os parágrafos do conteúdo
+   ============================================================ */
+
+.md-typeset p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* ============================================================
+   LAYOUT EXPANDIDO E FLUIDO (HORIZONTAL WIDE LAYOUT)
+   Navbar encostada à esquerda, conteúdo no centro e índice à direita
+   ============================================================ */
+
+/* Remove a restrição centralizada de 61rem e expande para a largura total da janela */
+.md-grid {
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Header fluido ocupando toda a extensão superior */
+.md-header__inner {
+  padding: 0 1.5rem !important;
+}
+
+@media screen and (min-width: 76.25em) {
+  /* Navbar lateral esquerda calibrada de forma equilibrada para acomodar os títulos */
+  .md-sidebar--primary {
+    width: 16rem !important;
+  }
+
+  /* Garante que o conteúdo interno da sidebar utilize a largura real disponível */
+  [dir=ltr] .md-sidebar--primary .md-sidebar__inner {
+    padding-right: 0.5rem !important;
+  }
+
+  /* Índice lateral direito (TOC) com leitura confortável */
+  .md-sidebar--secondary {
+    width: 14.5rem !important;
+  }
+
+  [dir=ltr] .md-sidebar--secondary .md-sidebar__inner {
+    padding-right: 0.5rem !important;
+  }
+
+  /* Margens do conteúdo para respiro equilibrado entre as duas barras laterais */
+  [dir=ltr] .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+/* Tabelas e matrizes preenchem a largura disponível horizontalmente */
+.md-typeset table:not([class]) {
+  width: 100%;
+  display: table;
+}
+
+/* ============================================================
+   LAYOUT BIPARTIDO (SPLIT LAYOUT): TEXTO À ESQUERDA, DIAGRAMA À DIREITA
+   ============================================================ */
+
+.split-layout {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.split-layout-left {
+  flex: 1.2;
+  min-width: 0;
+}
+
+.split-layout-right {
+  flex: 0.9;
+  min-width: 340px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5rem;
+  background: rgba(22, 24, 29, 0.4);
+  border: 1px solid rgba(218, 165, 32, 0.25);
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.split-layout-right h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(218, 165, 32, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.split-layout-right pre.mermaid,
+.split-layout-right .mermaid {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.split-layout-left ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.split-layout-left ol {
+  list-style-type: decimal;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.split-layout-left li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+
+@media screen and (max-width: 76.25em) {
+  .split-layout {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .split-layout-right {
+    width: 100%;
+    min-width: unset;
+    position: static;
+  }
+}
+
+/* ============================================================
+   SEÇÕES SEPARADAS NA NAVBAR: ATAS DE REUNIÕES E ENTREGAS
+   Destaque visual na barra lateral esquerda com divisores dourados
+   ============================================================ */
+
+/* Separador dourado acima de Atas de Reuniões (desacoplada dos capítulos) */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-last-child(2) {
+  border-top: 2px solid rgba(218, 165, 32, 0.35);
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+}
+
+/* Destaque dourado nos títulos das seções especiais na navbar */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-last-child(2) > .md-nav__link,
+.md-nav--primary > .md-nav__list > .md-nav__item:last-child > .md-nav__link {
+  color: var(--duoc-gold) !important;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+
+/* ============================================================
+   BARRA DE BUSCA EM CIMA DA NAVBAR (FILTRO RÁPIDO DE CAPÍTULOS)
+   Fixa no topo da navegação com acento Dourado DUOC
+   ============================================================ */
+
+.nav-search-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--md-default-bg-color, #1e2129);
+  padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(218, 165, 32, 0.25);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.nav-search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(218, 165, 32, 0.35);
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+  transition: all 0.2s ease;
+}
+
+.nav-search-box:focus-within {
+  border-color: var(--duoc-gold);
+  box-shadow: 0 0 0 2px rgba(218, 165, 32, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-search-icon {
+  color: var(--duoc-gold);
+  flex-shrink: 0;
+  margin-right: 0.45rem;
+}
+
+#nav-chapter-search {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-size: 0.78rem;
+  font-family: inherit;
+  min-width: 0;
+}
+
+#nav-chapter-search::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.75rem;
+}
+
+[data-md-color-scheme="default"] .nav-search-wrapper {
+  background: #ffffff;
+  border-bottom-color: rgba(218, 165, 32, 0.3);
+}
+
+[data-md-color-scheme="default"] .nav-search-box {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+[data-md-color-scheme="default"] #nav-chapter-search::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+#nav-search-clear {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.2rem;
+  margin-left: 0.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-search-clear:hover {
+  color: var(--duoc-gold);
+}
+
+[data-md-color-scheme="default"] #nav-search-clear {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.nav-search-count {
+  font-size: 0.68rem;
+  margin-top: 0.35rem;
+  padding-left: 0.3rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   AJUSTE DE ÍCONES (TWEMOJI / SVG) EM TABELAS E TÍTULOS
+   ============================================================ */
+
+.md-typeset .twemoji {
+  vertical-align: -0.2em;
+}
+
+.md-typeset table td .twemoji {
+  margin-right: 0.35rem;
+}
+
+.md-typeset h2 .twemoji,
+.md-typeset h3 .twemoji {
+  margin-right: 0.35rem;
+  vertical-align: -0.15em;
+}
+
+
+
+

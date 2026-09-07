@@ -21,13 +21,13 @@ O **DUOC Finance** é uma solução digital desenvolvida para a empresa **DUOC A
 
 | Foto | Integrante | GitHub | Matrícula | Responsabilidade Principal |
 | :---: | :--- | :---: | :---: | :--- |
-| <img src="https://github.com/cgbriel28.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Gabriel"> | Gabriel | [@cgbriel28](https://github.com/cgbriel28) | 242015450 | Requisitos e Elicitação |
-| <img src="https://github.com/EricAraujoBsB.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Eric Araújo"> | Eric Araújo | [@EricAraujoBsB](https://github.com/EricAraujoBsB) | 200064053 | Modelagem e Arquitetura |
-| <img src="https://github.com/gih7915.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Giovanna"> | Giovanna | [@gih7915](https://github.com/gih7915) | 231034707 | Gestão de Qualidade e Testes |
-| <img src="https://github.com/Gustavo2703.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Gustavo"> | Gustavo | [@Gustavo2703](https://github.com/Gustavo2703) | 241025659 | Desenvolvimento Full Stack |
-| <img src="https://github.com/szervinsk.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Szervinsk"> | Matheus Ribeiro | [@szervinsk](https://github.com/szervinsk) | 231011749 | Elicitação e Contato com Cliente |
-| <img src="https://github.com/Matheus-S-Camargo.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Matheus Camargo"> | Matheus Camargo | [@Matheus-S-Camargo](https://github.com/Matheus-S-Camargo) | 241011475 | Engenharia de Software / Backend |
-| <img src="https://github.com/Pnery2004.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Paulo Nery"> | Paulo Nery | [@Pnery2004](https://github.com/Pnery2004) | 221008740 | Interface e Frontend |
+| <img src="https://github.com/EricAraujoBsB.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Eric Araújo"> | Eric Araújo | [@EricAraujoBsB](https://github.com/EricAraujoBsB) | 200064053 | Product Owner (PO) e Engenheiro de Requisitos, Interface Estratégica e Visão de Produto |
+| <img src="https://github.com/szervinsk.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Matheus Ribeiro"> | Matheus Ribeiro Szervinsk | [@szervinsk](https://github.com/szervinsk) | 231011749 | Scrum Master (SM), Co-PO e Engenheiro de Requisitos, Facilitação e Modelagem Sociotécnica |
+| <img src="https://github.com/Matheus-S-Camargo.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Matheus Saraiva Camargo"> | Matheus Saraiva Camargo | [@Matheus-S-Camargo](https://github.com/Matheus-S-Camargo) | 241011475 | Arquiteto de Software, Banco de Dados Relacional e Infraestrutura Docker |
+| <img src="https://github.com/Gustavo2703.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Gustavo"> | Gustavo | [@Gustavo2703](https://github.com/Gustavo2703) | 241025659 | Gestão de Qualidade (QA), Automação de Testes e Governança DoR/DoD |
+| <img src="https://github.com/gih7915.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Giovana Ferreira"> | Giovana Ferreira | [@gih7915](https://github.com/gih7915) | 231034707 | Interface Humano-Computador (IHC), Design UI/UX e Frontend React |
+| <img src="https://github.com/cgbriel28.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Carlos Gabriel"> | Carlos Gabriel | [@cgbriel28](https://github.com/cgbriel28) | 242015450 | Interface Humano-Computador (IHC), Design UI/UX e Frontend React (Mobile-First) |
+| <img src="https://github.com/Pnery2004.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Paulo Nery"> | Paulo Nery | [@Pnery2004](https://github.com/Pnery2004) | 221008740 | Engenheiro Backend, APIs RESTful e Motor de Regras Financeiras |
 
 ---
 
