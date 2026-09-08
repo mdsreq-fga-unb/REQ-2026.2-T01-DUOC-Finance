@@ -10,7 +10,7 @@ Cada página de entrega reúne o mapeamento sistemático dos requisitos exigidos
 
 | Marco de Avaliação | Escopo / Fase RAD | Período de Execução | Status Atual | Documento Detalhado | Vídeo da Apresentação |
 | :---: | :--- | :---: | :---: | :---: | :---: |
-| **Entrega 1** | *Fase 1: Planejamento de Requisitos* (Ponto de Controle 1) | 11/08/2026 a 08/09/2026 | :white_check_mark: **Concluída** | [Acessar Entrega 1](entrega-1.md) | [Assistir Gravação](entrega-1.md#3-video-da-apresentacao-da-entrega-1) |
+| **Entrega 1** | *Fase 1: Planejamento de Requisitos* (Ponto de Controle 1) | 11/08/2026 a 08/09/2026 | :white_check_mark: **Concluída** | [Acessar Entrega 1](entrega-1.md) | [Assistir Gravação](entrega-1.md#3-video-da-apresentacao-da-entrega-1) • [(YouTube)](https://youtu.be/OZ9LhKuI364) |
 | **Entrega 2** | *Fase 2: Design do Usuário* (Ponto de Controle 2) | 15/09 a 15/10/2026 | :warning: **Em Desenvolvimento** | [Acessar Entrega 2](entrega-2.md) | *A gravar* |
 | **Entrega 3** | *Fase 3: Construção Rápida* (Ponto de Controle 3) | 20/10 a 19/11/2026 | :warning: **Em Desenvolvimento** | [Acessar Entrega 3](entrega-3.md) | *A gravar* |
 | **Entrega 4** | *Fase 4: Transição / Cutover* (Ponto de Controle 4 — Final) | 24/11 a 01/12/2026 | :warning: **Em Desenvolvimento** | [Acessar Entrega 4](entrega-4.md) | *A gravar* |
@@ -71,3 +71,4 @@ Para assegurar máxima transparência, rastreabilidade acadêmica e clareza para
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 07/09/2026 | Estruturação inicial do Painel Geral de Entregas e vinculação dos marcos | Matheus Ribeiro |  |
 | `1.1` | 07/09/2026 | Sincronização dos períodos de execução e fases RAD das 4 entregas com o cronograma oficial | Matheus Ribeiro | Eric Araújo |
+| `1.2` | 08/09/2026 | Vinculação do link direto oficial do vídeo da Entrega 1 no YouTube | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
