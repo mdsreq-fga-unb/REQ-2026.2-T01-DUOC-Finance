@@ -10,6 +10,11 @@
   --duoc-gold-hover: #b8860b;
   --duoc-gold-light: rgba(218, 165, 32, 0.15);
 
+  /* Preto padrão institucional DUOC */
+  --duoc-black: #16181d;
+  --duoc-black-dark: #0f1013;
+  --duoc-black-card: rgba(22, 24, 29, 0.95);
+
   /* Sobrescrevendo variáveis do Material for MkDocs */
   --md-primary-fg-color: #16181d;          /* Header e topo escuro sofisticado */
   --md-primary-fg-color--light: #20242c;
@@ -53,6 +58,119 @@
 .md-typeset .tip > .admonition-title,
 .md-typeset .tip > summary {
   background-color: var(--duoc-gold-light);
+}
+
+/* ============================================================
+   DESTAQUE EXCLUSIVO: OBJETIVO GERAL DO PRODUTO (COMPACTO)
+   ============================================================ */
+
+.objetivo-geral-box,
+.md-typeset blockquote.objetivo-geral,
+.md-typeset h2[id*="objetivo-geral"] + blockquote,
+.md-typeset h2[id*="21"] + blockquote {
+  background-color: rgba(218, 165, 32, 0.08) !important;
+  border: none !important;
+  border-left: 3px solid var(--duoc-gold) !important;
+  border-radius: 0 4px 4px 0 !important;
+  padding: 0.35rem 0.75rem !important;
+  margin: 0.5rem 0 !important;
+  box-shadow: none !important;
+}
+
+.objetivo-geral-box p,
+.md-typeset blockquote.objetivo-geral p,
+.md-typeset blockquote.objetivo-geral strong,
+.md-typeset h2[id*="objetivo-geral"] + blockquote p,
+.md-typeset h2[id*="objetivo-geral"] + blockquote strong,
+.md-typeset h2[id*="21"] + blockquote p,
+.md-typeset h2[id*="21"] + blockquote strong,
+.objetivo-geral-box strong {
+  color: var(--duoc-gold) !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+  margin: 0 !important;
+  text-shadow: none !important;
+}
+
+[data-md-color-scheme="default"] .objetivo-geral-box,
+[data-md-color-scheme="default"] .md-typeset blockquote.objetivo-geral,
+[data-md-color-scheme="default"] .md-typeset h2[id*="objetivo-geral"] + blockquote,
+[data-md-color-scheme="default"] .md-typeset h2[id*="21"] + blockquote {
+  background-color: rgba(218, 165, 32, 0.1) !important;
+}
+
+[data-md-color-scheme="default"] .objetivo-geral-box p,
+[data-md-color-scheme="default"] .md-typeset blockquote.objetivo-geral p,
+[data-md-color-scheme="default"] .md-typeset blockquote.objetivo-geral strong,
+[data-md-color-scheme="default"] .md-typeset h2[id*="objetivo-geral"] + blockquote p,
+[data-md-color-scheme="default"] .md-typeset h2[id*="objetivo-geral"] + blockquote strong,
+[data-md-color-scheme="default"] .md-typeset h2[id*="21"] + blockquote p,
+[data-md-color-scheme="default"] .md-typeset h2[id*="21"] + blockquote strong,
+[data-md-color-scheme="default"] .objetivo-geral-box strong {
+  color: #8c6200 !important;
+}
+
+/* ============================================================
+   CARDS EXPANSÍVEIS (ACCORDIONS) PARA OES E CARACTERÍSTICAS
+   Estilo compacto, sem ícone, fonte reduzida e expansão limpa
+   ============================================================ */
+
+.md-typeset details {
+  border: 1px solid rgba(218, 165, 32, 0.3) !important;
+  border-radius: 6px !important;
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+  margin-bottom: 0.45rem !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  overflow: hidden;
+}
+
+.md-typeset details:hover {
+  border-color: var(--duoc-gold) !important;
+  box-shadow: 0 2px 8px rgba(218, 165, 32, 0.15) !important;
+}
+
+/* Remove completamente os ícones à esquerda */
+.md-typeset details > summary::before,
+.md-typeset details > .admonition-title::before {
+  display: none !important;
+  content: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+}
+
+.md-typeset details > summary,
+.md-typeset details > .admonition-title {
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+  padding: 0.45rem 0.85rem !important;
+  padding-left: 0.85rem !important;
+  background-color: rgba(218, 165, 32, 0.06) !important;
+  border-bottom: 1px solid transparent !important;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.md-typeset details > summary:hover,
+.md-typeset details > .admonition-title:hover {
+  background-color: rgba(218, 165, 32, 0.12) !important;
+  color: var(--duoc-gold) !important;
+}
+
+.md-typeset details[open] > summary,
+.md-typeset details[open] > .admonition-title {
+  background-color: rgba(218, 165, 32, 0.14) !important;
+  border-bottom: 1px solid rgba(218, 165, 32, 0.3) !important;
+  color: var(--duoc-gold) !important;
+}
+
+.md-typeset details > .admonition-content,
+.md-typeset details > div:not(.admonition-title) {
+  padding: 0.75rem 1rem !important;
+  font-size: 0.82rem !important;
 }
 
 /* ============================================================
@@ -334,6 +452,855 @@
   vertical-align: -0.15em;
 }
 
+/* ============================================================
+   CHIPS / TAGS DE TECNOLOGIAS E LINGUAGENS
+   ============================================================ */
 
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  align-items: center;
+}
 
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: rgba(218, 165, 32, 0.08);
+  border: 1px solid rgba(218, 165, 32, 0.3);
+  border-radius: 6px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--duoc-gold);
+  line-height: 1.2;
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background-color: rgba(218, 165, 32, 0.16);
+  border-color: var(--duoc-gold);
+}
+
+.tech-tag .twemoji {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+[data-md-color-scheme="default"] .tech-tag {
+  background-color: rgba(218, 165, 32, 0.1);
+  border-color: rgba(218, 165, 32, 0.4);
+  color: #8c6200;
+}
+
+/* ============================================================
+   WIDGET UNIFICADO DE CRONOGRAMA: CALENDÁRIO COM SELETORES E TOOLTIPS
+   Cards de seleção integrados no topo do card e tooltips informativos
+   ============================================================ */
+
+.calendar-unified-widget,
+.month-selector-widget {
+  margin: 1.5rem auto 2.5rem auto;
+  width: 100%;
+  max-width: 1080px;
+  position: relative;
+}
+
+/* Radio buttons invisíveis de controle */
+.month-radio {
+  display: none !important;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Card unificado que engloba os seletores e o calendário */
+.calendar-unified-card {
+  background: rgba(22, 24, 29, 0.65);
+  border: 1px solid rgba(218, 165, 32, 0.35);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+/* Barra superior interna: cards de seleção integrados dentro da div */
+.calendar-nav-bar,
+.month-selector-sidebar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.month-tab-btn,
+.month-nav-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.65rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  text-decoration: none !important;
+  user-select: none;
+  gap: 0.3rem;
+  min-height: 64px;
+}
+
+.month-tab-btn:hover,
+.month-nav-card:hover {
+  background: rgba(218, 165, 32, 0.08);
+  border-color: rgba(218, 165, 32, 0.45);
+  transform: translateY(-2px);
+}
+
+.tab-title,
+.month-nav-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.tab-pill,
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.45rem;
+  border-radius: 10px;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.tab-pill.concluido,
+.status-pill.concluido {
+  background: rgba(34, 197, 94, 0.18);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.tab-pill.andamento,
+.status-pill.andamento {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.45);
+}
+
+.tab-pill.planejado,
+.status-pill.planejado {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.tab-pill.marcada,
+.status-pill.marcada {
+  background: rgba(218, 165, 32, 0.2);
+  color: #ffd866;
+  border: 1px solid rgba(218, 165, 32, 0.5);
+}
+
+.milestone-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  background: rgba(220, 38, 38, 0.2);
+  color: #fca5a5;
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  font-size: 0.66rem;
+  font-weight: 700;
+}
+
+.milestone-badge.done {
+  background: rgba(34, 197, 94, 0.2);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.5);
+}
+
+/* ============================================================
+   TOOLTIP INFORMATIVO DO SELETOR DE MÊS
+   ============================================================ */
+
+.month-tooltip {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  width: 285px;
+  background: var(--duoc-black, #16181d) !important;
+  border: 1px solid var(--duoc-gold) !important;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.85), 0 0 1px rgba(218, 165, 32, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 250;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.month-tab-btn:hover .month-tooltip,
+.month-nav-card:hover .month-tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Ajustes laterais para evitar corte nas bordas */
+.month-tab-btn.tab-ago .month-tooltip,
+.tab-ago .month-tooltip {
+  left: 0;
+  transform: translateY(6px);
+}
+.month-tab-btn.tab-ago:hover .month-tooltip,
+.tab-ago:hover .month-tooltip {
+  transform: translateY(0);
+}
+
+.month-tab-btn.tab-dez .month-tooltip,
+.tab-dez .month-tooltip {
+  left: auto;
+  right: 0;
+  transform: translateY(6px);
+}
+.month-tab-btn.tab-dez:hover .month-tooltip,
+.tab-dez:hover .month-tooltip {
+  transform: translateY(0);
+}
+
+/* Setinhas do Tooltip */
+.month-tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 7px solid transparent;
+  border-bottom-color: var(--duoc-gold);
+}
+
+.month-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-bottom-color: var(--duoc-black, #16181d) !important;
+}
+
+.tab-ago .month-tooltip::before,
+.tab-ago .month-tooltip::after {
+  left: 36px;
+}
+
+.tab-dez .month-tooltip::before,
+.tab-dez .month-tooltip::after {
+  left: auto;
+  right: 28px;
+}
+
+.tooltip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.tooltip-header strong {
+  font-size: 0.92rem;
+  color: #ffffff;
+}
+
+.tooltip-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.tooltip-badge.concluido {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.45);
+}
+
+.tooltip-badge.andamento {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.45);
+}
+
+.tooltip-badge.planejado {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tooltip-phase {
+  font-size: 0.75rem;
+  color: var(--duoc-gold);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.tooltip-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.09);
+  margin: 0.5rem 0;
+}
+
+.tooltip-body {
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.45;
+}
+
+.tooltip-body p {
+  margin: 0.25rem 0 !important;
+  text-align: left !important;
+}
+
+.tooltip-body p strong {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.tooltip-hint {
+  font-size: 0.68rem;
+  color: var(--duoc-gold);
+  font-style: italic;
+  margin-top: 0.5rem;
+  padding-top: 0.35rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+/* ============================================================
+   ATIVAÇÃO DO CARD SELECIONADO E EXIBIÇÃO DO PAINEL
+   ============================================================ */
+
+#tab-month-ago:checked ~ .calendar-unified-card .calendar-nav-bar label[for="tab-month-ago"],
+#tab-month-set:checked ~ .calendar-unified-card .calendar-nav-bar label[for="tab-month-set"],
+#tab-month-out:checked ~ .calendar-unified-card .calendar-nav-bar label[for="tab-month-out"],
+#tab-month-nov:checked ~ .calendar-unified-card .calendar-nav-bar label[for="tab-month-nov"],
+#tab-month-dez:checked ~ .calendar-unified-card .calendar-nav-bar label[for="tab-month-dez"],
+.calendar-unified-widget:has(#tab-month-ago:checked) label[for="tab-month-ago"],
+.calendar-unified-widget:has(#tab-month-set:checked) label[for="tab-month-set"],
+.calendar-unified-widget:has(#tab-month-out:checked) label[for="tab-month-out"],
+.calendar-unified-widget:has(#tab-month-nov:checked) label[for="tab-month-nov"],
+.calendar-unified-widget:has(#tab-month-dez:checked) label[for="tab-month-dez"] {
+  background: rgba(218, 165, 32, 0.16) !important;
+  border-color: var(--duoc-gold) !important;
+  box-shadow: 0 0 12px rgba(218, 165, 32, 0.25);
+}
+
+#tab-month-ago:checked ~ .calendar-unified-card .calendar-nav-bar label[for="tab-month-ago"] .tab-title,
+#tab-month-set:checked ~ .calendar-unified-card .calendar-nav-bar label[for="tab-month-set"] .tab-title,
+#tab-month-out:checked ~ .calendar-unified-card .calendar-nav-bar label[for="tab-month-out"] .tab-title,
+#tab-month-nov:checked ~ .calendar-unified-card .calendar-nav-bar label[for="tab-month-nov"] .tab-title,
+#tab-month-dez:checked ~ .calendar-unified-card .calendar-nav-bar label[for="tab-month-dez"] .tab-title,
+.calendar-unified-widget:has(#tab-month-ago:checked) label[for="tab-month-ago"] .tab-title,
+.calendar-unified-widget:has(#tab-month-set:checked) label[for="tab-month-set"] .tab-title,
+.calendar-unified-widget:has(#tab-month-out:checked) label[for="tab-month-out"] .tab-title,
+.calendar-unified-widget:has(#tab-month-nov:checked) label[for="tab-month-nov"] .tab-title,
+.calendar-unified-widget:has(#tab-month-dez:checked) label[for="tab-month-dez"] .tab-title {
+  color: var(--duoc-gold) !important;
+}
+
+/* Área de Exibição Principal (Mês Selecionado) */
+.calendar-month-content,
+.month-display-container {
+  width: 100%;
+}
+
+.month-view-panel {
+  display: none;
+  animation: fadeInCalPanel 0.22s ease-in-out;
+}
+
+@keyframes fadeInCalPanel {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Chaveamento dos Painéis Mensais */
+#tab-month-ago:checked ~ .calendar-unified-card .calendar-month-content .view-ago,
+#tab-month-set:checked ~ .calendar-unified-card .calendar-month-content .view-set,
+#tab-month-out:checked ~ .calendar-unified-card .calendar-month-content .view-out,
+#tab-month-nov:checked ~ .calendar-unified-card .calendar-month-content .view-nov,
+#tab-month-dez:checked ~ .calendar-unified-card .calendar-month-content .view-dez,
+.calendar-unified-widget:has(#tab-month-ago:checked) .view-ago,
+.calendar-unified-widget:has(#tab-month-set:checked) .view-set,
+.calendar-unified-widget:has(#tab-month-out:checked) .view-out,
+.calendar-unified-widget:has(#tab-month-nov:checked) .view-nov,
+.calendar-unified-widget:has(#tab-month-dez:checked) .view-dez {
+  display: block !important;
+}
+
+/* Cabeçalho do Painel Mensal */
+.panel-month-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.panel-month-title {
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.panel-month-phase {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--duoc-gold);
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.panel-month-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Tabela de Calendário Ampliada */
+.large-calendar-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.large-cal-table {
+  width: 100%;
+  border-collapse: separate !important;
+  border-spacing: 5px !important;
+  table-layout: fixed;
+  margin: 0 !important;
+}
+
+.large-cal-table th {
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  padding: 0.5rem 0.25rem !important;
+  border-radius: 4px;
+  border: none !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.large-cal-table td {
+  height: 66px !important;
+  min-height: 66px !important;
+  padding: 0.4rem 0.45rem !important;
+  vertical-align: top !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  transition: all 0.15s ease;
+  position: relative;
+  text-align: left !important;
+}
+
+.large-cal-table td:hover:not(.empty-day) {
+  border-color: rgba(218, 165, 32, 0.45) !important;
+  background: rgba(218, 165, 32, 0.05) !important;
+  transform: translateY(-1px);
+}
+
+.large-cal-table td.empty-day {
+  background: transparent !important;
+  border: none !important;
+  cursor: default;
+}
+
+.cell-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+
+.cell-num {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  line-height: 1;
+}
+
+.cell-icon-status {
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+/* Event Chips dentro das células */
+.event-chip {
+  display: block;
+  font-size: 0.64rem;
+  font-weight: 700;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  line-height: 1.25;
+  text-align: center;
+  margin-top: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-chip.meet {
+  background: rgba(218, 165, 32, 0.25);
+  color: #ffd866;
+  border: 1px solid rgba(218, 165, 32, 0.6);
+}
+
+.event-chip.meet-done {
+  background: rgba(34, 197, 94, 0.22);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.5);
+}
+
+.event-chip.milestone {
+  background: #dc2626;
+  color: #ffffff;
+  border: 1px solid #f87171;
+  box-shadow: 0 0 8px rgba(220, 38, 38, 0.6);
+}
+
+.event-chip.milestone-done {
+  background: #15803d;
+  color: #ffffff;
+  border: 1px solid #4ade80;
+  box-shadow: 0 0 8px rgba(21, 128, 61, 0.6);
+}
+
+.event-chip.active-phase {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.45);
+}
+
+/* Estilos de Células por Unidade e Status */
+.large-cal-table td.day-u1 {
+  background: rgba(218, 165, 32, 0.08) !important;
+  border-color: rgba(218, 165, 32, 0.25) !important;
+}
+
+.large-cal-table td.day-u2 {
+  background: rgba(59, 130, 246, 0.07) !important;
+  border-color: rgba(59, 130, 246, 0.22) !important;
+}
+
+.large-cal-table td.day-u3 {
+  background: rgba(249, 115, 22, 0.07) !important;
+  border-color: rgba(249, 115, 22, 0.22) !important;
+}
+
+.large-cal-table td.day-u4 {
+  background: rgba(168, 85, 247, 0.07) !important;
+  border-color: rgba(168, 85, 247, 0.22) !important;
+}
+
+.large-cal-table td.day-done {
+  border-color: rgba(34, 197, 94, 0.3) !important;
+}
+
+.large-cal-table td.day-done .cell-num {
+  color: #86efac;
+}
+
+.large-cal-table td.day-milestone {
+  border-color: #f87171 !important;
+  background: rgba(220, 38, 38, 0.12) !important;
+}
+
+.large-cal-table td.day-meet {
+  border-color: rgba(218, 165, 32, 0.5) !important;
+  background: rgba(218, 165, 32, 0.1) !important;
+}
+
+/* Feed / Pautas de Reuniões e Entregas do Mês */
+.month-events-feed {
+  margin-top: 1.25rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.month-events-title {
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 0 0.85rem 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.month-event-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 0.5rem;
+  gap: 0.85rem;
+  transition: all 0.15s ease;
+}
+
+.month-event-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(218, 165, 32, 0.3);
+}
+
+.month-event-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.event-date-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  background: rgba(218, 165, 32, 0.15);
+  border: 1px solid rgba(218, 165, 32, 0.4);
+  color: var(--duoc-gold);
+  font-weight: 700;
+  flex-shrink: 0;
+  line-height: 1.1;
+}
+
+.event-date-badge .ev-d {
+  font-size: 1rem;
+}
+
+.event-date-badge .ev-m {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.event-date-badge.milestone {
+  background: rgba(220, 38, 38, 0.2);
+  border-color: rgba(220, 38, 38, 0.5);
+  color: #fca5a5;
+}
+
+.event-date-badge.done {
+  background: rgba(34, 197, 94, 0.18);
+  border-color: rgba(34, 197, 94, 0.45);
+  color: #4ade80;
+}
+
+.event-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.event-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.event-desc {
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.35;
+}
+
+/* Responsividade Mobile / Tablet */
+@media screen and (max-width: 900px) {
+  .calendar-nav-bar,
+  .month-selector-sidebar {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .calendar-unified-card {
+    padding: 1rem 0.85rem;
+  }
+
+  .month-tab-btn,
+  .month-nav-card {
+    min-height: 56px;
+    padding: 0.5rem 0.35rem;
+  }
+
+  .tab-title,
+  .month-nav-title {
+    font-size: 0.8rem;
+  }
+
+  .month-tooltip {
+    width: 250px;
+  }
+
+  .large-cal-table td {
+    height: 52px !important;
+    min-height: 52px !important;
+    padding: 0.3rem !important;
+  }
+
+  .cell-num {
+    font-size: 0.92rem;
+  }
+
+  .event-chip {
+    font-size: 0.58rem;
+  }
+}
+
+/* Modo Claro (Light Mode) */
+[data-md-color-scheme="default"] .calendar-unified-card {
+  background: #ffffff;
+  border-color: rgba(218, 165, 32, 0.45);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+[data-md-color-scheme="default"] .calendar-nav-bar {
+  border-bottom-color: #e2e8f0;
+}
+
+[data-md-color-scheme="default"] .month-tab-btn,
+[data-md-color-scheme="default"] .month-nav-card {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+[data-md-color-scheme="default"] .tab-title,
+[data-md-color-scheme="default"] .month-nav-title {
+  color: #1e293b;
+}
+
+[data-md-color-scheme="default"] .month-nav-subtitle {
+  color: #64748b;
+}
+
+/* Tooltip mantém o preto padrão institucional DUOC mesmo no tema claro */
+[data-md-color-scheme="default"] .month-tooltip {
+  background: var(--duoc-black, #16181d) !important;
+  border-color: var(--duoc-gold) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 1px rgba(218, 165, 32, 0.4) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-md-color-scheme="default"] .month-tooltip::after {
+  border-bottom-color: var(--duoc-black, #16181d) !important;
+}
+
+[data-md-color-scheme="default"] .tooltip-header strong {
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="default"] .tooltip-phase {
+  color: var(--duoc-gold) !important;
+}
+
+[data-md-color-scheme="default"] .tooltip-divider {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-md-color-scheme="default"] .tooltip-body {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-md-color-scheme="default"] .tooltip-body p strong {
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="default"] .tooltip-hint {
+  color: var(--duoc-gold) !important;
+  border-top-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-md-color-scheme="default"] .panel-month-title {
+  color: #0f172a !important;
+}
+
+[data-md-color-scheme="default"] .panel-month-header {
+  border-bottom-color: #e2e8f0;
+}
+
+[data-md-color-scheme="default"] .large-cal-table th {
+  background: #f1f5f9 !important;
+  color: #475569 !important;
+}
+
+[data-md-color-scheme="default"] .large-cal-table td {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+[data-md-color-scheme="default"] .cell-num {
+  color: #1e293b;
+}
+
+[data-md-color-scheme="default"] .month-event-item {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+[data-md-color-scheme="default"] .event-name {
+  color: #1e293b;
+}
+
+[data-md-color-scheme="default"] .event-desc {
+  color: #64748b;
+}
+
+[data-md-color-scheme="default"] .month-events-feed {
+  border-top-color: #e2e8f0;
+}
+
+[data-md-color-scheme="default"] .month-events-title {
+  color: #0f172a !important;
+}
 

@@ -6,15 +6,15 @@ Este capítulo formaliza a visão de produto do DUOC Finance. Ele descreve como 
 ## Conjunto de Artefatos
 A definição da proposta de solução apoia-se nas seguintes especificações estruturadas:
 
-*   Objetivos do Produto: Declarações claras sobre as metas operacionais gerais e específicas de negócio.
-*   Tabela Matricial de Características (CARs): Mapeamento e rastreabilidade bidirecional entre características funcionais e os objetivos do negócio.
+*   Declaração de Posição e Objetivos do Produto: Síntese estratégica no padrão canônico (Para/Que/Diferente de/Nosso produto) e metas operacionais desdobradas na Pirâmide de Abstração.
+*   Características do Produto (CARs): Mapeamento e rastreabilidade modular em cards (CAR-01 a CAR-08) subordinados aos objetivos de negócio e vinculados ao MVP.
 *   Tecnologias a Serem Utilizadas: Definição fundamentada da stack tecnológica, banco de dados e arquitetura de implantação.
 *   Pesquisa de Mercado e Análise Competitiva: Mapeamento de soluções similares de prateleira e posicionamento do diferencial da solução.
 *   Viabilidade da Proposta: Avaliação pragmática do cronograma, competências técnicas e mitigação de riscos de projeto.
 *   Benefícios Esperados: Detalhamento do valor agregado tangível para a organização e para os colaboradores finais.
 
 ## Sumário do Capítulo
-1. [2.1 e 2.2 Objetivos do Produto](2.1-2.2-objetivos.md)
+1. [2.1 e 2.2 Declaração de Posição e Objetivos do Produto](2.1-2.2-objetivos.md)
 2. [2.3 Características do Produto](2.3-caracteristicas.md)
 3. [2.4 Tecnologias a Serem Utilizadas e Arquitetura](2.4-tecnologias.md)
 4. [2.5 Pesquisa de Mercado e Análise Competitiva](2.5-pesquisa-mercado.md)
@@ -29,3 +29,4 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 05/09/2026 | Estruturação inicial do sumário e escopo da proposta do Capítulo 2 | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `1.1` | 07/09/2026 | Alinhamento do conjunto de artefatos de visão de produto e MVP | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
+| `1.2` | 08/09/2026 | Inclusão da Declaração de Posição do Produto e atualização do sumário para CAR-01 a CAR-08 | Matheus Ribeiro Szervinsk | Equipe DUOC Finance |
