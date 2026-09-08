@@ -2,7 +2,7 @@
 
 ## Objetivo do Capítulo
 
-O objetivo deste capítulo é avaliar o **DUOC Finance** como um agente de intervenção social e cultural na estrutura da DUOC Arquitetura e Engenharia, indo além de sua dimensão puramente tecnológica.
+Apesar da DUOC Arquitetura e Engenharia ser uma mini empresa consolidada no setor privado, o objetivo deste capítulo é avaliar o **DUOC Finance** como um agente de intervenção social e cultural dentro da estrutura da empresa, indo além de sua dimensão puramente tecnológica, mas social.
 
 Sob a ótica da **Engenharia de Requisitos Sociotécnica**, analisa-se a transição dos fluxos informacionais informais para um modelo centralizado a partir dos seguintes eixos:
 
