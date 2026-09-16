@@ -1,6 +1,6 @@
 # Painel Geral de Atas e Pautas de Reuniões
 
-Em conformidade com o modelo de governança e os ritos de comunicação formalizados no [7.2 Comunicação](../interacao-cliente/7.2-comunicacao.md) (notadamente a diretriz de **Registro de Atas e Decisões**), esta seção constitui o repositório oficial das atas de reunião, pautas prévias, deliberações de escopo e listas de ações imediatas (*Action Items*) acordadas entre a equipe **Cascata Ágil** e a cliente parceira **Maria Beatryz Vieira de Sousa**, bem como alinhamentos internos de engenharia da equipe.
+Em conformidade com o modelo de governança e os ritos de comunicação formalizados no [7.2 Comunicação](../interacao-cliente/index.md#72-comunicacao) (notadamente a diretriz de **Registro de Atas e Decisões**), esta seção constitui o repositório oficial das atas de reunião, pautas prévias, deliberações de escopo e listas de ações imediatas (*Action Items*) acordadas entre a equipe **Cascata Ágil** e a cliente parceira **Maria Beatryz Vieira de Sousa**, bem como alinhamentos internos de engenharia da equipe.
 
 ---
 
@@ -8,8 +8,8 @@ Em conformidade com o modelo de governança e os ritos de comunicação formaliz
 
 | Reunião | Data | Natureza da Sessão | Participantes Principais | Principais Decisões e Entregas | Ata Detalhada |
 | :---: | :---: | :--- | :--- | :--- | :---: |
-| **Reunião 01** | 05/09/2026 | Elicitação Inicial, Escopo e MVP | Equipe Cascata Ágil e Maria Beatryz | Delimitação do escopo central, exclusão do módulo de estoque, LGPD com dados sintéticos e hospedagem na Vercel | [Acessar Ata 01](reuniao-01.md) |
-| **Reunião 02** | 07/09/2026 | Alinhamento Metodológico e ESW | Equipe Cascata Ágil | Diagnóstico sociotécnico, integração com auditor.ia, modelo RBAC, Framework RAD, TypeScript/Supabase e Git Flow | [Acessar Ata 02](reuniao-02.md) |
+| **Reunião 01** | 05/09/2026 | Elicitação Inicial, Escopo e MVP | Equipe Cascata Ágil e Maria Beatryz | Delimitação do escopo central, exclusão do módulo de estoque, LGPD com dados sintéticos e hospedagem na Vercel | [Consultar Aba Abaixo](#consulta-unificada-por-abas) |
+| **Reunião 02** | 07/09/2026 | Alinhamento Metodológico e ESW | Equipe Cascata Ágil | Diagnóstico sociotécnico, integração com auditor.ia, modelo RBAC, Framework RAD, TypeScript/Supabase e Git Flow | [Consultar Aba Abaixo](#consulta-unificada-por-abas) |
 
 ---
 
@@ -17,12 +17,12 @@ Em conformidade com o modelo de governança e os ritos de comunicação formaliz
 
 <div class="grid cards" markdown>
 
--   :material-clipboard-text-clock-outline: **[Reunião 01 — Elicitação de Escopo e MVP (05/09/2026)](reuniao-01.md)**
+-   :material-clipboard-text-clock-outline: **[Reunião 01 — Elicitação de Escopo e MVP (05/09/2026)](#consulta-unificada-por-abas)**
     
     ---
     Primeiro alinhamento oficial com a cliente Maria Beatryz. Definição do escopo financeiro e de pessoal (CLT e diaristas), proteção de dados sensíveis (LGPD), infraestrutura na Vercel e log de minutagem da discussão.
 
--   :material-clipboard-check-outline: **[Reunião 02 — Alinhamento Metodológico e ESW (07/09/2026)](reuniao-02.md)**
+-   :material-clipboard-check-outline: **[Reunião 02 — Alinhamento Metodológico e ESW (07/09/2026)](#consulta-unificada-por-abas)**
     
     ---
     Alinhamento interno de engenharia. Diagnóstico de fragmentação de planilhas, integração do ponto via *auditor.ia*, adoção do Framework RAD, definição da stack (TypeScript, Supabase, Shadcn UI) e governança Git Flow.
