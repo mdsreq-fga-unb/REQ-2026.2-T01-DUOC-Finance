@@ -222,6 +222,11 @@
     padding-right: 0.5rem !important;
   }
 
+  /* Oculta eventuais subseções aninhadas no sumário lateral direito (TOC) */
+  .md-sidebar--secondary .md-nav--secondary .md-nav__item .md-nav {
+    display: none !important;
+  }
+
   /* Margens do conteúdo para respiro equilibrado entre as duas barras laterais */
   [dir=ltr] .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner {
     margin-left: 2rem;

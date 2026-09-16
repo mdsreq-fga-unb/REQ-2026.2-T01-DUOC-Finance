@@ -29,6 +29,9 @@ extra_css:
   - assets/css/extra.css
 
 markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 2
   - admonition
   - md_in_html
   - pymdownx.details
