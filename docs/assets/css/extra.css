@@ -222,10 +222,38 @@
     padding-right: 0.5rem !important;
   }
 
+  /* Oculta eventuais subseções aninhadas no sumário lateral direito (TOC) */
+  .md-sidebar--secondary .md-nav--secondary .md-nav__item .md-nav {
+    display: none !important;
+  }
+
   /* Margens do conteúdo para respiro equilibrado entre as duas barras laterais */
   [dir=ltr] .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 76.234375em) {
+  /* Largura ampliada do menu gaveta (drawer) no celular para evitar corte de títulos e da busca */
+  .md-sidebar--primary {
+    width: 16.5rem !important;
+  }
+
+  [dir=ltr] .md-sidebar--primary {
+    left: -16.5rem !important;
+  }
+
+  [data-md-toggle=drawer]:checked ~ .md-container .md-sidebar--primary {
+    transform: translateX(16.5rem) !important;
+  }
+
+  [dir=rtl] .md-sidebar--primary {
+    right: -16.5rem !important;
+  }
+
+  [dir=rtl] [data-md-toggle=drawer]:checked ~ .md-container .md-sidebar--primary {
+    transform: translateX(-16.5rem) !important;
   }
 }
 
@@ -337,101 +365,25 @@
 
 
 /* ============================================================
-   BARRA DE BUSCA EM CIMA DA NAVBAR (FILTRO RÁPIDO DE CAPÍTULOS)
-   Fixa no topo da navegação com acento Dourado DUOC
+   RESPONSIVIDADE MOBILE DA BARRA LATERAL (DRAWER DE CAPÍTULOS)
+   Abaixa os navs para respiro e garante renderização limpa
    ============================================================ */
 
-.nav-search-wrapper {
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  background: var(--md-default-bg-color, #1e2129);
-  padding: 0.75rem 0.5rem 0.5rem 0.5rem;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(218, 165, 32, 0.25);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
+@media screen and (max-width: 76.234375em) {
+  /* Abaixa a lista de capítulos para respiro equilibrado conforme solicitado */
+  .md-nav--primary > .md-nav__list {
+    padding-top: 0.65rem !important;
+  }
 
-.nav-search-box {
-  display: flex;
-  align-items: center;
-  position: relative;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(218, 165, 32, 0.35);
-  border-radius: 6px;
-  padding: 0.35rem 0.6rem;
-  transition: all 0.2s ease;
-}
+  .md-nav--primary .md-nav__item {
+    font-size: 0.84rem !important;
+  }
 
-.nav-search-box:focus-within {
-  border-color: var(--duoc-gold);
-  box-shadow: 0 0 0 2px rgba(218, 165, 32, 0.25);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.nav-search-icon {
-  color: var(--duoc-gold);
-  flex-shrink: 0;
-  margin-right: 0.45rem;
-}
-
-#nav-chapter-search {
-  flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: inherit;
-  font-size: 0.78rem;
-  font-family: inherit;
-  min-width: 0;
-}
-
-#nav-chapter-search::placeholder {
-  color: rgba(255, 255, 255, 0.45);
-  font-size: 0.75rem;
-}
-
-[data-md-color-scheme="default"] .nav-search-wrapper {
-  background: #ffffff;
-  border-bottom-color: rgba(218, 165, 32, 0.3);
-}
-
-[data-md-color-scheme="default"] .nav-search-box {
-  background: rgba(0, 0, 0, 0.04);
-}
-
-[data-md-color-scheme="default"] #nav-chapter-search::placeholder {
-  color: rgba(0, 0, 0, 0.45);
-}
-
-#nav-search-clear {
-  background: transparent;
-  border: none;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1.1rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 0 0.2rem;
-  margin-left: 0.2rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#nav-search-clear:hover {
-  color: var(--duoc-gold);
-}
-
-[data-md-color-scheme="default"] #nav-search-clear {
-  color: rgba(0, 0, 0, 0.45);
-}
-
-.nav-search-count {
-  font-size: 0.68rem;
-  margin-top: 0.35rem;
-  padding-left: 0.3rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  .md-nav--primary .md-nav__link {
+    padding-top: 0.6rem !important;
+    padding-bottom: 0.6rem !important;
+    line-height: 1.4 !important;
+  }
 }
 
 /* ============================================================

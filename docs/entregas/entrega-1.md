@@ -38,30 +38,30 @@ A equipe **Cascata Ágil** desenvolveu integralmente todo o conjunto de artefato
 
 | Capítulo / Seção | Artefato Gerado | Síntese do Conteúdo Entregue | Link Direto |
 | :--- | :--- | :--- | :---: |
-| **Capítulo 1** | Identificação do Cliente e Negócio | Perfil corporativo da DUOC Arquitetura e Engenharia, modelo de atuação e papel focal da cliente Maria Beatryz. | [Acessar 1.1](../visao-produto/capitulo-1/1.1-cliente-negocio.md) |
-| **Capítulo 1** | Contexto Operacional | Mapeamento dos fluxos atuais de viagens técnicas (RVT), folha de diaristas/CLT e apuração de custos por obra. | [Acessar 1.2](../visao-produto/capitulo-1/1.2-negocio-contexto.md) |
-| **Capítulo 1** | Rich Picture Sistêmico | Diagrama sistêmico detalhando fronteiras do sistema, atores em campo, escritório, fluxos de dados e integrações. | [Acessar 1.3](../visao-produto/capitulo-1/1.3-rich-picture.md) |
-| **Capítulo 1** | Problema Central e Ishikawa (6M) | Análise causal estruturada das 6 dimensões (Método, Mão de Obra, Material, Máquina, Medição e Meio Ambiente). | [Acessar 1.4](../visao-produto/capitulo-1/1.4-problema-ishikawa.md) |
-| **Capítulo 1** | Desafios do Projeto | Desafios de engenharia de dados, conformidade com a LGPD, transição cultural e mitigação de riscos de prazo. | [Acessar 1.5](../visao-produto/capitulo-1/1.5-desafios-projeto.md) |
-| **Capítulo 1** | Mapa de Stakeholders | Matriz bidimensional de Poder vs. Interesse e mapeamento estratégico de expectativas dos envolvidos. | [Acessar 1.6](../visao-produto/capitulo-1/1.6-mapa-stakeholders.md) |
-| **Capítulo 1** | Segmentação de Clientes e IHC | Caracterização dos perfis de usuário (Sócio-Administrador, Engenheiro de Campo, Encarregado e Operário). | [Acessar 1.7](../visao-produto/capitulo-1/1.7-segmentacao.md) |
-| **Capítulo 2** | Objetivos do Produto | Objetivo Geral e Objetivos Específicos purificados e sintetizados conforme a Pirâmide de Abstração. | [Acessar 2.1 e 2.2](../visao-produto/capitulo-2/2.1-2.2-objetivos.md) |
-| **Capítulo 2** | Características da Solução (CARs) | Matriz formal de CAR-01 a CAR-08 em cards visuais com rastreabilidade aos objetivos e ao MVP. | [Acessar 2.3](../visao-produto/capitulo-2/2.3-caracteristicas.md) |
-| **Capítulo 2** | Tecnologias Selecionadas | Justificativa técnica e arquitetural da stack: TypeScript, Supabase (PostgreSQL), React, Tailwind e Vercel. | [Acessar 2.4](../visao-produto/capitulo-2/2.4-tecnologias.md) |
-| **Capítulo 2** | Pesquisa de Mercado e Competidores | Benchmarking comparativo com ERPs tradicionais de construção civil e diferenciais competitivos do DUOC Finance. | [Acessar 2.5](../visao-produto/capitulo-2/2.5-pesquisa-mercado.md) |
-| **Capítulo 2** | Viabilidade da Proposta e MVP | Análise de viabilidade técnica, operacional e econômica com delimitação estrita do escopo MVP (corte de estoque). | [Acessar 2.6](../visao-produto/capitulo-2/2.6-viabilidade-mvp.md) |
-| **Capítulo 2** | Benefícios Esperados | Métricas esperadas de redução de inconsistências, velocidade de fechamento contábil e auditoria LGPD. | [Acessar 2.7](../visao-produto/capitulo-2/2.7-beneficios.md) |
-| **Capítulo 3** | Impactos Pretendidos | Análise sociotécnica de intervenção: transparência salarial, redução de estresse e conformidade fiscal. | [Acessar 3.1](../intervencao-social/3.1-impactos-pretendidos.md) |
-| **Capítulo 3** | Efeitos Emergentes | Riscos comportamentais de transição tecnológica e ações preventivas de contingenciamento. | [Acessar 3.2](../intervencao-social/3.2-efeitos-emergentes.md) |
-| **Capítulo 4** | Estratégia Priorizada de ESW | Abordagem Híbrida e ciclo iterativo/incremental sob o framework Rapid Application Development (RAD). | [Acessar 4.1](../estrategias-esw/4.1-estrategia.md) |
-| **Capítulo 4** | Quadro Comparativo (Mixer Board) | Calibração formal dos 6 vetores de Boehm justificando a dinâmica ágil e iterativa de requisitos. | [Acessar 4.2](../estrategias-esw/4.2-quadro-comparativo.md) |
-| **Capítulo 4** | Justificativa Metodológica | Racional técnico da adequação do RAD ao contexto da empresa parceira e ao semestre acadêmico. | [Acessar 4.3](../estrategias-esw/4.3-justificativa.md) |
-| **Capítulo 5** | Atividades e Técnicas de Requisitos | Seleção fundamentada das técnicas de elicitação, modelagem, especificação, verificação e validação. | [Acessar 5.1](../engenharia-requisitos/5.1-atividades-tecnicas.md) |
-| **Capítulo 5** | Mapeamento ao Processo RAD | Alinhamento rigoroso entre as etapas de engenharia de requisitos e as 4 fases do ciclo RAD. | [Acessar 5.2](../engenharia-requisitos/5.2-mapeamento-processo.md) |
+| **Capítulo 1** | Identificação do Cliente e Negócio | Perfil corporativo da DUOC Arquitetura e Engenharia, modelo de atuação e papel focal da cliente Maria Beatryz. | [Acessar 1.1](../visao-produto/capitulo-1/index.md#11-identificacao-do-cliente) |
+| **Capítulo 1** | Contexto Operacional | Mapeamento dos fluxos atuais de viagens técnicas (RVT), folha de diaristas/CLT e apuração de custos por obra. | [Acessar 1.2](../visao-produto/capitulo-1/index.md#12-introducao-ao-negocio-e-contexto-operacional) |
+| **Capítulo 1** | Rich Picture Sistêmico | Diagrama sistêmico detalhando fronteiras do sistema, atores em campo, escritório, fluxos de dados e integrações. | [Acessar 1.3](../visao-produto/capitulo-1/index.md#13-rich-picture-fluxo-sociotecnico) |
+| **Capítulo 1** | Problema Central e Ishikawa (6M) | Análise causal estruturada das 6 dimensões (Método, Mão de Obra, Material, Máquina, Medição e Meio Ambiente). | [Acessar 1.4](../visao-produto/capitulo-1/index.md#14-diagnostico-do-problema-e-diagrama-de-ishikawa) |
+| **Capítulo 1** | Desafios do Projeto | Desafios de engenharia de dados, conformidade com a LGPD, transição cultural e mitigação de riscos de prazo. | [Acessar 1.5](../visao-produto/capitulo-1/index.md#15-desafios-do-projeto) |
+| **Capítulo 1** | Mapa de Stakeholders | Matriz bidimensional de Poder vs. Interesse e mapeamento estratégico de expectativas dos envolvidos. | [Acessar 1.6](../visao-produto/capitulo-1/index.md#16-mapa-de-stakeholders) |
+| **Capítulo 1** | Segmentação de Clientes e IHC | Caracterização dos perfis de usuário (Sócio-Administrador, Engenheiro de Campo, Encarregado e Operário). | [Acessar 1.7](../visao-produto/capitulo-1/index.md#17-segmentacao-de-usuarios-e-perfis-de-ihc) |
+| **Capítulo 2** | Objetivos do Produto | Objetivo Geral e Objetivos Específicos purificados e sintetizados conforme a Pirâmide de Abstração. | [Acessar 2.1 e 2.2](../visao-produto/capitulo-2/index.md#21-e-22-objetivos-do-produto) |
+| **Capítulo 2** | Características da Solução (CARs) | Matriz formal de CAR-01 a CAR-08 em cards visuais com rastreabilidade aos objetivos e ao MVP. | [Acessar 2.3](../visao-produto/capitulo-2/index.md#23-caracteristicas-do-produto-car) |
+| **Capítulo 2** | Tecnologias Selecionadas | Justificativa técnica e arquitetural da stack: TypeScript, Supabase (PostgreSQL), React, Tailwind e Vercel. | [Acessar 2.4](../visao-produto/capitulo-2/index.md#24-tecnologias-a-serem-utilizadas-e-arquitetura) |
+| **Capítulo 2** | Pesquisa de Mercado e Competidores | Benchmarking comparativo com ERPs tradicionais de construção civil e diferenciais competitivos do DUOC Finance. | [Acessar 2.5](../visao-produto/capitulo-2/index.md#25-pesquisa-de-mercado-e-analise-competitiva) |
+| **Capítulo 2** | Viabilidade da Proposta e MVP | Análise de viabilidade técnica, operacional e econômica com delimitação estrita do escopo MVP (corte de estoque). | [Acessar 2.6](../visao-produto/capitulo-2/index.md#26-viabilidade-da-proposta-analise-do-mvp) |
+| **Capítulo 2** | Benefícios Esperados | Métricas esperadas de redução de inconsistências, velocidade de fechamento contábil e auditoria LGPD. | [Acessar 2.7](../visao-produto/capitulo-2/index.md#27-beneficios-esperados) |
+| **Capítulo 3** | Impactos Pretendidos | Análise sociotécnica de intervenção: transparência salarial, redução de estresse e conformidade fiscal. | [Acessar 3.1](../intervencao-social/index.md#31-impactos-pretendidos) |
+| **Capítulo 3** | Efeitos Emergentes | Riscos comportamentais de transição tecnológica e ações preventivas de contingenciamento. | [Acessar 3.2](../intervencao-social/index.md#32-efeitos-emergentes-colaterais-e-mitigacoes) |
+| **Capítulo 4** | Estratégia Priorizada de ESW | Abordagem Híbrida e ciclo iterativo/incremental sob o framework Rapid Application Development (RAD). | [Acessar 4.1](../estrategias-esw/index.md#41-estrategia-priorizada) |
+| **Capítulo 4** | Quadro Comparativo (Mixer Board) | Calibração formal dos 6 vetores de Boehm justificando a dinâmica ágil e iterativa de requisitos. | [Acessar 4.2](../estrategias-esw/index.md#42-quadro-comparativo-de-processos) |
+| **Capítulo 4** | Justificativa Metodológica | Racional técnico da adequação do RAD ao contexto da empresa parceira e ao semestre acadêmico. | [Acessar 4.3](../estrategias-esw/index.md#43-justificativa-metodologica) |
+| **Capítulo 5** | Atividades e Técnicas de Requisitos | Seleção fundamentada das técnicas de elicitação, modelagem, especificação, verificação e validação. | [Acessar 5.1](../engenharia-requisitos/index.md#51-atividades-e-tecnicas-de-engenharia-de-requisitos) |
+| **Capítulo 5** | Mapeamento ao Processo RAD | Alinhamento rigoroso entre as etapas de engenharia de requisitos e as 4 fases do ciclo RAD. | [Acessar 5.2](../engenharia-requisitos/index.md#52-mapeamento-de-engenharia-de-requisitos-ao-processo) |
 | **Capítulo 6** | Cronograma de Entregas | Mapa temporal interativo com calendário semestral integrado, seletores com tooltips e planejamento semanal. | [Acessar Cap. 6](../cronograma/index.md) |
-| **Capítulo 7** | Composição da Equipe e Papéis | Atribuição formal dos 7 integrantes, alocação de Engenheiros de Requisitos e matriz de papéis RAD. | [Acessar 7.1](../interacao-cliente/7.1-composicao-equipe.md) |
-| **Capítulo 7** | Matriz de Comunicação | Canais oficiais de contato (WhatsApp, Discord, Meet), periodicidade e plano de comunicação com a cliente. | [Acessar 7.2](../interacao-cliente/7.2-comunicacao.md) |
-| **Capítulo 7** | Processo de Validação Sociotécnica | Rito formal de homologação prévia no Figma com a cliente parceira, critérios de DoR/DoD e fluxo visual. | [Acessar 7.3](../interacao-cliente/7.3-validacao.md) |
+| **Capítulo 7** | Composição da Equipe e Papéis | Atribuição formal dos 7 integrantes, alocação de Engenheiros de Requisitos e matriz de papéis RAD. | [Acessar 7.1](../interacao-cliente/index.md#71-composicao-da-equipe) |
+| **Capítulo 7** | Matriz de Comunicação | Canais oficiais de contato (WhatsApp, Discord, Meet), periodicidade e plano de comunicação com a cliente. | [Acessar 7.2](../interacao-cliente/index.md#72-comunicacao) |
+| **Capítulo 7** | Processo de Validação Sociotécnica | Rito formal de homologação prévia no Figma com a cliente parceira, critérios de DoR/DoD e fluxo visual. | [Acessar 7.3](../interacao-cliente/index.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente) |
 | **Atas** | Repositório de Atas de Reunião | Registros formais da **Reunião 01** (Elicitação e MVP) e da **Reunião 02** (Alinhamento e Metodologia RAD). | [Acessar Atas](../atas/index.md) |
 | **Capítulo 11** | Lições Aprendidas (Unidade 1) | Retrospectiva da equipe: pontos fortes, gargalos identificados e planos de ação para a Unidade 2. | [Acessar Cap. 11](../licoes-aprendidas/index.md) |
 | **Capítulo 12** | Referências Bibliográficas | Normatização acadêmica completa da base teórica nos padrões **ABNT (NBR 6023)** e **IEEE**. | [Acessar Cap. 12](../referencias/index.md) |
@@ -125,21 +125,21 @@ A tabela a seguir consolida o checklist de conformidade dos artefatos da Entrega
 
 | Item Avaliado | Requisito Metodológico | Status de Atendimento | Evidência Documental |
 | :---: | :--- | :---: | :--- |
-| **01** | Identificação da organização parceira real e representação do cliente | :white_check_mark: Atendido | [Capítulo 1.1](../visao-produto/capitulo-1/1.1-cliente-negocio.md) |
+| **01** | Identificação da organização parceira real e representação do cliente | :white_check_mark: Atendido | [Capítulo 1.1](../visao-produto/capitulo-1/index.md#11-identificacao-do-cliente) |
 | **02** | Elicitação preliminar registrada com atas formais de reunião | :white_check_mark: Atendido | [Atas de Reunião 01 e 02](../atas/index.md) |
-| **03** | Rich Picture com fronteira, atores internos/externos e fluxos | :white_check_mark: Atendido | [Capítulo 1.3](../visao-produto/capitulo-1/1.3-rich-picture.md) |
-| **04** | Diagrama de Ishikawa estruturado em 6 dimensões causais (6M) | :white_check_mark: Atendido | [Capítulo 1.4](../visao-produto/capitulo-1/1.4-problema-ishikawa.md) |
-| **05** | Matriz de Stakeholders (Poder x Interesse) e perfis de IHC | :white_check_mark: Atendido | [Capítulos 1.6 e 1.7](../visao-produto/capitulo-1/1.6-mapa-stakeholders.md) |
-| **06** | Objetivo Geral e Objetivos Específicos alinhados à Pirâmide de Abstração | :white_check_mark: Atendido | [Capítulo 2.1 e 2.2](../visao-produto/capitulo-2/2.1-2.2-objetivos.md) |
-| **07** | Matriz de Características do Produto (CAR-01 a CAR-08) vinculada aos OEs | :white_check_mark: Atendido | [Capítulo 2.3](../visao-produto/capitulo-2/2.3-caracteristicas.md) |
-| **08** | Justificativa técnica da stack de tecnologias e viabilidade do MVP | :white_check_mark: Atendido | [Capítulos 2.4 e 2.6](../visao-produto/capitulo-2/2.4-tecnologias.md) |
-| **09** | Avaliação sociotécnica: impactos pretendidos e efeitos emergentes | :white_check_mark: Atendido | [Capítulos 3.1 e 3.2](../intervencao-social/3.1-impactos-pretendidos.md) |
-| **10** | Calibração do Mixer Board (Boehm) e fundamentação da abordagem RAD | :white_check_mark: Atendido | [Capítulos 4.1 a 4.3](../estrategias-esw/4.1-estrategia.md) |
-| **11** | Seleção fundamentada das técnicas de ER e mapeamento ao ciclo RAD | :white_check_mark: Atendido | [Capítulos 5.1 e 5.2](../engenharia-requisitos/5.1-atividades-tecnicas.md) |
+| **03** | Rich Picture com fronteira, atores internos/externos e fluxos | :white_check_mark: Atendido | [Capítulo 1.3](../visao-produto/capitulo-1/index.md#13-rich-picture-fluxo-sociotecnico) |
+| **04** | Diagrama de Ishikawa estruturado em 6 dimensões causais (6M) | :white_check_mark: Atendido | [Capítulo 1.4](../visao-produto/capitulo-1/index.md#14-diagnostico-do-problema-e-diagrama-de-ishikawa) |
+| **05** | Matriz de Stakeholders (Poder x Interesse) e perfis de IHC | :white_check_mark: Atendido | [Capítulos 1.6 e 1.7](../visao-produto/capitulo-1/index.md#16-mapa-de-stakeholders) |
+| **06** | Objetivo Geral e Objetivos Específicos alinhados à Pirâmide de Abstração | :white_check_mark: Atendido | [Capítulo 2.1 e 2.2](../visao-produto/capitulo-2/index.md#21-e-22-objetivos-do-produto) |
+| **07** | Matriz de Características do Produto (CAR-01 a CAR-08) vinculada aos OEs | :white_check_mark: Atendido | [Capítulo 2.3](../visao-produto/capitulo-2/index.md#23-caracteristicas-do-produto-car) |
+| **08** | Justificativa técnica da stack de tecnologias e viabilidade do MVP | :white_check_mark: Atendido | [Capítulos 2.4 e 2.6](../visao-produto/capitulo-2/index.md#24-tecnologias-a-serem-utilizadas-e-arquitetura) |
+| **09** | Avaliação sociotécnica: impactos pretendidos e efeitos emergentes | :white_check_mark: Atendido | [Capítulos 3.1 e 3.2](../intervencao-social/index.md#31-impactos-pretendidos) |
+| **10** | Calibração do Mixer Board (Boehm) e fundamentação da abordagem RAD | :white_check_mark: Atendido | [Capítulos 4.1 a 4.3](../estrategias-esw/index.md#41-estrategia-priorizada) |
+| **11** | Seleção fundamentada das técnicas de ER e mapeamento ao ciclo RAD | :white_check_mark: Atendido | [Capítulos 5.1 e 5.2](../engenharia-requisitos/index.md#51-atividades-e-tecnicas-de-engenharia-de-requisitos) |
 | **12** | Cronograma semestral estruturado com mapa temporal interativo | :white_check_mark: Atendido | [Capítulo 6 — Cronograma](../cronograma/index.md) |
-| **13** | Governança: matriz de papéis, atribuição de Eng. de Requisitos e RACI | :white_check_mark: Atendido | [Capítulo 7.1](../interacao-cliente/7.1-composicao-equipe.md) |
-| **14** | Matriz de comunicação interna e externa estruturada | :white_check_mark: Atendido | [Capítulo 7.2](../interacao-cliente/7.2-comunicacao.md) |
-| **15** | Rito regulatório de validação de interfaces no Figma (DoR/DoD) | :white_check_mark: Atendido | [Capítulo 7.3](../interacao-cliente/7.3-validacao.md) |
+| **13** | Governança: matriz de papéis, atribuição de Eng. de Requisitos e RACI | :white_check_mark: Atendido | [Capítulo 7.1](../interacao-cliente/index.md#71-composicao-da-equipe) |
+| **14** | Matriz de comunicação interna e externa estruturada | :white_check_mark: Atendido | [Capítulo 7.2](../interacao-cliente/index.md#72-comunicacao) |
+| **15** | Rito regulatório de validação de interfaces no Figma (DoR/DoD) | :white_check_mark: Atendido | [Capítulo 7.3](../interacao-cliente/index.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente) |
 | **16** | Retrospectiva da Unidade 1 e lições aprendidas registradas | :white_check_mark: Atendido | [Capítulo 11 — Lições](../licoes-aprendidas/index.md) |
 | **17** | Referências bibliográficas normatizadas segundo ABNT e IEEE | :white_check_mark: Atendido | [Capítulo 12 — Referências](../referencias/index.md) |
 | **18** | Gravação em vídeo com participação distribuída de todos os 7 integrantes | :white_check_mark: Atendido | [Seção 3 deste Documento](#3-video-da-apresentacao-da-entrega-1) |
