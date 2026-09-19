@@ -27,7 +27,7 @@ A solução de software foi concebida a partir de um diagnóstico de dores reais
 | **Cliente Parceiro** | DUOC Arquitetura e Engenharia LTDA (CNPJ: `53.616.784/0001-43`) |
 | **Representante Focal** | Maria Beatryz Vieira de Sousa |
 | **Atividade Principal** | Serviços multidisciplinares de arquitetura, engenharia estrutural, instalações prediais e gestão de obras. |
-| **Escopo do MVP** | Plataforma digital integrada de controle de departamento pessoal e custos de mão de obra. O sistema automatiza a folha de pagamento, correlaciona relatórios de viagem técnica (RVT) com custos reais de projetos e assegura a conformidade legal com a Lei Geral de Proteção de Dados (LGPD). |
+| **Escopo do MVP** | Plataforma digital integrada de controle de departamento pessoal e custos de mão de obra. O sistema apoia o cálculo de custo de mão de obra de diaristas, correlaciona relatórios de viagem técnica (RVT) com custos reais de projetos e assegura a conformidade legal com a Lei Geral de Proteção de Dados (LGPD). |
 | **Endereço Eletrônico** | [https://www.duoc.eng.br/](https://www.duoc.eng.br/) |
 
 ---
