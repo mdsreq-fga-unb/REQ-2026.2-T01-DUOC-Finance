@@ -436,7 +436,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             <span class="event-date-badge done"><span class="ev-d">05</span><span class="ev-m">SET</span></span>
             <div class="event-info">
               <div class="event-name">Reunião 01 Oficial: Elicitação de Escopo e MVP com Maria Beatryz</div>
-              <div class="event-desc">Homologação da exclusão de estoque, proteção de dados via dados sintéticos (LGPD), hospedagem na Vercel e separação entre CLT e diaristas. [Ver Ata 01](../atas/reuniao-01.md).</div>
+              <div class="event-desc">Homologação da exclusão de estoque, proteção de dados via dados sintéticos (LGPD), hospedagem na Vercel e separação entre CLT e diaristas. [Ver Ata 01](../atas/index.md).</div>
             </div>
           </div>
           <span class="status-pill concluido">Realizada</span>
@@ -447,7 +447,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             <span class="event-date-badge done"><span class="ev-d">07</span><span class="ev-m">SET</span></span>
             <div class="event-info">
               <div class="event-name">Reunião 02 Oficial: Alinhamento Metodológico e ESW</div>
-              <div class="event-desc">Diagnóstico sociotécnico, integração conceitual com auditor.ia, adoção do framework RAD, definição da stack (React/Supabase) e gravação do vídeo da Entrega 1. [Ver Ata 02](../atas/reuniao-02.md).</div>
+              <div class="event-desc">Diagnóstico sociotécnico, integração conceitual com auditor.ia, adoção do framework RAD, definição da stack (React/Supabase) e gravação do vídeo da Entrega 1. [Ver Ata 02](../atas/index.md).</div>
             </div>
           </div>
           <span class="status-pill concluido">Realizada</span>
@@ -970,7 +970,7 @@ O cronograma do DUOC Finance é um **artefato vivo** sujeito a refinamento cont�
 
 1. **Sincronização com o GitHub Projects:** O progresso diário de tarefas é monitorado no quadro kanban do GitHub Projects ([Acessar Projeto #119](https://github.com/orgs/mdsreq-fga-unb/projects/119/)), servindo de fonte de verdade para a atualização deste capítulo.
 2. **Revisões de Marco Avaliativo:** Ao final de cada uma das 4 Unidades letivas, o cronograma é revisado e republicado para registrar desvios de esforço, horas incorridas e eventuais recalibrações de escopo negociadas com Maria Beatryz.
-3. **Gestão de Riscos Operacionais:** Caso ocorram impedimentos técnicos ou atrasos em validações síncronas, o Product Owner aciona as medidas de contingência pactuadas no [Capítulo 7.3 — Processo de Validação](../interacao-cliente/7.3-validacao.md).
+3. **Gestão de Riscos Operacionais:** Caso ocorram impedimentos técnicos ou atrasos em validações síncronas, o Product Owner aciona as medidas de contingência pactuadas no [Capítulo 7.3 — Processo de Validação](../interacao-cliente/index.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente).
 
 ---
 
