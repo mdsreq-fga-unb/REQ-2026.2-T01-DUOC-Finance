@@ -23,61 +23,82 @@ As atividades de Engenharia de Requisitos (ER) a serem empregadas no desenvolvim
 <a id="51-elementos-de-engenharia-de-requisitos"></a>
 ## 5.1 Elementos de Engenharia de Requisitos
 
-Nesta seção é formalizada a vinculação entre as seis atividades clássicas da Engenharia de Requisitos (Kotonya & Sommerville, Wiegers & Beatty) e as técnicas e ferramentas concretas aplicadas pela equipe Cascata Ágil no projeto **DUOC Finance**.
+Nesta seção é formalizada a vinculação entre as seis atividades clássicas da Engenharia de Requisitos (Kotonya & Sommerville, Wiegers & Beatty) e os elementos concretos (categorizados em técnicas, práticas, ferramentas, artefatos e critérios de trabalho) aplicados pela equipe Cascata Ágil no projeto **DUOC Finance**.
 
 ### 1. Elicitação e Descoberta de Requisitos
 * **Objetivo Geral:** Descobrir as necessidades operacionais reais, regras de negócio e expectativas sociotécnicas dos atores da DUOC.
-* **Técnicas e Práticas Empregadas:**
-    * **Entrevistas Semiestruturadas com Stakeholder Chave:** Condução de reuniões síncronas com a sócia-administradora Maria Beatryz para mapear a rotina de fechamento de folha, gestão de canteiros e cálculo de comissões.
-    * **Análise Documental e Engenharia Reversa de Artefatos Legados:** Análise minuciosa de planilhas eletrônicas de controle financeiro, modelos impressos de RVT e relatórios de despesas operacionais utilizados na rotina da empresa.
-    * **Workshops de Descoberta Operacional:** Sessões colaborativas da equipe para decompor as dores do cenário atual em fluxos transacionais (TR-01 a TR-04).
+*   **Técnicas de ER Planejadas:**
+    *   **Entrevistas Semiestruturadas com Stakeholder Chave:** Condução planejada de reuniões síncronas com a sócia-administradora Maria Beatryz para mapear a rotina de fechamento de folha, gestão de canteiros e cálculo de comissões.
+    *   **Análise Documental:** Análise planejada da documentação operacional utilizada na rotina da empresa.
+*   **Práticas Planejadas:**
+    *   **Workshops de Descoberta Operacional:** Sessões colaborativas planejadas para a equipe decompor as dores do cenário atual.
+*   **Artefatos e Formas de Representação Planejados:**
+    *   **Artefatos Legados e Documentos de Negócio:** Planilhas eletrônicas de controle financeiro, modelos impressos de RVT e relatórios de despesas operacionais planejados para análise.
+    *   **Fluxos Transacionais (TR-01 a TR-04):** Mapeamento dos fluxos de trabalho atuais planejados para decomposição a partir das dores identificadas.
 
 ---
 
 ### 2. Análise e Consenso de Requisitos
 * **Objetivo Geral:** Estruturar, desambiguar e delimitar as fronteiras do sistema, resolvendo conflitos de interesse e priorizando o escopo viável.
-* **Técnicas e Práticas Empregadas:**
-    * **Rich Picture (Soft Systems Methodology):** Modelagem visual do ecossistema sociotécnico da DUOC para explicitar fluxos informacionais, zonas de atrito e as fronteiras do produto proposto.
-    * **Diagrama de Causa e Efeito (Ishikawa):** Desdobramento analítico das causas-raiz do problema central em quatro dimensões fundamentais (Métodos, Tecnologia, Pessoas e Medição).
-    * **Matriz de Stakeholders e Permissões (RBAC):** Mapeamento do grau de influência e interesse das partes afetadas, definindo perfis de acesso sob o princípio do menor privilégio.
-    * **Priorização MoSCoW:** Classificação das necessidades em *Must have*, *Should have*, *Could have* e *Won't have*, garantindo o foco estrito no MVP de Departamento Pessoal e Financeiro.
+*   **Técnicas de ER Planejadas:**
+    *   **Rich Picture (Soft Systems Methodology):** Modelagem visual planejada do ecossistema sociotécnico da DUOC para explicitar fluxos informacionais, zonas de atrito e as fronteiras do produto proposto.
+    *   **Diagrama de Causa e Efeito (Ishikawa):** Desdobramento analítico planejado das causas-raiz do problema central em quatro dimensões fundamentais (Métodos, Tecnologia, Pessoas e Medição).
+    *   **Priorização MoSCoW:** Classificação planejada das necessidades em *Must have*, *Should have*, *Could have* e *Won't have*, garantindo o foco estrito no MVP de Departamento Pessoal e Financeiro.
+*   **Artefatos e Formas de Representação Planejados:**
+    *   **Matriz de Stakeholders e Permissões (RBAC):** Mapeamento planejado do grau de influência e interesse das partes afetadas, definindo a matriz de perfis de acesso sob o princípio do menor privilégio.
 
 ---
 
 ### 3. Declaração e Especificação de Requisitos
 * **Objetivo Geral:** Registrar formalmente as necessidades de software de maneira clara, verificável e compreensível para negócio e desenvolvimento.
-* **Técnicas e Práticas Empregadas:**
-    * **Matriz de Características de Produto (CARs):** Declaração preliminar das grandes capacidades da solução (CAR-01 a CAR-08), ancoradas bidirecionalmente nos Objetivos Específicos (OEs).
-    * **Histórias de Usuário (*User Stories*):** Especificação funcional ágil no padrão *"Como [papel], eu quero [ação], para que [benefício]"*.
-    * **Cenários BDD (*Behavior-Driven Development*):** Escrita de critérios formais de aceite na sintaxe *Dado-Quando-Então* (Gherkin), servindo de base direta para testes automatizados.
-    * **Modelagem de Domínio / DER:** Elaboração do Diagrama Entidade-Relacionamento no PostgreSQL para assegurar a integridade relacional entre usuários, contratos, RVTs e folha.
+*   **Técnicas de ER Planejadas:**
+    *   **Modelagem de Dados:** Técnica de abstração planejada para estruturar o domínio da aplicação e garantir a integridade relacional entre usuários, contratos, RVTs e folha.
+*   **Artefatos e Formas de Representação Planejados:**
+    *   **Matriz de Características de Produto (CARs):** Declaração planejada das grandes capacidades da solução (CAR-01 a CAR-08), ancoradas bidirecionalmente nos Objetivos Específicos (OEs).
+    *   **Histórias de Usuário (*User Stories*):** Especificação funcional ágil planejada no padrão *"Como [papel], eu quero [ação], para que [benefício]"*, contendo critérios de aceitação detalhados em formato de lista em tópicos.
+    *   **Diagrama de Entidade-Relacionamento (DER):** Modelo relacional planejado para o banco de dados PostgreSQL.
 
 ---
 
 ### 4. Representação de Requisitos
 * **Objetivo Geral:** Traduzir especificações conceituais em modelos visuais tangíveis que facilitem a compreensão e o alinhamento com os usuários.
-* **Técnicas e Práticas Empregadas:**
-    * **Prototipação de Alta Fidelidade no Figma:** Construção de interfaces navegáveis para estações de trabalho (Desktop) e dispositivos móveis (*mobile-first* para canteiro de obras).
-    * **Fluxogramas de Interação e Diagramas de Atividades:** Modelagem do passo a passo do fluxo de envio e aprovação do RVT e fechamento da folha.
+*   **Técnicas de ER Planejadas:**
+    *   **Prototipação:** Técnica de criação de interfaces navegáveis para validação das estações de trabalho (Desktop) e dispositivos móveis (*mobile-first* para canteiro de obras).
+    *   **Modelagem de Processos:** Elaboração planejada do passo a passo para representação dos fluxos de trabalho do sistema.
+*   **Ferramentas Planejadas:**
+    *   **Figma:** Plataforma planejada para a construção e testes dos protótipos de alta fidelidade.
+*   **Artefatos e Formas de Representação Planejados:**
+    *   **Protótipos de Alta Fidelidade:** Telas e interfaces navegáveis do sistema planejadas para desktop e mobile.
+    *   **Fluxogramas de Interação e Diagramas de Atividades:** Modelos visuais planejados para detalhar o fluxo de envio e aprovação do RVT e o fechamento da folha.
 
 ---
 
 ### 5. Verificação e Validação de Requisitos (V&V)
 * **Objetivo Geral:** Assegurar a corretude técnica interna dos documentos (Verificação) e confirmar que o software atende às necessidades reais do negócio (Validação).
-* **Técnicas e Práticas Empregadas:**
-    * **Inspeção por Checklists (Fagan Adaptado):** Aplicação sistemática de listas de verificação de qualidade técnica, completeza e conformidade gramatical nas páginas do portal MkDocs.
-    * **Revisão por Pares (*Peer Review*):** Fluxo obrigatório no GitHub no qual nenhum artefato ou código é integrado à branch `develop` sem aprovação prévia de pelo menos um revisor independente.
-    * **Sessões Guiadas de Homologação de Protótipo:** Navegação assistida com a cliente Maria Beatryz no protótipo interativo do Figma para coleta formal de aceite antes da codificação de persistência.
-    * **Testes de Aceitação de Usuário (UAT):** Execução de cenários operacionais em ambiente de homologação utilizando dados reais anonimizados da DUOC.
+*   **Técnicas de ER Planejadas:**
+    *   **Inspeção (Fagan Adaptado):** Aplicação planejada de listas de verificação (checklists) de qualidade técnica, completeza e conformidade gramatical na documentação.
+    *   **Sessões Guiadas de Homologação:** Navegação assistida planejada com a cliente Maria Beatryz para validação das telas antes da codificação.
+    *   **Testes de Aceitação de Usuário (UAT):** Execução planejada de cenários operacionais em ambiente de homologação utilizando dados sintéticos e reais anonimizados da DUOC.
+*   **Práticas Planejadas:**
+    *   **Revisão por Pares (*Peer Review*):** Fluxo planejado de revisão colaborativa para liberação de artefatos.
+*   **Ferramentas Planejadas:**
+    *   **GitHub:** Plataforma planejada para a gestão de código e controle do fluxo de aprovação (*Pull Requests* com aprovação de revisor independente para integração na branch `develop`).
+    *   **MkDocs:** Ferramenta planejada para publicação e visualização da documentação do projeto.
+    *   **Figma:** Ambiente planejado para a apresentação interativa dos protótipos durante as sessões de homologação.
+*   **Critérios e Acordos de Trabalho Planejados:**
+    *   **Definition of Ready (DoR) e Definition of Done (DoD):** Acordos formais estabelecidos para reger a entrada de requisitos em desenvolvimento e a aceitação das entregas finalizadas.
 
 ---
 
 ### 6. Organização e Atualização de Requisitos (Gestão)
 * **Objetivo Geral:** Rastrear a evolução dos requisitos ao longo do ciclo de vida, controlar mudanças de escopo e garantir a rastreabilidade bidirecional.
-* **Técnicas e Práticas Empregadas:**
-    * **Matriz de Rastreabilidade Bidirecional (*Forward/Backward*):** Mapeamento que conecta cada Objetivo Específico (OE) às Características (CAR), Requisitos Funcionais (RF), commits e testes.
-    * **Gerenciamento de Configuração via GitHub (Issues, Projects e Milestones):** Rastreamento de demandas categorizadas por tipo, prioridade e marcos avaliativos de entrega.
-    * **Documentação Viva (*Docs as Code* via MkDocs):** Publicação contínua da documentação versionada no Git, garantindo que o portal reflita sempre o estado atual do projeto.
+*   **Práticas Planejadas:**
+    *   **Documentação Viva (*Docs as Code*):** Prática planejada de publicação contínua da documentação versionada no Git, garantindo que o portal reflita sempre o estado atual do projeto.
+*   **Ferramentas Planejadas:**
+    *   **GitHub (Issues, Projects e Milestones):** Plataforma planejada para o gerenciamento de configuração e rastreamento de demandas categorizadas por tipo, prioridade e marcos avaliativos de entrega.
+    *   **MkDocs:** Ferramenta planejada para gerar e manter a documentação viva da aplicação.
+*   **Artefatos e Formas de Representação Planejados:**
+    *   **Matriz de Rastreabilidade Bidirecional (*Forward/Backward*):** Artefato planejado que conecta cada Objetivo Específico (OE) às Características (CAR), Requisitos Funcionais (RF), commits e testes.
 
 ---
 
