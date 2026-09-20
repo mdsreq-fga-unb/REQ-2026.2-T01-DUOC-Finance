@@ -72,7 +72,7 @@ A partir do diálogo inicial e das entrevistas semiestruturadas com a auxiliar a
 
 ### Análise do Rich Picture — Sistema DUOC Finance
 
-![Rich Picture do Sistema DUOC Finance](../../assets/images/rich_picture_duoc_v2.png)
+![Rich Picture do Sistema DUOC Finance](../../assets/images/Rich_picture_DUOC.png)
 
 !!! note "Revisão de fronteiras (v2)"
     A versão anterior deste diagrama misturava o cenário atual e a solução proposta dentro do mesmo bloco visual — notadamente selos "resolvido pelo novo sistema" embutidos no bloco "Problemas" e o bloco "Oportunidades" sem vínculo visual claro a nenhum dos dois lados. A versão atual separa as duas dimensões em zonas explicitamente delimitadas: **Situação Atual (AS-IS)**, com borda sólida azul, e **Solução Proposta (TO-BE)**, com borda tracejada verde — conforme legenda na base da imagem.
@@ -241,3 +241,4 @@ A caracterização dos segmentos de usuários que interagem com o ecossistema do
 | `1.1` | 07/09/2026 | Refinamento dos artefatos, inclusão do histórico de versão e padronização | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `2.0` | 15/09/2026 | Unificação integral de todos os artefatos 1.1 a 1.7 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `2.1` | 19/09/2026 | Reconciliação pós-merge com `develop`: correção do papel de Maria Beatryz (1.1); notas de limitação metodológica sobre caracterização de perfis (1.2, 1.5, 1.7); Rich Picture v2 com fronteiras AS-IS/TO-BE e lastro a CAR-09/CAR-12 (1.3); adaptação do modelo 6M para 4M no Ishikawa (1.4); correção de terminologia financeira ("margem líquida" → "custo apropriado") | Paulo Nery | |
+| `2.2` | 20/09/2026 | Atualização do Rich Picture (1.3) para novo arquivo de imagem `Rich_picture_DUOC.png`; habilitação de ampliação (zoom) de imagens em toda a documentação via plugin `mkdocs-glightbox`, registrada como regra de estilo no `CONTRIBUTING.md` | Paulo Nery | |
