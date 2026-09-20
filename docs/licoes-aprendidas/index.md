@@ -14,7 +14,7 @@ Na Unidade 1, a equipe realizou a imersão inicial no ecossistema da DUOC Arquit
 | :--- | :--- | :--- |
 | **Pontos Fortes (O que funcionou bem)** | Excelente receptividade e engajamento da cliente parceira Maria Beatryz; rápida convergência na modelagem do Rich Picture e Ishikawa; estruturação eficiente do ambiente *Docs as Code* via MkDocs com automação no GitHub Actions. | Manter a cadência quinzenal de reuniões síncronas e estruturar pautas objetivas com 24h de antecedência para as sessões de validação. |
 | **Pontos Fracos (Gargalos e Dificuldades)** | Dificuldade inicial para calibrar as fronteiras de escopo do MVP (risco de incorporar módulos de engenharia civil em detrimento do núcleo financeiro); divergências preliminares na padronização de formatação e escrita entre os integrantes. | Instituição de checklists rigorosos de inspeção baseados no método Fagan e fluxo obrigatório de revisão por pares (*Peer Review*) antes de qualquer merge. |
-| **Lições Aprendidas (Aprendizado Prático)** | A delimitação prévia e estrita do MVP é indispensável para a viabilidade do projeto semestral. A validação visual precoce (Rich Picture) elimina ambiguidades conceituais que poderiam persistir até a implementação. | Focar na prototipação navegável no Figma antes de iniciar qualquer modelagem de persistência na Unidade 2. |
+| **Lições Aprendidas (Aprendizado Prático)** | A delimitação prévia e estrita do MVP é indispensável para a viabilidade do projeto semestral. A validação visual precoce (Rich Picture) por meio do Rich Picture ajudou a reduzir e revelar ambiguidades conceituais que precisavam ser discutidas antes da implementação. | Focar na prototipação navegável no Figma antes de iniciar qualquer modelagem de persistência na Unidade 2. |
 
 ---
 
