@@ -5,7 +5,7 @@
     * **Equipe:** Cascata Ágil
     * **Data da Sessão:** 05 de Setembro de 2026
     * **Horário / Formato:** 50 minutos via Google Meet
-    * **Participantes:** Equipe Cascata Ágil e Cliente Parceira Maria Beatryz Vieira de Sousa (Sócia-Administradora)
+    * **Participantes:** Equipe Cascata Ágil e Cliente Parceira Maria Beatryz Vieira de Sousa (Auxiliar Administrativa, Ponto Focal do Cliente)
     * **Objetivo:** Elicitação preliminar de necessidades de negócio, alinhamento sobre proteção de dados (LGPD), delimitação do escopo para o Produto Mínimo Viável (MVP) e dinâmicas de entregas periódicas.
 
 ---
@@ -86,3 +86,4 @@ O objetivo primordial acordado é substituir a dependência de planilhas manuais
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 05/09/2026 | Registro preliminar das anotações da reunião de elicitação | Eric Araújo | Matheus Ribeiro |
 | `1.1` | 07/09/2026 | Estruturação formal da ata com pautas, action items e minutagem | Eric Araújo | Matheus Ribeiro |
+| `1.2` | 19/09/2026 | Correção do cargo de Maria Beatryz (Auxiliar Administrativa, não sócia) — ver [1.1 Identificação do Cliente](../visao-produto/capitulo-1/1.1-cliente-negocio.md) | Eric Araújo | |
