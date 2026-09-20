@@ -4,17 +4,24 @@
 
 Este capítulo apresenta a engenharia de requisitos de forma integrada ao ciclo de desenvolvimento de software adotado. Seu objetivo é estabelecer com precisão como as atividades de elicitação, análise, especificação, verificação, validação e gestão de escopo de software serão executadas ao longo do projeto, detalhando as práticas e técnicas que garantem a rastreabilidade e a qualidade das entregas.
 
-## Conjunto de Artefatos
+## Conjunto de Elementos da Engenharia de Requisitos
 
-As atividades de Engenharia de Requisitos estão estruturadas em:
+As atividades de Engenharia de Requisitos (ER) a serem empregadas no desenvolvimento do projeto estão estruturadas e classificadas de acordo com a natureza de seus componentes, garantindo a devida distinção entre procedimentos analíticos, suportes tecnológicos e produtos gerados:
 
-*   **Atividades e Técnicas de ER:** Mapeamento de ferramentas analíticas reais utilizadas em cada uma das seis etapas clássicas da engenharia de requisitos.
-*   **Mapeamento ER ao Processo:** Tabela matricial que integra cronologicamente as fases de requisitos com as 4 fases e ciclos iterativos do processo RAD.
+*   **Técnicas de ER:** Conjunto de métodos e procedimentos analíticos aplicados ativamente pela equipe ao longo das etapas de elicitação, análise, priorização, negociação e validação dos requisitos.
+*   **Práticas:** Abordagens institucionais e dinâmicas de trabalho adotadas no fluxo de desenvolvimento para assegurar a colaboração, o alinhamento contínuo e a qualidade técnica das entregas.
+*   **Ferramentas:** Softwares, plataformas e ambientes computacionais utilizados para dar suporte operacional à execução das técnicas, à automação e à gestão da documentação.
+*   **Artefatos e Formas de Representação:** Produtos de trabalho, modelos conceituais, diagramas e documentos formais produzidos para registrar, comunicar e rastrear a evolução das necessidades do sistema.
+*   **Critérios e Acordos de Trabalho:** Conjuntos de condições pré-estabelecidas e alinhadas entre os envolvidos para orientar a transição das etapas do fluxo de desenvolvimento e assegurar a qualidade dos requisitos antes e depois de sua implementação.
 
 ---
 
-<a id="51-atividades-e-tecnicas-de-engenharia-de-requisitos"></a>
-## 5.1 Atividades e Técnicas de Engenharia de Requisitos
+> **Observação Metodológica – Critérios de Aceitação:** Para a especificação dos requisitos, os critérios de aceitação serão detalhados na forma de **listas estruturadas (em tópicos)**, simplificando a verificação direta do comportamento esperado para cada funcionalidade. *(Nota: O uso de linguagens estruturadas como BDD/Gherkin só será adotado caso haja a necessidade explícita de automação de testes pela equipe).*
+
+---
+
+<a id="51-elementos-de-engenharia-de-requisitos"></a>
+## 5.1 Elementos de Engenharia de Requisitos
 
 Nesta seção é formalizada a vinculação entre as seis atividades clássicas da Engenharia de Requisitos (Kotonya & Sommerville, Wiegers & Beatty) e as técnicas e ferramentas concretas aplicadas pela equipe Cascata Ágil no projeto **DUOC Finance**.
 
