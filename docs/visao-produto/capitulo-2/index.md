@@ -322,7 +322,7 @@ O Produto Mínimo Viável (MVP) do DUOC Finance é viável no ciclo acadêmico e
 
 ### Delimitação do Escopo do MVP
 
-O MVP abrange o controle de acesso e papéis por perfis fixos (RBAC), registro manual de ponto, preenchimento e homologação de Relatório de Viagem Técnica (RVT), que já inclui o registro de despesas de campo e reembolso, motor de apoio ao cálculo de custo de mão de obra de diaristas e comissões contratuais simplificadas (não substituto de folha de pagamento oficial), e apropriação dos custos ao contrato correspondente. Uma visualização tabular direta de custo apurado por contrato e um registro básico de auditoria (log de alterações) para conformidade com a LGPD completam o valor tangível entregue à diretoria, sem a necessidade de um módulo de business intelligence dedicado. O cálculo de comissões contratuais será tratado como regra simplificada nesta primeira versão, com refinamento previsto para ciclos futuros.
+O MVP abrange o controle de acesso e papéis por perfis fixos (RBAC), consumo de presenças já homologadas pelo auditor.ia (conforme Decisão Arquitetural da Ata 02) para apropriação financeira das horas aos contratos, preenchimento e homologação de Relatório de Viagem Técnica (RVT) — que já inclui o registro de despesas de campo e reembolso —, motor de apoio ao cálculo de custo de mão de obra de diaristas e comissões contratuais simplificadas (não substituto de folha de pagamento oficial), e apropriação dos custos ao contrato correspondente. Uma visualização tabular direta de custo apurado por contrato e um registro básico de auditoria (log de alterações) para conformidade com a LGPD completam o valor tangível entregue à diretoria, sem a necessidade de um módulo de business intelligence dedicado. O cálculo de comissões contratuais será tratado como regra simplificada nesta primeira versão, com refinamento previsto para ciclos futuros.
 
 Permanecem fora deste primeiro ciclo os módulos de engenharia civil pesada (como cronogramas de Gantt de obra, composições orçamentárias SINAPI e controle físico de estoque de canteiro). Essas capacidades poderão ser integradas futuramente através de APIs abertas.
 
@@ -331,6 +331,18 @@ Permanecem fora deste primeiro ciclo os módulos de engenharia civil pesada (com
 Os principais riscos identificados consistem em: restrições de agenda da cliente parceira para sessões síncronas, complexidade de fórmulas trabalhistas, expansão não autorizada do escopo (scope creep) e a proteção de dados pessoais ficar restrita apenas ao ambiente de desenvolvimento. Tais riscos são mitigados por validações quinzenais estruturadas, prototipagem prévia no Figma antes da codificação, blindagem estrita do escopo por marcos avaliativos e, para a proteção de dados, pela aplicação em produção de RLS, criptografia em trânsito/repouso e RBAC (detalhadas na seção 2.4),  o uso de dados sintéticos citado na 2.4 cobre apenas o ambiente de desenvolvimento e testes, não substituindo essas medidas em produção.
 
 O MVP será considerado concluído e apto para homologação quando todos os fluxos essenciais estiverem implementados, cobertos por testes automatizados, documentados no portal e formalmente aceitos pela cliente através de Termo de Homologação. O cronograma completo encontra-se registrado no [Capítulo 6 — Cronograma](../../cronograma/index.md), e o fluxo de aceite está detalhado no [Capítulo 7 — Interação com Cliente](../../interacao-cliente/index.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente).
+
+### Conformidade LGPD Aplicável ao MVP
+
+Os seguintes princípios da LGPD (Lei 13.709/2018, Art. 6º) orientam o MVP e sua verificação antes de qualquer publicação em produção com dados reais:
+
+- **Finalidade e necessidade:** dados restritos ao propósito de gestão de pessoal e apuração de custo por contrato, sem uso secundário.
+- **Base legal:** execução de contrato de trabalho e cumprimento de obrigação legal (Art. 7º, incisos II e V).
+- **Segurança:** criptografia em trânsito/repouso e Row Level Security (detalhadas na 2.4).
+- **Livre acesso:** cada colaborador consulta suas próprias informações (CAR-01/CAR-02).
+- **Responsabilização e prestação de contas:** trilha de auditoria básica (CAR-08).
+
+**Condição de Aceite:** nenhuma publicação em produção com dados reais ocorre sem aprovação formal de um checklist de conformidade LGPD cobrindo os itens acima, validado com a representante da DUOC antes do Termo de Aceite Formal (Unidade 4).
 
 ---
 
