@@ -90,7 +90,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 <a id="car-03"></a>
 ??? note "CAR-03: Motor de Processamento e Fechamento Financeiro"
 
-    * **Valor de Negócio:** Reduz o ciclo de fechamento financeiro mensal de dias para poucas horas de conferência supervisionada, mitigando riscos de falhas aritméticas em fórmulas manuais e atrasos no repasse a colaboradores e parceiros.
+    * **Valor de Negócio:** Reduz a conferência financeira mensal de dias para horas supervisionadas, apoiando o cálculo de custo de diaristas e de comissões contratuais simplificadas — sem substituir a folha de colaboradores CLT nem o cálculo de encargos (INSS, FGTS, IRRF) e provisões (13º, férias), que seguem nos sistemas contábeis já usados pela DUOC.
     * **OEs Relacionadas:**
         * **OE Principal:** [OE2: Aumentar a Eficiência Administrativo-Financeira](#oe2-aumentar-a-eficiencia-administrativo-financeira)
         * **Contribuição Secundária:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
@@ -116,8 +116,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 <a id="car-06"></a>
 ??? note "CAR-06: Painel Analítico de Custo Apropriado e Desvio Orçamentário por Projeto"
 
-    * **Valor de Negócio:** Empodera os sócios e a diretoria com visibilidade executiva em tempo real sobre o custo de mão de obra apropriado de cada contrato frente ao orçamento previsto, prevenindo estouros de orçamento e embasando a precificação de propostas futuras.
-    * **Nota de Escopo:** O MVP não coleta receita nem os demais custos diretos e indiretos do contrato (materiais, subcontratados, impostos, despesas fixas). O painel apura o custo de mão de obra (horas, comissões, reembolsos) e sua aderência ao orçamento previsto — uma margem parcial de custo, não o lucro líquido real do contrato.
+    * **Valor de Negócio:** Empodera os sócios e a diretoria com visibilidade executiva em tempo real sobre o custo real apurado de cada contrato, prevenindo estouros de orçamento e embasando a precificação de propostas futuras.
     * **OEs Relacionadas:**
         * **OE Principal:** [OE3: Transparecer as informações sobre os Custos por Contrato](#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato)
         * **Contribuição Secundária:** [OE2: Aumentar a Eficiência Administrativo-Financeira](#oe2-aumentar-a-eficiencia-administrativo-financeira)
@@ -317,8 +316,8 @@ O DUOC Finance não pretende atuar como um ERP genérico e massivo de engenharia
 
 #### 1. Hub Centralizador e Orquestrador do Fluxo Administrativo
 * **Captura no Campo:** A equipe técnica registra ponto e RVT em interface ágil, no próprio canteiro de serviço.
-* **Homologação Administrativa:** O setor financeiro/DP confere horas e despesas em tempo real, gerando cálculos transparentes de folha e comissões.
-* **Inteligência de Custos:** Os sócios visualizam instantaneamente a rentabilidade líquida de cada obra contratada.
+* **Homologação Administrativa:** O setor financeiro/DP confere horas e despesas em tempo real, apoiando o cálculo de custo de folha e comissões.
+* **Inteligência de Custos:** Os sócios visualizam o custo de mão de obra apurado de cada obra contratada.
 
 #### 2. Desenvolvimento Sob Medida e Personalização Cultural (*Tailor-Made*)
 O principal diferencial competitivo da solução frente a qualquer software de mercado é a **personalização sociotécnica total**:
@@ -352,22 +351,32 @@ O Produto Mínimo Viável (MVP) do DUOC Finance é viável no ciclo acadêmico e
 | :--- | :--- | :--- |
 | **Técnica** | A equipe possui competência técnica compatível com a complexidade do MVP. | Os papéis do time distribuem responsabilidades claras de elicitação de requisitos, arquitetura de software, modelagem de dados relacional, desenvolvimento backend, frontend e engenharia de qualidade (QA). |
 | **Operacional** | Existe canal contínuo de acesso à representante focal Maria Beatryz para esclarecer regras e homologar entregas. | O plano de comunicação prevê interação via WhatsApp para dúvidas rotineiras e reuniões quinzenais síncronas via Google Meet. O processo de validação exige homologação de protótipos de alta fidelidade antes da codificação de persistência. |
-| **Temporal** | O MVP é perfeitamente compatível com o cronograma semestral quando executado de forma incremental. | A Unidade 1 consolida visão, diagnóstico, mercado, governança e arquitetura. A Unidade 2 aprofunda a elicitação FURPS+, priorização MoSCoW e histórias INVEST. A Unidade 3 concentra o Design do Usuário no Figma, validação sociotécnica e construção rápida inicial. A Unidade 4 consolida a construção do motor financeiro, testes automatizados, V&V, UAT e aceite formal. |
+| **Temporal** | O escopo delimitado do MVP é compatível com a janela real de construção do cronograma, executado de forma incremental por Unidade. | A construção de código concentra-se nas Unidades 3 e 4 (aprox. 3 semanas úteis): Semana 10, cadastro e RBAC; Semana 11, RVT (depende do cadastro); Semana 12, motor de custo e apropriação por contrato (depende dos dados de RVT). A equipe tem 6 integrantes, a maioria em primeiro projeto real, o que motivou o recorte de escopo descrito em "Delimitação do Escopo do MVP". Ainda não há prova de conceito das regras de cálculo de custo. |
 | **Econômica** | O desenvolvimento e a implantação ocorrem sem custos proibitivos de licenciamento. | A proposta adota exclusivamente tecnologias de código aberto (PostgreSQL, Node.js/NestJS, React) e plataformas de hospedagem em nuvem gratuitas ou de baixo custo para o ambiente acadêmico. |
 
 ### Delimitação do Escopo do MVP
 
-O MVP abrange o controle de acesso e papéis (RBAC), registro operacional de ponto, preenchimento e homologação de Relatório de Viagem Técnica (RVT), motor de cálculo de provisões de folha e comissões contratuais, gestão de reembolsos de despesas e apropriação dos custos ao contrato correspondente. O painel gerencial de custo apropriado e desvio orçamentário (ver [CAR-06](#car-06)) e as trilhas de auditoria para conformidade com a LGPD completam o valor tangível entregue à diretoria.
-
-O escopo do MVP também prevê quatro integrações com sistemas externos já em uso pela DUOC, detalhadas em CAR-09 a CAR-12 ([2.3 Características do Produto](#23-caracteristicas-do-produto-car)): consumo de dados de presença homologados do *auditor.ia* (decisão arquitetural registrada na [Ata da Reunião 02](../../atas/index.md)); importação/exportação de dados com ERPs e planilhas legadas em formato CSV/Excel; e integrações com sistemas BIM (Revit/ArchiCAD) e com Slack/e-mail, cujo escopo técnico exato (endpoints, direção do fluxo de dados, frequência de sincronização) ainda será definido durante a Fase 2 (Design do Usuário).
+O MVP abrange o controle de acesso e papéis por perfis fixos (RBAC), consumo de presenças já homologadas pelo auditor.ia (conforme Decisão Arquitetural da Ata 02) para apropriação financeira das horas aos contratos, preenchimento e homologação de Relatório de Viagem Técnica (RVT) — que já inclui o registro de despesas de campo e reembolso —, motor de apoio ao cálculo de custo de mão de obra de diaristas e comissões contratuais simplificadas (não substituto de folha de pagamento oficial), e apropriação dos custos ao contrato correspondente. Uma visualização tabular direta de custo apurado por contrato e um registro básico de auditoria (log de alterações) para conformidade com a LGPD completam o valor tangível entregue à diretoria, sem a necessidade de um módulo de business intelligence dedicado. O cálculo de comissões contratuais será tratado como regra simplificada nesta primeira versão, com refinamento previsto para ciclos futuros.
 
 Permanecem fora deste primeiro ciclo os módulos de engenharia civil pesada (como cronogramas de Gantt de obra, composições orçamentárias SINAPI e controle físico de estoque de canteiro). Essas capacidades poderão ser integradas futuramente através de APIs abertas.
 
 ### Riscos Mapeados e Condições de Aceite
 
-Os principais riscos identificados consistem em: restrições de agenda da cliente parceira para sessões síncronas, complexidade de fórmulas trabalhistas e expansão não autorizada do escopo (*scope creep*). Tais riscos são mitigados por validações quinzenais estruturadas, prototipagem prévia no Figma antes da codificação e blindagem estrita do escopo por marcos avaliativos.
+Os principais riscos identificados consistem em: restrições de agenda da cliente parceira para sessões síncronas, complexidade de fórmulas trabalhistas, expansão não autorizada do escopo (scope creep) e a proteção de dados pessoais ficar restrita apenas ao ambiente de desenvolvimento. Tais riscos são mitigados por validações quinzenais estruturadas, prototipagem prévia no Figma antes da codificação, blindagem estrita do escopo por marcos avaliativos e, para a proteção de dados, pela aplicação em produção de RLS, criptografia em trânsito/repouso e RBAC (detalhadas na seção 2.4),  o uso de dados sintéticos citado na 2.4 cobre apenas o ambiente de desenvolvimento e testes, não substituindo essas medidas em produção.
 
 O MVP será considerado concluído e apto para homologação quando todos os fluxos essenciais estiverem implementados, cobertos por testes automatizados, documentados no portal e formalmente aceitos pela cliente através de Termo de Homologação. O cronograma completo encontra-se registrado no [Capítulo 6 — Cronograma](../../cronograma/index.md), e o fluxo de aceite está detalhado no [Capítulo 7 — Interação com Cliente](../../interacao-cliente/index.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente).
+
+### Conformidade LGPD Aplicável ao MVP
+
+Os seguintes princípios da LGPD (Lei 13.709/2018, Art. 6º) orientam o MVP e sua verificação antes de qualquer publicação em produção com dados reais:
+
+- **Finalidade e necessidade:** dados restritos ao propósito de gestão de pessoal e apuração de custo por contrato, sem uso secundário.
+- **Base legal:** execução de contrato de trabalho e cumprimento de obrigação legal (Art. 7º, incisos II e V).
+- **Segurança:** criptografia em trânsito/repouso e Row Level Security (detalhadas na 2.4).
+- **Livre acesso:** cada colaborador consulta suas próprias informações (CAR-01/CAR-02).
+- **Responsabilização e prestação de contas:** trilha de auditoria básica (CAR-08).
+
+**Condição de Aceite:** nenhuma publicação em produção com dados reais ocorre sem aprovação formal de um checklist de conformidade LGPD cobrindo os itens acima, validado com a representante da DUOC antes do Termo de Aceite Formal (Unidade 4).
 
 ---
 
@@ -378,7 +387,7 @@ O DUOC Finance deverá gerar benefícios para a organização e para as pessoas 
 
 ### Benefícios para a DUOC
 
-- **Visibilidade da rentabilidade:** a correlação entre horas registradas, custos de pessoal e contratos permite acompanhar o custo real da mão de obra por projeto, apoiando decisões comerciais e de precificação.
+- **Visibilidade de custo por contrato:** a correlação entre horas registradas, custos de pessoal e contratos permite acompanhar o custo real da mão de obra por projeto, apoiando decisões comerciais e de precificação.
 - **Redução de erros e retrabalho:** a centralização de ponto, férias e horas de RVT em um único ambiente reduz divergências, duplicidade de lançamentos e falhas humanas no fechamento de folha, comissões e reembolsos.
 - **Agilidade no fechamento financeiro:** informações padronizadas e disponíveis em tempo hábil tornam mais rápida a conferência das rotinas de Departamento Pessoal e Financeiro.
 - **Conformidade jurídica e proteção de dados:** o registro formal das informações apoia a conformidade trabalhista e fiscal, enquanto o controle de acesso por perfis e a proteção dos dados pessoais contribuem para o atendimento à LGPD.
