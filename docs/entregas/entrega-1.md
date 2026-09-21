@@ -4,7 +4,7 @@
     * **Disciplina:** Requisitos de Software — Semestre 2026.2 (UnB - FGA)
     * **Equipe:** Cascata Ágil
     * **Projeto:** DUOC Finance (Gestão Financeira, Operacional e RH de Obras)
-    * **Cliente Parceira:** Maria Beatryz Vieira de Sousa (Sócia-Administradora da DUOC Arquitetura e Engenharia)
+    * **Cliente Parceira:** Maria Beatryz Vieira de Sousa (Auxiliar Administrativa e Ponto Focal do Cliente na DUOC Arquitetura e Engenharia)
     * **Data de Fechamento do Marco:** 08 de Setembro de 2026
     * **Status da Entrega:** **Concluída e Homologada**
     * **Fase do Ciclo RAD:** *Fase 1: Planejamento de Requisitos (Requirements Planning)*
@@ -20,7 +20,7 @@ Para o primeiro marco avaliativo (**Ponto de Controle 1 / Unidade 1**), o plano 
 * **Elicitação Preliminar:** Condução e formalização de reuniões iniciais de alinhamento com os stakeholders para levantamento preliminar de dores, necessidades e limites do projeto.
 * **Artefatos Visuais de Diagnóstico e Elicitação:**
     * Elaboração de um **Rich Picture** com fronteiras explícitas do sistema, atores internos/externos, repositórios de dados e fluxos informacionais.
-    * Elaboração de um **Diagrama de Causa e Efeito (Ishikawa)** categorizando os 6 vetores causais (Método, Mão de Obra, Material, Máquina, Medição e Meio Ambiente) do problema central.
+    * Elaboração de um **Diagrama de Causa e Efeito (Ishikawa)**, adaptado do modelo 6M clássico para 4 categorias causais (Métodos, Tecnologia, Pessoas e Medição) adequadas a um diagnóstico de processo administrativo-financeiro do problema central.
 * **Mapeamento de Partes Interessadas:** Estruturação da Matriz de Stakeholders (Grau de Poder vs. Grau de Interesse) e caracterização minuciosa dos perfis de usuário sob a ótica de IHC (Interface Humano-Computador).
 * **Visão Preliminar da Solução:** Definição de Objetivo Geral e Objetivos Específicos (OEs) rigorosamente alinhados à Pirâmide de Abstração, especificação das Características do Produto (CARs), justificativa da stack tecnológica e pesquisa de viabilidade e benchmarking de mercado.
 * **Estratégia de Engenharia de Software:** Caracterização das dimensões críticas do projeto no *Mixer Board* (Boehm) e justificativa fundamentada da escolha metodológica (Abordagem Híbrida sob o ciclo iterativo do framework RAD).
@@ -41,7 +41,7 @@ A equipe **Cascata Ágil** desenvolveu integralmente todo o conjunto de artefato
 | **Capítulo 1** | Identificação do Cliente e Negócio | Perfil corporativo da DUOC Arquitetura e Engenharia, modelo de atuação e papel focal da cliente Maria Beatryz. | [Acessar 1.1](../visao-produto/capitulo-1/index.md#11-identificacao-do-cliente) |
 | **Capítulo 1** | Contexto Operacional | Mapeamento dos fluxos atuais de viagens técnicas (RVT), folha de diaristas/CLT e apuração de custos por obra. | [Acessar 1.2](../visao-produto/capitulo-1/index.md#12-introducao-ao-negocio-e-contexto-operacional) |
 | **Capítulo 1** | Rich Picture Sistêmico | Diagrama sistêmico detalhando fronteiras do sistema, atores em campo, escritório, fluxos de dados e integrações. | [Acessar 1.3](../visao-produto/capitulo-1/index.md#13-rich-picture-fluxo-sociotecnico) |
-| **Capítulo 1** | Problema Central e Ishikawa (6M) | Análise causal estruturada das 6 dimensões (Método, Mão de Obra, Material, Máquina, Medição e Meio Ambiente). | [Acessar 1.4](../visao-produto/capitulo-1/index.md#14-diagnostico-do-problema-e-diagrama-de-ishikawa) |
+| **Capítulo 1** | Problema Central e Ishikawa (4M adaptado) | Análise causal estruturada em 4 dimensões (Métodos, Tecnologia, Pessoas e Medição), adaptadas do modelo 6M clássico ao contexto de serviços. | [Acessar 1.4](../visao-produto/capitulo-1/index.md#14-diagnostico-do-problema-e-diagrama-de-ishikawa) |
 | **Capítulo 1** | Desafios do Projeto | Desafios de engenharia de dados, conformidade com a LGPD, transição cultural e mitigação de riscos de prazo. | [Acessar 1.5](../visao-produto/capitulo-1/index.md#15-desafios-do-projeto) |
 | **Capítulo 1** | Mapa de Stakeholders | Matriz bidimensional de Poder vs. Interesse e mapeamento estratégico de expectativas dos envolvidos. | [Acessar 1.6](../visao-produto/capitulo-1/index.md#16-mapa-de-stakeholders) |
 | **Capítulo 1** | Segmentação de Clientes e IHC | Caracterização dos perfis de usuário (Sócio-Administrador, Engenheiro de Campo, Encarregado e Operário). | [Acessar 1.7](../visao-produto/capitulo-1/index.md#17-segmentacao-de-usuarios-e-perfis-de-ihc) |
@@ -98,7 +98,7 @@ A distribuição dos tópicos abordados na apresentação audiovisual garantiu a
 | **Matheus Saraiva Camargo** | 241011475 | Arquiteto de Software e Banco de Dados | Justificativa da Stack Tecnológica (Next.js/React, Supabase, Tailwind, Vercel), Viabilidade do MVP, Benchmark de Competidores e Arquitetura de Dados. |
 | **Gustavo** | 241025659 | Gestão de Qualidade (QA) e Testes | Gestão da Qualidade, Desafios do Projeto (LGPD e Governança), Benefícios Esperados, Retrospectiva da U1 e Próximos Passos para a U2. |
 | **Giovana Ferreira** | 231034707 | Engenheira Frontend e Designer UI/UX | Concepção e Racional Sistêmico do Rich Picture, Identificação de Fronteiras e Fluxos Informacionais, Análise de Intervenção Social e Efeitos Emergentes. |
-| **Carlos Gabriel** | 242015450 | Engenheiro Frontend e Designer UI/UX | Segmentação de Clientes, Perfis de Usuário (IHC) em Campo e Escritório, Diagnóstico do Problema Central e Diagrama de Causa e Efeito (Ishikawa 6M). |
+| **Carlos Gabriel** | 242015450 | Engenheiro Frontend e Designer UI/UX | Segmentação de Clientes, Perfis de Usuário (IHC) em Campo e Escritório, Diagnóstico do Problema Central e Diagrama de Causa e Efeito (Ishikawa, 4M adaptado). |
 | **Paulo Nery** | 221008740 | Engenheiro Backend | Engenharia de Requisitos (Técnicas e Fases RAD), Rito Formal de Validação Sociotécnica no Figma (DoR/DoD), Matriz de Comunicação e Cronograma Semestral. |
 
 ---
@@ -128,7 +128,7 @@ A tabela a seguir consolida o checklist de conformidade dos artefatos da Entrega
 | **01** | Identificação da organização parceira real e representação do cliente | :white_check_mark: Atendido | [Capítulo 1.1](../visao-produto/capitulo-1/index.md#11-identificacao-do-cliente) |
 | **02** | Elicitação preliminar registrada com atas formais de reunião | :white_check_mark: Atendido | [Atas de Reunião 01 e 02](../atas/index.md) |
 | **03** | Rich Picture com fronteira, atores internos/externos e fluxos | :white_check_mark: Atendido | [Capítulo 1.3](../visao-produto/capitulo-1/index.md#13-rich-picture-fluxo-sociotecnico) |
-| **04** | Diagrama de Ishikawa estruturado em 6 dimensões causais (6M) | :white_check_mark: Atendido | [Capítulo 1.4](../visao-produto/capitulo-1/index.md#14-diagnostico-do-problema-e-diagrama-de-ishikawa) |
+| **04** | Diagrama de Ishikawa estruturado em 4 dimensões causais (adaptação do modelo 6M) | :white_check_mark: Atendido | [Capítulo 1.4](../visao-produto/capitulo-1/index.md#14-diagnostico-do-problema-e-diagrama-de-ishikawa) |
 | **05** | Matriz de Stakeholders (Poder x Interesse) e perfis de IHC | :white_check_mark: Atendido | [Capítulos 1.6 e 1.7](../visao-produto/capitulo-1/index.md#16-mapa-de-stakeholders) |
 | **06** | Objetivo Geral e Objetivos Específicos alinhados à Pirâmide de Abstração | :white_check_mark: Atendido | [Capítulo 2.1 e 2.2](../visao-produto/capitulo-2/index.md#21-e-22-objetivos-do-produto) |
 | **07** | Matriz de Características do Produto (CAR-01 a CAR-08) vinculada aos OEs | :white_check_mark: Atendido | [Capítulo 2.3](../visao-produto/capitulo-2/index.md#23-caracteristicas-do-produto-car) |
@@ -154,4 +154,5 @@ A tabela a seguir consolida o checklist de conformidade dos artefatos da Entrega
 | `1.0` | 07/09/2026 | Estruturação formal do Ponto de Controle 1 (O Que Foi Solicitado, O Que Foi Feito, Vídeo e Considerações) | Eric Araújo | Matheus Ribeiro Szervinsk |
 | `1.1` | 07/09/2026 | Sincronização da data de fechamento do marco (08/09/2026) e nomenclatura da Fase 1 | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `1.2` | 08/09/2026 | Incorporação oficial da gravação em vídeo (YouTube: youtu.be/OZ9LhKuI364), harmonização dos 7 integrantes com matrículas e papéis oficiais, ampliação da matriz de rastreabilidade (Capítulos 11, 12 e Atas) e inclusão do Checklist de Auditoria e Conformidade para submissão final | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `1.3` | 19/09/2026 | Correção das referências ao Diagrama de Ishikawa: "6M" substituído por "4M adaptado", alinhando com as 4 categorias efetivamente usadas em 1.4 | Paulo Nery | |
 
