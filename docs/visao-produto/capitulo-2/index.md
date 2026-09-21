@@ -193,7 +193,7 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
 | **Ferramenta de Build** | Vite | :simple-vite: | Empacotamento moderno com Hot Module Replacement (HMR) ultrarrápido |
 | **Framework CSS** | Tailwind CSS | :simple-tailwindcss: | Utility-first CSS com tokens de design e responsividade *mobile-first* |
 | **Componentes de UI** | Shadcn UI | :simple-shadcnui: | Componentes acessíveis, consistentes e otimizados para dashboards financeiros densos |
-| **Design & Prototipagem** | Figma | :simple-figma: | Criação dos protótipos de alta fidelidade para homologação prévia sociotécnica |
+| **Design & Prototipagem** | Figma e React SPA | :simple-figma: | Criação da base visual no Figma e estabelecimento ágil dos designs via frontend para homologação sociotécnica |
 | **Conteinerização** | Docker | :fontawesome-brands-docker: | Padronização dos ambientes locais de desenvolvimento, homologação e CI |
 | **Hospedagem Frontend** | Vercel | :simple-vercel: | CDN global de baixa latência integrada ao domínio institucional da DUOC |
 | **Integração Contínua (CI/CD)** | GitHub Actions | :simple-githubactions: | Pipelines automatizadas para linting, validações de tipagem (`tsc`) e testes |
@@ -362,7 +362,7 @@ Permanecem fora deste primeiro ciclo os módulos de engenharia civil pesada (com
 
 ### Riscos Mapeados e Condições de Aceite
 
-Os principais riscos identificados consistem em: restrições de agenda da cliente parceira para sessões síncronas, complexidade de fórmulas trabalhistas, expansão não autorizada do escopo (scope creep) e a proteção de dados pessoais ficar restrita apenas ao ambiente de desenvolvimento. Tais riscos são mitigados por validações quinzenais estruturadas, prototipagem prévia no Figma antes da codificação, blindagem estrita do escopo por marcos avaliativos e, para a proteção de dados, pela aplicação em produção de RLS, criptografia em trânsito/repouso e RBAC (detalhadas na seção 2.4),  o uso de dados sintéticos citado na 2.4 cobre apenas o ambiente de desenvolvimento e testes, não substituindo essas medidas em produção.
+Os principais riscos identificados consistem em: restrições de agenda da cliente parceira para sessões síncronas, complexidade de fórmulas trabalhistas, expansão não autorizada do escopo (scope creep) e a proteção de dados pessoais ficar restrita apenas ao ambiente de desenvolvimento. Tais riscos são mitigados por validações quinzenais estruturadas, estabelecimento dos designs diretamente no frontend com base no Figma antes da codificação da lógica e persistência, blindagem estrita do escopo por marcos avaliativos e, para a proteção de dados, pela aplicação em produção de RLS, criptografia em trânsito/repouso e RBAC (detalhadas na seção 2.4),  o uso de dados sintéticos citado na 2.4 cobre apenas o ambiente de desenvolvimento e testes, não substituindo essas medidas em produção.
 
 O MVP será considerado concluído e apto para homologação quando todos os fluxos essenciais estiverem implementados, cobertos por testes automatizados, documentados no portal e formalmente aceitos pela cliente através de Termo de Homologação. O cronograma completo encontra-se registrado no [Capítulo 6 — Cronograma](../../cronograma/index.md), e o fluxo de aceite está detalhado no [Capítulo 7 — Interação com Cliente](../../interacao-cliente/index.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente).
 
@@ -412,3 +412,4 @@ O DUOC Finance deverá gerar benefícios para a organização e para as pessoas 
 | `1.2` | 08/09/2026 | Expansão de CAR-01 a CAR-08, purificação de abstração e tags de tecnologias | Matheus Ribeiro Szervinsk | Equipe DUOC Finance |
 | `2.0` | 15/09/2026 | Unificação integral de todos os artefatos 2.1 a 2.7 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `2.1` | 19/09/2026 | Reconciliação pós-merge com `develop`: adição de CAR-09 a CAR-12 (integrações externas) vinculadas a OE1; correção de terminologia financeira em OE3 e CAR-06 ("margem líquida"/"lucro real" → "custo de mão de obra apropriado"/"desvio orçamentário"), com nota de escopo explicitando ausência de receita e custos totais no MVP | Paulo Nery | |
+| `2.2` | 21/09/2026 | Ajuste da estratégia de mitigação de riscos: adoção de UI-First com base no Figma e designs via Frontend, garantindo validação de interface antes da codificação de lógica e persistência | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
