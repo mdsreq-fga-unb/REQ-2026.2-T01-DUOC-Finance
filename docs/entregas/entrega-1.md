@@ -155,4 +155,5 @@ A tabela a seguir consolida o checklist de conformidade dos artefatos da Entrega
 | `1.1` | 07/09/2026 | Sincronização da data de fechamento do marco (08/09/2026) e nomenclatura da Fase 1 | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `1.2` | 08/09/2026 | Incorporação oficial da gravação em vídeo (YouTube: youtu.be/OZ9LhKuI364), harmonização dos 7 integrantes com matrículas e papéis oficiais, ampliação da matriz de rastreabilidade (Capítulos 11, 12 e Atas) e inclusão do Checklist de Auditoria e Conformidade para submissão final | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `1.3` | 19/09/2026 | Correção das referências ao Diagrama de Ishikawa: "6M" substituído por "4M adaptado", alinhando com as 4 categorias efetivamente usadas em 1.4 | Paulo Nery | |
+| `1.4` | 22/09/2026 | Ajusta id referentes a seção 5.1 | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |
 
