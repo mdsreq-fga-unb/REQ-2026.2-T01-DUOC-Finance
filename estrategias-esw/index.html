@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="pt" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="pt" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -13,10 +10,10 @@
       
       
       
-        <link rel="prev" href="../intervencao-social/3.2-efeitos-emergentes/">
+        <link rel="prev" href="../intervencao-social/">
       
       
-        <link rel="next" href="4.1-estrategia/">
+        <link rel="next" href="../engenharia-requisitos/">
       
       
         
@@ -27,7 +24,7 @@
     
     
       
-        <title>Sobre o Capítulo - Cascata Ágil</title>
+        <title>Capítulo 4 - Estratégias de ESW - Cascata Ágil</title>
       
     
     
@@ -47,8 +44,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -61,7 +58,17 @@
 
     
     
-  </head>
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -99,12 +106,12 @@
     <a href=".." title="Cascata Ágil" class="md-header__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -116,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sobre o Capítulo
+              Capítulo 4 - Estratégias de ESW
             
           </span>
         </div>
@@ -129,20 +136,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Alternar para modo claro"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Alternar para modo claro" type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Alternar para modo escuro"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Alternar para modo escuro" type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -158,24 +165,24 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Pesquisar">
         
         <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -183,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Inicializando busca
@@ -213,7 +220,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -225,13 +232,13 @@
     <a href=".." title="Cascata Ágil" class="md-nav__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     Cascata Ágil
   </label>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -266,53 +273,6 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Capítulo 1 - Cenário Atual
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Capítulo 1 - Cenário Atual
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
       <a href="../visao-produto/capitulo-1/" class="md-nav__link">
         
@@ -321,7 +281,7 @@
   <span class="md-ellipsis">
     
   
-    Sobre o Capítulo
+    Capítulo 1 - Cenário Atual
   
 
     
@@ -330,263 +290,12 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visao-produto/capitulo-1/1.1-cliente-negocio/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1.1 Identificação do Cliente
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visao-produto/capitulo-1/1.2-negocio-contexto/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1.2 Introdução ao Negócio e Contexto Operacional
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visao-produto/capitulo-1/1.3-rich-picture/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1.3 Rich Picture
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visao-produto/capitulo-1/1.4-problema-ishikawa/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1.4 Problema e Ishikawa
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visao-produto/capitulo-1/1.5-desafios-projeto/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1.5 Desafios do Projeto
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visao-produto/capitulo-1/1.6-mapa-stakeholders/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1.6 Mapa de Stakeholders
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visao-produto/capitulo-1/1.7-segmentacao/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1.7 Segmentação de Clientes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
     
       
       
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Capítulo 2 - Solução Proposta
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Capítulo 2 - Solução Proposta
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
@@ -599,7 +308,7 @@
   <span class="md-ellipsis">
     
   
-    Sobre o Capítulo
+    Capítulo 2 - Solução Proposta
   
 
     
@@ -608,235 +317,12 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visao-produto/capitulo-2/2.1-2.2-objetivos/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2.1 e 2.2 Objetivos do Produto
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visao-produto/capitulo-2/2.3-caracteristicas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2.3 Características
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visao-produto/capitulo-2/2.4-tecnologias/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2.4 Tecnologias
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visao-produto/capitulo-2/2.5-pesquisa-mercado/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2.5 Pesquisa de Mercado e Análise Competitiva
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visao-produto/capitulo-2/2.6-viabilidade-mvp/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2.6 Viabilidade da Proposta
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visao-produto/capitulo-2/2.7-beneficios/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2.7 Benefícios Esperados
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
     
       
       
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Capítulo 3 - Intervenção Social
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Capítulo 3 - Intervenção Social
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
@@ -849,7 +335,7 @@
   <span class="md-ellipsis">
     
   
-    Sobre o Capítulo
+    Capítulo 3 - Intervenção Social
   
 
     
@@ -861,122 +347,9 @@
     </li>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intervencao-social/3.1-impactos-pretendidos/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    3.1 Impactos Pretendidos
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intervencao-social/3.2-efeitos-emergentes/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    3.2 Efeitos Emergentes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Capítulo 4 - Estratégias de ESW
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Capítulo 4 - Estratégias de ESW
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
     
@@ -998,7 +371,7 @@
   <span class="md-ellipsis">
     
   
-    Sobre o Capítulo
+    Capítulo 4 - Estratégias de ESW
   
 
     
@@ -1016,7 +389,7 @@
   <span class="md-ellipsis">
     
   
-    Sobre o Capítulo
+    Capítulo 4 - Estratégias de ESW
   
 
     
@@ -1039,7 +412,7 @@
       <span class="md-nav__icon md-icon"></span>
       Índice
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#objetivo-do-capitulo" class="md-nav__link">
@@ -1064,10 +437,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sumario-do-capitulo" class="md-nav__link">
+  <a href="#41-estrategia-priorizada" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sumário do Capítulo
+        4.1 Estratégia Priorizada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-quadro-comparativo-de-processos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Quadro Comparativo de Processos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-justificativa-metodologica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Justificativa Metodológica
       
     </span>
   </a>
@@ -1092,148 +487,9 @@
     </li>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="4.1-estrategia/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    4.1 Estratégia Priorizada
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="4.2-quadro-comparativo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    4.2 Quadro Comparativo
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="4.3-justificativa/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    4.3 Justificativa
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Capítulo 5 - Engenharia de Requisitos
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Capítulo 5 - Engenharia de Requisitos
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
@@ -1246,7 +502,7 @@
   <span class="md-ellipsis">
     
   
-    Sobre o Capítulo
+    Capítulo 5 - Engenharia de Requisitos
   
 
     
@@ -1255,70 +511,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../engenharia-requisitos/5.1-atividades-tecnicas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    5.1 Atividades e Técnicas
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../engenharia-requisitos/5.2-mapeamento-processo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    5.2 Mapeamento ao Processo
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1356,53 +548,6 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Capítulo 7 - Interação com Cliente
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Capítulo 7 - Interação com Cliente
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
       <a href="../interacao-cliente/" class="md-nav__link">
         
@@ -1411,7 +556,7 @@
   <span class="md-ellipsis">
     
   
-    Sobre o Capítulo
+    Capítulo 7 - Interação com Cliente
   
 
     
@@ -1420,98 +565,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../interacao-cliente/7.1-composicao-equipe/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    7.1 Composição da Equipe
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../interacao-cliente/7.2-comunicacao/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    7.2 Comunicação
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../interacao-cliente/7.3-validacao/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    7.3 Processo de Validação
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1657,53 +710,6 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
-        
-          
-          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Atas de Reuniões
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_14">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Atas de Reuniões
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
       <a href="../atas/" class="md-nav__link">
         
@@ -1712,7 +718,7 @@
   <span class="md-ellipsis">
     
   
-    Painel Geral de Atas
+    Atas de Reuniões
   
 
     
@@ -1721,70 +727,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../atas/reuniao-01/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Reunião 01 (05/09/2026)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../atas/reuniao-02/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Reunião 02 (07/09/2026)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1804,7 +746,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15">
         
           
           <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
@@ -1834,7 +776,7 @@
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1991,7 +933,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2007,7 +949,7 @@
       <span class="md-nav__icon md-icon"></span>
       Índice
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#objetivo-do-capitulo" class="md-nav__link">
@@ -2032,10 +974,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sumario-do-capitulo" class="md-nav__link">
+  <a href="#41-estrategia-priorizada" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sumário do Capítulo
+        4.1 Estratégia Priorizada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-quadro-comparativo-de-processos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Quadro Comparativo de Processos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-justificativa-metodologica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Justificativa Metodológica
       
     </span>
   </a>
@@ -2071,46 +1035,6 @@
   
 
 
-  <nav class="md-path" aria-label="Navegação" >
-    <ol class="md-path__list">
-      
-        
-  
-  
-    <li class="md-path__item">
-      <a href=".." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Home
-  </span>
-
-      </a>
-    </li>
-  
-
-      
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="./" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    Capítulo 4 - Estratégias de ESW
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ol>
-  </nav>
-
               
               <article class="md-content__inner md-typeset">
                 
@@ -2118,24 +1042,86 @@
 
 
 
-<h1 id="capitulo-4-estrategias-de-engenharia-de-software">Capítulo 4: Estratégias de Engenharia de Software</h1>
-<h2 id="objetivo-do-capitulo">Objetivo do Capítulo</h2>
+<h1 id="capitulo-4-estrategias-de-engenharia-de-software">Capítulo 4: Estratégias de Engenharia de Software<a class="headerlink" href="#capitulo-4-estrategias-de-engenharia-de-software" title="Permanent link">¶</a></h1>
+<h2 id="objetivo-do-capitulo">Objetivo do Capítulo<a class="headerlink" href="#objetivo-do-capitulo" title="Permanent link">¶</a></h2>
 <p>Este capítulo documenta as escolhas de processo de engenharia e metodologia de desenvolvimento adotadas pela equipe Cascata Ágil. Ele detalha a filosofia de trabalho que rege a execução do projeto, harmonizando o rigor necessário para entregas acadêmicas com a flexibilidade operacional exigida por um ambiente corporativo real e dinâmico.</p>
-<h2 id="conjunto-de-artefatos">Conjunto de Artefatos</h2>
+<h2 id="conjunto-de-artefatos">Conjunto de Artefatos<a class="headerlink" href="#conjunto-de-artefatos" title="Permanent link">¶</a></h2>
 <p>A fundamentação metodológica está estruturada em:</p>
 <ul>
-<li>Estratégia Priorizada: Detalhamento da abordagem híbrida, modelo de ciclo de vida e processo organizacional adotado.</li>
-<li>Quadro Comparativo de Processos: Tabela analítica comparando o processo escolhido com modelos de desenvolvimento alternativos de mercado.</li>
-<li>Justificativa Metodológica: Definição conceitual baseada no framework de tomada de decisão contextual ("Mixer Board").</li>
+<li><strong>Estratégia Priorizada:</strong> Detalhamento da abordagem híbrida, modelo de ciclo de vida e processo de desenvolvimento adotado.</li>
+<li><strong>Quadro Comparativo de Processos:</strong> Tabela analítica comparando o processo escolhido com processos de desenvolvimento alternativos.</li>
+<li><strong>Justificativa Metodológica:</strong> Definição conceitual baseada na natureza do produto, características dos usuários e contexto do projeto.</li>
 </ul>
-<h2 id="sumario-do-capitulo">Sumário do Capítulo</h2>
+<hr>
+<p><a id="41-estrategia-priorizada"></a></p>
+<h2 id="41-estrategia-priorizada">4.1 Estratégia Priorizada<a class="headerlink" href="#41-estrategia-priorizada" title="Permanent link">¶</a></h2>
+<p>A partir das informações sobre o cenário atual da DUOC Arquitetura e Engenharia e da solução proposta para o sistema DUOC Finance, esta seção detalha as estratégias de engenharia de software escolhidas para orientar o desenvolvimento do projeto.</p>
+<h3 id="definicao-da-estrategia-metodologica">Definição da Estratégia Metodológica<a class="headerlink" href="#definicao-da-estrategia-metodologica" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Abordagem de Desenvolvimento de Software:</strong> Híbrida. Esta abordagem combina elementos das metodologias dirigidas por plano e ágeis. No contexto do DUOC Finance, a base arquitetural e as regras matemáticas do domínio financeiro (cálculos de folha, retenção de impostos) exigem estabilidade e previsibilidade (dirigido por plano). Em contrapartida, as interfaces de lançamento de horas de campo (RVT) e relatórios gerenciais demandam experimentação e refinamento empírico de usabilidade (ágil).</li>
+<li><strong>Ciclo de vida:</strong> Iterativo e Incremental. O produto de software será construído em ciclos de evolução progressiva. Cada incremento adicionará fatias verticais funcionais, permitindo que a solução integre as regras financeiras complexas de forma modular e gradual.</li>
+<li><strong>Processo de Engenharia de Software:</strong> RAD (Rapid Application Development). O RAD é um processo de desenvolvimento que enfatiza o ciclo curto de planejamento de requisitos seguido de intensa modelagem de dados e prototipagem contínua de interfaces.</li>
+</ul>
+<h4 id="adaptacao-do-processo-rad-ao-contexto-da-duoc">Adaptação do Processo RAD ao Contexto da DUOC<a class="headerlink" href="#adaptacao-do-processo-rad-ao-contexto-da-duoc" title="Permanent link">¶</a></h4>
+<p>Para atender à necessidade de integração sistêmica e consistência técnica, o processo RAD será estruturado nas seguintes fases, integrando as definições arquiteturais da equipe (Next.js no frontend, FastAPI no backend e PostgreSQL gerenciado via Supabase):</p>
 <ol>
-<li><a href="4.1-estrategia/">4.1 Estratégia Priorizada</a></li>
-<li><a href="4.2-quadro-comparativo/">4.2 Quadro Comparativo de Processos</a></li>
-<li><a href="4.3-justificativa/">4.3 Justificativa Metodológica</a></li>
+<li><strong>Modelagem de Negócio e Planejamento de Requisitos:</strong> Levantamento inicial com a cliente (Maria Beatryz) para estabelecer a taxonomia de dados (o que é uma obra, o que é RVT, quais são as verbas da folha). O foco inicial é estabelecer o <em>schema</em> do banco de dados (PostgreSQL/Supabase) para garantir a integridade das informações desde o primeiro dia.</li>
+<li><strong>Design do Usuário (Prototipagem e Dados):</strong> Sessões conjuntas e frequentes com os usuários finais. Esta fase ocorre em duas frentes: visual (usabilidade das telas no Next.js para os operários/engenheiros) e funcional/matemática (prototipagem das APIs em FastAPI para validar os algoritmos de cálculo de folha e comissões antes da integração visual).</li>
+<li><strong>Construção Iterativa:</strong> Implementação das funcionalidades em fatias. Em vez de entregar o backend inteiro e depois o frontend, a equipe foca em entregar fluxos completos (ex: de ponta a ponta, salvar um registro de RVT no banco e visualizar no relatório).</li>
+<li><strong>Cutover e Refinamento:</strong> Liberação do módulo funcional para uso e homologação da cliente, iterando com base nos resultados práticos de cálculo.</li>
 </ol>
-<hr />
-<h2 id="historico-de-versao">Histórico de Versão</h2>
+<hr>
+<p><a id="42-quadro-comparativo-de-processos"></a></p>
+<h2 id="42-quadro-comparativo-de-processos">4.2 Quadro Comparativo de Processos<a class="headerlink" href="#42-quadro-comparativo-de-processos" title="Permanent link">¶</a></h2>
+<p>O quadro a seguir apresenta uma comparação analítica entre o processo <strong>RAD</strong> e o processo <strong>XP (Extreme Programming)</strong>, avaliando qual se adequa melhor à natureza do produto DUOC Finance.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Características</th>
+<th style="text-align: left;">RAD (Rapid Application Development)</th>
+<th style="text-align: left;">XP (Extreme Programming)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Foco Principal</strong></td>
+<td style="text-align: left;">Aceleração do ciclo de entrega por meio de modelagem de dados antecipada, prototipagem visual e envolvimento do usuário no design das soluções.</td>
+<td style="text-align: left;">Excelência técnica do código-fonte através de práticas rigorosas de engenharia e mudanças frequentes e incrementais baseadas em histórias de usuário.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Natureza do Produto Ideal</strong></td>
+<td style="text-align: left;">Sistemas de informação e gestão (como o DUOC Finance) com escopo que pode ser particionado (decomponível) em módulos de interface bem definidos e regras de banco de dados claras.</td>
+<td style="text-align: left;">Sistemas com lógicas de negócio altamente complexas, voláteis ou desconhecidas, onde o maior risco reside na arquitetura de software em constante mutação.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Envolvimento do Usuário</strong></td>
+<td style="text-align: left;">Exige participação intensa e colaborativa durante a modelagem e o design de interfaces (JAD - <em>Joint Application Design</em>), focando em validar o fluxo operacional e relatórios.</td>
+<td style="text-align: left;">Exige um cliente "on-site" em tempo integral, participando da escrita de testes de aceitação e guiando o direcionamento em níveis micro de desenvolvimento.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Validação Funcional e Técnica</strong></td>
+<td style="text-align: left;">A validação ocorre pela homologação das regras de dados e experimentação funcional dos protótipos em ciclos curtos de revisão.</td>
+<td style="text-align: left;">A validação é centrada em Testes Automatizados (TDD), Desenvolvimento Orientado a Comportamento (BDD) e revisões contínuas de código (<em>Pair Programming</em>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Arquitetura de Software</strong></td>
+<td style="text-align: left;">Estabelece um alicerce arquitetural (Modelo de Dados/Supabase e base de APIs em FastAPI) cedo no processo, evoluindo a interface de forma rápida sobre essa fundação.</td>
+<td style="text-align: left;">Considera que a arquitetura ideal "emerge" organicamente durante o desenvolvimento contínuo (Design Simples e Refatoração Constante).</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a id="43-justificativa-metodologica"></a></p>
+<h2 id="43-justificativa-metodologica">4.3 Justificativa Metodológica<a class="headerlink" href="#43-justificativa-metodologica" title="Permanent link">¶</a></h2>
+<p>Com base nas características intrínsecas do produto DUOC Finance, na decomposição do escopo e no perfil dos usuários, o <strong>RAD (Rapid Application Development)</strong> foi selecionado como o processo de desenvolvimento ideal pelas seguintes razões:</p>
+<ol>
+<li><strong>Natureza Decomponível do Produto:</strong> O DUOC Finance não é uma plataforma experimental de algoritmo obscuro, mas um sistema de gestão financeira e de departamento pessoal com um fluxo linear e claro (Lançamento de Ponto/RVT -&gt; Apuração de Regras -&gt; Fechamento de Folha/Comissões -&gt; Relatórios). O RAD se adequa em projetos dessa natureza, pois permite particionar esses módulos verticais claramente. A equipe pode, por exemplo, prototipar e validar exaustivamente a interface de lançamento de RVT para os operários da obra, enquanto consolida, em paralelo, a modelagem de dados do motor de cálculos.</li>
+<li><strong>Alta Disponibilidade e Perfil dos Usuários:</strong> O RAD exige e pressupõe um envolvimento intenso e direto do usuário final. A realidade do projeto da DUOC atende plenamente a este requisito, contando com a alta disponibilidade da representante da empresa (Maria Beatryz) para sessões frequentes de validação e refinamento de design. A interação constante elimina a necessidade de documentos prescritivos longos, reduzindo ambiguidades antes da construção das APIs no FastAPI ou telas no Next.js.</li>
+<li><strong>Prototipagem em Duas Vias (Usabilidade e Regras de Negócio):</strong> O gargalo administrativo da DUOC envolve não apenas a experiência do usuário de campo ao lançar horas no sistema, mas, crucialmente, a validade dos cálculos por trás da interface. No RAD, a "prototipagem" será aplicada de forma abrangente: a equipe validará a usabilidade fluida no cliente web (Next.js) para garantir adesão, e criará testes práticos no motor de cálculo (FastAPI backend) para homologar a aderência matemática da apropriação de custos da obra e das regras de folha com a cliente.</li>
+<li><strong>Evolução sobre Arquitetura Consistente:</strong> Embora a solução exija evolução contínua, uma ferramenta financeira exige forte integridade relacional. Diferente do XP, que encoraja uma arquitetura estritamente emergente e evolutiva de baixo para cima, o RAD permite à equipe estabelecer antecipadamente a espinha dorsal dos dados (utilizando banco relacional PostgreSQL no Supabase) para suportar a LGPD e regras financeiras com firmeza, enquanto utiliza ciclos rápidos para adaptar interfaces e fluxos de trabalho gerenciais.</li>
+</ol>
+<hr>
+<h2 id="historico-de-versao">Histórico de Versão<a class="headerlink" href="#historico-de-versao" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -2150,16 +1136,30 @@
 <tr>
 <td style="text-align: center;"><code>1.0</code></td>
 <td style="text-align: center;">05/09/2026</td>
-<td style="text-align: left;">Estruturação inicial do sumário e objetivos de estratégias de software</td>
-<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+<td style="text-align: left;">Definição da abordagem, ciclo de vida, comparativo e justificativa</td>
+<td style="text-align: left;">Eric Araújo</td>
 <td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
 </tr>
 <tr>
 <td style="text-align: center;"><code>1.1</code></td>
 <td style="text-align: center;">07/09/2026</td>
-<td style="text-align: left;">Correção institucional (Cascata Ágil) e padronização metodológica</td>
+<td style="text-align: left;">Padronização metodológica, alinhamento institucional e histórico</td>
+<td style="text-align: left;">Eric Araújo</td>
 <td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>2.0</code></td>
+<td style="text-align: center;">15/09/2026</td>
+<td style="text-align: left;">Unificação integral dos artefatos 4.1 a 4.3 em página única contínua</td>
+<td style="text-align: left;">Equipe Cascata Ágil</td>
 <td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>2.1</code></td>
+<td style="text-align: center;">20/09/2026</td>
+<td style="text-align: left;">Refatoração profunda para aderência ao Processo RAD, eliminação de nomenclaturas ágeis de gestão e alinhamento de stack tecnológica</td>
+<td style="text-align: left;">Eric Araújo</td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
@@ -2183,9 +1183,9 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Voltar para o topo
 </button>
         
@@ -2225,8 +1225,8 @@
       
         <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
-        <script src="../assets/js/nav-search.js"></script>
-      
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
