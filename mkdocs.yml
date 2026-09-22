@@ -28,6 +28,20 @@ theme:
 extra_css:
   - assets/css/extra.css
 
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 90%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: true
+      caption_position: bottom
+
 markdown_extensions:
   - toc:
       permalink: true

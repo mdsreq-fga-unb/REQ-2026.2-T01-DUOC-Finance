@@ -450,6 +450,11 @@
   color: #8c6200;
 }
 
+/* Fix z-index da navbar fixa superior do MkDocs Material para nunca ser sobreposta */
+.md-header {
+  z-index: 9999 !important;
+}
+
 /* ============================================================
    WIDGET UNIFICADO DE CRONOGRAMA: CALENDÁRIO COM SELETORES E TOOLTIPS
    Cards de seleção integrados no topo do card e tooltips informativos
@@ -457,10 +462,11 @@
 
 .calendar-unified-widget,
 .month-selector-widget {
-  margin: 1.5rem auto 2.5rem auto;
-  width: 100%;
-  max-width: 1080px;
+  margin: 1.25rem 0 2rem 0;
+  width: 100% !important;
+  max-width: 100% !important;
   position: relative;
+  box-sizing: border-box;
 }
 
 /* Radio buttons invisíveis de controle */
@@ -471,26 +477,123 @@
   pointer-events: none;
 }
 
-/* Card unificado que engloba os seletores e o calendário */
+/* Card unificado: ocupa 100% da div */
 .calendar-unified-card {
-  background: rgba(22, 24, 29, 0.65);
+  background: #181b22;
   border: 1px solid rgba(218, 165, 32, 0.35);
-  border-radius: 12px;
-  padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   position: relative;
+  z-index: 10;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-/* Barra superior interna: cards de seleção integrados dentro da div */
+/* ============================================================
+   MERMAID INTERACTIVE PAN & ZOOM CONTROLLER (v2.0)
+   Contêiner envelopado com cabeçalho, barra de zoom e tela cheia
+   ============================================================ */
+
+.mermaid {
+  overflow: visible !important;
+  max-width: 100%;
+  margin: 0 !important;
+}
+
+/* ============================================================
+   DIAGRAMAS DO CRONOGRAMA (FIGURES / IMAGENS COM GLIGHTBOX)
+   ============================================================ */
+.cronograma-diagram-box {
+  margin: 1.5rem 0 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0f1117;
+  padding: 1.25rem 1rem 0.85rem 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+[data-md-color-scheme="default"] .cronograma-diagram-box {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.cronograma-diagram-box img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+  margin: 0 auto !important;
+}
+
+.cronograma-diagram-box img:hover {
+  transform: scale(1.004);
+}
+
+.cronograma-diagram-caption {
+  margin-top: 0.85rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  text-align: left;
+}
+
+[data-md-color-scheme="default"] .cronograma-diagram-caption {
+  border-top-color: #e2e8f0;
+  color: #475569;
+}
+
+/* Suporte para alternância de diagramas e imagens em Modo Claro e Modo Escuro */
+[data-md-color-scheme="slate"] .img-light-mode,
+[data-md-color-scheme="slate"] img[src*="#only-light"],
+[data-md-color-scheme="slate"] a.glightbox:has(img[src*="#only-light"]) {
+  display: none !important;
+}
+
+[data-md-color-scheme="slate"] .img-dark-mode,
+[data-md-color-scheme="slate"] img[src*="#only-dark"],
+[data-md-color-scheme="slate"] a.glightbox:has(img[src*="#only-dark"]) {
+  display: block !important;
+}
+
+[data-md-color-scheme="default"] .img-dark-mode,
+[data-md-color-scheme="default"] img[src*="#only-dark"],
+[data-md-color-scheme="default"] a.glightbox:has(img[src*="#only-dark"]) {
+  display: none !important;
+}
+
+[data-md-color-scheme="default"] .img-light-mode,
+[data-md-color-scheme="default"] img[src*="#only-light"],
+[data-md-color-scheme="default"] a.glightbox:has(img[src*="#only-light"]) {
+  display: block !important;
+}
+
+/* Barra superior interna: cards de seleção integrados e compactos */
+/* ============================================================
+   BARRA SUPERIOR DE SELEÇÃO DE MESES (.calendar-nav-bar)
+   TEMA ESCURO PERMANENTE (em modo claro e modo escuro)
+   ============================================================ */
 .calendar-nav-bar,
 .month-selector-sidebar {
+  position: relative;
+  z-index: 20;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 0.65rem;
-  margin-bottom: 1.25rem;
-  padding-bottom: 1.1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 0.45rem;
+  margin-bottom: 1.15rem;
+  padding: 0.65rem !important;
+  background: #12151c !important;
+  border: 1px solid rgba(218, 165, 32, 0.35) !important;
+  border-radius: 8px 8px 0 0 !important;
+  box-sizing: border-box !important;
 }
 
 .month-tab-btn,
@@ -499,93 +602,124 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  padding: 0.65rem 0.5rem;
+  background: #1c202a !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 6px;
+  padding: 0.35rem 0.4rem;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
   position: relative;
   text-decoration: none !important;
   user-select: none;
-  gap: 0.3rem;
-  min-height: 64px;
+  gap: 0.18rem;
+  min-height: 46px;
+  box-sizing: border-box;
 }
 
 .month-tab-btn:hover,
 .month-nav-card:hover {
-  background: rgba(218, 165, 32, 0.08);
-  border-color: rgba(218, 165, 32, 0.45);
-  transform: translateY(-2px);
+  background: rgba(218, 165, 32, 0.18) !important;
+  border-color: rgba(218, 165, 32, 0.55) !important;
+  transform: translateY(-1px);
+  z-index: 25;
 }
 
 .tab-title,
 .month-nav-title {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  color: #f1f5f9 !important;
   letter-spacing: 0.01em;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
-.tab-pill,
-.status-pill {
+/* Pílulas de Status da Barra Superior: Sempre tema escuro contrastante */
+.tab-pill {
   display: inline-flex;
   align-items: center;
-  padding: 0.15rem 0.45rem;
-  border-radius: 10px;
-  font-size: 0.64rem;
-  font-weight: 600;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.6rem;
+  font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
-.tab-pill.concluido,
+/* Concluído: Verde com borda */
+.tab-pill.concluido {
+  background: rgba(34, 197, 94, 0.18) !important;
+  color: #4ade80 !important;
+  border: 1px solid #22c55e !important;
+}
+
+/* Em Andamento: Amarelo com borda */
+.tab-pill.andamento {
+  background: rgba(234, 179, 8, 0.18) !important;
+  color: #facc15 !important;
+  border: 1px solid #eab308 !important;
+}
+
+/* Planejada: Azul com borda */
+.tab-pill.planejado {
+  background: rgba(59, 130, 246, 0.18) !important;
+  color: #60a5fa !important;
+  border: 1px solid #3b82f6 !important;
+}
+
+/* Pílulas de Status Gerais fora da barra superior (ex: painéis e feeds) */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 .status-pill.concluido {
-  background: rgba(34, 197, 94, 0.18);
-  color: #4ade80;
-  border: 1px solid rgba(34, 197, 94, 0.4);
+  background: rgba(34, 197, 94, 0.12) !important;
+  color: #4ade80 !important;
+  border: 1px solid #22c55e !important;
 }
 
-.tab-pill.andamento,
 .status-pill.andamento {
-  background: rgba(59, 130, 246, 0.2);
-  color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.45);
+  background: rgba(234, 179, 8, 0.14) !important;
+  color: #facc15 !important;
+  border: 1px solid #eab308 !important;
 }
 
-.tab-pill.planejado,
 .status-pill.planejado {
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(59, 130, 246, 0.12) !important;
+  color: #60a5fa !important;
+  border: 1px solid #3b82f6 !important;
 }
 
-.tab-pill.marcada,
 .status-pill.marcada {
-  background: rgba(218, 165, 32, 0.2);
-  color: #ffd866;
-  border: 1px solid rgba(218, 165, 32, 0.5);
+  background: rgba(218, 165, 32, 0.15) !important;
+  color: #ffd866 !important;
+  border: 1px solid var(--duoc-gold) !important;
 }
 
 .milestone-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
-  padding: 0.15rem 0.45rem;
+  gap: 0.2rem;
+  padding: 0.12rem 0.35rem;
   border-radius: 4px;
-  background: rgba(220, 38, 38, 0.2);
+  background: rgba(239, 68, 68, 0.15);
   color: #fca5a5;
-  border: 1px solid rgba(220, 38, 38, 0.4);
-  font-size: 0.66rem;
+  border: 1px solid #ef4444;
+  font-size: 0.62rem;
   font-weight: 700;
 }
 
 .milestone-badge.done {
-  background: rgba(34, 197, 94, 0.2);
+  background: rgba(34, 197, 94, 0.15);
   color: #86efac;
-  border: 1px solid rgba(34, 197, 94, 0.5);
+  border: 1px solid #22c55e;
 }
 
 /* ============================================================
@@ -594,22 +728,22 @@
 
 .month-tooltip {
   position: absolute;
-  top: calc(100% + 10px);
+  top: calc(100% + 8px);
   left: 50%;
-  transform: translateX(-50%) translateY(6px);
-  width: 285px;
-  background: var(--duoc-black, #16181d) !important;
+  transform: translateX(-50%) translateY(4px);
+  width: 245px;
+  background: #111317 !important;
   border: 1px solid var(--duoc-gold) !important;
-  border-radius: 8px;
-  padding: 0.85rem 1rem;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.85), 0 0 1px rgba(218, 165, 32, 0.5);
+  border-radius: 6px;
+  padding: 0.65rem 0.8rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.85), 0 0 1px rgba(218, 165, 32, 0.5);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-  z-index: 250;
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+  z-index: 100 !important;
   text-align: left;
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
 }
 
 .month-tab-btn:hover .month-tooltip,
@@ -624,7 +758,7 @@
 .month-tab-btn.tab-ago .month-tooltip,
 .tab-ago .month-tooltip {
   left: 0;
-  transform: translateY(6px);
+  transform: translateY(4px);
 }
 .month-tab-btn.tab-ago:hover .month-tooltip,
 .tab-ago:hover .month-tooltip {
@@ -635,7 +769,7 @@
 .tab-dez .month-tooltip {
   left: auto;
   right: 0;
-  transform: translateY(6px);
+  transform: translateY(4px);
 }
 .month-tab-btn.tab-dez:hover .month-tooltip,
 .tab-dez:hover .month-tooltip {
@@ -649,7 +783,7 @@
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  border: 7px solid transparent;
+  border: 6px solid transparent;
   border-bottom-color: var(--duoc-gold);
 }
 
@@ -659,80 +793,80 @@
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  border: 6px solid transparent;
+  border: 5px solid transparent;
   border-bottom-color: var(--duoc-black, #16181d) !important;
 }
 
 .tab-ago .month-tooltip::before,
 .tab-ago .month-tooltip::after {
-  left: 36px;
+  left: 32px;
 }
 
 .tab-dez .month-tooltip::before,
 .tab-dez .month-tooltip::after {
   left: auto;
-  right: 28px;
+  right: 24px;
 }
 
 .tooltip-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
 }
 
 .tooltip-header strong {
-  font-size: 0.92rem;
+  font-size: 0.84rem;
   color: #ffffff;
 }
 
 .tooltip-badge {
-  font-size: 0.65rem;
+  font-size: 0.58rem;
   font-weight: 700;
-  padding: 0.15rem 0.45rem;
-  border-radius: 4px;
+  padding: 0.08rem 0.35rem;
+  border-radius: 3px;
   text-transform: uppercase;
 }
 
 .tooltip-badge.concluido {
-  background: rgba(34, 197, 94, 0.2);
-  color: #4ade80;
-  border: 1px solid rgba(34, 197, 94, 0.45);
+  background: rgba(34, 197, 94, 0.15) !important;
+  color: #4ade80 !important;
+  border: 1px solid #22c55e !important;
 }
 
 .tooltip-badge.andamento {
-  background: rgba(59, 130, 246, 0.2);
-  color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.45);
+  background: rgba(234, 179, 8, 0.15) !important;
+  color: #facc15 !important;
+  border: 1px solid #eab308 !important;
 }
 
 .tooltip-badge.planejado {
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(59, 130, 246, 0.15) !important;
+  color: #60a5fa !important;
+  border: 1px solid #3b82f6 !important;
 }
 
 .tooltip-phase {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--duoc-gold);
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
 .tooltip-divider {
   height: 1px;
-  background: rgba(255, 255, 255, 0.09);
-  margin: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 0.35rem 0;
 }
 
 .tooltip-body {
-  font-size: 0.74rem;
+  font-size: 0.68rem;
   color: rgba(255, 255, 255, 0.75);
-  line-height: 1.45;
+  line-height: 1.35;
 }
 
 .tooltip-body p {
-  margin: 0.25rem 0 !important;
+  margin: 0.15rem 0 !important;
   text-align: left !important;
 }
 
@@ -741,11 +875,11 @@
 }
 
 .tooltip-hint {
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   color: var(--duoc-gold);
   font-style: italic;
-  margin-top: 0.5rem;
-  padding-top: 0.35rem;
+  margin-top: 0.35rem;
+  padding-top: 0.25rem;
   border-top: 1px dashed rgba(255, 255, 255, 0.08);
   text-align: center;
 }
@@ -786,6 +920,8 @@
 .calendar-month-content,
 .month-display-container {
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .month-view-panel {
@@ -818,7 +954,8 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 1.25rem;
-  padding-bottom: 0.85rem;
+  padding: 0.85rem;
+  padding-top: 0.25rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -828,7 +965,6 @@
   font-size: 1.35rem !important;
   font-weight: 700 !important;
   margin: 0 !important;
-  color: #ffffff !important;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -849,49 +985,49 @@
   flex-wrap: wrap;
 }
 
-/* Tabela de Calendário Ampliada */
+/* ============================================================
+   TABELA DO CALENDÁRIO: PROPORÇÕES COMPACTAS E ALTO CONTRASTE
+   ============================================================ */
 .large-calendar-wrapper {
   overflow-x: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.85rem;
+  border-radius: 6px !important;
+  padding: 0.35rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .large-cal-table {
   width: 100%;
   border-collapse: separate !important;
-  border-spacing: 5px !important;
+  border-spacing: 3px !important;
   table-layout: fixed;
   margin: 0 !important;
 }
 
 .large-cal-table th {
-  background: rgba(255, 255, 255, 0.04) !important;
-  color: rgba(255, 255, 255, 0.6) !important;
-  font-size: 0.74rem !important;
+  font-size: 0.68rem !important;
   font-weight: 700 !important;
   text-align: center !important;
-  padding: 0.5rem 0.25rem !important;
-  border-radius: 4px;
+  padding: 0.3rem 0.15rem !important;
+  border-radius: 3px;
   border: none !important;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 
 .large-cal-table td {
-  height: 66px !important;
-  min-height: 66px !important;
-  padding: 0.4rem 0.45rem !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  padding: 0.2rem 0.25rem !important;
   vertical-align: top !important;
-  border-radius: 6px !important;
-  border: 1px solid rgba(255, 255, 255, 0.07) !important;
-  background: rgba(255, 255, 255, 0.02) !important;
-  transition: all 0.15s ease;
+  border-radius: 4px !important;
+  transition: all 0.12s ease;
   position: relative;
   text-align: left !important;
 }
 
 .large-cal-table td:hover:not(.empty-day) {
-  border-color: rgba(218, 165, 32, 0.45) !important;
-  background: rgba(218, 165, 32, 0.05) !important;
+  border-color: var(--duoc-gold) !important;
   transform: translateY(-1px);
 }
 
@@ -905,146 +1041,162 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.1rem;
 }
 
 .cell-num {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #f1f5f9;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
   line-height: 1;
 }
 
-.cell-icon-status {
-  font-size: 0.72rem;
-  line-height: 1;
-}
-
-/* Event Chips dentro das células */
+/* Event Chips Compactos dentro das Células */
 .event-chip {
   display: block;
-  font-size: 0.64rem;
-  font-weight: 700;
-  padding: 0.15rem 0.35rem;
-  border-radius: 4px;
-  line-height: 1.25;
+  font-size: 0.56rem !important;
+  font-weight: 700 !important;
+  padding: 0.08rem 0.25rem !important;
+  border-radius: 3px !important;
+  line-height: 1.2;
   text-align: center;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #ffffff !important;
 }
 
 .event-chip.meet {
-  background: rgba(218, 165, 32, 0.25);
-  color: #ffd866;
-  border: 1px solid rgba(218, 165, 32, 0.6);
+  background: #d97706 !important;
+  border: 1px solid #b45309 !important;
 }
 
 .event-chip.meet-done {
-  background: rgba(34, 197, 94, 0.22);
-  color: #86efac;
-  border: 1px solid rgba(34, 197, 94, 0.5);
+  background: #16a34a !important;
+  border: 1px solid #15803d !important;
 }
 
 .event-chip.milestone {
-  background: #dc2626;
-  color: #ffffff;
-  border: 1px solid #f87171;
-  box-shadow: 0 0 8px rgba(220, 38, 38, 0.6);
+  background: #dc2626 !important;
+  border: 1px solid #b91c1c !important;
+  box-shadow: 0 0 4px rgba(220, 38, 38, 0.4);
 }
 
 .event-chip.milestone-done {
-  background: #15803d;
-  color: #ffffff;
-  border: 1px solid #4ade80;
-  box-shadow: 0 0 8px rgba(21, 128, 61, 0.6);
+  background: #16a34a !important;
+  border: 1px solid #15803d !important;
 }
 
 .event-chip.active-phase {
-  background: rgba(59, 130, 246, 0.2);
-  color: #93c5fd;
-  border: 1px solid rgba(59, 130, 246, 0.45);
+  background: #2563eb !important;
+  border: 1px solid #1d4ed8 !important;
 }
 
-/* Estilos de Células por Unidade e Status */
+/* ============================================================
+   ESTILOS DE CÉLULAS COM AS BORDAS SOLICITADAS:
+   - Concluído: Borda Verde (#22c55e)
+   - Em Andamento: Borda Amarela (#eab308)
+   - Planejado: Borda Azul (#3b82f6)
+   ============================================================ */
+
+/* Dias Concluídos (Unidade 1) - Borda Verde */
 .large-cal-table td.day-u1 {
-  background: rgba(218, 165, 32, 0.08) !important;
-  border-color: rgba(218, 165, 32, 0.25) !important;
+  border: 1.5px solid #22c55e !important;
+  background: rgba(34, 197, 94, 0.08) !important;
+}
+.large-cal-table td.day-u1 .cell-num {
+  color: #4ade80 !important;
 }
 
+/* Dias Em Andamento (Unidade 2) - Borda Amarela */
 .large-cal-table td.day-u2 {
-  background: rgba(59, 130, 246, 0.07) !important;
-  border-color: rgba(59, 130, 246, 0.22) !important;
+  border: 1.5px solid #eab308 !important;
+  background: rgba(234, 179, 8, 0.09) !important;
+}
+.large-cal-table td.day-u2 .cell-num {
+  color: #facc15 !important;
 }
 
-.large-cal-table td.day-u3 {
-  background: rgba(249, 115, 22, 0.07) !important;
-  border-color: rgba(249, 115, 22, 0.22) !important;
-}
-
+/* Dias Planejados (Unidades 3 e 4) - Borda Azul */
+.large-cal-table td.day-u3,
 .large-cal-table td.day-u4 {
-  background: rgba(168, 85, 247, 0.07) !important;
-  border-color: rgba(168, 85, 247, 0.22) !important;
+  border: 1.5px solid #3b82f6 !important;
+  background: rgba(59, 130, 246, 0.07) !important;
+}
+.large-cal-table td.day-u3 .cell-num,
+.large-cal-table td.day-u4 .cell-num {
+  color: #60a5fa !important;
 }
 
-.large-cal-table td.day-done {
-  border-color: rgba(34, 197, 94, 0.3) !important;
-}
-
-.large-cal-table td.day-done .cell-num {
-  color: #86efac;
-}
-
-.large-cal-table td.day-milestone {
-  border-color: #f87171 !important;
-  background: rgba(220, 38, 38, 0.12) !important;
-}
-
+/* Dias de Reunião com a Cliente - Borda Âmbar */
 .large-cal-table td.day-meet {
-  border-color: rgba(218, 165, 32, 0.5) !important;
-  background: rgba(218, 165, 32, 0.1) !important;
+  border: 1.5px solid #f59e0b !important;
+  background: rgba(245, 158, 11, 0.14) !important;
+}
+.large-cal-table td.day-meet .cell-num {
+  color: #fbbf24 !important;
 }
 
-/* Feed / Pautas de Reuniões e Entregas do Mês */
+/* Dias de Ponto de Controle (Marco Avaliativo) - Borda Vermelha */
+.large-cal-table td.day-milestone {
+  border: 1.5px solid #ef4444 !important;
+  background: rgba(239, 68, 68, 0.14) !important;
+}
+.large-cal-table td.day-milestone .cell-num {
+  color: #f87171 !important;
+  font-weight: 800 !important;
+}
+
+/* Dias de Entrega Concluída - Borda Verde */
+.large-cal-table td.day-done {
+  border: 1.5px solid #22c55e !important;
+  background: rgba(34, 197, 94, 0.16) !important;
+}
+.large-cal-table td.day-done .cell-num {
+  color: #4ade80 !important;
+  font-weight: 800 !important;
+}
+
+/* ============================================================
+   FEED DE REUNIÕES E PAUTAS DO MÊS (COMPACTO)
+   ============================================================ */
 .month-events-feed {
-  margin-top: 1.25rem;
-  padding-top: 1.1rem;
+  margin-top: 0.85rem;
+  padding: 0.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .month-events-title {
-  font-size: 0.92rem !important;
+  font-size: 0.84rem !important;
   font-weight: 700 !important;
-  color: #ffffff !important;
-  margin: 0 0 0.85rem 0 !important;
+  margin: 0 0 0.6rem 0 !important;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .month-event-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.65rem 0.85rem;
-  border-radius: 6px;
+  padding: 0.45rem 0.65rem;
+  border-radius: 5px;
   background: rgba(255, 255, 255, 0.025);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  margin-bottom: 0.5rem;
-  gap: 0.85rem;
-  transition: all 0.15s ease;
+  margin-bottom: 0.35rem;
+  gap: 0.65rem;
+  transition: all 0.12s ease;
 }
 
 .month-event-item:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   border-color: rgba(218, 165, 32, 0.3);
 }
 
 .month-event-left {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.65rem;
   flex: 1;
   min-width: 0;
 }
@@ -1054,37 +1206,37 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 6px;
-  background: rgba(218, 165, 32, 0.15);
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+  background: rgba(218, 165, 32, 0.14);
   border: 1px solid rgba(218, 165, 32, 0.4);
   color: var(--duoc-gold);
   font-weight: 700;
   flex-shrink: 0;
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 .event-date-badge .ev-d {
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 
 .event-date-badge .ev-m {
-  font-size: 0.62rem;
+  font-size: 0.55rem;
   text-transform: uppercase;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .event-date-badge.milestone {
-  background: rgba(220, 38, 38, 0.2);
-  border-color: rgba(220, 38, 38, 0.5);
+  background: rgba(239, 68, 68, 0.18);
+  border-color: rgba(239, 68, 68, 0.45);
   color: #fca5a5;
 }
 
 .event-date-badge.done {
-  background: rgba(34, 197, 94, 0.18);
+  background: rgba(34, 197, 94, 0.16);
   border-color: rgba(34, 197, 94, 0.45);
-  color: #4ade80;
+  color: #86efac;
 }
 
 .event-info {
@@ -1093,146 +1245,216 @@
 }
 
 .event-name {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .event-desc {
-  font-size: 0.76rem;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.72rem;
   line-height: 1.35;
 }
 
-/* Responsividade Mobile / Tablet */
-@media screen and (max-width: 900px) {
-  .calendar-nav-bar,
-  .month-selector-sidebar {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 0.5rem;
-  }
+/* ============================================================
+   HARMONIZAÇÃO DE TEMAS (DARK / LIGHT)
+   ============================================================ */
 
-  .calendar-unified-card {
-    padding: 1rem 0.85rem;
-  }
-
-  .month-tab-btn,
-  .month-nav-card {
-    min-height: 56px;
-    padding: 0.5rem 0.35rem;
-  }
-
-  .tab-title,
-  .month-nav-title {
-    font-size: 0.8rem;
-  }
-
-  .month-tooltip {
-    width: 250px;
-  }
-
-  .large-cal-table td {
-    height: 52px !important;
-    min-height: 52px !important;
-    padding: 0.3rem !important;
-  }
-
-  .cell-num {
-    font-size: 0.92rem;
-  }
-
-  .event-chip {
-    font-size: 0.58rem;
-  }
+/* Tema Escuro (Slate) */
+[data-md-color-scheme="slate"] .calendar-unified-card,
+.calendar-unified-card {
+  background: #181b22;
+  border: 1px solid rgba(218, 165, 32, 0.35);
+  color: #f1f5f9;
 }
 
-/* Modo Claro (Light Mode) */
+[data-md-color-scheme="slate"] .calendar-unified-card a,
+.calendar-unified-card a {
+  color: var(--duoc-gold);
+}
+
+[data-md-color-scheme="slate"] .large-calendar-wrapper,
+.large-calendar-wrapper {
+  background: #13151b;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="slate"] .large-cal-table,
+.large-cal-table {
+  background: #13151b;
+}
+
+[data-md-color-scheme="slate"] .large-cal-table th,
+.large-cal-table th {
+  background: #1c1f26;
+  color: #94a3b8;
+}
+
+[data-md-color-scheme="slate"] .large-cal-table td,
+.large-cal-table td {
+  background: #181b22;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-md-color-scheme="slate"] .cell-num,
+.cell-num {
+  color: #cbd5e1;
+}
+
+[data-md-color-scheme="slate"] .panel-month-title {
+  color: #f1f5f9 !important;
+}
+
+[data-md-color-scheme="slate"] .panel-month-phase {
+  color: var(--duoc-gold) !important;
+}
+
+[data-md-color-scheme="slate"] .month-events-title {
+  color: #f1f5f9 !important;
+}
+
+[data-md-color-scheme="slate"] .event-name {
+  color: #f1f5f9 !important;
+}
+
+[data-md-color-scheme="slate"] .event-desc {
+  color: #94a3b8 !important;
+}
+
+[data-md-color-scheme="slate"] .tab-title {
+  color: #f1f5f9 !important;
+}
+
+/* Tema Claro (Default) */
 [data-md-color-scheme="default"] .calendar-unified-card {
   background: #ffffff;
-  border-color: rgba(218, 165, 32, 0.45);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-}
-
-[data-md-color-scheme="default"] .calendar-nav-bar {
-  border-bottom-color: #e2e8f0;
-}
-
-[data-md-color-scheme="default"] .month-tab-btn,
-[data-md-color-scheme="default"] .month-nav-card {
-  background: #f8fafc;
-  border-color: #e2e8f0;
-}
-
-[data-md-color-scheme="default"] .tab-title,
-[data-md-color-scheme="default"] .month-nav-title {
+  border: 1px solid #e2e8f0;
   color: #1e293b;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
 }
 
-[data-md-color-scheme="default"] .month-nav-subtitle {
-  color: #64748b;
+[data-md-color-scheme="default"] .calendar-unified-card a {
+  color: #8c6200;
 }
 
-/* Tooltip mantém o preto padrão institucional DUOC mesmo no tema claro */
-[data-md-color-scheme="default"] .month-tooltip {
-  background: var(--duoc-black, #16181d) !important;
-  border-color: var(--duoc-gold) !important;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 1px rgba(218, 165, 32, 0.4) !important;
-  color: rgba(255, 255, 255, 0.9) !important;
-}
-
-[data-md-color-scheme="default"] .month-tooltip::after {
-  border-bottom-color: var(--duoc-black, #16181d) !important;
-}
-
-[data-md-color-scheme="default"] .tooltip-header strong {
-  color: #ffffff !important;
-}
-
-[data-md-color-scheme="default"] .tooltip-phase {
-  color: var(--duoc-gold) !important;
-}
-
-[data-md-color-scheme="default"] .tooltip-divider {
-  background: rgba(255, 255, 255, 0.12) !important;
-}
-
-[data-md-color-scheme="default"] .tooltip-body {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-[data-md-color-scheme="default"] .tooltip-body p strong {
-  color: #ffffff !important;
-}
-
-[data-md-color-scheme="default"] .tooltip-hint {
-  color: var(--duoc-gold) !important;
-  border-top-color: rgba(255, 255, 255, 0.12) !important;
+[data-md-color-scheme="default"] .panel-month-header {
+  border-bottom-color: #e2e8f0 !important;
 }
 
 [data-md-color-scheme="default"] .panel-month-title {
   color: #0f172a !important;
 }
 
-[data-md-color-scheme="default"] .panel-month-header {
-  border-bottom-color: #e2e8f0;
+[data-md-color-scheme="default"] .panel-month-phase {
+  color: #8c6200 !important;
+}
+
+[data-md-color-scheme="default"] .milestone-badge {
+  background: #fef2f2 !important;
+  color: #b91c1c !important;
+  border-color: #f87171 !important;
+}
+
+[data-md-color-scheme="default"] .milestone-badge.done {
+  background: #f0fdf4 !important;
+  color: #15803d !important;
+  border-color: #86efac !important;
+}
+
+[data-md-color-scheme="default"] .status-pill.concluido {
+  background: #dcfce7 !important;
+  color: #15803d !important;
+  border-color: #22c55e !important;
+}
+
+[data-md-color-scheme="default"] .status-pill.andamento {
+  background: #fef9c3 !important;
+  color: #854d0e !important;
+  border-color: #ca8a04 !important;
+}
+
+[data-md-color-scheme="default"] .status-pill.planejado {
+  background: #dbeafe !important;
+  color: #1d4ed8 !important;
+  border-color: #3b82f6 !important;
+}
+
+[data-md-color-scheme="default"] .large-calendar-wrapper {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+[data-md-color-scheme="default"] .large-cal-table {
+  background: #ffffff;
 }
 
 [data-md-color-scheme="default"] .large-cal-table th {
-  background: #f1f5f9 !important;
-  color: #475569 !important;
+  background: #f1f5f9;
+  color: #475569;
 }
 
 [data-md-color-scheme="default"] .large-cal-table td {
-  background: #f8fafc !important;
-  border-color: #e2e8f0 !important;
+  background: #ffffff;
+  border-color: #e2e8f0;
 }
 
 [data-md-color-scheme="default"] .cell-num {
-  color: #1e293b;
+  color: #334155;
+}
+
+/* Ajuste das Células Coloridas no Tema Claro */
+[data-md-color-scheme="default"] .large-cal-table td.day-u1 {
+  background: #f0fdf4 !important;
+}
+[data-md-color-scheme="default"] .large-cal-table td.day-u1 .cell-num {
+  color: #15803d !important;
+}
+
+[data-md-color-scheme="default"] .large-cal-table td.day-u2 {
+  background: #fefce8 !important;
+}
+[data-md-color-scheme="default"] .large-cal-table td.day-u2 .cell-num {
+  color: #a16207 !important;
+}
+
+[data-md-color-scheme="default"] .large-cal-table td.day-u3,
+[data-md-color-scheme="default"] .large-cal-table td.day-u4 {
+  background: #eff6ff !important;
+}
+[data-md-color-scheme="default"] .large-cal-table td.day-u3 .cell-num,
+[data-md-color-scheme="default"] .large-cal-table td.day-u4 .cell-num {
+  color: #1d4ed8 !important;
+}
+
+[data-md-color-scheme="default"] .large-cal-table td.day-meet {
+  background: #fffbeb !important;
+}
+[data-md-color-scheme="default"] .large-cal-table td.day-meet .cell-num {
+  color: #b45309 !important;
+}
+
+[data-md-color-scheme="default"] .large-cal-table td.day-milestone {
+  background: #fef2f2 !important;
+}
+[data-md-color-scheme="default"] .large-cal-table td.day-milestone .cell-num {
+  color: #b91c1c !important;
+}
+
+[data-md-color-scheme="default"] .large-cal-table td.day-done {
+  background: #dcfce7 !important;
+}
+[data-md-color-scheme="default"] .large-cal-table td.day-done .cell-num {
+  color: #166534 !important;
+}
+
+[data-md-color-scheme="default"] .month-events-feed {
+  border-top-color: #e2e8f0;
+}
+
+[data-md-color-scheme="default"] .month-events-title {
+  color: #0f172a;
 }
 
 [data-md-color-scheme="default"] .month-event-item {
@@ -1248,11 +1470,320 @@
   color: #64748b;
 }
 
-[data-md-color-scheme="default"] .month-events-feed {
-  border-top-color: #e2e8f0;
+/* ============================================================
+   ESTILOS PARA OS CARDS DO CRONOGRAMA (MODELO ADMONITION / CALLOUT)
+   - Segue o mesmo padrão visual do bloco admonition (Racional)
+   - Title Header com background colorido conforme o status:
+     * Concluído: Verde (#22c55e / #15803d)
+     * Em Andamento: Amarelo (#eab308 / #854d0e)
+     * Planejado: Azul (#3b82f6 / #1e40af)
+   - Tipografia e dimensões padronizadas com o projeto
+   ============================================================ */
+.week-card {
+  border-radius: 4px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: #141720 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22) !important;
+  margin: 1.25rem 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  transition: all 0.2s ease !important;
 }
 
-[data-md-color-scheme="default"] .month-events-title {
-  color: #0f172a !important;
+[data-md-color-scheme="default"] .week-card {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
 }
+
+.week-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28) !important;
+}
+
+[data-md-color-scheme="default"] .week-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Bordas temáticas contínuas (toda a div na cor do status, sem borda lateral grossa) */
+.week-card.status-concluido {
+  border: 1px solid rgba(34, 197, 94, 0.55) !important;
+}
+
+[data-md-color-scheme="default"] .week-card.status-concluido {
+  border: 1px solid #22c55e !important;
+}
+
+.week-card.status-concluido:hover {
+  border-color: #22c55e !important;
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.22) !important;
+}
+
+.week-card.status-andamento {
+  border: 1px solid rgba(234, 179, 8, 0.55) !important;
+}
+
+[data-md-color-scheme="default"] .week-card.status-andamento {
+  border: 1px solid #eab308 !important;
+}
+
+.week-card.status-andamento:hover {
+  border-color: #eab308 !important;
+  box-shadow: 0 4px 14px rgba(234, 179, 8, 0.22) !important;
+}
+
+.week-card.status-planejado {
+  border: 1px solid rgba(59, 130, 246, 0.55) !important;
+}
+
+[data-md-color-scheme="default"] .week-card.status-planejado {
+  border: 1px solid #3b82f6 !important;
+}
+
+.week-card.status-planejado:hover {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.22) !important;
+}
+
+/* Header / Title Bar — Exatamente como a barra .admonition-title */
+.week-card-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+  padding: 0.55rem 0.95rem !important;
+  margin: 0 !important;
+  border-bottom: 1px solid transparent !important;
+}
+
+/* Status Concluído (Verde) */
+.week-card.status-concluido .week-card-header {
+  background: rgba(34, 197, 94, 0.16) !important;
+  border-bottom-color: rgba(34, 197, 94, 0.35) !important;
+}
+
+[data-md-color-scheme="default"] .week-card.status-concluido .week-card-header {
+  background: #dcfce7 !important;
+  border-bottom-color: #bbf7d0 !important;
+}
+
+.week-card.status-concluido .week-card-title {
+  color: #4ade80 !important;
+}
+
+[data-md-color-scheme="default"] .week-card.status-concluido .week-card-title {
+  color: #14532d !important;
+}
+
+/* Status Em Andamento (Amarelo / Âmbar) */
+.week-card.status-andamento .week-card-header {
+  background: rgba(234, 179, 8, 0.16) !important;
+  border-bottom-color: rgba(234, 179, 8, 0.35) !important;
+}
+
+[data-md-color-scheme="default"] .week-card.status-andamento .week-card-header {
+  background: #fef9c3 !important;
+  border-bottom-color: #fef08a !important;
+}
+
+.week-card.status-andamento .week-card-title {
+  color: #facc15 !important;
+}
+
+[data-md-color-scheme="default"] .week-card.status-andamento .week-card-title {
+  color: #713f12 !important;
+}
+
+/* Status Planejado (Azul) */
+.week-card.status-planejado .week-card-header {
+  background: rgba(59, 130, 246, 0.16) !important;
+  border-bottom-color: rgba(59, 130, 246, 0.35) !important;
+}
+
+[data-md-color-scheme="default"] .week-card.status-planejado .week-card-header {
+  background: #dbeafe !important;
+  border-bottom-color: #bfdbfe !important;
+}
+
+.week-card.status-planejado .week-card-title {
+  color: #60a5fa !important;
+}
+
+[data-md-color-scheme="default"] .week-card.status-planejado .week-card-title {
+  color: #1e3a8a !important;
+}
+
+/* Tipografia padronizada com o projeto: font-size 12.8px dentro dos cards */
+.week-card,
+.week-card p,
+.week-card ul,
+.week-card ol,
+.week-card li,
+.week-card-meta,
+.week-meta-item,
+.week-meta-label,
+.week-meta-value,
+.week-section-title {
+  font-size: 12.8px !important;
+}
+
+.week-card-header-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  flex-wrap: wrap !important;
+}
+
+.week-card-title {
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.week-card-period {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 0.12rem 0.45rem !important;
+  border-radius: 4px !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+[data-md-color-scheme="default"] .week-card-period {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: #1e293b !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Corpo do Card (Meta e Conteúdo com mesmo padrão do admonition) */
+.week-card-meta {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 1.25rem !important;
+  padding: 0.75rem 0.95rem 0.5rem 0.95rem !important;
+  margin: 0 !important;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-md-color-scheme="default"] .week-card-meta {
+  border-bottom-color: #f1f5f9 !important;
+}
+
+.week-meta-item {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 0.35rem !important;
+}
+
+.week-meta-label {
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  font-weight: 700 !important;
+  color: var(--duoc-gold) !important;
+}
+
+[data-md-color-scheme="default"] .week-meta-label {
+  color: #8c6200 !important;
+}
+
+.week-meta-value {
+  line-height: 1.4 !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+[data-md-color-scheme="default"] .week-meta-value {
+  color: #334155 !important;
+}
+
+/* Grid de Conteúdo */
+.week-card-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 1.25rem !important;
+  padding: 0.85rem 0.95rem 1rem 0.95rem !important;
+}
+
+@media screen and (max-width: 768px) {
+  .week-card-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+}
+
+.week-section-title {
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  color: var(--duoc-gold) !important;
+  margin: 0 0 0.45rem 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+}
+
+[data-md-color-scheme="default"] .week-section-title {
+  color: #8c6200 !important;
+}
+
+.week-card ul {
+  margin: 0.25rem 0 0.5rem 0 !important;
+  padding-left: 1.15rem !important;
+}
+
+.week-card li {
+  line-height: 1.55 !important;
+  margin-bottom: 0.35rem !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-md-color-scheme="default"] .week-card li {
+  color: #334155 !important;
+}
+
+/* Responsividade Geral do Calendário */
+@media screen and (max-width: 900px) {
+  .calendar-nav-bar,
+  .month-selector-sidebar {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 0.35rem;
+  }
+
+  .calendar-unified-card {
+    padding: 0.75rem 0.65rem;
+  }
+
+  .month-tab-btn,
+  .month-nav-card {
+    min-height: 38px;
+    padding: 0.25rem 0.25rem;
+  }
+
+  .tab-title,
+  .month-nav-title {
+    font-size: 0.72rem;
+  }
+
+  .month-tooltip {
+    width: 220px;
+  }
+
+  .large-cal-table td {
+    height: 36px !important;
+    min-height: 36px !important;
+    padding: 0.15rem !important;
+  }
+
+  .cell-num {
+    font-size: 0.76rem !important;
+  }
+
+  .event-chip {
+    font-size: 0.52rem !important;
+  }
+}
+
+
 

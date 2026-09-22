@@ -62,6 +62,7 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 
 ### 4. Representação de Requisitos
 * **Objetivo Geral:** Traduzir especificações conceituais em modelos visuais tangíveis que facilitem a compreensão e o alinhamento com os usuários.
+<<<<<<< HEAD
 *   **Técnicas de ER:**
     *   **Prototipação:** Técnica de criação de interfaces navegáveis para validação das estações de trabalho (Desktop) e dispositivos móveis (*mobile-first* para canteiro de obras). | **Status:** Planejado | **Evidência:** 
     *   **Modelagem de Processos:** Elaboração planejada do passo a passo para representação dos fluxos de trabalho do sistema.
@@ -75,6 +76,7 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 
 ### 5. Verificação e Validação de Requisitos (V&V)
 * **Objetivo Geral:** Assegurar a corretude técnica interna dos documentos (Verificação) e confirmar que o software atende às necessidades reais do negócio (Validação).
+<<<<<<< HEAD
 *   **Técnicas de ER:**
     *   **Inspeção (Fagan Adaptado):** Aplicação planejada de listas de verificação (checklists) de qualidade técnica, completeza e conformidade gramatical na documentação.
     *   **Sessões Guiadas de Homologação:** Navegação assistida planejada com a cliente Maria Beatryz para validação das telas antes da codificação.
@@ -113,6 +115,7 @@ Nesta seção, as atividades clássicas de Engenharia de Requisitos (ER), suas p
 
 | Fase do RAD / Ciclo Iterativo | Atividades de ER Predominantes | Prática Metodológica (RAD / Engenharia) | Técnica Empregada | Resultado Esperado / Artefato |
 | :--- | :--- | :--- | :--- | :--- |
+<<<<<<< HEAD
 | **Fase 1: Planejamento de Requisitos**<br>*(Iteração 0: Concepção e Diagnóstico)* | Elicitação e Análise de Requisitos | Sessões JAD (*Joint Application Development*), Diagnóstico de Processos, *Docs as Code*. | Entrevistas semiestruturadas com a gestora Maria Beatryz; Análise documental de planilhas; Rich Picture; Ishikawa. | Declaração do Problema; Rich Picture; Diagrama de Ishikawa; Matriz de Stakeholders e Permissões (RBAC) preliminar. |
 | **Fase 1: Planejamento de Requisitos**<br>*(Iteração 1: Estratégia e Escopo)* | Análise, Especificação e Verificação | Refinamento de Escopo, Esboço Arquitetural, Revisão por Pares (*Peer Review*). | Priorização MoSCoW; Modelagem conceitual de dados; Inspeção por checklists (Fagan Adaptado). | Matriz de Características (CAR-01 a CAR-08); Estratégia de ESW; Modelo Conceitual de Dados preliminar. |
 | **Fase 2: Design do Usuário**<br>*(Iteração 2: Prototipagem e Refinamento de Domínio)* | Especificação, Validação e Gestão de Requisitos | Prototipagem Rápida Evolutiva, Sessão JAD de Aceite de Telas, Especificação Guiada. | Prototipagem no Figma (Desktop e Mobile); Modelagem lógica do domínio (evolução conjunta com as telas); Sessões Guiadas de Homologação. | Protótipo interativo de alta fidelidade no Figma homologado; Backlog de Histórias de Usuário (com critérios em lista); Modelo Lógico de Dados ajustado. |
@@ -120,6 +123,7 @@ Nesta seção, as atividades clássicas de Engenharia de Requisitos (ER), suas p
 | **Fase 3: Construção**<br>*(Iteração 4: Motor Financeiro)* | Análise de Exceções e Validação Incremental | Desenvolvimento Incremental, Validação Aritmética, *Continuous Delivery*. | Validação de fórmulas de folha e comissões com dados sintéticos e reais anonimizados da DUOC; Testes automatizados de integração. | Motor de Cálculo de Folha e Reembolsos de Despesas (CAR-03 e CAR-04) validado com a cliente. |
 | **Fase 3: Construção**<br>*(Iteração 5: Custos e Relatórios)* | Validação de Negócio e Verificação de Segurança | Construção de Dashboards, Testes End-to-End, Auditoria de Conformidade. | Desenvolvimento de dashboards de rentabilidade por contrato; Verificação de regras de controle de acesso (RBAC/LGPD). | Painel de apropriação de custos e rentabilidade funcional (CAR-05 e CAR-06); Controle de acesso e trilha de auditoria ativos (CAR-07 e CAR-08). |
 | **Fase 4: Transição / Cutover**<br>*(Iteração 6: Homologação Final e Aceite)* | Validação Final (UAT), Gestão e Transição | Testes Formais de Aceitação, Treinamento Sociotécnico, Implantação do MVP. | Testes Formais de Aceitação de Usuário (UAT); Rastreamento via Matriz Bidirecional (*Forward/Backward*). | Termo de Aceite do MVP assinado pela cliente; Matriz de Rastreabilidade Bidirecional finalizada; Sistema DUOC Finance em produção; Documentação viva (via MkDocs) homologada. |
+
 
 ---
 
@@ -130,4 +134,6 @@ Nesta seção, as atividades clássicas de Engenharia de Requisitos (ER), suas p
 | `1.0` | 05/09/2026 | Estruturação inicial das atividades e mapeamento ao processo | Carlos Gabriel | Matheus Ribeiro |
 | `1.1` | 07/09/2026 | Detalhamento das técnicas de ER e reestruturação da matriz nas fases do RAD | Carlos Gabriel | Matheus Ribeiro Szervinsk |
 | `2.0` | 15/09/2026 | Unificação integral dos artefatos 5.1 e 5.2 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
+<<<<<<< HEAD
 | `2.1` | 20/09/2026 | Padronização taxonômica das seções 5.1 e 5.2 (técnicas, práticas, ferramentas, artefatos e critérios), alinhamento da stack técnica para NestJS/Supabase e especificação do uso de dados sintéticos e reais anonimizados em UAT. | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |
+| `2.2` | 21/09/2026 | Ajuste da estratégia de representação e validação de requisitos: UI-First com base no Figma e designs via Frontend, postergando lógica e persistência para após validação do DoR | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

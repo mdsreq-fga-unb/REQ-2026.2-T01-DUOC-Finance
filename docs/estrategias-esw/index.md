@@ -8,9 +8,9 @@ Este capítulo documenta as escolhas de processo de engenharia e metodologia de 
 
 A fundamentação metodológica está estruturada em:
 
-*   **Estratégia Priorizada:** Detalhamento da abordagem híbrida, modelo de ciclo de vida e processo organizacional adotado.
-*   **Quadro Comparativo de Processos:** Tabela analítica comparando o processo escolhido com modelos de desenvolvimento alternativos de mercado.
-*   **Justificativa Metodológica:** Definição conceitual baseada no framework de tomada de decisão contextual ("Mixer Board").
+*   **Estratégia Priorizada:** Detalhamento da abordagem híbrida, modelo de ciclo de vida e processo de desenvolvimento adotado.
+*   **Quadro Comparativo de Processos:** Tabela analítica comparando o processo escolhido com processos de desenvolvimento alternativos.
+*   **Justificativa Metodológica:** Definição conceitual baseada na natureza do produto, características dos usuários e contexto do projeto.
 
 ---
 
@@ -21,38 +21,45 @@ A partir das informações sobre o cenário atual da DUOC Arquitetura e Engenhar
 
 ### Definição da Estratégia Metodológica
 
-*   **Abordagem de Desenvolvimento de Software:** Híbrida. Esta abordagem combina elementos das metodologias dirigidas por plano e ágeis, reconhecendo a necessidade de equilibrar planejamento e adaptabilidade. No contexto do DUOC Finance, componentes críticos que exigem governança e conformidade com a LGPD (como cálculos financeiros e dados de DP) demandam um planejamento mais estruturado, enquanto a interface e a experiência do usuário requerem flexibilidade e validação contínua.
-*   **Ciclo de vida:** Iterativo e Incremental. O produto de software será construído progressivamente, em ciclos sucessivos, onde cada iteração adiciona novas funcionalidades (incremento) e permite o refinamento do trabalho baseado no aprendizado e feedback do cliente.
-*   **Processo de Engenharia de Software:** RAD (Rapid Application Development). O RAD é uma metodologia que enfatiza a prototipagem rápida e iterativa em detrimento do planejamento extensivo, visando acelerar o desenvolvimento e obter feedback precoce dos usuários.
+*   **Abordagem de Desenvolvimento de Software:** Híbrida. Esta abordagem combina elementos das metodologias dirigidas por plano e ágeis. No contexto do DUOC Finance, a base arquitetural e as regras matemáticas do domínio financeiro (cálculos de folha, retenção de impostos) exigem estabilidade e previsibilidade (dirigido por plano). Em contrapartida, as interfaces de lançamento de horas de campo (RVT) e relatórios gerenciais demandam experimentação e refinamento empírico de usabilidade (ágil).
+*   **Ciclo de vida:** Iterativo e Incremental. O produto de software será construído em ciclos de evolução progressiva. Cada incremento adicionará fatias verticais funcionais, permitindo que a solução integre as regras financeiras complexas de forma modular e gradual.
+*   **Processo de Engenharia de Software:** RAD (Rapid Application Development). O RAD é um processo de desenvolvimento que enfatiza o ciclo curto de planejamento de requisitos seguido de intensa modelagem de dados e prototipagem contínua de interfaces.
+
+#### Adaptação do Processo RAD ao Contexto da DUOC
+
+Para atender à necessidade de integração sistêmica e consistência técnica, o processo RAD será estruturado nas seguintes fases, integrando as definições arquiteturais da equipe (Next.js no frontend, FastAPI no backend e PostgreSQL gerenciado via Supabase):
+
+1.  **Modelagem de Negócio e Planejamento de Requisitos:** Levantamento inicial com a cliente (Maria Beatryz) para estabelecer a taxonomia de dados (o que é uma obra, o que é RVT, quais são as verbas da folha). O foco inicial é estabelecer o *schema* do banco de dados (PostgreSQL/Supabase) para garantir a integridade das informações desde o primeiro dia.
+2.  **Design do Usuário (Prototipagem e Dados):** Sessões conjuntas e frequentes com os usuários finais. Esta fase ocorre em duas frentes: visual (usabilidade das telas no Next.js para os operários/engenheiros) e funcional/matemática (prototipagem das APIs em FastAPI para validar os algoritmos de cálculo de folha e comissões antes da integração visual).
+3.  **Construção Iterativa:** Implementação das funcionalidades em fatias. Em vez de entregar o backend inteiro e depois o frontend, a equipe foca em entregar fluxos completos (ex: de ponta a ponta, salvar um registro de RVT no banco e visualizar no relatório).
+4.  **Cutover e Refinamento:** Liberação do módulo funcional para uso e homologação da cliente, iterando com base nos resultados práticos de cálculo.
 
 ---
 
 <a id="42-quadro-comparativo-de-processos"></a>
 ## 4.2 Quadro Comparativo de Processos
 
-O quadro a seguir apresenta uma comparação detalhada entre o processo **RAD** e o framework **ScrumXP**, avaliando qual se adequa melhor ao contexto do desenvolvimento do produto DUOC Finance.
+O quadro a seguir apresenta uma comparação analítica entre o processo **RAD** e o processo **XP (Extreme Programming)**, avaliando qual se adequa melhor à natureza do produto DUOC Finance.
 
-| Características | RAD (Rapid Application Development) | ScrumXP |
+| Características | RAD (Rapid Application Development) | XP (Extreme Programming) |
 | :--- | :--- | :--- |
-| **Abordagem Geral** | Foco na prototipagem rápida e iterativa para acelerar o desenvolvimento e obter feedback precoce dos usuários. | Foco em entregas incrementais rápidas (sprints), unindo o gerenciamento do Scrum com a excelência técnica do XP. |
-| **Estrutura de Processos** | Dividido em 4 fases principais: Planejamento de Requisitos, Design do Usuário, Construção e Cutover (implementação final). | Estruturado em fases de planejamento de release, planejamento da sprint, execução, revisão e retrospectiva. |
-| **Envolvimento e Colaboração com Cliente** | Participação intensa e ativa dos usuários, especialmente na fase de Design do Usuário (workshops), para co-criar e validar protótipos funcionais. | Envolvimento constante, porém concentrado em interações formais ao final de cada sprint (revisão) para coleta de feedback. |
-| **Flexibilidade de Requisitos** | Requisitos de alto nível são definidos no início, mas os detalhes evoluem dinamicamente durante a interação e avaliação dos protótipos. | Alta flexibilidade, com os requisitos (User Stories) sendo continuamente priorizados, detalhados e ajustados no backlog a cada ciclo. |
-| **Práticas de Desenvolvimento / Qualidade Técnica** | Utiliza ciclos curtos de prototipagem-revisão-refinamento. Depende muitas vezes de ferramentas de desenvolvimento rápido para validar conceitos visualmente. | Alta ênfase em práticas técnicas de engenharia de software (TDD, integração contínua, pair programming) para garantir código limpo e qualidade estrutural. |
-| **Documentação** | Mínima e focada no essencial. A documentação concentra-se no design de interface, fluxos de dados e regras, servindo o protótipo como a principal especificação. | Mínima, centrada em user stories, critérios de aceitação detalhados (DoR/DoD) e foco prioritário no software funcional. |
-| **Adaptação ao Projeto** | Ideal para prazos curtos, onde a usabilidade é crítica e requisitos são mais fáceis de visualizar na prática do que de articular em documentos longos. | Ideal para equipes com alta maturidade técnica que necessitam adaptar o produto frequentemente com base em feedbacks curtos e constantes. |
+| **Foco Principal** | Aceleração do ciclo de entrega por meio de modelagem de dados antecipada, prototipagem visual e envolvimento do usuário no design das soluções. | Excelência técnica do código-fonte através de práticas rigorosas de engenharia e mudanças frequentes e incrementais baseadas em histórias de usuário. |
+| **Natureza do Produto Ideal** | Sistemas de informação e gestão (como o DUOC Finance) com escopo que pode ser particionado (decomponível) em módulos de interface bem definidos e regras de banco de dados claras. | Sistemas com lógicas de negócio altamente complexas, voláteis ou desconhecidas, onde o maior risco reside na arquitetura de software em constante mutação. |
+| **Envolvimento do Usuário** | Exige participação intensa e colaborativa durante a modelagem e o design de interfaces (JAD - *Joint Application Design*), focando em validar o fluxo operacional e relatórios. | Exige um cliente "on-site" em tempo integral, participando da escrita de testes de aceitação e guiando o direcionamento em níveis micro de desenvolvimento. |
+| **Validação Funcional e Técnica** | A validação ocorre pela homologação das regras de dados e experimentação funcional dos protótipos em ciclos curtos de revisão. | A validação é centrada em Testes Automatizados (TDD), Desenvolvimento Orientado a Comportamento (BDD) e revisões contínuas de código (*Pair Programming*). |
+| **Arquitetura de Software** | Estabelece um alicerce arquitetural (Modelo de Dados/Supabase e base de APIs em FastAPI) cedo no processo, evoluindo a interface de forma rápida sobre essa fundação. | Considera que a arquitetura ideal "emerge" organicamente durante o desenvolvimento contínuo (Design Simples e Refatoração Constante). |
 
 ---
 
 <a id="43-justificativa-metodologica"></a>
 ## 4.3 Justificativa Metodológica
 
-Com base nas características e desafios do projeto da DUOC Arquitetura e Engenharia, o **RAD (Rapid Application Development)** foi escolhido como o processo mais adequado pelas seguintes razões:
+Com base nas características intrínsecas do produto DUOC Finance, na decomposição do escopo e no perfil dos usuários, o **RAD (Rapid Application Development)** foi selecionado como o processo de desenvolvimento ideal pelas seguintes razões:
 
-1.  **Prazo Restrito e Foco no MVP:** O projeto possui uma restrição severa de tempo, exigindo a entrega de um Produto Mínimo Viável (MVP) funcional de DP e Gestão Financeira dentro de um único semestre letivo acadêmico. O RAD é reconhecido por ser particularmente eficaz para projetos com prazos curtos onde a velocidade de entrega e a validação do conceito são prioritárias. 
-2.  **Validação Visual para Diferentes Níveis de Letramento Tecnológico:** O sistema DUOC Finance precisará ser utilizado por diferentes perfis humanos, abrangendo desde engenheiros focados em análise de dados até operários de obra que realizarão o registro de horas (RVT). O RAD ataca exatamente essa dor ao focar na "Prototipagem Evolutiva", permitindo que interfaces sejam testadas e adaptadas precocemente junto aos usuários, garantindo que a usabilidade atenda a essas diferentes realidades antes da construção final.
-3.  **Abordagem Híbrida e Requisitos de Governança:** O projeto exige o cumprimento estrito de normas contratuais e da LGPD, além de cálculos financeiros e previdenciários complexos. A adoção do modelo híbrido aliada ao RAD permite uma fase inicial de "Planejamento de Requisitos" para fixar as bases arquiteturais e de conformidade legal, seguida de uma fase de "Design do Usuário" altamente colaborativa para refinar a usabilidade e a experiência de uso das interfaces.
-4.  **Por que não o ScrumXP?** Embora o ScrumXP seja um framework consagrado para desenvolvimento ágil, sua dinâmica padrão depende de uma cadência rígida de cerimônias de sprint e sobrecarga administrativa de gestão de cerimônias que pode dispersar o foco em um projeto com prazo restrito a um semestre letivo. No contexto do DUOC Finance, a prioridade máxima é a validação visual ágil e a convergência imediata com a cliente parceira (Maria Beatryz) por meio de sessões de *User Design* e Prototipagem Evolutiva. O RAD foi priorizado porque direciona a energia da equipe diretamente para a co-criação de telas navegáveis e para a construção acelerada dos módulos de software, proporcionando ciclos de feedback mais curtos e tangíveis entre o desenho das interfaces e a homologação funcional do MVP.
+1.  **Natureza Decomponível do Produto:** O DUOC Finance não é uma plataforma experimental de algoritmo obscuro, mas um sistema de gestão financeira e de departamento pessoal com um fluxo linear e claro (Lançamento de Ponto/RVT -> Apuração de Regras -> Fechamento de Folha/Comissões -> Relatórios). O RAD se adequa em projetos dessa natureza, pois permite particionar esses módulos verticais claramente. A equipe pode, por exemplo, prototipar e validar exaustivamente a interface de lançamento de RVT para os operários da obra, enquanto consolida, em paralelo, a modelagem de dados do motor de cálculos.
+2.  **Alta Disponibilidade e Perfil dos Usuários:** O RAD exige e pressupõe um envolvimento intenso e direto do usuário final. A realidade do projeto da DUOC atende plenamente a este requisito, contando com a alta disponibilidade da representante da empresa (Maria Beatryz) para sessões frequentes de validação e refinamento de design. A interação constante elimina a necessidade de documentos prescritivos longos, reduzindo ambiguidades antes da construção das APIs no FastAPI ou telas no Next.js.
+3.  **Prototipagem em Duas Vias (Usabilidade e Regras de Negócio):** O gargalo administrativo da DUOC envolve não apenas a experiência do usuário de campo ao lançar horas no sistema, mas, crucialmente, a validade dos cálculos por trás da interface. No RAD, a "prototipagem" será aplicada de forma abrangente: a equipe validará a usabilidade fluida no cliente web (Next.js) para garantir adesão, e criará testes práticos no motor de cálculo (FastAPI backend) para homologar a aderência matemática da apropriação de custos da obra e das regras de folha com a cliente.
+4.  **Evolução sobre Arquitetura Consistente:** Embora a solução exija evolução contínua, uma ferramenta financeira exige forte integridade relacional. Diferente do XP, que encoraja uma arquitetura estritamente emergente e evolutiva de baixo para cima, o RAD permite à equipe estabelecer antecipadamente a espinha dorsal dos dados (utilizando banco relacional PostgreSQL no Supabase) para suportar a LGPD e regras financeiras com firmeza, enquanto utiliza ciclos rápidos para adaptar interfaces e fluxos de trabalho gerenciais.
 
 ---
 
@@ -63,3 +70,4 @@ Com base nas características e desafios do projeto da DUOC Arquitetura e Engenh
 | `1.0` | 05/09/2026 | Definição da abordagem, ciclo de vida, comparativo e justificativa | Eric Araújo | Matheus Ribeiro Szervinsk |
 | `1.1` | 07/09/2026 | Padronização metodológica, alinhamento institucional e histórico | Eric Araújo | Matheus Ribeiro Szervinsk |
 | `2.0` | 15/09/2026 | Unificação integral dos artefatos 4.1 a 4.3 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
+| `2.1` | 20/09/2026 | Refatoração profunda para aderência ao Processo RAD, eliminação de nomenclaturas ágeis de gestão e alinhamento de stack tecnológica | Eric Araújo | |

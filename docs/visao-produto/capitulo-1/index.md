@@ -21,7 +21,7 @@ Para sustentar este diagnóstico, foram produzidos e integrados os seguintes art
 <a id="11-identificacao-do-cliente"></a>
 ## 1.1 Identificação do Cliente
 
-A tabela abaixo apresenta os dados cadastrais e institucionais da organização parceira, detalhando sua natureza jurídica, representação legal, canais de contato e vínculo formal com o projeto de software.
+A tabela abaixo apresenta os dados cadastrais e institucionais da organização parceira, detalhando sua natureza jurídica, canais de contato e vínculo formal com o projeto de software.
 
 | Campo | Detalhamento Institucional |
 | :--- | :--- |
@@ -30,10 +30,20 @@ A tabela abaixo apresenta os dados cadastrais e institucionais da organização 
 | **Cadastro Nacional da Pessoa Jurídica (CNPJ)** | 53.616.784/0001-43 |
 | **Ano de Fundação** | 2024 (23 de janeiro de 2024) |
 | **Sede Operacional** | Brasília - DF, Brasil |
-| **Representante Legal e Cliente Focal** | Maria Beatryz Vieira de Sousa (Auxiliar Administrativa) |
+| **Ponto Focal do Cliente** | Maria Beatryz Vieira de Sousa |
 | **Formas de Contato** | E-mail: beatryz.vieira@duoc.eng.br <br/> Portal: https://www.duoc.eng.br |
 | **Segmento de Atuação** | Arquitetura, Engenharia Estrutural, Instalações Prediais e Gestão de Obras |
 | **Vínculo com o Projeto** | Cliente Parceiro e Homologadora de Regras de Negócio e Interfaces |
+
+### Cargo, Papel no Projeto e Poder Decisório de Maria Beatryz
+
+Para evitar ambiguidade em referências anteriores do repositório, distinguem-se três dimensões que não se confundem:
+
+| Dimensão | Descrição |
+| :--- | :--- |
+| **Cargo na DUOC** | Auxiliar Administrativa — vínculo formal de trabalho na organização, sem participação societária. |
+| **Papel no Projeto** | Representante do Cliente (Ponto Focal / Cliente Focal) — interlocutora única da equipe para elicitação, validação de protótipos e homologação de entregas. |
+| **Poder Decisório** | Detém autoridade delegada pela DUOC para aprovar escopo, prototipagem e aceite formal do MVP neste projeto, apesar de seu cargo administrativo. Não figura como representante legal (societária) da empresa. |
 
 ---
 
@@ -48,9 +58,12 @@ A rotina operacional da empresa caracteriza-se por um intenso fluxo sociotécnic
 
 A partir do diálogo inicial e das entrevistas semiestruturadas com a auxiliar administrativa Maria Beatryz, consolidaram-se os seguintes pontos de diagnóstico:
 
+!!! warning "Limitação metodológica"
+    Os perfis internos citados acima (arquitetos, engenheiros especialistas, estagiários e operários) e externos (fornecedores, órgãos reguladores) foram caracterizados por relato indireto da ponto focal administrativa, não por entrevista ou observação direta com representantes desses papéis. A equipe ainda não coletou evidência primária junto a esses perfis; a caracterização detalhada deve ser tratada como hipótese sociotécnica a validar, não como levantamento confirmado.
+
 1. **Evolução do Foco Operacional:** A empresa expandiu sua atuação da instalação elétrica para o ciclo completo de projetos (arquitetura, cálculo estrutural e instalações), exigindo coordenação multidisciplinar entre campo e escritório.
 2. **Desconexão Campo-Escritório:** A ausência de um canal único para envio do Relatório de Viagem Técnica (RVT) e das notas de despesas gera atrasos na consolidação do fechamento mensal.
-3. **Decisão Gerencial Informada:** A dependência de planilhas manuais impede que os sócios visualizem em tempo real a margem de lucro líquida de cada contrato, atrasando tomadas de decisão comercial e precificação de novos serviços.
+3. **Decisão Gerencial Informada:** A dependência de planilhas manuais impede que os sócios visualizem em tempo real o custo de mão de obra apropriado a cada contrato frente ao orçamento previsto, atrasando tomadas de decisão comercial e precificação de novos serviços.
 
 ---
 
@@ -59,7 +72,10 @@ A partir do diálogo inicial e das entrevistas semiestruturadas com a auxiliar a
 
 ### Análise do Rich Picture — Sistema DUOC Finance
 
-![Rich Picture do Sistema DUOC Finance](../../assets/images/rich_picture_duoc.png)
+![Rich Picture do Sistema DUOC Finance](../../assets/images/Rich_picture_DUOC.png)
+
+!!! note "Revisão de fronteiras (v2)"
+    A versão anterior deste diagrama misturava o cenário atual e a solução proposta dentro do mesmo bloco visual — notadamente selos "resolvido pelo novo sistema" embutidos no bloco "Problemas" e o bloco "Oportunidades" sem vínculo visual claro a nenhum dos dois lados. A versão atual separa as duas dimensões em zonas explicitamente delimitadas: **Situação Atual (AS-IS)**, com borda sólida azul, e **Solução Proposta (TO-BE)**, com borda tracejada verde — conforme legenda na base da imagem.
 
 ### Limites do Sistema e Atores Principais
 
@@ -70,7 +86,7 @@ Ao redor desse núcleo, o diagrama posiciona os **atores externos e interfaces**
 - **Clientes** (residencial, comercial, infraestrutura), que enviam briefings e recebem aprovações/feedback;
 - **Órgãos reguladores** (prefeitura, licenças), que impõem restrições formais de conformidade;
 - **Consultores complementares** e **fornecedores de material** (MEP, elétrica, plumbing/HVAC, factorias, landscape), que alimentam o processo de compatibilização técnica;
-- Um bloco inferior de **sistemas envolvidos** (BIM/Revit/ArchiCAD, gestão de projetos via MS Project, comunicação via Slack/e-mail, ERPs/planilhas), que representa a infraestrutura tecnológica legada sobre a qual o novo sistema DP + Financeiro precisa se apoiar ou substituir.
+- Um bloco inferior de **sistemas envolvidos** (BIM/Revit/ArchiCAD, gestão de projetos via MS Project, comunicação via Slack/e-mail, ERPs/planilhas), que representa a infraestrutura tecnológica legada com a qual o novo sistema DP + Financeiro interopera. As integrações com auditor.ia, ERPs/planilhas, BIM e Slack estão formalizadas como [CAR-09](../capitulo-2/index.md#car-09) a [CAR-12](../capitulo-2/index.md#car-12); a gestão de projetos via MS Project não tem integração planejada nesta fase e permanece apenas como referência de infraestrutura legada observada.
 
 ### Fluxos de Informação e Transações Rotineiras
 
@@ -78,11 +94,11 @@ O diagrama mostra um fluxo processual na base (Captação → Concepção → Co
 
 ### Pontos de Atrito Evidenciados
 
-O bloco "**Problemas**" no topo do diagrama já nomeia os principais pontos de tensão do sistema atual: comunicação fragmentada (silos), atrasos na aprovação de projetos, e erros de compatibilidade (clashes) — todos marcados como "resolvido pelo novo sistema", indicando que o DP + Financeiro integrado é proposto exatamente para eliminar essas falhas de coordenação entre campo e administração. O bloco "**Restrições**" (orçamento limitado, normas e regulamentos complexos) mostra os limites impostos de fora para dentro do sistema.
+O bloco "**Problemas**", na zona da Situação Atual, nomeia os principais pontos de tensão hoje existentes — comunicação fragmentada (silos), atrasos na aprovação de projetos e erros de compatibilidade (clashes) — sem antecipar qual solução os endereça, para não confundir diagnóstico com proposta. Apenas o subconjunto relacionado à gestão de pessoas e financeiro (essencialmente a comunicação fragmentada nos fluxos de apontamento e prestação de contas) é diretamente endereçado pelo DUOC Finance; erros de compatibilização técnica (clashes de BIM) permanecem fora do escopo deste sistema. O bloco "**Restrições**" (orçamento limitado, normas e regulamentos complexos) mostra os limites impostos de fora para dentro do sistema e continuam válidos também para a solução proposta.
 
 ### Fronteira do Sistema DUOC Finance
 
-O escopo do novo sistema é delimitado à direita do diagrama, na "Visão Geral do Produto Proposto": lançamento de ponto/RVT, cadastro de férias e benefícios, motor de cálculo de folha, cálculo de comissões e reembolsos, apuração de custo real por projeto, controle de acesso/perfis e conformidade LGPD. Tudo que estiver fora dessa lista (BIM, ERPs legados, comunicação via Slack) permanece como sistema de apoio externo, com o qual o DUOC Finance precisa interoperar, mas não substituir.
+O escopo do novo sistema é delimitado na zona "**Solução Proposta (TO-BE)**", à direita do diagrama, com borda tracejada verde para diferenciá-la visualmente da zona "Situação Atual (AS-IS)": lançamento de ponto/RVT, cadastro de férias e benefícios, motor de cálculo de folha, cálculo de comissões e reembolsos, apuração de custo real por projeto, controle de acesso/perfis, conformidade LGPD e as integrações externas com auditor.ia, ERPs/planilhas, BIM e Slack (CAR-09 a CAR-12 — ver [2.6 Viabilidade da Proposta](../capitulo-2/index.md#26-viabilidade-da-proposta-analise-do-mvp)). O bloco "Oportunidades Estratégicas" também está posicionado nessa zona, pois representa benefícios habilitados pela solução, não características do estado atual. Tudo que estiver fora dessa lista (ex.: gestão de projetos via MS Project) permanece como sistema de apoio externo, na zona da Situação Atual, sem integração planejada nesta fase.
 
 ### Estrutura Detalhada das Transações
 
@@ -91,9 +107,9 @@ O escopo do novo sistema é delimitado à direita do diagrama, na "Visão Geral 
 | **TR-01** | Envio do Relatório de Viagem Técnica (RVT) | Engenheiro/Técnico em Campo | Administrativo / DP | O técnico registra, ao final de uma visita de obra, as horas trabalhadas e o escopo executado (fiscalização, engenharia estrutural, acompanhamento), normalmente em papel ou planilha isolada, para posterior lançamento no sistema de ponto. | Atraso no preenchimento por acúmulo de visitas; letra ou registro manual ilegível; ausência de padronização do escopo descrito, dificultando o cruzamento com o cronograma do projeto. |
 | **TR-02** | Submissão de Comprovantes de Despesa | Equipe de Campo | Financeiro | O colaborador em campo acumula cupons fiscais de combustível, alimentação e pedágio durante a visita e os entrega fisicamente (ou por foto) ao setor financeiro para reembolso. | Extravio de cupons fiscais físicos; comprovantes ilegíveis ou incompletos; falta de padronização do formato de envio, gerando retrabalho na conferência. |
 | **TR-03** | Consolidação de Folha e Comissões | Administrativo / DP | Sócios / Diretoria | O DP cruza manualmente as horas apontadas via RVT com as tabelas de comissionamento por projeto/venda, consolidando os valores em planilhas Excel para fechamento da folha mensal. | Alto risco de erro de cálculo humano; retrabalho constante em planilhas descentralizadas; dependência de uma única pessoa para o fechamento, criando gargalo operacional. |
-| **TR-04** | Apropriação de Custo por Contrato | Financeiro | Gestão Estratégica | O financeiro apura o custo real de mão de obra (horas + comissões + reembolsos) alocado a cada obra/contrato, comparando-o com o orçamento previsto para estimar a rentabilidade do projeto. | Opacidade financeira por falta de rastreabilidade em tempo real; impossibilidade de apurar a margem líquida por contrato antes do fechamento mensal; decisões estratégicas tomadas com dados defasados. |
+| **TR-04** | Apropriação de Custo por Contrato | Financeiro | Gestão Estratégica | O financeiro apura o custo real de mão de obra (horas + comissões + reembolsos) alocado a cada obra/contrato, comparando-o com o orçamento previsto para acompanhar o desvio orçamentário do projeto. | Opacidade financeira por falta de rastreabilidade em tempo real; impossibilidade de apurar o custo de mão de obra por contrato antes do fechamento mensal; decisões estratégicas tomadas com dados defasados. |
 
-**Observação metodológica:** este Rich Picture segue a lógica da Soft Systems Methodology (SSM), evidenciando não apenas o fluxo formal de processos, mas também as relações informais, os pontos de conflito (ícones de exclamação/interrogação) e as fronteiras entre o que é "problema atual" e o que é "solução proposta" (lado direito, delimitado visualmente por uma caixa fechada) — recurso útil para justificar, na redação técnica, por que o novo sistema DP + Financeiro é necessário e onde exatamente ele intervém no fluxo existente.
+**Observação metodológica:** este Rich Picture segue a lógica da Soft Systems Methodology (SSM), evidenciando não apenas o fluxo formal de processos, mas também as relações informais e os pontos de conflito do sistema atual. A fronteira entre "situação atual" e "solução proposta" é demarcada por duas zonas com bordas visualmente distintas (sólida azul à esquerda, tracejada verde à direita) e uma legenda explícita — recurso necessário para justificar, na redação técnica, por que o novo sistema DP + Financeiro é necessário e onde exatamente ele intervém no fluxo existente, sem sobrepor diagnóstico e proposta no mesmo elemento visual.
 
 ---
 
@@ -110,7 +126,10 @@ O escopo do novo sistema é delimitado à direita do diagrama, na "Visão Geral 
 
 ### Análise das Causas-Raiz
 
-O problema central resulta da combinação de quatro categorias de causas representadas no diagrama:
+O problema central resulta da combinação de quatro categorias de causas representadas no diagrama.
+
+!!! note "Adaptação do modelo 6M clássico"
+    O diagrama de Ishikawa parte do modelo tradicional de manufatura (6M: Método, Mão de Obra, Material, Máquina, Medição, Meio Ambiente), mas foi adaptado para 4 categorias por se tratar de um diagnóstico de processo administrativo-financeiro de serviços, não de linha de produção física. **Método** e **Medição** foram mantidos sem alteração; **Máquina** e **Material** foram consolidados em **Tecnologia** (ferramentas e sistemas de registro, não maquinário físico); **Mão de Obra** foi renomeada para **Pessoas** (letramento digital e rotina das equipes, não desempenho de operação manual); **Meio Ambiente** foi descartado por não haver causa-raiz ambiental relevante identificada no diagnóstico. Essa adaptação é mantida de forma consistente em todas as referências ao diagrama neste repositório.
 
 #### Métodos
 
@@ -126,7 +145,7 @@ As equipes de campo e do escritório possuem diferentes níveis de familiaridade
 
 #### Medição
 
-Os dados disponíveis não são consolidados em indicadores de custo e rentabilidade por contrato. Como as horas técnicas não estão diretamente relacionadas ao custo real de pessoal, a gestão recebe uma visão tardia e incompleta da margem de cada projeto. A falta de métricas atualizadas prejudica a precificação, o acompanhamento de desvios e a tomada de decisões financeiras.
+Os dados disponíveis não são consolidados em indicadores de custo de mão de obra por contrato. Como as horas técnicas não estão diretamente relacionadas ao custo real de pessoal, a gestão recebe uma visão tardia e incompleta do custo apropriado de cada projeto. A falta de métricas atualizadas prejudica a precificação, o acompanhamento de desvios e a tomada de decisões financeiras.
 
 ### Síntese das Causas e Efeitos
 
@@ -143,6 +162,9 @@ Os dados disponíveis não são consolidados em indicadores de custo e rentabili
 ## 1.5 Desafios do Projeto
 
 O principal desafio do DUOC Finance é integrar o registro de horas operacionais (RVT) ao processamento financeiro de folha de pagamento e comissões. Essa integração precisa funcionar em uma equipe com diferentes níveis de letramento tecnológico, que inclui engenheiros especialistas, arquitetos, encarregados, estagiários, assistentes pessoais e operários de obra.
+
+!!! warning "Limitação metodológica"
+    A caracterização desses perfis de campo (engenheiros, arquitetos, encarregados, estagiários, operários) baseia-se no relato indireto da ponto focal administrativa da DUOC, não em entrevista ou observação direta com esses profissionais. As barreiras de adoção descritas na seção seguinte devem ser lidas como hipótese a confirmar em campo, não como diagnóstico validado por múltiplas fontes.
 
 ### Barreiras Sociotécnicas de Adoção
 
@@ -184,6 +206,9 @@ A tabela a seguir apresenta as partes interessadas internas e externas, seu inte
 
 A caracterização dos segmentos de usuários que interagem com o ecossistema do **DUOC Finance** é estruturada sob a lente da Engenharia de Requisitos Sociotécnica. Cada perfil de interação é mapeado segundo suas características demográficas, letramento tecnológico, restrições ambientais de hardware e rotina de tarefas operacionais, conforme as diretrizes de Interação Humano-Computador (IHC). Sob essa perspectiva, trabalharemos seguindo os 2 tipos de perfis:
 
+!!! warning "Limitação metodológica"
+    O Perfil 1 (Empresa Administrativa) apoia-se em evidência direta, coletada junto à ponto focal Maria Beatryz. O Perfil 2 (Construtoras e Equipe de Campo) foi inferido a partir do relato dessa mesma interlocutora administrativa, sem entrevista ou observação direta com engenheiros, fiscais, técnicos ou operários em campo. As características de letramento tecnológico, ambiente de uso e requisitos de IHC descritas para o Perfil 2 devem ser tratadas como hipótese de design a validar, não como levantamento confirmado com os próprios usuários.
+
 ### Perfil 1: Empresa Administrativa (Escritório / Gestão Estratégica)
 
 | Dimensão de Interação | Caracterização do Perfil |
@@ -215,3 +240,5 @@ A caracterização dos segmentos de usuários que interagem com o ecossistema do
 | `1.0` | 05/09/2026 | Levantamento inicial dos dados cadastrais, negócio, Rich Picture, Ishikawa e IHC | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `1.1` | 07/09/2026 | Refinamento dos artefatos, inclusão do histórico de versão e padronização | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `2.0` | 15/09/2026 | Unificação integral de todos os artefatos 1.1 a 1.7 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
+| `2.1` | 19/09/2026 | Reconciliação pós-merge com `develop`: correção do papel de Maria Beatryz (1.1); notas de limitação metodológica sobre caracterização de perfis (1.2, 1.5, 1.7); Rich Picture v2 com fronteiras AS-IS/TO-BE e lastro a CAR-09/CAR-12 (1.3); adaptação do modelo 6M para 4M no Ishikawa (1.4); correção de terminologia financeira ("margem líquida" → "custo apropriado") | Paulo Nery | |
+| `2.2` | 20/09/2026 | Atualização do Rich Picture (1.3) para novo arquivo de imagem `Rich_picture_DUOC.png`; habilitação de ampliação (zoom) de imagens em toda a documentação via plugin `mkdocs-glightbox`, registrada como regra de estilo no `CONTRIBUTING.md` | Paulo Nery | |

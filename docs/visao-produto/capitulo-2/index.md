@@ -9,7 +9,7 @@ Este capítulo formaliza a visão de produto do DUOC Finance. Ele descreve como 
 A definição da proposta de solução apoia-se nas seguintes especificações estruturadas:
 
 *   **Declaração de Posição e Objetivos do Produto:** Síntese estratégica no padrão canônico (Para/Que/Diferente de/Nosso produto) e metas operacionais desdobradas na Pirâmide de Abstração.
-*   **Características do Produto (CARs):** Mapeamento e rastreabilidade modular em cards (CAR-01 a CAR-08) subordinados aos objetivos de negócio e vinculados ao MVP.
+*   **Características do Produto (CARs):** Mapeamento e rastreabilidade modular em cards (CAR-01 a CAR-12) subordinados aos objetivos de negócio e vinculados ao MVP.
 *   **Tecnologias a Serem Utilizadas e Arquitetura:** Definição fundamentada da stack tecnológica, banco de dados e arquitetura de implantação.
 *   **Pesquisa de Mercado e Análise Competitiva:** Mapeamento de soluções similares de prateleira e posicionamento do diferencial da solução.
 *   **Viabilidade da Proposta (Análise do MVP):** Avaliação pragmática do cronograma, competências técnicas e mitigação de riscos de projeto.
@@ -34,7 +34,7 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 
     * **Natureza:** Operacional e Cadastral
     * **Valor de Negócio:** Assegura unicidade e integridade aos dados corporativos, eliminando redundâncias e retrabalho gerados por planilhas paralelas e envios em canais informais.
-    * **Características Relacionadas:** [CAR-01](#car-01), [CAR-02](#car-02) (Principais); CAR-03, CAR-05, CAR-07 (Apoio).
+    * **Características Relacionadas:** [CAR-01](#car-01), [CAR-02](#car-02) (Principais); CAR-03, CAR-05, CAR-07 (Apoio); [CAR-09](#car-09), [CAR-10](#car-10), [CAR-11](#car-11), [CAR-12](#car-12) (Integrações Externas).
 
 <a id="oe2-aumentar-a-eficiencia-administrativo-financeira"></a>
 <a id="oe2-eficiencia-e-otimizacao-administrativo-financeira"></a>
@@ -49,7 +49,7 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 ??? abstract "OE3: Transparecer as informações sobre os Custos por Contrato"
 
     * **Natureza:** Estratégica e Analítica
-    * **Valor de Negócio:** Prover inteligência analítica e visibilidade contínua em tempo real sobre a margem líquida e os custos diretos por obra, assegurando a sustentabilidade financeira de cada projeto sob contrato.
+    * **Valor de Negócio:** Prover inteligência analítica e visibilidade contínua em tempo real sobre o custo de mão de obra apropriado e sua aderência ao orçamento previsto por obra, assegurando a sustentabilidade financeira de cada projeto sob contrato.
     * **Características Relacionadas:** [CAR-05](#car-05), [CAR-06](#car-06) (Principais); CAR-02, CAR-04 (Apoio).
 
 <a id="oe4-garantir-seguranca-e-governanca-de-dados"></a>
@@ -114,7 +114,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
         * **Contribuição Secundária:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
 
 <a id="car-06"></a>
-??? note "CAR-06: Painel Analítico de Rentabilidade e Margens de Projeto"
+??? note "CAR-06: Painel Analítico de Custo Apropriado e Desvio Orçamentário por Projeto"
 
     * **Valor de Negócio:** Empodera os sócios e a diretoria com visibilidade executiva em tempo real sobre o custo real apurado de cada contrato, prevenindo estouros de orçamento e embasando a precificação de propostas futuras.
     * **OEs Relacionadas:**
@@ -139,6 +139,40 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
         * **OE Principal:** [OE4: Garantir Segurança e Governança de Dados](#oe4-garantir-seguranca-e-governanca-de-dados)
         * **Contribuição Secundária:** [OE2: Aumentar a Eficiência Administrativo-Financeira](#oe2-aumentar-a-eficiencia-administrativo-financeira)
 
+### Módulo de Integrações Externas (Suporte a OE1)
+
+<a id="car-09"></a>
+??? note "CAR-09: Integração com auditor.ia (Consumo de Presença Homologada)"
+
+    * **Valor de Negócio:** Evita a duplicação de um sistema de marcação de ponto já resolvido pela DUOC, consumindo via dashboard os registros de presença homologados pelo *auditor.ia* (reconhecimento facial) para apropriação financeira direta das horas aos contratos de obras.
+    * **Decisão Arquitetural de Origem:** [Ata da Reunião 02](../../atas/index.md).
+    * **OEs Relacionadas:**
+        * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
+        * **Contribuição Secundária:** [OE2: Aumentar a Eficiência Administrativo-Financeira](#oe2-aumentar-a-eficiencia-administrativo-financeira)
+
+<a id="car-10"></a>
+??? note "CAR-10: Importação e Exportação de Dados com ERPs e Planilhas Legadas"
+
+    * **Valor de Negócio:** Permite migrar dados históricos de planilhas de Excel e exportar relatórios em formato compatível (CSV/Excel) para os ERPs e ferramentas contábeis já usados pela DUOC, evitando redigitação manual e retrabalho na transição.
+    * **OEs Relacionadas:**
+        * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
+
+<a id="car-11"></a>
+??? note "CAR-11: Integração com Sistemas BIM (Revit/ArchiCAD)"
+
+    * **Valor de Negócio:** Conecta o DUOC Finance à infraestrutura de modelagem BIM já em uso pela equipe de Arquitetura/Estrutural, evitando retrabalho de dados entre a coordenação técnica e a gestão administrativo-financeira.
+    * **Nota de Escopo:** O desenho técnico exato desta integração (dados trocados, direção do fluxo, frequência) ainda será definido durante a Fase 2 (Design do Usuário); esta CAR registra apenas o compromisso de escopo.
+    * **OEs Relacionadas:**
+        * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
+
+<a id="car-12"></a>
+??? note "CAR-12: Integração com Slack e E-mail"
+
+    * **Valor de Negócio:** Conecta o DUOC Finance aos canais de comunicação já usados pela equipe (Slack e e-mail), evitando que decisões e alertas relevantes fiquem isolados de fluxos informais dispersos.
+    * **Nota de Escopo:** O desenho técnico exato desta integração (eventos notificados, direção do fluxo, formato) ainda será definido durante a Fase 2 (Design do Usuário); esta CAR registra apenas o compromisso de escopo.
+    * **OEs Relacionadas:**
+        * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
+
 ---
 
 <a id="24-tecnologias-a-serem-utilizadas-e-arquitetura"></a>
@@ -159,7 +193,7 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
 | **Ferramenta de Build** | Vite | :simple-vite: | Empacotamento moderno com Hot Module Replacement (HMR) ultrarrápido |
 | **Framework CSS** | Tailwind CSS | :simple-tailwindcss: | Utility-first CSS com tokens de design e responsividade *mobile-first* |
 | **Componentes de UI** | Shadcn UI | :simple-shadcnui: | Componentes acessíveis, consistentes e otimizados para dashboards financeiros densos |
-| **Design & Prototipagem** | Figma | :simple-figma: | Criação dos protótipos de alta fidelidade para homologação prévia sociotécnica |
+| **Design & Prototipagem** | Figma e React SPA | :simple-figma: | Criação da base visual no Figma e estabelecimento ágil dos designs via frontend para homologação sociotécnica |
 | **Conteinerização** | Docker | :fontawesome-brands-docker: | Padronização dos ambientes locais de desenvolvimento, homologação e CI |
 | **Hospedagem Frontend** | Vercel | :simple-vercel: | CDN global de baixa latência integrada ao domínio institucional da DUOC |
 | **Integração Contínua (CI/CD)** | GitHub Actions | :simple-githubactions: | Pipelines automatizadas para linting, validações de tipagem (`tsc`) e testes |
@@ -262,7 +296,7 @@ Quando ferramentas comerciais fragmentadas são adotadas em conjunto, o gestor a
 Esse processo gera consequências danosas:
 1. **Elevada taxa de erro humano:** Fórmulas manuais em planilhas sujeitas a inconsistências de cálculo e digitação.
 2. **Retrabalho crônico e perda de histórico:** Dados dispersos em pastas locais sem trilha auditável de alterações.
-3. **Opacidade gerencial:** A diretoria só descobre o custo real da mão de obra dias após o fechamento mensal, inviabilizando correções de margem em tempo hábil.
+3. **Opacidade gerencial:** A diretoria só descobre o custo real da mão de obra dias após o fechamento mensal, inviabilizando ajustes de precificação e correções de desvio orçamentário em tempo hábil.
 
 O MVP do DUOC Finance elimina esse gargalo ao instituir um fluxo contínuo onde colaborador, contrato, horas de RVT, despesas e encargos compartilham a mesma base de dados confiável.
 
@@ -328,7 +362,7 @@ Permanecem fora deste primeiro ciclo os módulos de engenharia civil pesada (com
 
 ### Riscos Mapeados e Condições de Aceite
 
-Os principais riscos identificados consistem em: restrições de agenda da cliente parceira para sessões síncronas, complexidade de fórmulas trabalhistas, expansão não autorizada do escopo (scope creep) e a proteção de dados pessoais ficar restrita apenas ao ambiente de desenvolvimento. Tais riscos são mitigados por validações quinzenais estruturadas, prototipagem prévia no Figma antes da codificação, blindagem estrita do escopo por marcos avaliativos e, para a proteção de dados, pela aplicação em produção de RLS, criptografia em trânsito/repouso e RBAC (detalhadas na seção 2.4),  o uso de dados sintéticos citado na 2.4 cobre apenas o ambiente de desenvolvimento e testes, não substituindo essas medidas em produção.
+Os principais riscos identificados consistem em: restrições de agenda da cliente parceira para sessões síncronas, complexidade de fórmulas trabalhistas, expansão não autorizada do escopo (scope creep) e a proteção de dados pessoais ficar restrita apenas ao ambiente de desenvolvimento. Tais riscos são mitigados por validações quinzenais estruturadas, estabelecimento dos designs diretamente no frontend com base no Figma antes da codificação da lógica e persistência, blindagem estrita do escopo por marcos avaliativos e, para a proteção de dados, pela aplicação em produção de RLS, criptografia em trânsito/repouso e RBAC (detalhadas na seção 2.4),  o uso de dados sintéticos citado na 2.4 cobre apenas o ambiente de desenvolvimento e testes, não substituindo essas medidas em produção.
 
 O MVP será considerado concluído e apto para homologação quando todos os fluxos essenciais estiverem implementados, cobertos por testes automatizados, documentados no portal e formalmente aceitos pela cliente através de Termo de Homologação. O cronograma completo encontra-se registrado no [Capítulo 6 — Cronograma](../../cronograma/index.md), e o fluxo de aceite está detalhado no [Capítulo 7 — Interação com Cliente](../../interacao-cliente/index.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente).
 
@@ -377,3 +411,5 @@ O DUOC Finance deverá gerar benefícios para a organização e para as pessoas 
 | `1.1` | 07/09/2026 | Refinamento dos artefatos, inclusão do histórico e alinhamento com OEs | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `1.2` | 08/09/2026 | Expansão de CAR-01 a CAR-08, purificação de abstração e tags de tecnologias | Matheus Ribeiro Szervinsk | Equipe DUOC Finance |
 | `2.0` | 15/09/2026 | Unificação integral de todos os artefatos 2.1 a 2.7 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
+| `2.1` | 19/09/2026 | Reconciliação pós-merge com `develop`: adição de CAR-09 a CAR-12 (integrações externas) vinculadas a OE1; correção de terminologia financeira em OE3 e CAR-06 ("margem líquida"/"lucro real" → "custo de mão de obra apropriado"/"desvio orçamentário"), com nota de escopo explicitando ausência de receita e custos totais no MVP | Paulo Nery | |
+| `2.2` | 21/09/2026 | Ajuste da estratégia de mitigação de riscos: adoção de UI-First com base no Figma e designs via Frontend, garantindo validação de interface antes da codificação de lógica e persistência | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
