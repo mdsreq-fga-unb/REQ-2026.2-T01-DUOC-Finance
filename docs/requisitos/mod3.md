@@ -32,3 +32,20 @@ Os RNFs são classificados simultaneamente pelo modelo **URPS+** e pela taxonomi
 | **RNF11** | **Manter a consistência transacional da apropriação de custos** durante inclusões, alterações e homologações concorrentes. | Reliability | Requisito do Produto — Confiabilidade/Dependabilidade | Em 100 execuções concorrentes do cenário de teste, não deve haver custo duplicado, registro órfão ou divergência entre o total dos lançamentos e o total do contrato; todas as operações devem ser confirmadas ou revertidas integralmente. |
 | **RNF12** | **Permitir uso do painel em telas de computador e tablet** sem perda de informação essencial. | Usability | Requisito do Produto — Usabilidade | Nos viewports de 1024 × 768 px e 768 × 1024 px, 100% dos indicadores, filtros e rótulos obrigatórios devem permanecer acessíveis sem rolagem horizontal. |
 
+## 8.3 Matriz de Rastreabilidade
+
+| Requisito | Objetivo específico | Característica | Caso de teste |
+| :---: | :---: | :---: | :---: |
+| RF09 | OE3 | CAR-05 | CT-M3-01 — Apropriar horas homologadas ao contrato |
+| RF10 | OE3 | CAR-05 | CT-M3-02 — Consultar a origem de um custo apropriado |
+| RF11 | OE3 | CAR-06 | CT-M3-03 — Filtrar custo por contrato e período |
+| RF12 | OE3 | CAR-06 | CT-M3-04 — Exibir desvio orçamentário e alerta de extrapolação |
+| RNF09 | OE3 | CAR-06 | CT-M3-05 — Medir tempo de carregamento do painel |
+| RNF10 | OE3 | CAR-05/CAR-06 | CT-M3-06 — Bloquear consulta fora do escopo do perfil |
+| RNF11 | OE3 | CAR-05 | CT-M3-07 — Verificar consistência em operações concorrentes |
+| RNF12 | OE3 | CAR-06 | CT-M3-08 — Verificar responsividade do painel |
+
+### Relação com regras de negócio
+
+As regras de negócio definem políticas e condições do domínio, enquanto os RFs descrevem o comportamento que o sistema deve oferecer e os RNFs estabelecem propriedades de qualidade. No Módulo 3, as regras de homologação, vínculo obrigatório ao contrato e cálculo do percentual de execução orçamentária condicionam a implementação dos RF09 a RF12 e contribuem para os RNFs de segurança, confiabilidade e desempenho.
+
