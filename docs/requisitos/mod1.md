@@ -32,3 +32,18 @@ Os RNFs são classificados simultaneamente pelo modelo **URPS+** e pela taxonomi
 | **RNF02** | A consulta e carregamento dos dados cadastrais unificados de pessoal devem ocorrer de forma ágil. | Desempenho | Requisito de Produto (Desempenho) | Tempo de resposta para busca e exibição da ficha do colaborador menor ou igual a 2 segundos em 95% das requisições. |
 | **RNF03** | Os dados pessoais e sensíveis dos colaboradores devem ser armazenados e trafegados com criptografia. | Segurabilidade (+) | Requisito Organizacional (Segurança/LGPD) | Uso de criptografia AES-256 para dados armazenados e protocolo TLS 1.3 em trânsito com 100% dos dados em conformidade. |
 | **RNF04** | A interface do aplicativo de apontamento deve ser intuitiva para uso rápido em campo. | Usabilidade | Requisito de Produto (Usabilidade) | Usuários treinados devem conseguir concluir o registro diário de apontamento em menos de 3 minutos e com taxa de erro de operação inferior a 2%. |
+
+### Matriz de Rastreabilidade
+
+| Requisito | Objetivo específico | Característica | Caso de teste |
+| :---: | :---: | :---: | :--- |
+| **RF01** | OE1 | CAR-01 | **CT-M1-01:** Validar cadastro de novo colaborador com dados válidos.<br>**CT-M1-02:** Impedir cadastro duplicado utilizando CPF já existente. |
+| **RF02** | OE1 | CAR-01 | **CT-M1-03:** Verificar atualização cadastral refletida em tempo real no sistema. |
+| **RF03** | OE1 | CAR-01 | **CT-M1-04:** Alterar status para "Desligado" e validar bloqueio imediato no app. |
+| **RF04** | OE1 | CAR-02 | **CT-M1-05:** Registrar ponto diário e detalhes de viagem no app móvel. |
+| **RF05** | OE1 | CAR-02 | **CT-M1-06:** Anexar fotos/comprovantes e validar compressão e upload.<br>**CT-M1-07:** Testar limite e formato de arquivos de imagem anexados. |
+| **RF06** | OE1 | CAR-02 | **CT-M1-08:** Simular registros offline e verificar sincronização automática ao reconectar. |
+| **RNF01** | OE1 | CAR-02 | **CT-M1-09:** Testar limite de 100 registros offline e tempo de sync < 30s. |
+| **RNF02** | OE1 | CAR-01 | **CT-M1-10:** Medir tempo de resposta da busca de colaboradores (meta < 2s). |
+| **RNF03** | OE1 | CAR-01 | **CT-M1-11:** Validar criptografia AES-256 em banco e TLS 1.3 em trânsito. |
+| **RNF04** | OE1 | CAR-02 | **CT-M1-12:** Avaliar tempo de preenchimento (< 3min) e taxa de erro em uso do app. |
