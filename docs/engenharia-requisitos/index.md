@@ -27,78 +27,78 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 
 ### 1. Elicitação e Descoberta de Requisitos
 * **Objetivo Geral:** Descobrir as necessidades operacionais reais, regras de negócio e expectativas sociotécnicas dos atores da DUOC.
-*   **Técnicas de ER Planejadas:**
-    *   **Entrevistas Semiestruturadas com Stakeholder Chave:** Condução planejada de reuniões síncronas com a sócia-administradora Maria Beatryz para mapear a rotina de fechamento de folha, gestão de canteiros e cálculo de comissões.
-    *   **Análise Documental:** Análise planejada da documentação operacional utilizada na rotina da empresa.
-*   **Práticas Planejadas:**
+*   **Técnicas de ER:**
+    *   **Entrevistas Semiestruturadas com Stakeholder Chave:** Condução planejada de reuniões síncronas com a sócia-administradora Maria Beatryz para mapear a rotina de fechamento de folha, gestão de canteiros e cálculo de comissões. | **Status:** Realizado | **Evidência:** [Ata da Reunião 1](../atas/index.md#consulta-unificada-por-abas).
+    *   **Análise Documental:** Análise planejada da documentação operacional utilizada na rotina da empresa. | **Status:** Realizado | **Evidência:** 
+*   **Práticas:**
     *   **Workshops de Descoberta Operacional:** Sessões colaborativas planejadas para a equipe decompor as dores do cenário atual.
-*   **Artefatos e Formas de Representação Planejados:**
-    *   **Artefatos Legados e Documentos de Negócio:** Planilhas eletrônicas de controle financeiro, modelos impressos de RVT e relatórios de despesas operacionais planejados para análise.
-    *   **Fluxos Transacionais (TR-01 a TR-04):** Mapeamento dos fluxos de trabalho atuais planejados para decomposição a partir das dores identificadas.
+*   **Artefatos e Formas de Representação:**
+    *   **Artefatos Legados e Documentos de Negócio:** Planilhas eletrônicas de controle financeiro, modelos impressos de RVT e relatórios de despesas operacionais planejados para análise. | **Status:** Realizado | **Evidência:** [Planilhas Sanitizadas no Drive](https://drive.google.com/drive/folders/1e2wQ6ub4BVfte3mmWVXGUZ4cBI2d73Sd?usp=drive_link).
+    *   **Fluxos Transacionais (TR-01 a TR-04):** Mapeamento dos fluxos de trabalho atuais planejados para decomposição a partir das dores identificadas. | **Status:** Realizado | **Evidência:** [Estrutura Detalhada das Transações](../visao-produto/capitulo-1/index.md#estrutura-detalhada-das-transacoes)
 
 ---
 
 ### 2. Análise e Consenso de Requisitos
 * **Objetivo Geral:** Estruturar, desambiguar e delimitar as fronteiras do sistema, resolvendo conflitos de interesse e priorizando o escopo viável.
-*   **Técnicas de ER Planejadas:**
-    *   **Rich Picture (Soft Systems Methodology):** Modelagem visual planejada do ecossistema sociotécnico da DUOC para explicitar fluxos informacionais, zonas de atrito e as fronteiras do produto proposto.
-    *   **Diagrama de Causa e Efeito (Ishikawa):** Desdobramento analítico planejado das causas-raiz do problema central em quatro dimensões fundamentais (Métodos, Tecnologia, Pessoas e Medição).
-    *   **Priorização MoSCoW:** Classificação planejada das necessidades em *Must have*, *Should have*, *Could have* e *Won't have*, garantindo o foco estrito no MVP de Departamento Pessoal e Financeiro.
+*   **Técnicas de ER:**
+    *   **Rich Picture (Soft Systems Methodology):** Modelagem visual planejada do ecossistema sociotécnico da DUOC para explicitar fluxos informacionais, zonas de atrito e as fronteiras do produto proposto. | **Status:** Realizado | **Evidência:** [Rich Picture do Sistema DUOC Finance](../visao-produto/capitulo-1/index.md#13-rich-picture-fluxo-sociotecnico).
+    *   **Diagrama de Causa e Efeito (Ishikawa):** Desdobramento analítico planejado das causas-raiz do problema central em quatro dimensões fundamentais (Métodos, Tecnologia, Pessoas e Medição). | **Status:** Realizado | **Evidência:** [Diagrama de Causa e Efeito](../visao-produto/capitulo-1/index.md#diagrama-de-causa-e-efeito-ishikawa).
+    *   **Priorização MoSCoW:** Classificação planejada das necessidades em *Must have*, *Should have*, *Could have* e *Won't have*, garantindo o foco estrito no MVP de Departamento Pessoal e Financeiro. | **Status:** Planejado | **Evidência:** [Backlog do Produto](../backlog/index.md).
 *   **Artefatos e Formas de Representação Planejados:**
-    *   **Matriz de Stakeholders e Permissões (RBAC):** Mapeamento planejado do grau de influência e interesse das partes afetadas, definindo a matriz de perfis de acesso sob o princípio do menor privilégio.
+    *   **Matriz de Stakeholders e Permissões (RBAC):** Mapeamento planejado do grau de influência e interesse das partes afetadas, definindo a matriz de perfis de acesso sob o princípio do menor privilégio. | **Status:** Realizado | **Evidência:** [Mapa de Stakeholders](../visao-produto/capitulo-1/index.md#16-mapa-de-stakeholders).
 
 ---
 
 ### 3. Declaração e Especificação de Requisitos
 * **Objetivo Geral:** Registrar formalmente as necessidades de software de maneira clara, verificável e compreensível para negócio e desenvolvimento.
-*   **Técnicas de ER Planejadas:**
+*   **Técnicas de ER:**
     *   **Modelagem de Dados:** Técnica de abstração planejada para estruturar o domínio da aplicação e garantir a integridade relacional entre usuários, contratos, RVTs e folha.
-*   **Artefatos e Formas de Representação Planejados:**
-    *   **Matriz de Características de Produto (CARs):** Declaração planejada das grandes capacidades da solução (CAR-01 a CAR-08), ancoradas bidirecionalmente nos Objetivos Específicos (OEs).
-    *   **Histórias de Usuário (*User Stories*):** Especificação funcional ágil planejada no padrão *"Como [papel], eu quero [ação], para que [benefício]"*, contendo critérios de aceitação detalhados em formato de lista em tópicos.
-    *   **Diagrama de Entidade-Relacionamento (DER):** Modelo relacional planejado para o banco de dados PostgreSQL.
+*   **Artefatos e Formas de Representação:**
+    *   **Matriz de Características de Produto (CARs):** Declaração planejada das grandes capacidades da solução (CAR-01 a CAR-08), ancoradas bidirecionalmente nos Objetivos Específicos (OEs). | **Status:** Realizado | **Evidência:** [Matriz CAR](../visao-produto/capitulo-2/index.md#23-caracteristicas-do-produto-car).
+    *   **Histórias de Usuário (*User Stories*):** Especificação funcional ágil planejada no padrão *"Como [papel], eu quero [ação], para que [benefício]"*, contendo critérios de aceitação detalhados em formato de lista em tópicos. | **Status:** Planejado | **Evidência:** [Backlog do Produto](../backlog/index.md).
+    *   **Diagrama de Entidade-Relacionamento (DER):** Modelo relacional planejado para o banco de dados PostgreSQL. | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 2](../cronograma/index.md#unidade-2-fase-2-design-do-usuario-elicitacao-e-modelagem-1509-a-15102026).
 
 ---
 
 ### 4. Representação de Requisitos
 * **Objetivo Geral:** Traduzir especificações conceituais em modelos visuais tangíveis que facilitem a compreensão e o alinhamento com os usuários.
-*   **Técnicas de ER Planejadas:**
-    *   **Prototipação:** Técnica de criação de interfaces navegáveis para validação das estações de trabalho (Desktop) e dispositivos móveis (*mobile-first* para canteiro de obras).
+*   **Técnicas de ER:**
+    *   **Prototipação:** Técnica de criação de interfaces navegáveis para validação das estações de trabalho (Desktop) e dispositivos móveis (*mobile-first* para canteiro de obras). | **Status:** Planejado | **Evidência:** 
     *   **Modelagem de Processos:** Elaboração planejada do passo a passo para representação dos fluxos de trabalho do sistema.
-*   **Ferramentas Planejadas:**
-    *   **Figma:** Plataforma planejada para a construção e testes dos protótipos de alta fidelidade.
-*   **Artefatos e Formas de Representação Planejados:**
-    *   **Protótipos de Alta Fidelidade:** Telas e interfaces navegáveis do sistema planejadas para desktop e mobile.
+*   **Ferramentas:**
+    *   **Figma:** Plataforma planejada para a construção e testes dos protótipos de alta fidelidade. | **Status:** Planejado | **Evidência:** [Lista de Ferramentas Previstas](../visao-produto/capitulo-2/index.md#24-tecnologias-a-serem-utilizadas-e-arquitetura).
+*   **Artefatos e Formas de Representação:**
+    *   **Protótipos de Alta Fidelidade:** Telas e interfaces navegáveis do sistema planejadas para desktop e mobile. | **Status:** Planejado | **Evidência:** 
     *   **Fluxogramas de Interação e Diagramas de Atividades:** Modelos visuais planejados para detalhar o fluxo de envio e aprovação do RVT e o fechamento da folha.
 
 ---
 
 ### 5. Verificação e Validação de Requisitos (V&V)
 * **Objetivo Geral:** Assegurar a corretude técnica interna dos documentos (Verificação) e confirmar que o software atende às necessidades reais do negócio (Validação).
-*   **Técnicas de ER Planejadas:**
+*   **Técnicas de ER:**
     *   **Inspeção (Fagan Adaptado):** Aplicação planejada de listas de verificação (checklists) de qualidade técnica, completeza e conformidade gramatical na documentação.
     *   **Sessões Guiadas de Homologação:** Navegação assistida planejada com a cliente Maria Beatryz para validação das telas antes da codificação.
     *   **Testes de Aceitação de Usuário (UAT):** Execução planejada de cenários operacionais em ambiente de homologação utilizando dados sintéticos e reais anonimizados da DUOC.
-*   **Práticas Planejadas:**
+*   **Práticas:**
     *   **Revisão por Pares (*Peer Review*):** Fluxo planejado de revisão colaborativa para liberação de artefatos.
-*   **Ferramentas Planejadas:**
-    *   **GitHub:** Plataforma planejada para a gestão de código e controle do fluxo de aprovação (*Pull Requests* com aprovação de revisor independente para integração na branch `develop`).
-    *   **MkDocs:** Ferramenta planejada para publicação e visualização da documentação do projeto.
-    *   **Figma:** Ambiente planejado para a apresentação interativa dos protótipos durante as sessões de homologação.
+*   **Ferramentas:**
+    *   **GitHub:** Plataforma planejada para a gestão de código e controle do fluxo de aprovação (*Pull Requests* com aprovação de revisor independente para integração na branch `develop`). | **Status:** Realizado | **Evidência:** [GitHub do Projeto](https://mdsreq-fga-unb.github.io/REQ-2026.2-T01-DUOC-Finance/).
+    *   **MkDocs:** Ferramenta planejada para publicação e visualização da documentação do projeto. | **Status:** Realizado | **Evidência:** [GitPages do Projeto](https://mdsreq-fga-unb.github.io/REQ-2026.2-T01-DUOC-Finance/).
+    *   **Figma:** Ambiente planejado para a apresentação interativa dos protótipos durante as sessões de homologação. | **Status:** Planejado | **Evidência:** [Lista de Ferramentas Previstas](../visao-produto/capitulo-2/index.md#24-tecnologias-a-serem-utilizadas-e-arquitetura).
 *   **Critérios e Acordos de Trabalho Planejados:**
-    *   **Definition of Ready (DoR) e Definition of Done (DoD):** Acordos formais estabelecidos para reger a entrada de requisitos em desenvolvimento e a aceitação das entregas finalizadas.
+    *   **Definition of Ready (DoR) e Definition of Done (DoD):** Acordos formais estabelecidos para reger a entrada de requisitos em desenvolvimento e a aceitação das entregas finalizadas. | **Status:** Planejado | **Evidência:** [DoR e DoD](../dor-dod/index.md).
 
 ---
 
 ### 6. Organização e Atualização de Requisitos (Gestão)
 * **Objetivo Geral:** Rastrear a evolução dos requisitos ao longo do ciclo de vida, controlar mudanças de escopo e garantir a rastreabilidade bidirecional.
 *   **Práticas Planejadas:**
-    *   **Documentação Viva (*Docs as Code*):** Prática planejada de publicação contínua da documentação versionada no Git, garantindo que o portal reflita sempre o estado atual do projeto.
+    *   **Documentação Viva (*Docs as Code*):** Prática planejada de publicação contínua da documentação versionada no Git, garantindo que o portal reflita sempre o estado atual do projeto. | **Status:** Em Execução | **Evidência:** [GitPages do Projeto](https://mdsreq-fga-unb.github.io/REQ-2026.2-T01-DUOC-Finance/).
 *   **Ferramentas Planejadas:**
-    *   **GitHub (Issues, Projects e Milestones):** Plataforma planejada para o gerenciamento de configuração e rastreamento de demandas categorizadas por tipo, prioridade e marcos avaliativos de entrega.
-    *   **MkDocs:** Ferramenta planejada para gerar e manter a documentação viva da aplicação.
+    *   **GitHub (Issues, Projects e Milestones):** Plataforma planejada para o gerenciamento de configuração e rastreamento de demandas categorizadas por tipo, prioridade e marcos avaliativos de entrega. | **Status:** Realizado | **Evidência:** [GitHub do Projeto](https://mdsreq-fga-unb.github.io/REQ-2026.2-T01-DUOC-Finance/).
+    *   **MkDocs:** Ferramenta planejada para gerar e manter a documentação viva da aplicação. | **Status:** Realizado | **Evidência:** [GitPages do Projeto](https://mdsreq-fga-unb.github.io/REQ-2026.2-T01-DUOC-Finance/).
 *   **Artefatos e Formas de Representação Planejados:**
-    *   **Matriz de Rastreabilidade Bidirecional (*Forward/Backward*):** Artefato planejado que conecta cada Objetivo Específico (OE) às Características (CAR), Requisitos Funcionais (RF), commits e testes.
+    *   **Matriz de Rastreabilidade Bidirecional (*Forward/Backward*):** Artefato planejado que conecta cada Objetivo Específico (OE) às Características (CAR), Requisitos Funcionais (RF), commits e testes. | **Status:** Planejado | **Evidência:** 
 
 ---
 
