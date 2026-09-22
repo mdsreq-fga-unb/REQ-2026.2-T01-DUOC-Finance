@@ -135,7 +135,7 @@ A tabela a seguir consolida o checklist de conformidade dos artefatos da Entrega
 | **08** | Justificativa técnica da stack de tecnologias e viabilidade do MVP | :white_check_mark: Atendido | [Capítulos 2.4 e 2.6](../visao-produto/capitulo-2/index.md#24-tecnologias-a-serem-utilizadas-e-arquitetura) |
 | **09** | Avaliação sociotécnica: impactos pretendidos e efeitos emergentes | :white_check_mark: Atendido | [Capítulos 3.1 e 3.2](../intervencao-social/index.md#31-impactos-pretendidos) |
 | **10** | Calibração do Mixer Board (Boehm) e fundamentação da abordagem RAD | :white_check_mark: Atendido | [Capítulos 4.1 a 4.3](../estrategias-esw/index.md#41-estrategia-priorizada) |
-| **11** | Seleção fundamentada das técnicas de ER e mapeamento ao ciclo RAD | :white_check_mark: Atendido | [Capítulos 5.1 e 5.2](../engenharia-requisitos/index.md#51-atividades-e-tecnicas-de-engenharia-de-requisitos) |
+| **11** | Seleção fundamentada das técnicas de ER e mapeamento ao ciclo RAD | :white_check_mark: Atendido | [Capítulos 5.1 e 5.2](../engenharia-requisitos/index.md#51-elementos-de-engenharia-de-requisitos) |
 | **12** | Cronograma semestral estruturado com mapa temporal interativo | :white_check_mark: Atendido | [Capítulo 6 — Cronograma](../cronograma/index.md) |
 | **13** | Governança: matriz de papéis, atribuição de Eng. de Requisitos e RACI | :white_check_mark: Atendido | [Capítulo 7.1](../interacao-cliente/index.md#71-composicao-da-equipe) |
 | **14** | Matriz de comunicação interna e externa estruturada | :white_check_mark: Atendido | [Capítulo 7.2](../interacao-cliente/index.md#72-comunicacao) |
