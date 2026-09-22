@@ -77,7 +77,9 @@ nav:
   - 'Capítulo 5 - Engenharia de Requisitos': engenharia-requisitos/index.md
   - 'Capítulo 6 - Cronograma': cronograma/index.md
   - 'Capítulo 7 - Interação com Cliente': interacao-cliente/index.md
-  - 'Capítulo 8 - Requisitos (Unidade 2)': requisitos/index.md
+  - 'Capítulo 8 - Requisitos (Unidade 2)':
+    - 'Visão geral': requisitos/index.md
+    - 'OE3 — Inteligência de Custos por Contrato': requisitos/mod3.md
   - 'Capítulo 9 - DoR e DoD (Unidade 2)': dor-dod/index.md
   - 'Capítulo 10 - Backlog (Unidade 2)': backlog/index.md
   - 'Capítulo 11 - Lições Aprendidas': licoes-aprendidas/index.md
