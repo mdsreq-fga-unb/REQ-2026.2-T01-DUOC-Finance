@@ -21,3 +21,14 @@ Os requisitos funcionais abaixo descrevem comportamentos observáveis do sistema
 4. O percentual de execução orçamentária deve ser calculado por `custo apropriado / orçamento previsto × 100`.
 5. Dados financeiros e salariais devem respeitar o perfil de acesso do usuário autenticado.
 
+## 8.2 Requisitos Não Funcionais
+
+Os RNFs são classificados simultaneamente pelo modelo **URPS+** e pela taxonomia de **Sommerville**. O modelo URPS+ organiza atributos de qualidade em usabilidade, confiabilidade, desempenho e suportabilidade; o sinal `+` contempla restrições adicionais, como segurança. Nesta OE, os quatro requisitos abaixo pertencem à categoria **Requisitos do Produto**, pois especificam propriedades de qualidade do sistema. Cada critério possui uma condição mensurável para verificação.
+
+| Código | Requisito verificável | URPS+ | Sommerville | Critério mensurável |
+| :---: | :--- | :--- | :--- | :--- |
+| **RNF09** | **Carregar o painel analítico em até 3 segundos** em consultas com até 10.000 registros de custos e até 100 contratos. | Performance | Requisito do Produto — Eficiência/Desempenho | Em 95 de 100 execuções, medidas no ambiente de homologação com dados sintéticos, a primeira visualização dos indicadores deve ocorrer em no máximo 3 s. |
+| **RNF10** | **Restringir dados financeiros por perfil de acesso** conforme as permissões definidas para cada papel. | Security (+) | Requisito do Produto — Segurança da Informação | Em 100% dos casos de teste de autorização, um usuário sem permissão deve receber resposta HTTP 403 e não deve visualizar registros financeiros de contratos não autorizados. |
+| **RNF11** | **Manter a consistência transacional da apropriação de custos** durante inclusões, alterações e homologações concorrentes. | Reliability | Requisito do Produto — Confiabilidade/Dependabilidade | Em 100 execuções concorrentes do cenário de teste, não deve haver custo duplicado, registro órfão ou divergência entre o total dos lançamentos e o total do contrato; todas as operações devem ser confirmadas ou revertidas integralmente. |
+| **RNF12** | **Permitir uso do painel em telas de computador e tablet** sem perda de informação essencial. | Usability | Requisito do Produto — Usabilidade | Nos viewports de 1024 × 768 px e 768 × 1024 px, 100% dos indicadores, filtros e rótulos obrigatórios devem permanecer acessíveis sem rolagem horizontal. |
+
