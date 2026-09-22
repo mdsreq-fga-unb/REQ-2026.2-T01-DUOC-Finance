@@ -28,9 +28,6 @@ Para assegurar o rigor analítico, a testabilidade e a rastreabilidade exigidos 
 
 A rastreabilidade entre a estratégia corporativa da DUOC e a engenharia de software é formalizada pelos diagramas a seguir.
 
-!!! tip "Interatividade e Zoom nos Diagramas"
-    Todos os diagramas abaixo foram otimizados com alto contraste para perfeita visualização em modo claro e escuro. **Clique em qualquer imagem para abrir a visualização em tela cheia com zoom interativo (*lightbox*).**
-
 ### 8.2.1 Pirâmide de Abstração (Rastreabilidade Vertical)
 
 O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução: do Objetivo Geral (OG) às metas táticas (OEs), descendo para as capacidades do sistema (CARs) e derivando nos Requisitos Funcionais e Não Funcionais executáveis.
