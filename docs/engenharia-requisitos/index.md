@@ -56,36 +56,32 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 *   **Artefatos e Formas de Representação:**
     *   **Matriz de Características de Produto (CARs):** Declaração planejada das grandes capacidades da solução (CAR-01 a CAR-08), ancoradas bidirecionalmente nos Objetivos Específicos (OEs). | **Status:** Realizado | **Evidência:** [Matriz CAR](../visao-produto/capitulo-2/index.md#23-caracteristicas-do-produto-car).
     *   **Histórias de Usuário (*User Stories*):** Especificação funcional ágil planejada no padrão *"Como [papel], eu quero [ação], para que [benefício]"*, contendo critérios de aceitação detalhados em formato de lista em tópicos. | **Status:** Planejado | **Evidência:** [Backlog do Produto](../backlog/index.md).
-    *   **Diagrama de Entidade-Relacionamento (DER):** Modelo relacional planejado para o banco de dados PostgreSQL. | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 2](../cronograma/index.md#unidade-2-fase-2-design-do-usuario-elicitacao-e-modelagem-1509-a-15102026).
+    *   **Diagrama de Entidade-Relacionamento (DER):** Modelo relacional planejado para o banco de dados PostgreSQL. | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 2](../cronograma/index.md#detalhamento-metodologico-por-marco-avaliativo).
 
 ---
 
 ### 4. Representação de Requisitos
 * **Objetivo Geral:** Traduzir especificações conceituais em modelos visuais tangíveis que facilitem a compreensão e o alinhamento com os usuários.
-<<<<<<< HEAD
 *   **Técnicas de ER:**
-    *   **Prototipação:** Técnica de criação de interfaces navegáveis para validação das estações de trabalho (Desktop) e dispositivos móveis (*mobile-first* para canteiro de obras). | **Status:** Planejado | **Evidência:** 
+    *   **Prototipação:** Técnica de criação de interfaces navegáveis para validação das estações de trabalho (Desktop) e dispositivos móveis (*mobile-first* para canteiro de obras). | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 2](../cronograma/index.md#detalhamento-metodologico-por-marco-avaliativo).
     *   **Modelagem de Processos:** Elaboração planejada do passo a passo para representação dos fluxos de trabalho do sistema.
 *   **Ferramentas:**
     *   **Figma:** Plataforma planejada para a construção e testes dos protótipos de alta fidelidade. | **Status:** Planejado | **Evidência:** [Lista de Ferramentas Previstas](../visao-produto/capitulo-2/index.md#24-tecnologias-a-serem-utilizadas-e-arquitetura).
 *   **Artefatos e Formas de Representação:**
-    *   **Protótipos de Alta Fidelidade:** Telas e interfaces navegáveis do sistema planejadas para desktop e mobile. | **Status:** Planejado | **Evidência:** 
-    *   **Fluxogramas de Interação e Diagramas de Atividades:** Modelos visuais planejados para detalhar o fluxo de envio e aprovação do RVT e o fechamento da folha.
+    *   **Protótipos de Alta Fidelidade:** Telas e interfaces navegáveis do sistema planejadas para desktop e mobile. | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 2](../cronograma/index.md#detalhamento-metodologico-por-marco-avaliativo).
+    *   **Fluxogramas de Interação e Diagramas de Atividades:** Modelos visuais planejados para detalhar o fluxo de envio e aprovação do RVT e o fechamento da folha. | **Status:** Realizado | **Evidência:** [Fluxo do Ciclo de Validação](../interacao-cliente/index.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente).
 
 ---
 
 ### 5. Verificação e Validação de Requisitos (V&V)
 * **Objetivo Geral:** Assegurar a corretude técnica interna dos documentos (Verificação) e confirmar que o software atende às necessidades reais do negócio (Validação).
-<<<<<<< HEAD
 *   **Técnicas de ER:**
-    *   **Inspeção (Fagan Adaptado):** Aplicação planejada de listas de verificação (checklists) de qualidade técnica, completeza e conformidade gramatical na documentação.
-    *   **Sessões Guiadas de Homologação:** Navegação assistida planejada com a cliente Maria Beatryz para validação das telas antes da codificação.
-    *   **Testes de Aceitação de Usuário (UAT):** Execução planejada de cenários operacionais em ambiente de homologação utilizando dados sintéticos e reais anonimizados da DUOC.
-*   **Práticas:**
-    *   **Revisão por Pares (*Peer Review*):** Fluxo planejado de revisão colaborativa para liberação de artefatos.
+    *   **Inspeção (Fagan Adaptado):** Aplicação planejada de listas de verificação (checklists) de qualidade técnica, completeza e conformidade gramatical na documentação. | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 3](../cronograma/index.md#detalhamento-metodologico-por-marco-avaliativo).
+    *   **Sessões Guiadas de Homologação:** Navegação assistida planejada com a cliente Maria Beatryz para validação das telas antes da codificação. **Evidência:** [Detalhamento Metodológico da Unidade 4](../cronograma/index.md#detalhamento-metodologico-por-marco-avaliativo).
+    *   **Testes de Aceitação de Usuário (UAT):** Execução planejada de cenários operacionais em ambiente de homologação utilizando dados sintéticos e reais anonimizados da DUOC. | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 4](../cronograma/index.md#detalhamento-metodologico-por-marco-avaliativo).
 *   **Ferramentas:**
     *   **GitHub:** Plataforma planejada para a gestão de código e controle do fluxo de aprovação (*Pull Requests* com aprovação de revisor independente para integração na branch `develop`). | **Status:** Realizado | **Evidência:** [GitHub do Projeto](https://mdsreq-fga-unb.github.io/REQ-2026.2-T01-DUOC-Finance/).
-    *   **MkDocs:** Ferramenta planejada para publicação e visualização da documentação do projeto. | **Status:** Realizado | **Evidência:** [GitPages do Projeto](https://mdsreq-fga-unb.github.io/REQ-2026.2-T01-DUOC-Finance/).
+    *   **MkDocs:** Ferramenta planejada para publicação e visualização da documentação do projeto. | **Status:** Realizado | **Evidência:** [Lista de Ferramentas Previstas](../visao-produto/capitulo-2/index.md#24-tecnologias-a-serem-utilizadas-e-arquitetura).
     *   **Figma:** Ambiente planejado para a apresentação interativa dos protótipos durante as sessões de homologação. | **Status:** Planejado | **Evidência:** [Lista de Ferramentas Previstas](../visao-produto/capitulo-2/index.md#24-tecnologias-a-serem-utilizadas-e-arquitetura).
 *   **Critérios e Acordos de Trabalho Planejados:**
     *   **Definition of Ready (DoR) e Definition of Done (DoD):** Acordos formais estabelecidos para reger a entrada de requisitos em desenvolvimento e a aceitação das entregas finalizadas. | **Status:** Planejado | **Evidência:** [DoR e DoD](../dor-dod/index.md).
@@ -94,13 +90,13 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 
 ### 6. Organização e Atualização de Requisitos (Gestão)
 * **Objetivo Geral:** Rastrear a evolução dos requisitos ao longo do ciclo de vida, controlar mudanças de escopo e garantir a rastreabilidade bidirecional.
-*   **Práticas Planejadas:**
+*   **Práticas:**
     *   **Documentação Viva (*Docs as Code*):** Prática planejada de publicação contínua da documentação versionada no Git, garantindo que o portal reflita sempre o estado atual do projeto. | **Status:** Em Execução | **Evidência:** [GitPages do Projeto](https://mdsreq-fga-unb.github.io/REQ-2026.2-T01-DUOC-Finance/).
-*   **Ferramentas Planejadas:**
+*   **Ferramentas:**
     *   **GitHub (Issues, Projects e Milestones):** Plataforma planejada para o gerenciamento de configuração e rastreamento de demandas categorizadas por tipo, prioridade e marcos avaliativos de entrega. | **Status:** Realizado | **Evidência:** [GitHub do Projeto](https://mdsreq-fga-unb.github.io/REQ-2026.2-T01-DUOC-Finance/).
-    *   **MkDocs:** Ferramenta planejada para gerar e manter a documentação viva da aplicação. | **Status:** Realizado | **Evidência:** [GitPages do Projeto](https://mdsreq-fga-unb.github.io/REQ-2026.2-T01-DUOC-Finance/).
-*   **Artefatos e Formas de Representação Planejados:**
-    *   **Matriz de Rastreabilidade Bidirecional (*Forward/Backward*):** Artefato planejado que conecta cada Objetivo Específico (OE) às Características (CAR), Requisitos Funcionais (RF), commits e testes. | **Status:** Planejado | **Evidência:** 
+    *   **MkDocs:** Ferramenta planejada para gerar e manter a documentação viva da aplicação. | **Status:** Realizado | **Evidência:** [Lista de Ferramentas Previstas](../visao-produto/capitulo-2/index.md#24-tecnologias-a-serem-utilizadas-e-arquitetura).
+*   **Artefatos e Formas de Representação:**
+    *   **Matriz de Rastreabilidade Bidirecional (*Forward/Backward*):** Artefato planejado que conecta cada Objetivo Específico (OE) às Características (CAR), Requisitos Funcionais (RF), commits e testes. | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 3](../cronograma/index.md#detalhamento-metodologico-por-marco-avaliativo).
 
 ---
 
@@ -115,7 +111,6 @@ Nesta seção, as atividades clássicas de Engenharia de Requisitos (ER), suas p
 
 | Fase do RAD / Ciclo Iterativo | Atividades de ER Predominantes | Prática Metodológica (RAD / Engenharia) | Técnica Empregada | Resultado Esperado / Artefato |
 | :--- | :--- | :--- | :--- | :--- |
-<<<<<<< HEAD
 | **Fase 1: Planejamento de Requisitos**<br>*(Iteração 0: Concepção e Diagnóstico)* | Elicitação e Análise de Requisitos | Sessões JAD (*Joint Application Development*), Diagnóstico de Processos, *Docs as Code*. | Entrevistas semiestruturadas com a gestora Maria Beatryz; Análise documental de planilhas; Rich Picture; Ishikawa. | Declaração do Problema; Rich Picture; Diagrama de Ishikawa; Matriz de Stakeholders e Permissões (RBAC) preliminar. |
 | **Fase 1: Planejamento de Requisitos**<br>*(Iteração 1: Estratégia e Escopo)* | Análise, Especificação e Verificação | Refinamento de Escopo, Esboço Arquitetural, Revisão por Pares (*Peer Review*). | Priorização MoSCoW; Modelagem conceitual de dados; Inspeção por checklists (Fagan Adaptado). | Matriz de Características (CAR-01 a CAR-08); Estratégia de ESW; Modelo Conceitual de Dados preliminar. |
 | **Fase 2: Design do Usuário**<br>*(Iteração 2: Prototipagem e Refinamento de Domínio)* | Especificação, Validação e Gestão de Requisitos | Prototipagem Rápida Evolutiva, Sessão JAD de Aceite de Telas, Especificação Guiada. | Prototipagem no Figma (Desktop e Mobile); Modelagem lógica do domínio (evolução conjunta com as telas); Sessões Guiadas de Homologação. | Protótipo interativo de alta fidelidade no Figma homologado; Backlog de Histórias de Usuário (com critérios em lista); Modelo Lógico de Dados ajustado. |
@@ -134,6 +129,5 @@ Nesta seção, as atividades clássicas de Engenharia de Requisitos (ER), suas p
 | `1.0` | 05/09/2026 | Estruturação inicial das atividades e mapeamento ao processo | Carlos Gabriel | Matheus Ribeiro |
 | `1.1` | 07/09/2026 | Detalhamento das técnicas de ER e reestruturação da matriz nas fases do RAD | Carlos Gabriel | Matheus Ribeiro Szervinsk |
 | `2.0` | 15/09/2026 | Unificação integral dos artefatos 5.1 e 5.2 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
-<<<<<<< HEAD
 | `2.1` | 20/09/2026 | Padronização taxonômica das seções 5.1 e 5.2 (técnicas, práticas, ferramentas, artefatos e critérios), alinhamento da stack técnica para NestJS/Supabase e especificação do uso de dados sintéticos e reais anonimizados em UAT. | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |
 | `2.2` | 21/09/2026 | Ajuste da estratégia de representação e validação de requisitos: UI-First com base no Figma e designs via Frontend, postergando lógica e persistência para após validação do DoR | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
