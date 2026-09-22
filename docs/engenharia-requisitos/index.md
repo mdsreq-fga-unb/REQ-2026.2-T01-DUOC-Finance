@@ -29,9 +29,9 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 * **Objetivo Geral:** Descobrir as necessidades operacionais reais, regras de negócio e expectativas sociotécnicas dos atores da DUOC.
 *   **Técnicas de ER:**
     *   **Entrevistas Semiestruturadas com Stakeholder Chave:** Condução planejada de reuniões síncronas com a sócia-administradora Maria Beatryz para mapear a rotina de fechamento de folha, gestão de canteiros e cálculo de comissões. | **Status:** Realizado | **Evidência:** [Ata da Reunião 1](../atas/index.md#consulta-unificada-por-abas).
-    *   **Análise Documental:** Análise planejada da documentação operacional utilizada na rotina da empresa. | **Status:** Realizado | **Evidência:** 
+    *   **Análise Documental:** Análise planejada da documentação operacional utilizada na rotina da empresa. | **Status:** Realizado | **Evidência:** [Planilhas Sanitizadas no Drive](https://drive.google.com/drive/folders/1e2wQ6ub4BVfte3mmWVXGUZ4cBI2d73Sd?usp=drive_link).
 *   **Práticas:**
-    *   **Workshops de Descoberta Operacional:** Sessões colaborativas planejadas para a equipe decompor as dores do cenário atual. | **Status:** Não realizado | **Evidência:** 
+    *   **Workshops de Descoberta Operacional:** Sessões colaborativas planejadas para a equipe decompor as dores do cenário atual. | **Status:** Não realizado |
 *   **Artefatos e Formas de Representação:**
     *   **Artefatos Legados e Documentos de Negócio:** Planilhas eletrônicas de controle financeiro, modelos impressos de RVT e relatórios de despesas operacionais planejados para análise. | **Status:** Realizado | **Evidência:** [Planilhas Sanitizadas no Drive](https://drive.google.com/drive/folders/1e2wQ6ub4BVfte3mmWVXGUZ4cBI2d73Sd?usp=drive_link).
     *   **Fluxos Transacionais (TR-01 a TR-04):** Mapeamento dos fluxos de trabalho atuais planejados para decomposição a partir das dores identificadas. | **Status:** Realizado | **Evidência:** [Estrutura Detalhada das Transações](../visao-produto/capitulo-1/index.md#estrutura-detalhada-das-transacoes)
@@ -52,7 +52,7 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 ### 3. Declaração e Especificação de Requisitos
 * **Objetivo Geral:** Registrar formalmente as necessidades de software de maneira clara, verificável e compreensível para negócio e desenvolvimento.
 *   **Técnicas de ER:**
-    *   **Modelagem de Dados:** Técnica de abstração planejada para estruturar o domínio da aplicação e garantir a integridade relacional entre usuários, contratos, RVTs e folha.
+    *   **Modelagem de Dados:** Técnica de abstração planejada para estruturar o domínio da aplicação e garantir a integridade relacional entre usuários, contratos, RVTs e folha. | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 2](../cronograma/index.md#detalhamento-metodologico-por-marco-avaliativo).
 *   **Artefatos e Formas de Representação:**
     *   **Matriz de Características de Produto (CARs):** Declaração planejada das grandes capacidades da solução (CAR-01 a CAR-08), ancoradas bidirecionalmente nos Objetivos Específicos (OEs). | **Status:** Realizado | **Evidência:** [Matriz CAR](../visao-produto/capitulo-2/index.md#23-caracteristicas-do-produto-car).
     *   **Histórias de Usuário (*User Stories*):** Especificação funcional ágil planejada no padrão *"Como [papel], eu quero [ação], para que [benefício]"*, contendo critérios de aceitação detalhados em formato de lista em tópicos. | **Status:** Planejado | **Evidência:** [Backlog do Produto](../backlog/index.md).
@@ -64,7 +64,7 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 * **Objetivo Geral:** Traduzir especificações conceituais em modelos visuais tangíveis que facilitem a compreensão e o alinhamento com os usuários.
 *   **Técnicas de ER:**
     *   **Prototipação:** Técnica de criação de interfaces navegáveis para validação das estações de trabalho (Desktop) e dispositivos móveis (*mobile-first* para canteiro de obras). | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 2](../cronograma/index.md#detalhamento-metodologico-por-marco-avaliativo).
-    *   **Modelagem de Processos:** Elaboração planejada do passo a passo para representação dos fluxos de trabalho do sistema.
+    *   **Modelagem de Processos:** Elaboração planejada do passo a passo para representação dos fluxos de trabalho do sistema. | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 2](../cronograma/index.md#detalhamento-metodologico-por-marco-avaliativo).
 *   **Ferramentas:**
     *   **Figma:** Plataforma planejada para a construção e testes dos protótipos de alta fidelidade. | **Status:** Planejado | **Evidência:** [Lista de Ferramentas Previstas](../visao-produto/capitulo-2/index.md#24-tecnologias-a-serem-utilizadas-e-arquitetura).
 *   **Artefatos e Formas de Representação:**
