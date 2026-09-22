@@ -214,6 +214,10 @@ Como o repositório hospeda a documentação viva da disciplina, siga estas dire
        A[Elicitação] --> B[Modelagem]
        B --> C[Validação com Cliente]
    ```
+5. **Ampliação de Imagens (Zoom):**
+   - Toda imagem inserida via sintaxe padrão de Markdown (`![alt](caminho)`) é automaticamente ampliável ao clique, através do plugin `mkdocs-glightbox` habilitado no `mkdocs.yml`.
+   - Não é necessário nenhum código adicional para habilitar essa ampliação — basta inserir a imagem normalmente.
+   - Utilize sempre um texto alternativo (`alt`) descritivo, pois ele é reaproveitado como legenda no visualizador ampliado.
 
 ---
 
