@@ -47,3 +47,7 @@ Os RNFs são classificados simultaneamente pelo modelo **URPS+** e pela taxonomi
 | **RNF02** | OE1 | CAR-01 | **CT-M1-10:** Medir tempo de resposta da busca de colaboradores (meta < 2s). |
 | **RNF03** | OE1 | CAR-01 | **CT-M1-11:** Validar criptografia AES-256 em banco e TLS 1.3 em trânsito. |
 | **RNF04** | OE1 | CAR-02 | **CT-M1-12:** Avaliar tempo de preenchimento (< 3min) e taxa de erro em uso do app. |
+
+### Relação com regras de negócio
+
+As regras de negócio definem as diretrizes e restrições do domínio operacional e cadastral, enquanto os RFs especificam as funcionalidades executadas pelos usuários e os RNFs garantem os atributos de qualidade do software. No Módulo 1, as regras de unicidade de cadastro por CPF (RN01), revogação imediata de acesso por desligamento (RN04) e validação cadastral obrigatória para lançamentos financeiro-operacionais (RN03) condicionam a implementação dos RF01 a RF03, assegurando a integridade e conformidade da base de pessoal. Paralelamente, a regra de bloqueio de edição retroativa de apontamentos (RN02) rege o fluxo de coleta dos RF04 a RF06, alinhando-se diretamente aos RNFs de usabilidade em campo, confiabilidade na sincronização offline e segurança no tráfego dos dados.
