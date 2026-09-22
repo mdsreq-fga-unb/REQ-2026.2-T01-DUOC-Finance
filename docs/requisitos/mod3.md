@@ -8,7 +8,7 @@ Os requisitos funcionais abaixo descrevem comportamentos observáveis do sistema
 
 | Código | Requisito | CAR relacionada | Critério de aceitação |
 | :---: | :--- | :---: | :--- |
-| **RF09** | **Apropriar custo de mão de obra ao contrato** | CAR-05 | Dado um registro de horas ou RVT homologado e vinculado a um contrato, o sistema deve calcular e registrar o custo correspondente no centro de custo do contrato, preservando o colaborador, o período, a origem e o valor apropriado. |
+| **RF09** | **Consolidar custo de folha por contrato** | CAR-05 | Dado um conjunto de registros de funcionários vinculados a um contrato ativo, o sistema deve consolidar o montante dos custos de folha de pagamento atribuídos ao contrato, considerando os valores previamente apurados e homologados, sem substituir ou duplicar o relatório individual de folha de pagamento. |
 | **RF10** | **Rastrear origem do custo apropriado** | CAR-05 | Para cada custo apropriado, o sistema deve permitir consultar o registro de origem, o usuário responsável, a data e hora da operação, o contrato e o status de homologação, sem permitir custos órfãos ou desvinculados de contrato válido. |
 | **RF11** | **Consultar custo apropriado por contrato** | CAR-06 | Usuário autorizado deve consultar o custo acumulado de um ou mais contratos, aplicando filtros por período, contrato, colaborador e categoria de custo, com atualização dos resultados após a aplicação dos filtros. |
 | **RF12** | **Comparar custo apropriado ao orçamento** | CAR-06 | O painel deve apresentar, por contrato, o orçamento previsto, o custo apropriado, o valor do desvio e o percentual de execução orçamentária, destacando contratos cujo custo acumulado ultrapasse o orçamento definido. |
