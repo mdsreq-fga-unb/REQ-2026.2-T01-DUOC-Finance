@@ -196,3 +196,18 @@ Para garantir que todas as entregas do MVP e das fases futuras estejam estritame
 | **OE2 — Eficiência Administrativo-Financeira** | RF05, RF06, RF07, RF08 | **100%** | Todos os RFs do OE2 estão no MVP, cobrindo integralmente o ciclo de apuração de diárias/comissões e a prestação de contas por reembolso. |
 | **OE3 — Inteligência de Custos por Contrato** | RF09, RF10, RF11, RF12 | **50%** (2 de 4 no MVP) | O MVP atende à alocação de custos e à rastreabilidade de origem (RF09, RF10). O monitoramento e as filtragens avançadas (RF11, RF12) evoluem na Fase 2. |
 | **OE4 — Governança, Segurança e Rastreabilidade** | RF13, RF14, RF15, RF16 | **50%** (2 de 4 no MVP) | A segurança de acesso e RBAC (RF13, RF14) estão no MVP. A auditoria é garantida no backend, ficando a visualização e exportação (RF15, RF16) para a Fase 2. |
+
+## 8.9 Conclusão
+
+A estratégia de priorização adotada neste capítulo permitiu estruturar o escopo do **DUOC Finance** de maneira objetiva, transparente e rigorosamente alinhada às necessidades estratégicas da organização. Através da combinação entre a **Matriz 4×4 (Valor vs. Esforço)** e a metodologia **MoSCoW**, foi possível delimitar o **Produto Mínimo Viável (MVP)** garantindo a máxima entrega de valor com um nível de risco técnico controlado.
+
+A seleção final do MVP abrange **12 Requisitos Funcionais (RF01 a RF10, RF13 e RF14)** que formam um fluxo funcional contínuo e integrado:
+
+1. **Autenticação e Segurança (OE4):** Garantidos via login seguro (`RF13`) e controle de acesso baseado em papéis (`RF14`).
+2. **Gestão Cadastral Unificada (OE1):** Estabelecida pelo cadastro, atualização e controle de status funcional de colaboradores (`RF01`, `RF02`, `RF03`).
+3. **Operação e Coleta de Campo (OE1 & OE2):** Viabilizados pela submissão de apontamentos técnicos (`RF04`) e solicitações de reembolso com comprovante (`RF07`, `RF08`).
+4. **Fechamento e Inteligência Financeira (OE2 & OE3):** Assegurados pela prévia e homologação de fechamentos (`RF05`, `RF06`), juntamente com a apropriação e rastreabilidade de custos por contrato (`RF09`, `RF10`).
+
+Adicionalmente, o mapeamento de rastreabilidade comprovou a eficácia do escopo definido, cobrindo **100% dos requisitos de unificação de dados (OE1) e eficiência financeira (OE2)** já no MVP, além de garantir a base transacional necessária para a inteligência de custos (OE3) e a governança (OE4).
+
+Os requisitos postergados (**RF11, RF12, RF15 e RF16**) constituem o backlog evolutivo planejado para a **Fase 2 (Pós-MVP)**. Essa divisão clara de escopo protege o cronograma da Unidade 2, elimina dependências críticas e assegura a entrega de uma solução viável, robusta e imediatamente operacional para a DUOC Arquitetura e Engenharia.
