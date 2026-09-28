@@ -81,3 +81,61 @@ A distribuição dos requisitos na matriz evidencia diferentes níveis de priori
 **Valor moderado:** RF11 apresenta Valor de Negócio 2 e Esforço Técnico 2, enquanto RF15 apresenta Valor 2 e Esforço 3. Ambos possuem contribuição relevante, mas não são suficientes, isoladamente, para determinar a composição do fluxo mínimo.
 
 **Baixo valor relativo:** RF16 apresenta Valor de Negócio 1 e Esforço Técnico 3. Sua posição indica menor prioridade relativa quando comparada aos demais requisitos.
+
+## 8.4 Definição do MVP
+
+A definição do MVP considera, além da posição dos requisitos na Matriz 4×4, as dependências entre funcionalidades e a necessidade de garantir um fluxo funcional contínuo para os principais processos da solução.
+
+### 8.4.1 Dependências e fluxo funcional
+
+O fluxo principal considerado para o MVP inicia-se pela autenticação e controle de acesso e segue pela gestão cadastral, apontamento de campo, fechamento financeiro e apropriação dos custos.
+
+```text
+RF13 — Efetuar login
+        ↓
+RF14 — Gerenciar perfis de acesso
+        ↓
+RF01 — Cadastrar colaborador
+        ↓
+RF02 — Atualizar cadastro
+        ↓
+RF03 — Registrar movimentação funcional
+        ↓
+RF04 — Submeter apontamento de campo
+        ↓
+RF05 — Solicitar prévia de fechamento
+        ↓
+RF06 — Homologar fechamento financeiro
+        ↓
+RF09 — Apropriar custos operacionais
+        ↓
+RF10 — Consultar rastreabilidade de custos
+
+O fluxo de reembolsos complementa o processo financeiro:
+
+RF07 — Submeter solicitação de reembolso
+        ↓
+RF08 — Deliberar solicitação de reembolso
+
+A seleção desses requisitos busca evitar um MVP formado apenas por funcionalidades isoladas. O fluxo permite que o sistema tenha autenticação e controle de acesso, mantenha os dados dos colaboradores, registre os apontamentos de campo, processe o fechamento financeiro e aproprie os custos aos contratos.
+
+---
+
+### 8.4.2 Requisitos selecionados para o MVP
+
+Considerando Valor de Negócio, Esforço Técnico, dependências e continuidade do fluxo funcional, os seguintes requisitos compõem o MVP:
+
+| RF | Requisito Funcional | Justificativa |
+| :--- | :--- | :--- |
+| **RF13** | Efetuar login no sistema | Permite a autenticação necessária para acesso às funcionalidades protegidas. |
+| **RF14** | Gerenciar perfis de acesso (RBAC) | Estabelece o controle de acesso conforme os diferentes perfis de usuário. |
+| **RF01** | Cadastrar colaborador | Cria a base cadastral necessária para os processos posteriores. |
+| **RF02** | Atualizar cadastro | Mantém os dados cadastrais atualizados durante o ciclo funcional. |
+| **RF03** | Registrar movimentação funcional | Permite registrar alterações no estado funcional dos colaboradores. |
+| **RF04** | Submeter apontamento de campo | Inicia o fluxo operacional de registros técnicos de campo. |
+| **RF05** | Solicitar prévia de fechamento | Consolida os registros necessários para o processo de fechamento financeiro. |
+| **RF06** | Homologar fechamento financeiro | Formaliza o fechamento financeiro e conclui sua etapa de homologação. |
+| **RF07** | Submeter solicitação de reembolso | Permite iniciar o fluxo de prestação de contas e reembolsos. |
+| **RF08** | Deliberar solicitação de reembolso | Completa o fluxo de análise e decisão das solicitações de reembolso. |
+| **RF09** | Apropriar custos operacionais | Relaciona os custos operacionais aos respectivos contratos. |
+| **RF10** | Consultar rastreabilidade de custos | Permite consultar a origem e os dados relacionados aos custos apropriados. |
