@@ -56,3 +56,28 @@ A tabela a seguir consolida os Requisitos Funcionais do DUOC Finance, relacionan
 | **RF14** | Gerenciar perfis de acesso (RBAC) | OE4 | CAR-07 | **4** | **2** |
 | **RF15** | Consultar trilha de auditoria | OE4 | CAR-08 | **2** | **3** |
 | **RF16** | Exportar relatório de auditoria | OE4 | CAR-08 | **1** | **3** |
+
+## 8.3 Matriz 4×4 — Valor × Esforço
+
+A Matriz 4×4 cruza o **Valor de Negócio** e o **Esforço Técnico** atribuídos a cada Requisito Funcional. Essa análise permite visualizar a concentração dos requisitos de maior valor e identificar aqueles que apresentam maior esforço relativo para implementação.
+
+| **Valor \ Esforço** | **1 — Muito baixo** | **2 — Baixo** | **3 — Alto** | **4 — Muito alto** |
+| :---: | :--- | :--- | :--- | :--- |
+| **4 — Muito alto** | **RF13** | **RF01, RF06, RF14** | **RF04, RF05, RF09** | — |
+| **3 — Alto** | — | **RF02, RF03, RF07, RF08, RF10** | **RF12** | — |
+| **2 — Moderado** | — | **RF11** | **RF15** | — |
+| **1 — Baixo** | — | — | **RF16** | — |
+
+### 8.3.1 Análise da Matriz
+
+A distribuição dos requisitos na matriz evidencia diferentes níveis de prioridade para a composição do MVP.
+
+**Alto valor e baixo esforço:** RF13, RF01, RF06 e RF14 apresentam Valor de Negócio 4 e Esforço Técnico entre 1 e 2. São requisitos de elevada relevância e esforço relativamente reduzido.
+
+**Alto valor e alto esforço:** RF04, RF05 e RF09 apresentam Valor de Negócio 4 e Esforço Técnico 3. Apesar do maior esforço, esses requisitos estão relacionados aos principais processos operacionais da solução e devem ser considerados na definição do MVP.
+
+**Alto valor e esforço moderado:** RF02, RF03, RF07, RF08 e RF10 apresentam Valor de Negócio 3 e Esforço Técnico 2. Esses requisitos complementam os fluxos principais e possuem relação equilibrada entre valor e esforço.
+
+**Valor moderado:** RF11 apresenta Valor de Negócio 2 e Esforço Técnico 2, enquanto RF15 apresenta Valor 2 e Esforço 3. Ambos possuem contribuição relevante, mas não são suficientes, isoladamente, para determinar a composição do fluxo mínimo.
+
+**Baixo valor relativo:** RF16 apresenta Valor de Negócio 1 e Esforço Técnico 3. Sua posição indica menor prioridade relativa quando comparada aos demais requisitos.
