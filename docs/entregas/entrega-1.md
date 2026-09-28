@@ -56,7 +56,7 @@ A equipe **Cascata Ágil** desenvolveu integralmente todo o conjunto de artefato
 | **Capítulo 4** | Estratégia Priorizada de ESW | Abordagem Híbrida e ciclo iterativo/incremental sob o framework Rapid Application Development (RAD). | [Acessar 4.1](../estrategias-esw/index.md#41-estrategia-priorizada) |
 | **Capítulo 4** | Quadro Comparativo (Mixer Board) | Calibração formal dos 6 vetores de Boehm justificando a dinâmica ágil e iterativa de requisitos. | [Acessar 4.2](../estrategias-esw/index.md#42-quadro-comparativo-de-processos) |
 | **Capítulo 4** | Justificativa Metodológica | Racional técnico da adequação do RAD ao contexto da empresa parceira e ao semestre acadêmico. | [Acessar 4.3](../estrategias-esw/index.md#43-justificativa-metodologica) |
-| **Capítulo 5** | Atividades e Técnicas de Requisitos | Seleção fundamentada das técnicas de elicitação, modelagem, especificação, verificação e validação. | [Acessar 5.1](../engenharia-requisitos/index.md#51-atividades-e-tecnicas-de-engenharia-de-requisitos) |
+| **Capítulo 5** | Atividades e Técnicas de Requisitos | Seleção fundamentada das técnicas de elicitação, modelagem, especificação, verificação e validação. | [Acessar 5.1](../engenharia-requisitos/index.md#51-elementos-de-engenharia-de-requisitos) |
 | **Capítulo 5** | Mapeamento ao Processo RAD | Alinhamento rigoroso entre as etapas de engenharia de requisitos e as 4 fases do ciclo RAD. | [Acessar 5.2](../engenharia-requisitos/index.md#52-mapeamento-de-engenharia-de-requisitos-ao-processo) |
 | **Capítulo 6** | Cronograma de Entregas | Mapa temporal interativo com calendário semestral integrado, seletores com tooltips e planejamento semanal. | [Acessar Cap. 6](../cronograma/index.md) |
 | **Capítulo 7** | Composição da Equipe e Papéis | Atribuição formal dos 7 integrantes, alocação de Engenheiros de Requisitos e matriz de papéis RAD. | [Acessar 7.1](../interacao-cliente/index.md#71-composicao-da-equipe) |
@@ -135,7 +135,7 @@ A tabela a seguir consolida o checklist de conformidade dos artefatos da Entrega
 | **08** | Justificativa técnica da stack de tecnologias e viabilidade do MVP | :white_check_mark: Atendido | [Capítulos 2.4 e 2.6](../visao-produto/capitulo-2/index.md#24-tecnologias-a-serem-utilizadas-e-arquitetura) |
 | **09** | Avaliação sociotécnica: impactos pretendidos e efeitos emergentes | :white_check_mark: Atendido | [Capítulos 3.1 e 3.2](../intervencao-social/index.md#31-impactos-pretendidos) |
 | **10** | Calibração do Mixer Board (Boehm) e fundamentação da abordagem RAD | :white_check_mark: Atendido | [Capítulos 4.1 a 4.3](../estrategias-esw/index.md#41-estrategia-priorizada) |
-| **11** | Seleção fundamentada das técnicas de ER e mapeamento ao ciclo RAD | :white_check_mark: Atendido | [Capítulos 5.1 e 5.2](../engenharia-requisitos/index.md#51-atividades-e-tecnicas-de-engenharia-de-requisitos) |
+| **11** | Seleção fundamentada das técnicas de ER e mapeamento ao ciclo RAD | :white_check_mark: Atendido | [Capítulos 5.1 e 5.2](../engenharia-requisitos/index.md#51-elementos-de-engenharia-de-requisitos) |
 | **12** | Cronograma semestral estruturado com mapa temporal interativo | :white_check_mark: Atendido | [Capítulo 6 — Cronograma](../cronograma/index.md) |
 | **13** | Governança: matriz de papéis, atribuição de Eng. de Requisitos e RACI | :white_check_mark: Atendido | [Capítulo 7.1](../interacao-cliente/index.md#71-composicao-da-equipe) |
 | **14** | Matriz de comunicação interna e externa estruturada | :white_check_mark: Atendido | [Capítulo 7.2](../interacao-cliente/index.md#72-comunicacao) |
@@ -155,4 +155,5 @@ A tabela a seguir consolida o checklist de conformidade dos artefatos da Entrega
 | `1.1` | 07/09/2026 | Sincronização da data de fechamento do marco (08/09/2026) e nomenclatura da Fase 1 | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `1.2` | 08/09/2026 | Incorporação oficial da gravação em vídeo (YouTube: youtu.be/OZ9LhKuI364), harmonização dos 7 integrantes com matrículas e papéis oficiais, ampliação da matriz de rastreabilidade (Capítulos 11, 12 e Atas) e inclusão do Checklist de Auditoria e Conformidade para submissão final | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `1.3` | 19/09/2026 | Correção das referências ao Diagrama de Ishikawa: "6M" substituído por "4M adaptado", alinhando com as 4 categorias efetivamente usadas em 1.4 | Paulo Nery | |
+| `1.4` | 22/09/2026 | Ajusta id referentes a seção 5.1 | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |
 
