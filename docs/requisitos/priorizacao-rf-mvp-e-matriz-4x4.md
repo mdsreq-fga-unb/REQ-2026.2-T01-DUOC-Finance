@@ -167,3 +167,32 @@ Apesar do esforço técnico mais elevado, esses requisitos estão diretamente re
 | **RF09** | Implementar a apropriação básica dos custos aos contratos, preservando as regras de validação e rastreabilidade necessárias. |
 
 Funcionalidades complementares ou evoluções desses processos poderão ser incorporadas em fases posteriores, sem comprometer o fluxo fundamental definido para o MVP.
+
+## 8.7 Classificação MoSCoW
+
+Como complemento à Matriz 4×4, os requisitos funcionais foram agrupados segundo o método **MoSCoW**, formalizando o nível de compromisso de entrega para cada funcionalidade:
+
+- **Must Have (Obrigatório):** Requisitos indispensáveis que compõem o fluxo ponta a ponta do MVP. Sem eles, o sistema não opera de forma viável.
+- **Should Have (Deveria ter):** Requisitos de alto valor que agregam importante capacidade analítica ou operacional, mas cuja ausência imediata não paralisa a operação mínima.
+- **Could Have (Poderia ter):** Requisitos desejáveis de refinamento operacional e visual.
+- **Won't Have (Não terá por enquanto):** Requisitos de menor prioridade ou alto esforço sem impacto direto no fluxo principal, postergados para ciclos evolutivos futuros.
+
+| Categoria MoSCoW | Requisitos Incluídos | Justificativa e Impacto |
+| :--- | :--- | :--- |
+| **Must Have** | **RF01**, **RF02**, **RF03**, **RF04**, **RF05**, **RF06**, **RF07**, **RF08**, **RF09**, **RF10**, **RF13**, **RF14** | Formam a espinha dorsal da aplicação (segurança, cadastro, lançamento, fechamento e apropriação de custos). São essenciais para o MVP. |
+| **Should Have** | **RF12** | Permite o acompanhamento orçamentário. Embora relevante para o OE3, foi postergado para a fase pós-MVP por depender de uma base estável de custos já apropriados. |
+| **Could Have** | **RF11**, **RF15** | O **RF11** melhora a experiência de filtragem nos painéis. O **RF15** disponibiliza a interface visual de auditoria (cuja gravação no banco já ocorre nativamente). |
+| **Won't Have** (nesta release) | **RF16** | Funcionalidade de exportação de relatórios de auditoria em PDF/CSV. Apresenta baixo valor de uso diário e maior esforço de formatação, sendo postergada. |
+
+---
+
+## 8.8 Rastreabilidade dos Requisitos com os Objetivos Estratégicos (OEs)
+
+Para garantir que todas as entregas do MVP e das fases futuras estejam estritamente alinhadas com as dores de negócio da DUOC Finance, a tabela abaixo mapeia a cobertura de cada **Objetivo Estratégico (OE)** pelos Requisitos Funcionais e sua respectiva presença no MVP:
+
+| Objetivo Estratégico (OE) | Requisitos Associados | Cobertura no MVP | Análise de Cobertura do Objetivo |
+| :--- | :--- | :---: | :--- |
+| **OE1 — Padronização e Unificação de Dados** | RF01, RF02, RF03, RF04 | **100%** | Todos os RFs do OE1 estão no MVP, garantindo a eliminação de cadastros duplicados e a unificação da coleta de dados em campo. |
+| **OE2 — Eficiência Administrativo-Financeira** | RF05, RF06, RF07, RF08 | **100%** | Todos os RFs do OE2 estão no MVP, cobrindo integralmente o ciclo de apuração de diárias/comissões e a prestação de contas por reembolso. |
+| **OE3 — Inteligência de Custos por Contrato** | RF09, RF10, RF11, RF12 | **50%** (2 de 4 no MVP) | O MVP atende à alocação de custos e à rastreabilidade de origem (RF09, RF10). O monitoramento e as filtragens avançadas (RF11, RF12) evoluem na Fase 2. |
+| **OE4 — Governança, Segurança e Rastreabilidade** | RF13, RF14, RF15, RF16 | **50%** (2 de 4 no MVP) | A segurança de acesso e RBAC (RF13, RF14) estão no MVP. A auditoria é garantida no backend, ficando a visualização e exportação (RF15, RF16) para a Fase 2. |
