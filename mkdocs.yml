@@ -82,7 +82,12 @@ nav:
   - 'Capítulo 10 - Backlog (Unidade 2)': backlog/index.md
   - 'Capítulo 11 - Lições Aprendidas': licoes-aprendidas/index.md
   - 'Capítulo 12 - Referências': referencias/index.md
-  - 'Atas de Reuniões': atas/index.md
+  - 'Atas de Reuniões':
+    - 'Painel Geral de Atas': atas/index.md
+    - 'Reunião 01 (05/09) — Elicitação e MVP': atas/reuniao-01.md
+    - 'Reunião 02 (07/09) — Alinhamento Metodológico': atas/reuniao-02.md
+    - 'Reunião 03 (07/09) — Apresentação da Unidade 1': atas/reuniao-03.md
+    - 'Reunião 04 (17/09) — Planejamento da Unidade 2': atas/reuniao-04.md
   - 'Entregas do Projeto':
     - 'Painel Geral de Entregas': entregas/index.md
     - 'Entrega 1 (Ponto de Controle 1)': entregas/entrega-1.md
