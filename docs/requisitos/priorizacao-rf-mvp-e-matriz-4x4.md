@@ -139,3 +139,31 @@ Considerando Valor de Negócio, Esforço Técnico, dependências e continuidade 
 | **RF08** | Deliberar solicitação de reembolso | Completa o fluxo de análise e decisão das solicitações de reembolso. |
 | **RF09** | Apropriar custos operacionais | Relaciona os custos operacionais aos respectivos contratos. |
 | **RF10** | Consultar rastreabilidade de custos | Permite consultar a origem e os dados relacionados aos custos apropriados. |
+
+## 8.5 Requisitos Pós-MVP
+
+Os requisitos abaixo não fazem parte da primeira delimitação do MVP. A postergação considera sua posição na Matriz 4×4, o esforço de implementação e o fato de que não são necessários para estabelecer o fluxo operacional mínimo definido anteriormente.
+
+| RF | Requisito Funcional | Tratamento |
+| :---: | :--- | :--- |
+| **RF11** | Filtrar indicadores de custos | **Fase posterior** — amplia a capacidade analítica após a consolidação dos processos operacionais. |
+| **RF12** | Monitorar execução orçamentária | **Fase posterior** — possui maior esforço técnico e depende da existência de uma base consolidada de custos apropriados. |
+| **RF15** | Consultar trilha de auditoria | **Fase posterior** — a consulta pela interface pode ser evoluída após a estabilização dos processos principais. |
+| **RF16** | Exportar relatório de auditoria | **Fase posterior** — apresenta menor valor relativo e maior esforço, não sendo necessária para completar o fluxo operacional inicial. |
+
+!!! warning "Auditoria no MVP"
+    A postergação de **RF15** e **RF16** não significa eliminar os mecanismos de auditoria da solução. As regras relacionadas ao registro, atomicidade, imutabilidade e retenção das informações de auditoria permanecem aplicáveis. O que é postergado é a disponibilização das funcionalidades de **consulta e exportação** da trilha de auditoria.
+
+## 8.6 Tratamento dos Requisitos de Alto Valor e Alto Esforço
+
+Os requisitos **RF04, RF05 e RF09** apresentam simultaneamente **Valor de Negócio 4** e **Esforço Técnico 3**.
+
+Apesar do esforço técnico mais elevado, esses requisitos estão diretamente relacionados aos principais processos operacionais da solução. Por esse motivo, eles permanecem no MVP, adotando-se uma estratégia de **redução e controle de escopo** para a primeira versão.
+
+| RF | Estratégia para o MVP |
+| :---: | :--- |
+| **RF04** | Implementar o registro essencial dos apontamentos de campo, contemplando as informações e evidências necessárias ao fluxo operacional. |
+| **RF05** | Implementar a consolidação dos registros homologados necessários para a prévia de fechamento, mantendo o escopo concentrado no processo financeiro principal. |
+| **RF09** | Implementar a apropriação básica dos custos aos contratos, preservando as regras de validação e rastreabilidade necessárias. |
+
+Funcionalidades complementares ou evoluções desses processos poderão ser incorporadas em fases posteriores, sem comprometer o fluxo fundamental definido para o MVP.
