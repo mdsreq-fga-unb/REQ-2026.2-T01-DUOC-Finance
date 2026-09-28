@@ -211,3 +211,9 @@ A seleção final do MVP abrange **12 Requisitos Funcionais (RF01 a RF10, RF13 e
 Adicionalmente, o mapeamento de rastreabilidade comprovou a eficácia do escopo definido, cobrindo **100% dos requisitos de unificação de dados (OE1) e eficiência financeira (OE2)** já no MVP, além de garantir a base transacional necessária para a inteligência de custos (OE3) e a governança (OE4).
 
 Os requisitos postergados (**RF11, RF12, RF15 e RF16**) constituem o backlog evolutivo planejado para a **Fase 2 (Pós-MVP)**. Essa divisão clara de escopo protege o cronograma da Unidade 2, elimina dependências críticas e assegura a entrega de uma solução viável, robusta e imediatamente operacional para a DUOC Arquitetura e Engenharia.
+
+## Histórico de Versão
+
+| Versão | Data | Descrição | Autor(es) | Revisor(es) |
+| :---: | :---: | :--- | :--- | :--- |
+| 1.0 | 28/09/2026 | Construção da Matriz 4×4 (Valor × Esforço) e definição dos RFs do MVP | Gustavo Bonifácio | - |
