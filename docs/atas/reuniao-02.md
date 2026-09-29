@@ -43,7 +43,7 @@ A equipe consolidou o diagnóstico sociotécnico da DUOC, marcado pela fragmenta
 
 * **Visão Modular baseada em Perfis (RBAC):**
     * Unificação da automação da folha de pagamento e do cálculo de comissões.
-    * A densidade de informações exibida varia conforme o perfil do usuário (ex.: a sócia administradora acompanha a rentabilidade consolidada dos contratos; o colaborador de campo acessa exclusivamente suas próprias horas e solicitações de reembolso).
+    * A densidade de informações exibida varia conforme o perfil do usuário (ex.: a auxiliar administradora acompanha a rentabilidade consolidada dos contratos; o colaborador de campo acessa exclusivamente suas próprias horas e solicitações de reembolso).
 * **Desafios de Engenharia de Dados:**
     * A modelagem do banco relacional representa o ponto de maior complexidade lógica do projeto, devendo suportar:
         1. Cadastro centralizado de funcionários, diaristas e tabela de benefícios.
