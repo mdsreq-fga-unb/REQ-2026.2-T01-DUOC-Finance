@@ -77,9 +77,11 @@ nav:
   - 'Capítulo 5 - Engenharia de Requisitos': engenharia-requisitos/index.md
   - 'Capítulo 6 - Cronograma': cronograma/index.md
   - 'Capítulo 7 - Interação com Cliente': interacao-cliente/index.md
-  - 'Capítulo 8 - Requisitos (Unidade 2)': requisitos/index.md
-  - 'Capítulo 9 - DoR e DoD (Unidade 2)': dor-dod/index.md
-  - 'Capítulo 10 - Backlog (Unidade 2)': backlog/index.md
+  - 'Capítulo 8 - Requisitos (Atividade 2/3)':
+      - 'Especificação de Requisitos': requisitos/index.md
+      - 'Priorização e MVP': requisitos/priorizacao.md
+  - 'Capítulo 9 - DoR e DoD': dor-dod/index.md
+  - 'Capítulo 10 - Backlog (Atividade 4)': backlog/index.md
   - 'Capítulo 11 - Lições Aprendidas': licoes-aprendidas/index.md
   - 'Capítulo 12 - Referências': referencias/index.md
   - 'Atas de Reuniões':
@@ -88,6 +90,7 @@ nav:
     - 'Reunião 02 (07/09) — Alinhamento Metodológico': atas/reuniao-02.md
     - 'Reunião 03 (07/09) — Apresentação da Unidade 1': atas/reuniao-03.md
     - 'Reunião 04 (17/09) — Planejamento da Unidade 2': atas/reuniao-04.md
+    - 'Reunião 05 (24/09) — Priorização e Valor de Negócio': atas/reuniao-05.md
   - 'Entregas do Projeto':
     - 'Painel Geral de Entregas': entregas/index.md
     - 'Entrega 1 (Ponto de Controle 1)': entregas/entrega-1.md

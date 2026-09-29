@@ -1785,5 +1785,29 @@
   }
 }
 
+/* ============================================================
+   AMPLIAÇÃO E AJUSTE DE ESCALA: GRÁFICO CARTESIANO MERMAID (MoSCoW)
+   Aumenta a largura e comprimento do gráfico para evitar cortes
+   ============================================================ */
 
+.mermaid-cartesian-container {
+  width: 100% !important;
+  margin: 1.5rem auto 2.5rem auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  overflow-x: auto !important;
+  padding: 0.5rem 0 !important;
+}
 
+.mermaid-cartesian-container pre.mermaid,
+.mermaid-cartesian-container .mermaid {
+  width: 100% !important;
+  min-width: 780px !important;
+  max-width: 1050px !important;
+}
+
+.mermaid-cartesian-container .mermaid svg {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 680px !important;
+}
