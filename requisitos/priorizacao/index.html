@@ -1,0 +1,2768 @@
+<!DOCTYPE html><html lang="pt" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação de Requisitos de Software — DUOC Arquitetura e Engenharia">
+      
+      
+        <meta name="author" content="Equipe Cascata Ágil">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../feedback/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Priorização e MVP - Cascata Ágil</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#capitulo-8-priorizacao-de-requisitos-e-definicao-do-mvp" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Cascata Ágil" class="md-header__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cascata Ágil
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Priorização e MVP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Alternar para modo claro" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Alternar para modo escuro" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cascata Ágil" class="md-nav__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Cascata Ágil
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao-produto/capitulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 1 - Cenário Atual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao-produto/capitulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 2 - Solução Proposta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intervencao-social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 3 - Intervenção Social
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estrategias-esw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 4 - Estratégias de ESW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../engenharia-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 5 - Engenharia de Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 6 - Cronograma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interacao-cliente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 7 - Interação com Cliente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 8 - Requisitos (Unidade 2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Capítulo 8 - Requisitos (Unidade 2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação de Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Priorização e MVP
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Priorização e MVP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#81-avaliacao-do-valor-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Avaliação do Valor de Negócio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-avaliacao-do-esforco-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Avaliação do Esforço Técnico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83-tabela-consolidada-das-avaliacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Tabela Consolidada das Avaliações
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84-matriz-4-4-valor-de-negocio-esforco-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Matriz 4 × 4 — Valor de Negócio × Esforço Técnico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85-definicao-dos-requisitos-funcionais-do-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 Definição dos Requisitos Funcionais do MVP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#86-tratamento-dos-requisitos-nao-funcionais-rnfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6 Tratamento dos Requisitos Não Funcionais (RNFs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#87-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7 Evidência e Registro da Validação do MVP com o Cliente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback da Avaliação em Pares
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dor-dod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 9 - DoR e DoD (Unidade 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backlog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 10 - Backlog (Unidade 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../licoes-aprendidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 11 - Lições Aprendidas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../referencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 12 - Referências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14">
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atas de Reuniões
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atas de Reuniões
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painel Geral de Atas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/reuniao-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 01 (05/09) — Elicitação e MVP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/reuniao-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 02 (07/09) — Alinhamento Metodológico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/reuniao-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 03 (07/09) — Apresentação da Unidade 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/reuniao-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 04 (17/09) — Planejamento da Unidade 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/reuniao-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 05 (24/09) — Priorização e Valor de Negócio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15">
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entregas do Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entregas do Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painel Geral de Entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 1 (Ponto de Controle 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 2 (Ponto de Controle 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 3 (Ponto de Controle 3)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 4 (Ponto de Controle 4)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#81-avaliacao-do-valor-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Avaliação do Valor de Negócio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-avaliacao-do-esforco-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Avaliação do Esforço Técnico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83-tabela-consolidada-das-avaliacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Tabela Consolidada das Avaliações
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84-matriz-4-4-valor-de-negocio-esforco-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Matriz 4 × 4 — Valor de Negócio × Esforço Técnico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85-definicao-dos-requisitos-funcionais-do-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 Definição dos Requisitos Funcionais do MVP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#86-tratamento-dos-requisitos-nao-funcionais-rnfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6 Tratamento dos Requisitos Não Funcionais (RNFs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#87-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7 Evidência e Registro da Validação do MVP com o Cliente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegação">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Capítulo 8 - Requisitos (Unidade 2)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="capitulo-8-priorizacao-de-requisitos-e-definicao-do-mvp">Capítulo 8: Priorização de Requisitos e Definição do MVP<a class="headerlink" href="#capitulo-8-priorizacao-de-requisitos-e-definicao-do-mvp" title="Permanent link">¶</a></h1>
+<p>Este documento consolida a estratégia integrada de priorização do sistema <strong>DUOC Finance</strong>, articulando os <strong>Requisitos Funcionais (RF)</strong> e <strong>Requisitos Não Funcionais (RNF)</strong> sob duas perspectivas complementares e interdependentes:</p>
+<ol>
+<li><strong>Valor de Negócio:</strong> Avaliado com a participação direta da cliente parceira <strong>Maria Beatryz Vieira de Sousa</strong> (Auxiliar-Administradora da DUOC Arquitetura e Engenharia), formalizado na <a href="../../atas/reuniao-05/">Ata da Reunião 05 (24/09/2026)</a>.</li>
+<li><strong>Esforço Técnico:</strong> Avaliado pela equipe técnica do projeto (<strong>Cascata Ágil</strong>), considerando esforço em horas, complexidade arquitetural e lacuna de capacidade técnica.</li>
+</ol>
+<p>Os resultados dessas avaliações são cruzados na <strong>Matriz 4 × 4 (Valor de Negócio × Esforço Técnico)</strong>, fornecendo o embasamento analítico para a delimitação da linha de corte do <strong>Produto Mínimo Viável (MVP)</strong>, o tratamento dos requisitos de alto valor e alto esforço, a vinculação dos atributos de qualidade (RNFs) e a validação consensual do escopo.</p>
+<hr>
+<h2 id="81-avaliacao-do-valor-de-negocio">8.1 Avaliação do Valor de Negócio<a class="headerlink" href="#81-avaliacao-do-valor-de-negocio" title="Permanent link">¶</a></h2>
+<p>A Engenharia de Requisitos orientada ao valor assegura que os esforços de modelagem, prototipação ágil (<em>UI-First</em>) e implementação concentrem-se prioritariamente nas funcionalidades que geram o mais alto retorno operacional e mitigam os maiores riscos institucionais da organização parceira.</p>
+<h3 id="811-criterios-qualitativos-de-negocio">8.1.1 Critérios Qualitativos de Negócio<a class="headerlink" href="#811-criterios-qualitativos-de-negocio" title="Permanent link">¶</a></h3>
+<p>Os critérios adotados para balizar o julgamento de valor durante a sessão com a cliente consideraram:</p>
+<ol>
+<li><strong>Importância para Resolver o Problema Central:</strong> Eliminação da dependência de planilhas manuais e mensagens fragmentadas de WhatsApp na apuração de diárias e prestação de contas (conforme diagnosticado no <a href="../../visao-produto/capitulo-1/#diagrama-de-causa-e-efeito-ishikawa">Diagrama de Ishikawa</a> e nos fluxos TR-01 a TR-04).</li>
+<li><strong>Contribuição para os Objetivos Estratégicos:</strong> Alinhamento direto com os quatro Objetivos Específicos da solução:<ul>
+<li><strong>OE1 — Padronizar e Unificar os Dados:</strong> Centralização cadastral de colaboradores e coleta estruturada de campo via Relatório de Viagem Técnica (RVT).</li>
+<li><strong>OE2 — Aumentar a Eficiência Administrativo-Financeira:</strong> Automação do fechamento de diárias técnicas e fluxos ágeis de reembolso com notas fiscais digitalizadas.</li>
+<li><strong>OE3 — Transparecer os Custos por Contrato:</strong> Apropriação clara de despesas e mão de obra por obra e centro de custo.</li>
+<li><strong>OE4 — Garantir Segurança e Governança:</strong> Autenticação segura, controle de acesso baseado em papéis (RBAC) e rastreabilidade probatória.</li>
+</ul>
+</li>
+<li><strong>Mitigação de Riscos Trabalhistas e Fiscais:</strong> Requisitos que evitam pagamentos indevidos a colaboradores desligados (RN04), asseguram a comprovação fiscal em despesas (RN06) e garantem a retenção de auditoria conforme o Artigo 11 da CLT (RN19).</li>
+<li><strong>Segregação de Funções e Privacidade (LGPD):</strong> Proteção do sigilo de remunerações e dados bancários, impedindo que técnicos de campo visualizem dados financeiros globais (RN14, RN16).</li>
+</ol>
+<h3 id="812-criterios-quantitativos-de-negocio">8.1.2 Critérios Quantitativos de Negócio<a class="headerlink" href="#812-criterios-quantitativos-de-negocio" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Frequência e Abrangência de Uso:</strong> Volume diário de transações impactadas (apontamentos de obra e reembolsos contínuos vs. rotinas quinzenais/mensais de fechamento).</li>
+<li><strong>Economia de Horas Administrativas (H/mês):</strong> Redução estimada de mais de 30 horas mensais gastas pela auxiliar-administradora na conferência manual de recibos físicos e conciliação de tabelas.</li>
+<li><strong>Prevenção de Perdas Monetárias:</strong> Eliminação de pagamentos duplicados, erros de arredondamento em comissões e reembolsos sem documento fiscal correspondente (tolerância zero a desvios, RNF06).</li>
+<li><strong>Redução do Tempo de Ciclo:</strong> Encurtamento do ciclo de liberação de pagamentos de 5 dias úteis de conferência manual para processamento instantâneo supervisionado (RNF05).</li>
+</ol>
+<h3 id="813-escala-de-valor-de-negocio-e-associacao-ao-moscow">8.1.3 Escala de Valor de Negócio e Associação ao MoSCoW<a class="headerlink" href="#813-escala-de-valor-de-negocio-e-associacao-ao-moscow" title="Permanent link">¶</a></h3>
+<p>Para tornar a avaliação auditável e comparável, combinou-se o método <strong>MoSCoW</strong> a uma <strong>escala quantitativa de 1 a 4</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Pontuação</th>
+<th style="text-align: center;">Classificação MoSCoW</th>
+<th style="text-align: left;">Interpretação e Impacto no Negócio</th>
+<th style="text-align: left;">Diretriz Operacional para o MVP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"><strong>Must have</strong><br><em>(Mandatório / Crítico)</em></td>
+<td style="text-align: left;"><strong>Indispensável:</strong> Sem esta funcionalidade, o sistema torna-se operacionalmente inviável ou juridicamente vulnerável. Sua ausência paralisa o processo central (apontamento ou fechamento financeiro) e impede a substituição das planilhas legadas.</td>
+<td style="text-align: left;"><strong>Inclusão obrigatória no MVP.</strong> Bloqueante para entrada em produção.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: center;"><strong>Should have</strong><br><em>(Importante / Alta Prioridade)</em></td>
+<td style="text-align: left;"><strong>Muito importante:</strong> Resolve atritos operacionais severos ou automatiza etapas de suporte direto ao fluxo principal. O produto ainda pode operar temporariamente sem ela mediante contorno manual assistido a curtíssimo prazo.</td>
+<td style="text-align: left;"><strong>Inclusão prioritária no MVP</strong> para garantir sustentabilidade da rotina de trabalho.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;"><strong>Could have</strong><br><em>(Desejável / Média Prioridade)</em></td>
+<td style="text-align: left;"><strong>Agrega valor e conveniência:</strong> Melhora a experiência do usuário ou oferece recursos analíticos avançados, mas sua ausência não degrada a execução dos fluxos financeiros e cadastrais essenciais.</td>
+<td style="text-align: left;"><strong>Inclusão condicionada à capacidade residual</strong> ou postergada para o ciclo seguinte.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;"><strong>Won't have now</strong><br><em>(Postergado / Baixa Prioridade)</em></td>
+<td style="text-align: left;"><strong>Não prioritário para a versão atual:</strong> Requisito reconhecido como valoroso para a maturidade corporativa futura, mas expressamente postergado por demandar integrações externas ou não atender a dores imediatas.</td>
+<td style="text-align: left;"><strong>Fora do MVP.</strong> Registrado formalmente no <em>roadmap</em> pós-implantação (Release 2.0).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="814-diagrama-cartesiano-moscow-valor-de-negocio-vs-urgencia-operacional">8.1.4 Diagrama Cartesiano MoSCoW (Valor de Negócio vs. Urgência Operacional)<a class="headerlink" href="#814-diagrama-cartesiano-moscow-valor-de-negocio-vs-urgencia-operacional" title="Permanent link">¶</a></h3>
+<p>A distribuição consensual dos 21 Requisitos Funcionais sob a ótica de <strong>Valor de Negócio</strong> e <strong>Urgência Operacional</strong> para resolução das dores da DUOC é expressa visualmente no diagrama cartesiano abaixo:</p>
+<pre class="mermaid"><code>quadrantChart
+    title Matriz Cartesiana MoSCoW: Valor vs. Urgência
+    x-axis "Menor Urgência Operacional" --&gt; "Alta Urgência Operacional"
+    y-axis "Menor Valor de Negócio" --&gt; "Alto Valor de Negócio"
+    quadrant-1 "MUST HAVE"
+    quadrant-2 "SHOULD HAVE"
+    quadrant-3 "WON'T HAVE"
+    quadrant-4 "COULD HAVE"
+    "RF13": [0.60, 0.94]
+    "RF04": [0.60, 0.82]
+    "RF06": [0.60, 0.70]
+    "RF08": [0.60, 0.58]
+    "RF01": [0.82, 0.88]
+    "RF05": [0.82, 0.76]
+    "RF07": [0.82, 0.64]
+    "RF19": [0.82, 0.56]
+    "RF02": [0.12, 0.93]
+    "RF14": [0.12, 0.82]
+    "RF18": [0.12, 0.70]
+    "RF10": [0.12, 0.58]
+    "RF03": [0.35, 0.88]
+    "RF17": [0.35, 0.76]
+    "RF09": [0.35, 0.64]
+    "RF21": [0.35, 0.56]
+    "RF11": [0.62, 0.36]
+    "RF15": [0.62, 0.20]
+    "RF12": [0.82, 0.28]
+    "RF20": [0.82, 0.12]
+    "RF16": [0.25, 0.22]</code></pre>
+<h3 id="815-distribuicao-moscow-e-linha-de-corte-do-mvp">8.1.5 Distribuição MoSCoW e Linha de Corte do MVP<a class="headerlink" href="#815-distribuicao-moscow-e-linha-de-corte-do-mvp" title="Permanent link">¶</a></h3>
+<p>O diagrama estrutural abaixo sintetiza a proporção das quatro categorias MoSCoW e a delimitação formal da linha de corte pactuada com a auxiliar-administradora Maria Beatryz:</p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph MOSCOW["Distribuição MoSCoW dos 21 Requisitos Funcionais"]
+        direction TB
+        M["&lt;b&gt;MUST HAVE (Nota 4)&lt;/b&gt;&lt;br&gt;8 RFs (38,1%)&lt;br&gt;RF01, RF04, RF05, RF06, RF07, RF08, RF13, RF19"]
+        S["&lt;b&gt;SHOULD HAVE (Nota 3)&lt;/b&gt;&lt;br&gt;8 RFs (38,1%)&lt;br&gt;RF02, RF03, RF09, RF10, RF14, RF17, RF18, RF21"]
+        C["&lt;b&gt;COULD HAVE (Nota 2)&lt;/b&gt;&lt;br&gt;4 RFs (19,0%)&lt;br&gt;RF11, RF12, RF15, RF20"]
+        W["&lt;b&gt;WON'T HAVE NOW (Nota 1)&lt;/b&gt;&lt;br&gt;1 RF (4,8%)&lt;br&gt;RF16"]
+        M ~~~ S
+        S ~~~ C
+        C ~~~ W
+    end
+
+    subgraph DEST["Linha de Corte e Destinação"]
+        direction TB
+        MVP["&lt;b&gt;PRODUTO MÍNIMO VIÁVEL (MVP)&lt;/b&gt;&lt;br&gt;16 RFs Selecionados (76,2% do total)&lt;br&gt;Núcleo Operacional Ponta a Ponta Homologado"]
+        POST["&lt;b&gt;BACKLOG DE EVOLUÇÃO&lt;/b&gt;&lt;br&gt;5 RFs Postergados (23,8% do total)&lt;br&gt;Fase 2 (RAD Incr. 3) &amp; Release 2.0"]
+        MVP ~~~ POST
+    end
+
+    M ==&gt; MVP
+    S ==&gt; MVP
+    C -.-&gt; POST
+    W -.-&gt; POST
+
+    classDef mustClass fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff;
+    classDef shouldClass fill:#0284c7,stroke:#0369a1,stroke-width:2px,color:#ffffff;
+    classDef couldClass fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#ffffff;
+    classDef wontClass fill:#64748b,stroke:#475569,stroke-width:2px,color:#ffffff;
+    classDef mvpClass fill:#047857,stroke:#065f46,stroke-width:3px,color:#ffffff;
+    classDef postClass fill:#334155,stroke:#1e293b,stroke-width:2px,color:#ffffff;
+
+    class M mustClass;
+    class S shouldClass;
+    class C couldClass;
+    class W wontClass;
+    class MVP mvpClass;
+    class POST postClass;</code></pre>
+<hr>
+<h2 id="82-avaliacao-do-esforco-tecnico">8.2 Avaliação do Esforço Técnico<a class="headerlink" href="#82-avaliacao-do-esforco-tecnico" title="Permanent link">¶</a></h2>
+<p>A avaliação técnica foi conduzida pela equipe de desenvolvimento e arquitetura da <strong>Cascata Ágil</strong>, analisando a demanda de implementação para cada um dos 21 Requisitos Funcionais.</p>
+<p>Para manter o rigor analítico e escalas orientadas no mesmo sentido (onde <strong>1 representa menor barreira e 4 representa maior desafio</strong>), o esforço técnico consolidado é composto por três dimensões mensuráveis:</p>
+<h3 id="821-escalas-tecnicas">8.2.1 Escalas Técnicas<a class="headerlink" href="#821-escalas-tecnicas" title="Permanent link">¶</a></h3>
+<h4 id="1-esforco-de-implementacao-tempo-em-horas">1. Esforço de Implementação (Tempo em Horas)<a class="headerlink" href="#1-esforco-de-implementacao-tempo-em-horas" title="Permanent link">¶</a></h4>
+<p>Mede o volume de trabalho em pessoa-hora para codificação de backend, frontend, persistência e elaboração de testes automatizados:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Pontuação</th>
+<th style="text-align: left;">Classificação</th>
+<th style="text-align: center;">Faixa de Tempo</th>
+<th style="text-align: left;">Descrição Operacional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: left;">Esforço baixo</td>
+<td style="text-align: center;">Até 2 horas</td>
+<td style="text-align: left;">Alteração pontual, fluxo direto com tela simples e validação básica.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Esforço moderado</td>
+<td style="text-align: center;">Entre 2 e 8 horas</td>
+<td style="text-align: left;">Fluxo de complexidade média, com formulários, validações e persistência relacional padrão.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Esforço alto</td>
+<td style="text-align: center;">Entre 8 e 16 horas</td>
+<td style="text-align: left;">Fluxo abrangente, com múltiplas etapas, processamentos condicionais ou manipulação de arquivos/tokens.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">Esforço muito alto</td>
+<td style="text-align: center;">Mais de 16 horas</td>
+<td style="text-align: left;">Rotina de alta densidade algorítmica, concorrência crítica, reconciliação de dados em lote ou integração externa com incertezas.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-complexidade-tecnica">2. Complexidade Técnica<a class="headerlink" href="#2-complexidade-tecnica" title="Permanent link">¶</a></h4>
+<p>Avalia as dependências arquiteturais, regras de validação cruzada e requisitos de integridade transacional:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Pontuação</th>
+<th style="text-align: left;">Classificação</th>
+<th style="text-align: left;">Interpretação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Utiliza solução conhecida, padrão CRUD, com poucas dependências locais.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Moderada</td>
+<td style="text-align: left;">Exige parametrizações de filtros, validações condicionais simples ou integração interna entre duas tabelas.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Alta</td>
+<td style="text-align: left;">Possui regras de negócio estritas (ex.: imutabilidade, bloqueio retroativo, validações monetárias centesimais ou upload de mídia).</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">Muito alta</td>
+<td style="text-align: left;">Apresenta consistência transacional ACID mandatória, segregação estrita de papéis (RBAC em camadas), trilha de auditoria atômica ou integração com sistemas externos legados.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-lacuna-de-capacidade-da-equipe">3. Lacuna de Capacidade da Equipe<a class="headerlink" href="#3-lacuna-de-capacidade-da-equipe" title="Permanent link">¶</a></h4>
+<p>Mede a distância entre o domínio tecnológico/conceitual necessário e a experiência prévia dos integrantes:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Pontuação</th>
+<th style="text-align: left;">Classificação</th>
+<th style="text-align: left;">Interpretação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: left;">Domínio pleno</td>
+<td style="text-align: left;">A equipe domina plenamente os conceitos e as tecnologias envolvidas (ex.: React/TypeScript, PostgreSQL básico, formulários).</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Conhecimento suficiente</td>
+<td style="text-align: left;">A equipe possui conhecimento teórico e prático satisfatório, demandando apenas pesquisa pontual ou adaptação de padrões conhecidos.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Aprendizagem relevante</td>
+<td style="text-align: left;">A equipe precisa desenvolver ou validar conceitos específicos (ex.: manipulação de ponto fixo centesimal, isolamento multitenancy/RBAC complexo).</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">Lacuna crítica</td>
+<td style="text-align: left;">A equipe ainda não possui experiência prévia com o padrão ou tecnologia exigida, demandando investigação aprofundada ou prova de conceito.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="822-formula-de-consolidacao-e-regra-de-conversao">8.2.2 Fórmula de Consolidação e Regra de Conversão<a class="headerlink" href="#822-formula-de-consolidacao-e-regra-de-conversao" title="Permanent link">¶</a></h3>
+<p>Para consolidar as três dimensões técnicas em um indicador único e reprodutível, adota-se a média aritmética simples:</p>
+<div style="background-color: var(--md-code-bg-color); border-left: 3px solid var(--md-primary-fg-color); border-radius: 4px; padding: 6px 14px; margin: 12px auto; text-align: center; font-size: 0.90rem; max-width: 800px;">
+  <span style="font-weight: 600;">Média Consolidada</span>
+  <span style="margin: 0 6px; font-weight: bold; font-size: 12px">=</span>
+  <span style="display: inline-block; vertical-align: middle; text-align: center;">
+    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 6px 2px 6px; font-weight: 500;">
+      Esforço (Nota) + Complexidade + Lacuna de Capacidade
+    </span>
+    <span style="display: block; padding-top: 2px; font-weight: 600; font-size: 1.05em;">
+      3
+    </span>
+  </span>
+</div>
+
+<p>Para viabilizar o cruzamento na <strong>Matriz 4 × 4</strong>, a média decimal é convertida para uma escala ordinal inteira de <strong>1 a 4</strong> de acordo com faixas uniformes de arredondamento:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Intervalo da Média</th>
+<th style="text-align: center;">Esforço Consolidado na Matriz</th>
+<th style="text-align: left;">Interpretação Técnica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1,00 a 1,49</strong></td>
+<td style="text-align: center;"><strong>1 — Baixo</strong></td>
+<td style="text-align: left;">Demanda técnica muito reduzida, tecnologia dominada e rápida entrega.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>1,50 a 2,49</strong></td>
+<td style="text-align: center;"><strong>2 — Moderado</strong></td>
+<td style="text-align: left;">Demanda balanceada, regras claras e execução controlada no ciclo regular.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2,50 a 3,49</strong></td>
+<td style="text-align: center;"><strong>3 — Alto</strong></td>
+<td style="text-align: left;">Demanda substancial, regras de negócio densas e necessidade de atenção a testes.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3,50 a 4,00</strong></td>
+<td style="text-align: center;"><strong>4 — Muito alto</strong></td>
+<td style="text-align: left;">Elevada incerteza, múltiplos componentes acoplados ou risco de retrabalho expressivo.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="83-tabela-consolidada-das-avaliacoes">8.3 Tabela Consolidada das Avaliações<a class="headerlink" href="#83-tabela-consolidada-das-avaliacoes" title="Permanent link">¶</a></h2>
+<p>A tabela a seguir consolida as avaliações de <strong>todos os 21 Requisitos Funcionais</strong> da especificação (RF01 a RF21), integrando o <strong>Valor de Negócio</strong> (acordado com a cliente Maria Beatryz), a justificativa operacional, as notas das três dimensões técnicas e o <strong>Esforço Técnico Consolidado</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Código</th>
+<th style="text-align: left;">Requisito Funcional</th>
+<th style="text-align: center;">OE / CAR</th>
+<th style="text-align: center;">Valor Negócio</th>
+<th style="text-align: left;">Justificativa do Cliente</th>
+<th style="text-align: center;">Esforço (h) / Nota</th>
+<th style="text-align: center;">Complex.</th>
+<th style="text-align: center;">Lacuna</th>
+<th style="text-align: center;">Média Consolidada</th>
+<th style="text-align: center;">Esforço Consolidado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>RF01</strong></td>
+<td style="text-align: left;"><strong>Cadastrar colaborador</strong></td>
+<td style="text-align: center;">OE1 / CAR-01</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">Base fundacional: sem cadastro validado por CPF (RN01), nenhum pagamento de diária ou apontamento de obra pode ser gerado.</td>
+<td style="text-align: center;">6h (2)</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1,67</td>
+<td style="text-align: center;"><strong>2 — Moderado</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF02</strong></td>
+<td style="text-align: left;"><strong>Atualizar cadastro de colaborador</strong></td>
+<td style="text-align: center;">OE1 / CAR-01</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Alterações de chaves Pix e dados de contato são semanais; o administrativo precisa de autonomia sem acionar desenvolvedores.</td>
+<td style="text-align: center;">6h (2)</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1,67</td>
+<td style="text-align: center;"><strong>2 — Moderado</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF03</strong></td>
+<td style="text-align: left;"><strong>Registrar movimentação funcional</strong></td>
+<td style="text-align: center;">OE1 / CAR-01</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Afastamentos e rescisões devem revogar credenciais e bloquear pagamentos indevidos a ex-colaboradores (RN03, RN04).</td>
+<td style="text-align: center;">6h (2)</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2,00</td>
+<td style="text-align: center;"><strong>2 — Moderado</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF04</strong></td>
+<td style="text-align: left;"><strong>Submeter apontamento de campo</strong></td>
+<td style="text-align: center;">OE1 / CAR-02</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">Coração da coleta externa: substitui anotações em papel e fotos no WhatsApp pelo RVT digital com evidências de obra.</td>
+<td style="text-align: center;">16h (3)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3,00</td>
+<td style="text-align: center;"><strong>3 — Alto</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF19</strong></td>
+<td style="text-align: left;"><strong>Consultar apontamentos registrados</strong></td>
+<td style="text-align: center;">OE1 / CAR-02</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">O colaborador precisa acompanhar se o apontamento foi homologado ou se requer retificação antes do fechamento financeiro.</td>
+<td style="text-align: center;">4h (2)</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1,67</td>
+<td style="text-align: center;"><strong>2 — Moderado</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF20</strong></td>
+<td style="text-align: left;"><strong>Importar presenças homologadas</strong></td>
+<td style="text-align: center;">OE1 / CAR-09</td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Integração externa com o <em>auditor.ia</em>; no ciclo piloto, a entrada pode ser validada diretamente pelo RVT interno.</td>
+<td style="text-align: center;">12h (3)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3,00</td>
+<td style="text-align: center;"><strong>3 — Alto</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF05</strong></td>
+<td style="text-align: left;"><strong>Solicitar prévia de fechamento</strong></td>
+<td style="text-align: center;">OE2 / CAR-03</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">Maior gargalo da gestão: elimina mais de 30 horas mensais de conferência manual de planilhas para apurar diárias e comissões.</td>
+<td style="text-align: center;">16h (3)</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3,33</td>
+<td style="text-align: center;"><strong>3 — Alto</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF06</strong></td>
+<td style="text-align: left;"><strong>Homologar fechamento financeiro</strong></td>
+<td style="text-align: center;">OE2 / CAR-03</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">Garante a imutabilidade do lote contábil antes do repasse financeiro, conferindo segurança jurídica à Auxiliar-administradora.</td>
+<td style="text-align: center;">6h (2)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2,33</td>
+<td style="text-align: center;"><strong>2 — Moderado</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF07</strong></td>
+<td style="text-align: left;"><strong>Submeter solicitação de reembolso</strong></td>
+<td style="text-align: center;">OE2 / CAR-04</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">Estanca a perda recorrente de comprovantes fiscais em obras externas exigindo anexo digital obrigatório (RN06).</td>
+<td style="text-align: center;">6h (2)</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2,00</td>
+<td style="text-align: center;"><strong>2 — Moderado</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF08</strong></td>
+<td style="text-align: left;"><strong>Deliberar solicitação de reembolso</strong></td>
+<td style="text-align: center;">OE2 / CAR-04</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">Alçada formal de aprovação da diretoria sobre despesas de viagem antes do desembolso, evitando pagamentos indevidos.</td>
+<td style="text-align: center;">6h (2)</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2,00</td>
+<td style="text-align: center;"><strong>2 — Moderado</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF21</strong></td>
+<td style="text-align: left;"><strong>Estornar fechamento financeiro</strong></td>
+<td style="text-align: center;">OE2 / CAR-03</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Permite retificar inconsistências excepcionais em lotes homologados mediante justificativa mandatória e auditoria (RN08, RNF08).</td>
+<td style="text-align: center;">10h (3)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2,67</td>
+<td style="text-align: center;"><strong>3 — Alto</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF09</strong></td>
+<td style="text-align: left;"><strong>Apropriar custos operacionais</strong></td>
+<td style="text-align: center;">OE3 / CAR-05</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Aloca montantes de diárias e reembolsos diretamente aos contratos de cada obra, permitindo apurar a margem real de lucro.</td>
+<td style="text-align: center;">16h (3)</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3,33</td>
+<td style="text-align: center;"><strong>3 — Alto</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF10</strong></td>
+<td style="text-align: left;"><strong>Consultar rastreabilidade de custos</strong></td>
+<td style="text-align: center;">OE3 / CAR-05</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Evidencia a trilha documental da origem de cada despesa para prestação de contas com contratantes corporativos.</td>
+<td style="text-align: center;">6h (2)</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2,00</td>
+<td style="text-align: center;"><strong>2 — Moderado</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF11</strong></td>
+<td style="text-align: left;"><strong>Filtrar indicadores de custos</strong></td>
+<td style="text-align: center;">OE3 / CAR-06</td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Visão analítica refinada; no início, listagens tabulares por contrato já suprem a rotina de conferência.</td>
+<td style="text-align: center;">6h (2)</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2,00</td>
+<td style="text-align: center;"><strong>2 — Moderado</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF12</strong></td>
+<td style="text-align: left;"><strong>Monitorar execução orçamentária</strong></td>
+<td style="text-align: center;">OE3 / CAR-06</td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Alertas visuais de desvio orçamentário; embora útil, a apuração correta do custo real tem precedência sobre os gráficos.</td>
+<td style="text-align: center;">12h (3)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3,00</td>
+<td style="text-align: center;"><strong>3 — Alto</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF13</strong></td>
+<td style="text-align: left;"><strong>Efetuar login no sistema</strong></td>
+<td style="text-align: center;">OE4 / CAR-07</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">Condição <em>sine qua non</em> de segurança da informação e conformidade com a LGPD para proteger dados bancários e salariais.</td>
+<td style="text-align: center;">2h (1)</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;"><strong>1 — Baixo</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF14</strong></td>
+<td style="text-align: left;"><strong>Gerenciar perfis de acesso</strong></td>
+<td style="text-align: center;">OE4 / CAR-07</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Garante o princípio do menor privilégio (RBAC), assegurando que técnicos de campo não vejam dados financeiros globais.</td>
+<td style="text-align: center;">6h (2)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2,33</td>
+<td style="text-align: center;"><strong>2 — Moderado</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF15</strong></td>
+<td style="text-align: left;"><strong>Consultar trilha de auditoria</strong></td>
+<td style="text-align: center;">OE4 / CAR-08</td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">A gravação em banco é nativa e atômica; a tela de consulta com filtros é um diferencial que pode aguardar a Fase 2.</td>
+<td style="text-align: center;">10h (3)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3,00</td>
+<td style="text-align: center;"><strong>3 — Alto</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF16</strong></td>
+<td style="text-align: left;"><strong>Exportar relatório de auditoria</strong></td>
+<td style="text-align: center;">OE4 / CAR-08</td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: left;">Demanda preventiva para fiscalizações trabalhistas formais; extrações assistidas pela equipe de TI atendem à fase piloto.</td>
+<td style="text-align: center;">12h (3)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3,00</td>
+<td style="text-align: center;"><strong>3 — Alto</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF17</strong></td>
+<td style="text-align: left;"><strong>Recuperar credenciais de acesso</strong></td>
+<td style="text-align: center;">OE4 / CAR-07</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Evita que o esquecimento de senhas paralise o colaborador em campo ou sobrecarregue a gestão com pedidos de reset manual.</td>
+<td style="text-align: center;">4h (2)</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1,67</td>
+<td style="text-align: center;"><strong>2 — Moderado</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF18</strong></td>
+<td style="text-align: left;"><strong>Encerrar sessão manualmente</strong></td>
+<td style="text-align: center;">OE4 / CAR-07</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Vital para resguardar a sessão ao utilizar aparelhos móveis compartilhados no canteiro de obras.</td>
+<td style="text-align: center;">1h (1)</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;"><strong>1 — Baixo</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="84-matriz-4-4-valor-de-negocio-esforco-tecnico">8.4 Matriz 4 × 4 — Valor de Negócio × Esforço Técnico<a class="headerlink" href="#84-matriz-4-4-valor-de-negocio-esforco-tecnico" title="Permanent link">¶</a></h2>
+<p>O cruzamento bidimensional entre o <strong>Valor de Negócio</strong> (eixo vertical) e o <strong>Esforço Técnico Consolidado</strong> (eixo horizontal) posiciona os 21 requisitos funcionais do sistema.</p>
+<h3 id="841-representacao-visual-da-matriz-4-4-diagrama-cartesiano">8.4.1 Representação Visual da Matriz 4 × 4 (Diagrama Cartesiano)<a class="headerlink" href="#841-representacao-visual-da-matriz-4-4-diagrama-cartesiano" title="Permanent link">¶</a></h3>
+<p>O gráfico cartesiano a seguir mapeia a posição relativa dos requisitos, evidenciando o agrupamento do núcleo do MVP na região de alta entrega de valor com esforço controlado:</p>
+<pre class="mermaid"><code>quadrantChart
+    title Matriz 4x4: Valor de Negócio vs. Esforço Técnico
+    x-axis "Baixo Esforço Técnico" --&gt; "Alto Esforço Técnico"
+    y-axis "Baixo Valor de Negócio" --&gt; "Alto Valor de Negócio"
+    quadrant-1 "Avaliar / Decompor"
+    quadrant-2 "Candidatos ao MVP"
+    quadrant-3 "Oportunidade / Futuro"
+    quadrant-4 "Não Priorizar"
+    "RF13" : [0.08, 0.92]
+    "RF18": [0.08, 0.68]
+    "RF01": [0.20, 0.90]
+    "RF19": [0.20, 0.78]
+    "RF02": [0.20, 0.62]
+    "RF06": [0.32, 0.86]
+    "RF07": [0.32, 0.70]
+    "RF03": [0.32, 0.58]
+    "RF08": [0.44, 0.92]
+    "RF14": [0.44, 0.76]
+    "RF17": [0.44, 0.64]
+    "RF10": [0.44, 0.56]
+    "RF04": [0.60, 0.88]
+    "RF21": [0.60, 0.60]
+    "RF05": [0.80, 0.84]
+    "RF09": [0.80, 0.66]
+    "RF11": [0.32, 0.35]
+    "RF12": [0.60, 0.38]
+    "RF20": [0.60, 0.18]
+    "RF15": [0.80, 0.30]
+    "RF16": [0.80, 0.12]</code></pre>
+<h3 id="842-tabela-da-matriz-4-4">8.4.2 Tabela da Matriz 4 × 4<a class="headerlink" href="#842-tabela-da-matriz-4-4" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Valor de Negócio ↓ / Esforço Técnico →</th>
+<th style="text-align: left;">1 — Baixo</th>
+<th style="text-align: left;">2 — Moderado</th>
+<th style="text-align: left;">3 — Alto</th>
+<th style="text-align: center;">4 — Muito alto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>4 — Muito alto</strong><br><em>(Must have)</em></td>
+<td style="text-align: left;"><strong>RF13</strong> <em>(Efetuar login)</em><br><br><small><strong>Prioridade máxima</strong></small></td>
+<td style="text-align: left;"><strong>RF01</strong> <em>(Cadastrar colaborador)</em><br><strong>RF06</strong> <em>(Homologar fechamento)</em><br><strong>RF07</strong> <em>(Submeter reembolso)</em><br><strong>RF08</strong> <em>(Deliberar reembolso)</em><br><strong>RF19</strong> <em>(Consultar apontamentos)</em><br><br><small><strong>Forte candidato ao MVP</strong></small></td>
+<td style="text-align: left;"><strong>RF04</strong> <em>(Submeter apontamento)</em><br><strong>RF05</strong> <em>(Solicitar prévia fechamento)</em><br><br><small><strong>Avaliar viabilidade / Decompor para MVP</strong></small></td>
+<td style="text-align: center;">—<br><br><small><strong>Planejar, reduzir ou decompor</strong></small></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3 — Alto</strong><br><em>(Should have)</em></td>
+<td style="text-align: left;"><strong>RF18</strong> <em>(Encerrar sessão)</em><br><br><small><strong>Forte candidato ao MVP</strong></small></td>
+<td style="text-align: left;"><strong>RF02</strong> <em>(Atualizar cadastro)</em><br><strong>RF03</strong> <em>(Registrar movimentação)</em><br><strong>RF10</strong> <em>(Rastreabilidade de custos)</em><br><strong>RF14</strong> <em>(Gerenciar perfis RBAC)</em><br><strong>RF17</strong> <em>(Recuperar credenciais)</em><br><br><small><strong>Candidato ao MVP</strong></small></td>
+<td style="text-align: left;"><strong>RF09</strong> <em>(Apropriar custos)</em><br><strong>RF21</strong> <em>(Estornar fechamento)</em><br><br><small><strong>Avaliar contexto / Reduzir escopo para MVP</strong></small></td>
+<td style="text-align: center;">—<br><br><small><strong>Entrega futura</strong></small></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2 — Moderado</strong><br><em>(Could have)</em></td>
+<td style="text-align: left;">—<br><br><small><strong>Avaliar oportunidade</strong></small></td>
+<td style="text-align: left;"><strong>RF11</strong> <em>(Filtrar indicadores de custos)</em><br><br><small><strong>Avaliar oportunidade / Entrega futura</strong></small></td>
+<td style="text-align: left;"><strong>RF12</strong> <em>(Monitorar execução orçamentária)</em><br><strong>RF15</strong> <em>(Consultar trilha de auditoria)</em><br><strong>RF20</strong> <em>(Importar presenças auditor.ia)</em><br><br><small><strong>Entrega futura</strong></small></td>
+<td style="text-align: center;">—<br><br><small><strong>Baixa prioridade</strong></small></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>1 — Baixo</strong><br><em>(Won't have now)</em></td>
+<td style="text-align: left;">—<br><br><small><strong>Avaliar oportunidade</strong></small></td>
+<td style="text-align: left;">—<br><br><small><strong>Baixa prioridade</strong></small></td>
+<td style="text-align: left;"><strong>RF16</strong> <em>(Exportar relatório de auditoria)</em><br><br><small><strong>Não priorizar agora (Release 2.0)</strong></small></td>
+<td style="text-align: center;">—<br><br><small><strong>Não priorizar agora</strong></small></td>
+</tr>
+</tbody>
+</table>
+<h3 id="843-analise-estrategica-dos-quadrantes">8.4.3 Análise Estratégica dos Quadrantes<a class="headerlink" href="#843-analise-estrategica-dos-quadrantes" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Prioridade Máxima e Fortes Candidatos ao MVP (Alto Valor × Baixo/Moderado Esforço):</strong></li>
+<li><strong>RF13</strong> e <strong>RF18</strong> (autenticação e encerramento de sessão) apresentam esforço muito baixo (Nota 1) por aproveitarem recursos nativos do Supabase Auth e representam barreiras mandatórias de segurança.</li>
+<li><strong>RF01, RF06, RF07, RF08 e RF19</strong> formam o núcleo de maior alavancagem de valor imediato: cadastram pessoal, homologam lotes de pagamento, viabilizam a prestação de contas de viagens e conferem transparência ao colaborador de campo sobre seus registros.</li>
+<li><strong>Candidatos Estruturantes ao MVP (Valor Alto × Esforço Moderado):</strong></li>
+<li><strong>RF02, RF03, RF10, RF14 e RF17</strong> garantem a autonomia e governança da DUOC. Sem eles, o sistema dependeria de intervenção manual da equipe de TI para atualizar dados, alterar permissões ou recuperar acessos.</li>
+<li><strong>Requisitos de Alto Valor e Alto Esforço (Avaliar Viabilidade e Reduzir Escopo):</strong></li>
+<li><strong>RF04</strong> (apontamento de campo), <strong>RF05</strong> (prévia de fechamento), <strong>RF09</strong> (apropriação de custos) e <strong>RF21</strong> (estorno financeiro) situam-se na coluna de Esforço Alto (Nota 3). Conforme detalhado na seção 8.5.2, esses requisitos <strong>não são descartados</strong>, pois representam os elos vitais do fluxo ponta a ponta. Em vez disso, recebem uma estratégia de <strong>controle e redução de escopo</strong> na primeira entrega.</li>
+<li><strong>Quadrantes de Entrega Futura e Baixa Prioridade (Valor Moderado/Baixo × Esforço Moderado/Alto):</strong></li>
+<li><strong>RF11, RF12, RF15, RF16 e RF20</strong> representam extensões analíticas (dashboards/gráficos), rotinas de auditoria visual ou integrações com sistemas externos (<em>auditor.ia</em>). Foram expressamente alocados para o <strong>Backlog Pós-MVP (Fase 2 / Release 2.0)</strong>, liberando capacidade produtiva para estabilizar o núcleo transacional.</li>
+</ol>
+<hr>
+<h2 id="85-definicao-dos-requisitos-funcionais-do-mvp">8.5 Definição dos Requisitos Funcionais do MVP<a class="headerlink" href="#85-definicao-dos-requisitos-funcionais-do-mvp" title="Permanent link">¶</a></h2>
+<p>A delimitação do Produto Mínimo Viável não se resumiu a agrupar funcionalidades fáceis. O corte considerou a formação de um <strong>fluxo operacional minimamente completo, coerente e autossuficiente</strong>, capaz de sanar as maiores dores da DUOC no primeiro ciclo de uso em produção.</p>
+<h3 id="851-fluxo-funcional-continuo-de-ponta-a-ponta">8.5.1 Fluxo Funcional Contínuo de Ponta a Ponta<a class="headerlink" href="#851-fluxo-funcional-continuo-de-ponta-a-ponta" title="Permanent link">¶</a></h3>
+<p>Para que a solução tenha utilidade real, os dados devem transitar de maneira fluida desde a autenticação e cadastro até a apuração e fechamento de custos:</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph S_AUTH["Governança e Acesso (OE4)"]
+        RF13["RF13: Efetuar Login"] --&gt; RF14["RF14: Perfis RBAC"]
+        RF17["RF17: Recuperar Senha"] -.-&gt; RF13
+        RF18["RF18: Logout Manual"]
+    end
+
+    subgraph S_CAD["Base Cadastral Unificada (OE1)"]
+        RF14 --&gt; RF01["RF01: Cadastrar Colaborador"]
+        RF01 --&gt; RF02["RF02: Atualizar Cadastro"]
+        RF01 --&gt; RF03["RF03: Movimentação Funcional"]
+    end
+
+    subgraph S_FIELD["Operação e Campo (OE1 e OE2)"]
+        RF01 --&gt; RF04["RF04: Submeter Apontamento (RVT)"]
+        RF04 --&gt; RF19["RF19: Consultar Apontamentos"]
+        RF01 --&gt; RF07["RF07: Submeter Reembolso"]
+        RF07 --&gt; RF08["RF08: Deliberar Reembolso"]
+    end
+
+    subgraph S_FIN["Motor Financeiro (OE2)"]
+        RF04 --&gt; RF05["RF05: Prévia de Fechamento"]
+        RF05 --&gt; RF06["RF06: Homologar Fechamento"]
+        RF06 -.-&gt; RF21["RF21: Estornar Fechamento (Exceção)"]
+    end
+
+    subgraph S_COST["Inteligência de Custos (OE3)"]
+        RF06 --&gt; RF09["RF09: Apropriar Custos ao Contrato"]
+        RF08 --&gt; RF09
+        RF09 --&gt; RF10["RF10: Rastreabilidade de Custos"]
+    end
+
+    classDef mvpNode fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff;
+    classDef secNode fill:#0284c7,stroke:#0369a1,stroke-width:2px,color:#ffffff;
+    class RF13,RF14,RF17,RF18,RF01,RF02,RF03,RF04,RF19,RF07,RF08,RF05,RF06,RF21,RF09,RF10 mvpNode;</code></pre>
+<h3 id="852-tratamento-dos-requisitos-de-alto-valor-e-alto-esforco">8.5.2 Tratamento dos Requisitos de Alto Valor e Alto Esforço<a class="headerlink" href="#852-tratamento-dos-requisitos-de-alto-valor-e-alto-esforco" title="Permanent link">¶</a></h3>
+<p>Requisitos posicionados na combinação de <strong>Valor 4 e Esforço 3</strong> (ou Valor 3 e Esforço 3) poderiam ser vistos como fatores de risco. No entanto, por constituírem etapas indispensáveis da cadeia de valor, adotou-se a seguinte estratégia de <strong>redução de escopo e decomposição</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Código</th>
+<th style="text-align: left;">Requisito Funcional</th>
+<th style="text-align: left;">Desafio Técnico</th>
+<th style="text-align: left;">Estratégia Adotada no MVP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>RF04</strong></td>
+<td style="text-align: left;"><strong>Submeter apontamento de campo</strong></td>
+<td style="text-align: left;">Upload de imagens pesadas e formulário extenso de RVT em canteiro de obras.</td>
+<td style="text-align: left;"><strong>Escopo controlado:</strong> Foco na coleta dos campos essenciais de horas, contrato e escopo executado com anexo de comprovantes sob compressão básica. Suporte a sincronização <em>offline</em> complexa foi desacoplado para a fase de campo ampliada (RNF01 evolutivo).</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF05</strong></td>
+<td style="text-align: left;"><strong>Solicitar prévia de fechamento</strong></td>
+<td style="text-align: left;">Consolidação de dezenas de apontamentos e cálculo automático de diárias.</td>
+<td style="text-align: left;"><strong>Escopo concentrado:</strong> A prévia foca estritamente nas regras contratuais ativas da DUOC para apuração de diárias técnicas e comissões simplificadas, sem incorporar rotinas de encargos CLT (que permanecem nos softwares contábeis externos).</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF09</strong></td>
+<td style="text-align: left;"><strong>Apropriar custos operacionais</strong></td>
+<td style="text-align: left;">Múltiplas transações concorrentes vinculando despesas a contratos e centros de custo.</td>
+<td style="text-align: left;"><strong>Apropriação direta:</strong> O motor vincula os lotes homologados de diárias e reembolsos diretamente ao contrato ativo, exibindo os valores consolidados em formato tabular direto, postergando parametrizações orçamentárias complexas.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF21</strong></td>
+<td style="text-align: left;"><strong>Estornar fechamento financeiro</strong></td>
+<td style="text-align: left;">Reversão de lotes com garantia de auditoria e imutabilidade do histórico.</td>
+<td style="text-align: left;"><strong>Procedimento guiado:</strong> O estorno exige preenchimento obrigatório de justificativa textual formal (≥ 15 caracteres) e registra a operação na trilha de auditoria atômica, preservando o extrato original como versão histórica.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="853-lista-consolidada-dos-requisitos-funcionais-do-mvp">8.5.3 Lista Consolidada dos Requisitos Funcionais do MVP<a class="headerlink" href="#853-lista-consolidada-dos-requisitos-funcionais-do-mvp" title="Permanent link">¶</a></h3>
+<p>A linha de corte homologada contempla <strong>16 Requisitos Funcionais</strong>, cobrindo 100% dos fluxos essenciais de governança, cadastro, campo, fechamento e apropriação:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">RF</th>
+<th style="text-align: left;">Requisito Funcional</th>
+<th style="text-align: center;">Módulo / OE</th>
+<th style="text-align: center;">CAR</th>
+<th style="text-align: center;">Valor</th>
+<th style="text-align: center;">Esforço</th>
+<th style="text-align: left;">Justificativa de Inclusão no MVP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>RF13</strong></td>
+<td style="text-align: left;">Efetuar login no sistema</td>
+<td style="text-align: center;">Módulo 4 (OE4)</td>
+<td style="text-align: center;">CAR-07</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: left;">Porta de entrada mandatória de segurança da informação e LGPD.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF18</strong></td>
+<td style="text-align: left;">Encerrar sessão manualmente</td>
+<td style="text-align: center;">Módulo 4 (OE4)</td>
+<td style="text-align: center;">CAR-07</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: left;">Garante proteção imediata ao compartilhar celulares em campo.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF17</strong></td>
+<td style="text-align: left;">Recuperar credenciais de acesso</td>
+<td style="text-align: center;">Módulo 4 (OE4)</td>
+<td style="text-align: center;">CAR-07</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Autonomia aos usuários e redução de atritos operacionais de suporte.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF14</strong></td>
+<td style="text-align: left;">Gerenciar perfis de acesso (RBAC)</td>
+<td style="text-align: center;">Módulo 4 (OE4)</td>
+<td style="text-align: center;">CAR-07</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Segrega alçadas entre campo e gestão financeira (RN16).</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF01</strong></td>
+<td style="text-align: left;">Cadastrar colaborador</td>
+<td style="text-align: center;">Módulo 1 (OE1)</td>
+<td style="text-align: center;">CAR-01</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Base unificada indispensável para disparar apontamentos e pagamentos.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF02</strong></td>
+<td style="text-align: left;">Atualizar cadastro de colaborador</td>
+<td style="text-align: center;">Módulo 1 (OE1)</td>
+<td style="text-align: center;">CAR-01</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Permite manter contas bancárias e chaves Pix devidamente atualizadas.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF03</strong></td>
+<td style="text-align: left;">Registrar movimentação funcional</td>
+<td style="text-align: center;">Módulo 1 (OE1)</td>
+<td style="text-align: center;">CAR-01</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Bloqueia credenciais e pagamentos indevidos a profissionais desligados.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF04</strong></td>
+<td style="text-align: left;">Submeter apontamento de campo</td>
+<td style="text-align: center;">Módulo 1 (OE1)</td>
+<td style="text-align: center;">CAR-02</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Coleta os dados de produção de obra que alimentam o motor financeiro.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF19</strong></td>
+<td style="text-align: left;">Consultar apontamentos registrados</td>
+<td style="text-align: center;">Módulo 1 (OE1)</td>
+<td style="text-align: center;">CAR-02</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Transparência para o técnico acompanhar a homologação do seu trabalho.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF07</strong></td>
+<td style="text-align: left;">Submeter solicitação de reembolso</td>
+<td style="text-align: center;">Módulo 2 (OE2)</td>
+<td style="text-align: center;">CAR-04</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Digitaliza a prestação de contas com comprovantes fiscais obrigatórios.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF08</strong></td>
+<td style="text-align: left;">Deliberar solicitação de reembolso</td>
+<td style="text-align: center;">Módulo 2 (OE2)</td>
+<td style="text-align: center;">CAR-04</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Alçada de aprovação da gestão sobre despesas antes do repasse financeiro.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF05</strong></td>
+<td style="text-align: left;">Solicitar prévia de fechamento</td>
+<td style="text-align: center;">Módulo 2 (OE2)</td>
+<td style="text-align: center;">CAR-03</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Automatiza a consolidação mensal, estancando 30h de trabalho manual.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF06</strong></td>
+<td style="text-align: left;">Homologar fechamento financeiro</td>
+<td style="text-align: center;">Módulo 2 (OE2)</td>
+<td style="text-align: center;">CAR-03</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Trava os lotes financeiros aprovados contra alterações indevidas.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF21</strong></td>
+<td style="text-align: left;">Estornar fechamento financeiro</td>
+<td style="text-align: center;">Módulo 2 (OE2)</td>
+<td style="text-align: center;">CAR-03</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Trata exceções em fechamentos com justificativa auditável obrigatória.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF09</strong></td>
+<td style="text-align: left;">Apropriar custos operacionais</td>
+<td style="text-align: center;">Módulo 3 (OE3)</td>
+<td style="text-align: center;">CAR-05</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Aloca montantes pagos diretamente às obras correspondentes.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF10</strong></td>
+<td style="text-align: left;">Consultar rastreabilidade de custos</td>
+<td style="text-align: center;">Módulo 3 (OE3)</td>
+<td style="text-align: center;">CAR-05</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Evidencia a origem de cada custo para prestação de contas com clientes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="854-requisitos-funcionais-postergados-backlog-pos-mvp">8.5.4 Requisitos Funcionais Postergados (Backlog Pós-MVP)<a class="headerlink" href="#854-requisitos-funcionais-postergados-backlog-pos-mvp" title="Permanent link">¶</a></h3>
+<p>Os 5 requisitos abaixo foram deliberadamente postergados para a <strong>Fase 2 (Pós-MVP)</strong> ou <strong>Release 2.0</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">RF</th>
+<th style="text-align: left;">Requisito Funcional</th>
+<th style="text-align: center;">Módulo / OE</th>
+<th style="text-align: center;">CAR</th>
+<th style="text-align: center;">Valor</th>
+<th style="text-align: center;">Esforço</th>
+<th style="text-align: left;">Justificativa da Postergação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>RF11</strong></td>
+<td style="text-align: left;">Filtrar indicadores de custos</td>
+<td style="text-align: center;">Módulo 3 (OE3)</td>
+<td style="text-align: center;">CAR-06</td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">A visualização tabular direta (RF10) atende à fase piloto; painéis com filtros cruzados são conveniência analítica para o Incremento 3.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF12</strong></td>
+<td style="text-align: left;">Monitorar execução orçamentária</td>
+<td style="text-align: center;">Módulo 3 (OE3)</td>
+<td style="text-align: center;">CAR-06</td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Gráficos de previsto versus realizado exigem histórico estável de custos já apropriados para terem utilidade prática.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF15</strong></td>
+<td style="text-align: left;">Consultar trilha de auditoria</td>
+<td style="text-align: center;">Módulo 4 (OE4)</td>
+<td style="text-align: center;">CAR-08</td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">A gravação no banco de dados ocorre de forma transparente e atômica; a interface com filtros em tela pode ser entregue posteriormente.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF16</strong></td>
+<td style="text-align: left;">Exportar relatório de auditoria</td>
+<td style="text-align: center;">Módulo 4 (OE4)</td>
+<td style="text-align: center;">CAR-08</td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Geração e exportação de dossiê consolidado em PDF/CSV para fiscalização da CLT pode ser suprida pontualmente por suporte de TI na fase piloto.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RF20</strong></td>
+<td style="text-align: left;">Importar presenças homologadas</td>
+<td style="text-align: center;">Módulo 1 (OE1)</td>
+<td style="text-align: center;">CAR-09</td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">A integração com o sistema externo <em>auditor.ia</em> envolve dependências técnicas externas; a entrada no MVP é garantida pelo RVT próprio (RF04).</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="86-tratamento-dos-requisitos-nao-funcionais-rnfs">8.6 Tratamento dos Requisitos Não Funcionais (RNFs)<a class="headerlink" href="#86-tratamento-dos-requisitos-nao-funcionais-rnfs" title="Permanent link">¶</a></h2>
+<p>Os atributos de qualidade e restrições técnicas do sistema receberam análise individualizada e foram vinculados formalmente ao escopo do MVP, garantindo que aspectos críticos de segurança, confiabilidade, desempenho e conformidade jurídica acompanhem a entrega inicial.</p>
+<h3 id="861-metodologia-de-classificacao-dos-rnfs">8.6.1 Metodologia de Classificação dos RNFs<a class="headerlink" href="#861-metodologia-de-classificacao-dos-rnfs" title="Permanent link">¶</a></h3>
+<p>Cada um dos 17 RNFs especificados no <a href="../">Capítulo 8: Requisitos de Software</a> foi enquadrado em uma das quatro categorias oficiais:</p>
+<ol>
+<li><strong>Obrigatório para o MVP:</strong> Atributo transversal indispensável de segurança da informação, privacidade (LGPD), confiabilidade ou legislação que rege o produto como um todo. Entra no MVP sem negociação.</li>
+<li><strong>Associado a RF do MVP:</strong> Atributo de qualidade vinculado diretamente a um RF selecionado para o MVP. O RF só é considerado concluído (<em>Done</em>) quando o critério mensurável deste RNF é plenamente atendido.</li>
+<li><strong>Evolutivo:</strong> Atributo pertinente ao produto, mas associado a funcionalidades postergadas ou dependente de infraestrutura prevista para ciclos posteriores do RAD.</li>
+<li><strong>Não Aplicável ao MVP:</strong> Requisito desvinculado do recorte operacional da solução.</li>
+</ol>
+<h3 id="862-tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp">8.6.2 Tabela de Classificação e Vinculação dos RNFs ao MVP<a class="headerlink" href="#862-tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Código</th>
+<th style="text-align: left;">Requisito Não Funcional Verificável</th>
+<th style="text-align: left;">URPS+</th>
+<th style="text-align: left;">Sommerville</th>
+<th style="text-align: center;">RFs Vinculados</th>
+<th style="text-align: center;">Categoria no MVP</th>
+<th style="text-align: left;">Critério Mensurável e Justificativa de Enquadramento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>RNF01</strong></td>
+<td style="text-align: left;">Operar em modo <em>offline</em> em canteiros sem rede</td>
+<td style="text-align: left;">Reliability</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">RF04</td>
+<td style="text-align: center;"><strong>Evolutivo</strong></td>
+<td style="text-align: left;">Mínimo 100 apontamentos em fila local com alerta a 80%. As obras da fase piloto possuem cobertura 4G/Wi-Fi no DF; o armazenamento desconectado evolui no ciclo ampliado.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF02</strong></td>
+<td style="text-align: left;">Consulta cadastral com tempo ágil</td>
+<td style="text-align: left;">Performance</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">RF01, RF02, RF03</td>
+<td style="text-align: center;"><strong>Associado ao MVP</strong></td>
+<td style="text-align: left;">Tempo de resposta ≤ 2,0 s sob carga nominal. Evita lentidão operacional na rotina diária de cadastro e conferência de pessoal.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF03</strong></td>
+<td style="text-align: left;">Criptografia em repouso e trânsito</td>
+<td style="text-align: left;">Security (+)</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">Transversal</td>
+<td style="text-align: center;"><strong>Obrigatório para o MVP</strong></td>
+<td style="text-align: left;">Criptografia AES-256 no banco e TLS 1.3 em rede. Condição mandatória da LGPD (Art. 46) para armazenar dados pessoais e bancários reais.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF04</strong></td>
+<td style="text-align: left;">Usabilidade e agilidade no RVT de campo</td>
+<td style="text-align: left;">Usability</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">RF04, RF19</td>
+<td style="text-align: center;"><strong>Associado ao MVP</strong></td>
+<td style="text-align: left;">Preenchimento do RVT em até 5 telas com taxa de conclusão ≥ 90% em primeiro uso. Garante que os técnicos em obra consigam apontar dados sem atrito.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF05</strong></td>
+<td style="text-align: left;">Fechamento financeiro com alta eficiência</td>
+<td style="text-align: left;">Performance</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">RF05, RF06</td>
+<td style="text-align: center;"><strong>Associado ao MVP</strong></td>
+<td style="text-align: left;">Cálculo e renderização do extrato de 500 registros em ≤ 5,0 s. Cumpre o objetivo de desonerar 30h de conferência manual.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF06</strong></td>
+<td style="text-align: left;">Exatidão aritmética centesimal</td>
+<td style="text-align: left;">Reliability</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">RF05, RF06, RF08</td>
+<td style="text-align: center;"><strong>Associado ao MVP</strong></td>
+<td style="text-align: left;">Discrepância de exatamente R$ 0,00 com ponto fixo. Tolerância zero a arredondamentos flutuantes em valores pagos a prestadores.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF07</strong></td>
+<td style="text-align: left;">Validação no upload de comprovantes</td>
+<td style="text-align: left;">Supportability / Security</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">RF04, RF07</td>
+<td style="text-align: center;"><strong>Associado ao MVP</strong></td>
+<td style="text-align: left;">Bloqueio de arquivos &gt; 5 MB e extensões fora de PDF/PNG/JPEG. Protege o armazenamento e a legibilidade das notas fiscais anexadas.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF08</strong></td>
+<td style="text-align: left;">Justificativa mandatória em estornos</td>
+<td style="text-align: left;">Security (+)</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">RF06, RF21</td>
+<td style="text-align: center;"><strong>Associado ao MVP</strong></td>
+<td style="text-align: left;">Aborto compulsório de estornos com justificativa textual &lt; 15 caracteres. Resguarda a imutabilidade e a rastreabilidade contábil (RN08).</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF09</strong></td>
+<td style="text-align: left;">Carga do painel analítico ≤ 3 s</td>
+<td style="text-align: left;">Performance</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">RF11, RF12</td>
+<td style="text-align: center;"><strong>Evolutivo</strong></td>
+<td style="text-align: left;">Renderização analítica em ≤ 3,0 s sob 10.000 lançamentos. O painel analítico com filtros avançados está fora do MVP.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF10</strong></td>
+<td style="text-align: left;">Restrição de dados financeiros (RBAC)</td>
+<td style="text-align: left;">Security (+)</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">RF05, RF06, RF09, RF10</td>
+<td style="text-align: center;"><strong>Obrigatório para o MVP</strong></td>
+<td style="text-align: left;">Retorno mandatório de HTTP 403 Forbidden para perfis sem alçada financeira. Protege dados de remuneração e sigilo estratégico.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF11</strong></td>
+<td style="text-align: left;">Consistência ACID na apropriação de custos</td>
+<td style="text-align: left;">Reliability</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">RF09</td>
+<td style="text-align: center;"><strong>Associado ao MVP</strong></td>
+<td style="text-align: left;">Ausência de divergências em testes de concorrência simultânea. Impede a sobreposição de custos ou criação de despesas órfãs no contrato.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF12</strong></td>
+<td style="text-align: left;">Responsividade do painel em desktop e tablet</td>
+<td style="text-align: left;">Usability</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">RF11, RF12</td>
+<td style="text-align: center;"><strong>Evolutivo</strong></td>
+<td style="text-align: left;">Ausência de <em>scroll</em> horizontal em 1024x768 e 768x1024. Vinculado aos dashboards analíticos postergados para o Incremento 3.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF13</strong></td>
+<td style="text-align: left;">Expiração de token temporário em até 8 horas</td>
+<td style="text-align: left;">Security (+)</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">RF13</td>
+<td style="text-align: center;"><strong>Obrigatório para o MVP</strong></td>
+<td style="text-align: left;">Rejeição automática com HTTP 401 Unauthorized após 8h. Limita janelas de uso indevido em celulares compartilhados em obra.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF14</strong></td>
+<td style="text-align: left;">Autorização RBAC em 100% das rotas de API</td>
+<td style="text-align: left;">Security (+) / Legal</td>
+<td style="text-align: left;">Requisito Externo (LGPD)</td>
+<td style="text-align: center;">RF13, RF14 (Transversal)</td>
+<td style="text-align: center;"><strong>Obrigatório para o MVP</strong></td>
+<td style="text-align: left;">Cobertura total de filtros RBAC nas rotas de backend sensíveis. Sem ele, a proteção ficaria restrita superficialmente à interface.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF15</strong></td>
+<td style="text-align: left;">Atomicidade na gravação de logs de auditoria</td>
+<td style="text-align: left;">Reliability</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">Transversal às operações de escrita</td>
+<td style="text-align: center;"><strong>Obrigatório para o MVP</strong></td>
+<td style="text-align: left;">Gravação do log de auditoria na mesma transação atômica da escrita. Taxa de perda zero para dados pessoais e transações financeiras.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF16</strong></td>
+<td style="text-align: left;">Retenção de logs por 5 anos contra expurgo</td>
+<td style="text-align: left;">Supportability / Legal</td>
+<td style="text-align: left;">Requisito Externo (CLT)</td>
+<td style="text-align: center;">Transversal</td>
+<td style="text-align: center;"><strong>Obrigatório para o MVP</strong></td>
+<td style="text-align: left;">Ausência de comandos de deleção de registros com tempo &lt; 5 anos (1.825 dias), atendendo ao prazo prescricional do Art. 11 da CLT.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>RNF17</strong></td>
+<td style="text-align: left;">Backup diário automático com restauração</td>
+<td style="text-align: left;">Reliability</td>
+<td style="text-align: left;">Requisito do Produto</td>
+<td style="text-align: center;">Transversal (Banco e Comprovantes)</td>
+<td style="text-align: center;"><strong>Obrigatório para o MVP</strong></td>
+<td style="text-align: left;">Backup diário completo com integridade verificada e restauração de teste em ≤ 4 h, perda máxima de dados de 24h e retenção de 30 dias.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="863-sintese-numerica-da-distribuicao-dos-rnfs">8.6.3 Síntese Numérica da Distribuição dos RNFs<a class="headerlink" href="#863-sintese-numerica-da-distribuicao-dos-rnfs" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Obrigatórios para o MVP:</strong> <strong>7 requisitos</strong> (41,2%) — <em>RNF03, RNF10, RNF13, RNF14, RNF15, RNF16 e RNF17</em>.</li>
+<li><strong>Associados a RFs do MVP:</strong> <strong>7 requisitos</strong> (41,2%) — <em>RNF02, RNF04, RNF05, RNF06, RNF07, RNF08 e RNF11</em>.</li>
+<li><strong>Evolutivos:</strong> <strong>3 requisitos</strong> (17,6%) — <em>RNF01, RNF09 e RNF12</em>.</li>
+<li><strong>Não Aplicáveis:</strong> <strong>0 requisitos</strong> (0,0%).</li>
+<li><strong>Total no Escopo do MVP:</strong> <strong>14 de 17 RNFs (82,4%)</strong> entram diretamente na primeira versão entregável.</li>
+</ul>
+<hr>
+<h2 id="87-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente">8.7 Evidência e Registro da Validação do MVP com o Cliente<a class="headerlink" href="#87-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente" title="Permanent link">¶</a></h2>
+<p>Em estrito cumprimento às diretrizes de governança e validação sociotécnica da Engenharia de Requisitos, a composição final do MVP foi deliberada e homologada consensualmente com a organização parceira.</p>
+<h3 id="871-ficha-tecnica-da-sessao-de-validacao">8.7.1 Ficha Técnica da Sessão de Validação<a class="headerlink" href="#871-ficha-tecnica-da-sessao-de-validacao" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Data e Horário:</strong> 24 de setembro de 2026, das 19h30 às 20h45 (GMT-03:00).</li>
+<li><strong>Formato:</strong> Reunião síncrona por videoconferência via Google Meet (gravada internamente no repositório institucional da equipe).</li>
+<li><strong>Participantes:</strong></li>
+<li><strong>Representante da Cliente Parceira:</strong> Maria Beatryz Vieira de Sousa (Auxiliar-Administradora da DUOC Arquitetura e Engenharia).</li>
+<li><strong>Membros da Equipe Cascata Ágil:</strong> Eric Araújo (Product Owner e condução da sessão), Matheus Ribeiro (Scrum Master e Co-PO), Giovana Ferreira (Engenheira Frontend e UI/UX), Paulo Nery (Engenheiro Backend), Matheus Saraiva Camargo (Arquiteto de Software e Banco de Dados), Gustavo Bonifácio (QA e Testes) e Lucas Zanetti (Garantia de Qualidade).</li>
+<li><strong>Registro Detalhado:</strong> A ata formal com a transcrição dos debates, minutagem e deliberações encontra-se publicada na <a href="../../atas/reuniao-05/">Ata da Reunião 05</a>.</li>
+</ul>
+<h3 id="872-quadro-de-deliberacoes-e-aceite-de-escopo">8.7.2 Quadro de Deliberações e Aceite de Escopo<a class="headerlink" href="#872-quadro-de-deliberacoes-e-aceite-de-escopo" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tópico da Validação</th>
+<th style="text-align: center;">Decisão Homologada pela Cliente</th>
+<th style="text-align: left;">Fundamentação e Rastreabilidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Aprovação do Núcleo do MVP</strong></td>
+<td style="text-align: center;"><strong>Aprovado Integralmente</strong></td>
+<td style="text-align: left;">A cliente confirmou que os <strong>16 RFs</strong> selecionados eliminam com exatidão as dores centrais de conferência manual de diárias e extravio de comprovantes fiscais em canteiros de obra.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Postergação de Dashboards de BI</strong></td>
+<td style="text-align: center;"><strong>Aprovado pela Cliente</strong></td>
+<td style="text-align: left;">Maria Beatryz acordou que, na fase de implantação piloto, relatórios tabulares diretos por contrato já suprem a rotina gerencial, aprovando o adiamento de filtros combinados (<strong>RF11</strong>) e monitoramento orçamentário (<strong>RF12</strong>) para o Incremento 3.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Postergação da Exportação de Auditoria</strong></td>
+<td style="text-align: center;"><strong>Aprovado pela Cliente</strong></td>
+<td style="text-align: left;">Ajuste solicitado e acordado: como auditorias trabalhistas formais são demandas excepcionais de longo prazo, a exportação em massa de dossiês em PDF/CSV (<strong>RF16</strong>) foi postergada para a Release 2.0, mantendo-se a gravação transparente dos logs no backend.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Postergação do auditor.ia</strong></td>
+<td style="text-align: center;"><strong>Aprovado pela Cliente</strong></td>
+<td style="text-align: left;">Pactuado que a importação de presenças externas (<strong>RF20</strong>) não é impeditiva para o primeiro ciclo, pois a coleta de RVT pelo próprio aplicativo atende à necessidade inicial.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ajuste no Fluxo de Reembolso</strong></td>
+<td style="text-align: center;"><strong>Consensuado</strong></td>
+<td style="text-align: left;">A cliente solicitou destaque visual obrigatório caso uma solicitação de reembolso não possua anexo legível de nota fiscal, o que resultou na parametrização estrita da regra <strong>RN06</strong> e do <strong>RNF07</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Homologação dos Atributos de Qualidade</strong></td>
+<td style="text-align: center;"><strong>Homologado</strong></td>
+<td style="text-align: left;">A cliente validou como fundamentais a tolerância zero a desvios monetários (<strong>RNF06</strong>) e a proteção criptográfica de dados pessoais (<strong>RNF03</strong> e <strong>RNF10</strong>).</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="historico-de-versao">Histórico de Versão<a class="headerlink" href="#historico-de-versao" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: left;">Descrição</th>
+<th style="text-align: left;">Autor(es)</th>
+<th style="text-align: left;">Revisor(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>1.0</code></td>
+<td style="text-align: center;">24/09/2026</td>
+<td style="text-align: left;">Estruturação da metodologia de valor de negócio dos RFs (escala 1 a 4 associada ao MoSCoW), critérios qualitativos/quantitativos e pontuação preliminar pactuada na Reunião 05 com a cliente Maria Beatryz.</td>
+<td style="text-align: left;">Matheus Ribeiro e Eric Araújo</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>1.1</code></td>
+<td style="text-align: center;">25/09/2026</td>
+<td style="text-align: left;">Refatoração estrutural da priorização com desmembramento em categorias MoSCoW e inclusão de diagrama cartesiano inicial de valor versus urgência.</td>
+<td style="text-align: left;">Matheus Ribeiro e Eric Araújo</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>1.2</code></td>
+<td style="text-align: center;">28/09/2026</td>
+<td style="text-align: left;">Estruturação da proposta inicial da Matriz 4×4 (Valor × Esforço), definição preliminar do corte de RFs do MVP e justificativa dos itens postergados.</td>
+<td style="text-align: left;">Gustavo Bonifácio</td>
+<td style="text-align: left;">Matheus Ribeiro</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>1.3</code></td>
+<td style="text-align: center;">28/09/2026</td>
+<td style="text-align: left;">Incorporação da metodologia de classificação e vinculação dos Requisitos Não Funcionais (RNF01 a RNF16) às categorias do MVP (Obrigatórios, Associados e Evolutivos).</td>
+<td style="text-align: left;">Paulo Nery</td>
+<td style="text-align: left;">Matheus Ribeiro</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>1.4</code></td>
+<td style="text-align: center;">28/09/2026</td>
+<td style="text-align: left;">Adição da metodologia de estimativa de esforço técnico (escalas de horas, complexidade técnica e lacuna de capacidade) e tabela com médias consolidadas.</td>
+<td style="text-align: left;">Giovana Ferreira</td>
+<td style="text-align: left;">Matheus Ribeiro</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>2.0</code></td>
+<td style="text-align: center;">28/09/2026</td>
+<td style="text-align: left;">Unificação e consolidação canônica integral do Capítulo 8 (Priorização e MVP): harmonização das perspectivas de negócio e esforço técnico, integração das correções da avaliação em pares (RF17 a RF21 e RNF17), calibração e ampliação dos quadrantes cartesianos (MoSCoW e Matriz 4×4), fluxo contínuo do MVP e formalização da validação com a cliente.</td>
+<td style="text-align: left;">Matheus Ribeiro</td>
+<td style="text-align: left;">Eric Araújo</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>2.1</code></td>
+<td style="text-align: center;">28/09/2026</td>
+<td style="text-align: left;">Revisão do escopo de priorização, validação da distribuição dos 21 RFs na Matriz 4×4, auditoria das vinculações dos 17 RNFs ao MVP e homologação dos critérios de aceite.</td>
+<td style="text-align: left;">Eric Araújo</td>
+<td style="text-align: left;">Matheus Ribeiro</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+        <script src="../../assets/javascripts/mermaid-init.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

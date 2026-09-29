@@ -1,0 +1,1798 @@
+<!DOCTYPE html><html lang="pt" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação de Requisitos de Software — DUOC Arquitetura e Engenharia">
+      
+      
+        <meta name="author" content="Equipe Cascata Ágil">
+      
+      
+      
+        <link rel="prev" href="../priorizacao/">
+      
+      
+        <link rel="next" href="../../dor-dod/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Feedback da Avaliação em Pares - Cascata Ágil</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#capitulo-8-feedback-dos-requisitos-avaliacao-em-pares" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Cascata Ágil" class="md-header__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cascata Ágil
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Feedback da Avaliação em Pares
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Alternar para modo claro" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Alternar para modo escuro" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cascata Ágil" class="md-nav__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Cascata Ágil
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao-produto/capitulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 1 - Cenário Atual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao-produto/capitulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 2 - Solução Proposta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intervencao-social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 3 - Intervenção Social
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estrategias-esw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 4 - Estratégias de ESW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../engenharia-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 5 - Engenharia de Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 6 - Cronograma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interacao-cliente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 7 - Interação com Cliente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 8 - Requisitos (Unidade 2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Capítulo 8 - Requisitos (Unidade 2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação de Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../priorizacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Priorização e MVP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback da Avaliação em Pares
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback da Avaliação em Pares
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#81-visao-geral-e-criterios-metodologicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Visão Geral e Critérios Metodológicos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-painel-quantitativo-de-deliberacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Painel Quantitativo de Deliberações
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83-matriz-de-registro-e-decisoes-de-feedbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Matriz de Registro e Decisões de Feedbacks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84-rastreabilidade-de-impacto-nos-artefatos-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Rastreabilidade de Impacto nos Artefatos de Requisitos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85-checklist-de-validacao-e-homologacao-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 Checklist de Validação e Homologação Interna
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dor-dod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 9 - DoR e DoD (Unidade 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backlog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 10 - Backlog (Unidade 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../licoes-aprendidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 11 - Lições Aprendidas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../referencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capítulo 12 - Referências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14">
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atas de Reuniões
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atas de Reuniões
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painel Geral de Atas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/reuniao-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 01 (05/09) — Elicitação e MVP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/reuniao-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 02 (07/09) — Alinhamento Metodológico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/reuniao-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 03 (07/09) — Apresentação da Unidade 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/reuniao-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 04 (17/09) — Planejamento da Unidade 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/reuniao-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 05 (24/09) — Priorização e Valor de Negócio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15">
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entregas do Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entregas do Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painel Geral de Entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 1 (Ponto de Controle 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 2 (Ponto de Controle 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 3 (Ponto de Controle 3)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 4 (Ponto de Controle 4)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#81-visao-geral-e-criterios-metodologicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Visão Geral e Critérios Metodológicos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-painel-quantitativo-de-deliberacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Painel Quantitativo de Deliberações
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83-matriz-de-registro-e-decisoes-de-feedbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Matriz de Registro e Decisões de Feedbacks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84-rastreabilidade-de-impacto-nos-artefatos-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Rastreabilidade de Impacto nos Artefatos de Requisitos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85-checklist-de-validacao-e-homologacao-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 Checklist de Validação e Homologação Interna
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegação">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Capítulo 8 - Requisitos (Unidade 2)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="capitulo-8-feedback-dos-requisitos-avaliacao-em-pares">Capítulo 8: Feedback dos Requisitos — Avaliação em Pares<a class="headerlink" href="#capitulo-8-feedback-dos-requisitos-avaliacao-em-pares" title="Permanent link">¶</a></h1>
+<p>Este documento formaliza o registro, a deliberação crítica e o rastreamento das decisões tomadas pela equipe <strong>Cascata Ágil</strong> a partir do relatório de avaliação por pares elaborado pela equipe <strong>Guerreiros do Backlog</strong> sobre o lote de Requisitos de Software do sistema <strong>DUOC Finance</strong>.</p>
+<hr>
+<h2 id="81-visao-geral-e-criterios-metodologicos">8.1 Visão Geral e Critérios Metodológicos<a class="headerlink" href="#81-visao-geral-e-criterios-metodologicos" title="Permanent link">¶</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Dados da Avaliação por Pares</p>
+<ul>
+<li><strong>Equipe Avaliadora:</strong> Guerreiros do Backlog  </li>
+<li><strong>Equipe Avaliada:</strong> Cascata Ágil  </li>
+<li><strong>Artefato Avaliado:</strong> <a href="../">Capítulo 8: Requisitos de Software</a> (RFs, RNFs, RNs e Rastreabilidade)  </li>
+<li><strong>Entrega / Ciclo:</strong> Unidade 2 — Detalhamento e Backlog  </li>
+<li><strong>Abrangência:</strong> Transversal sobre os Objetivos Específicos OE1, OE2, OE3 e OE4  </li>
+</ul>
+</div>
+<h3 id="811-categorias-de-deliberacao">8.1.1 Categorias de Deliberação<a class="headerlink" href="#811-categorias-de-deliberacao" title="Permanent link">¶</a></h3>
+<p>Para assegurar governança, transparência e reprodutibilidade, cada feedback catalogado é submetido a análise e recebe uma das quatro deliberações oficiais:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Classificação</th>
+<th style="text-align: left;">Definição Operacional</th>
+<th style="text-align: left;">Critério de Aceite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Aceito</strong></td>
+<td style="text-align: left;">O apontamento é pertinente e o requisito/artefato é ajustado integralmente conforme a sugestão.</td>
+<td style="text-align: left;">Aplicação direta no documento de requisitos e casos de teste associados.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Parcialmente Aceito</strong></td>
+<td style="text-align: left;">O apontamento aponta uma melhoria válida, porém a solução adotada foi adaptada às restrições do projeto DUOC.</td>
+<td style="text-align: left;">Justificativa técnica do ajuste adaptado e atualização do documento.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Não Aceito</strong></td>
+<td style="text-align: left;">O apontamento é recusado e a formulação original é mantida por motivos técnicos, de domínio ou metodológicos.</td>
+<td style="text-align: left;">Apresentação de contra-argumento técnico fundamentado nas regras de negócio da DUOC.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Não Aplicável</strong></td>
+<td style="text-align: left;">O apontamento não se aplica ao escopo do MVP, confunde responsabilidades ou foge da taxonomia adotada.</td>
+<td style="text-align: left;">Justificativa de descarte por desvio de escopo, nível de abstração ou premissa inválida.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="812-diretrizes-de-refatoracao-aplicadas">8.1.2 Diretrizes de Refatoração Aplicadas<a class="headerlink" href="#812-diretrizes-de-refatoracao-aplicadas" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Requisitos Funcionais (RFs):</strong> Garantia estrita do padrão sintático <code>[Verbo no Infinitivo] + [Objeto Mensurável]</code>, eliminando formulações no presente do indicativo ou ambiguidades operacionais.</li>
+<li><strong>Requisitos Não Funcionais (RNFs):</strong> Garantia de critérios objetivos e mensuráveis (tempo em segundos/milissegundos, percentual de disponibilidade, taxa de erro, conformidade com normas), aderentes ao modelo <strong>URPS+</strong> e taxonomia de <strong>Sommerville</strong>.</li>
+<li><strong>Consistência e Clareza:</strong> Eliminação de sobreposições entre requisitos, resolução de termos vagos e atualização das dependências nas regras de negócio (RN) e critérios BDD.</li>
+</ol>
+<hr>
+<h2 id="82-painel-quantitativo-de-deliberacoes">8.2 Painel Quantitativo de Deliberações<a class="headerlink" href="#82-painel-quantitativo-de-deliberacoes" title="Permanent link">¶</a></h2>
+<p>A tabela a seguir resume a distribuição quantitativa das deliberações sobre os apontamentos catalogados.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Status da Deliberação</th>
+<th style="text-align: center;">Quantidade</th>
+<th style="text-align: center;">Percentual (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Aceito</strong></td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">45,5%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Parcialmente Aceito</strong></td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">45,5%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Não Aceito</strong></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">9,1%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Não Aplicável</strong></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0,0%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total de Feedbacks Catalogados</strong></td>
+<td style="text-align: center;"><strong>11</strong></td>
+<td style="text-align: center;"><strong>100%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Percentuais arredondados à primeira casa decimal.</em></p>
+<hr>
+<h2 id="83-matriz-de-registro-e-decisoes-de-feedbacks">8.3 Matriz de Registro e Decisões de Feedbacks<a class="headerlink" href="#83-matriz-de-registro-e-decisoes-de-feedbacks" title="Permanent link">¶</a></h2>
+<h3 id="831-apontamentos-gerais-e-metodologicos">8.3.1 Apontamentos Gerais e Metodológicos<a class="headerlink" href="#831-apontamentos-gerais-e-metodologicos" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Item / Seção Alvo</th>
+<th style="text-align: left;">Apontamento da Equipe Avaliadora</th>
+<th style="text-align: center;">Deliberação</th>
+<th style="text-align: left;">Justificativa &amp; Decisão Técnica</th>
+<th style="text-align: left;">Ação / Impacto no Artefato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>FB-01</strong></td>
+<td style="text-align: left;">Classificação de RNFs (8.1.2, item 2)</td>
+<td style="text-align: left;">Uso simultâneo das classificações URPS+ e Sommerville nos RNFs pode ser redundante e gerar confusão; sugerido adotar apenas um modelo.</td>
+<td style="text-align: center;">Não Aceito</td>
+<td style="text-align: left;">As duas classificações respondem perguntas diferentes: URPS+ descreve o atributo de qualidade (o quê), Sommerville indica a origem/natureza do requisito (produto interno vs. externo/legislativo). Ex.: o RNF de retenção de log de auditoria é "Suportabilidade" em URPS+ e "Requisito Externo — Legislativo" em Sommerville, por decorrer da CLT; manter só uma classificação perderia essa rastreabilidade.</td>
+<td style="text-align: left;">Nenhuma alteração na estrutura das tabelas de RNFs; adicionada a nota explicativa "Por que duas classificações?" na seção 8.1 do <a href="../">Capítulo 8: Requisitos de Software</a>, esclarecendo o propósito de cada classificação.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="832-requisitos-funcionais-rfs">8.3.2 Requisitos Funcionais (RFs)<a class="headerlink" href="#832-requisitos-funcionais-rfs" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Requisito Alvo</th>
+<th style="text-align: left;">Apontamento da Equipe Avaliadora</th>
+<th style="text-align: center;">Deliberação</th>
+<th style="text-align: left;">Justificativa &amp; Decisão Técnica</th>
+<th style="text-align: left;">Ação / Impacto no Artefato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>FB-02</strong></td>
+<td style="text-align: left;">CAR-09 a CAR-12 (Módulo de Integrações Externas, 2.3)</td>
+<td style="text-align: left;">Características sem RF/RNF associado e ausentes da matriz de rastreabilidade.</td>
+<td style="text-align: center;">Parcialmente Aceito</td>
+<td style="text-align: left;">CAR-11 e CAR-12 já possuem nota de escopo própria adiando o desenho técnico para a Fase 2, não configurando lacuna. CAR-10 está fora do recorte definido em "Delimitação do Escopo do MVP" (2.6) e por isso também não recebe RF nesta rodada. CAR-09, porém, está dentro do escopo delimitado do MVP e não possui nenhum RF associado — esse é o gap procedente.</td>
+<td style="text-align: left;">Criado <strong>RF20 — Importar presenças homologadas</strong> (OE1 / CAR-09, consumo de presenças homologadas via auditor.ia), com caso de teste CT-M1-10. Adicionada nota de escopo em CAR-10 no Capítulo 2, equivalente à de CAR-11/CAR-12. CAR-11 e CAR-12 mantidas sem alteração.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>FB-03</strong></td>
+<td style="text-align: left;">RF04 / CAR-02</td>
+<td style="text-align: left;">CAR-02 possui apenas um RF associado; nomes e funções de RF04 e CAR-02 são semelhantes, sugerindo confusão de nível de abstração entre eles.</td>
+<td style="text-align: center;">Parcialmente Aceito</td>
+<td style="text-align: left;">A crítica de nível de abstração não procede: RF04 já é mais concreto que a CAR-02 (define campos, fluxo e status), não é uma repetição da CAR em outra camada. Porém o ponto prático é válido — CAR-02 promete "erradicar a perda de anotações" e centralizar o registro de campo, mas só existe RF para submissão (RF04); não há RF para o colaborador consultar ou acompanhar o status de um apontamento já enviado.</td>
+<td style="text-align: left;">Criado <strong>RF19 — Consultar apontamentos registrados</strong> (OE1 / CAR-02): permite ao colaborador visualizar status (pendente, homologado, rejeitado) e histórico dos próprios apontamentos de campo. Caso de teste CT-M1-09. RF04 refinado posteriormente conforme FB-11.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>FB-04</strong></td>
+<td style="text-align: left;">RF13 / CAR-07 (ausência de RF)</td>
+<td style="text-align: left;">Não há requisito funcional que permita ao usuário recuperar suas credenciais em caso de esquecimento de senha.</td>
+<td style="text-align: center;">Aceito</td>
+<td style="text-align: left;">Gap real: RF13 cobre apenas o login com credencial já conhecida; o cenário de esquecimento de senha é inevitável numa base de usuários de campo e não tem nenhum requisito associado.</td>
+<td style="text-align: left;">Criado <strong>RF17 — Recuperar credenciais de acesso</strong> (OE4 / CAR-07). Caso de teste CT-M4-09.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>FB-05</strong></td>
+<td style="text-align: left;">RF13 / CAR-07 (ausência de RF)</td>
+<td style="text-align: left;">Não há requisito funcional que garanta o logout manual do usuário; existe apenas o encerramento automático por expiração do token.</td>
+<td style="text-align: center;">Aceito</td>
+<td style="text-align: left;">Gap real: RF13 cobre login, mas nenhum requisito cobre o colaborador encerrar a sessão por vontade própria — relevante em cenário de dispositivo compartilhado/celular emprestado em campo.</td>
+<td style="text-align: left;">Criado <strong>RF18 — Encerrar sessão manualmente</strong> (OE4 / CAR-07). Caso de teste CT-M4-10.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>FB-11</strong></td>
+<td style="text-align: left;">RF04</td>
+<td style="text-align: left;">RF04 é excessivamente amplo, reunindo várias funcionalidades no mesmo critério de aceitação ("preencher o formulário informando horas trabalhadas, escopo executado, anexar comprovantes/fotos e submeter"); sugerido quebrar em fluxos.</td>
+<td style="text-align: center;">Parcialmente Aceito</td>
+<td style="text-align: left;">Procede em parte. O RF04 reunia duas funcionalidades distintas: o preenchimento e a submissão dos dados do apontamento e a anexação de fotos e comprovantes, que tem comportamento próprio (seleção, vínculo ao apontamento e remoção antes do envio). Separar a anexação deixa cada RF com uma ação única e testável. Não foi feita divisão adicional (horas e escopo executado em RFs distintos) porque são campos do mesmo formulário, submetidos como uma operação indivisível do domínio; dividir geraria RFs sem valor de negócio isolado.</td>
+<td style="text-align: left;">RF04 refinado (critério sem a anexação, com remissão ao RF22). Criado <strong>RF22 — Anexar evidências ao apontamento</strong> (OE1 / CAR-02). Caso de teste CT-M1-11; CT-M1-04 atualizado.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="833-requisitos-nao-funcionais-rnfs">8.3.3 Requisitos Não Funcionais (RNFs)<a class="headerlink" href="#833-requisitos-nao-funcionais-rnfs" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Requisito Alvo</th>
+<th style="text-align: left;">Apontamento da Equipe Avaliadora</th>
+<th style="text-align: center;">Deliberação</th>
+<th style="text-align: left;">Justificativa &amp; Decisão Técnica</th>
+<th style="text-align: left;">Ação / Impacto no Artefato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>FB-06</strong></td>
+<td style="text-align: left;">RNF04</td>
+<td style="text-align: left;">Condicionar a métrica de usabilidade a "usuários com treinamento de 15 minutos" dificulta o processo de teste no contexto da disciplina; sugerido medir por taxa de conclusão em primeiro uso ou número de telas/cliques.</td>
+<td style="text-align: center;">Aceito</td>
+<td style="text-align: left;">Procede. Testar a métrica original exigiria treinar cada participante por 15 minutos antes de cada rodada de teste de usabilidade, o que é inviável no tempo da disciplina e introduz variabilidade entre avaliadores. Medir em primeiro uso, sem treinamento, é mais rigoroso e mais fácil de executar.</td>
+<td style="text-align: left;">Critério do RNF04 reescrito: métrica de treinamento prévio substituída por taxa de conclusão em primeiro uso e número máximo de passos/telas. Caso de teste CT-M1-08 atualizado.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>FB-07</strong></td>
+<td style="text-align: left;">RNF01</td>
+<td style="text-align: left;">O limite de 100 apontamentos/fotos no armazenamento local pode ser insuficiente para canteiros sem conectividade; sugerido averiguar a expansão da capacidade e implementar alerta visual quando o armazenamento estiver perto do limite.</td>
+<td style="text-align: center;">Parcialmente Aceito</td>
+<td style="text-align: left;">Procede em parte. O alerta visual é pertinente, pois evita que o colaborador de campo perca o registro ao atingir o limite sem perceber. Já a expansão do limite não foi adotada: o apontamento é diário por colaborador (RNF04), então 100 apontamentos equivalem a mais de três meses de operação contínua sem sinal, muito acima do cenário realista de canteiros. Além disso, a capacidade real do aparelho depende do tamanho das fotos, e não só da quantidade.</td>
+<td style="text-align: left;">Critério do RNF01 reescrito: 100 passa a ser o mínimo garantido (e não um teto rígido), foi incluído alerta visual ao atingir 80% da capacidade e foi explicitado que não pode haver perda de dados. Caso de teste CT-M1-05 atualizado.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>FB-08</strong></td>
+<td style="text-align: left;">RNF (novo) / OE4</td>
+<td style="text-align: left;">Não há requisito não funcional sobre a realização de backups para garantir tolerância a falhas e capacidade de recuperação do sistema; sugerido criar RNF para backups periódicos.</td>
+<td style="text-align: center;">Aceito</td>
+<td style="text-align: left;">Gap real. Os RNFs de confiabilidade existentes (RNF15, atomicidade dos logs; RNF16, retenção contra expurgo) protegem contra inconsistência e exclusão indevida, mas não contra perda de dados por falha de infraestrutura, corrupção ou erro operacional. Como o sistema concentra dados financeiros e trabalhistas, a recuperação precisa ser verificável. O termo "periódicos" foi convertido em parâmetros mensuráveis (frequência diária, retenção, perda máxima de dados e tempo de restauração).</td>
+<td style="text-align: left;">Criado <strong>RNF17 — Realizar backup automático diário com restauração verificada</strong> (OE4 / CAR-08). Caso de teste CT-M4-11.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="834-regras-de-negocio-e-rastreabilidade">8.3.4 Regras de Negócio e Rastreabilidade<a class="headerlink" href="#834-regras-de-negocio-e-rastreabilidade" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Item Alvo</th>
+<th style="text-align: left;">Apontamento da Equipe Avaliadora</th>
+<th style="text-align: center;">Deliberação</th>
+<th style="text-align: left;">Justificativa &amp; Decisão Técnica</th>
+<th style="text-align: left;">Ação / Impacto no Artefato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>FB-09</strong></td>
+<td style="text-align: left;">RNF08 / CAR-03 (ausência de RF)</td>
+<td style="text-align: left;">O RNF08 exige justificativa e auditoria em estornos de fechamento homologado, mas o RF06 trata apenas da homologação e não descreve explicitamente a operação de estorno; sugerido relacionar o RNF08 à CAR-03 e criar/especificar o RF correspondente.</td>
+<td style="text-align: center;">Aceito</td>
+<td style="text-align: left;">Procede. A RN08 já estabelece o estorno como o único caminho formal para retificar lotes homologados, e o RNF08 já está associado à CAR-03 na matriz de rastreabilidade do OE2, mas nenhum RF descrevia a ação do gestor que dispara esse procedimento. Sem o RF, o RNF08 ficava sem funcionalidade que o exercitasse e a RN08 sem operação observável.</td>
+<td style="text-align: left;">Criado <strong>RF21 — Estornar fechamento financeiro</strong> (OE2 / CAR-03), com referência à RN08 e ao RNF08. Caso de teste CT-M2-09. Adicionada menção ao estorno de fechamentos na descrição da CAR-03 (Capítulo 2).</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>FB-10</strong></td>
+<td style="text-align: left;">RN06 e RN10 (redação)</td>
+<td style="text-align: left;">As regras de negócio RN06 e RN10 estão ditando arquitetura e código em vez de especificar o resultado esperado; sugerido reescrever focando no comportamento e na restrição de negócio.</td>
+<td style="text-align: center;">Parcialmente Aceito</td>
+<td style="text-align: left;">Procede em parte. A RN06 listava os formatos de arquivo aceitos (PDF, PNG, JPEG), que é detalhe técnico já coberto e verificável no RNF07; mantê-los na regra duplicava a informação e misturava política de negócio com implementação. Já a RN10 não procede: ela expressa apenas a condição de negócio (só se apropria o que foi previamente homologado pela coordenação), sem citar tecnologia, arquitetura ou código. Na revisão do mesmo critério, a RN18 foi identificada como a regra que de fato descrevia implementação (instruções SQL <code>UPDATE</code> e <code>DELETE</code>) e foi ajustada junto.</td>
+<td style="text-align: left;">RN06 reescrita como restrição de negócio, com remissão ao RNF07 para formatos e tamanho. RN18 reescrita sem referência a SQL, mantendo a restrição de imutabilidade. RN10 mantida sem alteração.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="84-rastreabilidade-de-impacto-nos-artefatos-de-requisitos">8.4 Rastreabilidade de Impacto nos Artefatos de Requisitos<a class="headerlink" href="#84-rastreabilidade-de-impacto-nos-artefatos-de-requisitos" title="Permanent link">¶</a></h2>
+<p>Mapeamento consolidado das seções e artefatos modificados em decorrência das deliberações de feedback:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Artefato / Seção Afetada</th>
+<th style="text-align: left;">Natureza do Ajuste</th>
+<th style="text-align: left;">Requisitos / Itens Impactados</th>
+<th style="text-align: center;">Versão Pós-Ajuste</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Seção 8.1 do Capítulo 8 (Modelo Metodológico)</strong></td>
+<td style="text-align: left;">Nota explicativa sobre o propósito das classificações URPS+ e Sommerville (FB-01)</td>
+<td style="text-align: left;">RNFs (classificação)</td>
+<td style="text-align: center;">v2.4</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tabela de Requisitos Funcionais</strong></td>
+<td style="text-align: left;">Criação de novos RFs para lacunas de cobertura, autenticação e estorno de fechamento; refinamento do RF04 (FB-02, FB-03, FB-04, FB-05, FB-09, FB-11)</td>
+<td style="text-align: left;">RF04, RF17, RF18, RF19, RF20, RF21, RF22</td>
+<td style="text-align: center;">v2.4</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tabela de Requisitos Não Funcionais</strong></td>
+<td style="text-align: left;">Ajuste de métricas e critérios de mensuração; criação de novo RNF (FB-06, FB-07, FB-08)</td>
+<td style="text-align: left;">RNF01, RNF04, RNF17</td>
+<td style="text-align: center;">v2.4</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Regras de Negócio (RNs)</strong></td>
+<td style="text-align: left;">Reescrita focada em comportamento e restrição de negócio, sem detalhes de implementação (FB-10)</td>
+<td style="text-align: left;">RN06, RN18</td>
+<td style="text-align: center;">v2.4</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Matriz de Rastreabilidade e Casos de Teste</strong></td>
+<td style="text-align: left;">Inclusão dos novos requisitos e atualização dos casos de teste dos RFs e RNFs ajustados</td>
+<td style="text-align: left;">RF17 → CAR-07 (CT-M4-09), RF18 → CAR-07 (CT-M4-10), RF19 → CAR-02 (CT-M1-09), RF20 → CAR-09 (CT-M1-10), RF21 → CAR-03 (CT-M2-09), RF22 → CAR-02 (CT-M1-11), RNF17 → CAR-08 (CT-M4-11), CT-M1-04 (RF04), CT-M1-05 (RNF01), CT-M1-08 (RNF04)</td>
+<td style="text-align: center;">v2.4</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Capítulo 2 — Características do Produto (CAR-03 e CAR-10)</strong></td>
+<td style="text-align: left;">Nota de escopo em CAR-10 (FB-02) e menção ao estorno de fechamentos em CAR-03 (FB-09)</td>
+<td style="text-align: left;">CAR-03, CAR-10</td>
+<td style="text-align: center;">v2.3 (Capítulo 2)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="85-checklist-de-validacao-e-homologacao-interna">8.5 Checklist de Validação e Homologação Interna<a class="headerlink" href="#85-checklist-de-validacao-e-homologacao-interna" title="Permanent link">¶</a></h2>
+<ul>
+<li>[x] Todos os comentários enviados no relatório de avaliação por pares foram catalogados com ID único.</li>
+<li>[x] 100% dos feedbacks receberam uma das quatro deliberações formais com justificativa explícita.</li>
+<li>[x] 100% dos Requisitos Funcionais (RFs) seguem a sintaxe canônica <code>[Verbo no Infinitivo] + [Objeto]</code>.</li>
+<li>[x] 100% dos Requisitos Não Funcionais (RNFs) possuem métricas verificáveis e critérios objetivos.</li>
+<li>[x] Regras de Negócio e Casos de Teste afetados foram devidamente sincronizados.</li>
+<li>[ ] Documento revisado e homologado internamente pelos membros da equipe Cascata Ágil.</li>
+<li>[x] Navegação e renderização validadas no MkDocs.</li>
+</ul>
+<hr>
+<h2 id="historico-de-versao">Histórico de Versão<a class="headerlink" href="#historico-de-versao" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: left;">Descrição</th>
+<th style="text-align: left;">Autor(es)</th>
+<th style="text-align: left;">Revisor(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>1.0</code></td>
+<td style="text-align: center;">28/09/2026</td>
+<td style="text-align: left;">Criação da estrutura e matriz deliberativa de feedbacks da avaliação em pares (Issue #77)</td>
+<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+<td style="text-align: left;">Equipe Cascata Ágil</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>1.1</code></td>
+<td style="text-align: center;">28/09/2026</td>
+<td style="text-align: left;">Registro das deliberações FB-01 a FB-11, preenchimento do painel quantitativo, da rastreabilidade de impacto e do checklist de validação</td>
+<td style="text-align: left;">Matheus Saraiva Camargo</td>
+<td style="text-align: left;">Matheus Szervinsk</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+        <script src="../../assets/javascripts/mermaid-init.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
