@@ -66,6 +66,7 @@ markdown_extensions:
 
 extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - assets/javascripts/mermaid-init.js
 
 
 nav:
@@ -79,10 +80,8 @@ nav:
   - 'Capítulo 7 - Interação com Cliente': interacao-cliente/index.md
   - 'Capítulo 8 - Requisitos (Unidade 2)':
       - 'Especificação de Requisitos': requisitos/index.md
-      - 'Feedback da Avaliação em Pares': requisitos/feedback.md
       - 'Priorização e MVP': requisitos/priorizacao.md
-      - 'Priorização RFs no MVP e Matriz Valor x Esforço': requisitos/priorizacao-rf-mvp-e-matriz-4x4.md
-      - 'MVP (rascunho)': requisitos/priorizacao-mvp.md
+      - 'Feedback da Avaliação em Pares': requisitos/feedback.md
   - 'Capítulo 9 - DoR e DoD (Unidade 2)': dor-dod/index.md
   - 'Capítulo 10 - Backlog (Unidade 2)': backlog/index.md
   - 'Capítulo 11 - Lições Aprendidas': licoes-aprendidas/index.md

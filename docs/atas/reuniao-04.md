@@ -29,7 +29,7 @@ A equipe avaliou a nota 7 obtida na Unidade 1 como resultado positivo e mapeou o
 ## 3. Discussões
 
 * **Avaliação da Unidade 1 e Feedback do Professor:**
-    * Ajustes gerais de português e padronização da forma de referência à cliente Maria Beatryz, que alternava entre "administrativa", "representante legal", "cliente focal" e "sócia administradora".
+    * Ajustes gerais de português e padronização da forma de referência à cliente Maria Beatryz, que alternava entre "administrativa", "representante legal", "cliente focal" e "auxiliar administradora".
     * Modificações estruturais em imagens e seções do site.
 
 * **Reestruturação do MkDocs e Fluxo de Revisão:**

@@ -1,14 +1,17 @@
 # Capítulo 10: Backlog do Produto e MVP
 
-!!! info "Artefato Previsto para a Unidade 2"
-    Esta seção apresenta o Backlog Geral priorizado de funcionalidades e a delimitação formal do Produto Mínimo Viável (MVP) a ser entregue e homologado junto à DUOC Arquitetura e Engenharia. Este artefato será estruturado na **Unidade 2**.
+!!! info "Artefato em Estruturação — Unidade 2"
+    A delimitação analítica e consensual do Produto Mínimo Viável (MVP), baseada no cruzamento de **Valor de Negócio** com a cliente e **Esforço Técnico** da equipe, encontra-se formalizada na **[Priorização e MVP (Capítulo 8)](../requisitos/priorizacao.md)**.
+    
+    Este capítulo concentrará a decomposição ágil do produto em nível de **Temas, Épicos e Histórias de Usuário (User Stories)** que implementam os requisitos do MVP para as iterações do modelo RAD.
 
 ---
 
 ## Estrutura Prevista
 
-1. **10.1 Backlog Geral:** Lista priorizada de User Stories e épicos planejados para a solução.
-2. **10.2 Priorização do Backlog e MVP:** Priorização por MoSCoW e matriz de valor vs. complexidade técnica para orientar as iterações de construção do RAD.
+1. **10.1 Épicos e Temas:** Agrupamento das capacidades do sistema em épicos de entrega.
+2. **10.2 Backlog do Produto (User Stories):** Histórias de usuário detalhadas no padrão INVEST, com critérios formais de aceitação (Gherkin/BDD).
+3. **10.3 Backlog do MVP e Planejamento de Sprints:** Mapeamento das User Stories do MVP orientando os ciclos de construção do RAD e critérios DoR/DoD ([Capítulo 9](../dor-dod/index.md)).
 
 ---
 

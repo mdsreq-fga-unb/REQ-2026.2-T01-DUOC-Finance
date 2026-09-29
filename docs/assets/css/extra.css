@@ -1786,28 +1786,52 @@
 }
 
 /* ============================================================
-   AMPLIAÇÃO E AJUSTE DE ESCALA: GRÁFICO CARTESIANO MERMAID (MoSCoW)
-   Aumenta a largura e comprimento do gráfico para evitar cortes
+   DIAGRAMAS MERMAID: LARGURA RESPONSIVA E ESCALA AMPLIADA
+   Aumenta a área útil dos quadrantes para máxima legibilidade
    ============================================================ */
 
-.mermaid-cartesian-container {
+.mermaid {
   width: 100% !important;
-  margin: 1.5rem auto 2.5rem auto !important;
+  max-width: 960px !important;
+  margin: 2rem auto 2.5rem auto !important;
+  text-align: center !important;
   display: flex !important;
   justify-content: center !important;
   overflow-x: auto !important;
   padding: 0.5rem 0 !important;
 }
 
-.mermaid-cartesian-container pre.mermaid,
-.mermaid-cartesian-container .mermaid {
+.mermaid svg {
   width: 100% !important;
-  min-width: 780px !important;
-  max-width: 1050px !important;
+  max-width: 920px !important;
+  min-height: 600px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
 }
 
-.mermaid-cartesian-container .mermaid svg {
-  width: 100% !important;
-  height: auto !important;
-  min-height: 680px !important;
+/* Suaviza o título do quadrante de fundo para não colidir com o texto dos pontos */
+.mermaid svg text.quadrant-title {
+  opacity: 0.20 !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
 }
+
+/* Tipografia nítida para rótulos de pontos e eixos nos diagramas */
+.mermaid svg text.point-label {
+  font-size: 11.5px !important;
+  font-weight: 500 !important;
+}
+
+.mermaid svg text.axis-label {
+  font-weight: 600 !important;
+  font-size: 12px !important;
+}
+
+.mermaid svg text.title-text {
+  font-weight: 700 !important;
+  font-size: 15px !important;
+}
+
+
+

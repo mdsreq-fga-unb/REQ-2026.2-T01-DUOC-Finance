@@ -28,7 +28,7 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 ### 1. Elicitação e Descoberta de Requisitos
 * **Objetivo Geral:** Descobrir as necessidades operacionais reais, regras de negócio e expectativas sociotécnicas dos atores da DUOC.
 *   **Técnicas de ER:**
-    *   **Entrevistas Semiestruturadas com Stakeholder Chave:** Condução planejada de reuniões síncronas com a sócia-administradora Maria Beatryz para mapear a rotina de fechamento de folha, gestão de canteiros e cálculo de comissões. | **Status:** Realizado | **Evidência:** [Ata da Reunião 1](../atas/reuniao-01.md).
+    *   **Entrevistas Semiestruturadas com Stakeholder Chave:** Condução planejada de reuniões síncronas com a auxiliar-administradora Maria Beatryz para mapear a rotina de fechamento de folha, gestão de canteiros e cálculo de comissões. | **Status:** Realizado | **Evidência:** [Ata da Reunião 1](../atas/reuniao-01.md).
     *   **Análise Documental:** Análise planejada da documentação operacional utilizada na rotina da empresa. | **Status:** Realizado | **Evidência:** [Planilhas Sanitizadas no Drive](https://drive.google.com/drive/folders/1e2wQ6ub4BVfte3mmWVXGUZ4cBI2d73Sd?usp=drive_link).
 *   **Práticas:**
     *   **Workshops de Descoberta Operacional:** Sessões colaborativas planejadas para a equipe decompor as dores do cenário atual. | **Status:** Não realizado |

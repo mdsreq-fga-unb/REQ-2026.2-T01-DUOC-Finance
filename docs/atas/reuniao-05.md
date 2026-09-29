@@ -5,7 +5,7 @@
 * **Data da Sessão:** 24 de setembro de 2026, às 19h30 (GMT-03:00)
 * **Natureza:** Síncrona, via Google Meet — reunião com a cliente parceira (avaliação e priorização de requisitos)
 * **Participantes:** 
-    * **Cliente Parceira:** Maria Beatryz Vieira de Sousa (Sócia-Administradora da DUOC Arquitetura e Engenharia)
+    * **Cliente Parceira:** Maria Beatryz Vieira de Sousa (Auxiliar-Administradora da DUOC Arquitetura e Engenharia)
     * **Equipe Cascata Ágil:** Eric Araújo (Product Owner e condução da sessão), Matheus Ribeiro Szervinsk (Scrum Master e Co-PO), Giovana Ferreira (Engenheira Frontend e Designer UI/UX), Paulo Nery (Engenheiro Backend), Matheus Saraiva Camargo (Arquiteto de Software e Banco de Dados), Gustavo (QA e Testes) e Lucas Zanetti (Revisão e Qualidade)
 * **Objetivo da Sessão:** Apresentar a especificação consolidada dos 16 Requisitos Funcionais (RF01 a RF16) derivados dos quatro Objetivos Específicos (OE1 a OE4), definir os critérios qualitativos e quantitativos de valor de negócio (escala ordinal de 1 a 4 associada ao MoSCoW) e conduzir a atribuição consensual de notas, classificações e justificativas operacionais com a cliente para formalizar a delimitação do Produto Mínimo Viável (MVP).
 
@@ -25,7 +25,7 @@
 
 ## 2. Resumo Executivo
 
-A reunião consolidou o alinhamento de escopo prioritário entre a equipe Cascata Ágil e a sócia-administradora Maria Beatryz. A cliente expressou com ênfase que as maiores dores operacionais da DUOC residem atualmente na dependência de planilhas manuais para apuração de diárias de prestadores e na perda contínua de notas fiscais de despesas de viagem de canteiro. 
+A reunião consolidou o alinhamento de escopo prioritário entre a equipe Cascata Ágil e a auxiliar-administradora Maria Beatryz. A cliente expressou com ênfase que as maiores dores operacionais da DUOC residem atualmente na dependência de planilhas manuais para apuração de diárias de prestadores e na perda contínua de notas fiscais de despesas de viagem de canteiro. 
 
 A equipe apresentou a taxonomia de Requisitos Funcionais como ações observáveis do usuário com valor mensurável, acompanhada da escala de 1 a 4 associada ao MoSCoW (Must have = 4, Should have = 3, Could have = 2, Won't have = 1). Em dinâmica participativa, cada um dos 16 RFs foi apreciado criticamente. Estabeleceu-se que 7 requisitos constituem os *Must have* (4), 5 requisitos configuram *Should have* (3), 3 requisitos foram classificados como *Could have* (2) e 1 requisito foi enquadrado como *Won't have* (1) para o escopo do MVP. A cliente aprovou integralmente a linha de corte do MVP (12 RFs que contemplam ponta a ponta o fluxo cadastral, apontamento em campo, fechamento financeiro, reembolsos e controle de acesso).
 
@@ -50,7 +50,7 @@ A equipe apresentou a taxonomia de Requisitos Funcionais como ações observáve
 * **RF04 (Submeter apontamento de campo):** Maria Beatryz destacou que a coleta do Relatório de Viagem Técnica (RVT) via aplicativo é o coração da operação externa, substituindo papéis que se perdiam nas obras. **Classificação acordada: Nota 4 (Must have)**.
 
 ### 3.3 Módulo 2 (OE2 — Motor Financeiro e Reembolsos)
-* **RF05 (Solicitar prévia de fechamento):** Apontado como a solução para a maior dor da sócia-administradora: hoje são necessárias mais de 30 horas mensais para cruzar mensagens de WhatsApp e abas de Excel para apurar quem trabalhou e quanto deve receber. A prévia consolidada automática foi considerada inegociável. **Classificação acordada: Nota 4 (Must have)**.
+* **RF05 (Solicitar prévia de fechamento):** Apontado como a solução para a maior dor da auxiliar-administradora: hoje são necessárias mais de 30 horas mensais para cruzar mensagens de WhatsApp e abas de Excel para apurar quem trabalhou e quanto deve receber. A prévia consolidada automática foi considerada inegociável. **Classificação acordada: Nota 4 (Must have)**.
 * **RF06 (Homologar fechamento financeiro):** Mandatório para fechar o lote de pagamentos com bloqueio contra alterações retroativas, garantindo segurança contábil e paz jurídica na empresa. **Classificação acordada: Nota 4 (Must have)**.
 * **RF07 (Submeter solicitação de reembolso):** Despesas com alimentação, combustível e insumos emergenciais geravam atritos constantes por notas fiscais amassadas ou perdidas. O upload digital obrigatório vinculado à obra elimina esse problema. **Classificação acordada: Nota 4 (Must have)**.
 * **RF08 (Deliberar solicitação de reembolso):** Fluxo de aprovação indispensável para que o coordenador autorize apenas despesas legítimas antes do repasse financeiro. **Classificação acordada: Nota 4 (Must have)**.
