@@ -1785,5 +1785,53 @@
   }
 }
 
+/* ============================================================
+   DIAGRAMAS MERMAID: LARGURA RESPONSIVA E ESCALA AMPLIADA
+   Aumenta a área útil dos quadrantes para máxima legibilidade
+   ============================================================ */
+
+.mermaid {
+  width: 100% !important;
+  max-width: 960px !important;
+  margin: 2rem auto 2.5rem auto !important;
+  text-align: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  overflow-x: auto !important;
+  padding: 0.5rem 0 !important;
+}
+
+.mermaid svg {
+  width: 100% !important;
+  max-width: 920px !important;
+  min-height: 600px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+/* Suaviza o título do quadrante de fundo para não colidir com o texto dos pontos */
+.mermaid svg text.quadrant-title {
+  opacity: 0.20 !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+}
+
+/* Tipografia nítida para rótulos de pontos e eixos nos diagramas */
+.mermaid svg text.point-label {
+  font-size: 11.5px !important;
+  font-weight: 500 !important;
+}
+
+.mermaid svg text.axis-label {
+  font-weight: 600 !important;
+  font-size: 12px !important;
+}
+
+.mermaid svg text.title-text {
+  font-weight: 700 !important;
+  font-size: 15px !important;
+}
+
 
 

@@ -91,6 +91,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 ??? note "CAR-03: Motor de Processamento e Fechamento Financeiro"
 
     * **Valor de Negócio:** Reduz a conferência financeira mensal de dias para horas supervisionadas, apoiando o cálculo de custo de diaristas e de comissões contratuais simplificadas — sem substituir a folha de colaboradores CLT nem o cálculo de encargos (INSS, FGTS, IRRF) e provisões (13º, férias), que seguem nos sistemas contábeis já usados pela DUOC.
+    * **Nota de Escopo:** A característica contempla também o estorno formal de fechamentos já homologados, mediante justificativa auditável, como único caminho para retificar lotes fechados (ver RF21 e RN08 no [Capítulo 8](../../requisitos/index.md)).
     * **OEs Relacionadas:**
         * **OE Principal:** [OE2: Aumentar a Eficiência Administrativo-Financeira](#oe2-aumentar-a-eficiencia-administrativo-financeira)
         * **Contribuição Secundária:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
@@ -154,6 +155,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 ??? note "CAR-10: Importação e Exportação de Dados com ERPs e Planilhas Legadas"
 
     * **Valor de Negócio:** Permite migrar dados históricos de planilhas de Excel e exportar relatórios em formato compatível (CSV/Excel) para os ERPs e ferramentas contábeis já usados pela DUOC, evitando redigitação manual e retrabalho na transição.
+    * **Nota de Escopo:** Esta característica está fora do recorte do MVP definido na [Delimitação do Escopo do MVP](#26-viabilidade-da-proposta-analise-do-mvp) (seção 2.6). O desenho técnico da integração (formatos de arquivo, direção do fluxo e sistemas de destino) será definido em fase posterior; esta CAR registra apenas o compromisso de escopo.    
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
 
@@ -413,3 +415,4 @@ O DUOC Finance deverá gerar benefícios para a organização e para as pessoas 
 | `2.0` | 15/09/2026 | Unificação integral de todos os artefatos 2.1 a 2.7 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `2.1` | 19/09/2026 | Reconciliação pós-merge com `develop`: adição de CAR-09 a CAR-12 (integrações externas) vinculadas a OE1; correção de terminologia financeira em OE3 e CAR-06 ("margem líquida"/"lucro real" → "custo de mão de obra apropriado"/"desvio orçamentário"), com nota de escopo explicitando ausência de receita e custos totais no MVP | Paulo Nery | |
 | `2.2` | 21/09/2026 | Ajuste da estratégia de mitigação de riscos: adoção de UI-First com base no Figma e designs via Frontend, garantindo validação de interface antes da codificação de lógica e persistência | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `2.3` | 28/09/2026 | Inclusão de nota de escopo em CAR-10 e de menção ao estorno de fechamentos em CAR-03, decorrentes da avaliação por pares dos requisitos (ver [Feedback dos Requisitos](../../requisitos/feedback.md)) | Matheus Saraiva Camargo | Matheus Szervinsk |
