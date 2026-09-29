@@ -1,10 +1,12 @@
 # Capítulo 8: Priorização de Requisitos e Definição do MVP
 
-Este documento formaliza a priorização sistemática dos Requisitos Funcionais do sistema **DUOC Finance** com base em critérios objetivos de **Valor de Negócio**, orientando o escopo do **Produto Mínimo Viável (MVP)** e o encadeamento dos incrementos no ciclo de desenvolvimento sob a metodologia **RAD (Rapid Application Development)**.
+Este documento consolida a estratégia integrada de priorização do sistema **DUOC Finance**, articulando os **Requisitos Funcionais (RF)** por critérios objetivos de **Valor de Negócio** e **MoSCoW**, bem como a classificação e vinculação dos **Requisitos Não Funcionais (RNF)** ao escopo do **Produto Mínimo Viável (MVP)**.
 
-A atribuição de notas, pesos e justificativas operacionais decorre de deliberação consensual realizada diretamente com a cliente parceira **Maria Beatryz Vieira de Sousa** (Auxiliar Administrativa da DUOC Arquitetura e Engenharia), devidamente formalizada na [Ata da Reunião 05 (24/09/2026)](../atas/reuniao-05.md).
+A atribuição de notas, pesos e justificativas operacionais de negócio decorre de deliberação consensual realizada diretamente com a cliente parceira **Maria Beatryz Vieira de Sousa** (Sócia-Administradora da DUOC Arquitetura e Engenharia), formalizada na [Ata da Reunião 05 (24/09/2026)](../atas/reuniao-05.md).
 
 ---
+
+# PARTE I — PRIORIZAÇÃO DE REQUISITOS FUNCIONAIS (VALOR DE NEGÓCIO E MoSCoW)
 
 ## 8.1 Introdução e Contexto Estratégico
 
@@ -34,38 +36,114 @@ Para transformar a percepção empírica de valor em uma métrica auditável e r
 | **2** | **Could have**<br>*(Desejável / Média Prioridade)* | **Conveniência e sofisticação analítica:** Funcionalidade benéfica que melhora a experiência do usuário ou oferece visões analíticas avançadas, mas cuja ausência não degrada a execução dos fluxos financeiros e cadastrais essenciais. | **Inclusão condicionada à capacidade residual** do cronograma (Incremento 3). |
 | **1** | **Won't have (neste momento)**<br>*(Baixa Prioridade / Futuro)* | **Evolução postergada:** Requisito reconhecido como valoroso para a maturidade corporativa, mas expressamente excluído do escopo do MVP por exigir integrações complexas ou por não ser urgente frente às dores imediatas. | **Fora do MVP.** Registrado formalmente no roadmap pós-implantação (Release 2.0). |
 
----
-
 ### 8.2.2 Critérios Qualitativos de Negócio
-
-A avaliação qualitativa considerou quatro dimensões estratégicas da rotina da DUOC:
 
 1. **Mitigação de Riscos Trabalhistas e Fiscais:** Requisitos que evitam pagamentos indevidos a colaboradores afastados ou desligados (RN04), asseguram a obrigatoriedade de notas fiscais digitalizadas (RN06) e garantem a retenção auditável de registros conforme o Artigo 11 da CLT (RN19).
 2. **Eliminação do Retrabalho e Integridade da Informação:** Substituição definitiva da digitação redundante de planilhas por uma base unificada, estabelecendo uma fonte única da verdade para dados de colaboradores e diárias.
 3. **Autonomia Operacional das Equipes:** Descentralização da coleta de dados por meio do apontamento direto pelo colaborador ou encarregado em campo, desonerando a administração central de cobrar comprovantes via mensagens instantâneas.
 4. **Segregação de Funções e Privacidade (LGPD):** Proteção do sigilo de remunerações e dados sensíveis bancários, garantindo que colaboradores de campo não visualizem dados estratégicos da diretoria (RN14, RN16).
 
----
-
 ### 8.2.3 Critérios Quantitativos de Negócio
-
-Para respaldar a pontuação atribuída, foram estabelecidos parâmetros quantitativos mensuráveis:
 
 1. **Volume Transacional Impactado:** Frequência de uso do requisito (diário para apontamentos e reembolsos; quinzenal/mensal para fechamento financeiro de dezenas de contratos ativos e prestadores de serviço).
 2. **Economia de Horas Administrativas (H/mês):** Estimativa da redução de horas gastas pela sócia-administradora e assistente administrativa na conferência manual de recibos e preenchimento de tabelas (estimada em mais de 30 horas mensais no fechamento).
 3. **Prevenção de Perdas Monetárias:** Eliminação de pagamentos duplicados, arredondamentos imprecisos em cálculos de comissões/diárias e concessão de reembolsos sem documento fiscal correspondente (tolerância zero a desvios, RNF06).
 4. **Redução do Tempo de Ciclo:** Encurtamento do intervalo entre a execução do serviço em campo e a disponibilização do extrato de conferência supervisionada (de até 5 dias úteis de espera manual para processamento instantâneo, RNF05).
 
+---
+
+## 8.3 Diagrama Cartesiano de Priorização (Plano de 4 Quadrantes)
+
+A priorização dos 16 requisitos funcionais é representada visualmente no **Plano Cartesiano de Valor vs. Urgência**, estruturado sobre dois eixos analíticos complementares:
+
+- **Eixo Vertical (Y) — Valor de Negócio:** Mensura o retorno estratégico, conformidade jurídica e impacto na receita/custos (escala de 1 a 4).
+- **Eixo Horizontal (X) — Urgência Operacional / Criticidade no MVP:** Mensura a premência de implantação para estancar dores imediatas e viabilizar os fluxos diários da empresa.
+
+### 8.3.1 Gráfico Cartesiano de Priorização (Mermaid)
+
+<div class="mermaid-cartesian-container" markdown="1">
+
+```mermaid
+quadrantChart
+    title Matriz Cartesiana MoSCoW: Valor de Negócio vs. Urgência Operacional
+    x-axis "Baixa Urgência Operacional" --> "Alta Urgência Operacional"
+    y-axis "Menor Valor de Negócio" --> "Alto Valor de Negócio"
+    quadrant-1 "MUST HAVE (Crítico / MVP)"
+    quadrant-2 "SHOULD HAVE (Importante / MVP)"
+    quadrant-3 "WON'T HAVE (Postergado)"
+    quadrant-4 "COULD HAVE (Desejável / Extensão)"
+    "RF13 Efetuar login no sistema": [0.54, 0.92]
+    "RF01 Cadastrar colaborador": [0.54, 0.86]
+    "RF05 Solicitar prévia de fechamento": [0.54, 0.80]
+    "RF06 Homologar fechamento financeiro": [0.54, 0.74]
+    "RF04 Submeter apontamento de campo": [0.54, 0.68]
+    "RF07 Submeter solicitação de reembolso": [0.54, 0.62]
+    "RF08 Deliberar solicitação de reembolso": [0.54, 0.56]
+    "RF02 Atualizar cadastro de colaborador": [0.05, 0.90]
+    "RF03 Registrar movimentação funcional": [0.05, 0.82]
+    "RF09 Apropriar custos operacionais": [0.05, 0.74]
+    "RF10 Consultar rastreabilidade de custos": [0.05, 0.66]
+    "RF14 Gerenciar perfis de acesso": [0.05, 0.58]
+    "RF11 Filtrar indicadores de custos": [0.54, 0.40]
+    "RF12 Monitorar execução orçamentária": [0.54, 0.28]
+    "RF15 Consultar trilha de auditoria": [0.54, 0.16]
+    "RF16 Exportar relatório de auditoria": [0.05, 0.25]
+```
+
+</div>
+
+### 8.3.2 Distribuição dos Requisitos nos 4 Quadrantes Cartesianos
+
+<div class="grid cards" markdown>
+
+-   :material-star-box:{ .lg .middle style="color: #10b981;" } **Quadrante I — Must Have (Alto Valor, Alta Urgência)**
+
+    ---
+    **Foco:** Núcleo inegociável do Produto Mínimo Viável (MVP). Ações críticas sem as quais a empresa não opera.
+
+    *   **RF01:** Cadastrar colaborador *(OE1 / CAR-01)*
+    *   **RF04:** Submeter apontamento de campo *(OE1 / CAR-02)*
+    *   **RF05:** Solicitar prévia de fechamento *(OE2 / CAR-03)*
+    *   **RF06:** Homologar fechamento financeiro *(OE2 / CAR-03)*
+    *   **RF07:** Submeter solicitação de reembolso *(OE2 / CAR-04)*
+    *   **RF08:** Deliberar solicitação de reembolso *(OE2 / CAR-04)*
+    *   **RF13:** Efetuar login no sistema *(OE4 / CAR-07)*
+
+-   :material-check-decagram:{ .lg .middle style="color: #3b82f6;" } **Quadrante II — Should Have (Alto Valor, Menor Urgência)**
+
+    ---
+    **Foco:** Requisitos estruturantes que dão sustentabilidade e autonomia operacional à equipe da DUOC no MVP.
+
+    *   **RF02:** Atualizar cadastro de colaborador *(OE1 / CAR-01)*
+    *   **RF03:** Registrar movimentação funcional *(OE1 / CAR-01)*
+    *   **RF09:** Apropriar custos operacionais *(OE3 / CAR-05)*
+    *   **RF10:** Consultar rastreabilidade de custos *(OE3 / CAR-05)*
+    *   **RF14:** Gerenciar perfis de acesso *(OE4 / CAR-07)*
+
+-   :material-clock-outline:{ .lg .middle style="color: #f59e0b;" } **Quadrante IV — Could Have (Médio Valor, Moderada Urgência)**
+
+    ---
+    **Foco:** Recursos analíticos avançados e conveniência gerencial. Extensões programadas para o Incremento 3.
+
+    *   **RF11:** Filtrar indicadores de custos *(OE3 / CAR-06)*
+    *   **RF12:** Monitorar execução orçamentária *(OE3 / CAR-06)*
+    *   **RF15:** Consultar trilha de auditoria *(OE4 / CAR-08)*
+
+-   :material-close-octagon-outline:{ .lg .middle style="color: #94a3b8;" } **Quadrante III — Won't Have (Menor Valor Imediato, Baixa Urgência)**
+
+    ---
+    **Foco:** Funcionalidades de conformidade preventiva de longo prazo, postergadas para versões pós-MVP.
+
+    *   **RF16:** Exportar relatório de auditoria *(OE4 / CAR-08)*  
+        *(Previsão de desenvolvimento: Release 2.0)*
+
+</div>
 
 ---
 
-## 8.3 Detalhamento dos Requisitos por Categoria MoSCoW
+## 8.4 Detalhamento dos Requisitos por Categoria MoSCoW
 
-Nesta seção, cada um dos quatro quadrantes do **MoSCoW** é detalhado em um tópico exclusivo com sua respectiva tabela analítica, fundamentação de negócio e rastreabilidade técnica.
-
-### 8.3.1 Categoria Must Have — Mandatório (Nota 4 | 7 Requisitos)
-
-A categoria **Must Have (Nota 4)** reúne as funcionalidades vitais do sistema. Sem estes requisitos, a DUOC não consegue abandonar as planilhas manuais, pois não haveria meio de coletar os dados de campo, calcular o fechamento de pagamentos ou proteger o acesso às informações financeiras.
+### 8.4.1 Categoria Must Have — Mandatório (Nota 4 | 7 Requisitos)
 
 | Código | Requisito Funcional (Ação do Usuário) | Módulo / OE | CAR | Nota | Justificativa de Negócio e Impacto Operacional | Escopo MVP |
 | :---: | :--- | :---: | :---: | :---: | :--- | :---: |
@@ -79,9 +157,7 @@ A categoria **Must Have (Nota 4)** reúne as funcionalidades vitais do sistema. 
 
 ---
 
-### 8.3.2 Categoria Should Have — Importante (Nota 3 | 5 Requisitos)
-
-A categoria **Should Have (Nota 3)** contempla os requisitos estruturantes de alto impacto. Embora admitam contornos manuais temporários em cenários de contingência (por exemplo, ajustes pontuais de banco de dados pela equipe técnica durante os primeiros dias), sua presença no MVP é imprescindível para garantir que a equipe administrativa da DUOC opere com autonomia contínua.
+### 8.4.2 Categoria Should Have — Importante (Nota 3 | 5 Requisitos)
 
 | Código | Requisito Funcional (Ação do Usuário) | Módulo / OE | CAR | Nota | Justificativa de Negócio e Impacto Operacional | Escopo MVP |
 | :---: | :--- | :---: | :---: | :---: | :--- | :---: |
@@ -93,9 +169,7 @@ A categoria **Should Have (Nota 3)** contempla os requisitos estruturantes de al
 
 ---
 
-### 8.3.3 Categoria Could Have — Desejável (Nota 2 | 3 Requisitos)
-
-A categoria **Could Have (Nota 2)** engloba funcionalidades analíticas e de conveniência que enriquecem substancialmente a experiência gerencial da sócia-administradora. Sua não inclusão inicial não impede a realização dos pagamentos nem a execução das obras. O desenvolvimento desses requisitos está programado como extensão no **Incremento 3**, condicionado à existência de folga técnica no cronograma do RAD.
+### 8.4.3 Categoria Could Have — Desejável (Nota 2 | 3 Requisitos)
 
 | Código | Requisito Funcional (Ação do Usuário) | Módulo / OE | CAR | Nota | Justificativa de Negócio e Impacto Operacional | Escopo MVP |
 | :---: | :--- | :---: | :---: | :---: | :--- | :---: |
@@ -105,9 +179,7 @@ A categoria **Could Have (Nota 2)** engloba funcionalidades analíticas e de con
 
 ---
 
-### 8.3.4 Categoria Won't Have — Postergado (Nota 1 | 1 Requisito)
-
-A categoria **Won't Have (Nota 1)** representa demandas reconhecidas como valorosas para a conformidade regulatória avançada da DUOC, mas cuja frequência de uso é esporádica e cuja complexidade de implementação consumiria esforço crítico de engenharia necessário para estabilizar o motor financeiro. Ficou acordado com a cliente que esse requisito será formalmente entregue na **Release 2.0 (pós-MVP)**.
+### 8.4.4 Categoria Won't Have — Postergado (Nota 1 | 1 Requisito)
 
 | Código | Requisito Funcional (Ação do Usuário) | Módulo / OE | CAR | Nota | Justificativa de Negócio e Impacto Operacional | Previsão de Entrega |
 | :---: | :--- | :---: | :---: | :---: | :--- | :---: |
@@ -115,9 +187,7 @@ A categoria **Won't Have (Nota 1)** representa demandas reconhecidas como valoro
 
 ---
 
-## 8.4 Tabela-Síntese Consolidada de Avaliação de Valor de Negócio
-
-Para viabilizar uma consulta comparativa unificada, a tabela abaixo consolida todos os **16 Requisitos Funcionais**, ordenados por pontuação decrescente de valor de negócio e módulo:
+## 8.5 Tabela-Síntese Consolidada de Avaliação de Valor de Negócio (RFs)
 
 | Código | Requisito Funcional | OE | CAR | Nota | MoSCoW | Impacto Central no Negócio da DUOC | Escopo MVP |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- | :---: |
@@ -138,21 +208,7 @@ Para viabilizar uma consulta comparativa unificada, a tabela abaixo consolida to
 | **RF15** | **Consultar trilha de auditoria** | OE4 | CAR-08 | **2** | Could have | Permite pesquisar visualmente registros de logs de auditoria na interface. | **Pós-MVP** |
 | **RF16** | **Exportar relatório de auditoria** | OE4 | CAR-08 | **1** | Won't have | Emite dossiês formais para conformidade trabalhista (Artigo 11 da CLT). | **Release 2.0** |
 
----
-
-## 8.5 Análise Quantitativa e Aderência Metodológica
-
-A distribuição percentual das prioridades MoSCoW demonstra plena harmonia com as boas práticas internacionais de Engenharia de Software:
-
-```mermaid
-pie title Distribuição de Requisitos Funcionais por Prioridade (MoSCoW)
-    "Must have (Nota 4) - 43.75%" : 7
-    "Should have (Nota 3) - 31.25%" : 5
-    "Could have (Nota 2) - 18.75%" : 3
-    "Won't have (Nota 1) - 6.25%" : 1
-```
-
-### 8.5.1 Resumo Quantitativo por Categoria MoSCoW
+### 8.5.1 Distribuição Quantitativa e Regra 60-20-20
 
 | Classificação MoSCoW | Nota | Quantidade de RFs | Proporção (%) | Requisitos Contemplados |
 | :--- | :---: | :---: | :---: | :--- |
@@ -162,60 +218,88 @@ pie title Distribuição de Requisitos Funcionais por Prioridade (MoSCoW)
 | **Won't have (Postergado)** | 1 | 1 | 6,25% | RF16 |
 | **Total Geral** | — | **16** | **100,00%** | **Todos os 16 RFs especificados** |
 
-!!! success "Aderência à Boa Prática do MoSCoW (Regra 60-20-20)"
-    Na literatura clássica de Engenharia de Software e Métodos Ágeis (Clegg & Barker), recomenda-se que os requisitos *Must have* não ultrapassem **60% da capacidade produtiva total** do time de desenvolvimento, reservando margem operacional de segurança para contingências e absorção de mudanças. 
-    
-    No DUOC Finance, os *Must have* representam exatamente **43,75%** dos requisitos, e a soma de *Must* e *Should* totaliza **75,00%**, configurando um escopo de MVP altamente realista, robusto e perfeitamente exequível dentro do semestre letivo.
+---
+
+# PARTE II — CLASSIFICAÇÃO E VINCULAÇÃO DOS REQUISITOS NÃO FUNCIONAIS (RNF) AO MVP
+
+Este segmento registra a classificação dos **Requisitos Não Funcionais (RNF)** do sistema **DUOC Finance** em relação ao escopo do Produto Mínimo Viável (MVP). O objetivo é garantir que os atributos de qualidade indispensáveis (segurança da informação, conformidade com a LGPD, exatidão financeira e desempenho) acompanhem a primeira entrega à **DUOC Arquitetura e Engenharia**, e não fiquem para depois das funcionalidades.
+
+Os RNFs classificados são os especificados no [Capítulo 8: Requisitos de Software](index.md) (RNF01 a RNF16). O recorte do MVP segue a [Delimitação do Escopo do MVP](../visao-produto/capitulo-2/index.md#26-viabilidade-da-proposta-analise-do-mvp) do Capítulo 2.
 
 ---
 
-## 8.6 Delimitação e Escopo do Produto Mínimo Viável (MVP)
+## 8.6 Recorte Funcional de Referência do MVP
 
-A linha de corte (*Cut-line*) estabelecida em comum acordo com Maria Beatryz delimita o **Produto Mínimo Viável (MVP)** como o conjunto dos requisitos com pontuação **4 (Must have)** e **3 (Should have)**, totalizando **12 Requisitos Funcionais**, acompanhados dos respectivos Requisitos Não Funcionais estruturantes.
+Para classificar um RNF como associado ao MVP, é preciso saber quais Requisitos Funcionais (RF) estão no MVP. O recorte abaixo aplica a delimitação do Capítulo 2.6 (cadastro e RBAC, RVT com reembolso, motor de cálculo de diárias e comissões, apropriação de custos por contrato, visualização tabular de custo por contrato e registro básico de auditoria) aos RFs especificados.
 
-```mermaid
-flowchart TD
-    subgraph MVP["Escopo do MVP (12 Requisitos Funcionais — Must Have e Should Have)"]
-        direction TB
-        subgraph M1["Módulo 1: Base Cadastral e Campo (OE1)"]
-            RF01["RF01: Cadastrar colaborador (Nota 4)"]
-            RF04["RF04: Submeter apontamento de campo (Nota 4)"]
-            RF02["RF02: Atualizar cadastro (Nota 3)"]
-            RF03["RF03: Movimentação funcional (Nota 3)"]
-        end
-        subgraph M2["Módulo 2: Fechamento e Reembolsos (OE2)"]
-            RF05["RF05: Solicitar prévia de fechamento (Nota 4)"]
-            RF06["RF06: Homologar fechamento financeiro (Nota 4)"]
-            RF07["RF07: Submeter solicitação de reembolso (Nota 4)"]
-            RF08["RF08: Deliberar solicitação de reembolso (Nota 4)"]
-        end
-        subgraph M3["Módulo 3: Apropriação de Custos (OE3)"]
-            RF09["RF09: Apropriar custos operacionais (Nota 3)"]
-            RF10["RF10: Consultar rastreabilidade de custos (Nota 3)"]
-        end
-        subgraph M4["Módulo 4: Governança e Autenticação (OE4)"]
-            RF13["RF13: Efetuar login no sistema (Nota 4)"]
-            RF14["RF14: Gerenciar perfis de acesso (Nota 3)"]
-        end
-    end
+| Situação | Requisitos Funcionais | Fundamentação no Escopo do MVP |
+| :--- | :--- | :--- |
+| **No MVP** | RF01, RF02, RF03, RF04 | Cadastro centralizado de pessoal e apontamento de campo (RVT), base para todos os fluxos financeiros. |
+| **No MVP** | RF05, RF06, RF07, RF08 | Motor de apoio ao cálculo de diárias e comissões simplificadas e fluxo de reembolso incluído no RVT. |
+| **No MVP** | RF09, RF10 | Apropriação dos custos ao contrato e visualização tabular direta do custo apurado, com a origem de cada lançamento. |
+| **No MVP** | RF13, RF14, RF15 | Controle de acesso por perfis fixos (RBAC) e registro básico de auditoria para conformidade com a LGPD. |
+| **Fora do MVP** | RF11, RF12 | Filtros dinâmicos e monitoramento orçamentário compõem um painel de *business intelligence*, que o Capítulo 2.6 declara desnecessário no primeiro ciclo. |
+| **Fora do MVP** | RF16 | A exportação do dossiê de auditoria vai além do "registro básico de auditoria" previsto para o MVP. |
 
-    subgraph ForaMVP["Pós-MVP / Extensões Analíticas (Could Have e Won't Have)"]
-        direction TB
-        RF11["RF11: Filtrar indicadores de custos (Nota 2 — Incr. 3)"]
-        RF12["RF12: Monitorar execução orçamentária (Nota 2 — Incr. 3)"]
-        RF15["RF15: Consultar trilha de auditoria (Nota 2 — Pós-MVP)"]
-        RF16["RF16: Exportar relatório de auditoria (Nota 1 — Release 2.0)"]
-    end
+---
 
-    MVP -->|Garante operação ponta a ponta sem planilhas| Homologacao["Validação Sociotécnica e Homologação com a Cliente"]
-```
+## 8.7 Categorias de Classificação dos RNFs
 
-### 8.6.1 Cobertura dos Objetivos Específicos no MVP
+Cada RNF recebe exatamente uma das quatro categorias oficiais abaixo.
 
-- **OE1 (Padronização e Unificação de Dados): 100% contemplado no MVP.** Todos os 4 RFs (RF01 a RF04) integram o escopo, sanando a dispersão de cadastros e o apontamento em campo.
-- **OE2 (Eficiência Administrativo-Financeira): 100% contemplado no MVP.** Todos os 4 RFs (RF05 a RF08) integram o escopo, digitalizando o motor de fechamento de diárias e a prestação de contas de viagens.
-- **OE3 (Inteligência de Custos por Contrato): 50% no núcleo do MVP e 50% em extensões.** O núcleo de apropriação e rastreabilidade direta por obra (RF09 e RF10) é entregue no MVP; filtros avançados e alertas de estouro orçamentário (RF11 e RF12) entram como extensões do Incremento 3.
-- **OE4 (Governança, Segurança e Rastreabilidade): 50% no núcleo do MVP e 50% em evoluções futuras.** A segurança de acesso (login e perfis RBAC — RF13 e RF14) compõe o MVP; visualização gráfica e exportação de relatórios em massa de auditoria (RF15 e RF16) são postergadas.
+| Categoria | Definição Operacional | Consequência para a Entrega |
+| :--- | :--- | :--- |
+| **Obrigatório para o MVP** | Atributo transversal de segurança, privacidade ou conformidade legal que vale para o sistema inteiro, independentemente de qual RF está em uso. | Entra no MVP sem negociação. Sem ele, não há publicação em produção com dados reais. |
+| **Associado a RF do MVP** | Atributo de qualidade de um RF específico que está no MVP. | Entra no MVP junto com o RF. O RF só é considerado pronto quando o critério mensurável do RNF é atendido. |
+| **Evolutivo** | Atributo pertinente ao produto, mas ligado a um RF fora do MVP ou dependente de infraestrutura prevista para ciclos seguintes. | Permanece no backlog e é reavaliado a cada incremento do RAD. |
+| **Não Aplicável** | Atributo sem relação com o escopo do produto (por exemplo, módulos excluídos como estoque, cronogramas de obra ou composições SINAPI). | Não é implementado nem testado no projeto. |
+
+---
+
+<a id="tabela-classificacao-rnf-mvp"></a>
+## 8.8 Tabela de Classificação e Vinculação dos RNFs do MVP
+
+| Código | Requisito Não Funcional | URPS+ | OE | RFs Vinculados | Categoria | Justificativa |
+| :---: | :--- | :--- | :---: | :--- | :--- | :--- |
+| **RNF01** | Operar em modo *offline* para coleta de dados em canteiros sem conectividade | Reliability | OE1 | RF04 | **Evolutivo** | Exige arquitetura com armazenamento local no dispositivo e fila de sincronização, de maior complexidade técnica. Para o MVP, a cobertura 4G/Wi-Fi nas obras da DUOC no DF atende à validação do fluxo; o suporte a áreas sem sinal fica para o ciclo de campo ampliado. |
+| **RNF02** | Disponibilizar consulta cadastral com tempo de resposta ágil | Performance | OE1 | RF01, RF02, RF03 | **Associado a RF do MVP** | A busca de colaboradores é operação de rotina em quase todas as telas do sistema. O teto de 2,0 s com carga nominal evita que a aplicação replique a lentidão das planilhas compartilhadas. |
+| **RNF03** | Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito | Security (+) | OE1 | Transversal (todos os RFs do MVP) | **Obrigatório para o MVP** | Medida técnica de segurança exigida pela LGPD (Art. 46) e condição de aceite do Capítulo 2.6 para qualquer publicação com dados reais. |
+| **RNF04** | Garantir usabilidade e agilidade no preenchimento de apontamentos de campo | Usability | OE1 | RF04 | **Associado a RF do MVP** | O apontamento é a porta de entrada dos dados de custo. Se o preenchimento for lento ou confuso para o técnico de campo, os dados não chegam ao fechamento. A interface *mobile-first* do MVP é validada com esse critério. |
+| **RNF05** | Processar a rotina de fechamento financeiro com alta eficiência | Performance | OE2 | RF05, RF06 | **Associado a RF do MVP** | O fechamento é o fluxo de maior valor para o financeiro. A meta de ≤ 5,0 s para 500 apontamentos mede o ganho de eficiência prometido no OE2. |
+| **RNF06** | Garantir exatidão aritmética centesimal em cálculos monetários | Reliability | OE2 | RF05, RF06, RF08 | **Associado a RF do MVP** | Diárias, comissões e reembolsos envolvem pagamentos reais a pessoas. Uma discrepância de centavos compromete a confiança da cliente no motor financeiro, por isso a tolerância é zero. |
+| **RNF07** | Validar integridade, tamanho e formatos no upload de comprovantes | Supportability / Security (+) | OE2 | RF04, RF07 | **Associado a RF do MVP** | O comprovante fiscal é obrigatório no reembolso (RN06) e as fotos acompanham o apontamento. A validação de formato e tamanho protege o armazenamento e a legibilidade da prova documental. |
+| **RNF08** | Exigir justificativa textual mandatória e auditoria em estornos de fechamento | Security (+) | OE2 | RF06 | **Associado a RF do MVP** | Garante que a imutabilidade dos lotes homologados (RN08) só seja quebrada com justificativa auditável, o que preserva a rastreabilidade do fechamento. |
+| **RNF09** | Carregar o painel analítico em tempo inferior a 3 segundos | Performance | OE3 | RF11, RF12 | **Evolutivo** | O painel analítico com filtros dinâmicos e indicadores orçamentários está fora do MVP. A consulta de custo por contrato no MVP é tabular (RF10). O critério volta a valer quando RF11 e RF12 entrarem no backlog ativo. |
+| **RNF10** | Restringir dados financeiros analíticos conforme perfil de acesso | Security (+) | OE3 | RF05, RF06, RF09, RF10 | **Obrigatório para o MVP** | Dados salariais e valores de diárias são pessoais e confidenciais (RN14). Qualquer tela do MVP que exponha valores financeiros deve bloquear perfis sem alçada, o que torna o atributo transversal, e não restrito ao painel. |
+| **RNF11** | Garantir consistência transacional ACID na apropriação concorrente de custos | Reliability | OE3 | RF09 | **Associado a RF do MVP** | A apropriação é o elo entre o fechamento e o custo por contrato. Duplicidades ou divergências por concorrência invalidariam a informação entregue à diretoria. |
+| **RNF12** | Assegurar responsividade do painel em resoluções de *desktop* e *tablet* | Usability | OE3 | RF11, RF12 | **Evolutivo** | O critério mensurável refere-se ao painel analítico, que está fora do MVP. As telas do MVP seguem o padrão *mobile-first* do Tailwind CSS definido na stack, sem meta formal própria neste ciclo. |
+| **RNF13** | Expirar token de acesso temporário em no máximo 8 horas | Security (+) | OE4 | RF13 | **Obrigatório para o MVP** | Limita a janela de uso indevido de sessões, principalmente em dispositivos compartilhados em campo. É requisito mínimo da autenticação do MVP. |
+| **RNF14** | Validar perfil de autorização em 100% das rotas de API com dados sensíveis | Security (+) / Legal (LGPD) | OE4 | RF13, RF14 (transversal às rotas do MVP) | **Obrigatório para o MVP** | Implementa o princípio do menor privilégio (RN16) e o isolamento de dados pessoais exigido pela LGPD. Sem ele, o RBAC do MVP ficaria restrito à interface e não protegeria a API. |
+| **RNF15** | Garantir atomicidade transacional na gravação de logs de auditoria | Reliability | OE4 | RF15 (transversal às operações de escrita do MVP) | **Obrigatório para o MVP** | O registro básico de auditoria só tem valor probatório se nenhuma operação sobre dados pessoais ou financeiros deixar de ser registrada (RN17). Atende ao princípio de responsabilização e prestação de contas da LGPD. |
+| **RNF16** | Reter registros de auditoria por no mínimo 5 anos contra expurgo indevido | Supportability / Legal | OE4 | RF15 | **Obrigatório para o MVP** | Obrigação legal decorrente do prazo prescricional trabalhista (Art. 11 da CLT). Mesmo sem completar 5 anos no semestre, o critério é verificável no MVP por análise estática da ausência de rotinas de expurgo (RN18 e RN19). |
+
+---
+
+## 8.9 Síntese da Classificação dos RNFs
+
+### 8.9.1 Distribuição por Categoria
+
+| Categoria | Quantidade | RNFs |
+| :--- | :---: | :--- |
+| **Obrigatório para o MVP** | 6 | RNF03, RNF10, RNF13, RNF14, RNF15, RNF16 |
+| **Associado a RF do MVP** | 7 | RNF02, RNF04, RNF05, RNF06, RNF07, RNF08, RNF11 |
+| **Evolutivo** | 3 | RNF01, RNF09, RNF12 |
+| **Não Aplicável** | 0 | — |
+| **Total** | **16** | 13 no escopo do MVP (81,25%) e 3 evolutivos (18,75%) |
+
+### 8.9.2 Distribuição por Objetivo Específico
+
+| Objetivo Específico | Obrigatório | Associado a RF do MVP | Evolutivo |
+| :--- | :---: | :---: | :---: |
+| [**OE1 — Padronização e Unificação de Dados**](index.md#oe1) | RNF03 | RNF02, RNF04 | RNF01 |
+| [**OE2 — Eficiência Administrativo-Financeira**](index.md#oe2) | — | RNF05, RNF06, RNF07, RNF08 | — |
+| [**OE3 — Inteligência de Custos por Contrato**](index.md#oe3) | RNF10 | RNF11 | RNF09, RNF12 |
+| [**OE4 — Governança, Segurança e Rastreabilidade**](index.md#oe4) | RNF13, RNF14, RNF15, RNF16 | — | — |
 
 ---
 
@@ -223,5 +307,6 @@ flowchart TD
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 24/09/2026 | Estruturação da metodologia de valor de negócio (escala 1 a 4 associada ao MoSCoW), consolidação da tabela de pontuação dos 16 RFs e delimitação formal do MVP pactuada na Reunião 05 com a cliente Maria Beatryz. | Matheus Ribeiro e Eric Araújo | |
-| `1.1` | 25/09/2026 | Refatoração estrutural da priorização: desmembramento do MoSCoW em seções exclusivas com tabelas dedicadas por categoria (Must, Should, Could e Won't), inclusão de diagrama cartesiano de 4 quadrantes (quadrantChart) e mapeamento visual de todos os 16 RFs. | Matheus Ribeiro e Eric Araújo | Lucas Zanetti |
+| `1.0` | 24/09/2026 | Estruturação da metodologia de valor de negócio dos RFs (escala 1 a 4 associada ao MoSCoW), tabela de pontuação dos 16 RFs e delimitação formal do MVP pactuada na Reunião 05 com a cliente Maria Beatryz. | Matheus Ribeiro Szervinsk e Eric Araújo | Lucas Zanetti e Giovana Ferreira |
+| `1.1` | 25/09/2026 | Refatoração estrutural da priorização: desmembramento do MoSCoW em seções exclusivas com tabelas dedicadas por categoria (Must, Should, Could e Won't), inclusão de diagrama cartesiano ampliado de 4 quadrantes (quadrantChart) com escala espacial otimizada para evitar cortes de texto e mapeamento de todos os 16 RFs. | Matheus Ribeiro Szervinsk e Eric Araújo | Lucas Zanetti e Giovana Ferreira |
+| `1.2` | 28/09/2026 | Incorporação da classificação e vinculação dos Requisitos Não Funcionais (RNF01 a RNF16) ao MVP com alinhamento ao recorte funcional do produto. | Paulo Nery | Matheus Ribeiro Szervinsk |
