@@ -79,6 +79,7 @@ nav:
   - 'Capítulo 7 - Interação com Cliente': interacao-cliente/index.md
   - 'Capítulo 8 - Requisitos (Unidade 2)':
       - 'Especificação de Requisitos': requisitos/index.md
+      - 'Feedback da Avaliação em Pares': requisitos/feedback.md
       - 'Priorização e MVP': requisitos/priorizacao.md
       - 'Priorização RFs no MVP e Matriz Valor x Esforço': requisitos/priorizacao-rf-mvp-e-matriz-4x4.md
   - 'Capítulo 9 - DoR e DoD (Unidade 2)': dor-dod/index.md
