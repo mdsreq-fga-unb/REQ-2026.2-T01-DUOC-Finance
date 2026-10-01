@@ -86,9 +86,9 @@ Para assegurar rastreabilidade inequívoca entre os Objetivos Específicos (OEs)
 | Ciclo / Incremento RAD | Foco Arquitetural e de Domínio | Características Contempladas (CARs) | Atividades Metodológicas e Validações | Marco Externo Intersectante |
 | :--- | :--- | :--- | :--- | :---: |
 | **Ciclo 0: Concepção & Fundação**<br>*(Semanas 01 a 03 / Ago-Set)* | Diagnóstico de processos, viabilidade e governança | [CAR-01 a CAR-08](../visao-produto/capitulo-2/index.md) *(Especificação preliminar)*<br>[CAR-09 a CAR-12](../visao-produto/capitulo-2/index.md#car-09) *(Escopo técnico)* | - Contato exploratório inicial com a DUOC (19/08)<br>- Reunião 01 Oficial de Elicitação de Escopo e MVP (05/09)<br>- Reunião 02 Oficial de Alinhamento Metodológico (07/09)<br>- Rich Picture v2, Ishikawa 4M, Stakeholders e Mixer Board<br>- Estruturação do repositório *Docs as Code* no GitHub Pages | **Ponto de Controle 1**<br>*(08/09/2026)* |
-| **Incremento 1: Gestão Cadastral e RVT de Campo**<br>*(Semanas 04 a 07 / Set-Out)* | Base cadastral unificada, autenticação e apontamento de viagens em obras | [CAR-01: Gestão Cadastral Unificada](../visao-produto/capitulo-2/index.md#car-01)<br>[CAR-02: Apontamento Móvel / RVT](../visao-produto/capitulo-2/index.md#car-02)<br>[CAR-07: Controle de Acesso RBAC (Base)](../visao-produto/capitulo-2/index.md#car-07) | - Elicitação aprofundada FURPS+ e personas de campo<br>- Base visual e Design System no Figma; estabelecimento dos designs de tela (RVT e Cadastros) diretamente no Frontend (React/Tailwind)<br>- **Reunião 03 (18/09):** Alinhamento conceitual e wireframes de campo<br>- **Reunião 04 (02/10):** Validação Sociotécnica Invertida das telas no Frontend<br>- Atendimento ao DoR do Incr. 1: telas aprovadas liberando a implementação de lógica e banco<br>- Codificação da lógica de regras cadastrais e persistência no Supabase | **Ponto de Controle 2**<br>*(15/10/2026)* |
-| **Incremento 2: Motor Financeiro e Reembolsos**<br>*(Semanas 08 a 10 / Out-Nov)* | Apuração de diárias, fechamento de obras, conciliação e prestação de contas | [CAR-03: Motor Financeiro de Fechamento](../visao-produto/capitulo-2/index.md#car-03)<br>[CAR-04: Prestação de Contas e Reembolsos](../visao-produto/capitulo-2/index.md#car-04)<br>[CAR-08: Trilha de Auditoria (Logs)](../visao-produto/capitulo-2/index.md#car-08) | - Desenho dos fluxos e telas de fechamento financeiro e reembolsos diretamente no Frontend (tendo o Figma como base)<br>- **Reunião 05 (23/10):** Validação Sociotécnica Invertida das telas financeiras no Frontend com Maria Beatryz<br>- DoR atendido para as telas e contratos de dados<br>- **Construção da lógica do Motor Financeiro (CAR-03):** codificação das regras de cálculo de diárias, adiantamentos e persistência com folga técnica<br>- Upload de comprovantes simulados e logs de auditoria<br>- Testes aritméticos com planilhas de controle da DUOC | *Transição entre PC2 e PC3* |
-| **Incremento 3: Custos por Contrato, Dashboards e Integrações**<br>*(Semanas 10 a 11 / Nov)* | Rateio de despesas por obra, painel gerencial e interoperabilidade | [CAR-05: Apropriação de Custos por Contrato](../visao-produto/capitulo-2/index.md#car-05)<br>[CAR-06: Painel Analítico de Desvio Orçamentário](../visao-produto/capitulo-2/index.md#car-06)<br>[CAR-09: Integração auditor.ia (Presença)](../visao-produto/capitulo-2/index.md#car-09)<br>[CAR-10: Importação/Exportação ERP e CSV](../visao-produto/capitulo-2/index.md#car-10) | - Construção dos módulos de rateio de custos por contrato<br>- Painel analítico de rentabilidade e desvio de orçamento<br>- Conexão preliminar com dados sintéticos de auditor.ia e ERP<br>- Inspeção estática de requisitos e código (Fagan)<br>- Matriz de Rastreabilidade Bidirecional (*Forward/Backward*)<br>- Deploy contínuo e integrado em *Staging* | **Ponto de Controle 3**<br>*(19/11/2026)* |
+| **Incremento 1: Gestão Cadastral e RVT de Campo**<br>*(Semanas 04 a 07 / Set-Out)* | Base cadastral unificada, autenticação e apontamento de viagens em obras | [CAR-01: Gestão Cadastral Unificada](../visao-produto/capitulo-2/index.md#car-01)<br>[CAR-02: Apontamento Móvel / RVT](../visao-produto/capitulo-2/index.md#car-02)<br>[CAR-07: Controle de Acesso RBAC (Base)](../visao-produto/capitulo-2/index.md#car-07) | - Elicitação aprofundada FURPS+ e personas de campo<br>- Base visual e Design System no Figma; estabelecimento dos designs de tela (RVT e Cadastros) diretamente no Frontend (React/Tailwind)<br>- **Reunião 03 (18/09):** Alinhamento conceitual e wireframes de campo<br>- **Reunião 05 (24/09):** Priorização de Requisitos (MoSCoW e Matriz 4x4) e Alinhamento do MVP<br>- **Reunião 04 (02/10):** Validação Sociotécnica Invertida das telas no Frontend<br>- Atendimento ao DoR do Incr. 1: telas aprovadas liberando a implementação de lógica e banco<br>- Codificação da lógica de regras cadastrais e persistência no Supabase | **Ponto de Controle 2**<br>*(15/10/2026)* |
+| **Incremento 2: Motor Financeiro e Reembolsos**<br>*(Semanas 08 a 10 / Out-Nov)* | Apuração de diárias, fechamento de obras, conciliação e prestação de contas | [CAR-03: Motor Financeiro de Fechamento](../visao-produto/capitulo-2/index.md#car-03)<br>[CAR-04: Prestação de Contas e Reembolsos](../visao-produto/capitulo-2/index.md#car-04)<br>[CAR-08: Trilha de Auditoria (Logs)](../visao-produto/capitulo-2/index.md#car-08) | - Desenho dos fluxos e telas de fechamento financeiro e reembolsos diretamente no Frontend (tendo o Figma como base)<br>- **Validação no Frontend (23/10):** Validação Sociotécnica Invertida das telas financeiras no Frontend com Maria Beatryz<br>- DoR atendido para as telas e contratos de dados<br>- **Construção da lógica do Motor Financeiro (CAR-03):** codificação das regras de cálculo de diárias, adiantamentos e persistência com folga técnica<br>- Upload de comprovantes simulados e logs de auditoria<br>- Testes aritméticos com planilhas de controle da DUOC | *Transição entre PC2 e PC3* |
+| **Incremento 3: Custos por Contrato, Dashboards e Integrações**<br>*(Semanas 10 a 11 / Nov)* | Rateio de despesas por obra, painel gerencial e interoperabilidade | [CAR-05: Apropriação de Custos por Contrato](../visao-produto/capitulo-2/index.md#car-05)<br>[CAR-06: Painel Analítico de Desvio Orçamentário](../visao-produto/capitulo-2/index.md#car-06)<br>[CAR-09: Integração Shifton (Presença)](../visao-produto/capitulo-2/index.md#car-09)<br>[CAR-10: Importação/Exportação ERP e CSV](../visao-produto/capitulo-2/index.md#car-10) | - Construção dos módulos de rateio de custos por contrato<br>- Painel analítico de rentabilidade e desvio de orçamento<br>- Conexão preliminar com dados sintéticos de Shifton e ERP<br>- Inspeção estática de requisitos e código (Fagan)<br>- Matriz de Rastreabilidade Bidirecional (*Forward/Backward*)<br>- Deploy contínuo e integrado em *Staging* | **Ponto de Controle 3**<br>*(19/11/2026)* |
 | **Fase Final: Transição / Cutover, Estabilização e Aceite**<br>*(Semanas 12 e 13 / 20/11 a 02/12)* | Homologação final, UAT com a cliente, saneamento de defeitos e transição operacional | **Todas as CARs Integradas e Homologadas** *(Módulos congelados para qualidade)* | - *Code Freeze* operacional (20 a 23/11)<br>- **Reunião 06 (24/11):** Sessão Formal de UAT com Maria Beatryz<br>- **Janela Dedicada de Correção de Defeitos pós-UAT (25 a 27/11)**<br>- **Termo de Aceite Formal assinado (28/11)**<br>- Transição operacional (*Cutover*), Manual do Usuário e capacitação<br>- Apresentação Final perante a banca e Retrospectiva | **Ponto de Controle 4**<br>*(01/12/2026)* |
 
 ---
@@ -157,7 +157,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
           <div class="tooltip-body">
             <p><strong>Período:</strong> 01/09 a 30/09 (22 dias letivos)</p>
             <p><strong>Marcos:</strong> Ponto de Controle 1 Entregue (08/09)</p>
-            <p><strong>Reuniões:</strong> Reunião 01 Oficial (05/09, Ata 01) • Reunião 02 Oficial (07/09, Ata 02) • Reunião 03 (18/09)</p>
+            <p><strong>Reuniões:</strong> Reunião 01 Oficial (05/09, Ata 01) • Reunião 02 Oficial (07/09, Ata 02) • Reunião 03 (18/09) • Reunião 05 (24/09, Ata 05)</p>
           </div>
           <div class="tooltip-hint">Clique para alternar para Setembro</div>
         </div>
@@ -177,7 +177,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
           <div class="tooltip-body">
             <p><strong>Período:</strong> 01/10 a 31/10 (22 dias letivos)</p>
             <p><strong>Marcos:</strong> Ponto de Controle 2 em 15/10</p>
-            <p><strong>Reuniões:</strong> Reunião 04 (02/10 — Validação Frontend Incr. 1) • Reunião 05 (23/10 — Validação Frontend Incr. 2)</p>
+            <p><strong>Reuniões:</strong> Reunião 04 (02/10 — Validação Frontend Incr. 1) • Validação Frontend Incr. 2 (23/10)</p>
           </div>
           <div class="tooltip-hint">Clique para alternar para Outubro</div>
         </div>
@@ -474,8 +474,9 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
                 <div class="cell-top"><span class="cell-num">23</span></div>
                 <span class="event-chip active-phase">FURPS+</span>
               </td>
-              <td class="day-u2" title="Requisitos Funcionais e RNF">
+              <td class="day-u2 day-meet day-done" title="Reunião 05 — Priorização de Requisitos (MoSCoW), Matriz 4x4 e Alinhamento do MVP">
                 <div class="cell-top"><span class="cell-num">24</span></div>
+                <span class="event-chip meet-done">Reunião 05</span>
               </td>
               <td class="day-u2" title="Definição formal de DoR e DoD">
                 <div class="cell-top"><span class="cell-num">25</span></div>
@@ -519,7 +520,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             <span class="event-date-badge done"><span class="ev-d">07</span><span class="ev-m">SET</span></span>
             <div class="event-info">
               <div class="event-name">Reunião 02 Oficial: Alinhamento Metodológico e ESW</div>
-              <div class="event-desc">Diagnóstico sociotécnico, integração conceitual com auditor.ia, adoção do framework RAD, definição da stack (React/Supabase) e gravação do vídeo da Entrega 1. [Ver Ata 02](../atas/index.md).</div>
+              <div class="event-desc">Diagnóstico sociotécnico, integração conceitual com Shifton, adoção do framework RAD, definição da stack (React/Supabase) e gravação do vídeo da Entrega 1. [Ver Ata 02](../atas/index.md).</div>
             </div>
           </div>
           <span class="status-pill concluido">Realizada</span>
@@ -556,6 +557,17 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             </div>
           </div>
           <span class="status-pill marcada">Reunião Agendada</span>
+        </div>
+
+        <div class="month-event-item">
+          <div class="month-event-left">
+            <span class="event-date-badge done"><span class="ev-d">24</span><span class="ev-m">SET</span></span>
+            <div class="event-info">
+              <div class="event-name">Reunião 05: Priorização de Requisitos (MoSCoW), Matriz 4x4 e Alinhamento do MVP</div>
+              <div class="event-desc">Revisão e priorização de requisitos com MoSCoW e matriz 4x4. Inclusão de RF11 (indicadores de custo), rebaixamento de RF21 (estorno financeiro), exclusão de RF16 e postergação de RNF01 (modo offline). Aprovação do MVP com ressalvas e definição do subdomínio finance.doc.br na Vercel. [Ver Ata 05](../atas/reuniao-05.md).</div>
+            </div>
+          </div>
+          <span class="status-pill concluido">Realizada</span>
         </div>
 
         <div class="month-event-item">
@@ -637,9 +649,9 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
               <td class="day-u3" title="Designs de telas do Motor Financeiro no Frontend"><div class="cell-top"><span class="cell-num">20</span></div></td>
               <td class="day-u3" title="Fluxos de fechamento de diaristas"><div class="cell-top"><span class="cell-num">21</span></div></td>
               <td class="day-u3" title="Telas de prestação de contas"><div class="cell-top"><span class="cell-num">22</span></div></td>
-              <td class="day-u3 day-meet" title="Reunião 05 com Maria Beatryz — Validação Sociotécnica Invertida no Frontend (Incr. 2: Motor Financeiro)">
+              <td class="day-u3 day-meet" title="Reunião com Maria Beatryz — Validação Sociotécnica Invertida no Frontend (Incr. 2: Motor Financeiro)">
                 <div class="cell-top"><span class="cell-num">23</span></div>
-                <span class="event-chip meet">Reunião 05</span>
+                <span class="event-chip meet">Validação Incr. 2</span>
               </td>
               <td class="day-u3"><div class="cell-top"><span class="cell-num">24</span></div></td>
             </tr>
@@ -700,7 +712,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
           <div class="month-event-left">
             <span class="event-date-badge"><span class="ev-d">23</span><span class="ev-m">OUT</span></span>
             <div class="event-info">
-              <div class="event-name">Reunião 05 com Maria Beatryz: Validação Sociotécnica Invertida (Incr. 2)</div>
+              <div class="event-name">Validação Sociotécnica Invertida com Maria Beatryz (Incr. 2)</div>
               <div class="event-desc">Segunda sessão formal de validação: navegação guiada no Frontend focada nas telas e componentes do Motor Financeiro (CAR-03) e Prestação de Contas (CAR-04), com DoR atendido para implementação da lógica de cálculo e persistência.</div>
             </div>
           </div>
@@ -757,7 +769,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
               <td class="day-u3"><div class="cell-top"><span class="cell-num">8</span></div></td>
               <td class="day-u3" title="Apropriação de Custos por Contrato (CAR-05)"><div class="cell-top"><span class="cell-num">9</span></div></td>
               <td class="day-u3" title="Painel Analítico de Desvio Orçamentário (CAR-06)"><div class="cell-top"><span class="cell-num">10</span></div></td>
-              <td class="day-u3" title="Integrações externas (CAR-09 auditor.ia e CAR-10 CSV)"><div class="cell-top"><span class="cell-num">11</span></div></td>
+              <td class="day-u3" title="Integrações externas (CAR-09 Shifton e CAR-10 CSV)"><div class="cell-top"><span class="cell-num">11</span></div></td>
               <td class="day-u3" title="Deploy integrado em Staging na Vercel">
                 <div class="cell-top"><span class="cell-num">12</span></div>
                 <span class="event-chip active-phase">Staging Vercel</span>
@@ -1093,8 +1105,8 @@ Utilize as abas abaixo para consultar as atividades detalhadas, artefatos homolo
           <span class="week-meta-value">Incremento 1: Design do Usuário, Prototipagem Evolutiva e Modelagem</span>
         </div>
         <div class="week-meta-item">
-          <span class="week-meta-label">Validações com a Cliente</span>
-          <span class="week-meta-value">Reunião 03 (18/09 — Wireframes de Campo) • Reunião 04 (02/10 — Validação Sociotécnica Invertida no Frontend)</span>
+          <span class="week-meta-label">Validações com a Cliente e Reuniões</span>
+          <span class="week-meta-value">Reunião 03 (18/09 — Wireframes de Campo) • Reunião 05 (24/09 — Priorização de Requisitos e MVP) • Reunião 04 (02/10 — Validação Sociotécnica Invertida no Frontend)</span>
         </div>
       </div>
       <div class="week-card-grid">
@@ -1142,7 +1154,7 @@ Utilize as abas abaixo para consultar as atividades detalhadas, artefatos homolo
         </div>
         <div class="week-meta-item">
           <span class="week-meta-label">Validações com a Cliente</span>
-          <span class="week-meta-value">Reunião 05 (23/10 — Validação Sociotécnica Invertida das Telas Financeiras no Frontend)</span>
+          <span class="week-meta-value">Validação Sociotécnica Invertida das Telas Financeiras no Frontend (23/10)</span>
         </div>
       </div>
       <div class="week-card-grid">
@@ -1155,7 +1167,7 @@ Utilize as abas abaixo para consultar as atividades detalhadas, artefatos homolo
             <li>Desenvolvimento do módulo de Apropriação de Custos por Contrato (CAR-05);</li>
             <li>Construção do Painel Analítico de Rentabilidade e Desvio Orçamentário (CAR-06);</li>
             <li>Implementação da Trilha de Auditoria imutável (CAR-08) e segregação RBAC (CAR-07);</li>
-            <li>Conectores preliminares de integração: presença via <em>auditor.ia</em> (CAR-09) e importação CSV de ERPs (CAR-10);</li>
+            <li>Conectores preliminares de integração: presença via <em>Shifton</em> (CAR-09) e importação CSV de ERPs (CAR-10);</li>
             <li>Verificação por inspeções estáticas (Checklists Fagan), testes unitários e CI na Vercel;</li>
             <li>Estruturação e preenchimento da Matriz de Rastreabilidade Bidirecional.</li>
           </ul>
@@ -1419,7 +1431,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
         </div>
         <div class="week-meta-item">
           <span class="week-meta-label">Responsáveis Principais</span>
-          <span class="week-meta-value">Matheus Ribeiro, Paulo Nery, Matheus Camargo</span>
+          <span class="week-meta-value">Matheus Ribeiro, Paulo Nery, Matheus Camargo, Eric Araújo</span>
         </div>
       </div>
       <div class="week-card-grid">
@@ -1427,6 +1439,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
           <div class="week-section-title">Atividades Planejadas e Técnicas de ER</div>
           <ul>
             <li>Levantamento e especificação rigorosa de Requisitos Funcionais (RF) e Não-Funcionais (RNF) sob o framework <strong>FURPS+</strong>;</li>
+            <li><strong>Reunião 05 (24/09/2026):</strong> Verificação e priorização de requisitos via método MoSCoW e matriz 4x4, alinhamento do escopo do MVP (inclusão do RF11, rebaixamento do RF21, postergação do RF16 e RNF01), confirmação de infraestrutura na Vercel (<em>finance.doc.br</em>) e requisitos de segurança;</li>
             <li>Formulação formal dos acordos de trabalho: <strong>DoR (Definition of Ready)</strong> como portão de entrada para implementação de lógica e persistência e <strong>DoD (Definition of Done)</strong> como portão de saída;</li>
             <li>Definição dos requisitos arquiteturais de segurança e privacidade (LGPD, papéis RBAC preliminares);</li>
             <li>Início da prototipagem: concepção da base visual no Figma (Design System, paleta de cores e tokens) e estruturação dos componentes base de interface no Frontend (React SPA / Tailwind CSS).</li>
@@ -1436,6 +1449,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
           <div class="week-section-title">Entregáveis Esperados</div>
           <ul>
             <li>Especificação de Requisitos no padrão FURPS+ formalizada;</li>
+            <li>Ata da Reunião 05 (<a href="../atas/reuniao-05.md">Ata 05</a>) com deliberações de escopo e matriz de priorização;</li>
             <li>Guia formal de DoR e DoD aprovado e indexado (<a href="../dor-dod/index.md">Ver Capítulo 9</a>);</li>
             <li>Catálogo de Requisitos de Segurança e Conformidade LGPD;</li>
             <li>Design System base no Figma e componentes UI no Frontend.</li>
@@ -1556,7 +1570,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
           <ul>
             <li>Abertura do Incremento 2: Estabelecimento dos designs das telas do <strong>Motor Financeiro (<a href="../visao-produto/capitulo-2/index.md#car-03">CAR-03</a>)</strong> e <strong>Prestação de Contas/Reembolsos (<a href="../visao-produto/capitulo-2/index.md#car-04">CAR-04</a>)</strong> diretamente no Frontend com base de referência no Figma;</li>
             <li>Desenho funcional dos fluxos de aprovação de diárias de campo, cálculo visual de adiantamentos e upload de comprovantes com dados simulados;</li>
-            <li><strong>Sessão Formal de Validação Sociotécnica Invertida (Reunião 05 em 23/10/2026):</strong> Maria Beatryz navega pelas telas financeiras no Frontend via Google Meet, validando campos, layouts e regras visuais;</li>
+            <li><strong>Sessão Formal de Validação Sociotécnica Invertida (em 23/10/2026):</strong> Maria Beatryz navega pelas telas financeiras no Frontend via Google Meet, validando campos, layouts e regras visuais;</li>
             <li>Registro de apontamentos de IHC e <strong>homologação formal do DoR para o Incremento 2</strong>;</li>
             <li>Início da codificação da lógica de negócio e regras de cálculo do motor financeiro.</li>
           </ul>
@@ -1564,7 +1578,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
         <div>
           <div class="week-section-title">Entregáveis Esperados</div>
           <ul>
-            <li>Ata da Reunião 05 com deliberações de regras financeiras registradas;</li>
+            <li>Ata da sessão de validação com deliberações de regras financeiras registradas;</li>
             <li>Telas financeiras funcionais no Frontend homologadas com DoR atendido;</li>
             <li>Especificações de cálculo de diárias e adiantamentos formalizadas;</li>
             <li>Código inicial do módulo de regras financeiras.</li>
@@ -1674,7 +1688,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
           <div class="week-section-title">Atividades Planejadas e Técnicas de ER</div>
           <ul>
             <li>Construção do <strong>Painel Analítico de Custo Apropriado e Desvio Orçamentário por Projeto (<a href="../visao-produto/capitulo-2/index.md#car-06">CAR-06</a>)</strong> com gráficos gerenciais de rentabilidade;</li>
-            <li>Desenvolvimento dos conectores preliminares: consumo de presença de <em>auditor.ia</em> (<a href="../visao-produto/capitulo-2/index.md#car-09">CAR-09</a>) e importação/exportação CSV com ERPs legados (<a href="../visao-produto/capitulo-2/index.md#car-10">CAR-10</a>);</li>
+            <li>Desenvolvimento dos conectores preliminares: consumo de presença de <em>Shifton</em> (<a href="../visao-produto/capitulo-2/index.md#car-09">CAR-09</a>) e importação/exportação CSV com ERPs legados (<a href="../visao-produto/capitulo-2/index.md#car-10">CAR-10</a>);</li>
             <li>Verificação de Software: Execução de inspeções estáticas de código e documentação por checklists (<strong>Inspeções Fagan</strong>);</li>
             <li>Estruturação e preenchimento da <strong>Matriz de Rastreabilidade Bidirecional</strong> (<em>Forward/Backward</em>);</li>
             <li>Deploy contínuo da solução completa integrada em ambiente de <strong>Staging na Vercel</strong>;</li>
@@ -1808,6 +1822,7 @@ O cronograma do DUOC Finance é um **artefato vivo** sujeito a refinamento cont�
 | `1.3` | 07/09/2026 | Sincronização rigorosa dos períodos oficiais de cada Unidade com as fases do RAD | Matheus Ribeiro | |
 | `1.4` | 08/09/2026 | Implementação do Mapa Temporal de Execução com Grade Calendário Semestral (Agosto a Dezembro) e destaque para marcos avaliativos | Matheus Ribeiro Szervinsk | Equipe DUOC Finance |
 | `1.5` | 08/09/2026 | Redesenho unificado: integração dos cards seletores diretamente no contêiner do calendário, tooltips informativos por mês, layout centralizado e remoção integral de emojis | Matheus Ribeiro Szervinsk | Equipe DUOC Finance |
-| `1.6` | 19/09/2026 | Inclusão de tarefas para as integrações externas (CAR-09 a CAR-12: auditor.ia, ERP/planilhas, BIM, Slack) nas Semanas 04 e 12, lastreando as afirmações de interoperabilidade do Rich Picture no cronograma | Eric Araújo | |
+| `1.6` | 19/09/2026 | Inclusão de tarefas para as integrações externas (CAR-09 a CAR-12: Shifton, ERP/planilhas, BIM, Slack) nas Semanas 04 e 12, lastreando as afirmações de interoperabilidade do Rich Picture no cronograma | Eric Araújo | |
 | `1.7` | 19/09/2026 | Correção da referência ao Diagrama de Ishikawa: "6Ms" substituído por "4 categorias causais (adaptação do modelo 6M)", alinhando com as 4 dimensões efetivamente usadas em 1.4 | Paulo Nery | |
 | `2.0` | 21/09/2026 | Reestruturação metodológica, arquitetural e visual integral do cronograma: desacoplamento dos marcos acadêmicos (PC1 a PC4) dos ciclos e incrementos RAD; distribuição das 8 CARs e integrações nos incrementos; estratégia de prototipagem evolutiva UI-First com base no Figma e validação de interfaces mockadas no Frontend antes da lógica de persistência (Supabase); antecipação do motor financeiro (CAR-03) e UAT com janela dedicada para correção de defeitos; inclusão de diagramas metodológicos com suporte nativo a temas claro e escuro; eliminação de conflitos de contraste cromático no calendário e reestruturação ergonômica das unidades e semanas em cards padronizados | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `2.1` | 24/09/2026 | Inclusão da Reunião 05 (Priorização MoSCoW, Matriz 4x4 e alinhamento do MVP) realizada em 24/09 no calendário de Setembro, feed de eventos, tabela de incrementos e detalhamento da Semana 05. | Matheus Ribeiro Szervinsk | Eric Araújo e Lucas Zanetti |

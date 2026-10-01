@@ -1,76 +1,92 @@
-# Ata da Reunião 05: Priorização de Requisitos e Avaliação de Valor de Negócio
+# Ata da Reunião 05: Priorização de Requisitos, Matriz 4x4 e Alinhamento do MVP
 
 * **Projeto:** DUOC Finance
 * **Equipe:** Cascata Ágil
-* **Data da Sessão:** 24 de setembro de 2026, às 19h30 (GMT-03:00)
-* **Natureza:** Síncrona, via Google Meet — reunião com a cliente parceira (avaliação e priorização de requisitos)
+* **Data da Sessão:** 24 de setembro de 2026, às 20h00 (GMT-03:00)
+* **Natureza:** Síncrona, online via Google Meet com gravação e transcrição — alinhamento interno da equipe de Engenharia de Requisitos (validação, priorização e definição de escopo)
 * **Participantes:** 
-    * **Cliente Parceira:** Maria Beatryz Vieira de Sousa (Auxiliar-Administradora da DUOC Arquitetura e Engenharia)
-    * **Equipe Cascata Ágil:** Eric Araújo (Product Owner e condução da sessão), Matheus Ribeiro Szervinsk (Scrum Master e Co-PO), Giovana Ferreira (Engenheira Frontend e Designer UI/UX), Paulo Nery (Engenheiro Backend), Matheus Saraiva Camargo (Arquiteto de Software e Banco de Dados), Gustavo (QA e Testes) e Lucas Zanetti (Revisão e Qualidade)
-* **Objetivo da Sessão:** Apresentar a especificação consolidada dos 16 Requisitos Funcionais (RF01 a RF16) derivados dos quatro Objetivos Específicos (OE1 a OE4), definir os critérios qualitativos e quantitativos de valor de negócio (escala ordinal de 1 a 4 associada ao MoSCoW) e conduzir a atribuição consensual de notas, classificações e justificativas operacionais com a cliente para formalizar a delimitação do Produto Mínimo Viável (MVP).
+    * Matheus Ribeiro Szervinsk (Scrum Master, Co-PO e condução da sessão)
+    * Eric Araújo (Product Owner e validação institucional com base na cultura da DUOC)
+    * Giovana Ferreira (Engenheira Frontend e Designer UI/UX)
+    * Lucas Zanetti (Engenheiro de Revisão e Qualidade)
+    * Matheus Saraiva Camargo (Arquiteto de Software e Banco de Dados)
+    * Paulo Nery (Engenheiro Backend)
+    * Gustavo (Engenheiro de QA e Testes)
+* **Objetivo da Sessão:** Realizar a verificação e validação da especificação de requisitos de software (21 Requisitos Funcionais e Requisitos Não Funcionais cobrindo os 4 módulos essenciais), aplicar a estratégia de priorização MoSCoW e a matriz 4x4 baseada em esforço, complexidade e capacidade da equipe para identificar os requisitos essenciais, deliberar sobre ajustes de escopo no Minimum Viable Product (inclusão do RF11, rebaixamento do RF21, exclusão do RF16 e postergação do RNF01), ratificar os requisitos de segurança e infraestrutura na Vercel (`finance.doc.br`), e aprovar formalmente o escopo do MVP com ressalvas para validação e encaminhamento à cliente parceira Maria Beatryz.
 
 ---
 
 ## 1. Pauta
 
-1. Apresentação da metodologia de avaliação por Valor de Negócio (escala 1 a 4 e correlação direta com MoSCoW).
-2. Avaliação e pontuação dos requisitos do **Módulo 1 — OE1: Padronização e Unificação de Dados** (RF01 a RF04).
-3. Avaliação e pontuação dos requisitos do **Módulo 2 — OE2: Eficiência Administrativo-Financeira** (RF05 a RF08).
-4. Avaliação e pontuação dos requisitos do **Módulo 3 — OE3: Inteligência de Custos por Contrato** (RF09 a RF12).
-5. Avaliação e pontuação dos requisitos do **Módulo 4 — OE4: Governança, Segurança e Rastreabilidade** (RF13 a RF16).
-6. Delimitação formal da Linha de Corte (*Cut-line*) do Produto Mínimo Viável (MVP).
-7. Alinhamento sobre a prototipação UI-First no Frontend e próximas validações da Unidade 2.
+1. Apresentação da documentação registrada no GitHub Pages e distinção conceitual entre requisitos funcionais e não funcionais.
+2. Detalhamento dos 4 módulos essenciais e regras de negócio estruturadas (unicidade de CPF, bloqueio de 5 dias úteis e RBAC).
+3. Critérios de priorização pelo método MoSCoW e cálculo de esforço, complexidade e capacidade da equipe (matriz 4x4).
+4. Ajustes nos requisitos do MVP: inclusão imediata de filtragem de indicadores de custo por obra (RF11).
+5. Ajustes nos requisitos do MVP: rebaixamento de prioridade e remoção da reversão de fechamento financeiro (RF21).
+6. Avaliação do requisito de exportação de relatórios de auditoria (RF16) e decisão de permanência fora do MVP.
+7. Análise dos Requisitos Não Funcionais: postergação do modo de operação offline (RNF01) e confirmação dos requisitos de segurança (criptografia, tokens de 8h e backup diário).
+8. Aprovação do escopo do Minimum Viable Product (MVP) com ressalvas.
+9. Infraestrutura e hospedagem do sistema financeiro como subdomínio na Vercel (`finance.doc.br`).
+10. Próximas etapas: manual de marca, configuração de acessos no Figma, organização de notas e alinhamento da apresentação para o dia seguinte.
 
 ---
 
 ## 2. Resumo Executivo
 
-A reunião consolidou o alinhamento de escopo prioritário entre a equipe Cascata Ágil e a auxiliar-administradora Maria Beatryz. A cliente expressou com ênfase que as maiores dores operacionais da DUOC residem atualmente na dependência de planilhas manuais para apuração de diárias de prestadores e na perda contínua de notas fiscais de despesas de viagem de canteiro. 
+A reunião teve como foco a revisão de requisitos e priorização via método MoSCoW e alinhamento do Minimum Viable Product (MVP) do DUOC Finance.
 
-A equipe apresentou a taxonomia de Requisitos Funcionais como ações observáveis do usuário com valor mensurável, acompanhada da escala de 1 a 4 associada ao MoSCoW (Must have = 4, Should have = 3, Could have = 2, Won't have = 1). Em dinâmica participativa, cada um dos 16 RFs foi apreciado criticamente. Estabeleceu-se que 7 requisitos constituem os *Must have* (4), 5 requisitos configuram *Should have* (3), 3 requisitos foram classificados como *Could have* (2) e 1 requisito foi enquadrado como *Won't have* (1) para o escopo do MVP. A cliente aprovou integralmente a linha de corte do MVP (12 RFs que contemplam ponta a ponta o fluxo cadastral, apontamento em campo, fechamento financeiro, reembolsos e controle de acesso).
+* **Apresentação e Módulos Iniciais:** Requisitos funcionais e não funcionais foram detalhados cobrindo 4 módulos essenciais atrelados aos objetivos específicos do projeto, totalizando cerca de 21 requisitos funcionais. A documentação registrada no GitHub Pages abrange o cenário atual, a solução proposta, os impactos da intervenção social, as estratégias e o cronograma. Regras de negócio vitais e cadastros foram devidamente estruturados, contemplando a unicidade de cadastro por CPF, a trava de edição retroativa por cinco dias úteis e o gerenciamento de perfis de acesso (RBAC).
+* **Priorização e Ajustes:** A estratégia MoSCoW combinada a uma matriz 4x4 (baseada em esforço, complexidade e capacidade da equipe) definiu inicialmente 7 requisitos essenciais. Durante a avaliação visual da matriz, o grupo deliberou pela inclusão imediata do requisito funcional de filtragem de indicadores de custo por obra (RF11) no escopo prioritário do MVP para elevar o valor de negócio da solução. Em contrapartida, concordou-se em rebaixar a prioridade e retirar o requisito funcional de estorno de fechamento financeiro (RF21) do escopo do MVP, visto que a premissa de validação por parte dos sócios não ocorre na prática e a responsabilidade recai internamente.
+* **Aprovação do MVP e Infraestrutura:** Minimum Viable Product foi aprovado com ressalvas pelo grupo para posterior leitura detalhada dos participantes. Requisitos de segurança (criptografia em repouso, expiração de tokens em 8 horas e backup diário automático com restauração) foram confirmados como mandatórios. Ficou acordado manter a exportação de relatórios de auditoria (RF16) fora do escopo inicial pela baixa frequência de uso e para evitar complexidade desnecessária. A operação offline (RNF01) foi postergada como requisito evolutivo por se tratar de um web app inicial. A infraestrutura do sistema financeiro foi definida como um subdomínio estruturado como `finance.doc.br` na plataforma Vercel, superando limitações do servidor legado da Locaweb.
 
 ---
 
-## 3. Discussões
+## 3. Detalhamento das Discussões
 
-### 3.1 Apresentação Metodológica: Escala de 1 a 4 e MoSCoW
-* **Condução por Eric Araújo (PO) e Matheus Ribeiro (SM):**
-    * Explicou-se que a Engenharia de Requisitos adotada na disciplina requer priorização justificada pelo valor de negócio para guiar as entregas do modelo RAD.
-    * A escala de 1 a 4 foi detalhada:
-        * **Nota 4 (Must have):** Obrigatório no MVP; sem ele não há operação viável do DUOC Finance.
-        * **Nota 3 (Should have):** Alta prioridade; essencial para sustentabilidade da rotina sem retrabalho da equipe de TI.
-        * **Nota 2 (Could have):** Conveniência analítica; será implementado se houver folga técnica no ciclo.
-        * **Nota 1 (Won't have):** Postergado para pós-MVP; valor corporativo futuro, mas fora da entrega inicial.
-    * Maria Beatryz expressou total concordância com a regra de que no máximo 60% do escopo deve ser *Must have*, elogiando a objetividade da escala.
+### 3.1 Apresentação da Documentação e Metodologia de Requisitos
+Matheus Ribeiro Szervinsk abriu a reunião de validação e verificação dos requisitos de software levantados, explicando a distinção entre requisitos funcionais (relacionados ao produto e às ações do usuário) e não funcionais (relacionados ao sistema operacional, qualidade e restrições de infraestrutura) (`00:00:03`). 
 
-### 3.2 Módulo 1 (OE1 — Padronização Cadastral e RVT de Campo)
-* **RF01 (Cadastrar colaborador):** Maria Beatryz enfatizou que sem a base de colaboradores organizada por CPF e com dados bancários validados, nenhum pagamento de diarista pode ser disparado. **Classificação acordada: Nota 4 (Must have)**.
-* **RF02 (Atualizar cadastro):** A cliente ressaltou que alterações de chaves Pix e dados de contato são diárias e que o administrativo da DUOC não pode depender de programadores para atualizar cadastros simples. **Classificação acordada: Nota 3 (Should have)**.
-* **RF03 (Registrar movimentação funcional):** A transição de afastamento e desligamento é vital para travar o acesso ao app e evitar o pagamento de diárias indevidas a ex-colaboradores. **Classificação acordada: Nota 3 (Should have)**.
-* **RF04 (Submeter apontamento de campo):** Maria Beatryz destacou que a coleta do Relatório de Viagem Técnica (RVT) via aplicativo é o coração da operação externa, substituindo papéis que se perdiam nas obras. **Classificação acordada: Nota 4 (Must have)**.
+A documentação registrada no Git Pages abrange o cenário atual, a solução proposta, os impactos da intervenção social, estratégias e cronograma (`00:01:08`). Os requisitos foram estruturados em quatro módulos atrelados aos objetivos específicos derivados do objetivo geral da intervenção, somando cerca de 21 requisitos funcionais (`00:02:07`).
 
-### 3.3 Módulo 2 (OE2 — Motor Financeiro e Reembolsos)
-* **RF05 (Solicitar prévia de fechamento):** Apontado como a solução para a maior dor da auxiliar-administradora: hoje são necessárias mais de 30 horas mensais para cruzar mensagens de WhatsApp e abas de Excel para apurar quem trabalhou e quanto deve receber. A prévia consolidada automática foi considerada inegociável. **Classificação acordada: Nota 4 (Must have)**.
-* **RF06 (Homologar fechamento financeiro):** Mandatório para fechar o lote de pagamentos com bloqueio contra alterações retroativas, garantindo segurança contábil e paz jurídica na empresa. **Classificação acordada: Nota 4 (Must have)**.
-* **RF07 (Submeter solicitação de reembolso):** Despesas com alimentação, combustível e insumos emergenciais geravam atritos constantes por notas fiscais amassadas ou perdidas. O upload digital obrigatório vinculado à obra elimina esse problema. **Classificação acordada: Nota 4 (Must have)**.
-* **RF08 (Deliberar solicitação de reembolso):** Fluxo de aprovação indispensável para que o coordenador autorize apenas despesas legítimas antes do repasse financeiro. **Classificação acordada: Nota 4 (Must have)**.
+### 3.2 Detalhamento dos Módulos e Regras de Negócio
+A arquitetura modular cobre quatro objetivos específicos centrais: padronização de dados, eficiência administrativa financeira, inteligência de custos e governança (`00:02:07`, `00:07:14`). 
 
-### 3.4 Módulo 3 (OE3 — Inteligência de Custos por Contrato)
-* **RF09 (Apropriar custos operacionais):** Permite alocar o valor de cada diária e despesa ao contrato da respectiva obra. Maria Beatryz pontuou que hoje a DUOC tem dificuldade de saber a margem real de lucro por obra. **Classificação acordada: Nota 3 (Should have)**.
-* **RF10 (Consultar rastreabilidade de custos):** Capacidade de detalhar de onde veio cada centavo cobrado de uma obra. Essencial para prestar contas aos clientes corporativos da DUOC. **Classificação acordada: Nota 3 (Should have)**.
-* **RF11 (Filtrar indicadores de custos):** Filtros dinâmicos combinados em dashboards. A cliente avaliou que, na largada, listagens e relatórios básicos consolidados por contrato já suprem a rotina, tornando filtros analíticos avançados um diferencial desejável. **Classificação acordada: Nota 2 (Could have)**.
-* **RF12 (Monitorar execução orçamentária):** Gráficos de previsto versus realizado e alertas de estouro orçamentário. Considerado muito interessante estrategicamente, porém a cliente concordou que a apuração correta do custo real tem precedência sobre os alertas visuais de orçamento na primeira entrega. **Classificação acordada: Nota 2 (Could have)**.
+Foram estabelecidas regras de negócio fundamentais para assegurar a consistência contábil e operacional:
+* **Unicidade de Cadastro por CPF:** Impedimento de duplicações na base de diaristas e prestadores;
+* **Bloqueio Automático de Edição Retroativa por Cinco Dias Úteis:** Mecanismo compulsório que impede alterações arbitrárias após o fechamento de lotes (`00:05:06`);
+* **Gerenciamento de Perfis de Acesso (RBAC):** Configuração de níveis de privilégio para solucionar de forma definitiva os problemas decorrentes do compartilhamento generalizado de planilhas (`00:08:23`).
 
-### 3.5 Módulo 4 (OE4 — Governança, Segurança e Rastreabilidade)
-* **RF13 (Efetuar login no sistema):** Requisito inegociável de segurança da informação e conformidade com a LGPD para proteger salários e dados bancários. **Classificação acordada: Nota 4 (Must have)**.
-* **RF14 (Gerenciar perfis de acesso - RBAC):** Fundamental para segregar o acesso dos diaristas e técnicos de campo, impedindo que enxerguem dados financeiros globais ou salários de outros profissionais. **Classificação acordada: Nota 3 (Should have)**.
-* **RF15 (Consultar trilha de auditoria):** O registro dos logs no banco de dados ocorre de forma atômica desde o primeiro dia, mas a interface gráfica web com filtros para consulta pode ser entregue em etapa posterior de refinamento, pois qualquer dúvida preliminar pode ser checada diretamente no banco pela equipe de engenharia. **Classificação acordada: Nota 2 (Could have)**.
-* **RF16 (Exportar relatório de auditoria):** A emissão de dossiês formais para fiscalizações trabalhistas (CLT Art. 11) é uma exigência de longo prazo. Maria Beatryz acordou que relatórios dessa natureza podem ser gerados manualmente sob demanda na fase inicial, dispensando a implementação de rotinas automáticas de exportação no MVP. **Classificação acordada: Nota 1 (Won't have no MVP)**.
+Eric Araújo validou os documentos com base na cultura da empresa e na dinâmica das obras, e outras equipes revisaram as correções implementadas (`00:05:06`, `00:09:27`).
 
-### 3.6 Delimitação do MVP e Próximos Passos
-* A cliente formalizou seu aceite na composição do MVP abrangendo os 12 requisitos classificados como *Must have* (4) e *Should have* (3).
-* Giovana Ferreira demonstrou a estratégia de prototipação UI-First: os designs das telas de RVT e fechamento financeiro estão sendo construídos no Frontend para navegação com dados mockados na próxima sessão com a cliente.
-* Eric Araújo e Matheus Ribeiro reforçaram que o atendimento aos critérios DoR de cada módulo antecederá qualquer escrita de backend complexo.
+### 3.3 Critérios de Priorização e Definição do Minimum Viable Product
+Para gerenciar o volume de requisitos, Matheus Ribeiro Szervinsk apresentou a estratégia de priorização utilizando o método MoSCoW e uma fórmula de cálculo simples baseada em esforço, complexidade e capacidade da equipe (`00:10:34`). 
+
+Os resultados foram mapeados em uma matriz 4x4 para definir o Minimum Viable Product (MVP) e identificar os requisitos obrigatórios, totalizando inicialmente sete requisitos funcionais essenciais para a entrega (`00:12:55`, `00:15:09`).
+
+### 3.4 Ajustes nos Requisitos do MVP com Inclusão de Indicadores de Custos
+Durante a revisão visual da matriz 4x4 compartilhada por Eric Araújo, Matheus Ribeiro Szervinsk e a equipe avaliaram os itens priorizados e postergados (`00:16:27`). 
+
+Constatou-se que o requisito funcional **RF11**, referente à filtragem de indicadores de custo por obra, havia sido adiado preliminarmente. O grupo alinhou e decidiu incluí-lo imediatamente no escopo prioritário do MVP para elevar o valor de negócio da solução e atender diretamente à necessidade de visibilidade financeira por canteiro (`00:19:39`).
+
+### 3.5 Ajustes nos Requisitos do MVP com Remoção da Reversão de Fechamento Financeiro
+A equipe debateu o requisito funcional **RF21**, que tratava do estorno de fechamento financeiro com justificativa auditável obrigatória (`00:23:02`). 
+
+Eric Araújo explicou que o requisito havia sido criado sob a premissa de validação por parte dos sócios, mas como essa validação não ocorre na prática e a responsabilidade recai internamente sobre a rotina administrativa, o requisito foi considerado desnecessário no momento atual e teve sua prioridade reduzida, sendo retirado do escopo do MVP (`00:24:26`).
+
+### 3.6 Avaliação do Requisito de Exportação de Relatórios de Auditoria
+O requisito funcional **RF16**, focado na exportação de relatórios de auditoria, foi analisado para verificar sua inclusão no MVP (`00:28:32`). 
+
+Eric Araújo argumentou que permitir a geração de relatórios e PDFs agora aumentaria a complexidade do sistema, transformando a ferramenta em um gerador de planilhas. Pontuou ainda que o uso de relatórios pela equipe é extremamente raro e restrito a períodos anuais (`00:29:31`). Ficou acordado manter o requisito RF16 fora do escopo inicial do MVP, permanecendo postergado (`00:28:32`).
+
+### 3.7 Análise de Requisitos Não Funcionais e Modo Offline
+Os requisitos não funcionais foram examinados, com ênfase no requisito **RNF01**, referente à operação offline em canteiros sem conectividade (`00:06:11`). Eric Araújo indicou que, como a solução será um aplicativo web e não um aplicativo mobile nativo, a operação offline não é estritamente necessária no momento, decidindo-se postergá-la e classificá-la como requisito evolutivo (`00:33:36`). 
+
+Em contrapartida, requisitos mandatórios de segurança e infraestrutura — tais como criptografia de repouso, expiração de token em 8 horas e rotina diária de backup automático com procedimento de restauração — foram confirmados como obrigatórios no MVP (`00:35:11`).
+
+### 3.8 Aprovação do MVP com Ressalvas e Próximos Passos
+O Minimum Viable Product foi aprovado com ressalvas pelo grupo, incentivando as pessoas participantes a realizarem uma leitura detalhada da documentação posteriormente para ajustes pontuais (`00:37:50`). 
+
+Como próximos passos, Eric Araújo disponibilizará o manual de marca da empresa para identidade visual e orientará sobre o uso de ferramentas de prototipação como o Figma (`00:38:56`). Além disso, ficou estabelecido que o sistema financeiro será hospedado como um subdomínio estruturado como **`finance.doc.br`** na plataforma Vercel para assegurar melhor desempenho operacional em comparação ao servidor legado da Locaweb (`00:41:47`).
 
 ---
 
@@ -78,23 +94,23 @@ A equipe apresentou a taxonomia de Requisitos Funcionais como ações observáve
 
 | # | Decisão | Descrição e Impacto |
 | :---: | :--- | :--- |
-| **D1** | **Adoção Oficial da Escala 1 a 4 (MoSCoW)** | Formalizada a metodologia de priorização de requisitos associando as notas de 1 a 4 aos quatro quadrantes do MoSCoW para guiar o backlog do projeto. |
-| **D2** | **Fixação do Núcleo Crítico (Must Have = 4)** | Deliberados 7 requisitos como obrigatórios no MVP: RF01, RF04, RF05, RF06, RF07, RF08 e RF13, correspondendo a 43,75% do total. |
-| **D3** | **Inclusão dos Requisitos Estruturantes (Should Have = 3)** | Aprovada a inclusão dos requisitos RF02, RF03, RF09, RF10 e RF14 no MVP para garantir autonomia administrativa da DUOC. |
-| **D4** | **Condicionamento de Recursos Analíticos (Could Have = 2)** | Os requisitos RF11, RF12 e RF15 foram classificados como extensões desejáveis, a serem implementados no Incremento 3 caso haja folga técnica no cronograma. |
-| **D5** | **Exclusão Formal do RF16 do MVP (Won't Have = 1)** | O requisito RF16 (Exportar relatório de auditoria) fica formalmente postergado para a Release 2.0 pós-implantação. |
-| **D6** | **Homologação da Linha de Corte do MVP** | Maria Beatryz homologou formalmente a composição de 12 Requisitos Funcionais como a baseline oficial do MVP do DUOC Finance. |
+| **D1** | **Inclusão de indicadores de custo no MVP** | O grupo alinhou adicionar o requisito funcional de filtragem de indicadores de custo (RF11) ao escopo prioritário do MVP para elevar o valor de negócio da entrega inicial. |
+| **D2** | **Rebaixamento do requisito de estorno financeiro** | O grupo concordou em reduzir a prioridade e retirar o requisito funcional de estorno de fechamento financeiro (RF21) do escopo do MVP, considerando que a premissa de validação por sócios não ocorre na prática e a responsabilidade recai internamente. |
+| **D3** | **Exclusão da exportação de relatórios do MVP** | Ficou acordado manter o requisito de exportação de relatórios de auditoria (RF16) fora do escopo inicial do MVP devido à baixa frequência de uso (rotina anual) e para evitar transformar o sistema em gerador de planilhas. |
+| **D4** | **Postergação do modo de operação offline** | Os participantes decidiram postergar o requisito não funcional de operação offline (RNF01), visto que a entrega inicial será um web app e não um aplicativo mobile nativo, classificando-o como funcionalidade evolutiva. |
+| **D5** | **Aprovação do escopo do MVP com ressalvas** | O MVP foi aprovado pelo grupo com a ressalva de que os participantes realizarão uma revisão detalhada posterior da documentação para ajustes pontuais e consolidação da lista final. |
+| **D6** | **Hospedagem do sistema como subdomínio na Vercel e Segurança** | O sistema financeiro será hospedado como um subdomínio estruturado como `finance.doc.br` utilizando a plataforma Vercel (substituindo a Locaweb), com confirmação obrigatória dos requisitos de criptografia em repouso, expiração de token em 8h e backup diário automático com restauração. |
 
 ---
 
 ## 5. Gravação e Links
 
-* **Gravação:** Sessão gravada internamente para fins de auditoria de requisitos; arquivada no Google Drive da equipe.
+* **Registro:** Gravação interna e transcrição automática da reunião via Google Meet arquivadas para fins de governança e rastreabilidade da equipe.
 * **Artefatos Relacionados:**
     * [Capítulo 8 — Especificação de Requisitos de Software](../requisitos/index.md)
     * [Capítulo 8 — Priorização de Requisitos e MVP](../requisitos/priorizacao.md)
-    * [Capítulo 6 — Cronograma e Incrementos do RAD](../cronograma/index.md)
-    * [Capítulo 7 — Processo de Validação Sociotécnica](../interacao-cliente/index.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente)
+    * [Capítulo 6 — Cronograma e Planejamento de Entregas](../cronograma/index.md)
+    * [Capítulo 7 — Processo de Validação Sociotécnica e Governança](../interacao-cliente/index.md)
 
 ---
 
@@ -102,23 +118,41 @@ A equipe apresentou a taxonomia de Requisitos Funcionais como ações observáve
 
 | Ação Determinada | Responsável | Objetivo / Descrição | Prazo | Status |
 | :--- | :--- | :--- | :---: | :---: |
-| **Publicar Capítulo de Priorização e MVP** | Matheus Ribeiro | Estruturar o documento formal `priorizacao.md` no MkDocs com a tabela de notas de 1 a 4 e justificativas acordadas. | 25/09/2026 | Concluído |
-| **Atualizar Backlog e GitHub Projects** | Eric Araújo | Atualizar as tags de prioridade (MoSCoW) e marcos de MVP no quadro institucional de Issues do GitHub Projects. | 26/09/2026 | Em andamento |
-| **Desenvolver Telas de RVT no Frontend** | Giovana Ferreira | Finalizar componentes de UI-First com dados mockados para o apontamento de campo e visualização prévia de fechamento. | 28/09/2026 | Em andamento |
-| **Modelar Tabelas e Regras de Validação** | Matheus Saraiva e Paulo Nery | Preparar migrations e validações das regras RN01 a RN09 no Supabase para quando o DoR for homologado. | 29/09/2026 | Planejado |
+| **Disponibilizar link Git** | Eric Araújo | Disponibilizar o link do Git page no grupo para que Maria possa compartilhar com a cliente. | Imediato | Concluído |
+| **Ajustar requisitos MVP** | Equipe (The group) | Adicionar o requisito funcional 11 ao MVP e remover o requisito funcional 21 da lista atual. | 25/09/2026 | Concluído |
+| **Publicar notas ajuste** | Matheus Ribeiro Szervinsk | Enviar no grupo de mensagens as anotações sobre os ajustes realizados nos requisitos durante a reunião. | Imediato | Concluído |
+| **Criar lista requisitos** | Equipe (The group) | Elaborar uma lista com os requisitos para revisão e enviar ao Eric para encaminhamento à cliente. | 25/09/2026 | Concluído |
+| **Enviar manual marca** | Eric Araújo | Disponibilizar o manual de marca da empresa no grupo de mensagens. | 25/09/2026 | Concluído |
+| **Configurar acesso Figma** | Equipe (The group) | Realizar a abertura e configuração do usuário no Figma para todos os integrantes da equipe. | 25/09/2026 | Concluído |
+| **Organizar requisitos** | Equipe (O grupo) | Organizar os requisitos levantados durante a reunião na documentação oficial. | 25/09/2026 | Concluído |
+| **Definir ordem** | Equipe (O grupo) | Definir a ordem da apresentação para o dia seguinte perante a disciplina. | 25/09/2026 | Concluído |
 
 ---
 
 ## 7. Rastreabilidade e Minutagem da Reunião (Log de Discussão)
 
-* `00:00:00` — **Abertura e Boas-Vindas:** Eric Araújo agradece a presença de Maria Beatryz e introduz a pauta da reunião focada em valor de negócio e priorização.
-* `00:04:15` — **Apresentação da Metodologia:** Matheus Ribeiro detalha os critérios de avaliação (escala 1 a 4 e correlação MoSCoW) e a meta de equilibrar o escopo do MVP.
-* `00:11:30` — **Discussão do Módulo 1 (OE1):** Análise dos requisitos RF01 a RF04. Maria Beatryz corrobora a gravidade da falta de dados unificados e relata como as anotações de campo se perdem em obras simultâneas.
-* `00:23:45` — **Discussão do Módulo 2 (OE2):** Debate aprofundado sobre o motor financeiro (RF05 e RF06) e fluxo de reembolsos (RF07 e RF08). A cliente destaca que a conferência de diárias consome dias de trabalho e que notas em papel representam prejuízo direto.
-* `00:39:10` — **Discussão do Módulo 3 (OE3):** Avaliação de apropriação e inteligência de custos (RF09 a RF12). Acordo sobre a prioridade do vínculo direto por obra e postergação de filtros dinâmicos secundários.
-* `00:51:20` — **Discussão do Módulo 4 (OE4):** Avaliação de segurança e governança (RF13 a RF16). Confirmação do login e RBAC como essenciais e pactuação do adiamento da exportação massiva de dossiês de auditoria (RF16).
-* `01:03:00` — **Consolidação do MVP e Linha de Corte:** Validação da tabela final de notas e ratificação unânime dos 12 requisitos que integram o MVP.
-* `01:12:40` — **Encerramento e Próximos Passos:** Alinhamento de agenda para a demonstração das primeiras interfaces navegáveis no Frontend.
+* `00:00:03` — **Apresentação da Metodologia de Requisitos:** Matheus Ribeiro Szervinsk abre a reunião de validação e verificação dos requisitos de software levantados, explicando a distinção entre requisitos funcionais (relacionados ao produto) e não funcionais (relacionados ao sistema operacional).
+* `00:01:08` — **Apresentação da Documentação no Git Pages:** Revisão dos documentos registrados cobrindo o cenário atual, a solução proposta, os impactos da intervenção social, estratégias e cronograma.
+* `00:02:07` — **Estrutura Modular e Derivação de Requisitos:** Apresentação da estruturação dos requisitos em quatro módulos derivados dos objetivos específicos, somando cerca de 21 requisitos funcionais.
+* `00:05:06` — **Regras de Negócio e Unicidade Cadastral:** Estabelecimento de regras como unicidade por CPF, bloqueio automático de edição retroativa por cinco dias úteis e validação das correções implementadas com Eric Araújo.
+* `00:06:11` — **Requisitos Não Funcionais em Canteiro:** Levantamento das condições operacionais de conectividade nas obras.
+* `00:07:14` — **Detalhamento dos Módulos Funcionais:** Arquitetura cobrindo padronização de dados, eficiência administrativa financeira, inteligência de custos e governança.
+* `00:08:23` — **Gerenciamento de Perfis de Acesso (RBAC):** Definição de permissões para sanar gargalos e inseguranças no compartilhamento de planilhas.
+* `00:09:27` — **Validação Institucional:** Eric Araújo valida os documentos com base na cultura da empresa DUOC.
+* `00:10:34` — **Estratégia de Priorização MoSCoW e Cálculo:** Matheus Ribeiro Szervinsk apresenta os critérios de cálculo simples baseados em esforço, complexidade e capacidade da equipe.
+* `00:12:55` — **Mapeamento na Matriz 4x4:** Projeção visual dos requisitos na matriz cartesiana para identificar os obrigatórios do Minimum Viable Product.
+* `00:15:09` — **Definição dos Sete Requisitos Essenciais:** Mapeamento inicial dos 7 requisitos funcionais inegociáveis para viabilizar a entrega.
+* `00:16:27` — **Revisão Visual da Matriz Compartilhada:** Eric Araújo compartilha a matriz 4x4; Matheus Ribeiro e a equipe avaliam os itens priorizados e postergados.
+* `00:19:39` — **Inclusão do RF11 no MVP:** Constatação de que o requisito funcional RF11 (filtragem de indicadores de custo por obra) havia sido adiado; decisão unânime de incluí-lo imediatamente no escopo prioritário do MVP para elevar o valor de negócio.
+* `00:23:02` — **Debate sobre Estorno Financeiro (RF21):** Análise do requisito de reversão de fechamento com justificativa auditável obrigatória.
+* `00:24:26` — **Rebaixamento e Remoção do RF21:** Eric Araújo esclarece que a premissa de validação por sócios não ocorre na prática e a responsabilidade recai internamente; prioridade reduzida e item retirado do escopo do MVP.
+* `00:28:32` — **Avaliação do Requisito de Relatórios (RF16):** Análise de esforço e demanda para a exportação de relatórios de auditoria.
+* `00:29:31` — **Manutenção do RF16 Fora do MVP:** Eric Araújo argumenta que relatórios e PDFs aumentariam a complexidade do sistema (transformando-o em gerador de planilhas) e que seu uso é raríssimo/anual; o item permanece postergado.
+* `00:33:36` — **Postergação da Operação Offline (RNF01):** Definição de que, como a entrega inicial será um web app e não um aplicativo mobile nativo, a operação offline não é estritamente necessária no momento, sendo classificada como evolutiva.
+* `00:35:11` — **Confirmação dos Requisitos de Segurança e Infraestrutura:** Ratificação obrigatória no MVP de criptografia em repouso, expiração de token em 8 horas e backup diário automático com restauração.
+* `00:37:50` — **Aprovação do MVP com Ressalvas:** Homologação do escopo do MVP com ressalvas, incentivando leitura e revisão posterior detalhada pela equipe.
+* `00:38:56` — **Identidade Visual e Prototipação:** Encaminhamento para Eric Araújo disponibilizar o manual de marca da empresa e orientação sobre abertura de contas e uso do Figma.
+* `00:41:47` — **Hospedagem na Vercel e Encerramento:** Estabelecimento de hospedagem como subdomínio (`finance.doc.br`) na Vercel para assegurar melhor desempenho operacional sobre a Locaweb e alinhamento da ordem da apresentação para o dia seguinte.
 
 ---
 
@@ -126,4 +160,5 @@ A equipe apresentou a taxonomia de Requisitos Funcionais como ações observáve
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 24/09/2026 | Elaboração e publicação da ata oficial da Reunião 05 de Priorização de Requisitos e Avaliação de Valor de Negócio junto à cliente parceira Maria Beatryz. | Eric Araújo e Matheus Ribeiro Szervinsk | Lucas Zanetti e Giovana Ferreira |
+| `1.0` | 24/09/2026 | Registro preliminar da pauta e estrutura da Reunião 05 de Priorização de Requisitos. | Eric Araújo e Matheus Ribeiro Szervinsk | Lucas Zanetti |
+| `2.0` | 24/09/2026 | Ajuste e consolidação integral da ata com transcrição oficial da sessão de priorização: detalhamento dos 4 módulos e 21 RFs, aplicação do MoSCoW e matriz 4x4, inclusão do RF11, rebaixamento do RF21, exclusão do RF16, postergação do RNF01, segurança, hospedagem na Vercel (`finance.doc.br`) e novas ações futuras. | Matheus Ribeiro Szervinsk e Eric Araújo | Lucas Zanetti e Giovana Ferreira |
