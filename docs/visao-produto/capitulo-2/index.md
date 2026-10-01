@@ -143,10 +143,10 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 ### Módulo de Integrações Externas (Suporte a OE1)
 
 <a id="car-09"></a>
-??? note "CAR-09: Integração com auditor.ia (Consumo de Presença Homologada)"
+??? note "CAR-09: Integração com Shifton e Gestão de Presenças Homologadas"
 
-    * **Valor de Negócio:** Evita a duplicação de um sistema de marcação de ponto já resolvido pela DUOC, consumindo via dashboard os registros de presença homologados pelo *auditor.ia* (reconhecimento facial) para apropriação financeira direta das horas aos contratos de obras.
-    * **Decisão Arquitetural de Origem:** [Ata da Reunião 02](../../atas/index.md).
+    * **Valor de Negócio:** Evita a duplicação de um sistema de marcação de ponto já resolvido pela DUOC, consumindo os registros de presença homologados pelo *Shifton* (reconhecimento facial e ponto eletrônico) para apropriação financeira direta das horas aos contratos de obras (RF20), e possibilitando a emissão e exportação estruturada de relatórios/espelhos individuais de presença para conferência dos colaboradores e rotinas trabalhistas do RH (RF22).
+    * **Decisão Arquitetural de Origem:** [Ata da Reunião 02](../../atas/index.md) e alinhamento de escopo na [Ata da Reunião 05](../../atas/reuniao-05.md).
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
         * **Contribuição Secundária:** [OE2: Aumentar a Eficiência Administrativo-Financeira](#oe2-aumentar-a-eficiencia-administrativo-financeira)
@@ -358,7 +358,7 @@ O Produto Mínimo Viável (MVP) do DUOC Finance é viável no ciclo acadêmico e
 
 ### Delimitação do Escopo do MVP
 
-O MVP abrange o controle de acesso e papéis por perfis fixos (RBAC), consumo de presenças já homologadas pelo auditor.ia (conforme Decisão Arquitetural da Ata 02) para apropriação financeira das horas aos contratos, preenchimento e homologação de Relatório de Viagem Técnica (RVT) — que já inclui o registro de despesas de campo e reembolso —, motor de apoio ao cálculo de custo de mão de obra de diaristas e comissões contratuais simplificadas (não substituto de folha de pagamento oficial), e apropriação dos custos ao contrato correspondente. Uma visualização tabular direta de custo apurado por contrato e um registro básico de auditoria (log de alterações) para conformidade com a LGPD completam o valor tangível entregue à diretoria, sem a necessidade de um módulo de business intelligence dedicado. O cálculo de comissões contratuais será tratado como regra simplificada nesta primeira versão, com refinamento previsto para ciclos futuros.
+O MVP abrange o controle de acesso e papéis por perfis fixos (RBAC), consumo de presenças já homologadas pelo Shifton (conforme Decisão Arquitetural da Ata 02) para apropriação financeira das horas aos contratos, preenchimento e homologação de Relatório de Viagem Técnica (RVT) — que já inclui o registro de despesas de campo e reembolso —, motor de apoio ao cálculo de custo de mão de obra de diaristas e comissões contratuais simplificadas (não substituto de folha de pagamento oficial), e apropriação dos custos ao contrato correspondente. Uma visualização tabular direta de custo apurado por contrato e um registro básico de auditoria (log de alterações) para conformidade com a LGPD completam o valor tangível entregue à diretoria, sem a necessidade de um módulo de business intelligence dedicado. O cálculo de comissões contratuais será tratado como regra simplificada nesta primeira versão, com refinamento previsto para ciclos futuros.
 
 Permanecem fora deste primeiro ciclo os módulos de engenharia civil pesada (como cronogramas de Gantt de obra, composições orçamentárias SINAPI e controle físico de estoque de canteiro). Essas capacidades poderão ser integradas futuramente através de APIs abertas.
 

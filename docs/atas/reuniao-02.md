@@ -37,7 +37,7 @@ A equipe consolidou o diagnóstico sociotécnico da DUOC, marcado pela fragmenta
 * **Fator de Intervenção Social:**
     * O software deve simplificar a rotina de quem atua no canteiro e no escritório, com interface limpa e intuitiva que supere a inércia do hábito das planilhas e engaje os colaboradores no lançamento tempestivo das informações.
 * **Ferramentas Existentes:**
-    * A empresa já adota a solução *auditor.ia* para controle de ponto por reconhecimento facial.
+    * A empresa já adota a solução *Shifton* para controle de ponto por reconhecimento facial e escalas.
 
 ### 3.2 Escopo Técnico do MVP e Arquitetura
 
@@ -69,7 +69,7 @@ A equipe consolidou o diagnóstico sociotécnico da DUOC, marcado pela fragmenta
 
 | # | Decisão | Descrição |
 | :---: | :--- | :--- |
-| D1 | **Integração com o ponto existente** | O DUOC Finance não desenvolverá marcação de ponto própria; consumirá as presenças homologadas pelo *auditor.ia* e fará a apropriação financeira das horas aos contratos de obras. |
+| D1 | **Integração com o ponto existente** | O DUOC Finance não desenvolverá marcação de ponto própria; consumirá as presenças homologadas pelo *Shifton* e fará a apropriação financeira das horas aos contratos de obras. |
 | D2 | **Controle de acesso por perfil (RBAC)** | Informações exibidas conforme o papel de cada usuário. |
 | D3 | **API de dados mockada** | Para acelerar o frontend no início da construção rápida, a API de dados será inicialmente simulada. |
 | D4 | **OEs no nível de negócio** | Os OEs descrevem apenas "o quê" e "por quê"; a especificação técnica e funcional reside exclusivamente nas Características do Produto (CARs). |
