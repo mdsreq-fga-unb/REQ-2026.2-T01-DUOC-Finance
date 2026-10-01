@@ -169,7 +169,7 @@ Mede a distância entre o domínio tecnológico/conceitual necessário e a exper
 
 Para consolidar as três dimensões técnicas em um indicador único e reprodutível, adota-se a média aritmética simples:
 
-<div style="background-color: var(--md-code-bg-color); border-left: 3px solid var(--md-primary-fg-color); border-radius: 4px; padding: 6px 14px; margin: 12px auto; text-align: center; font-size: 0.90rem; max-width: 800px;">
+<div style="background-color: var(--md-code-bg-color); border-left: 3px solid var(--md-primary-fg-color); border-radius: 4px; padding: 6px 14px; margin: 12px auto; text-align: center; font-size: 0.90rem; max-width: 1000px;">
   <span style="font-weight: 600;">Média Consolidada</span>
   <span style="margin: 0 6px; font-weight: bold; font-size: 12px">=</span>
   <span style="display: inline-block; vertical-align: middle; text-align: center;">
