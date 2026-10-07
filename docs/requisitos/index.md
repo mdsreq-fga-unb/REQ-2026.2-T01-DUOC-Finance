@@ -62,7 +62,10 @@ O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução
     📃 Ver Pirâmide de Abstração em JPG ↗
   </a>
     &nbsp;|&nbsp;
-  <a href="../assets/images/piramide_abstracao_vetorizada.svg" download="piramide_abstracao_vetorizada.svg">
+  <a href="../assets/images/piramide_abstracao_vetorizada.svg" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      download="piramide_abstracao_vetorizada.svg">
     📥 Baixar Piramide em Vetor (SVG Alta Resolução) ↗
 </a>
 </p>
@@ -114,7 +117,10 @@ O grafo abaixo evidencia como os fluxos funcionais se habilitam mutuamente ao lo
     📃 Ver Grafo de Interdependência em JPG ↗
   </a>
     &nbsp;|&nbsp;
-  <a href="../assets/images/grafo_interdependencia_vetorizado.svg" download="grafo_interdependencia_vetorizado.svg">
+  <a href="../assets/images/grafo_interdependencia_vetorizado.svg" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     download="grafo_interdependencia_vetorizado.svg">
     📥 Baixar Grafo em Vetor (SVG Alta Resolução) ↗
   </a>
 </p>
