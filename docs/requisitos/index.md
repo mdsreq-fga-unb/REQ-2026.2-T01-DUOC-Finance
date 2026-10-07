@@ -49,6 +49,14 @@ O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução
   </iframe>
 </div>
 
+<p align="center">
+  <a href="https://miro.com/app/board/uXjVEd_ZDOg=/?share_link_id=457510525802"
+     target="_blank"
+     rel="noopener noreferrer">
+    Abrir o board completo no Miro ↗
+  </a>
+</p>
+
 !!! note "Rastreabilidade dos Requisitos Não Funcionais na Pirâmide de Abstração"
     A árvore hierárquica da **Figura 8.1** e o grafo estrutural acima formalizam a descendência vertical estrita do escopo observável e das ações do usuário (**Objetivo Geral ➔ Objetivos Específicos ➔ Características ➔ Requisitos Funcionais**). Os **Requisitos Não Funcionais (RNFs)**, por constituírem atributos de qualidade sistêmica e restrições arquiteturais transversais (*cross-cutting concerns*), não figuram como folhas exclusivas de uma única funcionalidade, mas qualificam as características e o produto como um todo (por exemplo, segurança e criptografia no RNF03 e RNF14, usabilidade no RNF04 e confiabilidade no RNF06). A amarração individualizada e auditável de cada um dos 17 RNFs às CARs e às dores operacionais é detalhada estruturadamente na **Tabela 8.2 (Mapeamento de Necessidades do Cliente)** e na **Tabela 8.3 (Matriz-Síntese Geral de Rastreabilidade)**.
 
