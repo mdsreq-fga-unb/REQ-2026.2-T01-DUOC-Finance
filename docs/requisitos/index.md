@@ -38,13 +38,15 @@ A rastreabilidade entre a estratégia corporativa da DUOC e a engenharia de soft
 
 O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução: do Objetivo Geral (OG) às metas táticas (OEs), descendo para as capacidades do sistema (CARs) e derivando na totalidade dos **22 Requisitos Funcionais** observáveis do produto.
 
-<div class="cronograma-diagram-box" markdown="1">
-
-![Pirâmide de Abstração — Rastreabilidade Vertical](../assets/images/requisitos/piramide_abstracao_requisitos_light.png#only-light){ .img-light-mode }
-![Pirâmide de Abstração — Rastreabilidade Vertical](../assets/images/requisitos/piramide_abstracao_requisitos_dark.png#only-dark){ .img-dark-mode }
-
-<p align="center"><small><em>Figura 8.1: Pirâmide de Abstração e Rastreabilidade Vertical com 22 RFs (Clique na imagem para abrir com zoom interativo).</em></small></p>
-
+<div  class="miro-diagram-box">
+  <iframe
+    src="https://miro.com/app/live-embed/uXjVEd_ZDOg=/?focusWidget=3458764686279042166&embedMode=view_only_without_ui&embedId=760334862252"
+    title="Pirâmide de Abstração — Rastreabilidade Vertical"
+    frameborder="0"
+    scrolling="no"
+    allow="fullscreen; clipboard-read; clipboard-write"
+    allowfullscreen>
+  </iframe>
 </div>
 
 !!! note "Rastreabilidade dos Requisitos Não Funcionais na Pirâmide de Abstração"
