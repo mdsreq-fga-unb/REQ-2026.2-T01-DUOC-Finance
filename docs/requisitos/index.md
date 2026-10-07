@@ -59,7 +59,7 @@ O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução
   <a href="../assets/images/requisitos/piramide_abstracao.jpg"
      target="_blank"
      rel="noopener noreferrer">
-    📃 Ver Pirâmide de Abstração em PNG ↗
+    📃 Ver Pirâmide de Abstração em JPG ↗
   </a>
     &nbsp;|&nbsp;
   <a href="../assets/images/piramide_abstracao_vetorizada.svg" download="piramide_abstracao_vetorizada.svg">
@@ -90,14 +90,34 @@ A tabela abaixo conecta diretamente as causas-raiz identificadas no **Diagrama d
 
 O grafo abaixo evidencia como os fluxos funcionais se habilitam mutuamente ao longo do ciclo operacional da DUOC: a segurança (RBAC) protege os cadastros e as rotinas financeiras; os apontamentos de campo alimentam a conferência de fechamento; e os dados homologados sustentam a apropriação de custos e a auditoria corporativa.
 
-<div class="cronograma-diagram-box" markdown="1">
-
-![Grafo de Interdependência e Facilidades dos Requisitos](../assets/images/requisitos/grafo_interdependencia_requisitos_light.png#only-light){ .img-light-mode }
-![Grafo de Interdependência e Facilidades dos Requisitos](../assets/images/requisitos/grafo_interdependencia_requisitos_dark.png#only-dark){ .img-dark-mode }
-
-<p align="center"><small><em>Figura 8.3: Grafo de Interdependência e Facilidades entre os 22 Requisitos (Clique na imagem para abrir com zoom interativo).</em></small></p>
-
+<div class="miro-diagram-box">
+  <iframe
+    src="https://miro.com/app/live-embed/uXjVEd_B_Tw=/?focusWidget=3458764686278573389&embedMode=view_only_without_ui&embedId=548153869367"
+    title="Grafo de Interdependência — Rastreabilidade"
+    frameborder="0"
+    scrolling="no"
+    allow="fullscreen; clipboard-read; clipboard-write"
+    allowfullscreen>
+  </iframe>
 </div>
+
+<p align="center">
+  <a href="https://miro.com/app/board/uXjVEd_B_Tw=/?share_link_id=934134158353"
+     target="_blank"
+     rel="noopener noreferrer">
+    🔍 Abrir Grafo Completo no Miro (Interativo) ↗
+  </a>
+    &nbsp;|&nbsp;
+  <a href="../assets/images/requisitos/grafo_interdependencia.jpg"
+     target="_blank"
+     rel="noopener noreferrer">
+    📃 Ver Grafo de Interdependência em JPG ↗
+  </a>
+    &nbsp;|&nbsp;
+  <a href="../assets/images/grafo_interdependencia_vetorizado.svg" download="grafo_interdependencia_vetorizado.svg">
+    📥 Baixar Grafo em Vetor (SVG Alta Resolução) ↗
+  </a>
+</p>
 
 ---
 
