@@ -53,7 +53,13 @@ O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução
   <a href="https://miro.com/app/board/uXjVEd_ZDOg=/?share_link_id=457510525802"
      target="_blank"
      rel="noopener noreferrer">
-    Abrir o board completo no Miro ↗
+    🔍 Abrir Diagrama Completo no Miro (Interativo)
+  </a>
+    &nbsp;|&nbsp;
+  <a href="../assets/images/requisitos/piramide_abstracao.jpg"
+     target="_blank"
+     rel="noopener noreferrer">
+    Ver diagrama em PNG ↗
   </a>
 </p>
 
