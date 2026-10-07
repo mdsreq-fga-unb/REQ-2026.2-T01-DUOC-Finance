@@ -46,7 +46,7 @@ Para tornar a avaliação auditável e comparável, combinou-se o método **MoSC
 
 ### 8.1.4 Diagrama Cartesiano MoSCoW (Valor de Negócio vs. Urgência Operacional)
 
-A distribuição consensual dos 22 Requisitos Funcionais sob a ótica de **Valor de Negócio** e **Urgência Operacional** para resolução das dores da DUOC é expressa visualmente no diagrama cartesiano abaixo:
+A distribuição consensual dos 24 Requisitos Funcionais sob a ótica de **Valor de Negócio** e **Urgência Operacional** para resolução das dores da DUOC é expressa visualmente no diagrama cartesiano abaixo:
 
 ```mermaid
 quadrantChart
@@ -79,6 +79,8 @@ quadrantChart
     "RF22": [0.72, 0.22]
     "RF20": [0.82, 0.12]
     "RF16": [0.25, 0.22]
+    "RF23": [0.35, 0.50]
+    "RF24": [0.55, 0.30]
 ```
 
 ### 8.1.5 Distribuição MoSCoW e Linha de Corte do MVP
@@ -87,12 +89,12 @@ O diagrama estrutural abaixo sintetiza a proporção das quatro categorias MoSCo
 
 ```mermaid
 flowchart LR
-    subgraph MOSCOW["Distribuição MoSCoW dos 22 Requisitos Funcionais"]
+    subgraph MOSCOW["Distribuição MoSCoW dos 24 Requisitos Funcionais"]
         direction TB
-        M["<b>MUST HAVE (Nota 4)</b><br>8 RFs (36,4%)<br>RF01, RF04, RF05, RF06, RF07, RF08, RF13, RF19"]
-        S["<b>SHOULD HAVE (Nota 3)</b><br>8 RFs (36,4%)<br>RF02, RF03, RF09, RF10, RF11, RF14, RF17, RF18"]
-        C["<b>COULD HAVE (Nota 2)</b><br>5 RFs (22,7%)<br>RF12, RF15, RF20, RF21, RF22"]
-        W["<b>WON'T HAVE NOW (Nota 1)</b><br>1 RF (4,5%)<br>RF16"]
+        M["<b>MUST HAVE (Nota 4)</b><br>8 RFs (33,3%)<br>RF01, RF04, RF05, RF06, RF07, RF08, RF13, RF19"]
+        S["<b>SHOULD HAVE (Nota 3)</b><br>9 RFs (37,5%)<br>RF02, RF03, RF09, RF10, RF11, RF14, RF17, RF18, RF23"]
+        C["<b>COULD HAVE (Nota 2)</b><br>6 RFs (25,0%)<br>RF12, RF15, RF20, RF21, RF22, RF24"]
+        W["<b>WON'T HAVE NOW (Nota 1)</b><br>1 RF (4,2%)<br>RF16"]
         M ~~~ S
         S ~~~ C
         C ~~~ W
@@ -100,8 +102,8 @@ flowchart LR
 
     subgraph DEST["Linha de Corte e Destinação"]
         direction TB
-        MVP["<b>PRODUTO MÍNIMO VIÁVEL (MVP)</b><br>16 RFs Selecionados (72,7% do total)<br>Núcleo Operacional Ponta a Ponta Homologado"]
-        POST["<b>BACKLOG DE EVOLUÇÃO</b><br>6 RFs Postergados (27,3% do total)<br>Fase 2 (RAD Incr. 3) & Release 2.0"]
+        MVP["<b>PRODUTO MÍNIMO VIÁVEL (MVP)</b><br>17 RFs Selecionados (70,8% do total)<br>Núcleo Operacional Ponta a Ponta Homologado"]
+        POST["<b>BACKLOG DE EVOLUÇÃO</b><br>7 RFs Postergados (29,2% do total)<br>Fase 2 (RAD Incr. 3) & Release 2.0"]
         MVP ~~~ POST
     end
 
@@ -195,7 +197,7 @@ Para viabilizar o cruzamento na **Matriz 4 × 4**, a média decimal é convertid
 
 ## 8.3 Tabela Consolidada das Avaliações
 
-A tabela a seguir consolida as avaliações de **todos os 22 Requisitos Funcionais** da especificação (RF01 a RF22), integrando o **Valor de Negócio** (acordado com a cliente Maria Beatryz), a justificativa operacional, as notas das três dimensões técnicas e o **Esforço Técnico Consolidado**.
+A tabela a seguir consolida as avaliações de **todos os 24 Requisitos Funcionais** da especificação (RF01 a RF24), integrando o **Valor de Negócio** (acordado com a cliente Maria Beatryz), a justificativa operacional, as notas das três dimensões técnicas e o **Esforço Técnico Consolidado**.
 
 | Código | Requisito Funcional | OE / CAR | Valor Negócio | Justificativa do Cliente | Esforço (h) / Nota | Complex. | Lacuna | Média Consolidada | Esforço Consolidado |
 | :---: | :--- | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -221,12 +223,13 @@ A tabela a seguir consolida as avaliações de **todos os 22 Requisitos Funciona
 | **RF16** | **Exportar relatório de auditoria** | OE4 / CAR-08 | **1** | Demanda preventiva para fiscalizações trabalhistas formais; extrações assistidas pela equipe de TI atendem à fase piloto. | 12h (3) | 3 | 3 | 3,00 | **3 — Alto** |
 | **RF17** | **Recuperar credenciais de acesso** | OE4 / CAR-07 | **3** | Evita que o esquecimento de senhas paralise o colaborador em campo ou sobrecarregue a gestão com pedidos de reset manual. | 4h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
 | **RF18** | **Encerrar sessão manualmente** | OE4 / CAR-07 | **3** | Vital para resguardar a sessão ao utilizar aparelhos móveis compartilhados no canteiro de obras. | 1h (1) | 1 | 1 | 1,00 | **1 — Baixo** |
-
+| **RF23** | **Bloquear acesso após tentativas falhas consecutivas** | OE4 / CAR-07 | **3** | Mitiga ataques de força bruta sobre contas com acesso a dados financeiros e salariais, reduzindo exposição sem depender de ação humana. | 6h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
+| **RF24** | **Expirar senha periodicamente e impedir reutilização** | OE4 / CAR-07 | **2** | Boa prática de higiene de senha, mas diretrizes atuais de segurança (NIST 800-63B) associam expiração forçada a senhas mais previsíveis; mantido como melhoria incremental não bloqueante. | 6h (2) | 2 | 2 | 2,00 | **2 — Moderado** |
 ---
 
 ## 8.4 Matriz 4 × 4 — Valor de Negócio × Esforço Técnico
 
-O cruzamento bidimensional entre o **Valor de Negócio** (eixo vertical) e o **Esforço Técnico Consolidado** (eixo horizontal) posiciona os 22 requisitos funcionais do sistema.
+O cruzamento bidimensional entre o **Valor de Negócio** (eixo vertical) e o **Esforço Técnico Consolidado** (eixo horizontal) posiciona os 24 requisitos funcionais do sistema.
 
 ### 8.4.1 Representação Visual da Matriz 4 × 4 (Diagrama Cartesiano)
 
@@ -263,6 +266,8 @@ quadrantChart
     "RF20": [0.60, 0.18]
     "RF15": [0.80, 0.30]
     "RF16": [0.80, 0.12]
+    "RF23": [0.44, 0.50]
+    "RF24": [0.44, 0.30]
 ```
 
 ### 8.4.2 Tabela da Matriz 4 × 4
@@ -270,7 +275,7 @@ quadrantChart
 | Valor de Negócio ↓ / Esforço Técnico → | 1 — Baixo | 2 — Moderado | 3 — Alto | 4 — Muito alto |
 | :---: | :--- | :--- | :--- | :---: |
 | **4 — Muito alto**<br>*(Must have)* | **RF13** *(Efetuar login)*<br><br><small><strong>Prioridade máxima</strong></small> | **RF01** *(Cadastrar colaborador)*<br>**RF06** *(Homologar fechamento)*<br>**RF07** *(Submeter reembolso)*<br>**RF08** *(Deliberar reembolso)*<br>**RF19** *(Consultar apontamentos)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | **RF04** *(Submeter apontamento)*<br>**RF05** *(Solicitar prévia fechamento)*<br><br><small><strong>Avaliar viabilidade / Decompor para MVP</strong></small> | —<br><br><small><strong>Planejar, reduzir ou decompor</strong></small> |
-| **3 — Alto**<br>*(Should have)* | **RF18** *(Encerrar sessão)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | **RF02** *(Atualizar cadastro)*<br>**RF03** *(Registrar movimentação)*<br>**RF10** *(Rastreabilidade de custos)*<br>**RF11** *(Filtrar indicadores de custos)*<br>**RF14** *(Gerenciar perfis RBAC)*<br>**RF17** *(Recuperar credenciais)*<br><br><small><strong>Candidato ao MVP</strong></small> | **RF09** *(Apropriar custos)*<br><br><small><strong>Avaliar contexto / Reduzir escopo para MVP</strong></small> | —<br><br><small><strong>Entrega futura</strong></small> |
+| **3 — Alto**<br>*(Should have)* | **RF18** *(Encerrar sessão)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | **RF02** *(Atualizar cadastro)*<br>**RF03** *(Registrar movimentação)*<br>**RF10** *(Rastreabilidade de custos)*<br>**RF11** *(Filtrar indicadores de custos)*<br>**RF14** *(Gerenciar perfis RBAC)*<br>**RF17** *(Recuperar credenciais)*<br>**RF23** *(Bloquear após tentativas falhas)*<br><br><small><strong>Candidato ao MVP</strong></small> | **RF09** *(Apropriar custos)*<br><br><small><strong>Avaliar contexto / Reduzir escopo para MVP</strong></small> | —<br><br><small><strong>Entrega futura</strong></small> |
 | **2 — Moderado**<br>*(Could have)* | —<br><br><small><strong>Avaliar oportunidade</strong></small> | **RF22** *(Exportar presenças homologadas)*<br><br><small><strong>Avaliar oportunidade / Entrega futura</strong></small> | **RF12** *(Monitorar execução orçamentária)*<br>**RF15** *(Consultar trilha de auditoria)*<br>**RF20** *(Importar presenças Shifton)*<br>**RF21** *(Estornar fechamento financeiro)*<br><br><small><strong>Entrega futura</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> |
 | **1 — Baixo**<br>*(Won't have now)* | —<br><br><small><strong>Avaliar oportunidade</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> | **RF16** *(Exportar relatório de auditoria)*<br><br><small><strong>Não priorizar agora (Release 2.0)</strong></small> | —<br><br><small><strong>Não priorizar agora</strong></small> |
 
@@ -280,11 +285,10 @@ quadrantChart
    - **RF13** e **RF18** (autenticação e encerramento de sessão) apresentam esforço muito baixo (Nota 1) por aproveitarem recursos nativos do Supabase Auth e representam barreiras mandatórias de segurança.
    - **RF01, RF06, RF07, RF08 e RF19** formam o núcleo de maior alavancagem de valor imediato: cadastram pessoal, homologam lotes de pagamento, viabilizam a prestação de contas de viagens e conferem transparência ao colaborador de campo sobre seus registros.
 2. **Candidatos Estruturantes ao MVP (Valor Alto × Esforço Moderado):**
-   - **RF02, RF03, RF10, RF11, RF14 e RF17** garantem a autonomia, inteligência de custos e governança da DUOC. O **RF11** foi alçado ao MVP a pedido expresso da cliente parceira para viabilizar o acompanhamento analítico e a filtragem de custos diretos por obra já no primeiro ciclo.
-3. **Requisitos de Alto Valor e Alto Esforço (Avaliar Viabilidade e Reduzir Escopo):**
+   - **RF02, RF03, RF10, RF11, RF14, RF17 e RF23** garantem a autonomia, inteligência de custos e governança da DUOC. O **RF11** foi alçado ao MVP a pedido expresso da cliente parceira para viabilizar o acompanhamento analítico e a filtragem de custos diretos por obra já no primeiro ciclo. O **RF23** entra no MVP como barreira de segurança de baixo custo de implementação, aproveitando o mesmo fluxo de autenticação do RF13/RF17.
    - **RF04** (apontamento de campo), **RF05** (prévia de fechamento) e **RF09** (apropriação de custos) situam-se na coluna de Esforço Alto (Nota 3). Conforme detalhado na seção 8.5.2, esses requisitos **não são descartados**, pois representam os elos vitais do fluxo ponta a ponta. Em vez disso, recebem uma estratégia de **controle e redução de escopo** na primeira entrega.
 4. **Quadrantes de Entrega Futura e Baixa Prioridade (Valor Moderado/Baixo × Esforço Moderado/Alto):**
-   - **RF12, RF15, RF16, RF20, RF21 e RF22** representam extensões analíticas (dashboards orçamentários), rotinas de auditoria visual em massa, reversão de fechamento (RF21, cuja validação externa não ocorre na prática) ou integrações e relatórios com sistemas externos (*Shifton*). Foram expressamente alocados para o **Backlog Pós-MVP (Fase 2 / Release 2.0)**, liberando capacidade produtiva para estabilizar o núcleo transacional.
+   - **RF12, RF15, RF16, RF20, RF21, RF22 e RF24** representam extensões analíticas (dashboards orçamentários), rotinas de auditoria visual em massa, reversão de fechamento (RF21, cuja validação externa não ocorre na prática), integrações e relatórios com sistemas externos (*Shifton*) ou melhoria incremental de higiene de senha (RF24, não bloqueante conforme diretrizes atuais de segurança). Foram expressamente alocados para o **Backlog Pós-MVP (Fase 2 / Release 2.0)**, liberando capacidade produtiva para estabilizar o núcleo transacional.
 
 ---
 
@@ -302,6 +306,7 @@ flowchart TD
         RF13["RF13: Efetuar Login"] --> RF14["RF14: Perfis RBAC"]
         RF17["RF17: Recuperar Senha"] -.-> RF13
         RF18["RF18: Logout Manual"]
+        RF23["RF23: Bloqueio por Tentativas Falhas"] -.-> RF13
     end
 
     subgraph S_CAD["Base Cadastral Unificada (OE1)"]
@@ -331,7 +336,7 @@ flowchart TD
 
     classDef mvpNode fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff;
     classDef secNode fill:#0284c7,stroke:#0369a1,stroke-width:2px,color:#ffffff;
-    class RF13,RF14,RF17,RF18,RF01,RF02,RF03,RF04,RF19,RF07,RF08,RF05,RF06,RF09,RF10,RF11 mvpNode;
+    class RF13,RF14,RF17,RF18,RF23,RF01,RF02,RF03,RF04,RF19,RF07,RF08,RF05,RF06,RF09,RF10,RF11 mvpNode;
 ```
 
 ### 8.5.2 Tratamento dos Requisitos de Alto Valor e Alto Esforço
@@ -346,7 +351,7 @@ Requisitos posicionados na combinação de **Valor 4 e Esforço 3** (ou Valor 3 
 
 ### 8.5.3 Lista Consolidada dos Requisitos Funcionais do MVP
 
-A linha de corte homologada contempla **16 Requisitos Funcionais**, cobrindo 100% dos fluxos essenciais de governança, cadastro, campo, fechamento e apropriação:
+A linha de corte homologada contempla **17 Requisitos Funcionais**, cobrindo 100% dos fluxos essenciais de governança, cadastro, campo, fechamento e apropriação:
 
 | RF | Requisito Funcional | Módulo / OE | CAR | Valor | Esforço | Justificativa de Inclusão no MVP |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -354,6 +359,7 @@ A linha de corte homologada contempla **16 Requisitos Funcionais**, cobrindo 100
 | **RF18** | Encerrar sessão manualmente | Módulo 4 (OE4) | CAR-07 | **3** | **1** | Garante proteção imediata ao compartilhar celulares em campo. |
 | **RF17** | Recuperar credenciais de acesso | Módulo 4 (OE4) | CAR-07 | **3** | **2** | Autonomia aos usuários e redução de atritos operacionais de suporte. |
 | **RF14** | Gerenciar perfis de acesso (RBAC) | Módulo 4 (OE4) | CAR-07 | **3** | **2** | Segrega alçadas entre campo e gestão financeira (RN16). |
+| **RF23** | Bloquear acesso após tentativas falhas consecutivas | Módulo 4 (OE4) | CAR-07 | **3** | **2** | Protege contas com acesso a dados financeiros contra força bruta, aproveitando o fluxo já construído de autenticação. |
 | **RF01** | Cadastrar colaborador | Módulo 1 (OE1) | CAR-01 | **4** | **2** | Base unificada indispensável para disparar apontamentos e pagamentos. |
 | **RF02** | Atualizar cadastro de colaborador | Módulo 1 (OE1) | CAR-01 | **3** | **2** | Permite manter contas bancárias e chaves Pix devidamente atualizadas. |
 | **RF03** | Registrar movimentação funcional | Módulo 1 (OE1) | CAR-01 | **3** | **2** | Bloqueia credenciais e pagamentos indevidos a profissionais desligados. |
@@ -369,7 +375,7 @@ A linha de corte homologada contempla **16 Requisitos Funcionais**, cobrindo 100
 
 ### 8.5.4 Requisitos Funcionais Postergados (Backlog Pós-MVP)
 
-Os 6 requisitos abaixo foram deliberadamente postergados para a **Fase 2 (Pós-MVP)** ou **Release 2.0**:
+Os 7 requisitos abaixo foram deliberadamente postergados para a **Fase 2 (Pós-MVP)** ou **Release 2.0**:
 
 | RF | Requisito Funcional | Módulo / OE | CAR | Valor | Esforço | Justificativa da Postergação |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -379,6 +385,7 @@ Os 6 requisitos abaixo foram deliberadamente postergados para a **Fase 2 (Pós-M
 | **RF20** | Importar presenças homologadas | Módulo 1 (OE1) | CAR-09 | **2** | **3** | A integração com o sistema externo *Shifton* envolve dependências técnicas externas; a entrada no MVP é garantida pelo RVT próprio (RF04). |
 | **RF21** | Estornar fechamento financeiro | Módulo 2 (OE2) | CAR-03 | **2** | **3** | Operação de exceção desnecessária no primeiro ciclo; premissa de validação por sócios não ocorre na prática e correções são operacionais. |
 | **RF22** | Exportar relatório de presenças homologadas | Módulo 1 (OE1) | CAR-09 | **2** | **2** | Espelho de frequência e relatórios individuais para RH/colaborador são conveniência analítica; conferência inicial atendida pelo RVT. |
+| **RF24** | Expirar senha periodicamente e impedir reutilização | Módulo 4 (OE4) | CAR-07 | **2** | **2** | Diretrizes atuais de segurança (NIST 800-63B) não recomendam expiração forçada sem causa; melhoria incremental não bloqueante para o primeiro ciclo. |
 
 ---
 
@@ -388,7 +395,7 @@ Os atributos de qualidade e restrições técnicas do sistema receberam análise
 
 ### 8.6.1 Metodologia de Classificação dos RNFs
 
-Cada um dos 17 RNFs especificados no [Capítulo 8: Requisitos de Software](index.md) foi enquadrado em uma das quatro categorias oficiais:
+Cada um dos 20 RNFs especificados no [Capítulo 8: Requisitos de Software](index.md) foi enquadrado em uma das quatro categorias oficiais:
 
 1. **Obrigatório para o MVP:** Atributo transversal indispensável de segurança da informação, privacidade (LGPD), confiabilidade ou legislação que rege o produto como um todo. Entra no MVP sem negociação.
 2. **Associado a RF do MVP:** Atributo de qualidade vinculado diretamente a um RF selecionado para o MVP. O RF só é considerado concluído (*Done*) quando o critério mensurável deste RNF é plenamente atendido.
@@ -416,14 +423,17 @@ Cada um dos 17 RNFs especificados no [Capítulo 8: Requisitos de Software](index
 | **RNF15** | Atomicidade na gravação de logs de auditoria | Reliability | Requisito do Produto | Transversal às operações de escrita | **Obrigatório para o MVP** | Gravação do log de auditoria na mesma transação atômica da escrita. Taxa de perda zero para dados pessoais e transações financeiras. |
 | **RNF16** | Retenção de logs por 5 anos contra expurgo | Supportability / Legal | Requisito Externo (CLT) | Transversal | **Obrigatório para o MVP** | Ausência de comandos de deleção de registros com tempo < 5 anos (1.825 dias), atendendo ao prazo prescricional do Art. 11 da CLT. |
 | **RNF17** | Backup diário automático com restauração | Reliability | Requisito do Produto | Transversal (Banco e Comprovantes) | **Obrigatório para o MVP** | Backup diário completo com integridade verificada e restauração de teste em ≤ 4 h, perda máxima de dados de 24h e retenção de 30 dias. |
+| **RNF18** | Disponibilidade mínima mensal do sistema | Reliability | Requisito do Produto | Transversal | **Obrigatório para o MVP** | Disponibilidade ≥ 99,5% ao mês. Atributo transversal de confiabilidade que condiciona a confiança da cliente no sistema desde o primeiro dia em produção. |
+| **RNF19** | Acessibilidade digital nas interfaces | Usability | Requisito do Produto | Transversal | **Evolutivo** | WCAG 2.1 AA, navegação por teclado. Boa prática relevante, mas não bloqueia os fluxos essenciais do MVP; entra como melhoria de UI no incremento seguinte. |
+| **RNF20** | Integridade de payloads nas rotas de escrita da API | Reliability / Security | Requisito do Produto | Transversal | **Obrigatório para o MVP** | 100% das rotas POST/PUT/PATCH validadas contra schema. Prática básica de engenharia que protege a integridade de todos os RFs que escrevem dado financeiro/cadastral. |
 
 ### 8.6.3 Síntese Numérica da Distribuição dos RNFs
 
-- **Obrigatórios para o MVP:** **7 requisitos** (41,2%) — *RNF03, RNF10, RNF13, RNF14, RNF15, RNF16 e RNF17*.
-- **Associados a RFs do MVP:** **7 requisitos** (41,2%) — *RNF02, RNF04, RNF05, RNF06, RNF07, RNF09 e RNF11*.
-- **Evolutivos:** **3 requisitos** (17,6%) — *RNF01, RNF08 e RNF12*.
+- **Obrigatórios para o MVP:** **9 requisitos** (45,0%) — *RNF03, RNF10, RNF13, RNF14, RNF15, RNF16, RNF17, RNF18 e RNF20*.
+- **Associados a RFs do MVP:** **7 requisitos** (35,0%) — *RNF02, RNF04, RNF05, RNF06, RNF07, RNF09 e RNF11*.
+- **Evolutivos:** **4 requisitos** (20,0%) — *RNF01, RNF08, RNF12 e RNF19*.
 - **Não Aplicáveis:** **0 requisitos** (0,0%).
-- **Total no Escopo do MVP:** **14 de 17 RNFs (82,4%)** entram diretamente na primeira versão entregável.
+- **Total no Escopo do MVP:** **16 de 20 RNFs (80,0%)** entram diretamente na primeira versão entregável.
 
 ---
 
@@ -467,4 +477,4 @@ Em estrito cumprimento às diretrizes de governança e validação sociotécnica
 | `2.0` | 28/09/2026 | Unificação e consolidação canônica integral do Capítulo 8 (Priorização e MVP): harmonização das perspectivas de negócio e esforço técnico, integração das correções da avaliação em pares (RF17 a RF21 e RNF17), calibração e ampliação dos quadrantes cartesianos (MoSCoW e Matriz 4×4), fluxo contínuo do MVP e formalização da validação com a cliente. | Matheus Ribeiro | Eric Araújo |
 | `2.1` | 28/09/2026 | Revisão do escopo de priorização, validação da distribuição dos 21 RFs na Matriz 4×4, auditoria das vinculações dos 17 RNFs ao MVP e homologação dos critérios de aceite. | Eric Araújo | Matheus Ribeiro |
 | `2.2` | 30/09/2026 | Alinhamento com a Reunião 05: promoção do RF11 (Should have / MVP), rebaixamento do RF21 (Could have / Pós-MVP), inclusão do RF22 (Could have / Pós-MVP) na CAR-09, confirmação de RNF01 e RNF08 como Evolutivos e RNF09 como Associado ao MVP; atualização dos diagramas cartesianos, fluxo funcional e matriz 4×4. | Matheus Ribeiro | Eric Araújo |
-
+| `2.3` | 06/10/2026 | Inclusão de RF23 e RF24 (Módulo 4/CAR-07) na avaliação de valor/esforço, na Matriz 4×4 e nos diagramas MoSCoW; RF23 promovido ao MVP, RF24 postergado ao backlog. Inclusão de RNF18 a RNF20 (transversais) na classificação de categorias do MVP. Atualização de todas as contagens e percentuais (24 RFs, 20 RNFs). | Matheus Saraiva Camargo | Matheus Ribeiro |

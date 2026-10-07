@@ -23,11 +23,8 @@ Para assegurar o rigor analítico, a testabilidade e a rastreabilidade exigidos 
 | **Módulo 1** | [**OE1 — Padronização e Unificação de Dados**](#oe1-padronizacao-e-unificacao-de-dados) | CAR-01, CAR-02, CAR-09 | RF01 a RF04, RF19, RF20 e RF22 | RNF01 a RNF04 | CT-M1-01 a CT-M1-11 |
 | **Módulo 2** | [**OE2 — Eficiência Administrativo-Financeira**](#oe2-eficiencia-administrativo-financeira) | CAR-03, CAR-04 | RF05 a RF08 e RF21 | RNF05 a RNF08 | CT-M2-01 a CT-M2-09 |
 | **Módulo 3** | [**OE3 — Inteligência de Custos por Contrato**](#oe3-inteligencia-de-custos-por-contrato) | CAR-05, CAR-06 | RF09 a RF12 | RNF09 a RNF12 | CT-M3-01 a CT-M3-08 |
-| **Módulo 4** | [**OE4 — Governança, Segurança e Rastreabilidade**](#oe4-governanca-seguranca-e-rastreabilidade) | CAR-07, CAR-08 | RF13 a RF18 | RNF13 a RNF17 | CT-M4-01 a CT-M4-11 |
-
-!!! info "Priorização de Requisitos e Definição do MVP"
-    A avaliação detalhada de valor de negócio de cada requisito funcional na escala de 1 a 4 associada ao MoSCoW, bem como a delimitação consensual da linha de corte do MVP pactuada com a cliente parceira Maria Beatryz, encontra-se formalizada em **[Priorização e MVP](priorizacao.md)** e na **[Ata da Reunião 05](../atas/reuniao-05.md)**.
-
+| **Módulo 4** | [**OE4 — Governança, Segurança e Rastreabilidade**](#oe4-governanca-seguranca-e-rastreabilidade) | CAR-07, CAR-08 | RF13 a RF18, RF23 e RF24 | RNF13 a RNF17 | CT-M4-01 a CT-M4-13 |
+| **Transversal** | [**Requisitos de plataforma não vinculados a um único OE**](#requisitos-nao-funcionais-transversais) | — | — | RNF18 a RNF20 | CT-TRANS-01 a CT-TRANS-03 |
 ---
 
 ## 8.2 Rastreabilidade Estratégica e Diagramas Visuais
@@ -36,33 +33,31 @@ A rastreabilidade entre a estratégia corporativa da DUOC e a engenharia de soft
 
 ### 8.2.1 Pirâmide de Abstração (Rastreabilidade Vertical)
 
-O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução: do Objetivo Geral (OG) às metas táticas (OEs), descendo para as capacidades do sistema (CARs) e derivando na totalidade dos **22 Requisitos Funcionais** observáveis do produto.
+O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução: do Objetivo Geral (OG) às metas táticas (OEs), descendo para as capacidades do sistema (CARs) e derivando nos Requisitos Funcionais e Não Funcionais executáveis.
 
 <div class="cronograma-diagram-box" markdown="1">
 
 ![Pirâmide de Abstração — Rastreabilidade Vertical](../assets/images/requisitos/piramide_abstracao_requisitos_light.png#only-light){ .img-light-mode }
 ![Pirâmide de Abstração — Rastreabilidade Vertical](../assets/images/requisitos/piramide_abstracao_requisitos_dark.png#only-dark){ .img-dark-mode }
 
-<p align="center"><small><em>Figura 8.1: Pirâmide de Abstração e Rastreabilidade Vertical com 22 RFs (Clique na imagem para abrir com zoom interativo).</em></small></p>
+<p align="center"><small><em>Figura 8.1: Pirâmide de Abstração e Rastreabilidade Vertical (Clique na imagem para abrir com zoom interativo).</em></small></p>
 
 </div>
-
-!!! note "Rastreabilidade dos Requisitos Não Funcionais na Pirâmide de Abstração"
-    A árvore hierárquica da **Figura 8.1** e o grafo estrutural acima formalizam a descendência vertical estrita do escopo observável e das ações do usuário (**Objetivo Geral ➔ Objetivos Específicos ➔ Características ➔ Requisitos Funcionais**). Os **Requisitos Não Funcionais (RNFs)**, por constituírem atributos de qualidade sistêmica e restrições arquiteturais transversais (*cross-cutting concerns*), não figuram como folhas exclusivas de uma única funcionalidade, mas qualificam as características e o produto como um todo (por exemplo, segurança e criptografia no RNF03 e RNF14, usabilidade no RNF04 e confiabilidade no RNF06). A amarração individualizada e auditável de cada um dos 17 RNFs às CARs e às dores operacionais é detalhada estruturadamente na **Tabela 8.2 (Mapeamento de Necessidades do Cliente)** e na **Tabela 8.3 (Matriz-Síntese Geral de Rastreabilidade)**.
 
 ---
 
 ### 8.2.2 Mapeamento de Necessidades do Cliente (Dores Ishikawa/Rich Picture → Requisitos)
 
-A tabela abaixo conecta diretamente as causas-raiz identificadas no **Diagrama de Causa e Efeito (Ishikawa)** e as tensões operacionais do **Rich Picture** (TR-01 a TR-04) às respostas sistêmicas do **DUOC Finance**, cobrindo a totalidade dos **22 Requisitos Funcionais** e **17 Requisitos Não Funcionais** projetados para superá-las.
+Este diagrama conecta diretamente as dores reais identificadas no **Diagrama de Causa e Efeito (Ishikawa)** e as tensões operacionais do **Rich Picture** (TR-01 a TR-04) aos requisitos projetados para superá-las.
 
-| Dimensão da Dor | Problema / Fricção no Cenário Atual | Resposta Sistêmica (DUOC Finance) | Requisitos Funcionais Associados (RF) | Requisitos Não Funcionais Críticos (RNF) | Módulo / CAR |
-| :--- | :--- | :--- | :--- | :--- | :---: |
-| **Métodos & Medição**<br><br>*(Ishikawa)*<br><br>**Tensão TR-02**<br><br>*(Rich Picture)* | **Fechamento mensal moroso e propensão a erros de cálculo:** A auxiliar administrativa gasta mais de 30 horas mensais compilando horas manuais e notas de prestadores em planilhas sem validação, gerando atrasos em pagamentos e divergências com diaristas. | **Motor de apuração e conferência supervisionada:** Centraliza os apontamentos homologados de campo em uma prévia de fechamento financeiro, calcula automaticamente diárias e comissões, trava lotes aprovados e registra histórico auditável com opção de estorno formal. | • **RF05:** Solicitar prévia consolidada de apuração<br>• **RF06:** Homologar lote de fechamento financeiro<br>• **RF21:** Estornar fechamento financeiro com justificativa auditável | • **RNF05:** Fechamento de 500 registros em ≤ 5,0 s<br>• **RNF06:** Exatidão monetária centesimal (tolerância R$ 0,00)<br>• **RNF08:** Justificativa obrigatória em estornos (mín. 15 caracteres) | **Módulo 2 (OE2)**<br><br>CAR-03 |
-| **Materiais & Processos**<br><br>*(Ishikawa)*<br><br>**Tensões TR-01 e TR-02**<br><br>*(Rich Picture)* | **Extravio de notas fiscais físicas e apontamentos em papel/WhatsApp:** Colaboradores em obras remotas enviam comprovantes e relatórios de viagem (RVT) em mensagens informais ou papel térmico que apaga, provocando perda de notas e conflitos na prestação de contas. | **Coleta móvel padronizada e fluxo digital de reembolsos:** Aplicativo móvel para submissão imediata de RVT com upload de comprovantes fiscais no ato da despesa, histórico transparente para o trabalhador e fila de aprovação supervisionada pela gestão. | • **RF04:** Submeter apontamento de campo e RVT<br>• **RF19:** Consultar apontamentos registrados e status<br>• **RF07:** Submeter solicitação de reembolso com anexo<br>• **RF08:** Aprovar ou rejeitar reembolso com parecer | • **RNF01:** Modo offline com fila de 100 registros<br>• **RNF04:** Usabilidade do RVT em até 5 telas (taxa ≥ 90%)<br>• **RNF07:** Validação no upload de notas (≤ 5 MB, PDF/PNG/JPEG) | **Módulo 1 (OE1)**<br>CAR-02<br><br>**Módulo 2 (OE2)**<br>CAR-04 |
-| **Pessoas & Tecnologia**<br><br>*(Ishikawa)*<br><br>**Tensão TR-01**<br><br>*(Rich Picture)* | **Descentralização cadastral e inconsistência em dados de pagamento:** Ausência de base única de colaboradores e diaristas, com dados bancários desatualizados que ocasionam repasses errôneos e falta de sincronia com o ponto eletrônico corporativo. | **Gestão cadastral unificada e integração de frequência:** Ficha unificada com validação compulsória de CPF, atualização bancária em tempo real, revogação imediata de credenciais em desligamentos, consumo de presenças do *Shifton* e espelhos de frequência. | • **RF01:** Cadastrar colaborador com unicidade por CPF<br>• **RF02:** Atualizar dados cadastrais e bancários<br>• **RF03:** Registrar movimentação funcional / desligamento<br>• **RF20:** Importar presenças homologadas do *Shifton*<br>• **RF22:** Exportar relatório e espelho de presenças | • **RNF02:** Consulta cadastral ágil em ≤ 2,0 s<br>• **RNF03:** Criptografia AES-256 em repouso e TLS 1.3 em rede | **Módulo 1 (OE1)**<br><br>CAR-01 e CAR-09 |
-| **Medição & Gerência**<br><br>*(Ishikawa)*<br><br>**Tensão TR-03**<br><br>*(Rich Picture)* | **Opacidade do custo real de mão de obra por obra e desvios tardios:** A diretoria só descobre os custos reais de deslocamentos, diárias e serviços semanas após a entrega, operando com precificação empírica e sem controle tempestivo do orçamento. | **Apropriação analítica e inteligência de custos por contrato:** Vinculação automática dos montantes pagos aos contratos correspondentes, trilha de rastreabilidade do custo até a origem, filtragem dinâmica de indicadores e acompanhamento orçamentário. | • **RF09:** Apropriar custos operacionais ao contrato<br>• **RF10:** Consultar rastreabilidade detalhada de custos<br>• **RF11:** Filtrar indicadores de custos por contrato<br>• **RF12:** Monitorar execução orçamentária (previsto vs. realizado) | • **RNF09:** Carga do painel analítico em ≤ 3,0 s sob 10.000 itens<br>• **RNF11:** Consistência ACID em apropriações concorrentes<br>• **RNF12:** Responsividade analítica desktop e tablet | **Módulo 3 (OE3)**<br><br>CAR-05 e CAR-06 |
-| **Tecnologia & Segurança**<br><br>*(Ishikawa)*<br><br>**Tensão TR-04**<br><br>*(Rich Picture)* | **Compartilhamento inseguro de planilhas e ausência de trilha probatória:** Planilhas com remunerações de sócios e colaboradores circulam sem controle de acesso; inexistência de logs de auditoria expõe a empresa a multas da LGPD e passivos na CLT. | **Controle de acesso estrito (RBAC) e auditoria imutável:** Autenticação corporativa com token de 8h, recuperação segura, logout manual, isolamento de dados por papel (menor privilégio), gravação atômica em log *append-only* retido por 5 anos e backups diários. | • **RF13:** Efetuar login corporativo<br>• **RF14:** Gerenciar perfis de acesso RBAC<br>• **RF17:** Recuperar credenciais de acesso<br>• **RF18:** Encerrar sessão manualmente<br>• **RF15:** Consultar trilha de auditoria com filtros<br>• **RF16:** Exportar dossiê consolidado de auditoria | • **RNF10:** Restrição com HTTP 403 para rotas financeiras<br>• **RNF13:** Expiração de sessão em no máximo 8 horas<br>• **RNF14:** Autorização RBAC em 100% das rotas (LGPD)<br>• **RNF15:** Atomicidade de gravação de auditoria<br>• **RNF16:** Retenção imutável de logs por 5 anos (CLT Art. 11)<br>• **RNF17:** Backup diário com restauração em ≤ 4 h | **Módulo 4 (OE4)**<br><br>CAR-07 e CAR-08 |
+<div class="cronograma-diagram-box" markdown="1">
+
+![Mapeamento de Necessidades do Cliente](../assets/images/requisitos/mapeamento_necessidades_duoc_light.png#only-light){ .img-light-mode }
+![Mapeamento de Necessidades do Cliente](../assets/images/requisitos/mapeamento_necessidades_duoc_dark.png#only-dark){ .img-dark-mode }
+
+<p align="center"><small><em>Figura 8.2: Mapeamento de Necessidades do Cliente — Dores do Ishikawa e Rich Picture para Requisitos (Clique na imagem para abrir com zoom interativo).</em></small></p>
+
+</div>
 
 ---
 
@@ -75,7 +70,7 @@ O grafo abaixo evidencia como os fluxos funcionais se habilitam mutuamente ao lo
 ![Grafo de Interdependência e Facilidades dos Requisitos](../assets/images/requisitos/grafo_interdependencia_requisitos_light.png#only-light){ .img-light-mode }
 ![Grafo de Interdependência e Facilidades dos Requisitos](../assets/images/requisitos/grafo_interdependencia_requisitos_dark.png#only-dark){ .img-dark-mode }
 
-<p align="center"><small><em>Figura 8.3: Grafo de Interdependência e Facilidades entre os 22 Requisitos (Clique na imagem para abrir com zoom interativo).</em></small></p>
+<p align="center"><small><em>Figura 8.3: Grafo de Interdependência e Facilidades entre Requisitos (Clique na imagem para abrir com zoom interativo).</em></small></p>
 
 </div>
 
@@ -85,10 +80,10 @@ O grafo abaixo evidencia como os fluxos funcionais se habilitam mutuamente ao lo
 <a id="oe1"></a>
 ## OE1 — Padronização e Unificação de Dados
 
-Esta seção detalha os requisitos da **DUOC Finance** associados ao **OE1 — Padronizar e Unificar os Dados**. O módulo cobre as características **CAR-01 — Gestão Cadastral Unificada de Pessoal** e **CAR-02 — Apontamento Móvel de Atividades e Registros de Campo**, além dos requisitos de integração e exportação associados à **CAR-09** (presenças homologadas do *Shifton*).
+Esta seção detalha os requisitos da **DUOC Finance** associados ao **OE1 — Padronizar e Unificar os Dados**. O módulo cobre as características **CAR-01 — Gestão Cadastral Unificada de Pessoal** e **CAR-02 — Apontamento Móvel de Atividades e Registros de Campo**, além do requisito de integração associado à **CAR-09** (presenças homologadas do *auditor.ia*).
 
-!!! note "Alinhamento de Escopo — Ponto Eletrônico e Shifton"
-    Conforme estabelecido no alinhamento de escopo técnico com a DUOC (Ata de Reunião 02 e CAR-09), o controle formal de frequência biométrica dos colaboradores é suprido externamente pelo sistema *Shifton*. O escopo operacional do DUOC Finance em campo concentra-se estritamente na coleta de apontamentos técnicos de produção por contrato e no preenchimento de Relatórios de Viagem Técnica (RVT).
+!!! note "Alinhamento de Escopo — Ponto Biométrico e auditor.ia"
+    Conforme estabelecido no alinhamento de escopo técnico com a DUOC (Ata de Reunião 02 e CAR-09), o controle formal de frequência biométrica dos colaboradores é suprido externamente pelo sistema *auditor.ia*. O escopo operacional do DUOC Finance em campo concentra-se estritamente na coleta de apontamentos técnicos de produção por contrato e no preenchimento de Relatórios de Viagem Técnica (RVT).
 
 ### Requisitos Funcionais
 
@@ -99,10 +94,10 @@ Os requisitos abaixo expressam as **ações observáveis dos usuários** para ge
 | **RF01** | **Cadastrar colaborador** | CAR-01 | **Dado** que um usuário do RH preenche os dados cadastrais (pessoais, bancários e trabalhistas) de um novo profissional,<br>**Quando** submeter o formulário de cadastro com dados válidos,<br>**Então** o sistema deve persistir as informações gerando um identificador unificado e bloquear a inclusão caso o CPF já exista na base de dados (RN01). |
 | **RF02** | **Atualizar cadastro de colaborador** | CAR-01 | **Dado** que o gestor de RH precisa atualizar informações cadastrais ou dados bancários de um colaborador ativo,<br>**Quando** salvar as modificações no perfil do profissional,<br>**Então** o sistema deve propagar os dados atualizados em tempo real para os módulos dependentes e registrar o histórico versionado da ficha. |
 | **RF03** | **Registrar movimentação funcional** | CAR-01 | **Dado** que um colaborador muda de situação jurídica (afastamento, férias ou rescisão),<br>**Quando** o usuário do RH registrar a alteração funcional no sistema,<br>**Então** o sistema deve atualizar o status do colaborador e revogar automaticamente suas credenciais de acesso ao aplicativo móvel de campo em caso de afastamento ou desligamento (RN04). |
-| **RF04** | **Submeter apontamento de campo** | CAR-02 | **Dado** que o colaborador concluiu sua jornada em obra ou visita técnica,<br>**Quando** preencher o formulário informando horas trabalhadas, escopo executado, anexar comprovantes/fotos e submeter no aplicativo móvel,<br>**Então** o sistema deve registrar o apontamento e disponibilizá-lo com status "Pendente de Homologação" para a supervisão técnica. |
+| **RF04** | **Submeter apontamento de campo** | CAR-02 | **Dado** que o colaborador concluiu sua jornada em obra ou visita técnica,<br>**Quando** preencher o formulário informando horas trabalhadas e escopo executado e submeter o apontamento no aplicativo móvel,<br>**Então** o sistema deve registrar o apontamento com os anexos vinculados (RF22) e disponibilizá-lo com status "Pendente de Homologação" para a supervisão técnica. |
 | **RF19** | **Consultar apontamentos registrados** | CAR-02 | **Dado** que o colaborador de campo já submeteu apontamentos pelo aplicativo móvel,<br>**Quando** acessar a listagem dos seus apontamentos,<br>**Então** o sistema deve exibir somente os apontamentos do próprio colaborador (RN16), com data, contrato e status ("Pendente de Homologação", "Homologado" ou "Rejeitado"), permitindo consultar o histórico de cada registro. |
-| **RF20** | **Importar presenças homologadas** | CAR-09 | **Dado** que o analista financeiro selecionou uma competência mensal e os contratos correspondentes,<br>**Quando** solicitar a importação das presenças homologadas registradas no sistema *Shifton*,<br>**Então** o sistema deve consumir os registros de presença por colaborador e contrato e disponibilizá-los na competência selecionada para conferência, sem alterar os dados de origem no *Shifton*. |
-| **RF22** | **Exportar relatório de presenças homologadas** | CAR-09 | **Dado** que o colaborador ou o analista de RH necessita de comprovação individual ou consolidada de frequência,<br>**Quando** solicitar a geração do espelho ou relatório de presenças homologadas da competência,<br>**Então** o sistema deve compilar os registros importados do *Shifton* cruzados com os contratos do período e disponibilizar o arquivo estruturado (PDF/CSV) com o extrato de horas e diárias para conferência do trabalhador e rotinas do RH. |
+| **RF20** | **Importar presenças homologadas** | CAR-09 | **Dado** que o analista financeiro selecionou uma competência mensal e os contratos correspondentes,<br>**Quando** solicitar a importação das presenças homologadas disponibilizadas pelo painel (*dashboard*) do *auditor.ia*,<br>**Então** o sistema deve consumir os registros de presença, vinculá-los por colaborador e contrato na competência selecionada para apropriação financeira das horas e manter inalterados os dados de origem no *auditor.ia*. |
+| **RF22** | **Anexar evidências ao apontamento** | CAR-02 | **Dado** que o colaborador está preenchendo um apontamento de campo no aplicativo móvel,<br>**Quando** anexar fotos ou comprovantes da atividade executada,<br>**Então** o sistema deve vincular os arquivos ao apontamento em preenchimento e exibir a lista de anexos, permitindo removê-los antes da submissão. |
 
 ### Regras de Negócio
 
@@ -127,14 +122,14 @@ Os requisitos abaixo expressam as **ações observáveis dos usuários** para ge
 | **RF01** | OE1 | CAR-01 | **CT-M1-01:** Submeter cadastro de colaborador e validar persistência e bloqueio de CPF duplicado. |
 | **RF02** | OE1 | CAR-01 | **CT-M1-02:** Atualizar ficha cadastral e verificar propagação em tempo real e versionamento. |
 | **RF03** | OE1 | CAR-01 | **CT-M1-03:** Registrar movimentação funcional de colaborador e validar revogação automática de credenciais no aplicativo. |
-| **RF04** | OE1 | CAR-02 | **CT-M1-04:** Submeter apontamento de campo no aplicativo móvel com upload de fotos e comprovantes. |
+| **RF04** | OE1 | CAR-02 | **CT-M1-04:** Submeter apontamento de campo no aplicativo móvel com horas e escopo e validar registro com status "Pendente de Homologação" e anexos vinculados. |
 | **RNF01** | OE1 | CAR-02 | **CT-M1-05:** Testar persistência local de, no mínimo, 100 registros em modo desconectado sem perda de dados, exibição do alerta visual ao atingir 80% da capacidade e tempo de sincronização ≤ 30 s. |
 | **RNF02** | OE1 | CAR-01 | **CT-M1-06:** Medir tempo de resposta da busca e detalhamento de colaboradores (meta ≤ 2,0 s). |
 | **RNF03** | OE1 | CAR-01 | **CT-M1-07:** Validar aplicação de criptografia AES-256 na base de dados e TLS 1.3 nas conexões de rede. |
 | **RNF04** | OE1 | CAR-02 | **CT-M1-08:** Avaliar, em teste de usabilidade com usuários em primeiro uso e sem treinamento, a conclusão do apontamento em no máximo 5 passos/telas com taxa de conclusão bem-sucedida ≥ 90%. |
 | **RF19** | OE1 | CAR-02 | **CT-M1-09:** Consultar a listagem de apontamentos próprios e validar exibição de status e histórico, bloqueando o acesso a registros de outros colaboradores. |
-| **RF20** | OE1 | CAR-09 | **CT-M1-10:** Importar presenças homologadas do *Shifton* para uma competência e validar vínculo por colaborador e contrato sem alteração dos dados de origem. |
-| **RF22** | OE1 | CAR-09 | **CT-M1-11:** Emitir e exportar relatório/espelho individual de presenças homologadas e validar integridade dos dados estruturados (PDF/CSV) por colaborador e contrato. |
+| **RF20** | OE1 | CAR-09 | **CT-M1-10:** Importar presenças homologadas do *auditor.ia* para uma competência e validar vínculo por colaborador e contrato, sem alteração dos dados de origem. |
+| **RF22** | OE1 | CAR-02 | **CT-M1-11:** Anexar fotos e comprovantes a um apontamento em preenchimento, validar o vínculo ao registro e a remoção de anexos antes da submissão. |
 
 ---
 
@@ -162,7 +157,7 @@ Os requisitos abaixo expressam as **ações dos usuários** na condução e supe
 ### Regras de Negócio
 
 1. **RN05 — Homologação Prévia Mandatória:** O sistema consolida exclusivamente apontamentos de RVT e horas técnicas que possuam status prévio de "Homologado" pelo gestor responsável.
-2. **RN06 — Obrigatoriedade de Comprovante Fiscal:** O sistema bloqueia a submissão de solicitações de reembolso caso não haja anexo digital legível (PDF, PNG ou JPEG).
+2. **RN06 — Obrigatoriedade de Comprovante Fiscal:** Nenhuma solicitação de reembolso pode ser submetida sem um comprovante fiscal digital legível anexado, observados os formatos e o tamanho definidos no RNF07.
 3. **RN07 — Limite do Montante Reembolsável:** O sistema impede que o valor aprovado para reembolso ultrapasse o valor nominal discriminado no documento fiscal comprobatório.
 4. **RN08 — Imutabilidade de Lotes Homologados:** O sistema bloqueia modificações diretas em lotes financeiros homologados, exigindo procedimento formal de estorno com justificativa auditável para qualquer retificação.
 5. **RN09 — Vínculo Contratual Obrigatório:** Toda despesa operacional e reembolso deve estar estritamente vinculada a um contrato ativo e a um centro de custos operacional válido.
@@ -189,6 +184,7 @@ Os requisitos abaixo expressam as **ações dos usuários** na condução e supe
 | **RNF07** | OE2 | CAR-04 | **CT-M2-07:** Testar rejeição automática de arquivos corrompidos, acima de 5 MB ou com extensões não homologadas. |
 | **RNF08** | OE2 | CAR-03 | **CT-M2-08:** Verificar bloqueio de estorno sem preenchimento de justificativa formal auditável. |
 | **RF21** | OE2 | CAR-03 | **CT-M2-09:** Estornar fechamento homologado com justificativa formal e validar reabertura da competência, preservação do fechamento original e registro na trilha de auditoria. |
+
 ---
 
 <a id="oe3-inteligencia-de-custos-por-contrato"></a>
@@ -254,18 +250,21 @@ Os requisitos abaixo expressam as **ações dos usuários** para autenticação 
 | :---: | :--- | :---: | :--- |
 | **RF13** | **Efetuar login no sistema** | CAR-07 | **Dado** que o colaborador informa suas credenciais corporativas cadastradas (e-mail e senha),<br>**Quando** solicitar a autenticação na plataforma,<br>**Então** o sistema deve autenticar a sessão e emitir um token de acesso temporário com permissões do perfil do usuário, retornando mensagem genérica de erro em caso de credenciais inválidas. |
 | **RF14** | **Gerenciar perfis de acesso** | CAR-07 | **Dado** que o administrador precisa configurar as permissões de acesso de um usuário,<br>**Quando** atribuir um papel (Diarista/Técnico de Campo, Gestor de Contrato, Analista Financeiro, Administrador) e salvar as permissões,<br>**Então** o sistema deve aplicar as alçadas de restrição imediatamente a todas as telas e rotas de API da aplicação (RN16). |
-| **RF15** | **Consultar trilha de auditoria** | CAR-08 | **Dado** que um usuário com perfil de auditoria precisa averiguar alterações cadastrais ou financeiras,<br>**Quando** pesquisar no log de auditoria aplicando filtros por período, usuário ou tipo de operação,<br>**Então** o sistema deve listar os eventos correspondentes exibindo autor (quem), operação executada (o quê) e carimbo temporal UTC (quando). |
+| **RF15** | **Consultar trilha de auditoria** | CAR-08 | **Dado** que um usuário com perfil de auditoria precisa averiguar alterações cadastrais ou financeiras,<br>**Quando** pesquisar no log de auditoria aplicando filtros por período, usuário ou tipo de operação,<br>**Então** o sistema deve listar os eventos correspondentes exibindo autor (quem), operação executada (o quê) e carimbo temporal UTC (quando), permitindo ainda filtrar por módulo/CAR afetado e por faixa de valor monetário da operação, quando aplicável. |
 | **RF16** | **Exportar relatório de auditoria** | CAR-08 | **Dado** que o administrador precisa emitir comprovação probatória de alterações no sistema,<br>**Quando** selecionar os eventos auditados e solicitar a exportação do relatório consolidado,<br>**Então** o sistema deve gerar um dossiê em formato estruturado (PDF/CSV) contendo o histórico integral e imutável das operações para fins de conformidade legal e trabalhista (CLT Art. 11). |
 | **RF17** | **Recuperar credenciais de acesso** | CAR-07 | **Dado** que o colaborador esqueceu sua senha de acesso e não consegue se autenticar,<br>**Quando** solicitar a recuperação informando o e-mail corporativo cadastrado,<br>**Então** o sistema deve enviar ao e-mail informado um link de redefinição de senha válido por 30 minutos e de uso único, sem revelar se o e-mail existe ou não na base (evitando enumeração de usuários). |
 | **RF18** | **Encerrar sessão manualmente** | CAR-07 | **Dado** que o colaborador está autenticado no sistema,<br>**Quando** solicitar o encerramento manual da sessão (logout),<br>**Então** o sistema deve invalidar imediatamente o token de acesso atual e redirecionar o usuário para a tela de login. |
-
+| **RF23** | **Bloquear acesso após tentativas falhas consecutivas** | CAR-07 | **Dado** que um usuário tenta autenticar com credenciais inválidas,<br>**Quando** atingir 5 tentativas falhas consecutivas dentro de 15 minutos,<br>**Então** o sistema deve bloquear temporariamente o login daquela conta por 30 minutos, exibindo mensagem informativa sem revelar se o erro foi de e-mail ou senha (RN20). |
+| **RF24** | **Expirar senha periodicamente e impedir reutilização** | CAR-07 | **Dado** que a senha de um usuário atingiu 90 dias desde a última alteração,<br>**Quando** o usuário tentar autenticar,<br>**Então** o sistema deve exigir a definição de uma nova senha antes de liberar o acesso, bloqueando a reutilização de qualquer uma das últimas 5 senhas já utilizadas (RN21). |
 ### Regras de Negócio
 
 1. **RN15 — Autenticação Mandatória com Token Válido:** O sistema exige token temporário válido e não expirado para qualquer requisição a recursos e dados protegidos.
 2. **RN16 — Princípio do Menor Privilégio (RBAC):** O sistema intercepta automaticamente requisições e segrega visualizações: colaboradores de campo acessam somente seus próprios lançamentos; gestores acessam contratos sob sua responsabilidade; e administradores gerenciam parametrizações globais.
 3. **RN17 — Atomicidade de Gravação na Auditoria:** O sistema executa a gravação da entrada de log de auditoria na mesma transação atômica da operação de escrita de dados, revertendo a transação se o log falhar.
-4. **RN18 — Imutabilidade Estrita (*Append-Only*):** A camada de persistência da trilha de auditoria rejeita compulsoriamente qualquer instrução SQL de alteração (`UPDATE`) ou deleção (`DELETE`).
+4. **RN18 — Imutabilidade Estrita (*Append-Only*):** Os registros da trilha de auditoria são somente de inserção: o sistema não permite, para nenhum perfil de usuário, a alteração ou a exclusão de eventos já registrados.
 5. **RN19 — Prazo Prescricional de Retenção de Logs:** O sistema impede o expurgo de registros de auditoria operacional e financeira com tempo de retenção inferior a 5 anos (1.825 dias), atendendo ao prazo prescricional trabalhista (Artigo 11 da CLT).
+6. **RN20 — Limite de Tentativas de Autenticação:** O sistema contabiliza tentativas falhas de login por conta e aplica bloqueio temporário ao atingir o limite configurado, resetando o contador após login bem-sucedido.
+7. **RN21 — Política de Expiração e Histórico de Senhas:** O sistema mantém hash das últimas 5 senhas utilizadas por usuário, impedindo sua reutilização, e força redefinição a cada 90 dias corridos.
 
 ### Requisitos Não Funcionais
 
@@ -276,7 +275,6 @@ Os requisitos abaixo expressam as **ações dos usuários** para autenticação 
 | **RNF15** | **Garantir atomicidade transacional na gravação de logs de auditoria** | Reliability (Confiabilidade) | Requisito do Produto — Confiabilidade/Dependabilidade | Em 100% das operações de escrita disparadas contra dados de pessoal e financeiros na suíte de testes, uma entrada correspondente de auditoria deve ser confirmada na mesma transação com taxa de perda zero. |
 | **RNF16** | **Reter registros de auditoria por no mínimo 5 anos contra expurgo indevido** | Supportability (Suportabilidade) / Legal | Requisito Externo — Legislativo (Art. 11 da CLT / Fiscal) | Inexistência comprovada por análise estática e testes de vulnerabilidade de comandos ou rotinas que permitam a deleção de registros com tempo de retenção inferior a 5 anos (1.825 dias). |
 | **RNF17** | **Realizar backup automático diário com restauração verificada** | Reliability (Confiabilidade) | Requisito do Produto — Confiabilidade/Dependabilidade | O sistema deve executar backup automático completo diário do banco de dados e dos comprovantes anexados, reter as cópias por no mínimo 30 dias e verificar a integridade de 100% dos backups gerados; a restauração completa em ambiente de teste deve ser concluída em até 4 horas, com perda máxima de dados de 24 horas. |
-
 
 ### Matriz de Rastreabilidade
 
@@ -293,6 +291,31 @@ Os requisitos abaixo expressam as **ações dos usuários** para autenticação 
 | **RF17** | OE4 | CAR-07 | **CT-M4-09:** Solicitar recuperação de senha e validar envio do link com validade de 30 minutos e uso único, sem revelar a existência do e-mail. |
 | **RF18** | OE4 | CAR-07 | **CT-M4-10:** Encerrar a sessão manualmente e validar invalidação imediata do token e redirecionamento para a tela de login. |
 | **RNF17** | OE4 | CAR-08 | **CT-M4-11:** Executar o backup diário, verificar a integridade e restaurar em ambiente de teste em até 4 horas, confirmando perda máxima de 24 horas de dados e retenção de 30 dias. |
+| **RF23** | OE4 | CAR-07 | **CT-M4-12:** Simular 5 tentativas de login inválidas em 15 minutos e validar bloqueio temporário de 30 minutos da conta. |
+| **RF24** | OE4 | CAR-07 | **CT-M4-13:** Simular senha com 90 dias de uso e validar exigência de redefinição; tentar reutilizar uma das últimas 5 senhas e validar bloqueio. |
+
+---
+
+<a id="requisitos-nao-funcionais-transversais"></a>
+## Requisitos Não Funcionais Transversais
+
+Os requisitos abaixo aplicam-se à plataforma como um todo, não estando vinculados a um único Objetivo Específico.
+
+### Requisitos Não Funcionais
+
+| Código | Requisito Verificável | URPS+ | Sommerville | Critério Mensurável |
+| :---: | :--- | :--- | :--- | :--- |
+| **RNF18** | **Garantir disponibilidade mínima mensal do sistema** | Reliability (Confiabilidade) | Requisito do Produto — Confiabilidade | Disponibilidade mínima de 99,5% ao mês, medida por monitoramento externo automatizado, com janelas de manutenção programada comunicadas com no mínimo 24h de antecedência e fora do horário comercial (8h-18h). |
+| **RNF19** | **Garantir acessibilidade digital nas interfaces do sistema** | Usability (Usabilidade) | Requisito do Produto — Usabilidade | 100% dos formulários com navegação completa por teclado e rótulos ARIA; contraste mínimo de 4.5:1 em texto, validado por ferramenta automatizada (ex.: axe-core) sem erros críticos, alinhado a WCAG 2.1 nível AA. |
+| **RNF20** | **Validar integridade de payloads em todas as rotas de escrita da API** | Reliability / Security (+) | Requisito do Produto — Confiabilidade | 100% das requisições POST/PUT/PATCH são validadas contra schema de dados antes da persistência; payload malformado retorna HTTP 400 com mensagem de erro estruturada, sem exceção não tratada. |
+
+### Matriz de Rastreabilidade
+
+| Requisito | Objetivo Específico | Característica | Caso de Teste |
+| :---: | :---: | :---: | :--- |
+| **RNF18** | Transversal | — | **CT-TRANS-01:** Monitorar uptime mensal e validar disponibilidade ≥ 99,5%, com manutenções comunicadas com antecedência. |
+| **RNF19** | Transversal | — | **CT-TRANS-02:** Rodar ferramenta automatizada de acessibilidade em todos os formulários e validar ausência de erros críticos (WCAG 2.1 AA) e navegação completa por teclado. |
+| **RNF20** | Transversal | — | **CT-TRANS-03:** Submeter payloads malformados a todas as rotas de escrita da API e validar rejeição HTTP 400 estruturada, sem exceção não tratada. |
 
 ---
 
@@ -306,7 +329,7 @@ A matriz a seguir consolida a rastreabilidade bidirecional global entre os Objet
 | **OE1 — Padronizar e Unificar os Dados** | CAR-01, CAR-02, CAR-09 | RF01, RF02, RF03, RF04, RF19, RF20, RF22 | RNF01, RNF02, RNF03, RNF04 | CT-M1-01 a CT-M1-11 |
 | **OE2 — Aumentar a Eficiência Administrativo-Financeira** | CAR-03, CAR-04 | RF05, RF06, RF07, RF08, RF21 | RNF05, RNF06, RNF07, RNF08 | CT-M2-01 a CT-M2-09 |
 | **OE3 — Transparecer os Custos por Contrato** | CAR-05, CAR-06 | RF09, RF10, RF11, RF12 | RNF09, RNF10, RNF11, RNF12 | CT-M3-01 a CT-M3-08 |
-| **OE4 — Garantir Segurança e Governança de Dados** | CAR-07, CAR-08 | RF13, RF14, RF15, RF16, RF17, RF18 | RNF13, RNF14, RNF15, RNF16, RNF17 | CT-M4-01 a CT-M4-11 |
+| **OE4 — Garantir Segurança e Governança de Dados** | CAR-07, CAR-08 | RF13, RF14, RF15, RF16, RF17, RF18, RF23, RF24 | RNF13, RNF14, RNF15, RNF16, RNF17 | CT-M4-01 a CT-M4-13 | Transversal | — | — | — | RNF18, RNF19, RNF20 | CT-TRANS-01 a CT-TRANS-03 |
 
 ---
 
@@ -318,8 +341,6 @@ A matriz a seguir consolida a rastreabilidade bidirecional global entre os Objet
 | `2.0` | 22/09/2026 | Elaboração da especificação de requisitos por módulo: Módulo 1 / OE1 (Gustavo Bonifácio), Módulo 2 / OE2 (Eric Araújo), Módulo 3 / OE3 (Giovana Ferreira) e Módulo 4 / OE4 (Matheus Saraiva). | Gustavo Bonifácio, Eric Araújo, Giovana Ferreira, Matheus Saraiva | Matheus Ribeiro Szervinsk |
 | `2.1` | 22/09/2026 | Revisão geral e unificação técnica em documento único: ajuste de abstração de escopo em OE1 e OE2, eliminação de duplicidades, formatação dos critérios de aceitação em BDD e sequenciamento de regras de negócio (RN01 a RN19). | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `2.2` | 22/09/2026 | Refinamento conceitual: reestruturação dos 16 RFs como ações do usuário com valor de negócio, migração de rotinas e cálculos para regras de negócio (RN), ajuste do RF07 (reembolso), substituição de alertas por admonitions Material (!!! note) e renderização dos diagramas em imagens de alta definição com suporte a zoom interativo (GLightbox). | Matheus Ribeiro Szervinsk | Lucas Zanetti |
-| `2.4` | 24/09/2026 | Vinculação com o artefato de Priorização e MVP (escala 1 a 4 associada ao MoSCoW) e rastreabilidade com a Ata da Reunião 05. | Matheus Ribeiro Szervinsk | Lucas Zanetti |
-| `2.5` | 28/09/2026 | Ajustes decorrentes da avaliação por pares (equipe Guerreiros do Backlog): nota sobre as classificações URPS+ e Sommerville (8.1), novos RF17 a RF21 e RNF17, refinamento de RNF01 e RNF04 e atualização das matrizes de rastreabilidade e casos de teste (ver [Feedback dos Requisitos](feedback.md)). | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |
-| `2.6` | 29/09/2026 | Atualização e alinhamento dos diagramas visuais (Pirâmide de Abstração, Mapeamento de Necessidades e Grafo de Interdependência) com a totalidade dos 21 RFs e 17 RNFs da especificação refinada. | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
-| `2.7` | 30/09/2026 | Inclusão do RF22 (Exportar relatório de presenças homologadas) na CAR-09 e caso de teste CT-M1-11; esclarecimento sobre os RNFs transversais na Pirâmide de Abstração; atualização da matriz-síntese de rastreabilidade. | Matheus Ribeiro Szervinsk | Lucas Zanetti |
-| `2.8` | 30/09/2026 | Conversão do Mapeamento de Necessidades do Cliente (8.2.2) em tabela analítica completa correlacionando dores (Ishikawa e Rich Picture) com 22 RFs e 17 RNFs; atualização dos diagramas de rastreabilidade (8.2.1 e 8.2.3) com a integralidade dos 22 Requisitos Funcionais. | Matheus Ribeiro Szervinsk | Eric Araújo |
+| `2.3` | 22/09/2026 | Atomização dos requisitos funcionais: simplificação rigorosa dos títulos dos 16 RFs como ações únicas do usuário (Verbo + Objeto), remoção de detalhes operacionais de escopo e conjunções compostas conforme revisão de pares. | Matheus Ribeiro Szervinsk | Lucas Zanetti |
+| `2.4` | 28/09/2026 | Ajustes decorrentes da avaliação por pares (equipe Guerreiros do Backlog): nota sobre as classificações URPS+ e Sommerville (8.1), refinamento do RF04, novos RF17 a RF22 e RNF17, refinamento de RNF01 e RNF04, reescrita das RN06 e RN18 e atualização das matrizes de rastreabilidade e casos de teste (ver [Feedback dos Requisitos](feedback.md)). | Matheus Saraiva Camargo | Matheus Szervinsk |
+| `2.5` | [data de hoje] | Expansão do Módulo 4 (OE4) com RF23 e RF24 (política de senha e bloqueio por tentativas falhas), RN20 e RN21, enriquecimento de filtros do RF15, e inclusão da seção de Requisitos Não Funcionais Transversais (RNF18 a RNF20: disponibilidade, acessibilidade e integridade de API). | Matheus Saraiva Camargo | Matheus Ribeiro |
