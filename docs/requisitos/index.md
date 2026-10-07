@@ -53,7 +53,7 @@ O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução
   <a href="https://miro.com/app/board/uXjVEd_ZDOg=/?share_link_id=457510525802"
      target="_blank"
      rel="noopener noreferrer">
-    🔍 Abrir Diagrama Completo no Miro (Interativo) ↗
+    🔍 Abrir Piramide Completo no Miro (Interativo) ↗
   </a>
     &nbsp;|&nbsp;
   <a href="../assets/images/requisitos/piramide_abstracao.jpg"
@@ -63,7 +63,7 @@ O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução
   </a>
     &nbsp;|&nbsp;
   <a href="../assets/images/piramide_abstracao_vetorizada.svg" download="piramide_abstracao_vetorizada.svg">
-    📥 Baixar Diagrama em Vetor (SVG Alta Resolução) ↗
+    📥 Baixar Piramide em Vetor (SVG Alta Resolução) ↗
 </a>
 </p>
 
