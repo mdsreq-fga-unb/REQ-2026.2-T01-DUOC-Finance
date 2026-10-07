@@ -61,6 +61,10 @@ O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução
      rel="noopener noreferrer">
     📃 Ver Pirâmide de Abstração em PNG ↗
   </a>
+    &nbsp;|&nbsp;
+  <a href="../assets/images/piramide_abstracao_vetorizada.svg" download="piramide_abstracao_vetorizada.svg">
+    📥 Baixar Diagrama em Vetor (SVG Alta Resolução) ↗
+</a>
 </p>
 
 !!! note "Rastreabilidade dos Requisitos Não Funcionais na Pirâmide de Abstração"
