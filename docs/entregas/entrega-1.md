@@ -98,7 +98,6 @@ A distribuição dos tópicos abordados na apresentação audiovisual garantiu a
 | **Matheus Saraiva Camargo** | 241011475 | Arquiteto de Software e Banco de Dados | Justificativa da Stack Tecnológica (Next.js/React, Supabase, Tailwind, Vercel), Viabilidade do MVP, Benchmark de Competidores e Arquitetura de Dados. |
 | **Gustavo** | 241025659 | Gestão de Qualidade (QA) e Testes | Gestão da Qualidade, Desafios do Projeto (LGPD e Governança), Benefícios Esperados, Retrospectiva da U1 e Próximos Passos para a U2. |
 | **Giovana Ferreira** | 231034707 | Engenheira Frontend e Designer UI/UX | Concepção e Racional Sistêmico do Rich Picture, Identificação de Fronteiras e Fluxos Informacionais, Análise de Intervenção Social e Efeitos Emergentes. |
-| **Carlos Gabriel** | 242015450 | Engenheiro Frontend e Designer UI/UX | Segmentação de Clientes, Perfis de Usuário (IHC) em Campo e Escritório, Diagnóstico do Problema Central e Diagrama de Causa e Efeito (Ishikawa, 4M adaptado). |
 | **Paulo Nery** | 221008740 | Engenheiro Backend | Engenharia de Requisitos (Técnicas e Fases RAD), Rito Formal de Validação Sociotécnica no Figma (DoR/DoD), Matriz de Comunicação e Cronograma Semestral. |
 
 ---

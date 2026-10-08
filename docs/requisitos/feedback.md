@@ -1,10 +1,10 @@
-# Capítulo 8: Feedback dos Requisitos — Avaliação em Pares
+# Capítulo 9: Feedback dos Requisitos — Avaliação em Pares
 
 Este documento formaliza o registro, a deliberação crítica, o rastreamento das decisões tomadas e o **comparativo rastreável "Antes vs. Depois"** elaborado pela equipe **Cascata Ágil** a partir do relatório de avaliação por pares da equipe **Guerreiros do Backlog** sobre o lote de Requisitos de Software do sistema **DUOC Finance**.
 
 ---
 
-## 8.1 Visão Geral e Critérios Metodológicos
+## 9.1 Visão Geral e Critérios Metodológicos
 
 !!! info "Dados da Avaliação por Pares"
     - **Equipe Avaliadora:** Guerreiros do Backlog  

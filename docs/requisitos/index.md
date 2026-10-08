@@ -25,6 +25,7 @@ Para assegurar o rigor analítico, a testabilidade e a rastreabilidade exigidos 
 | **Módulo 3** | [**OE3 — Inteligência de Custos por Contrato**](#oe3-inteligencia-de-custos-por-contrato) | CAR-05, CAR-06 | RF09 a RF12, RF30 e RF31 | RNF09 a RNF12 | CT-M3-01 a CT-M3-10 |
 | **Módulo 4** | [**OE4 — Governança, Segurança e Rastreabilidade**](#oe4-governanca-seguranca-e-rastreabilidade) | CAR-07, CAR-08 | RF13 a RF18, RF23 e RF24 | RNF13 a RNF17 | CT-M4-01 a CT-M4-13 |
 | **Transversal** | [**Requisitos de plataforma não vinculados a um único OE**](#requisitos-nao-funcionais-transversais) | — | — | RNF18 a RNF20 | CT-TRANS-01 a CT-TRANS-03 |
+
 ---
 
 ## 8.2 Rastreabilidade Estratégica e Diagramas Visuais
@@ -50,78 +51,25 @@ O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução
   <a href="https://miro.com/app/board/uXjVEd_ZDOg=/?share_link_id=457510525802"
      target="_blank"
      rel="noopener noreferrer">
-    🔍 Abrir Piramide Completo no Miro (Interativo) ↗
+    Abrir Piramide Completo no Miro (Interativo) ↗
   </a>
     &nbsp;|&nbsp;
   <a href="../assets/images/requisitos/piramide_abstracao.jpg"
      target="_blank"
      rel="noopener noreferrer">
-    📃 Ver Pirâmide de Abstração em JPG ↗
+    Ver Pirâmide de Abstração em JPG ↗
   </a>
     &nbsp;|&nbsp;
   <a href="../assets/images/piramide_abstracao_vetorizada.svg" 
       target="_blank" 
       rel="noopener noreferrer" 
       download="piramide_abstracao_vetorizada.svg">
-    📥 Baixar Piramide em Vetor (SVG Alta Resolução) ↗
+    Baixar Piramide em Vetor (SVG Alta Resolução) ↗
 </a>
 </p>
 
 !!! note "Rastreabilidade dos Requisitos Não Funcionais na Pirâmide de Abstração"
     A árvore hierárquica da **Figura 8.1** e o grafo estrutural acima formalizam a descendência vertical estrita do escopo observável e das ações do usuário (**Objetivo Geral ➔ Objetivos Específicos ➔ Características ➔ Requisitos Funcionais**). Os **Requisitos Não Funcionais (RNFs)**, por constituírem atributos de qualidade sistêmica e restrições arquiteturais transversais (*cross-cutting concerns*), não figuram como folhas exclusivas de uma única funcionalidade, mas qualificam as características e o produto como um todo (por exemplo, segurança e criptografia no RNF03 e RNF14, usabilidade no RNF04 e confiabilidade no RNF06). A amarração individualizada e auditável de cada um dos 17 RNFs às CARs e às dores operacionais é detalhada estruturadamente na **Tabela 8.2 (Mapeamento de Necessidades do Cliente)** e na **Tabela 8.3 (Matriz-Síntese Geral de Rastreabilidade)**.
-
----
-
-### 8.2.2 Mapeamento de Necessidades do Cliente (Dores Ishikawa/Rich Picture → Requisitos)
-
-Este diagrama conecta diretamente as dores reais identificadas no **Diagrama de Causa e Efeito (Ishikawa)** e as tensões operacionais do **Rich Picture** (TR-01 a TR-04) aos requisitos projetados para superá-las.
-
-<div class="cronograma-diagram-box" markdown="1">
-
-![Mapeamento de Necessidades do Cliente](../assets/images/requisitos/mapeamento_necessidades_duoc_light.png#only-light){ .img-light-mode }
-![Mapeamento de Necessidades do Cliente](../assets/images/requisitos/mapeamento_necessidades_duoc_dark.png#only-dark){ .img-dark-mode }
-
-<p align="center"><small><em>Figura 8.2: Mapeamento de Necessidades do Cliente — Dores do Ishikawa e Rich Picture para Requisitos (Clique na imagem para abrir com zoom interativo).</em></small></p>
-
-</div>
-
----
-
-### 8.2.3 Grafo de Interdependência e Facilidades dos Requisitos
-
-O grafo abaixo evidencia como os fluxos funcionais se habilitam mutuamente ao longo do ciclo operacional da DUOC: a segurança (RBAC) protege os cadastros e as rotinas financeiras; os apontamentos de campo alimentam a conferência de fechamento; e os dados homologados sustentam a apropriação de custos e a auditoria corporativa.
-
-<div class="miro-diagram-box">
-  <iframe
-    src="https://miro.com/app/live-embed/uXjVEd_B_Tw=/?focusWidget=3458764686278573389&embedMode=view_only_without_ui&embedId=548153869367"
-    title="Grafo de Interdependência — Rastreabilidade"
-    frameborder="0"
-    scrolling="no"
-    allow="fullscreen; clipboard-read; clipboard-write"
-    allowfullscreen>
-  </iframe>
-</div>
-
-<p align="center">
-  <a href="https://miro.com/app/board/uXjVEd_B_Tw=/?share_link_id=934134158353"
-     target="_blank"
-     rel="noopener noreferrer">
-    🔍 Abrir Grafo Completo no Miro (Interativo) ↗
-  </a>
-    &nbsp;|&nbsp;
-  <a href="../assets/images/requisitos/grafo_interdependencia.jpg"
-     target="_blank"
-     rel="noopener noreferrer">
-    📃 Ver Grafo de Interdependência em JPG ↗
-  </a>
-    &nbsp;|&nbsp;
-  <a href="../assets/images/grafo_interdependencia_vetorizado.svg" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     download="grafo_interdependencia_vetorizado.svg">
-    📥 Baixar Grafo em Vetor (SVG Alta Resolução) ↗
-  </a>
-</p>
 
 ---
 
