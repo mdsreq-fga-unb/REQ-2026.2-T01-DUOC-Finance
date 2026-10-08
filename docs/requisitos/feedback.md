@@ -117,85 +117,81 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 #### 1. Inclusão dos Requisitos de Gestão de Presenças na CAR-09 (`FB-02`)
 
 === "Antes do Ajuste (Versão Preliminar)"
-    ```markdown
-    # A CAR-09 figurava na visão de produto, mas não possuía nenhum requisito associado na especificação de requisitos:
+    A CAR-09 figurava na visão de produto, mas não possuía nenhum requisito associado na especificação de requisitos:
+
     | Módulo | Objetivo Específico | CARs Cobertas | Requisitos Funcionais |
     | :---: | :--- | :---: | :--- |
     | Módulo 1 | OE1 — Padronização de Dados | CAR-01, CAR-02, CAR-09 | RF01, RF02, RF03, RF04 |
-    # [Lacuna]: Sem RF para CAR-09; sem critério de integração com ponto eletrônico.
-    ```
+
+    !!! warning "Lacuna identificada"
+        Sem RF para CAR-09 e sem critério de integração com ponto eletrônico.
 
 === "Depois do Ajuste (Especificação Refinada Vigente)"
-    ```markdown
-    | Código | Requisito (Ação do Usuário) | CAR | Critérios de Aceitação e Condições Operacionais |
+    | Código | Requisito (Ação do Usuário) | CAR | Critério de Aceitação (BDD) |
     | :---: | :--- | :---: | :--- |
-    | **RF20** | **Importar presenças homologadas** | CAR-09 | **Entradas:**<br>• Competência mensal e contratos selecionados pelo analista financeiro.<br>**Regras condicionantes:**<br>• São importadas apenas as presenças homologadas no sistema *Shifton*.<br>• Os dados de origem no *Shifton* não são alterados pela importação.<br>**Comportamento esperado:**<br>• Os registros de presença são disponibilizados por colaborador e contrato na competência selecionada, prontos para conferência. |
-    | **RF22** | **Exportar relatório de presenças homologadas** | CAR-09 | **Entradas:**<br>• Competência de referência.<br>• Escopo do relatório (individual por colaborador ou consolidado), solicitado pelo colaborador ou pelo analista de RH.<br>**Regras condicionantes:**<br>• O relatório compila os registros importados do *Shifton* cruzados com os contratos do período.<br>**Comportamento esperado:**<br>• É disponibilizado um arquivo estruturado (PDF/CSV) com o extrato de horas e diárias para conferência do trabalhador e rotinas do RH. |
-    ```
+    | **RF20** | **Importar presenças homologadas** | CAR-09 | **Dado** que o analista financeiro selecionou uma competência mensal e os contratos correspondentes,<br>**Quando** solicitar a importação das presenças homologadas registradas no sistema *Shifton*,<br>**Então** o sistema deve consumir os registros de presença por colaborador e contrato e disponibilizá-los na competência selecionada para conferência, sem alterar os dados de origem no *Shifton*. |
+    | **RF22** | **Exportar relatório de presenças homologadas** | CAR-09 | **Dado** que o colaborador ou o analista de RH necessita de comprovação individual ou consolidada de frequência,<br>**Quando** solicitar a geração do espelho ou relatório de presenças homologadas da competência,<br>**Então** o sistema deve compilar os registros importados do *Shifton* cruzados com os contratos do período e disponibilizar o arquivo estruturado (PDF/CSV) com o extrato de horas e diárias para conferência do trabalhador e rotinas do RH. |
 
 ---
 
 #### 2. Inclusão da Consulta de Apontamentos de Campo na CAR-02 (`FB-03`)
 
 === "Antes do Ajuste (Versão Preliminar)"
-    ```markdown
-    # O Módulo 1 possuía apenas o envio do formulário, sem qualquer mecanismo de retorno:
+    O Módulo 1 possuía apenas o envio do formulário, sem qualquer mecanismo de retorno:
+
     | Código | Requisito Funcional | CAR | Critério |
     | :---: | :--- | :---: | :--- |
     | RF04 | Submeter apontamento de campo | CAR-02 | Usuário preenche e envia o formulário de campo. |
-    # [Lacuna]: Colaborador não conseguia consultar status (pendente/homologado/rejeitado) nem histórico.
-    ```
+
+    !!! warning "Lacuna identificada"
+        O colaborador não conseguia consultar o status (pendente, homologado ou rejeitado) nem o histórico.
 
 === "Depois do Ajuste (Especificação Refinada Vigente)"
-    ```markdown
-    | Código | Requisito (Ação do Usuário) | CAR | Critérios de Aceitação e Condições Operacionais |
+    | Código | Requisito (Ação do Usuário) | CAR | Critério de Aceitação (BDD) |
     | :---: | :--- | :---: | :--- |
-    | **RF19** | **Consultar apontamentos registrados** | CAR-02 | **Entradas:**<br>• Acesso do colaborador de campo autenticado à listagem de seus apontamentos no aplicativo móvel.<br>**Regras condicionantes:**<br>• São exibidos somente os apontamentos do próprio colaborador (RN16).<br>**Comportamento esperado:**<br>• A listagem apresenta data, contrato e status de cada apontamento ("Pendente de Homologação", "Homologado" ou "Rejeitado").<br>• O colaborador consegue consultar o histórico de cada registro. |
-    ```
+    | **RF19** | **Consultar apontamentos registrados** | CAR-02 | **Dado** que o colaborador de campo já submeteu apontamentos pelo aplicativo móvel,<br>**Quando** acessar a listagem dos seus apontamentos,<br>**Então** o sistema deve exibir somente os apontamentos do próprio colaborador (RN16), com data, contrato e status ("Pendente de Homologação", "Homologado" ou "Rejeitado"), permitindo consultar o histórico de cada registro. |
 
 ---
 
 #### 3. Inclusão de Recuperação de Senha e Logout Manual na CAR-07 (`FB-04` e `FB-05`)
 
 === "Antes do Ajuste (Versão Preliminar)"
-    ```markdown
-    # CAR-07 possuía apenas o login com senha e gerenciamento de perfis:
+    CAR-07 possuía apenas o login com senha e o gerenciamento de perfis:
+
     | Código | Requisito Funcional | CAR |
     | :---: | :--- | :---: |
     | RF13 | Efetuar login no sistema | CAR-07 |
     | RF14 | Gerenciar perfis de acesso | CAR-07 |
-    # [Lacuna 1]: Usuário bloqueado por esquecimento dependia de reset manual de banco pela TI.
-    # [Lacuna 2]: Dispositivo compartilhado em canteiro ficava conectado até expiração de 8 horas.
-    ```
+
+    !!! warning "Lacunas identificadas"
+        - Usuário bloqueado por esquecimento dependia de reset manual de banco pela TI.
+        - Dispositivo compartilhado em canteiro ficava conectado até a expiração de 8 horas.
 
 === "Depois do Ajuste (Especificação Refinada Vigente)"
-    ```markdown
-    | Código | Requisito (Ação do Usuário) | CAR | Critérios de Aceitação e Condições Operacionais |
+    | Código | Requisito (Ação do Usuário) | CAR | Critério de Aceitação (BDD) |
     | :---: | :--- | :---: | :--- |
-    | **RF17** | **Recuperar credenciais de acesso** | CAR-07 | **Entradas:**<br>• E-mail corporativo cadastrado, informado pelo colaborador que esqueceu a senha.<br>**Regras condicionantes:**<br>• O link de redefinição é de uso único e válido por 30 minutos.<br>• A resposta não revela se o e-mail existe ou não na base (evitando enumeração de usuários).<br>**Comportamento esperado:**<br>• Um link de redefinição de senha é enviado ao e-mail informado. |
-    | **RF18** | **Encerrar sessão manualmente** | CAR-07 | **Entradas:**<br>• Acionamento da opção de encerramento de sessão (*logout*) por usuário autenticado.<br>**Regras condicionantes:**<br>• O token de acesso atual é invalidado imediatamente.<br>**Comportamento esperado:**<br>• O usuário é redirecionado para a tela de login.<br>• O token invalidado não permite novos acessos. |
-    ```
+    | **RF17** | **Recuperar credenciais de acesso** | CAR-07 | **Dado** que um usuário cadastrado esqueceu sua senha de acesso,<br>**Quando** solicitar a recuperação informando seu e-mail corporativo,<br>**Então** o sistema deve emitir um link temporário com token de uso único e validade de 30 minutos (RN17), sem revelar explicitamente se o e-mail informado consta ou não na base de dados. |
+    | **RF18** | **Encerrar sessão manualmente** | CAR-07 | **Dado** que um usuário autenticado decide encerrar suas atividades no sistema,<br>**Quando** acionar a opção de encerramento de sessão (*logout*),<br>**Então** o sistema deve invalidar imediatamente o token de autenticação e redirecionar o usuário para a tela pública de login. |
 
 ---
 
 #### 4. Inclusão do Estorno Financeiro na CAR-03 (`FB-09`)
 
 === "Antes do Ajuste (Versão Preliminar)"
-    ```markdown
-    # O fechamento financeiro cobria apenas a prévia e a homologação:
+    O fechamento financeiro cobria apenas a prévia e a homologação:
+
     | Código | Requisito Funcional | CAR |
     | :---: | :--- | :---: |
     | RF05 | Solicitar prévia de fechamento | CAR-03 |
     | RF06 | Homologar fechamento financeiro | CAR-03 |
-    # [Lacuna]: O RNF08 previa regras para estornos, mas não havia RF que permitisse disparar o estorno.
-    ```
+
+    !!! warning "Lacuna identificada"
+        O RNF08 previa regras para estornos, mas não havia RF que permitisse disparar o estorno.
 
 === "Depois do Ajuste (Especificação Refinada Vigente)"
-    ```markdown
-    | Código | Requisito (Ação do Usuário) | CAR | Critérios de Aceitação e Condições Operacionais |
+    | Código | Requisito (Ação do Usuário) | CAR | Critério de Aceitação (BDD) |
     | :---: | :--- | :---: | :--- |
-    | **RF21** | **Estornar fechamento financeiro** | CAR-03 | **Entradas:**<br>• Competência com fechamento financeiro homologado selecionada pelo gestor financeiro.<br>• Justificativa formal da inconsistência identificada.<br>**Regras condicionantes:**<br>• O estorno exige justificativa formal obrigatória (RN08, RNF08).<br>• O fechamento original não é apagado nem sobrescrito.<br>**Comportamento esperado:**<br>• A competência é reaberta para retificação.<br>• O fechamento original é preservado no histórico.<br>• O estorno é registrado na trilha de auditoria com autor, justificativa e data/hora. |
-    ```
+    | **RF21** | **Estornar fechamento financeiro** | CAR-03 | **Dado** que um gestor financeiro identifica erro material após a homologação de um lote financeiro,<br>**Quando** solicitar o estorno do fechamento informando justificativa textual obrigatória (RN08),<br>**Então** o sistema deve reverter os lançamentos para o estado "Pendente de Homologação", registrar a justificativa e o autor na trilha de auditoria e manter o extrato revertido arquivado como histórico contábil imutável. |
 
 ---
 
@@ -204,75 +200,74 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 #### 1. Reformulação do Critério Mensurável do RNF04 (`FB-06`)
 
 === "Antes do Ajuste (Versão Preliminar)"
-    ```markdown
     | Código | Requisito Verificável | Critério Mensurável Anterior |
     | :---: | :--- | :--- |
     | RNF04 | Garantir usabilidade no RVT de campo | O aplicativo móvel deve ser fácil de usar por qualquer técnico após treinamento inicial de 15 minutos ministrado pela equipe. |
-    # [Problema]: Impossível de testar com precisão; dependia de tempo de treinamento com variabilidade de instrutor.
-    ```
+
+    !!! warning "Problema identificado"
+        Critério difícil de testar com precisão, pois dependia de um tempo de treinamento sujeito à variabilidade do instrutor.
 
 === "Depois do Ajuste (Especificação Refinada Vigente)"
-    ```markdown
     | Código | Requisito Verificável | URPS+ | Sommerville | Critério Mensurável Refatorado |
     | :---: | :--- | :--- | :--- | :--- |
     | **RNF04** | **Garantir usabilidade e agilidade no preenchimento de apontamentos de campo** | Usability (Usabilidade) | Requisito do Produto — Usabilidade | O preenchimento completo de um apontamento diário de campo deve ser concluído por usuários em primeiro uso, sem suporte externo ou treinamento prévio, em no máximo 5 passos/telas, com taxa de conclusão bem-sucedida ≥ 90% em teste de usabilidade. |
-    ```
 
 ---
 
 #### 2. Reformulação de Capacidade e Alerta do RNF01 (`FB-07`)
 
 === "Antes do Ajuste (Versão Preliminar)"
-    ```markdown
     | Código | Requisito Verificável | Critério Mensurável Anterior |
     | :---: | :--- | :--- |
     | RNF01 | Operação offline no canteiro | O aplicativo móvel deve armazenar localmente até 100 apontamentos e fotos sem sinal de rede. |
-    # [Problema]: "Até 100" estabelecia teto, sem garantia de mínimo nem aviso ao usuário antes de estourar a memória.
-    ```
+
+    !!! warning "Problema identificado"
+        "Até 100" estabelecia um teto, sem garantir um mínimo nem avisar o usuário antes de esgotar o armazenamento.
 
 === "Depois do Ajuste (Especificação Refinada Vigente)"
-    ```markdown
     | Código | Requisito Verificável | URPS+ | Sommerville | Critério Mensurável Refatorado |
     | :---: | :--- | :--- | :--- | :--- |
     | **RNF01** | **Operar em modo *offline* para coleta de dados em canteiros sem conectividade** | Reliability (Confiabilidade) | Requisito do Produto — Confiabilidade | O aplicativo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. |
-    ```
 
 ---
 
 #### 3. Criação do Requisito de Backup Automatizado — RNF17 (`FB-08`)
 
 === "Antes do Ajuste (Versão Preliminar)"
-    ```markdown
-    # A especificação não possuía nenhum requisito de backup ou tolerância a falhas físicas:
+    A especificação não possuía nenhum requisito de backup ou tolerância a falhas físicas:
+
+    | Código | Requisito | URPS+ | Critério anterior |
+    | :---: | :--- | :--- | :--- |
     | RNF15 | Atomicidade na gravação de logs | Reliability | Gravação síncrona na mesma transação. |
     | RNF16 | Retenção de logs por 5 anos | Supportability | Não deletar registros com menos de 1825 dias. |
-    # [Lacuna]: Sem política de rotinas de backup, janela de RPO ou tempo de restauração (RTO).
-    ```
+
+    !!! warning "Lacuna identificada"
+        Não havia política de rotinas de backup, janela de RPO ou tempo de restauração (RTO).
 
 === "Depois do Ajuste (Especificação Refinada Vigente)"
-    ```markdown
     | Código | Requisito Verificável | URPS+ | Sommerville | Critério Mensurável Refatorado |
     | :---: | :--- | :--- | :--- | :--- |
     | **RNF17** | **Garantir tolerância a falhas e recuperação de dados via rotinas automatizadas de backup** | Reliability (Confiabilidade) | Requisito do Produto — Confiabilidade | O sistema deve realizar backup diário automático completo de todas as bases de dados e arquivos anexados às 02h00 UTC, com teste periódico automatizado de integridade e capacidade comprovada de restauração em ambiente segregado em até 4 horas, tolerância máxima de perda de dados (RPO) de 24 horas e retenção histórica por 30 dias. |
-    ```
 
 ---
 
 ### 8.4.4 Detalhamento de Transformações nas Regras de Negócio (`FB-10`)
 
 === "Antes do Ajuste (Versão Preliminar)"
-    ```markdown
-    # Regras misturavam restrição de negócio com implementação tecnológica e código SQL:
-    RN06 — Formatos de Arquivo: O sistema deve aceitar apenas uploads em formatos .pdf, .png e .jpeg com tamanho máximo de até 5MB por comprovante.
-    RN18 — Proibição de Comandos SQL: O banco de dados deve rejeitar compulsoriamente comandos SQL dos tipos UPDATE e DELETE executados contra a tabela de trilha de auditoria.
-    ```
+    !!! warning "Estado anterior"
+        As regras misturavam restrição de negócio com implementação tecnológica e código SQL:
+
+        **RN06 — Formatos de Arquivo:** O sistema deve aceitar apenas uploads em formatos `.pdf`, `.png` e `.jpeg`, com tamanho máximo de até 5 MB por comprovante.
+
+        **RN18 — Proibição de Comandos SQL:** O banco de dados deve rejeitar compulsoriamente comandos SQL dos tipos `UPDATE` e `DELETE` executados contra a tabela de trilha de auditoria.
 
 === "Depois do Ajuste (Especificação Refinada Vigente)"
-    ```markdown
-    # Regras reescritas no nível conceitual e de negócio, delegando tecnologia aos RNFs correspondentes:
-    RN06 — Comprovação Fiscal Obrigatória: O sistema bloqueia a aprovação e o repasse de qualquer reembolso de despesa de campo que não possua pelo menos um documento comprobatório anexado, validado e legível, conforme parâmetros técnicos estabelecidos no RNF07.
-    RN18 — Imutabilidade da Trilha de Auditoria: Os registros da trilha de auditoria são estritamente imutáveis (*append-only*), sendo vedada qualquer operação de edição, atualização ou exclusão lógica ou física por qualquer usuário ou perfil do sistema (RNF15, RNF16).
-    ```
+    !!! success "Estado refinado"
+        As regras foram reescritas no nível conceitual e de negócio, delegando os detalhes tecnológicos aos RNFs correspondentes:
+
+        **RN06 — Comprovação Fiscal Obrigatória:** O sistema bloqueia a aprovação e o repasse de qualquer reembolso de despesa de campo que não possua pelo menos um documento comprobatório anexado, validado e legível, conforme parâmetros técnicos estabelecidos no RNF07.
+
+        **RN18 — Imutabilidade da Trilha de Auditoria:** Os registros da trilha de auditoria são estritamente imutáveis (*append-only*), sendo vedada qualquer operação de edição, atualização ou exclusão lógica ou física por qualquer usuário ou perfil do sistema (RNF15, RNF16).
 
 ---
 
@@ -311,5 +306,5 @@ Mapeamento consolidado das seções e artefatos modificados em decorrência das 
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 28/09/2026 | Criação da estrutura e matriz deliberativa de feedbacks da avaliação em pares (Issue #77). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `1.1` | 28/09/2026 | Registro das deliberações FB-01 a FB-11, preenchimento do painel quantitativo, da rastreabilidade de impacto e do checklist de validação. | Matheus Saraiva Camargo | Matheus Szervinsk |
-| `1.2` | 06/10/2026 | Consistência terminológica com a remoção do BDD da especificação de RFs (feedback docente da Unidade 2): diretrizes, deliberações FB-02/FB-11, comparativo "Antes vs. Depois" e checklist passam a referenciar critérios de aceitação estruturados em tópicos. | Paulo Nery | |
 | `2.0` | 30/09/2026 | Implementação da **Matriz Rastreável de Transformação dos Requisitos ("Antes vs. Depois")** atendendo ao feedback docente; atualização do sistema de ponto externo para *Shifton*; expansão da CAR-09 com RF20 e RF22 (`CT-M1-10` e `CT-M1-11`); sincronização com as deliberações da Reunião 05 e especificações refinadas do Capítulo 8. | Matheus Ribeiro Szervinsk | Eric Araújo e Lucas Zanetti |
+| `2.1` | 07/10/2026 | Correção da renderização dos comparativos "Antes vs. Depois" nas abas da seção 8.4, com tabelas Markdown nativas e admonitions para as regras de negócio. | Equipe Cascata Ágil | — |
