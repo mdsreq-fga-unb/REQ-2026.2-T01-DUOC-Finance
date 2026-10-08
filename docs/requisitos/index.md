@@ -35,14 +35,40 @@ A rastreabilidade entre a estratégia corporativa da DUOC e a engenharia de soft
 
 O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução: do Objetivo Geral (OG) às metas táticas (OEs), descendo para as capacidades do sistema (CARs) e derivando nos Requisitos Funcionais e Não Funcionais executáveis.
 
-<div class="cronograma-diagram-box" markdown="1">
-
-![Pirâmide de Abstração — Rastreabilidade Vertical](../assets/images/requisitos/piramide_abstracao_requisitos_light.png#only-light){ .img-light-mode }
-![Pirâmide de Abstração — Rastreabilidade Vertical](../assets/images/requisitos/piramide_abstracao_requisitos_dark.png#only-dark){ .img-dark-mode }
-
-<p align="center"><small><em>Figura 8.1: Pirâmide de Abstração e Rastreabilidade Vertical (Clique na imagem para abrir com zoom interativo).</em></small></p>
-
+<div  class="miro-diagram-box">
+  <iframe
+    src="https://miro.com/app/live-embed/uXjVEd_ZDOg=/?focusWidget=3458764686279042166&embedMode=view_only_without_ui&embedId=760334862252"
+    title="Pirâmide de Abstração — Rastreabilidade Vertical"
+    frameborder="0"
+    scrolling="no"
+    allow="fullscreen; clipboard-read; clipboard-write"
+    allowfullscreen>
+  </iframe>
 </div>
+
+<p align="center">
+  <a href="https://miro.com/app/board/uXjVEd_ZDOg=/?share_link_id=457510525802"
+     target="_blank"
+     rel="noopener noreferrer">
+    🔍 Abrir Piramide Completo no Miro (Interativo) ↗
+  </a>
+    &nbsp;|&nbsp;
+  <a href="../assets/images/requisitos/piramide_abstracao.jpg"
+     target="_blank"
+     rel="noopener noreferrer">
+    📃 Ver Pirâmide de Abstração em JPG ↗
+  </a>
+    &nbsp;|&nbsp;
+  <a href="../assets/images/piramide_abstracao_vetorizada.svg" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      download="piramide_abstracao_vetorizada.svg">
+    📥 Baixar Piramide em Vetor (SVG Alta Resolução) ↗
+</a>
+</p>
+
+!!! note "Rastreabilidade dos Requisitos Não Funcionais na Pirâmide de Abstração"
+    A árvore hierárquica da **Figura 8.1** e o grafo estrutural acima formalizam a descendência vertical estrita do escopo observável e das ações do usuário (**Objetivo Geral ➔ Objetivos Específicos ➔ Características ➔ Requisitos Funcionais**). Os **Requisitos Não Funcionais (RNFs)**, por constituírem atributos de qualidade sistêmica e restrições arquiteturais transversais (*cross-cutting concerns*), não figuram como folhas exclusivas de uma única funcionalidade, mas qualificam as características e o produto como um todo (por exemplo, segurança e criptografia no RNF03 e RNF14, usabilidade no RNF04 e confiabilidade no RNF06). A amarração individualizada e auditável de cada um dos 17 RNFs às CARs e às dores operacionais é detalhada estruturadamente na **Tabela 8.2 (Mapeamento de Necessidades do Cliente)** e na **Tabela 8.3 (Matriz-Síntese Geral de Rastreabilidade)**.
 
 ---
 
@@ -65,14 +91,37 @@ Este diagrama conecta diretamente as dores reais identificadas no **Diagrama de 
 
 O grafo abaixo evidencia como os fluxos funcionais se habilitam mutuamente ao longo do ciclo operacional da DUOC: a segurança (RBAC) protege os cadastros e as rotinas financeiras; os apontamentos de campo alimentam a conferência de fechamento; e os dados homologados sustentam a apropriação de custos e a auditoria corporativa.
 
-<div class="cronograma-diagram-box" markdown="1">
-
-![Grafo de Interdependência e Facilidades dos Requisitos](../assets/images/requisitos/grafo_interdependencia_requisitos_light.png#only-light){ .img-light-mode }
-![Grafo de Interdependência e Facilidades dos Requisitos](../assets/images/requisitos/grafo_interdependencia_requisitos_dark.png#only-dark){ .img-dark-mode }
-
-<p align="center"><small><em>Figura 8.3: Grafo de Interdependência e Facilidades entre Requisitos (Clique na imagem para abrir com zoom interativo).</em></small></p>
-
+<div class="miro-diagram-box">
+  <iframe
+    src="https://miro.com/app/live-embed/uXjVEd_B_Tw=/?focusWidget=3458764686278573389&embedMode=view_only_without_ui&embedId=548153869367"
+    title="Grafo de Interdependência — Rastreabilidade"
+    frameborder="0"
+    scrolling="no"
+    allow="fullscreen; clipboard-read; clipboard-write"
+    allowfullscreen>
+  </iframe>
 </div>
+
+<p align="center">
+  <a href="https://miro.com/app/board/uXjVEd_B_Tw=/?share_link_id=934134158353"
+     target="_blank"
+     rel="noopener noreferrer">
+    🔍 Abrir Grafo Completo no Miro (Interativo) ↗
+  </a>
+    &nbsp;|&nbsp;
+  <a href="../assets/images/requisitos/grafo_interdependencia.jpg"
+     target="_blank"
+     rel="noopener noreferrer">
+    📃 Ver Grafo de Interdependência em JPG ↗
+  </a>
+    &nbsp;|&nbsp;
+  <a href="../assets/images/grafo_interdependencia_vetorizado.svg" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     download="grafo_interdependencia_vetorizado.svg">
+    📥 Baixar Grafo em Vetor (SVG Alta Resolução) ↗
+  </a>
+</p>
 
 ---
 
@@ -436,6 +485,12 @@ A indicação de MVP apresentada neste catálogo representa o recorte atual do p
 | `2.0` | 22/09/2026 | Elaboração da especificação de requisitos por módulo: Módulo 1 / OE1 (Gustavo Bonifácio), Módulo 2 / OE2 (Eric Araújo), Módulo 3 / OE3 (Giovana Ferreira) e Módulo 4 / OE4 (Matheus Saraiva). | Gustavo Bonifácio, Eric Araújo, Giovana Ferreira, Matheus Saraiva | Matheus Ribeiro Szervinsk |
 | `2.1` | 22/09/2026 | Revisão geral e unificação técnica em documento único: ajuste de abstração de escopo em OE1 e OE2, eliminação de duplicidades, formatação dos critérios de aceitação em BDD e sequenciamento de regras de negócio (RN01 a RN19). | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `2.2` | 22/09/2026 | Refinamento conceitual: reestruturação dos 16 RFs como ações do usuário com valor de negócio, migração de rotinas e cálculos para regras de negócio (RN), ajuste do RF07 (reembolso), substituição de alertas por admonitions Material (!!! note) e renderização dos diagramas em imagens de alta definição com suporte a zoom interativo (GLightbox). | Matheus Ribeiro Szervinsk | Lucas Zanetti |
+| `2.4` | 24/09/2026 | Vinculação com o artefato de Priorização e MVP (escala 1 a 4 associada ao MoSCoW) e rastreabilidade com a Ata da Reunião 05. | Matheus Ribeiro Szervinsk | Lucas Zanetti |
+| `2.5` | 28/09/2026 | Ajustes decorrentes da avaliação por pares (equipe Guerreiros do Backlog): nota sobre as classificações URPS+ e Sommerville (8.1), novos RF17 a RF21 e RNF17, refinamento de RNF01 e RNF04 e atualização das matrizes de rastreabilidade e casos de teste (ver [Feedback dos Requisitos](feedback.md)). | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |
+| `2.6` | 29/09/2026 | Atualização e alinhamento dos diagramas visuais (Pirâmide de Abstração, Mapeamento de Necessidades e Grafo de Interdependência) com a totalidade dos 21 RFs e 17 RNFs da especificação refinada. | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
+| `2.7` | 30/09/2026 | Inclusão do RF22 (Exportar relatório de presenças homologadas) na CAR-09 e caso de teste CT-M1-11; esclarecimento sobre os RNFs transversais na Pirâmide de Abstração; atualização da matriz-síntese de rastreabilidade. | Matheus Ribeiro Szervinsk | Lucas Zanetti |
+| `2.8` | 30/09/2026 | Conversão do Mapeamento de Necessidades do Cliente (8.2.2) em tabela analítica completa correlacionando dores (Ishikawa e Rich Picture) com 22 RFs e 17 RNFs; atualização dos diagramas de rastreabilidade (8.2.1 e 8.2.3) com a integralidade dos 22 Requisitos Funcionais. | Matheus Ribeiro Szervinsk | Eric Araújo |
+| `2.9` | 07/10/2026 | Adição de visualizadores interativos do Miro (iframes), links alternativos para arquivos vetoriais (SVG) e imagens em alta definição (JPG), e atualização completa das tabelas e diagramas de rastreabilidade. | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |
 | `2.3` | 22/09/2026 | Atomização dos requisitos funcionais: simplificação rigorosa dos títulos dos 16 RFs como ações únicas do usuário (Verbo + Objeto), remoção de detalhes operacionais de escopo e conjunções compostas conforme revisão de pares. | Matheus Ribeiro Szervinsk | Lucas Zanetti |
 | `2.4` | 28/09/2026 | Ajustes decorrentes da avaliação por pares (equipe Guerreiros do Backlog): nota sobre as classificações URPS+ e Sommerville (8.1), refinamento do RF04, novos RF17 a RF22 e RNF17, refinamento de RNF01 e RNF04, reescrita das RN06 e RN18 e atualização das matrizes de rastreabilidade e casos de teste (ver [Feedback dos Requisitos](feedback.md)). | Matheus Saraiva Camargo | Matheus Szervinsk |
 | `2.5` | 06/10/2026 | Expansão do Módulo 4 (OE4) com RF23 e RF24 (política de senha e bloqueio por tentativas falhas), RN20 e RN21, enriquecimento de filtros do RF15, e inclusão da seção de Requisitos Não Funcionais Transversais (RNF18 a RNF20: disponibilidade, acessibilidade e integridade de API). | Matheus Saraiva Camargo | Matheus Ribeiro |
