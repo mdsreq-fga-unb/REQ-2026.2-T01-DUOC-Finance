@@ -28,10 +28,12 @@ Os critérios adotados para balizar o julgamento de valor consideraram:
 
 ### 10.1.2 Critérios Quantitativos de Negócio
 
-1. **Frequência e Abrangência de Uso:** volume diário de transações impactadas (apontamentos de obra, reembolsos e adiantamentos contínuos versus rotinas quinzenais/mensais de fechamento).
-2. **Economia de Horas Administrativas (H/mês):** redução estimada de mais de 30 horas mensais gastas pela auxiliar-administradora na conferência manual de recibos físicos e conciliação de tabelas.
-3. **Prevenção de Perdas Monetárias:** eliminação de pagamentos duplicados, erros de arredondamento em comissões e reembolsos sem documento fiscal correspondente (tolerância zero a desvios, RNF06).
-4. **Redução do Tempo de Ciclo:** encurtamento do ciclo de liberação de pagamentos de 5 dias úteis de conferência manual para processamento supervisionado pelo sistema (RNF05).
+Os parâmetros quantitativos abaixo alimentam as dimensões **D2** e **D4** (e subsidiam **D1** e **D3**) da *Rubrica de Julgamento* apresentada ao final da Seção 10.1.3:
+
+1. **Frequência e Abrangência de Uso (D4):** volume diário de transações impactadas (apontamentos de obra, reembolsos e adiantamentos contínuos versus rotinas quinzenais/mensais de fechamento), classificado em frequência contínua, recorrente, ocasional ou eventual, e abrangência de perfis atendidos (campo, gestão, financeiro e administração).
+2. **Economia de Horas Administrativas — H/mês (D2):** redução estimada de mais de 30 horas mensais gastas pela auxiliar-administradora na conferência manual de recibos físicos e conciliação de tabelas (TR-02 e TR-03). Cada requisito é avaliado pela parcela dessa economia que viabiliza: ≥ 25% (≈ 8 h/mês), de 10% a 25% (≈ 3 a 8 h/mês) ou inferior a 10%.
+3. **Prevenção de Perdas Monetárias e Exposição de Risco (D3):** eliminação de pagamentos duplicados, erros de arredondamento em comissões e reembolsos sem documento fiscal correspondente (tolerância zero a desvios, RNF06), bem como a redução da exposição jurídico-trabalhista, fiscal e de privacidade (RN04, RN06, RN19, RN14 e RN16).
+4. **Redução do Tempo de Ciclo (D1):** encurtamento do ciclo de liberação de pagamentos de 5 dias úteis de conferência manual para processamento supervisionado pelo sistema (RNF05), mensurado sobre os gargalos TR-01 a TR-04.
 
 ### 10.1.3 Escala de Valor de Negócio e Associação ao MoSCoW
 
@@ -44,57 +46,30 @@ Para tornar a avaliação auditável e comparável, combinou-se o método **MoSC
 | **2** | **Could have**<br>*(Desejável / Média Prioridade)* | **Agrega valor e conveniência:** melhora a experiência do usuário ou oferece recursos analíticos avançados, mas sua ausência não degrada a execução dos fluxos financeiros e cadastrais essenciais. | **Inclusão condicionada à capacidade residual** ou postergada para o ciclo seguinte. |
 | **1** | **Won't have now**<br>*(Postergado / Baixa Prioridade)* | **Não prioritário para a versão atual:** requisito reconhecido como valoroso para a maturidade corporativa futura, mas postergado por não atender às dores imediatas ou possuir melhor alternativa temporária. | **Fora do MVP.** Registrado formalmente no *roadmap* pós-implantação. |
 
-### 10.1.4 Diagrama Cartesiano MoSCoW (Valor de Negócio vs. Urgência Operacional)
+#### Rubrica de Julgamento do Valor de Negócio
 
-A distribuição consolidada dos **31 Requisitos Funcionais** sob a ótica de **Valor de Negócio** e **Urgência Operacional** é expressa visualmente no diagrama cartesiano abaixo. Os requisitos incorporados ou redefinidos após a Reunião 05 permanecem sujeitos à ratificação formal da cliente.
+As notas de 1 a 4 acima são atribuídas à luz das quatro dimensões abaixo, que explicitam os parâmetros qualitativos (Seção 10.1.1) e quantitativos (Seção 10.1.2). As faixas de economia de horas são calculadas sobre a base de referência de **mais de 30 h/mês** de conferência manual da auxiliar-administradora.
 
-```mermaid
-quadrantChart
-    title Matriz Cartesiana MoSCoW: Valor vs. Urgência
-    x-axis "Menor Urgência Operacional" --> "Alta Urgência Operacional"
-    y-axis "Menor Valor de Negócio" --> "Alto Valor de Negócio"
-    quadrant-1 "MUST HAVE"
-    quadrant-2 "SHOULD HAVE"
-    quadrant-3 "WON'T HAVE"
-    quadrant-4 "COULD HAVE"
+| Dimensão de Julgamento | **Nota 4** — Must have | **Nota 3** — Should have | **Nota 2** — Could have | **Nota 1** — Won't have now |
+| :--- | :--- | :--- | :--- | :--- |
+| **D1 — Impacto nos gargalos TR-01 a TR-04** | Sem o requisito, ao menos um fluxo TR-01 a TR-04 não se completa ou não pode ser conferido. | Automatiza ou dá visibilidade a etapa de suporte direto a um TR; o TR ainda se completa com contorno assistido. | Oferece análise avançada ou comparativa (histórico, alertas, previsto × realizado) sobre dado de um TR já atendido. | Sem vínculo direto com um TR; contornável pela fase piloto. |
+| **D2 — Economia de horas administrativas** | ≥ 25% da economia mensal estimada (≈ 8 h/mês ou mais). | De 10% a 25% (≈ 3 a 8 h/mês). | Inferior a 10% (< 3 h/mês) ou ganho apenas indireto. | Sem economia mensurável no primeiro ciclo. |
+| **D3 — Risco jurídico-trabalhista, fiscal e LGPD** | Ausência gera exposição direta e imediata: reembolso sem comprovante fiscal (RN06), acesso sem autenticação a dados pessoais e bancários (RN15, RN16) ou lançamento financeiro sem base cadastral válida (RN01, RN03). | Controle preventivo ou de rastreabilidade que reduz a probabilidade ou o impacto do risco (ex.: RN04, RN14, RN23). | Risco indireto ou residual, com controle compensatório existente (ex.: gravação de logs pelo backend, RN19). | Risco tratável por suporte técnico pontual. |
+| **D4 — Frequência de operação** | Contínua: a cada apontamento, transação ou acesso, ou pré-requisito de todos os perfis. | Recorrente: por solicitação, por competência ou por evento de cadastro. | Ocasional: análise gerencial periódica ou política de manutenção. | Eventual ou de exceção. |
 
-    "RF13": [0.60, 0.94]
-    "RF04": [0.60, 0.82]
-    "RF06": [0.60, 0.70]
-    "RF08": [0.60, 0.58]
-    "RF01": [0.82, 0.88]
-    "RF05": [0.82, 0.76]
-    "RF07": [0.82, 0.64]
-    "RF19": [0.82, 0.56]
-    "RF27": [0.70, 0.74]
+**Regra de consolidação:** a nota final é definida pelo **maior grau atingido entre D1 e D3** (critérios eliminatórios, pois representam bloqueio de processo ou exposição de risco). As dimensões **D2 e D4** funcionam como critérios de ajuste: podem confirmar a nota ou deslocá-la em, no máximo, 1 ponto entre notas adjacentes quando divergirem de forma consistente. O resultado é correlacionado ao MoSCoW da tabela acima e define o **eixo vertical** da Matriz 4 × 4. A rubrica é um instrumento de **reprodutibilidade e revisão**: as notas já validadas com a cliente na Reunião 05 permanecem inalteradas, e as notas dos requisitos posteriores seguem preliminares até ratificação.
 
-    "RF02": [0.12, 0.93]
-    "RF14": [0.12, 0.82]
-    "RF18": [0.12, 0.70]
-    "RF10": [0.12, 0.58]
-    "RF03": [0.35, 0.88]
-    "RF17": [0.35, 0.76]
-    "RF09": [0.35, 0.64]
-    "RF11": [0.35, 0.56]
-    "RF22": [0.35, 0.60]
-    "RF23": [0.35, 0.54]
-    "RF25": [0.25, 0.70]
-    "RF26": [0.30, 0.64]
-    "RF28": [0.38, 0.68]
-    "RF29": [0.42, 0.62]
+#### Rastreabilidade dos Gargalos (TR) para os Requisitos
 
-    "RF21": [0.62, 0.36]
-    "RF15": [0.62, 0.20]
-    "RF12": [0.82, 0.28]
-    "RF20": [0.82, 0.12]
-    "RF24": [0.55, 0.30]
-    "RF30": [0.68, 0.26]
-    "RF31": [0.75, 0.20]
+| Gargalo | Fluxo atual | Requisitos que o endereçam | Nota de valor predominante |
+| :---: | :--- | :--- | :---: |
+| **TR-01** | Envio do Relatório de Viagem Técnica (RVT) | RF04, RF19, RF22 (e RF20 como alternativa de entrada) | 4 / 3 |
+| **TR-02** | Submissão de comprovantes de despesa | RF07, RF08, RF28, RF29 | 4 / 3 |
+| **TR-03** | Consolidação de folha e comissões | RF05, RF06, RF27 (e RF21 como exceção assistida) | 4 / 2 |
+| **TR-04** | Apropriação de custo por contrato | RF09, RF10, RF11 (e RF12, RF30, RF31 como evolução analítica) | 3 / 2 |
+| **Transversal** | Base cadastral, segurança e auditoria (OE1 e OE4) | RF01, RF02, RF03, RF13, RF14, RF15, RF16, RF17, RF18, RF23, RF24, RF25, RF26 | 4 a 1 |
 
-    "RF16": [0.25, 0.22]
-```
-
-### 10.1.5 Distribuição MoSCoW e Linha de Corte do MVP
+### 10.1.4 Distribuição MoSCoW e Linha de Corte do MVP
 
 O diagrama estrutural abaixo sintetiza a distribuição das quatro categorias MoSCoW e a linha de corte consolidada. O núcleo originalmente discutido com a cliente foi preservado; os requisitos incorporados ou redefinidos posteriormente aparecem como refinamento técnico preliminar até nova ratificação.
 
@@ -152,12 +127,12 @@ Para manter o rigor analítico e escalas orientadas no mesmo sentido (onde **1 r
 
 Mede o volume de trabalho em pessoa-hora para codificação de backend, frontend, persistência e elaboração de testes automatizados:
 
-| Pontuação | Classificação | Faixa de Tempo | Descrição Operacional |
+| Pontuação | Classificação | Faixa de Tempo (limites inclusivos no extremo superior) | Descrição Operacional |
 | :---: | :--- | :---: | :--- |
-| **1** | Esforço baixo | Até 2 horas | Alteração pontual, fluxo direto com tela simples e validação básica. |
-| **2** | Esforço moderado | Entre 2 e 8 horas | Fluxo de complexidade média, com formulários, validações e persistência relacional padrão. |
-| **3** | Esforço alto | Entre 8 e 16 horas | Fluxo abrangente, com múltiplas etapas, processamentos condicionais ou manipulação de arquivos/tokens. |
-| **4** | Esforço muito alto | Mais de 16 horas | Rotina de alta densidade algorítmica, concorrência crítica, reconciliação de dados em lote ou integração externa com incertezas. |
+| **1** | Esforço baixo | Até 2 h | Alteração pontual, fluxo direto com tela simples e validação básica. |
+| **2** | Esforço moderado | Mais de 2 h até 8 h | Fluxo de complexidade média, com formulários, validações e persistência relacional padrão. |
+| **3** | Esforço alto | Mais de 8 h até 16 h | Fluxo abrangente, com múltiplas etapas, processamentos condicionais ou manipulação de arquivos/tokens. |
+| **4** | Esforço muito alto | Mais de 16 h | Rotina de alta densidade algorítmica, concorrência crítica, reconciliação de dados em lote ou integração externa com incertezas. |
 
 #### 2. Complexidade Técnica
 
@@ -200,12 +175,14 @@ Para consolidar as três dimensões técnicas em um indicador único e reprodut�
 
 Para viabilizar o cruzamento na **Matriz 4 × 4**, a média decimal é convertida para uma escala ordinal inteira de **1 a 4** de acordo com faixas uniformes de arredondamento:
 
-| Intervalo da Média | Esforço Consolidado na Matriz | Interpretação Técnica |
-| :---: | :---: | :--- |
-| **1,00 a 1,49** | **1 — Baixo** | Demanda técnica muito reduzida, tecnologia dominada e rápida entrega. |
-| **1,50 a 2,49** | **2 — Moderado** | Demanda balanceada, regras claras e execução controlada no ciclo regular. |
-| **2,50 a 3,49** | **3 — Alto** | Demanda substancial, regras de negócio densas e necessidade de atenção a testes. |
-| **3,50 a 4,00** | **4 — Muito alto** | Elevada incerteza, múltiplos componentes acoplados ou risco de retrabalho expressivo. |
+| Intervalo da Média | Esforço Consolidado na Matriz | Coluna da Matriz 4 × 4 (`x_base`) | Interpretação Técnica |
+| :---: | :---: | :---: | :--- |
+| **1,00 a 1,49** | **1 — Baixo** | 1ª coluna (0,125) | Demanda técnica muito reduzida, tecnologia dominada e rápida entrega. |
+| **1,50 a 2,49** | **2 — Moderado** | 2ª coluna (0,375) | Demanda balanceada, regras claras e execução controlada no ciclo regular. |
+| **2,50 a 3,49** | **3 — Alto** | 3ª coluna (0,625) | Demanda substancial, regras de negócio densas e necessidade de atenção a testes. |
+| **3,50 a 4,00** | **4 — Muito alto** | 4ª coluna (0,875) | Elevada incerteza, múltiplos componentes acoplados ou risco de retrabalho expressivo. |
+
+> **Regra de leitura:** a coluna da Matriz 4 × 4 é determinada **exclusivamente** pelo intervalo da média consolidada; horas, complexidade e lacuna influenciam a posição apenas por meio da média. Os critérios de revisão e a análise de sensibilidade nas fronteiras de cada intervalo estão na Seção 10.3.1.
 
 ---
 
@@ -247,6 +224,33 @@ A tabela a seguir consolida as avaliações de **todos os 31 Requisitos Funciona
 | **RF23** | **Bloquear acesso após tentativas falhas consecutivas** | OE4 / CAR-07 | **3** | Mitiga ataques de força bruta sobre contas com acesso a dados sensíveis. | 6h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
 | **RF24** | **Expirar senha periodicamente e impedir reutilização** | OE4 / CAR-07 | **2** | Recurso adicional de política de credenciais que não é bloqueante para o primeiro ciclo operacional. | 6h (2) | 2 | 2 | 2,00 | **2 — Moderado** |
 
+### 10.3.1 Revisão e Calibração do Esforço Técnico frente à Matriz 4 × 4
+
+A revisão do esforço técnico verificou, requisito a requisito, a coerência analítica entre as três dimensões (horas, complexidade e lacuna de capacidade), a média consolidada e a **coluna** ocupada na Matriz 4 × 4. Foram aplicadas quatro verificações:
+
+1. **Aderência das horas à faixa da nota:** todas as estimativas respeitam as faixas da Seção 10.2.1 (limites inclusivos no extremo superior). Os casos de fronteira são **RF22, RF26 e RF29 (8 h → nota 2)** e **RF04, RF05 e RF09 (16 h → nota 3)**; nenhum requisito excede 16 h, razão pela qual a nota 4 em horas não é atribuída.
+2. **Conferência aritmética:** as 31 médias foram recalculadas pela fórmula da Seção 10.2.2 e conferem com a tabela acima, sem divergências.
+3. **Coerência entre dimensões:** a complexidade supera a nota de horas em +1 apenas quando há regra estrutural que não aumenta a codificação, mas aumenta o risco (ex.: **RF05**, cálculo monetário centesimal, RNF06; **RF06**, imutabilidade, RN08; **RF14**, RBAC em camadas, RN16; **RF22/RF26**, mídia e versionamento, RN23/RN24). A lacuna de capacidade é 3 nos sete requisitos de maior esforço (RF04, RF05, RF09, RF12, RF15, RF16 e RF20), e nenhum requisito atinge lacuna crítica (nota 4).
+4. **Sensibilidade às fronteiras de conversão:** requisitos com média a até 0,17 ponto de um limite de faixa foram identificados como **sensíveis** e permanecem monitorados.
+
+| Fronteira de conversão | Requisitos próximos | Média | Situação |
+| :---: | :--- | :---: | :--- |
+| 1,49 / 1,50 | RF01, RF02, RF19, RF23, RF25 e RF17 | 1,67 | Classe 2 — margem de 0,17 acima do limite |
+| 2,49 / 2,50 | RF14, RF22, RF26 e RF06 | 2,33 | Classe 2 — margem de 0,17 abaixo do limite |
+| 2,49 / 2,50 | RF21, RF30 e RF31 | 2,67 | Classe 3 — margem de 0,17 acima do limite |
+| 3,49 / 3,50 | RF05 e RF09 | 3,33 | Classe 3 — margem de 0,17 abaixo do limite; seriam promovidos à classe 4 apenas com lacuna crítica (nota 4) |
+
+**Resultado da calibração e vínculo com a Matriz 4 × 4:**
+
+| Esforço Consolidado | Coluna na Matriz | `x_base` | Qtde. de RFs | Requisitos |
+| :---: | :---: | :---: | :---: | :--- |
+| **1 — Baixo** | 1ª | 0,125 | 2 | RF13, RF18 |
+| **2 — Moderado** | 2ª | 0,375 | 19 | RF01, RF02, RF03, RF06, RF07, RF08, RF10, RF11, RF14, RF17, RF19, RF22, RF23, RF24, RF25, RF26, RF27, RF28, RF29 |
+| **3 — Alto** | 3ª | 0,625 | 10 | RF04, RF05, RF09, RF12, RF15, RF16, RF20, RF21, RF30, RF31 |
+| **4 — Muito alto** | 4ª | 0,875 | 0 | — (coluna vazia: o esforço dos requisitos foi tratado por decomposição, conforme Seção 10.5.2) |
+
+A calibração **não alterou nenhuma nota de esforço nem a classe consolidada** dos requisitos; ela documenta a regra de enquadramento e torna explícito o vínculo entre as colunas da Matriz 4 × 4 (Seção 10.4.2) e a coordenada horizontal do gráfico (Seção 10.4.3).
+
 ---
 
 ## 10.4 Matriz 4 × 4 — Valor de Negócio × Esforço Técnico
@@ -255,51 +259,57 @@ O cruzamento bidimensional entre o **Valor de Negócio** (eixo vertical) e o **E
 
 ### 10.4.1 Representação Visual da Matriz 4 × 4 (Diagrama Cartesiano)
 
-O gráfico cartesiano a seguir mapeia a posição relativa dos requisitos, evidenciando o agrupamento do núcleo do MVP na região de alta entrega de valor com esforço controlado:
+O gráfico cartesiano a seguir mapeia a posição relativa dos requisitos. As **setas nos eixos** indicam o sentido de crescimento das grandezas: o **esforço cresce da esquerda para a direita** (eixo x) e o **valor cresce de baixo para cima** (eixo y). Cada requisito é posicionado no centro da célula (V, E) da Matriz 4 × 4, com pequena dispersão interna para evitar sobreposição; a derivação completa de cada par `[x, y]` encontra-se na Seção 10.4.3 (*Fundamentação Matemática das Coordenadas Cartesianas*).
 
 ```mermaid
 quadrantChart
     title Matriz 4x4: Valor de Negócio vs. Esforço Técnico
-    x-axis "Baixo Esforço Técnico" --> "Alto Esforço Técnico"
-    y-axis "Baixo Valor de Negócio" --> "Alto Valor de Negócio"
+    x-axis "Baixo Esforço (1) ──►" --> "──► Alto Esforço (4)"
+    y-axis "Baixo Valor (1) ──►" --> "──► Alto Valor (4)"
     quadrant-1 "Avaliar / Decompor"
     quadrant-2 "Candidatos ao MVP"
     quadrant-3 "Oportunidade / Futuro"
     quadrant-4 "Não Priorizar"
 
-    "RF13": [0.08, 0.92]
-    "RF18": [0.08, 0.68]
+    "RF13": [0.125, 0.875]
 
-    "RF01": [0.20, 0.90]
-    "RF19": [0.20, 0.78]
-    "RF02": [0.20, 0.62]
-    "RF25": [0.24, 0.70]
-    "RF27": [0.24, 0.88]
-    "RF26": [0.30, 0.66]
-    "RF06": [0.32, 0.86]
-    "RF07": [0.32, 0.70]
-    "RF03": [0.32, 0.58]
-    "RF22": [0.36, 0.62]
-    "RF11": [0.38, 0.60]
-    "RF28": [0.40, 0.72]
-    "RF29": [0.42, 0.64]
-    "RF08": [0.44, 0.92]
-    "RF14": [0.44, 0.76]
-    "RF17": [0.44, 0.68]
-    "RF10": [0.44, 0.56]
-    "RF23": [0.46, 0.60]
-    "RF24": [0.46, 0.34]
+    "RF01": [0.285, 0.915]
+    "RF06": [0.375, 0.915]
+    "RF07": [0.465, 0.915]
+    "RF08": [0.285, 0.835]
+    "RF19": [0.375, 0.835]
+    "RF27": [0.465, 0.835]
 
-    "RF04": [0.60, 0.88]
-    "RF12": [0.60, 0.38]
-    "RF21": [0.62, 0.30]
-    "RF30": [0.66, 0.34]
-    "RF31": [0.70, 0.26]
-    "RF20": [0.72, 0.22]
-    "RF05": [0.80, 0.84]
-    "RF09": [0.80, 0.66]
-    "RF15": [0.80, 0.30]
-    "RF16": [0.80, 0.12]
+    "RF04": [0.555, 0.875]
+    "RF05": [0.695, 0.875]
+
+    "RF18": [0.125, 0.625]
+
+    "RF02": [0.270, 0.705]
+    "RF03": [0.340, 0.705]
+    "RF10": [0.410, 0.705]
+    "RF11": [0.480, 0.705]
+    "RF14": [0.270, 0.625]
+    "RF17": [0.340, 0.625]
+    "RF22": [0.410, 0.625]
+    "RF23": [0.480, 0.625]
+    "RF25": [0.270, 0.545]
+    "RF26": [0.340, 0.545]
+    "RF28": [0.410, 0.545]
+    "RF29": [0.480, 0.545]
+
+    "RF09": [0.625, 0.625]
+
+    "RF24": [0.375, 0.375]
+
+    "RF12": [0.535, 0.415]
+    "RF15": [0.625, 0.415]
+    "RF20": [0.715, 0.415]
+    "RF21": [0.535, 0.335]
+    "RF30": [0.625, 0.335]
+    "RF31": [0.715, 0.335]
+
+    "RF16": [0.625, 0.125]
 ```
 
 ### 10.4.2 Tabela da Matriz 4 × 4
@@ -311,7 +321,87 @@ quadrantChart
 | **2 — Moderado**<br>*(Could have)* | —<br><br><small><strong>Avaliar oportunidade</strong></small> | **RF24** *(Expirar senha e impedir reutilização)*<br><br><small><strong>Entrega futura / Capacidade residual</strong></small> | **RF12** *(Monitorar execução orçamentária)*<br>**RF15** *(Consultar trilha de auditoria)*<br>**RF20** *(Importar presenças auditor.ia)*<br>**RF21** *(Estornar fechamento)*<br>**RF30** *(Comparativo histórico de custos)*<br>**RF31** *(Alertas de execução orçamentária)*<br><br><small><strong>Entrega futura</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> |
 | **1 — Baixo**<br>*(Won't have now)* | —<br><br><small><strong>Avaliar oportunidade</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> | **RF16** *(Exportar relatório de auditoria)*<br><br><small><strong>Não priorizar agora</strong></small> | —<br><br><small><strong>Não priorizar agora</strong></small> |
 
-### 10.4.3 Análise Estratégica dos Quadrantes
+### 10.4.3 Fundamentação Matemática das Coordenadas Cartesianas
+
+As coordenadas `[x, y]` do diagrama da Seção 10.4.1 **não são estimativas visuais**: derivam deterministicamente das duas notas ordinais da Matriz 4 × 4 — **V** (Valor de Negócio, Seção 10.3) e **E** (Esforço Consolidado, Seção 10.2.2) — por meio de duas etapas: *normalização* (posiciona o requisito no centro da célula) e *dispersão* (*jitter* determinístico que evita a sobreposição de requisitos que ocupam a mesma célula).
+
+#### Etapa 1 — Normalização para o intervalo [0, 1]
+
+O plano do `quadrantChart` é o quadrado unitário, dividido em 4 × 4 células de lado 0,25. As notas ordinais (1 a 4) são mapeadas ao **centro da célula** correspondente:
+
+```text
+x_base = (E - 0,5) / 4          y_base = (V - 0,5) / 4
+```
+
+| Nota (1 a 4) | 1 | 2 | 3 | 4 |
+| :--- | :---: | :---: | :---: | :---: |
+| **Centro em x** (Esforço **E**) | 0,125 | 0,375 | 0,625 | 0,875 |
+| **Centro em y** (Valor **V**) | 0,125 | 0,375 | 0,625 | 0,875 |
+
+Como o centro da célula nunca coincide com os eixos de corte (0,5), a divisão do gráfico em quadrantes preserva exatamente a leitura da Matriz 4 × 4: Esforço 1–2 fica à esquerda e 3–4 à direita; Valor 3–4 fica na metade superior e 1–2 na inferior.
+
+#### Etapa 2 — Dispersão (*jitter*) anti-sobreposição
+
+Quando *n* requisitos ocupam a mesma célula, todos teriam o mesmo par `(x_base, y_base)` e seriam desenhados sobrepostos. Para evitar isso, os requisitos da célula são ordenados pelo código (RF crescente) e distribuídos em uma grade de *k* colunas × *m* linhas, preenchida por linha, de cima para baixo e da esquerda para a direita:
+
+```text
+k = menor inteiro tal que k² ≥ n        m = ⌈ n / k ⌉
+
+x = x_base + (c - (k - 1) / 2) · s_x
+y = y_base + ((m - 1) / 2 - r) · s_y
+```
+
+Onde `c` (0 a k−1) é a coluna e `r` (0 a m−1) é a linha do requisito na grade, `s_y = 0,08` (fixo) e `s_x` depende de *k*. Os fatores de espaçamento garantem que o deslocamento máximo (≤ 0,105 em x e ≤ 0,08 em y) permaneça **dentro da célula de origem** (meia-largura de 0,125); portanto, a dispersão **nunca altera o quadrante nem a nota** de nenhum requisito.
+
+| Ocupação da célula (*n*) | Grade *k* × *m* | `s_x` | `s_y` | Células da matriz com essa ocupação |
+| :---: | :---: | :---: | :---: | :--- |
+| 1 | 1 × 1 | — | — | (V4, E1), (V3, E1), (V3, E3), (V2, E2), (V1, E3) |
+| 2 | 2 × 1 | 0,14 | — | (V4, E3) |
+| 6 | 3 × 2 | 0,09 | 0,08 | (V4, E2), (V2, E3) |
+| 12 | 4 × 3 | 0,07 | 0,08 | (V3, E2) |
+
+> **Exemplo resolvido (RF22):** RF22 tem V = 3 e E = 2, logo `x_base = 0,375` e `y_base = 0,625`. A célula (V3, E2) possui *n* = 12 requisitos (grade 4 × 3); em ordem de código, RF22 é o 7º (índice 6), portanto `c = 2` e `r = 1`. Assim: `x = 0,375 + (2 − 1,5) · 0,07 = 0,410` e `y = 0,625 + (1 − 1) · 0,08 = 0,625`, resultando em **[0,410; 0,625]**.
+
+#### Tabela de Conferência das Coordenadas
+
+| Célula (V, E) | Requisito | E | V | `x_base` | `y_base` | `c` | `r` | **[x, y]** |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| (4, 1) | RF13 | 1 | 4 | 0,125 | 0,875 | 0 | 0 | **[0,125; 0,875]** |
+| (4, 2) | RF01 | 2 | 4 | 0,375 | 0,875 | 0 | 0 | **[0,285; 0,915]** |
+| (4, 2) | RF06 | 2 | 4 | 0,375 | 0,875 | 1 | 0 | **[0,375; 0,915]** |
+| (4, 2) | RF07 | 2 | 4 | 0,375 | 0,875 | 2 | 0 | **[0,465; 0,915]** |
+| (4, 2) | RF08 | 2 | 4 | 0,375 | 0,875 | 0 | 1 | **[0,285; 0,835]** |
+| (4, 2) | RF19 | 2 | 4 | 0,375 | 0,875 | 1 | 1 | **[0,375; 0,835]** |
+| (4, 2) | RF27 | 2 | 4 | 0,375 | 0,875 | 2 | 1 | **[0,465; 0,835]** |
+| (4, 3) | RF04 | 3 | 4 | 0,625 | 0,875 | 0 | 0 | **[0,555; 0,875]** |
+| (4, 3) | RF05 | 3 | 4 | 0,625 | 0,875 | 1 | 0 | **[0,695; 0,875]** |
+| (3, 1) | RF18 | 1 | 3 | 0,125 | 0,625 | 0 | 0 | **[0,125; 0,625]** |
+| (3, 2) | RF02 | 2 | 3 | 0,375 | 0,625 | 0 | 0 | **[0,270; 0,705]** |
+| (3, 2) | RF03 | 2 | 3 | 0,375 | 0,625 | 1 | 0 | **[0,340; 0,705]** |
+| (3, 2) | RF10 | 2 | 3 | 0,375 | 0,625 | 2 | 0 | **[0,410; 0,705]** |
+| (3, 2) | RF11 | 2 | 3 | 0,375 | 0,625 | 3 | 0 | **[0,480; 0,705]** |
+| (3, 2) | RF14 | 2 | 3 | 0,375 | 0,625 | 0 | 1 | **[0,270; 0,625]** |
+| (3, 2) | RF17 | 2 | 3 | 0,375 | 0,625 | 1 | 1 | **[0,340; 0,625]** |
+| (3, 2) | RF22 | 2 | 3 | 0,375 | 0,625 | 2 | 1 | **[0,410; 0,625]** |
+| (3, 2) | RF23 | 2 | 3 | 0,375 | 0,625 | 3 | 1 | **[0,480; 0,625]** |
+| (3, 2) | RF25 | 2 | 3 | 0,375 | 0,625 | 0 | 2 | **[0,270; 0,545]** |
+| (3, 2) | RF26 | 2 | 3 | 0,375 | 0,625 | 1 | 2 | **[0,340; 0,545]** |
+| (3, 2) | RF28 | 2 | 3 | 0,375 | 0,625 | 2 | 2 | **[0,410; 0,545]** |
+| (3, 2) | RF29 | 2 | 3 | 0,375 | 0,625 | 3 | 2 | **[0,480; 0,545]** |
+| (3, 3) | RF09 | 3 | 3 | 0,625 | 0,625 | 0 | 0 | **[0,625; 0,625]** |
+| (2, 2) | RF24 | 2 | 2 | 0,375 | 0,375 | 0 | 0 | **[0,375; 0,375]** |
+| (2, 3) | RF12 | 3 | 2 | 0,625 | 0,375 | 0 | 0 | **[0,535; 0,415]** |
+| (2, 3) | RF15 | 3 | 2 | 0,625 | 0,375 | 1 | 0 | **[0,625; 0,415]** |
+| (2, 3) | RF20 | 3 | 2 | 0,625 | 0,375 | 2 | 0 | **[0,715; 0,415]** |
+| (2, 3) | RF21 | 3 | 2 | 0,625 | 0,375 | 0 | 1 | **[0,535; 0,335]** |
+| (2, 3) | RF30 | 3 | 2 | 0,625 | 0,375 | 1 | 1 | **[0,625; 0,335]** |
+| (2, 3) | RF31 | 3 | 2 | 0,625 | 0,375 | 2 | 1 | **[0,715; 0,335]** |
+| (1, 3) | RF16 | 3 | 1 | 0,625 | 0,125 | 0 | 0 | **[0,625; 0,125]** |
+
+!!! note "Auditabilidade e manutenção"
+    As colunas **E** e **V** reproduzem exatamente a Tabela Consolidada (Seção 10.3) e a Tabela da Matriz 4 × 4 (Seção 10.4.2). Ao incluir ou reclassificar um requisito, basta recalcular `(x_base, y_base)`, reordenar a célula afetada e reaplicar a Etapa 2. A posição dentro da célula é apenas um recurso de legibilidade: **não possui significado analítico** — vale somente a célula (V, E).
+
+### 10.4.4 Análise Estratégica dos Quadrantes
 
 1. **Prioridade máxima e fortes candidatos ao MVP (alto valor × baixo/moderado esforço):**
     - **RF13** e **RF18** apresentam esforço muito baixo e atendem diretamente ao controle de sessão.
@@ -531,3 +621,4 @@ A Reunião 05 registrou a validação do núcleo funcional disponível em **24/0
 | `2.2` | 30/09/2026 | Alinhamento com a Reunião 05: promoção do RF11 (Should have / MVP), rebaixamento do RF21 (Could have / Pós-MVP), registro da versão então vigente do RF22, confirmação de RNF01 e RNF08 como evolutivos e RNF09 como associado ao MVP; atualização dos diagramas, fluxo funcional e matriz 4×4. | Matheus Ribeiro | Eric Araújo |
 | `2.3` | 06/10/2026 | Inclusão de RF23 e RF24 (Módulo 4/CAR-07) na avaliação de valor/esforço, na Matriz 4×4 e nos diagramas MoSCoW; RF23 promovido ao MVP e RF24 postergado ao backlog. Inclusão de RNF18 a RNF20 (transversais) na classificação do MVP. | Matheus Saraiva Camargo | Matheus Ribeiro |
 | `2.4` | 07/10/2026 | Sincronização integral com a especificação atual de 31 RFs e 20 RNFs: redefinição do RF22, inclusão de RF25 a RF31, atualização da distribuição MoSCoW, Matriz 4×4, fluxo funcional, linha de corte do MVP e backlog evolutivo; atualização da integração externa para *auditor.ia*; revisão da classificação de RNF12 e RNF19; e distinção explícita entre requisitos validados na Reunião 05 e refinamentos posteriores sujeitos à ratificação da cliente. | Matheus Saraiva Camargo | Matheus Ribeiro |
+| `2.5` | 08/10/2026 | Refatoração da priorização (Unidade 2): remoção do diagrama cartesiano MoSCoW de Valor × Urgência (antiga Seção 10.1.4) com renumeração da Seção 10.1.4; inclusão da rubrica de valor (D1 a D4) e da rastreabilidade TR-01 a TR-04; faixas de horas mutuamente exclusivas e revisão de coerência do esforço técnico (Seção 10.3.1) vinculada às colunas da Matriz 4×4; setas de crescimento nos eixos do diagrama Valor × Esforço; nova Seção 10.4.3 com a fundamentação matemática das coordenadas `[x, y]` (normalização e *jitter*); renumeração da análise estratégica para 10.4.4. Nenhum requisito, nota de valor, nota de esforço ou classe consolidada foi alterado. | Eric Araújo | Matheus Ribeiro |
