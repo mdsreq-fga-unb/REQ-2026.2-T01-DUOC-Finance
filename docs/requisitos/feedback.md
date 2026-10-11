@@ -1,10 +1,10 @@
-# Capítulo 9: Feedback dos Requisitos — Avaliação em Pares
+# Feedback dos Requisitos — Avaliação em Pares
 
-Este documento formaliza o registro, a deliberação crítica, o rastreamento das decisões tomadas e o **comparativo rastreável "Antes vs. Depois"** elaborado pela equipe **Cascata Ágil** a partir do relatório de avaliação por pares da equipe **Guerreiros do Backlog** sobre o lote de Requisitos de Software do sistema **DUOC Finance**.
+Este documento formaliza o registro, a deliberação crítica, o rastreamento das decisões tomadas e o **comparativo rastreável "Antes vs. Depois"** elaborado pela equipe **Cascata Ágil** a partir do relatório de avaliação por pares da equipe **Guerreiros do Backlog** sobre o lote de Requisitos de Software do sistema **DUOC Finance** ([Capítulo 8](index.md)).
 
 ---
 
-## 9.1 Visão Geral e Critérios Metodológicos
+## 8.1 Visão Geral e Critérios Metodológicos
 
 !!! info "Dados da Avaliação por Pares"
     - **Equipe Avaliadora:** Guerreiros do Backlog  
@@ -308,4 +308,5 @@ Mapeamento consolidado das seções e artefatos modificados em decorrência das 
 | `1.1` | 28/09/2026 | Registro das deliberações FB-01 a FB-11, preenchimento do painel quantitativo, da rastreabilidade de impacto e do checklist de validação. | Matheus Saraiva Camargo | Matheus Szervinsk |
 | `2.0` | 30/09/2026 | Implementação da **Matriz Rastreável de Transformação dos Requisitos ("Antes vs. Depois")** atendendo ao feedback docente; atualização do sistema de ponto externo para *Shifton*; expansão da CAR-09 com RF20 e RF22 (`CT-M1-10` e `CT-M1-11`); sincronização com as deliberações da Reunião 05 e especificações refinadas do Capítulo 8. | Matheus Ribeiro Szervinsk | Eric Araújo e Lucas Zanetti |
 | `2.1` | 07/10/2026 | Correção da renderização dos comparativos "Antes vs. Depois" nas abas da seção 8.4, com tabelas Markdown nativas e admonitions para as regras de negócio. | Equipe Cascata Ágil | — |
-| `2.2` | 08/10/2026 | Consistência terminológica com a remoção do BDD da especificação de requisitos (feedback docente da Unidade 2): diretrizes, deliberação FB-11, comparativo "Antes vs. Depois" e checklist passam a referenciar critérios de aceitação em texto corrido. | Paulo Nery | |
+| `2.2` | 08/10/2026 | Consistência terminológica com a remoção do BDD da especificação de requisitos (feedback docente da Unidade 2): diretrizes, deliberação FB-11, comparativo "Antes vs. Depois" e checklist passam a referenciar critérios de aceitação em texto corrido. | Paulo Nery | — |
+| `2.3` | 11/10/2026 | Harmonização hierárquica do título do documento com a estrutura do Capítulo 8 (Unidade 2) no menu de navegação e correção de inconsistência na numeração da Seção 8.1 (ajuste de 9.1 para 8.1, alinhando com 8.1.1 e 8.1.2). | Matheus Ribeiro Szervinsk | Matheus Saraiva Camargo |

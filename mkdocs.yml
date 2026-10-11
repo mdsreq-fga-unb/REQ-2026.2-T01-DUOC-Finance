@@ -45,7 +45,7 @@ plugins:
 markdown_extensions:
   - toc:
       permalink: true
-      toc_depth: 2
+      toc_depth: 3
   - admonition
   - md_in_html
   - pymdownx.details
@@ -78,12 +78,12 @@ nav:
   - 'Capítulo 5 - Engenharia de Requisitos': engenharia-requisitos/index.md
   - 'Capítulo 6 - Cronograma': cronograma/index.md
   - 'Capítulo 7 - Interação com Cliente': interacao-cliente/index.md
-  - 'Capítulo 8 - Requisitos (Unidade 2)':
+  - 'Capítulo 8 - Requisitos':
       - 'Especificação de Requisitos': requisitos/index.md
-      - 'Feedback da Avaliação em Pares': requisitos/feedback.md
       - 'Priorização e MVP': requisitos/priorizacao.md
-  - 'Capítulo 9 - DoR e DoD (Unidade 2)': dor-dod/index.md
-  - 'Capítulo 10 - Backlog (Unidade 2)': backlog/index.md
+      - 'Feedback da Avaliação em Pares': requisitos/feedback.md
+  - 'Capítulo 9 - DoR e DoD': dor-dod/index.md
+  - 'Capítulo 10 - Backlog': backlog/index.md
   - 'Capítulo 11 - Lições Aprendidas': licoes-aprendidas/index.md
   - 'Capítulo 12 - Referências': referencias/index.md
   - 'Atas de Reuniões':
@@ -99,6 +99,3 @@ nav:
     - 'Entrega 2 (Ponto de Controle 2)': entregas/entrega-2.md
     - 'Entrega 3 (Ponto de Controle 3)': entregas/entrega-3.md
     - 'Entrega 4 (Ponto de Controle 4)': entregas/entrega-4.md
-
-
-

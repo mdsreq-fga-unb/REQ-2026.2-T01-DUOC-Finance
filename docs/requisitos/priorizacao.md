@@ -1,4 +1,7 @@
-# Capítulo 10: Priorização de Requisitos e Definição do MVP
+# Priorização de Requisitos e Definição do MVP
+
+!!! info "Enquadramento Metodológico — Unidade 2 e Seção 10.2 do Template Oficial"
+    Este documento consolida o embasamento analítico e consensual da **Priorização de Requisitos e Definição da Linha de Corte do MVP**, subsidiando diretamente tanto a especificação dos [Requisitos de Software (Capítulo 8)](index.md) quanto o futuro [Backlog do Produto (Capítulo 10)](../backlog/index.md). Na estrutura do Template Oficial da disciplina, este artefato atende integralmente às exigências metodológicas da **Seção 10.2 (Priorização do Backlog e MVP)**.
 
 Este documento consolida a estratégia integrada de priorização do sistema **DUOC Finance**, articulando os **Requisitos Funcionais (RF)** e **Requisitos Não Funcionais (RNF)** sob duas perspectivas complementares e interdependentes:
 
@@ -197,7 +200,7 @@ A tabela a seguir consolida as avaliações de **todos os 31 Requisitos Funciona
 | **RF03** | **Registrar movimentação funcional** | OE1 / CAR-01 | **3** | Afastamentos e desligamentos devem revogar credenciais e bloquear operações indevidas (RN03, RN04). | 6h (2) | 2 | 2 | 2,00 | **2 — Moderado** |
 | **RF04** | **Submeter apontamento de campo** | OE1 / CAR-02 | **4** | Coração da coleta externa: substitui anotações dispersas pelo RVT digital estruturado. | 16h (3) | 3 | 3 | 3,00 | **3 — Alto** |
 | **RF19** | **Consultar apontamentos registrados** | OE1 / CAR-02 | **4** | Permite ao colaborador acompanhar homologação, rejeição e necessidade de retificação antes do fechamento. | 4h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
-| **RF20** | **Importar presenças homologadas** | OE1 / CAR-09 | **2** | Integração externa com o *auditor.ia*; no ciclo piloto, a entrada pode ser suprida pelo RVT interno. | 12h (3) | 3 | 3 | 3,00 | **3 — Alto** |
+| **RF20** | **Importar presenças homologadas** | OE1 / CAR-09 | **2** | Integração externa com o *Shifton*; no ciclo piloto, a entrada pode ser suprida pelo RVT interno. | 12h (3) | 3 | 3 | 3,00 | **3 — Alto** |
 | **RF22** | **Anexar evidências e geolocalização ao apontamento** | OE1 / CAR-02 | **3** | Complementa o apontamento com evidências da atividade e geolocalização quando disponível, fortalecendo a comprovação do RVT. | 8h (2) | 3 | 2 | 2,33 | **2 — Moderado** |
 | **RF25** | **Cadastrar tipo de contratação do colaborador** | OE1 / CAR-01 | **3** | Diferencia Diarista, CLT e Prestador de Serviço, permitindo aplicar corretamente as regras administrativas e financeiras correspondentes. | 4h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
 | **RF26** | **Consultar histórico de alterações cadastrais e bancárias** | OE1 / CAR-01 | **3** | Preserva rastreabilidade de alterações sensíveis de cadastro e dados bancários, reduzindo divergências administrativas. | 8h (2) | 3 | 2 | 2,33 | **2 — Moderado** |
@@ -318,7 +321,7 @@ quadrantChart
 | :---: | :--- | :--- | :--- | :---: |
 | **4 — Muito alto** | **RF13** *(Efetuar login)*<br><br><small><strong>Prioridade máxima</strong></small> | **RF01** *(Cadastrar colaborador)*<br>**RF06** *(Homologar fechamento)*<br>**RF07** *(Submeter reembolso)*<br>**RF08** *(Deliberar reembolso)*<br>**RF19** *(Consultar apontamentos)*<br>**RF27** *(Configurar diárias técnicas)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | **RF04** *(Submeter apontamento)*<br>**RF05** *(Solicitar prévia de fechamento)*<br><br><small><strong>Avaliar viabilidade / Decompor para MVP</strong></small> | —<br><br><small><strong>Planejar, reduzir ou decompor</strong></small> |
 | **3 — Alto** | **RF18** *(Encerrar sessão)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | **RF02** *(Atualizar cadastro)*<br>**RF03** *(Registrar movimentação)*<br>**RF10** *(Rastreabilidade de custos)*<br>**RF11** *(Filtrar indicadores)*<br>**RF14** *(Gerenciar perfis RBAC)*<br>**RF17** *(Recuperar credenciais)*<br>**RF22** *(Anexar evidências e geolocalização)*<br>**RF23** *(Bloquear tentativas falhas)*<br>**RF25** *(Cadastrar tipo de contratação)*<br>**RF26** *(Consultar histórico cadastral/bancário)*<br>**RF28** *(Submeter adiantamento)*<br>**RF29** *(Deliberar adiantamento)*<br><br><small><strong>Candidatos ao MVP</strong></small> | **RF09** *(Apropriar custos)*<br><br><small><strong>Avaliar contexto / Reduzir escopo para MVP</strong></small> | —<br><br><small><strong>Entrega futura</strong></small> |
-| **2 — Moderado** | —<br><br><small><strong>Avaliar oportunidade</strong></small> | **RF24** *(Expirar senha e impedir reutilização)*<br><br><small><strong>Entrega futura / Capacidade residual</strong></small> | **RF12** *(Monitorar execução orçamentária)*<br>**RF15** *(Consultar trilha de auditoria)*<br>**RF20** *(Importar presenças auditor.ia)*<br>**RF21** *(Estornar fechamento)*<br>**RF30** *(Comparativo histórico de custos)*<br>**RF31** *(Alertas de execução orçamentária)*<br><br><small><strong>Entrega futura</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> |
+| **2 — Moderado** | —<br><br><small><strong>Avaliar oportunidade</strong></small> | **RF24** *(Expirar senha e impedir reutilização)*<br><br><small><strong>Entrega futura / Capacidade residual</strong></small> | **RF12** *(Monitorar execução orçamentária)*<br>**RF15** *(Consultar trilha de auditoria)*<br>**RF20** *(Importar presenças Shifton)*<br>**RF21** *(Estornar fechamento)*<br>**RF30** *(Comparativo histórico de custos)*<br>**RF31** *(Alertas de execução orçamentária)*<br><br><small><strong>Entrega futura</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> |
 | **1 — Baixo** | —<br><br><small><strong>Avaliar oportunidade</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> | **RF16** *(Exportar relatório de auditoria)*<br><br><small><strong>Não priorizar agora</strong></small> | —<br><br><small><strong>Não priorizar agora</strong></small> |
 
 ### 10.4.3 Fundamentação Matemática das Coordenadas Cartesianas
@@ -419,57 +422,6 @@ Onde `c` (0 a k−1) é a coluna e `r` (0 a m−1) é a linha do requisito na gr
 
 A delimitação do Produto Mínimo Viável não se resumiu a agrupar funcionalidades fáceis. O corte considerou a formação de um **fluxo operacional minimamente completo, coerente e autossuficiente**, capaz de sanar as maiores dores da DUOC no primeiro ciclo de uso e, ao mesmo tempo, manter explícita a distinção entre itens já validados com a cliente e refinamentos posteriores sujeitos à ratificação.
 
-### 10.5.1 Fluxo Funcional Contínuo de Ponta a Ponta
-
-Para que a solução tenha utilidade real, os dados devem transitar de maneira fluida desde a autenticação e cadastro até a apuração e consulta de custos:
-
-```mermaid
-flowchart TD
-    subgraph S_AUTH["Governança e Acesso (OE4)"]
-        RF13["RF13: Efetuar Login"] --> RF14["RF14: Perfis RBAC"]
-        RF17["RF17: Recuperar Senha"] -.-> RF13
-        RF18["RF18: Logout Manual"]
-        RF23["RF23: Bloqueio por Tentativas Falhas"] -.-> RF13
-    end
-
-    subgraph S_CAD["Base Cadastral Unificada (OE1)"]
-        RF14 --> RF01["RF01: Cadastrar Colaborador"]
-        RF01 --> RF02["RF02: Atualizar Cadastro"]
-        RF01 --> RF03["RF03: Movimentação Funcional"]
-        RF01 --> RF25["RF25: Tipo de Contratação"]
-        RF02 --> RF26["RF26: Histórico Cadastral/Bancário"]
-    end
-
-    subgraph S_FIELD["Operação e Campo (OE1)"]
-        RF01 --> RF04["RF04: Submeter Apontamento (RVT)"]
-        RF22["RF22: Anexar Evidências e Geolocalização"] -.-> RF04
-        RF04 --> RF19["RF19: Consultar Apontamentos"]
-    end
-
-    subgraph S_EXP["Prestação de Contas e Adiantamentos (OE2)"]
-        RF01 --> RF07["RF07: Submeter Reembolso"]
-        RF07 --> RF08["RF08: Deliberar Reembolso"]
-        RF01 --> RF28["RF28: Submeter Adiantamento"]
-        RF28 --> RF29["RF29: Deliberar Adiantamento"]
-    end
-
-    subgraph S_FIN["Motor Financeiro (OE2)"]
-        RF27["RF27: Configurar Diárias Técnicas"] --> RF05["RF05: Prévia de Fechamento"]
-        RF04 --> RF05
-        RF05 --> RF06["RF06: Homologar Fechamento"]
-    end
-
-    subgraph S_COST["Inteligência de Custos (OE3)"]
-        RF06 --> RF09["RF09: Apropriar Custos ao Contrato"]
-        RF08 --> RF09
-        RF09 --> RF10["RF10: Rastreabilidade de Custos"]
-        RF10 --> RF11["RF11: Filtrar Indicadores de Custos"]
-    end
-
-    classDef mvpNode fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff;
-    class RF01,RF02,RF03,RF04,RF05,RF06,RF07,RF08,RF09,RF10,RF11,RF13,RF14,RF17,RF18,RF19,RF22,RF23,RF25,RF26,RF27,RF28,RF29 mvpNode;
-```
-
 ### 10.5.2 Tratamento dos Requisitos de Alto Valor e Alto Esforço
 
 Requisitos posicionados na combinação de **Valor 4 e Esforço 3** (ou Valor 3 e Esforço 3) poderiam ser vistos como fatores de risco. No entanto, por constituírem etapas indispensáveis da cadeia de valor, adotou-se a seguinte estratégia de **redução de escopo e decomposição**:
@@ -519,7 +471,7 @@ Os **8 requisitos** abaixo ficam alocados para a **Fase 2 (Pós-MVP)** ou releas
 | **RF12** | Monitorar execução orçamentária | Módulo 3 (OE3) | CAR-06 | **2** | **3** | A visualização de previsto versus realizado ganha maior utilidade após estabilização da base de custos. |
 | **RF15** | Consultar trilha de auditoria | Módulo 4 (OE4) | CAR-08 | **2** | **3** | A gravação de auditoria permanece obrigatória no backend; a interface avançada de consulta pode ser entregue posteriormente. |
 | **RF16** | Exportar relatório de auditoria | Módulo 4 (OE4) | CAR-08 | **1** | **3** | Exportações formais podem ser supridas pontualmente por suporte técnico na fase piloto. |
-| **RF20** | Importar presenças homologadas | Módulo 1 (OE1) | CAR-09 | **2** | **3** | A integração com o *auditor.ia* possui dependência externa; o RVT próprio atende ao primeiro ciclo. |
+| **RF20** | Importar presenças homologadas | Módulo 1 (OE1) | CAR-09 | **2** | **3** | A integração com o *Shifton* possui dependência externa; o RVT próprio atende ao primeiro ciclo. |
 | **RF21** | Estornar fechamento financeiro | Módulo 2 (OE2) | CAR-03 | **2** | **3** | É uma operação de exceção que pode permanecer assistida no primeiro ciclo. |
 | **RF24** | Expirar senha periodicamente e impedir reutilização | Módulo 4 (OE4) | CAR-07 | **2** | **2** | Política adicional de credenciais não bloqueante para a primeira versão operacional. |
 | **RF30** | Consultar comparativo histórico de custos entre contratos | Módulo 3 (OE3) | CAR-05 | **2** | **3** | Depende de histórico consolidado de custos para produzir comparação representativa. |
@@ -601,7 +553,7 @@ A Reunião 05 registrou a validação do núcleo funcional disponível em **24/0
 | **Rebaixamento do Requisito de Estorno (RF21)** | **Consensuado** | O grupo acordou reduzir a prioridade e retirar o estorno financeiro (**RF21**) do MVP, mantendo tratamento operacional assistido para exceções no primeiro ciclo. |
 | **Postergação do Modo Offline (RNF01)** | **Consensuado** | A operação *offline* completa (**RNF01**) foi postergada para a fase evolutiva; o requisito permanece documentado, mas não bloqueia o MVP. |
 | **Postergação da Exportação de Auditoria (RF16)** | **Aprovado pela Cliente** | Ficou acordado manter a exportação de relatórios de auditoria (**RF16**) fora do escopo inicial, preservando a gravação obrigatória dos logs no backend. |
-| **Postergação da Importação de Presenças Externas (RF20)** | **Aprovado pela Cliente** | A importação de presenças homologadas do *auditor.ia* (**RF20**) não foi considerada impeditiva para o primeiro ciclo, pois o RVT próprio atende à coleta inicial. A exportação de espelhos de frequência, presente em versão anterior da especificação sob o identificador RF22, deixou de compor o catálogo atual; o **RF22 atual** refere-se a evidências e geolocalização do apontamento. |
+| **Postergação da Importação de Presenças Externas (RF20)** | **Aprovado pela Cliente** | A importação de presenças homologadas do *Shifton* (**RF20**) não foi considerada impeditiva para o primeiro ciclo, pois o RVT próprio atende à coleta inicial. A exportação de espelhos de frequência, presente em versão anterior da especificação sob o identificador RF22, deixou de compor o catálogo atual; o **RF22 atual** refere-se a evidências e geolocalização do apontamento. |
 | **Ajuste no Fluxo de Reembolso** | **Consensuado** | A cliente solicitou tratamento rigoroso para comprovantes de reembolso, refletido na regra **RN06** e no **RNF07**. |
 | **Homologação dos Atributos de Qualidade e Segurança discutidos na sessão** | **Homologado** | Foram validados como relevantes ao MVP a exatidão monetária (**RNF06**), a criptografia em repouso e trânsito (**RNF03**), a expiração de sessão (**RNF13**) e o backup diário (**RNF17**). |
 
@@ -611,8 +563,8 @@ A Reunião 05 registrou a validação do núcleo funcional disponível em **24/0
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 24/09/2026 | Estruturação da metodologia de valor de negócio dos RFs (escala 1 a 4 associada ao MoSCoW), critérios qualitativos/quantitativos e pontuação preliminar pactuada na Reunião 05 com a cliente Maria Beatryz. | Matheus Ribeiro e Eric Araújo | |
-| `1.1` | 25/09/2026 | Refatoração estrutural da priorização com desmembramento em categorias MoSCoW e inclusão de diagrama cartesiano inicial de valor versus urgência. | Matheus Ribeiro e Eric Araújo | |
+| `1.0` | 24/09/2026 | Estruturação da metodologia de valor de negócio dos RFs (escala 1 a 4 associada ao MoSCoW), critérios qualitativos/quantitativos e pontuação preliminar pactuada na Reunião 05 com a cliente Maria Beatryz. | Matheus Ribeiro e Eric Araújo | — |
+| `1.1` | 25/09/2026 | Refatoração estrutural da priorização com desmembramento em categorias MoSCoW e inclusão de diagrama cartesiano inicial de valor versus urgência. | Matheus Ribeiro e Eric Araújo | — |
 | `1.2` | 28/09/2026 | Estruturação da proposta inicial da Matriz 4×4 (Valor × Esforço), definição preliminar do corte de RFs do MVP e justificativa dos itens postergados. | Gustavo Bonifácio | Matheus Ribeiro |
 | `1.3` | 28/09/2026 | Incorporação da metodologia de classificação e vinculação dos Requisitos Não Funcionais (RNF01 a RNF16) às categorias do MVP (Obrigatórios, Associados e Evolutivos). | Paulo Nery | Matheus Ribeiro |
 | `1.4` | 28/09/2026 | Adição da metodologia de estimativa de esforço técnico (escalas de horas, complexidade técnica e lacuna de capacidade) e tabela com médias consolidadas. | Giovana Ferreira | Matheus Ribeiro |
@@ -620,6 +572,7 @@ A Reunião 05 registrou a validação do núcleo funcional disponível em **24/0
 | `2.1` | 28/09/2026 | Revisão do escopo de priorização, validação da distribuição dos RFs então existentes na Matriz 4×4, auditoria das vinculações dos RNFs ao MVP e homologação dos critérios de aceite. | Eric Araújo | Matheus Ribeiro |
 | `2.2` | 30/09/2026 | Alinhamento com a Reunião 05: promoção do RF11 (Should have / MVP), rebaixamento do RF21 (Could have / Pós-MVP), registro da versão então vigente do RF22, confirmação de RNF01 e RNF08 como evolutivos e RNF09 como associado ao MVP; atualização dos diagramas, fluxo funcional e matriz 4×4. | Matheus Ribeiro | Eric Araújo |
 | `2.3` | 06/10/2026 | Inclusão de RF23 e RF24 (Módulo 4/CAR-07) na avaliação de valor/esforço, na Matriz 4×4 e nos diagramas MoSCoW; RF23 promovido ao MVP e RF24 postergado ao backlog. Inclusão de RNF18 a RNF20 (transversais) na classificação do MVP. | Matheus Saraiva Camargo | Matheus Ribeiro |
-| `2.4` | 07/10/2026 | Sincronização integral com a especificação atual de 31 RFs e 20 RNFs: redefinição do RF22, inclusão de RF25 a RF31, atualização da distribuição MoSCoW, Matriz 4×4, fluxo funcional, linha de corte do MVP e backlog evolutivo; atualização da integração externa para *auditor.ia*; revisão da classificação de RNF12 e RNF19; e distinção explícita entre requisitos validados na Reunião 05 e refinamentos posteriores sujeitos à ratificação da cliente. | Matheus Saraiva Camargo | Matheus Ribeiro |
+| `2.4` | 07/10/2026 | Sincronização integral com a especificação atual de 31 RFs e 20 RNFs: redefinição do RF22, inclusão de RF25 a RF31, atualização da distribuição MoSCoW, Matriz 4×4, fluxo funcional, linha de corte do MVP e backlog evolutivo; atualização da integração externa para *Shifton*; revisão da classificação de RNF12 e RNF19; e distinção explícita entre requisitos validados na Reunião 05 e refinamentos posteriores sujeitos à ratificação da cliente. | Matheus Saraiva Camargo | Matheus Ribeiro |
 | `2.5` | 08/10/2026 | Refatoração da priorização (Unidade 2): remoção do diagrama cartesiano MoSCoW de Valor × Urgência (antiga Seção 10.1.4) com renumeração da Seção 10.1.4; inclusão da rubrica de valor (D1 a D4) e da rastreabilidade TR-01 a TR-04; faixas de horas mutuamente exclusivas e revisão de coerência do esforço técnico (Seção 10.3.1) vinculada às colunas da Matriz 4×4; setas de crescimento nos eixos do diagrama Valor × Esforço; nova Seção 10.4.3 com a fundamentação matemática das coordenadas `[x, y]` (normalização e *jitter*); renumeração da análise estratégica para 10.4.4. Nenhum requisito, nota de valor, nota de esforço ou classe consolidada foi alterado. | Eric Araújo | Matheus Ribeiro |
 | `2.6` | 10/10/2026 | Remoção integral da técnica MoSCoW: escala de valor 1 a 4 mantida com os pesos previstos pela cliente e renomeada para níveis de valor (Muito alto, Alto, Moderado, Baixo); rótulos MoSCoW removidos da rubrica, da Matriz 4×4 e do diagrama da Seção 10.1.4, agora organizado por nível de valor; linha de corte do MVP formalizada pelo eixo de valor da matriz (valor 3 ou 4 no MVP; 2 ou 1 no backlog), sem alteração dos 23 RFs do MVP nem dos 8 postergados. | Eric Araújo | Matheus Ribeiro |
+| `2.7` | 11/10/2026 | Harmonização hierárquica do título do documento com a estrutura do Capítulo 8 (Unidade 2) no menu de navegação, inserção de nota de conformidade com a Seção 10.2 do Template Oficial da disciplina e substituição de referências residuais ao sistema externo (*Shifton*). | Matheus Ribeiro Szervinsk | Matheus Saraiva Camargo |
