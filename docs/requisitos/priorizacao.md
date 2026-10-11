@@ -35,29 +35,29 @@ Os parâmetros quantitativos abaixo alimentam as dimensões **D2** e **D4** (e s
 3. **Prevenção de Perdas Monetárias e Exposição de Risco (D3):** eliminação de pagamentos duplicados, erros de arredondamento em comissões e reembolsos sem documento fiscal correspondente (tolerância zero a desvios, RNF06), bem como a redução da exposição jurídico-trabalhista, fiscal e de privacidade (RN04, RN06, RN19, RN14 e RN16).
 4. **Redução do Tempo de Ciclo (D1):** encurtamento do ciclo de liberação de pagamentos de 5 dias úteis de conferência manual para processamento supervisionado pelo sistema (RNF05), mensurado sobre os gargalos TR-01 a TR-04.
 
-### 10.1.3 Escala de Valor de Negócio e Associação ao MoSCoW
+### 10.1.3 Escala de Valor de Negócio (1 a 4)
 
-Para tornar a avaliação auditável e comparável, combinou-se o método **MoSCoW** a uma **escala quantitativa de 1 a 4**:
+Para tornar a avaliação auditável e comparável, o valor de cada requisito é expresso em uma **escala quantitativa de 1 a 4**. Os **pesos de valor permanecem os previstos e validados com a cliente** na Reunião 05; não há classificação categórica adicional: a priorização decorre exclusivamente do cruzamento **Valor de Negócio × Esforço Técnico** (Matriz 4 × 4, Seção 10.4).
 
-| Pontuação | Classificação MoSCoW | Interpretação e Impacto no Negócio | Diretriz Operacional para o MVP |
+| Pontuação | Nível de Valor | Interpretação e Impacto no Negócio | Diretriz Operacional para o MVP |
 | :---: | :---: | :--- | :--- |
-| **4** | **Must have**<br>*(Mandatório / Crítico)* | **Indispensável:** sem esta funcionalidade, o sistema torna-se operacionalmente inviável ou juridicamente vulnerável. Sua ausência paralisa o processo central ou impede a substituição das rotinas manuais prioritárias. | **Inclusão obrigatória no MVP.** Bloqueante para a primeira versão operacional. |
-| **3** | **Should have**<br>*(Importante / Alta Prioridade)* | **Muito importante:** resolve atritos operacionais severos ou automatiza etapas de suporte direto ao fluxo principal. O produto ainda pode operar temporariamente sem ela mediante contorno manual assistido a curtíssimo prazo. | **Inclusão prioritária no MVP** para garantir sustentabilidade da rotina de trabalho. |
-| **2** | **Could have**<br>*(Desejável / Média Prioridade)* | **Agrega valor e conveniência:** melhora a experiência do usuário ou oferece recursos analíticos avançados, mas sua ausência não degrada a execução dos fluxos financeiros e cadastrais essenciais. | **Inclusão condicionada à capacidade residual** ou postergada para o ciclo seguinte. |
-| **1** | **Won't have now**<br>*(Postergado / Baixa Prioridade)* | **Não prioritário para a versão atual:** requisito reconhecido como valoroso para a maturidade corporativa futura, mas postergado por não atender às dores imediatas ou possuir melhor alternativa temporária. | **Fora do MVP.** Registrado formalmente no *roadmap* pós-implantação. |
+| **4** | **Muito alto**<br>*(Crítico)* | **Indispensável:** sem esta funcionalidade, o sistema torna-se operacionalmente inviável ou juridicamente vulnerável. Sua ausência paralisa o processo central ou impede a substituição das rotinas manuais prioritárias. | **Inclusão obrigatória no MVP.** Bloqueante para a primeira versão operacional. |
+| **3** | **Alto**<br>*(Importante)* | **Muito importante:** resolve atritos operacionais severos ou automatiza etapas de suporte direto ao fluxo principal. O produto ainda pode operar temporariamente sem ela mediante contorno manual assistido a curtíssimo prazo. | **Inclusão prioritária no MVP** para garantir sustentabilidade da rotina de trabalho. |
+| **2** | **Moderado**<br>*(Desejável)* | **Agrega valor e conveniência:** melhora a experiência do usuário ou oferece recursos analíticos avançados, mas sua ausência não degrada a execução dos fluxos financeiros e cadastrais essenciais. | **Inclusão condicionada à capacidade residual** ou postergada para o ciclo seguinte. |
+| **1** | **Baixo**<br>*(Postergável)* | **Não prioritário para a versão atual:** requisito reconhecido como valoroso para a maturidade corporativa futura, mas postergado por não atender às dores imediatas ou possuir melhor alternativa temporária. | **Fora do MVP.** Registrado formalmente no *roadmap* pós-implantação. |
 
 #### Rubrica de Julgamento do Valor de Negócio
 
 As notas de 1 a 4 acima são atribuídas à luz das quatro dimensões abaixo, que explicitam os parâmetros qualitativos (Seção 10.1.1) e quantitativos (Seção 10.1.2). As faixas de economia de horas são calculadas sobre a base de referência de **mais de 30 h/mês** de conferência manual da auxiliar-administradora.
 
-| Dimensão de Julgamento | **Nota 4** — Must have | **Nota 3** — Should have | **Nota 2** — Could have | **Nota 1** — Won't have now |
+| Dimensão de Julgamento | **Nota 4** — Valor muito alto | **Nota 3** — Valor alto | **Nota 2** — Valor moderado | **Nota 1** — Valor baixo |
 | :--- | :--- | :--- | :--- | :--- |
 | **D1 — Impacto nos gargalos TR-01 a TR-04** | Sem o requisito, ao menos um fluxo TR-01 a TR-04 não se completa ou não pode ser conferido. | Automatiza ou dá visibilidade a etapa de suporte direto a um TR; o TR ainda se completa com contorno assistido. | Oferece análise avançada ou comparativa (histórico, alertas, previsto × realizado) sobre dado de um TR já atendido. | Sem vínculo direto com um TR; contornável pela fase piloto. |
 | **D2 — Economia de horas administrativas** | ≥ 25% da economia mensal estimada (≈ 8 h/mês ou mais). | De 10% a 25% (≈ 3 a 8 h/mês). | Inferior a 10% (< 3 h/mês) ou ganho apenas indireto. | Sem economia mensurável no primeiro ciclo. |
 | **D3 — Risco jurídico-trabalhista, fiscal e LGPD** | Ausência gera exposição direta e imediata: reembolso sem comprovante fiscal (RN06), acesso sem autenticação a dados pessoais e bancários (RN15, RN16) ou lançamento financeiro sem base cadastral válida (RN01, RN03). | Controle preventivo ou de rastreabilidade que reduz a probabilidade ou o impacto do risco (ex.: RN04, RN14, RN23). | Risco indireto ou residual, com controle compensatório existente (ex.: gravação de logs pelo backend, RN19). | Risco tratável por suporte técnico pontual. |
 | **D4 — Frequência de operação** | Contínua: a cada apontamento, transação ou acesso, ou pré-requisito de todos os perfis. | Recorrente: por solicitação, por competência ou por evento de cadastro. | Ocasional: análise gerencial periódica ou política de manutenção. | Eventual ou de exceção. |
 
-**Regra de consolidação:** a nota final é definida pelo **maior grau atingido entre D1 e D3** (critérios eliminatórios, pois representam bloqueio de processo ou exposição de risco). As dimensões **D2 e D4** funcionam como critérios de ajuste: podem confirmar a nota ou deslocá-la em, no máximo, 1 ponto entre notas adjacentes quando divergirem de forma consistente. O resultado é correlacionado ao MoSCoW da tabela acima e define o **eixo vertical** da Matriz 4 × 4. A rubrica é um instrumento de **reprodutibilidade e revisão**: as notas já validadas com a cliente na Reunião 05 permanecem inalteradas, e as notas dos requisitos posteriores seguem preliminares até ratificação.
+**Regra de consolidação:** a nota final é definida pelo **maior grau atingido entre D1 e D3** (critérios eliminatórios, pois representam bloqueio de processo ou exposição de risco). As dimensões **D2 e D4** funcionam como critérios de ajuste: podem confirmar a nota ou deslocá-la em, no máximo, 1 ponto entre notas adjacentes quando divergirem de forma consistente. O resultado é correspondente aos níveis da escala acima e define o **eixo vertical** da Matriz 4 × 4. A rubrica é um instrumento de **reprodutibilidade e revisão**: as notas já validadas com a cliente na Reunião 05 permanecem inalteradas, e as notas dos requisitos posteriores seguem preliminares até ratificação.
 
 #### Rastreabilidade dos Gargalos (TR) para os Requisitos
 
@@ -69,21 +69,21 @@ As notas de 1 a 4 acima são atribuídas à luz das quatro dimensões abaixo, qu
 | **TR-04** | Apropriação de custo por contrato | RF09, RF10, RF11 (e RF12, RF30, RF31 como evolução analítica) | 3 / 2 |
 | **Transversal** | Base cadastral, segurança e auditoria (OE1 e OE4) | RF01, RF02, RF03, RF13, RF14, RF15, RF16, RF17, RF18, RF23, RF24, RF25, RF26 | 4 a 1 |
 
-### 10.1.4 Distribuição MoSCoW e Linha de Corte do MVP
+### 10.1.4 Distribuição por Nível de Valor e Linha de Corte do MVP
 
-O diagrama estrutural abaixo sintetiza a distribuição das quatro categorias MoSCoW e a linha de corte consolidada. O núcleo originalmente discutido com a cliente foi preservado; os requisitos incorporados ou redefinidos posteriormente aparecem como refinamento técnico preliminar até nova ratificação.
+A linha de corte é definida diretamente pelo eixo de **Valor de Negócio** da Matriz 4 × 4: requisitos de **valor 4 ou 3** compõem o MVP e requisitos de **valor 2 ou 1** seguem para o backlog de evolução. O **esforço técnico não exclui** requisitos de alto valor; ele orienta a estratégia de entrega (decomposição e redução de escopo, Seção 10.5.2). O núcleo originalmente discutido com a cliente foi preservado; os requisitos incorporados ou redefinidos posteriormente aparecem como refinamento técnico preliminar até nova ratificação.
 
 ```mermaid
 flowchart LR
-    subgraph MOSCOW["Distribuição MoSCoW dos 31 Requisitos Funcionais"]
+    subgraph NIVEIS["Distribuição por Valor de Negócio dos 31 Requisitos Funcionais"]
         direction TB
-        M["<b>MUST HAVE (Nota 4)</b><br>9 RFs (29,0%)<br>RF01, RF04, RF05, RF06, RF07, RF08, RF13, RF19, RF27"]
-        S["<b>SHOULD HAVE (Nota 3)</b><br>14 RFs (45,2%)<br>RF02, RF03, RF09, RF10, RF11, RF14, RF17, RF18, RF22, RF23, RF25, RF26, RF28, RF29"]
-        C["<b>COULD HAVE (Nota 2)</b><br>7 RFs (22,6%)<br>RF12, RF15, RF20, RF21, RF24, RF30, RF31"]
-        W["<b>WON'T HAVE NOW (Nota 1)</b><br>1 RF (3,2%)<br>RF16"]
-        M ~~~ S
-        S ~~~ C
-        C ~~~ W
+        V4["<b>VALOR 4 — Muito alto</b><br>9 RFs (29,0%)<br>RF01, RF04, RF05, RF06, RF07, RF08, RF13, RF19, RF27"]
+        V3["<b>VALOR 3 — Alto</b><br>14 RFs (45,2%)<br>RF02, RF03, RF09, RF10, RF11, RF14, RF17, RF18, RF22, RF23, RF25, RF26, RF28, RF29"]
+        V2["<b>VALOR 2 — Moderado</b><br>7 RFs (22,6%)<br>RF12, RF15, RF20, RF21, RF24, RF30, RF31"]
+        V1["<b>VALOR 1 — Baixo</b><br>1 RF (3,2%)<br>RF16"]
+        V4 ~~~ V3
+        V3 ~~~ V2
+        V2 ~~~ V1
     end
 
     subgraph DEST["Linha de Corte e Destinação"]
@@ -93,22 +93,22 @@ flowchart LR
         MVP ~~~ POST
     end
 
-    M ==> MVP
-    S ==> MVP
-    C -.-> POST
-    W -.-> POST
+    V4 ==> MVP
+    V3 ==> MVP
+    V2 -.-> POST
+    V1 -.-> POST
 
-    classDef mustClass fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff;
-    classDef shouldClass fill:#0284c7,stroke:#0369a1,stroke-width:2px,color:#ffffff;
-    classDef couldClass fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#ffffff;
-    classDef wontClass fill:#64748b,stroke:#475569,stroke-width:2px,color:#ffffff;
+    classDef v4Class fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff;
+    classDef v3Class fill:#0284c7,stroke:#0369a1,stroke-width:2px,color:#ffffff;
+    classDef v2Class fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#ffffff;
+    classDef v1Class fill:#64748b,stroke:#475569,stroke-width:2px,color:#ffffff;
     classDef mvpClass fill:#047857,stroke:#065f46,stroke-width:3px,color:#ffffff;
     classDef postClass fill:#334155,stroke:#1e293b,stroke-width:2px,color:#ffffff;
 
-    class M mustClass;
-    class S shouldClass;
-    class C couldClass;
-    class W wontClass;
+    class V4 v4Class;
+    class V3 v3Class;
+    class V2 v2Class;
+    class V1 v1Class;
     class MVP mvpClass;
     class POST postClass;
 ```
@@ -316,10 +316,10 @@ quadrantChart
 
 | Valor de Negócio ↓ / Esforço Técnico → | 1 — Baixo | 2 — Moderado | 3 — Alto | 4 — Muito alto |
 | :---: | :--- | :--- | :--- | :---: |
-| **4 — Muito alto**<br>*(Must have)* | **RF13** *(Efetuar login)*<br><br><small><strong>Prioridade máxima</strong></small> | **RF01** *(Cadastrar colaborador)*<br>**RF06** *(Homologar fechamento)*<br>**RF07** *(Submeter reembolso)*<br>**RF08** *(Deliberar reembolso)*<br>**RF19** *(Consultar apontamentos)*<br>**RF27** *(Configurar diárias técnicas)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | **RF04** *(Submeter apontamento)*<br>**RF05** *(Solicitar prévia de fechamento)*<br><br><small><strong>Avaliar viabilidade / Decompor para MVP</strong></small> | —<br><br><small><strong>Planejar, reduzir ou decompor</strong></small> |
-| **3 — Alto**<br>*(Should have)* | **RF18** *(Encerrar sessão)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | **RF02** *(Atualizar cadastro)*<br>**RF03** *(Registrar movimentação)*<br>**RF10** *(Rastreabilidade de custos)*<br>**RF11** *(Filtrar indicadores)*<br>**RF14** *(Gerenciar perfis RBAC)*<br>**RF17** *(Recuperar credenciais)*<br>**RF22** *(Anexar evidências e geolocalização)*<br>**RF23** *(Bloquear tentativas falhas)*<br>**RF25** *(Cadastrar tipo de contratação)*<br>**RF26** *(Consultar histórico cadastral/bancário)*<br>**RF28** *(Submeter adiantamento)*<br>**RF29** *(Deliberar adiantamento)*<br><br><small><strong>Candidatos ao MVP</strong></small> | **RF09** *(Apropriar custos)*<br><br><small><strong>Avaliar contexto / Reduzir escopo para MVP</strong></small> | —<br><br><small><strong>Entrega futura</strong></small> |
-| **2 — Moderado**<br>*(Could have)* | —<br><br><small><strong>Avaliar oportunidade</strong></small> | **RF24** *(Expirar senha e impedir reutilização)*<br><br><small><strong>Entrega futura / Capacidade residual</strong></small> | **RF12** *(Monitorar execução orçamentária)*<br>**RF15** *(Consultar trilha de auditoria)*<br>**RF20** *(Importar presenças auditor.ia)*<br>**RF21** *(Estornar fechamento)*<br>**RF30** *(Comparativo histórico de custos)*<br>**RF31** *(Alertas de execução orçamentária)*<br><br><small><strong>Entrega futura</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> |
-| **1 — Baixo**<br>*(Won't have now)* | —<br><br><small><strong>Avaliar oportunidade</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> | **RF16** *(Exportar relatório de auditoria)*<br><br><small><strong>Não priorizar agora</strong></small> | —<br><br><small><strong>Não priorizar agora</strong></small> |
+| **4 — Muito alto** | **RF13** *(Efetuar login)*<br><br><small><strong>Prioridade máxima</strong></small> | **RF01** *(Cadastrar colaborador)*<br>**RF06** *(Homologar fechamento)*<br>**RF07** *(Submeter reembolso)*<br>**RF08** *(Deliberar reembolso)*<br>**RF19** *(Consultar apontamentos)*<br>**RF27** *(Configurar diárias técnicas)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | **RF04** *(Submeter apontamento)*<br>**RF05** *(Solicitar prévia de fechamento)*<br><br><small><strong>Avaliar viabilidade / Decompor para MVP</strong></small> | —<br><br><small><strong>Planejar, reduzir ou decompor</strong></small> |
+| **3 — Alto** | **RF18** *(Encerrar sessão)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | **RF02** *(Atualizar cadastro)*<br>**RF03** *(Registrar movimentação)*<br>**RF10** *(Rastreabilidade de custos)*<br>**RF11** *(Filtrar indicadores)*<br>**RF14** *(Gerenciar perfis RBAC)*<br>**RF17** *(Recuperar credenciais)*<br>**RF22** *(Anexar evidências e geolocalização)*<br>**RF23** *(Bloquear tentativas falhas)*<br>**RF25** *(Cadastrar tipo de contratação)*<br>**RF26** *(Consultar histórico cadastral/bancário)*<br>**RF28** *(Submeter adiantamento)*<br>**RF29** *(Deliberar adiantamento)*<br><br><small><strong>Candidatos ao MVP</strong></small> | **RF09** *(Apropriar custos)*<br><br><small><strong>Avaliar contexto / Reduzir escopo para MVP</strong></small> | —<br><br><small><strong>Entrega futura</strong></small> |
+| **2 — Moderado** | —<br><br><small><strong>Avaliar oportunidade</strong></small> | **RF24** *(Expirar senha e impedir reutilização)*<br><br><small><strong>Entrega futura / Capacidade residual</strong></small> | **RF12** *(Monitorar execução orçamentária)*<br>**RF15** *(Consultar trilha de auditoria)*<br>**RF20** *(Importar presenças auditor.ia)*<br>**RF21** *(Estornar fechamento)*<br>**RF30** *(Comparativo histórico de custos)*<br>**RF31** *(Alertas de execução orçamentária)*<br><br><small><strong>Entrega futura</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> |
+| **1 — Baixo** | —<br><br><small><strong>Avaliar oportunidade</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> | **RF16** *(Exportar relatório de auditoria)*<br><br><small><strong>Não priorizar agora</strong></small> | —<br><br><small><strong>Não priorizar agora</strong></small> |
 
 ### 10.4.3 Fundamentação Matemática das Coordenadas Cartesianas
 
@@ -622,3 +622,4 @@ A Reunião 05 registrou a validação do núcleo funcional disponível em **24/0
 | `2.3` | 06/10/2026 | Inclusão de RF23 e RF24 (Módulo 4/CAR-07) na avaliação de valor/esforço, na Matriz 4×4 e nos diagramas MoSCoW; RF23 promovido ao MVP e RF24 postergado ao backlog. Inclusão de RNF18 a RNF20 (transversais) na classificação do MVP. | Matheus Saraiva Camargo | Matheus Ribeiro |
 | `2.4` | 07/10/2026 | Sincronização integral com a especificação atual de 31 RFs e 20 RNFs: redefinição do RF22, inclusão de RF25 a RF31, atualização da distribuição MoSCoW, Matriz 4×4, fluxo funcional, linha de corte do MVP e backlog evolutivo; atualização da integração externa para *auditor.ia*; revisão da classificação de RNF12 e RNF19; e distinção explícita entre requisitos validados na Reunião 05 e refinamentos posteriores sujeitos à ratificação da cliente. | Matheus Saraiva Camargo | Matheus Ribeiro |
 | `2.5` | 08/10/2026 | Refatoração da priorização (Unidade 2): remoção do diagrama cartesiano MoSCoW de Valor × Urgência (antiga Seção 10.1.4) com renumeração da Seção 10.1.4; inclusão da rubrica de valor (D1 a D4) e da rastreabilidade TR-01 a TR-04; faixas de horas mutuamente exclusivas e revisão de coerência do esforço técnico (Seção 10.3.1) vinculada às colunas da Matriz 4×4; setas de crescimento nos eixos do diagrama Valor × Esforço; nova Seção 10.4.3 com a fundamentação matemática das coordenadas `[x, y]` (normalização e *jitter*); renumeração da análise estratégica para 10.4.4. Nenhum requisito, nota de valor, nota de esforço ou classe consolidada foi alterado. | Eric Araújo | Matheus Ribeiro |
+| `2.6` | 10/10/2026 | Remoção integral da técnica MoSCoW: escala de valor 1 a 4 mantida com os pesos previstos pela cliente e renomeada para níveis de valor (Muito alto, Alto, Moderado, Baixo); rótulos MoSCoW removidos da rubrica, da Matriz 4×4 e do diagrama da Seção 10.1.4, agora organizado por nível de valor; linha de corte do MVP formalizada pelo eixo de valor da matriz (valor 3 ou 4 no MVP; 2 ou 1 no backlog), sem alteração dos 23 RFs do MVP nem dos 8 postergados. | Eric Araújo | Matheus Ribeiro |
