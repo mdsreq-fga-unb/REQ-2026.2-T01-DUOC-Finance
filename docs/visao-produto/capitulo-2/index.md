@@ -145,7 +145,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 <a id="car-09"></a>
 ??? note "CAR-09: Integração com Shifton e Gestão de Presenças Homologadas"
 
-    * **Valor de Negócio:** Evita a duplicação de um sistema de marcação de ponto já resolvido pela DUOC, consumindo os registros de presença homologados pelo *Shifton* (reconhecimento facial e ponto eletrônico) para apropriação financeira direta das horas aos contratos de obras (RF20), e possibilitando a emissão e exportação estruturada de relatórios/espelhos individuais de presença para conferência dos colaboradores e rotinas trabalhistas do RH (RF22).
+    * **Valor de Negócio:** Evita a duplicação de um sistema de marcação de ponto já resolvido pela DUOC, consumindo os registros de presença homologados pelo *Shifton* (reconhecimento facial e ponto eletrônico) para apropriação financeira direta das horas aos contratos de obras (RF20).
     * **Decisão Arquitetural de Origem:** [Ata da Reunião 02](../../atas/index.md) e alinhamento de escopo na [Ata da Reunião 05](../../atas/reuniao-05.md).
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
