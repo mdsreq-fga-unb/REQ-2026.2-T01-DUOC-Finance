@@ -12,11 +12,12 @@ Os resultados dessas avaliações são cruzados na **Matriz 4 × 4 (Valor de Neg
 
 ---
 
-## 10.1 Avaliação do Valor de Negócio
+<a id="101-avaliacao-do-valor-de-negocio"></a>
+## Avaliação do Valor de Negócio
 
 A Engenharia de Requisitos orientada ao valor assegura que os esforços de modelagem, prototipação ágil (*UI-First*) e implementação concentrem-se prioritariamente nas funcionalidades que geram o mais alto retorno operacional e mitigam os maiores riscos institucionais da organização parceira.
 
-### 10.1.1 Critérios Qualitativos de Negócio
+### Critérios Qualitativos de Negócio
 
 Os critérios adotados para balizar o julgamento de valor consideraram:
 
@@ -29,16 +30,16 @@ Os critérios adotados para balizar o julgamento de valor consideraram:
 3. **Mitigação de Riscos Trabalhistas e Fiscais:** requisitos que evitam pagamentos indevidos a colaboradores desligados (RN04), asseguram a comprovação fiscal em despesas (RN06) e garantem a retenção de auditoria conforme o Artigo 11 da CLT (RN19).
 4. **Segregação de Funções e Privacidade (LGPD):** proteção do sigilo de remunerações e dados bancários, impedindo que técnicos de campo visualizem dados financeiros globais (RN14, RN16).
 
-### 10.1.2 Critérios Quantitativos de Negócio
+### Critérios Quantitativos de Negócio
 
-Os parâmetros quantitativos abaixo alimentam as dimensões **D2** e **D4** (e subsidiam **D1** e **D3**) da *Rubrica de Julgamento* apresentada ao final da Seção 10.1.3:
+Os parâmetros quantitativos abaixo alimentam as dimensões **D2** e **D4** (e subsidiam **D1** e **D3**) da *Rubrica de Julgamento* apresentada a seguir:
 
 1. **Frequência e Abrangência de Uso (D4):** volume diário de transações impactadas (apontamentos de obra, reembolsos e adiantamentos contínuos versus rotinas quinzenais/mensais de fechamento), classificado em frequência contínua, recorrente, ocasional ou eventual, e abrangência de perfis atendidos (campo, gestão, financeiro e administração).
 2. **Economia de Horas Administrativas — H/mês (D2):** redução estimada de mais de 30 horas mensais gastas pela auxiliar-administradora na conferência manual de recibos físicos e conciliação de tabelas (TR-02 e TR-03). Cada requisito é avaliado pela parcela dessa economia que viabiliza: ≥ 25% (≈ 8 h/mês), de 10% a 25% (≈ 3 a 8 h/mês) ou inferior a 10%.
 3. **Prevenção de Perdas Monetárias e Exposição de Risco (D3):** eliminação de pagamentos duplicados, erros de arredondamento em comissões e reembolsos sem documento fiscal correspondente (tolerância zero a desvios, RNF06), bem como a redução da exposição jurídico-trabalhista, fiscal e de privacidade (RN04, RN06, RN19, RN14 e RN16).
 4. **Redução do Tempo de Ciclo (D1):** encurtamento do ciclo de liberação de pagamentos de 5 dias úteis de conferência manual para processamento supervisionado pelo sistema (RNF05), mensurado sobre os gargalos TR-01 a TR-04.
 
-### 10.1.3 Escala de Valor de Negócio (1 a 4)
+### Escala de Valor de Negócio (1 a 4)
 
 Para tornar a avaliação auditável e comparável, o valor de cada requisito é expresso em uma **escala quantitativa de 1 a 4**. Os **pesos de valor permanecem os previstos e validados com a cliente** na Reunião 05; não há classificação categórica adicional: a priorização decorre exclusivamente do cruzamento **Valor de Negócio × Esforço Técnico** (Matriz 4 × 4, Seção 10.4).
 
@@ -72,7 +73,7 @@ As notas de 1 a 4 acima são atribuídas à luz das quatro dimensões abaixo, qu
 | **TR-04** | Apropriação de custo por contrato | RF09, RF10, RF11 (e RF12, RF30, RF31 como evolução analítica) | 3 / 2 |
 | **Transversal** | Base cadastral, segurança e auditoria (OE1 e OE4) | RF01, RF02, RF03, RF13, RF14, RF15, RF16, RF17, RF18, RF23, RF24, RF25, RF26 | 4 a 1 |
 
-### 10.1.4 Distribuição por Nível de Valor e Linha de Corte do MVP
+### Distribuição por Nível de Valor e Linha de Corte do MVP
 
 A linha de corte é definida diretamente pelo eixo de **Valor de Negócio** da Matriz 4 × 4: requisitos de **valor 4 ou 3** compõem o MVP e requisitos de **valor 2 ou 1** seguem para o backlog de evolução. O **esforço técnico não exclui** requisitos de alto valor; ele orienta a estratégia de entrega (decomposição e redução de escopo, Seção 10.5.2). O núcleo originalmente discutido com a cliente foi preservado; os requisitos incorporados ou redefinidos posteriormente aparecem como refinamento técnico preliminar até nova ratificação.
 
@@ -118,15 +119,16 @@ flowchart LR
 
 ---
 
-## 10.2 Avaliação do Esforço Técnico
+<a id="102-avaliacao-do-esforco-tecnico"></a>
+## Avaliação do Esforço Técnico
 
 A avaliação técnica foi conduzida pela equipe de desenvolvimento e arquitetura da **Cascata Ágil**, analisando a demanda de implementação para cada um dos **31 Requisitos Funcionais**.
 
 Para manter o rigor analítico e escalas orientadas no mesmo sentido (onde **1 representa menor barreira e 4 representa maior desafio**), o esforço técnico consolidado é composto por três dimensões mensuráveis:
 
-### 10.2.1 Escalas Técnicas
+### Escalas Técnicas
 
-#### 1. Esforço de Implementação (Tempo em Horas)
+#### Esforço de Implementação (Tempo em Horas)
 
 Mede o volume de trabalho em pessoa-hora para codificação de backend, frontend, persistência e elaboração de testes automatizados:
 
@@ -137,7 +139,7 @@ Mede o volume de trabalho em pessoa-hora para codificação de backend, frontend
 | **3** | Esforço alto | Mais de 8 h até 16 h | Fluxo abrangente, com múltiplas etapas, processamentos condicionais ou manipulação de arquivos/tokens. |
 | **4** | Esforço muito alto | Mais de 16 h | Rotina de alta densidade algorítmica, concorrência crítica, reconciliação de dados em lote ou integração externa com incertezas. |
 
-#### 2. Complexidade Técnica
+#### Complexidade Técnica
 
 Avalia as dependências arquiteturais, regras de validação cruzada e requisitos de integridade transacional:
 
@@ -148,7 +150,7 @@ Avalia as dependências arquiteturais, regras de validação cruzada e requisito
 | **3** | Alta | Possui regras de negócio estritas (ex.: imutabilidade, bloqueio retroativo, validações monetárias centesimais ou upload de mídia). |
 | **4** | Muito alta | Apresenta consistência transacional ACID mandatória, segregação estrita de papéis (RBAC em camadas), trilha de auditoria atômica ou integração com sistemas externos legados. |
 
-#### 3. Lacuna de Capacidade da Equipe
+#### Lacuna de Capacidade da Equipe
 
 Mede a distância entre o domínio tecnológico/conceitual necessário e a experiência prévia dos integrantes:
 
@@ -159,7 +161,7 @@ Mede a distância entre o domínio tecnológico/conceitual necessário e a exper
 | **3** | Aprendizagem relevante | A equipe precisa desenvolver ou validar conceitos específicos (ex.: manipulação de ponto fixo centesimal, isolamento por papéis e concorrência transacional). |
 | **4** | Lacuna crítica | A equipe ainda não possui experiência prévia com o padrão ou tecnologia exigida, demandando investigação aprofundada ou prova de conceito. |
 
-### 10.2.2 Fórmula de Consolidação e Regra de Conversão
+### Fórmula de Consolidação e Regra de Conversão
 
 Para consolidar as três dimensões técnicas em um indicador único e reprodutível, adota-se a média aritmética simples:
 
@@ -189,7 +191,8 @@ Para viabilizar o cruzamento na **Matriz 4 × 4**, a média decimal é convertid
 
 ---
 
-## 10.3 Tabela Consolidada das Avaliações
+<a id="103-tabela-consolidada-das-avaliacoes"></a>
+## Tabela Consolidada das Avaliações
 
 A tabela a seguir consolida as avaliações de **todos os 31 Requisitos Funcionais** da especificação (RF01 a RF31), integrando o **Valor de Negócio**, a justificativa operacional, as três dimensões técnicas e o **Esforço Técnico Consolidado**. Para os requisitos adicionados ou redefinidos após a Reunião 05, a classificação de valor é preliminar e deverá ser ratificada em validação posterior com a cliente.
 
@@ -227,7 +230,7 @@ A tabela a seguir consolida as avaliações de **todos os 31 Requisitos Funciona
 | **RF23** | **Bloquear acesso após tentativas falhas consecutivas** | OE4 / CAR-07 | **3** | Mitiga ataques de força bruta sobre contas com acesso a dados sensíveis. | 6h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
 | **RF24** | **Expirar senha periodicamente e impedir reutilização** | OE4 / CAR-07 | **2** | Recurso adicional de política de credenciais que não é bloqueante para o primeiro ciclo operacional. | 6h (2) | 2 | 2 | 2,00 | **2 — Moderado** |
 
-### 10.3.1 Revisão e Calibração do Esforço Técnico frente à Matriz 4 × 4
+### Revisão e Calibração do Esforço Técnico frente à Matriz 4 × 4
 
 A revisão do esforço técnico verificou, requisito a requisito, a coerência analítica entre as três dimensões (horas, complexidade e lacuna de capacidade), a média consolidada e a **coluna** ocupada na Matriz 4 × 4. Foram aplicadas quatro verificações:
 
@@ -256,11 +259,13 @@ A calibração **não alterou nenhuma nota de esforço nem a classe consolidada*
 
 ---
 
-## 10.4 Matriz 4 × 4 — Valor de Negócio × Esforço Técnico
+<a id="104-matriz-4-x-4"></a>
+<a id="104-matriz-4-x-4-valor-de-negocio-x-esforco-tecnico"></a>
+## Matriz 4 × 4 — Valor de Negócio × Esforço Técnico
 
 O cruzamento bidimensional entre o **Valor de Negócio** (eixo vertical) e o **Esforço Técnico Consolidado** (eixo horizontal) posiciona os **31 requisitos funcionais** do sistema.
 
-### 10.4.1 Representação Visual da Matriz 4 × 4 (Diagrama Cartesiano)
+### Representação Visual da Matriz 4 × 4 (Diagrama Cartesiano)
 
 O gráfico cartesiano a seguir mapeia a posição relativa dos requisitos. As **setas nos eixos** indicam o sentido de crescimento das grandezas: o **esforço cresce da esquerda para a direita** (eixo x) e o **valor cresce de baixo para cima** (eixo y). Cada requisito é posicionado no centro da célula (V, E) da Matriz 4 × 4, com pequena dispersão interna para evitar sobreposição; a derivação completa de cada par `[x, y]` encontra-se na Seção 10.4.3 (*Fundamentação Matemática das Coordenadas Cartesianas*).
 
@@ -315,7 +320,7 @@ quadrantChart
     "RF16": [0.625, 0.125]
 ```
 
-### 10.4.2 Tabela da Matriz 4 × 4
+### Tabela da Matriz 4 × 4
 
 | Valor de Negócio ↓ / Esforço Técnico → | 1 — Baixo | 2 — Moderado | 3 — Alto | 4 — Muito alto |
 | :---: | :--- | :--- | :--- | :---: |
@@ -324,7 +329,7 @@ quadrantChart
 | **2 — Moderado** | —<br><br><small><strong>Avaliar oportunidade</strong></small> | **RF24** *(Expirar senha e impedir reutilização)*<br><br><small><strong>Entrega futura / Capacidade residual</strong></small> | **RF12** *(Monitorar execução orçamentária)*<br>**RF15** *(Consultar trilha de auditoria)*<br>**RF20** *(Importar presenças Shifton)*<br>**RF21** *(Estornar fechamento)*<br>**RF30** *(Comparativo histórico de custos)*<br>**RF31** *(Alertas de execução orçamentária)*<br><br><small><strong>Entrega futura</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> |
 | **1 — Baixo** | —<br><br><small><strong>Avaliar oportunidade</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> | **RF16** *(Exportar relatório de auditoria)*<br><br><small><strong>Não priorizar agora</strong></small> | —<br><br><small><strong>Não priorizar agora</strong></small> |
 
-### 10.4.3 Fundamentação Matemática das Coordenadas Cartesianas
+### Fundamentação Matemática das Coordenadas Cartesianas
 
 As coordenadas `[x, y]` do diagrama da Seção 10.4.1 **não são estimativas visuais**: derivam deterministicamente das duas notas ordinais da Matriz 4 × 4 — **V** (Valor de Negócio, Seção 10.3) e **E** (Esforço Consolidado, Seção 10.2.2) — por meio de duas etapas: *normalização* (posiciona o requisito no centro da célula) e *dispersão* (*jitter* determinístico que evita a sobreposição de requisitos que ocupam a mesma célula).
 
@@ -404,7 +409,7 @@ Onde `c` (0 a k−1) é a coluna e `r` (0 a m−1) é a linha do requisito na gr
 !!! note "Auditabilidade e manutenção"
     As colunas **E** e **V** reproduzem exatamente a Tabela Consolidada (Seção 10.3) e a Tabela da Matriz 4 × 4 (Seção 10.4.2). Ao incluir ou reclassificar um requisito, basta recalcular `(x_base, y_base)`, reordenar a célula afetada e reaplicar a Etapa 2. A posição dentro da célula é apenas um recurso de legibilidade: **não possui significado analítico** — vale somente a célula (V, E).
 
-### 10.4.4 Análise Estratégica dos Quadrantes
+### Análise Estratégica dos Quadrantes
 
 1. **Prioridade máxima e fortes candidatos ao MVP (alto valor × baixo/moderado esforço):**
     - **RF13** e **RF18** apresentam esforço muito baixo e atendem diretamente ao controle de sessão.
@@ -418,11 +423,12 @@ Onde `c` (0 a k−1) é a coluna e `r` (0 a m−1) é a linha do requisito na gr
 
 ---
 
-## 10.5 Definição dos Requisitos Funcionais do MVP
+<a id="105-definicao-dos-requisitos-funcionais-do-mvp"></a>
+## Definição dos Requisitos Funcionais do MVP
 
 A delimitação do Produto Mínimo Viável não se resumiu a agrupar funcionalidades fáceis. O corte considerou a formação de um **fluxo operacional minimamente completo, coerente e autossuficiente**, capaz de sanar as maiores dores da DUOC no primeiro ciclo de uso e, ao mesmo tempo, manter explícita a distinção entre itens já validados com a cliente e refinamentos posteriores sujeitos à ratificação.
 
-### 10.5.2 Tratamento dos Requisitos de Alto Valor e Alto Esforço
+### Tratamento dos Requisitos de Alto Valor e Alto Esforço
 
 Requisitos posicionados na combinação de **Valor 4 e Esforço 3** (ou Valor 3 e Esforço 3) poderiam ser vistos como fatores de risco. No entanto, por constituírem etapas indispensáveis da cadeia de valor, adotou-se a seguinte estratégia de **redução de escopo e decomposição**:
 
@@ -432,7 +438,7 @@ Requisitos posicionados na combinação de **Valor 4 e Esforço 3** (ou Valor 3 
 | **RF05** | **Solicitar prévia de fechamento** | Consolidação de apontamentos e cálculo automático de diárias. | **Escopo concentrado:** a prévia utiliza as regras contratuais ativas e os valores vigentes de diárias técnicas, sem incorporar encargos e provisões da folha CLT mantidos nos sistemas contábeis externos. |
 | **RF09** | **Apropriar custos operacionais** | Múltiplas transações vinculando despesas a contratos e centros de custo. | **Apropriação direta:** o motor vincula os lotes homologados de diárias e reembolsos diretamente ao contrato ativo, deixando comparativos históricos e alertas orçamentários avançados para a evolução do produto. |
 
-### 10.5.3 Lista Consolidada dos Requisitos Funcionais do MVP
+### Lista Consolidada dos Requisitos Funcionais do MVP
 
 A linha de corte consolidada contempla **23 Requisitos Funcionais**, cobrindo os fluxos essenciais de governança, cadastro, campo, fechamento, prestação de contas e apropriação. Os itens incorporados ou redefinidos após a Reunião 05 permanecem sujeitos à ratificação formal da cliente.
 
@@ -462,7 +468,7 @@ A linha de corte consolidada contempla **23 Requisitos Funcionais**, cobrindo os
 | **RF18** | Encerrar sessão manualmente | Módulo 4 (OE4) | CAR-07 | **3** | **1** | Permite invalidar imediatamente a sessão ativa. |
 | **RF23** | Bloquear acesso após tentativas falhas consecutivas | Módulo 4 (OE4) | CAR-07 | **3** | **2** | Reduz risco de ataques de força bruta. |
 
-### 10.5.4 Requisitos Funcionais Postergados (Backlog Pós-MVP)
+### Requisitos Funcionais Postergados (Backlog Pós-MVP)
 
 Os **8 requisitos** abaixo ficam alocados para a **Fase 2 (Pós-MVP)** ou release posterior:
 
@@ -479,11 +485,12 @@ Os **8 requisitos** abaixo ficam alocados para a **Fase 2 (Pós-MVP)** ou releas
 
 ---
 
-## 10.6 Tratamento dos Requisitos Não Funcionais (RNFs)
+<a id="106-tratamento-dos-requisitos-nao-funcionais-rnfs"></a>
+## Tratamento dos Requisitos Não Funcionais (RNFs)
 
 Os atributos de qualidade e restrições técnicas do sistema receberam análise individualizada e foram vinculados ao escopo do MVP, garantindo que aspectos críticos de segurança, confiabilidade, desempenho, acessibilidade e conformidade acompanhem a primeira versão operacional.
 
-### 10.6.1 Metodologia de Classificação dos RNFs
+### Metodologia de Classificação dos RNFs
 
 Cada um dos **20 RNFs** especificados no [Capítulo 8: Requisitos de Software](index.md) foi enquadrado em uma das quatro categorias:
 
@@ -492,7 +499,7 @@ Cada um dos **20 RNFs** especificados no [Capítulo 8: Requisitos de Software](i
 3. **Evolutivo:** atributo pertinente ao produto, mas associado a funcionalidade postergada ou dependente de infraestrutura prevista para ciclos posteriores.
 4. **Não Aplicável ao MVP:** requisito sem incidência sobre o recorte operacional da primeira versão.
 
-### 10.6.2 Tabela de Classificação e Vinculação dos RNFs ao MVP
+### Tabela de Classificação e Vinculação dos RNFs ao MVP
 
 | Código | Requisito Não Funcional Verificável | URPS+ | Sommerville | RFs Vinculados | Categoria no MVP | Critério Mensurável e Justificativa de Enquadramento |
 | :---: | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -517,7 +524,7 @@ Cada um dos **20 RNFs** especificados no [Capítulo 8: Requisitos de Software](i
 | **RNF19** | Acessibilidade digital nas interfaces | Usability | Requisito do Produto | Transversal | **Obrigatório para o MVP** | Navegação por teclado, rótulos ARIA, contraste mínimo 4.5:1 e conformidade com WCAG 2.1 nível AA. |
 | **RNF20** | Integridade de payloads nas rotas de escrita da API | Reliability / Security (+) | Requisito do Produto | Transversal | **Obrigatório para o MVP** | 100% das requisições POST, PUT e PATCH validadas contra schema; payload inválido retorna HTTP 400 estruturado. |
 
-### 10.6.3 Síntese Numérica da Distribuição dos RNFs
+### Síntese Numérica da Distribuição dos RNFs
 
 - **Obrigatórios para o MVP:** **10 requisitos (50,0%)** — *RNF03, RNF10, RNF13, RNF14, RNF15, RNF16, RNF17, RNF18, RNF19 e RNF20*.
 - **Associados a RFs do MVP:** **8 requisitos (40,0%)** — *RNF02, RNF04, RNF05, RNF06, RNF07, RNF09, RNF11 e RNF12*.
@@ -527,11 +534,12 @@ Cada um dos **20 RNFs** especificados no [Capítulo 8: Requisitos de Software](i
 
 ---
 
-## 10.7 Evidência e Registro da Validação do MVP com o Cliente
+<a id="107-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
+## Evidência e Registro da Validação do MVP com o Cliente
 
 A Reunião 05 registrou a validação do núcleo funcional disponível em **24/09/2026**. O escopo foi posteriormente refinado pela equipe com novos requisitos e com a redefinição de alguns itens; essas alterações posteriores permanecem explicitamente marcadas como **preliminares** até nova ratificação da cliente.
 
-### 10.7.1 Ficha Técnica da Sessão de Validação
+### Ficha Técnica da Sessão de Validação
 
 - **Data e Horário:** 24 de setembro de 2026, das 19h30 às 20h45 (GMT-03:00).
 - **Formato:** reunião síncrona por videoconferência via Google Meet, conforme registro interno da equipe.
@@ -540,7 +548,7 @@ A Reunião 05 registrou a validação do núcleo funcional disponível em **24/0
     - **Membros da Equipe Cascata Ágil:** Eric Araújo (Product Owner e condução da sessão), Matheus Ribeiro (Scrum Master e Co-PO), Giovana Ferreira (Engenheira Frontend e UI/UX), Paulo Nery (Engenheiro Backend), Matheus Saraiva Camargo (Arquiteto de Software e Banco de Dados), Gustavo Bonifácio (QA e Testes) e Lucas Zanetti (Garantia de Qualidade).
 - **Registro Detalhado:** a ata formal com os debates e deliberações encontra-se publicada na [Ata da Reunião 05](../atas/reuniao-05.md).
 
-### 10.7.2 Quadro de Deliberações e Aceite de Escopo
+### Quadro de Deliberações e Aceite de Escopo
 
 !!! note "Atualizações posteriores à validação"
 

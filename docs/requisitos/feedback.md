@@ -4,7 +4,7 @@ Este documento formaliza o registro, a deliberação crítica, o rastreamento da
 
 ---
 
-## 8.1 Visão Geral e Critérios Metodológicos
+## Visão Geral e Critérios Metodológicos
 
 !!! info "Dados da Avaliação por Pares"
     - **Equipe Avaliadora:** Guerreiros do Backlog  
@@ -13,7 +13,7 @@ Este documento formaliza o registro, a deliberação crítica, o rastreamento da
     - **Entrega / Ciclo:** Unidade 2 — Detalhamento e Backlog  
     - **Abrangência:** Transversal sobre os Objetivos Específicos OE1, OE2, OE3 e OE4  
 
-### 8.1.1 Categorias de Deliberação
+### Categorias de Deliberação
 
 Para assegurar governança, transparência e reprodutibilidade, cada feedback catalogado é submetido a análise e recebe uma das quatro deliberações oficiais:
 
@@ -24,7 +24,7 @@ Para assegurar governança, transparência e reprodutibilidade, cada feedback ca
 | **Não Aceito** | O apontamento é recusado e a formulação original é mantida por motivos técnicos, de domínio ou metodológicos. | Apresentação de contra-argumento técnico fundamentado nas regras de negócio da DUOC. |
 | **Não Aplicável** | O apontamento não se aplica ao escopo do MVP, confunde responsabilidades ou foge da taxonomia adotada. | Justificativa de descarte por desvio de escopo, nível de abstração ou premissa inválida. |
 
-### 8.1.2 Diretrizes de Refatoração Aplicadas
+### Diretrizes de Refatoração Aplicadas
 
 1. **Requisitos Funcionais (RFs):** Garantia estrita do padrão sintático `[Verbo no Infinitivo] + [Objeto Mensurável]`, eliminando formulações no presente do indicativo ou ambiguidades operacionais. Cada RF conta com um critério de aceitação em texto corrido, que descreve de forma verificável o que o usuário consegue fazer e o resultado esperado.
 2. **Requisitos Não Funcionais (RNFs):** Garantia de critérios objetivos e mensuráveis (tempo em segundos, percentual de disponibilidade, taxa de conclusão, conformidade com normas), aderentes ao modelo **URPS+** e taxonomia de **Sommerville**.
@@ -32,7 +32,7 @@ Para assegurar governança, transparência e reprodutibilidade, cada feedback ca
 
 ---
 
-## 8.2 Painel Quantitativo de Deliberações
+## Painel Quantitativo de Deliberações
 
 A tabela a seguir resume a distribuição quantitativa das deliberações sobre os apontamentos catalogados.
 
@@ -48,9 +48,9 @@ A tabela a seguir resume a distribuição quantitativa das deliberações sobre 
 
 ---
 
-## 8.3 Matriz de Registro e Decisões de Feedbacks
+## Matriz de Registro e Decisões de Feedbacks
 
-### 8.3.1 Apontamentos Gerais e Metodológicos
+### Apontamentos Gerais e Metodológicos
 
 | ID | Item / Seção Alvo | Apontamento da Equipe Avaliadora | Deliberação | Justificativa & Decisão Técnica | Ação / Impacto no Artefato |
 | :---: | :--- | :--- | :---: | :--- | :--- |
@@ -58,7 +58,7 @@ A tabela a seguir resume a distribuição quantitativa das deliberações sobre 
 
 ---
 
-### 8.3.2 Requisitos Funcionais (RFs)
+### Requisitos Funcionais (RFs)
 
 | ID | Requisito Alvo | Apontamento da Equipe Avaliadora | Deliberação | Justificativa & Decisão Técnica | Ação / Impacto no Artefato |
 | :---: | :--- | :--- | :---: | :--- | :--- |
@@ -70,7 +70,7 @@ A tabela a seguir resume a distribuição quantitativa das deliberações sobre 
 
 ---
 
-### 8.3.3 Requisitos Não Funcionais (RNFs)
+### Requisitos Não Funcionais (RNFs)
 
 | ID | Requisito Alvo | Apontamento da Equipe Avaliadora | Deliberação | Justificativa & Decisão Técnica | Ação / Impacto no Artefato |
 | :---: | :--- | :--- | :---: | :--- | :--- |
@@ -80,7 +80,7 @@ A tabela a seguir resume a distribuição quantitativa das deliberações sobre 
 
 ---
 
-### 8.3.4 Regras de Negócio e Rastreabilidade
+### Regras de Negócio e Rastreabilidade
 
 | ID | Item Alvo | Apontamento da Equipe Avaliadora | Deliberação | Justificativa & Decisão Técnica | Ação / Impacto no Artefato |
 | :---: | :--- | :--- | :---: | :--- | :--- |
@@ -90,11 +90,11 @@ A tabela a seguir resume a distribuição quantitativa das deliberações sobre 
 ---
 
 <a id="matriz-antes-depois"></a>
-## 8.4 Matriz Rastreável de Transformação dos Requisitos: Comparativo "Antes vs. Depois"
+## Matriz Rastreável de Transformação dos Requisitos: Comparativo "Antes vs. Depois"
 
 Para atender de forma inequívoca às exigências de **rastreabilidade bidirecional e auditoria de mudanças** da Engenharia de Requisitos, a tabela e os detalhamentos a seguir confrontam o **Estado Anterior (Antes do Feedback / Versão Preliminar)** com o **Estado Refatorado (Depois do Ajuste / Especificação Vigente)** de cada elemento alterado no [Capítulo 8: Requisitos de Software](index.md):
 
-### 8.4.1 Quadro Consolidado "Antes vs. Depois"
+### Quadro Consolidado "Antes vs. Depois"
 
 | ID Feedback | Código / Item | Estado Anterior (Antes do Feedback / Versão Preliminar) | Estado Refatorado (Depois do Ajuste na Especificação Vigente) | Ganho de Engenharia & Testabilidade | Caso de Teste Associado |
 | :---: | :---: | :--- | :--- | :--- | :---: |
@@ -112,9 +112,9 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 
 ---
 
-### 8.4.2 Detalhamento de Transformações nos Requisitos Funcionais (RFs)
+### Detalhamento de Transformações nos Requisitos Funcionais (RFs)
 
-#### 1. Inclusão dos Requisitos de Gestão de Presenças na CAR-09 (`FB-02`)
+#### Inclusão dos Requisitos de Gestão de Presenças na CAR-09 (`FB-02`)
 
 === "Antes do Ajuste (Versão Preliminar)"
     A CAR-09 figurava na visão de produto, mas não possuía nenhum requisito associado na especificação de requisitos:
@@ -134,7 +134,7 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 
 ---
 
-#### 2. Inclusão da Consulta de Apontamentos de Campo na CAR-02 (`FB-03`)
+#### Inclusão da Consulta de Apontamentos de Campo na CAR-02 (`FB-03`)
 
 === "Antes do Ajuste (Versão Preliminar)"
     O Módulo 1 possuía apenas o envio do formulário, sem qualquer mecanismo de retorno:
@@ -153,7 +153,7 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 
 ---
 
-#### 3. Inclusão de Recuperação de Senha e Logout Manual na CAR-07 (`FB-04` e `FB-05`)
+#### Inclusão de Recuperação de Senha e Logout Manual na CAR-07 (`FB-04` e `FB-05`)
 
 === "Antes do Ajuste (Versão Preliminar)"
     CAR-07 possuía apenas o login com senha e o gerenciamento de perfis:
@@ -175,7 +175,7 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 
 ---
 
-#### 4. Inclusão do Estorno Financeiro na CAR-03 (`FB-09`)
+#### Inclusão do Estorno Financeiro na CAR-03 (`FB-09`)
 
 === "Antes do Ajuste (Versão Preliminar)"
     O fechamento financeiro cobria apenas a prévia e a homologação:
@@ -195,9 +195,9 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 
 ---
 
-### 8.4.3 Detalhamento de Transformações nos Requisitos Não Funcionais (RNFs)
+### Detalhamento de Transformações nos Requisitos Não Funcionais (RNFs)
 
-#### 1. Reformulação do Critério Mensurável do RNF04 (`FB-06`)
+#### Reformulação do Critério Mensurável do RNF04 (`FB-06`)
 
 === "Antes do Ajuste (Versão Preliminar)"
     | Código | Requisito Verificável | Critério Mensurável Anterior |
@@ -214,7 +214,7 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 
 ---
 
-#### 2. Reformulação de Capacidade e Alerta do RNF01 (`FB-07`)
+#### Reformulação de Capacidade e Alerta do RNF01 (`FB-07`)
 
 === "Antes do Ajuste (Versão Preliminar)"
     | Código | Requisito Verificável | Critério Mensurável Anterior |
@@ -231,7 +231,7 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 
 ---
 
-#### 3. Criação do Requisito de Backup Automatizado — RNF17 (`FB-08`)
+#### Criação do Requisito de Backup Automatizado — RNF17 (`FB-08`)
 
 === "Antes do Ajuste (Versão Preliminar)"
     A especificação não possuía nenhum requisito de backup ou tolerância a falhas físicas:
@@ -251,7 +251,7 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 
 ---
 
-### 8.4.4 Detalhamento de Transformações nas Regras de Negócio (`FB-10`)
+### Detalhamento de Transformações nas Regras de Negócio (`FB-10`)
 
 === "Antes do Ajuste (Versão Preliminar)"
     !!! warning "Estado anterior"
@@ -271,7 +271,7 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 
 ---
 
-## 8.5 Rastreabilidade de Impacto nos Artefatos de Requisitos
+## Rastreabilidade de Impacto nos Artefatos de Requisitos
 
 Mapeamento consolidado das seções e artefatos modificados em decorrência das deliberações de feedback e do comparativo "Antes vs. Depois":
 
@@ -287,7 +287,7 @@ Mapeamento consolidado das seções e artefatos modificados em decorrência das 
 
 ---
 
-## 8.6 Checklist de Validação e Homologação Interna
+## Checklist de Validação e Homologação Interna
 
 - [x] Todos os 11 apontamentos enviados pela equipe avaliadora foram catalogados com ID único e rastreável.
 - [x] 100% dos feedbacks receberam uma das quatro deliberações formais com justificativa técnica explícita.

@@ -4,7 +4,7 @@ Este documento consolida a especificação de **requisitos funcionais** e **não
 
 ---
 
-## 8.1 Visão Geral e Modelo Metodológico
+## Visão Geral e Modelo Metodológico
 
 Para assegurar o rigor analítico, a testabilidade e a rastreabilidade exigidos pela disciplina de Engenharia de Requisitos, a especificação adota os seguintes pilares metodológicos:
 
@@ -25,7 +25,7 @@ Para assegurar o rigor analítico, a testabilidade e a rastreabilidade exigidos 
 
 ---
 
-## 8.2 Rastreabilidade Estratégica e Diagramas Visuais
+## Rastreabilidade Estratégica e Diagramas Visuais
 
 A rastreabilidade entre a estratégia corporativa da DUOC e a engenharia de software é formalizada pelos diagramas a seguir.
 
@@ -70,7 +70,7 @@ O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução
 
 ---
 
-## 8.3 Especificação Modular dos Requisitos
+## Especificação Modular dos Requisitos
 
 Esta seção consolida a especificação detalhada dos requisitos do ***DUOC Finance***, decomposta em **quatro módulos de negócio** que respondem diretamente aos Objetivos Específicos (OE1 a OE4) e suas Características de Produto (CAR), além de uma aba dedicada aos **Requisitos Não Funcionais Transversais** da plataforma.
 
@@ -89,7 +89,7 @@ Utilize as abas interativas abaixo para alternar entre os módulos e consultar a
 
     <a id="oe1-padronizacao-e-unificacao-de-dados"></a>
     <a id="oe1"></a>
-    ### 8.3.1 Módulo 1 (OE1) — Padronização e Unificação de Dados
+    ### Módulo 1 (OE1) — Padronização e Unificação de Dados
 
     Esta seção detalha os requisitos da **DUOC Finance** associados ao **OE1 — Padronizar e Unificar os Dados**. O módulo cobre as características **CAR-01 — Gestão Cadastral Unificada de Pessoal** e **CAR-02 — Apontamento Móvel de Atividades e Registros de Campo**, além do requisito de integração associado à **CAR-09** (presenças homologadas do *Shifton*).
 
@@ -157,7 +157,7 @@ Utilize as abas interativas abaixo para alternar entre os módulos e consultar a
 
     <a id="oe2-eficiencia-administrativo-financeira"></a>
     <a id="oe2"></a>
-    ### 8.3.2 Módulo 2 (OE2) — Eficiência Administrativo-Financeira
+    ### Módulo 2 (OE2) — Eficiência Administrativo-Financeira
 
     Esta seção detalha os requisitos da **DUOC Finance** associados ao **OE2 — Aumentar a Eficiência Administrativo-Financeira**. O módulo cobre as características **CAR-03 — Motor de Processamento e Fechamento Financeiro** e **CAR-04 — Fluxo Digital de Prestação de Contas e Reembolsos**.
 
@@ -224,7 +224,7 @@ Utilize as abas interativas abaixo para alternar entre os módulos e consultar a
 
     <a id="oe3-inteligencia-de-custos-por-contrato"></a>
     <a id="oe3"></a>
-    ### 8.3.3 Módulo 3 (OE3) — Inteligência de Custos por Contrato
+    ### Módulo 3 (OE3) — Inteligência de Custos por Contrato
 
     Esta seção detalha os requisitos da **DUOC Finance** associados ao **OE3 — Transparecer as informações sobre os Custos por Contrato**. O módulo cobre as características **CAR-05 — Apropriação e Rastreabilidade de Custos por Contrato** e **CAR-06 — Painel Analítico de Custo Apropriado e Desvio Orçamentário por Projeto**.
 
@@ -283,7 +283,7 @@ Utilize as abas interativas abaixo para alternar entre os módulos e consultar a
 
     <a id="oe4-governanca-seguranca-e-rastreabilidade"></a>
     <a id="oe4"></a>
-    ### 8.3.4 Módulo 4 (OE4) — Governança, Segurança e Rastreabilidade
+    ### Módulo 4 (OE4) — Governança, Segurança e Rastreabilidade
 
     Esta seção detalha os requisitos da **DUOC Finance** associados ao **OE4 — Garantir Segurança e Governança de Dados**. O módulo cobre as características **CAR-07 — Controle de Acesso Baseado em Papéis (RBAC)** e **CAR-08 — Trilha de Auditoria e Histórico de Operações Sensíveis**.
 
@@ -347,7 +347,7 @@ Utilize as abas interativas abaixo para alternar entre os módulos e consultar a
     <div class="module-spec-pane" markdown="1">
 
     <a id="requisitos-nao-funcionais-transversais"></a>
-    ### 8.3.5 Requisitos Não Funcionais Transversais (Universal)
+    ### Requisitos Não Funcionais Transversais (Universal)
 
     Os requisitos abaixo aplicam-se à plataforma como um todo, não estando vinculados a um único Objetivo Específico.
 
@@ -372,7 +372,7 @@ Utilize as abas interativas abaixo para alternar entre os módulos e consultar a
 ---
 
 <a id="matriz-sintese-geral-de-rastreabilidade"></a>
-## 8.4 Matriz-Síntese Geral de Rastreabilidade
+## Matriz-Síntese Geral de Rastreabilidade
 
 A matriz a seguir consolida a **rastreabilidade bidirecional global** entre os Objetivos Específicos (OE), as Características do Produto (CAR), seus respectivos Valores de Negócio (VN), os Requisitos Funcionais (RF), os Requisitos Não Funcionais (RNF) e a suíte executável de Casos de Teste (CT) do sistema.
 
@@ -648,13 +648,13 @@ Utilize as abas abaixo para consultar o detalhamento metodológico e a síntese 
 
 <a id="catalogo-geral-consolidado"></a>
 
-## 8.5 Catálogo Geral Consolidado de Requisitos
+## Catálogo Geral Consolidado de Requisitos
 
 Esta seção consolida os requisitos funcionais e não funcionais do **DUOC Finance** em uma visão única, permitindo a consulta rápida de sua identificação, vínculo estratégico, alocação modular e participação preliminar no MVP. Esta seção atende diretamente ao escopo consolidado das seções **8.1 (Lista de Requisitos Funcionais)** e **8.2 (Lista de Requisitos Não Funcionais)** preconizadas pelo Template Oficial da disciplina.
 
 A indicação de MVP apresentada neste catálogo representa o recorte atual do produto e deverá permanecer sincronizada com a priorização formal apresentada no [Priorização de Requisitos e Definição do MVP](priorizacao.md), em especial a Matriz 4 × 4 (Valor de Negócio × Esforço Técnico) e a Fundamentação Matemática das Coordenadas Cartesianas (Seção 10.4).
 
-### 8.5.1 Catálogo de Requisitos Funcionais
+### Catálogo de Requisitos Funcionais
 
 | Código | Nome | Módulo / OE | CAR | Prioridade / MVP | Resumo |
 | :---: | :--- | :---: | :---: | :---: | :--- |
@@ -690,7 +690,7 @@ A indicação de MVP apresentada neste catálogo representa o recorte atual do p
 | **RF30** | Consultar comparativo histórico de custos entre contratos | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | CAR-05 | Evolutivo | Permite comparar custos consolidados de diferentes contratos e suas variações históricas. |
 | **RF31** | Configurar alertas de execução orçamentária | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | CAR-06 | Evolutivo | Permite definir limites de execução orçamentária e gerar alertas quando esses limites forem atingidos. |
 
-### 8.5.2 Catálogo de Requisitos Não Funcionais
+### Catálogo de Requisitos Não Funcionais
 
 | Código | Requisito | Módulo / Universal | URPS+ | Sommerville | Critério Mensurável | Alocação no MVP |
 | :---: | :--- | :---: | :--- | :--- | :--- | :---: |
