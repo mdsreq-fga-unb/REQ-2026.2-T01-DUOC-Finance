@@ -18,15 +18,15 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 ---
 
 <a id="21-e-22-objetivos-do-produto"></a>
-## 2.1 e 2.2 Objetivos do Produto
+## Objetivos do Produto
 
-### 2.1 Objetivo Geral do Produto
+### Objetivo Geral do Produto
 
 > **Centralizar o fluxo de informações sobre gestão administrativa da DUOC Arquitetura e Engenharia em um único sistema, assegurando a sustentabilidade de seus projetos sob contrato.**
 
 ---
 
-### 2.2 Objetivos Específicos (OE) do Produto
+### Objetivos Específicos (OE) do Produto
 
 <a id="oe1-padronizar-e-unificar-os-dados"></a>
 <a id="oe1-padronizacao-e-unificacao-de-dados-operacionais"></a>
@@ -63,7 +63,7 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 ---
 
 <a id="23-caracteristicas-do-produto-car"></a>
-## 2.3 Características do Produto (CAR)
+## Características do Produto (CAR)
 
 As características do produto descrevem as capacidades funcionais do **DUOC Finance** no escopo do MVP, mapeadas diretamente aos Objetivos Específicos do negócio.
 
@@ -145,7 +145,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 <a id="car-09"></a>
 ??? note "CAR-09: Integração com Shifton e Gestão de Presenças Homologadas"
 
-    * **Valor de Negócio:** Evita a duplicação de um sistema de marcação de ponto já resolvido pela DUOC, consumindo os registros de presença homologados pelo *Shifton* (reconhecimento facial e ponto eletrônico) para apropriação financeira direta das horas aos contratos de obras (RF20), e possibilitando a emissão e exportação estruturada de relatórios/espelhos individuais de presença para conferência dos colaboradores e rotinas trabalhistas do RH (RF22).
+    * **Valor de Negócio:** Evita a duplicação de um sistema de marcação de ponto já resolvido pela DUOC, consumindo os registros de presença homologados pelo *Shifton* (reconhecimento facial e ponto eletrônico) para apropriação financeira direta das horas aos contratos de obras (RF20).
     * **Decisão Arquitetural de Origem:** [Ata da Reunião 02](../../atas/index.md) e alinhamento de escopo na [Ata da Reunião 05](../../atas/reuniao-05.md).
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
@@ -178,7 +178,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 ---
 
 <a id="24-tecnologias-a-serem-utilizadas-e-arquitetura"></a>
-## 2.4 Tecnologias a Serem Utilizadas e Arquitetura
+## Tecnologias a Serem Utilizadas e Arquitetura
 
 Nesta seção são formalizadas as decisões de arquitetura e a composição da stack tecnológica selecionada para a construção do **DUOC Finance**. Cada escolha técnica foi fundamentada em critérios objetivos de engenharia de software: integridade transacional de dados financeiros, segurança da informação (LGPD), ergonomia de uso em campo (*mobile-first*), domínio técnico prévio da equipe e viabilidade de manutenção no semestre letivo.
 
@@ -201,7 +201,7 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
 | **Integração Contínua (CI/CD)** | GitHub Actions | :simple-githubactions: | Pipelines automatizadas para linting, validações de tipagem (`tsc`) e testes |
 | **Documentação Viva** | MkDocs Material | | Abordagem *Docs as Code* versionada com suporte a Markdown, tabelas e Mermaid |
 
-### 1. Banco de Dados Relacional
+### Banco de Dados Relacional
 
 <div class="tech-tags" markdown="1">
 <span class="tech-tag">:simple-postgresql: PostgreSQL</span>
@@ -214,7 +214,7 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
 * **Gerenciamento de Schema via Scripts de Migration:** O versionamento do banco de dados é automatizado por scripts de *migration* executados no pipeline de inicialização da aplicação, garantindo que todos os ambientes (desenvolvimento e produção) mantenham schemas idênticos.
 * **Segurança e LGPD:** O PostgreSQL oferece suporte maduro a criptografia em repouso e em trânsito (SSL/TLS), além de mecanismos de controle de privilégios em nível de linha (*Row Level Security - RLS*), resguardando informações salariais e dados bancários confidenciais.
 
-### 2. Backend e Arquitetura Física
+### Backend e Arquitetura Física
 
 <div class="tech-tags" markdown="1">
 <span class="tech-tag">:fontawesome-brands-node-js: Node.js</span>
@@ -229,7 +229,7 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
   * **Autorização Baseada em Papéis (RBAC — Role-Based Access Control):** Controle granular de acesso baseado em *Guards* e *Decorators* na API, validando permissões por perfis de acesso definidos na regra de negócio (ex.: `ADMINISTRADOR`, `GESTOR_OBRA`, `COLABORADOR`).
 * **Automação via Scripts CLI:** A base de código conta com scripts automatizados via `package.json` para tarefas recorrentes de *seed* de dados sintéticos para testes, execução de suítes de teste de integração e geração de build de produção.
 
-### 3. Frontend
+### Frontend
 
 <div class="tech-tags" markdown="1">
 <span class="tech-tag">:fontawesome-brands-react: React</span>
@@ -243,7 +243,7 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
 * **Justificativa Técnica:** O ecossistema React suporta a criação de interfaces reativas e modulares. O utilitário de build *Vite* proporciona recarregamento rápido em desenvolvimento e empacotamento otimizado de ativos estáticos, garantindo alto desempenho e baixo consumo de dados tanto em estações de trabalho quanto em dispositivos móveis conectados via redes 4G/5G nos canteiros de obra.
 * **Ergonomia e Usabilidade (IHC):** O uso do Tailwind CSS aliado ao Shadcn UI viabiliza o desenvolvimento guiado por utilitários com suporte nativo a *design tokens*. Permite a rápida prototipação de componentes com paleta de cores de alto contraste, otimizados para leitura sob incidência de luz solar direta e com áreas de toque ampliadas para operação em smartphones nos canteiros.
 
-### 4. Domínio da Equipe e Capacidade Operacional
+### Domínio da Equipe e Capacidade Operacional
 
 <div class="tech-tags" markdown="1">
 <span class="tech-tag">:simple-typescript: TypeScript</span>
@@ -254,7 +254,7 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
 
 As escolhas do ecossistema **TypeScript/JavaScript (Node.js + React)** e do banco **PostgreSQL** levaram em consideração a maturidade e o domínio prévio de código dos membros da equipe de desenvolvimento. A padronização de uma única linguagem (TypeScript) tanto no Frontend quanto no Backend minimiza o contexto cognitivo de transição, acelera o reaproveitamento de interfaces/DTOs entre as camadas e garante entregas rápidas e previsíveis no ciclo de vida das Unidades de entrega do projeto.
 
-### 5. Infraestrutura, Hospedagem e CI/CD
+### Infraestrutura, Hospedagem e CI/CD
 
 <div class="tech-tags" markdown="1">
 <span class="tech-tag">:fontawesome-brands-docker: Docker</span>
@@ -272,7 +272,7 @@ As escolhas do ecossistema **TypeScript/JavaScript (Node.js + React)** e do banc
 ---
 
 <a id="25-pesquisa-de-mercado-e-analise-competitiva"></a>
-## 2.5 Pesquisa de Mercado e Análise Competitiva
+## Pesquisa de Mercado e Análise Competitiva
 
 ### Cenário de Mercado: Softwares de Prateleira (COTS) vs. Demanda Real
 
@@ -316,19 +316,19 @@ O DUOC Finance não pretende atuar como um ERP genérico e massivo de engenharia
       custo por contrato.       da DUOC (Anti-Bloatware). conformidade legal.
 ```
 
-#### 1. Hub Centralizador e Orquestrador do Fluxo Administrativo
+#### Hub Centralizador e Orquestrador do Fluxo Administrativo
 * **Captura no Campo:** A equipe técnica registra ponto e RVT em interface ágil, no próprio canteiro de serviço.
 * **Homologação Administrativa:** O setor financeiro/DP confere horas e despesas em tempo real, apoiando o cálculo de custo de folha e comissões.
 * **Inteligência de Custos:** Os sócios visualizam o custo de mão de obra apurado de cada obra contratada.
 
-#### 2. Desenvolvimento Sob Medida e Personalização Cultural (*Tailor-Made*)
+#### Desenvolvimento Sob Medida e Personalização Cultural (*Tailor-Made*)
 O principal diferencial competitivo da solução frente a qualquer software de mercado é a **personalização sociotécnica total**:
 * **O Software se Adapta à DUOC (e não o contrário):** Softwares de prateleira exigem que a empresa mude seu modo de trabalhar para se adequar ao sistema. O DUOC Finance foi concebido a partir da observação direta dos fluxos reais da DUOC, preservando suas práticas bem-sucedidas e digitalizando os pontos de atrito.
 * **Identidade Visual e Cultura da Empresa ("A Cara da DUOC"):** A interface é construída seguindo rigorosamente o manual de identidade visual da DUOC Arquitetura e Engenharia (paleta institucional com destaque em Dourado Ocre `#DAA520`, tipografia limpa e modo escuro sofisticado). Essa estética gera sentimento de pertencimento, profissionalismo e engajamento imediato da equipe.
 * **Ergonomia *Anti-Bloatware* (Design Enxuto):** Sistemas genéricos de mercado sobrecarregam os usuários com centenas de botões, abas e configurações irrelevantes. O DUOC Finance implementa fluxos rápidos (*mobile-first*) focados estritamente na rotina do técnico de campo e do auxiliar administrativo.
 * **Terminologia Nativa do Negócio:** A interface adota o vocabulário real utilizado no cotidiano da DUOC (Relatório de Viagem Técnica - RVT, centros de custos vinculados a contratos multidisciplinares de arquitetura e engenharia), reduzindo drasticamente a curva de aprendizado e eliminando a resistência à adoção.
 
-#### 3. Governança, Privacidade e Conformidade com a LGPD
+#### Governança, Privacidade e Conformidade com a LGPD
 Diferente do compartilhamento indiscriminado de arquivos em nuvem e planilhas de rede, o DUOC Finance implementa controle de acesso por papéis (RBAC). Dados salariais e remunerações de sócios são blindados contra acessos indevidos, garantindo conformidade rigorosa com a Lei nº 13.709/2018.
 
 ### Fontes de Referência
@@ -341,7 +341,7 @@ Diferente do compartilhamento indiscriminado de arquivos em nuvem e planilhas de
 ---
 
 <a id="26-viabilidade-da-proposta-analise-do-mvp"></a>
-## 2.6 Viabilidade da Proposta (Análise do MVP)
+## Viabilidade da Proposta (Análise do MVP)
 
 ### Parecer de Viabilidade
 
@@ -383,7 +383,7 @@ Os seguintes princípios da LGPD (Lei 13.709/2018, Art. 6º) orientam o MVP e su
 ---
 
 <a id="27-beneficios-esperados"></a>
-## 2.7 Benefícios Esperados
+## Benefícios Esperados
 
 O DUOC Finance deverá gerar benefícios para a organização e para as pessoas que utilizarão continuamente o portal. A centralização dos registros de ponto, horas de RVT, férias, folha e reembolsos reduz a fragmentação atual e melhora a confiabilidade das informações financeiras e trabalhistas.
 

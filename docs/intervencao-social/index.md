@@ -21,7 +21,7 @@ Este capítulo é composto pelas seguintes seções analíticas:
 ---
 
 <a id="31-impactos-pretendidos"></a>
-## 3.1 Impactos Pretendidos
+## Impactos Pretendidos
 
 A implementação do **DUOC Finance** tem como objetivo promover transformações organizacionais e culturais estruturadas na empresa parceira, divididas nos seguintes tópicos:
 
@@ -43,7 +43,7 @@ A implementação do **DUOC Finance** tem como objetivo promover transformaçõe
 ---
 
 <a id="32-efeitos-emergentes-colaterais-e-mitigacoes"></a>
-## 3.2 Efeitos Emergentes (Colaterais) e Mitigações
+## Efeitos Emergentes (Colaterais) e Mitigações
 
 A introdução do **DUOC Finance** tende a produzir efeitos que extrapolam os objetivos originalmente pretendidos, decorrentes da própria natureza sociotécnica da mudança organizacional. Os principais efeitos emergentes identificados e suas respectivas medidas de mitigação estruturam-se nos seguintes tópicos:
 

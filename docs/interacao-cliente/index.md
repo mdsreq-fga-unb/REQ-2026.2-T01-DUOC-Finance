@@ -18,7 +18,7 @@ A governança sociotécnica do projeto apoia-se em:
 ---
 
 <a id="71-composicao-da-equipe"></a>
-## 7.1 Composição da Equipe
+## Composição da Equipe
 
 Para assegurar a governança técnica e a entrega com excelência dos artefatos de requisitos e do software funcional, os integrantes da equipe **Cascata Ágil** organizam-se sob uma divisão equilibrada de papéis, harmonizando responsabilidades de Engenharia de Requisitos, liderança de produto, facilitação de processos, prototipagem evolutiva e excelência técnica no modelo RAD adaptado.
 
@@ -36,7 +36,7 @@ Para assegurar a governança técnica e a entrega com excelência dos artefatos 
 ---
 
 <a id="72-comunicacao"></a>
-## 7.2 Comunicação
+## Comunicação
 
 Nesta seção são detalhados os canais oficiais de comunicação, a frequência das interações e os ritos formais estabelecidos tanto para o alinhamento contínuo com a cliente parceira Maria Beatryz quanto para a coordenação interna da equipe Cascata Ágil.
 
@@ -61,7 +61,7 @@ Nesta seção são detalhados os canais oficiais de comunicação, a frequência
 ---
 
 <a id="73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente"></a>
-## 7.3 Processo de Validação Sociotécnica e Homologação com a Cliente
+## Processo de Validação Sociotécnica e Homologação com a Cliente
 
 <h3>Diretrizes Metodológicas e Acordo de Trabalho</h3>
 

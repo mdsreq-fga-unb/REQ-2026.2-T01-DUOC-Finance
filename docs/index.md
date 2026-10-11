@@ -62,7 +62,6 @@ Os integrantes da equipe dividem suas responsabilidades operacionais e de govern
 | **Matheus Saraiva Camargo** | 241011475 | Arquiteto de Software, Modelagem de Banco de Dados Relacional e Infraestrutura | [@Matheus-S-Camargo](https://github.com/Matheus-S-Camargo) |
 | **Gustavo** | 241025659 | Gestão de Qualidade (QA), Automação de Testes e Governança DoR/DoD | [@Gustavo2703](https://github.com/Gustavo2703) |
 | **Giovana Ferreira** | 231034707 | Interface Humano-Computador (IHC), Design UI/UX e Frontend React | [@gih7915](https://github.com/gih7915) |
-| **Carlos Gabriel** | 242015450 | Interface Humano-Computador (IHC), Design UI/UX e Frontend React (Mobile-First) | [@cgbriel28](https://github.com/cgbriel28) |
 | **Paulo Nery** | 221008740 | Engenheiro Backend, APIs RESTful e Motor de Regras Financeiras | [@Pnery2004](https://github.com/Pnery2004) |
 
 

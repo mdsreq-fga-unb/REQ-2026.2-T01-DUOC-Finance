@@ -19,7 +19,7 @@ Para sustentar este diagnóstico, foram produzidos e integrados os seguintes art
 ---
 
 <a id="11-identificacao-do-cliente"></a>
-## 1.1 Identificação do Cliente
+## Identificação do Cliente
 
 A tabela abaixo apresenta os dados cadastrais e institucionais da organização parceira, detalhando sua natureza jurídica, canais de contato e vínculo formal com o projeto de software.
 
@@ -48,7 +48,7 @@ Para evitar ambiguidade em referências anteriores do repositório, distinguem-s
 ---
 
 <a id="12-introducao-ao-negocio-e-contexto-operacional"></a>
-## 1.2 Introdução ao Negócio e Contexto Operacional
+## Introdução ao Negócio e Contexto Operacional
 
 A DUOC Arquitetura e Engenharia LTDA ME (CNPJ: 53.616.784/0001-43) é uma microempresa do setor privado fundada em 23 de janeiro de 2024, com sede de operações localizada em Brasília - DF. Inicialmente registrada sob a atividade econômica principal de instalação e manutenção elétrica, a DUOC rapidamente evoluiu suas operações para um modelo de negócios híbrido e multidisciplinar. Atualmente, a organização integra serviços de concepção e projeto arquitetônico, engenharia civil estrutural, projetos complementares (instalações hidrossanitárias e elétricas) e coordenação técnica com acompanhamento físico de canteiros de obras.
 
@@ -68,7 +68,7 @@ A partir do diálogo inicial e das entrevistas semiestruturadas com a auxiliar a
 ---
 
 <a id="13-rich-picture-fluxo-sociotecnico"></a>
-## 1.3 Rich Picture (Fluxo Sociotécnico)
+## Rich Picture (Fluxo Sociotécnico)
 
 ### Análise do Rich Picture — Sistema DUOC Finance
 
@@ -114,7 +114,7 @@ O escopo do novo sistema é delimitado na zona "**Solução Proposta (TO-BE)**",
 ---
 
 <a id="14-diagnostico-do-problema-e-diagrama-de-ishikawa"></a>
-## 1.4 Diagnóstico do Problema e Diagrama de Ishikawa
+## Diagnóstico do Problema e Diagrama de Ishikawa
 
 ### Declaração do Problema Central
 
@@ -159,7 +159,7 @@ Os dados disponíveis não são consolidados em indicadores de custo de mão de 
 ---
 
 <a id="15-desafios-do-projeto"></a>
-## 1.5 Desafios do Projeto
+## Desafios do Projeto
 
 O principal desafio do DUOC Finance é integrar o registro de horas operacionais (RVT) ao processamento financeiro de folha de pagamento e comissões. Essa integração precisa funcionar em uma equipe com diferentes níveis de letramento tecnológico, que inclui engenheiros especialistas, arquitetos, encarregados, estagiários, assistentes pessoais e operários de obra.
 
@@ -181,7 +181,7 @@ Ficam fora desta entrega os módulos de gestão de engenharia e de obras, como c
 ---
 
 <a id="16-mapa-de-stakeholders"></a>
-## 1.6 Mapa de Stakeholders
+## Mapa de Stakeholders
 
 A tabela a seguir apresenta as partes interessadas internas e externas, seu interesse no DUOC Finance, o grau de influência sobre o projeto e o nível de acesso esperado na plataforma. Os níveis de acesso devem ser implementados conforme o princípio do menor privilégio, permitindo que cada perfil visualize e altere somente os dados necessários para sua atividade.
 
@@ -202,7 +202,7 @@ A tabela a seguir apresenta as partes interessadas internas e externas, seu inte
 ---
 
 <a id="17-segmentacao-de-usuarios-e-perfis-de-ihc"></a>
-## 1.7 Segmentação de Usuários e Perfis de Interação Humano-Computador
+## Segmentação de Usuários e Perfis de Interação Humano-Computador
 
 A caracterização dos segmentos de usuários que interagem com o ecossistema do **DUOC Finance** é estruturada sob a lente da Engenharia de Requisitos Sociotécnica. Cada perfil de interação é mapeado segundo suas características demográficas, letramento tecnológico, restrições ambientais de hardware e rotina de tarefas operacionais, conforme as diretrizes de Interação Humano-Computador (IHC). Sob essa perspectiva, trabalharemos seguindo os 2 tipos de perfis:
 
