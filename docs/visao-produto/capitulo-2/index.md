@@ -78,9 +78,9 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
         * **Contribuição Secundária:** [OE2: Aumentar a Eficiência Administrativo-Financeira](#oe2-aumentar-a-eficiencia-administrativo-financeira)
 
 <a id="car-02"></a>
-??? note "CAR-02: Apontamento Móvel de Atividades e Registros de Campo"
+??? note "CAR-02: Apontamento de Campo e Registros Técnicos de Obra (RVT)"
 
-    * **Valor de Negócio:** Padroniza e agiliza a captação de dados diretamente no canteiro de obras e em viagens técnicas, erradicando a perda de anotações físicas em papel e mensagens dispersas no WhatsApp.
+    * **Valor de Negócio:** Padroniza e agiliza a captação de dados diretamente no canteiro de obras e em viagens técnicas através da aplicação web responsiva (Web App / PWA), erradicando a perda de anotações físicas em papel e mensagens dispersas no WhatsApp.
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
         * **Contribuição Secundária:** [OE3: Transparecer as informações sobre os Custos por Contrato](#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato)
@@ -155,7 +155,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 ??? note "CAR-10: Importação e Exportação de Dados com ERPs e Planilhas Legadas"
 
     * **Valor de Negócio:** Permite migrar dados históricos de planilhas de Excel e exportar relatórios em formato compatível (CSV/Excel) para os ERPs e ferramentas contábeis já usados pela DUOC, evitando redigitação manual e retrabalho na transição.
-    * **Nota de Escopo:** Esta característica está fora do recorte do MVP definido na [Delimitação do Escopo do MVP](#26-viabilidade-da-proposta-analise-do-mvp) (seção 2.6). O desenho técnico da integração (formatos de arquivo, direção do fluxo e sistemas de destino) será definido em fase posterior; esta CAR registra apenas o compromisso de escopo.    
+    * **Nota de Escopo:** Esta característica contempla a exportação operacional de dados consolidados em planilha (CSV/XLSX), especificada formalmente no [Capítulo 8](../../requisitos/index.md) como **RF36**. A funcionalidade foi alocada no backlog de evolução (Fase 2 / pós-MVP), preservando o compromisso de interoperabilidade com os sistemas contábeis da DUOC.
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
 
@@ -163,7 +163,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 ??? note "CAR-11: Integração com Sistemas BIM (Revit/ArchiCAD)"
 
     * **Valor de Negócio:** Conecta o DUOC Finance à infraestrutura de modelagem BIM já em uso pela equipe de Arquitetura/Estrutural, evitando retrabalho de dados entre a coordenação técnica e a gestão administrativo-financeira.
-    * **Nota de Escopo:** O desenho técnico exato desta integração (dados trocados, direção do fluxo, frequência) ainda será definido durante a Fase 2 (Design do Usuário); esta CAR registra apenas o compromisso de escopo.
+    * **Nota de Escopo:** Característica arquitetural planejada para a Fase 2 (Design do Usuário / Evolutivo). Registra o compromisso de integração com modelos BIM para fases futuras, permanecendo sem requisito funcional (RF) ativo na primeira release do MVP.
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
 
@@ -171,7 +171,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 ??? note "CAR-12: Integração com Slack e E-mail"
 
     * **Valor de Negócio:** Conecta o DUOC Finance aos canais de comunicação já usados pela equipe (Slack e e-mail), evitando que decisões e alertas relevantes fiquem isolados de fluxos informais dispersos.
-    * **Nota de Escopo:** O desenho técnico exato desta integração (eventos notificados, direção do fluxo, formato) ainda será definido durante a Fase 2 (Design do Usuário); esta CAR registra apenas o compromisso de escopo.
+    * **Nota de Escopo:** Característica arquitetural planejada para a Fase 2 (Design do Usuário / Evolutivo). Registra o compromisso de integração com canais externos de comunicação (Slack e e-mail), permanecendo sem requisito funcional (RF) ativo na primeira release do MVP.
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
 
@@ -358,7 +358,9 @@ O Produto Mínimo Viável (MVP) do DUOC Finance é viável no ciclo acadêmico e
 
 ### Delimitação do Escopo do MVP
 
-O MVP abrange o controle de acesso e papéis por perfis fixos (RBAC), consumo de presenças já homologadas pelo Shifton (conforme Decisão Arquitetural da Ata 02) para apropriação financeira das horas aos contratos, preenchimento e homologação de Relatório de Viagem Técnica (RVT) — que já inclui o registro de despesas de campo e reembolso —, motor de apoio ao cálculo de custo de mão de obra de diaristas e comissões contratuais simplificadas (não substituto de folha de pagamento oficial), e apropriação dos custos ao contrato correspondente. Uma visualização tabular direta de custo apurado por contrato e um registro básico de auditoria (log de alterações) para conformidade com a LGPD completam o valor tangível entregue à diretoria, sem a necessidade de um módulo de business intelligence dedicado. O cálculo de comissões contratuais será tratado como regra simplificada nesta primeira versão, com refinamento previsto para ciclos futuros.
+O MVP abrange o controle de acesso baseado em papéis (RBAC - CAR-07), o preenchimento, retificação e deliberação formal de Relatórios de Viagem Técnica (RVT de campo - CAR-02, abrangendo envio, anexos de evidências, retificação pendente, deliberação da supervisão com bloqueio e consulta própria), a gestão cadastral de colaboradores, contratos de obras e centros de custo (CAR-01, CAR-05 e CAR-06), o fluxo digital de despesas operacionais, adiantamentos e reembolsos (CAR-04), e o motor de fechamento de diárias técnicas e comissões simplificadas de campo com apropriação direta aos contratos de obra (CAR-03 e CAR-05), sem substituir a folha de pagamento CLT oficial nem rotinas contábeis de encargos e provisões.
+
+A integração direta automatizada via API com o sistema *Shifton* (CAR-09 / RF20) e as interfaces visuais analíticas dedicadas de auditoria (CAR-08 / RF15 e RF16) foram alocadas no backlog de evolução (Fase 2 / pós-MVP) conforme a priorização formal da Reunião 05. No MVP, a integridade e a governança de auditoria para fins da LGPD e trabalhistas são asseguradas a nível de infraestrutura e persistência de banco por meio de logs de eventos atômicos e imutáveis (*append-only*), garantidos pelos requisitos não funcionais RNF15 e RNF16.
 
 Permanecem fora deste primeiro ciclo os módulos de engenharia civil pesada (como cronogramas de Gantt de obra, composições orçamentárias SINAPI e controle físico de estoque de canteiro). Essas capacidades poderão ser integradas futuramente através de APIs abertas.
 
@@ -376,7 +378,7 @@ Os seguintes princípios da LGPD (Lei 13.709/2018, Art. 6º) orientam o MVP e su
 - **Base legal:** execução de contrato de trabalho e cumprimento de obrigação legal (Art. 7º, incisos II e V).
 - **Segurança:** criptografia em trânsito/repouso e Row Level Security (detalhadas na 2.4).
 - **Livre acesso:** cada colaborador consulta suas próprias informações (CAR-01/CAR-02).
-- **Responsabilização e prestação de contas:** trilha de auditoria básica (CAR-08).
+- **Responsabilização e prestação de contas:** trilha de auditoria atômica no banco de dados e controle de acesso (RNF15/RNF16, CAR-07/CAR-08).
 
 **Condição de Aceite:** nenhuma publicação em produção com dados reais ocorre sem aprovação formal de um checklist de conformidade LGPD cobrindo os itens acima, validado com a representante da DUOC antes do Termo de Aceite Formal (Unidade 4).
 
@@ -385,21 +387,21 @@ Os seguintes princípios da LGPD (Lei 13.709/2018, Art. 6º) orientam o MVP e su
 <a id="27-beneficios-esperados"></a>
 ## Benefícios Esperados
 
-O DUOC Finance deverá gerar benefícios para a organização e para as pessoas que utilizarão continuamente o portal. A centralização dos registros de ponto, horas de RVT, férias, folha e reembolsos reduz a fragmentação atual e melhora a confiabilidade das informações financeiras e trabalhistas.
+O DUOC Finance deverá gerar benefícios tangíveis para a organização e para as pessoas que utilizarão continuamente o portal. A centralização dos registros de campo (RVT), controle de diárias técnicas e prestação digital de contas de despesas e adiantamentos reduz a fragmentação atual e melhora a confiabilidade das informações financeiras e de custos de obra.
 
 ### Benefícios para a DUOC
 
 - **Visibilidade de custo por contrato:** a correlação entre horas registradas, custos de pessoal e contratos permite acompanhar o custo real da mão de obra por projeto, apoiando decisões comerciais e de precificação.
-- **Redução de erros e retrabalho:** a centralização de ponto, férias e horas de RVT em um único ambiente reduz divergências, duplicidade de lançamentos e falhas humanas no fechamento de folha, comissões e reembolsos.
+- **Redução de erros e retrabalho:** a centralização dos apontamentos de RVT, conferência de diárias e prestação de contas em um único ambiente reduz divergências, duplicidade de lançamentos e falhas manuais na conciliação de despesas e apropriação de custos de obra.
 - **Agilidade no fechamento financeiro:** informações padronizadas e disponíveis em tempo hábil tornam mais rápida a conferência das rotinas de Departamento Pessoal e Financeiro.
 - **Conformidade jurídica e proteção de dados:** o registro formal das informações apoia a conformidade trabalhista e fiscal, enquanto o controle de acesso por perfis e a proteção dos dados pessoais contribuem para o atendimento à LGPD.
 - **Base histórica para gestão:** o histórico consolidado de horas e custos oferece dados para avaliar contratos, identificar desvios e aperfeiçoar futuras propostas de serviço.
 
 ### Benefícios para os Usuários
 
-- **Registro prático no canteiro de obras:** colaboradores poderão lançar horas e ponto de forma simples, inclusive por dispositivos móveis, sem repetir o preenchimento em diferentes planilhas.
+- **Registro prático no canteiro de obras:** colaboradores poderão registrar suas atividades e despesas de campo de forma ágil via aplicação web responsiva (Web App / PWA), inclusive por dispositivos móveis, sem repetir o preenchimento em diferentes planilhas.
 - **Consulta facilitada de reembolsos:** o acompanhamento digital dos recibos e da situação das solicitações reduz a perda de documentos e torna mais previsível o processo de reembolso.
-- **Clareza sobre férias e folha:** cada colaborador poderá consultar as informações autorizadas sobre férias, benefícios, folha de pagamento e histórico funcional.
+- **Clareza sobre remunerações e apontamentos:** cada colaborador poderá consultar com transparência seus próprios apontamentos técnicos homologados, o status de deliberação das atividades e o andamento de solicitações de reembolso e adiantamento.
 - **Confidencialidade das informações:** dados salariais e funcionais serão acessíveis somente aos perfis autorizados, preservando a privacidade entre os colaboradores.
 - **Maior transparência no trabalho:** o histórico dos registros e o acompanhamento das aprovações tornam mais claro como as horas informadas são conferidas e utilizadas no processamento financeiro.
 
@@ -416,3 +418,4 @@ O DUOC Finance deverá gerar benefícios para a organização e para as pessoas 
 | `2.1` | 19/09/2026 | Reconciliação pós-merge com `develop`: adição de CAR-09 a CAR-12 (integrações externas) vinculadas a OE1; correção de terminologia financeira em OE3 e CAR-06 ("margem líquida"/"lucro real" → "custo de mão de obra apropriado"/"desvio orçamentário"), com nota de escopo explicitando ausência de receita e custos totais no MVP | Paulo Nery | |
 | `2.2` | 21/09/2026 | Ajuste da estratégia de mitigação de riscos: adoção de UI-First com base no Figma e designs via Frontend, garantindo validação de interface antes da codificação de lógica e persistência | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `2.3` | 28/09/2026 | Inclusão de nota de escopo em CAR-10 e de menção ao estorno de fechamentos em CAR-03, decorrentes da avaliação por pares dos requisitos (ver [Feedback dos Requisitos](../../requisitos/feedback.md)) | Matheus Saraiva Camargo | Matheus Szervinsk |
+| `2.4` | 12/10/2026 | Harmonização do escopo do MVP (seção 2.6) com deliberações da Ata 05 e Capítulo 8 (postergação de Shifton e telas analíticas de auditoria para Fase 2, mantendo logs atômicos no MVP); inclusão do RF36 na CAR-10 e notas em CAR-11/CAR-12; saneamento de benefícios e explicitação de Web App / PWA. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
