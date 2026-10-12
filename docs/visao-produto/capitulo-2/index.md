@@ -49,7 +49,7 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 ??? abstract "OE3: Transparecer as informações sobre os Custos por Contrato"
 
     * **Natureza:** Estratégica e Analítica
-    * **Valor de Negócio:** Prover inteligência analítica e visibilidade contínua em tempo real sobre o custo de mão de obra apropriado e sua aderência ao orçamento previsto por obra, assegurando a sustentabilidade financeira de cada projeto sob contrato.
+    * **Valor de Negócio:** Prover inteligência analítica e visibilidade contínua sobre o custo de mão de obra apropriado e sua aderência ao orçamento previsto por obra, assegurando a sustentabilidade financeira de cada projeto sob contrato.
     * **Características Relacionadas:** [CAR-05](#car-05), [CAR-06](#car-06) (Principais); CAR-02, CAR-04 (Apoio).
 
 <a id="oe4-garantir-seguranca-e-governanca-de-dados"></a>
@@ -57,7 +57,7 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 ??? abstract "OE4: Garantir Segurança e Governança de Dados"
 
     * **Natureza:** Governança Corporativa e Conformidade
-    * **Valor de Negócio:** Garante a integridade, confidencialidade e segregação de acesso sobre registros de pessoal e dados financeiros sensíveis, resguardando a privacidade e blindando a organização.
+    * **Valor de Negócio:** Garante a integridade, confidencialidade e segregação de acesso sobre registros de pessoal e dados financeiros confidenciais, resguardando a privacidade e blindando a organização.
     * **Características Relacionadas:** [CAR-07](#car-07), [CAR-08](#car-08) (Principais); CAR-01, CAR-03 (Apoio).
 
 ---
@@ -223,10 +223,10 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
 </div>
 
 * **Tipo:** API RESTful com plataforma de execução assíncrona orientada a serviços, tipagem estática e arquitetura modular.
-* **Justificativa Técnica:** A tipagem estática do TypeScript elimina classes comuns de erros em tempo de compilação, protegendo algoritmos de folha de pagamento e fórmulas de comissionamento contra coerções de tipos inesperadas. A estrutura modular do NestJS facilita a injeção de dependências e a segregação limpa de responsabilidades entre controladores, serviços e repositórios.
+* **Justificativa Técnica:** A tipagem estática do TypeScript elimina classes comuns de erros em tempo de compilação, protegendo apurações financeiras de diárias e fórmulas de comissionamento contra coerções de tipos inesperadas. A estrutura modular do NestJS facilita a injeção de dependências e a segregação limpa de responsabilidades entre controladores, serviços e repositórios.
 * **Mecanismo de Autenticação e Perfis de Acesso (RBAC):** 
   * **Autenticação:** Implementação stateless via *JSON Web Tokens* (JWT) assinados com algoritmos de chave assimétrica e tempo de expiração curto.
-  * **Autorização Baseada em Papéis (RBAC — Role-Based Access Control):** Controle granular de acesso baseado em *Guards* e *Decorators* na API, validando permissões por perfis de acesso definidos na regra de negócio (ex.: `ADMINISTRADOR`, `GESTOR_OBRA`, `COLABORADOR`).
+  * **Autorização Baseada em Papéis (RBAC — Role-Based Access Control):** Controle granular de acesso baseado em *Guards* e *Decorators* na API, validando permissões pelos 4 papéis canônicos de acesso estabelecidos no Capítulo 8 (`ADMIN_SISTEMA`, `ADMIN_FINANCEIRO`, `GESTOR_OBRAS` e `TECNICO_CAMPO`).
 * **Automação via Scripts CLI:** A base de código conta com scripts automatizados via `package.json` para tarefas recorrentes de *seed* de dados sintéticos para testes, execução de suítes de teste de integração e geração de build de produção.
 
 ### Frontend
@@ -318,7 +318,7 @@ O DUOC Finance não pretende atuar como um ERP genérico e massivo de engenharia
 
 #### Hub Centralizador e Orquestrador do Fluxo Administrativo
 * **Captura no Campo:** A equipe técnica registra ponto e RVT em interface ágil, no próprio canteiro de serviço.
-* **Homologação Administrativa:** O setor financeiro/DP confere horas e despesas em tempo real, apoiando o cálculo de custo de folha e comissões.
+* **Homologação Administrativa:** O setor financeiro/DP confere horas e despesas de forma contínua, apoiando a apuração de diárias e comissões.
 * **Inteligência de Custos:** Os sócios visualizam o custo de mão de obra apurado de cada obra contratada.
 
 #### Desenvolvimento Sob Medida e Personalização Cultural (*Tailor-Made*)
@@ -419,3 +419,4 @@ O DUOC Finance deverá gerar benefícios tangíveis para a organização e para 
 | `2.2` | 21/09/2026 | Ajuste da estratégia de mitigação de riscos: adoção de UI-First com base no Figma e designs via Frontend, garantindo validação de interface antes da codificação de lógica e persistência | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `2.3` | 28/09/2026 | Inclusão de nota de escopo em CAR-10 e de menção ao estorno de fechamentos em CAR-03, decorrentes da avaliação por pares dos requisitos (ver [Feedback dos Requisitos](../../requisitos/feedback.md)) | Matheus Saraiva Camargo | Matheus Szervinsk |
 | `2.4` | 12/10/2026 | Harmonização do escopo do MVP (seção 2.6) com deliberações da Ata 05 e Capítulo 8 (postergação de Shifton e telas analíticas de auditoria para Fase 2, mantendo logs atômicos no MVP); inclusão do RF36 na CAR-10 e notas em CAR-11/CAR-12; saneamento de benefícios e explicitação de Web App / PWA. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `2.5` | 12/10/2026 | Harmonização da Matriz Canônica de Papéis RBAC (4 perfis na arquitetura backend), eliminação de menções residuais a folha CLT/tempo real e adequação terminológica sobre dados pessoais confidenciais (LGPD Art. 6º, VII). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

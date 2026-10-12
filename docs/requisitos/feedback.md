@@ -10,8 +10,8 @@ Este documento formaliza o registro, a deliberação crítica, o rastreamento da
     - **Equipe Avaliadora:** Guerreiros do Backlog  
     - **Equipe Avaliada:** Cascata Ágil  
     - **Artefato Avaliado:** [Capítulo 8: Requisitos de Software](index.md) (RFs, RNFs, RNs e Rastreabilidade)  
-    - **Entrega / Ciclo:** Unidade 2 — Detalhamento e Backlog  
-    - **Abrangência:** Transversal sobre os Objetivos Específicos OE1, OE2, OE3 e OE4  
+    - **Entrega / Ciclo:** Unidade 2 — Detalhamento e Backlog (Ciclos 1 e 2 de Revisão por Pares)  
+    - **Abrangência:** Transversal sobre os Objetivos Específicos OE1, OE2, OE3 e OE4, com ênfase em completude, qualidade de especificação, harmonização de papéis (RBAC) e conformidade legal (CLT e LGPD)  
 
 ### Categorias de Deliberação
 
@@ -29,20 +29,22 @@ Para assegurar governança, transparência e reprodutibilidade, cada feedback ca
 1. **Requisitos Funcionais (RFs):** Garantia estrita do padrão sintático `[Verbo no Infinitivo] + [Objeto Mensurável]`, eliminando formulações no presente do indicativo ou ambiguidades operacionais. Cada RF conta com um critério de aceitação em texto corrido, que descreve de forma verificável o que o usuário consegue fazer e o resultado esperado.
 2. **Requisitos Não Funcionais (RNFs):** Garantia de critérios objetivos e mensuráveis (tempo em segundos, percentual de disponibilidade, taxa de conclusão, conformidade com normas), aderentes ao modelo **URPS+** e taxonomia de **Sommerville**.
 3. **Consistência e Clareza:** Eliminação de sobreposições entre requisitos, resolução de termos vagos e sincronização estrita com as regras de negócio (RN) e suíte de testes (CT).
+4. **Harmonização de Papéis (RBAC):** Mapeamento e unificação dos atores do sistema na matriz canônica de 4 perfis (`TECNICO_CAMPO`, `GESTOR_OBRAS`, `ADMIN_FINANCEIRO`, `ADMIN_SISTEMA`), alinhando a especificação à estrutura de governança real da DUOC.
+5. **Rigor Jurídico e Conformidade Regulatória:** Distinção precisa entre prescrição trabalhista (Art. 11 da CLT) e obrigação legal de retenção; fundamentação da exceção ao direito de eliminação da LGPD (Art. 16, I e II); e saneamento conceitual entre dados confidenciais comuns (Art. 6º, VII) e dados pessoais sensíveis (Art. 5º, II da LGPD).
 
 ---
 
 ## Painel Quantitativo de Deliberações
 
-A tabela a seguir resume a distribuição quantitativa das deliberações sobre os apontamentos catalogados.
+A tabela a seguir resume a distribuição quantitativa das deliberações sobre os apontamentos catalogados nos dois ciclos avaliativos.
 
 | Status da Deliberação | Quantidade | Percentual (%) |
 | :--- | :---: | :---: |
-| **Aceito** | 5 | 45,5% |
-| **Parcialmente Aceito** | 5 | 45,5% |
-| **Não Aceito** | 1 | 9,1% |
+| **Aceito** | 12 | 66,7% |
+| **Parcialmente Aceito** | 5 | 27,8% |
+| **Não Aceito** | 1 | 5,6% |
 | **Não Aplicável** | 0 | 0,0% |
-| **Total de Feedbacks Catalogados** | **11** | **100%** |
+| **Total de Feedbacks Catalogados** | **18** | **100%** |
 
 *Percentuais arredondados à primeira casa decimal.*
 
@@ -89,6 +91,20 @@ A tabela a seguir resume a distribuição quantitativa das deliberações sobre 
 
 ---
 
+### Qualidade dos Requisitos, Papéis e Conformidade Legal (Ciclo 2 de Refinamento)
+
+| ID | Item / Seção Alvo | Apontamento da Equipe Avaliadora | Deliberação | Justificativa & Decisão Técnica | Ação / Impacto no Artefato |
+| :---: | :--- | :--- | :---: | :--- | :--- |
+| **FB-12** | Termos Operacionais / Módulos 1 a 4 | Vários termos não têm definição operacional gerando ambiguidade: "dados válidos", "tempo real", "imediatamente", "módulos dependentes", "despesas autorizadas" (por quem?), "contratos sob sua alçada", "gestor" (qual?), "anexo legível" (como verifica?), "mensagem amigável", "carga nominal", "alertas de extrapolação" (qual limiar?). | Aceito | Ambiguidade semântica compromete a testabilidade. Cada termo vago foi substituído por métrica determinística ou processo observável: "dados válidos" -> validação de CPF (módulo 11) e dados bancários (código COMPE); "tempo real" / "imediatamente" -> propagação síncrona < 500 ms; "módulos dependentes" -> módulos de Fechamento de Diárias e Apropriação de Custos; "despesas autorizadas" -> aprovadas pelo Gestor de Obras; "contratos sob alçada" -> contratos vinculados ao gestor no RBAC; "anexo legível" -> inspeção humana na homologação precedida de validação de integridade por magic numbers; "mensagem amigável" -> mensagem com identificação do campo e orientação de correção; "carga nominal" -> 50 usuários concorrentes a 10 req/s com latência p95 ≤ 800 ms; "alerta de extrapolação" -> limiar percentual configurável (padrão 100% com pré-alerta aos 90%). | Atualização sistemática de critérios de aceitação e métricas no Capítulo 8 (OE1 a OE4, Catálogo 8.5) e Priorização. |
+| **FB-13** | RF06 / OE2 | O RF06 mistura ajuste e homologação no mesmo requisito funcional, violando a atomicidade funcional. | Aceito | Ajustes prévios ao fechamento e a homologação formal são fases distintas do ciclo financeiro. O RF06 foi refatorado para tratar estritamente do ato de homologação e trancamento irrevogável dos lotes conferidos, delegando ajustes ao fluxo de conciliação da prévia e do estorno (RF21). | RF06 purificado no Capítulo 8, cards executivos e catálogo geral; critérios restritos ao trancamento e bloqueio contra edição. |
+| **FB-14** | Atores e Papéis / Seção 8.1.1 e RFs | Inconsistência nos atores: os RFs usavam ~8 papéis esparsos (RH, gestor de RH, analista financeiro, gestor financeiro, coordenador, auditor), enquanto o RF14 definia 4 perfis, o Cap. 2 trazia 3 e a realidade da DUOC concentra operações em uma única Auxiliar-Administrativa (Maria Beatryz). | Aceito | A dispersão de atores criava divergência entre a especificação e a realidade operacional da empresa parceira. Instituiu-se a Matriz Canônica de Papéis RBAC (Seção 8.1.1) com exatamente 4 perfis: `TECNICO_CAMPO`, `GESTOR_OBRAS`, `ADMIN_FINANCEIRO` (unificando DP/RH e finanças sob a figura da auxiliar administrativa) e `ADMIN_SISTEMA`. Todos os 36 RFs foram alinhados a essa matriz. | Criada a Seção 8.1.1 com a Matriz Canônica RBAC; revisão de atores em todos os 36 RFs, no Capítulo 2 e no Catálogo Funcional. |
+| **FB-15** | RNF07 e RNF08 / OE2 | RNF07 (validação de comprovantes) e RNF08 (estorno auditado) foram classificados como RNFs, mas suas redações originais expressavam validações funcionais ou regras de negócio, e não atributos de qualidade de software. | Aceito | Validação de presença de anexo e obrigatoriedade de justificativa são regras de negócio (RN06 e RN08). RNF07 e RNF08 foram refatorados como legítimos atributos de qualidade: RNF07 passou a focar na Robustez e Segurança no processamento de anexos (sanitização, verificação de magic numbers MIME, isolamento em bucket de armazenamento); RNF08 passou a focar no Não-Repúdio e Auditabilidade das reversões financeiras (garantia criptográfica/transacional de imutabilidade e rastreamento de autoria). | RNF07 e RNF08 reescritos no Módulo 2, Seção 8.4, 8.5 e Priorização, com ganhos diretos de qualidade e segurança. |
+| **FB-16** | RN vs. RNF / Seção 8.1 e 8.5 | Sobreposição e confusão conceitual entre regras de negócio e atributos de qualidade: RNF15 ≈ RN17, RNF16 ≈ RN19, e RNF10 ≈ RNF14 ≈ RN16. | Aceito | Distinção formal estabelecida entre invariantes de negócio (políticas corporativas) e requisitos de arquitetura (atributos de software). RN17/RN19 regem direitos e fluxos de negócio, enquanto RNF15/RNF16 definem atomicidade ACID transacional e imutabilidade de armazenamento. RN16 define a política de privacidade (usuário só vê seus dados), RNF10 define o mecanismo técnico de sanitização e mascaramento de relatórios (< 10 ms), e RNF14 define o tempo de bloqueio de API por guards (< 15 ms). | Refatoração das redações e inclusão de nota de desambiguação estrutural na Seção 8.1 do Capítulo 8. |
+| **FB-17** | RNF16 / OE4 (Classificação) | Classificar a retenção de logs por 5 anos (RNF16) como "Supportability" no modelo URPS+ está incorreto, pois não se trata de manutenibilidade ou suporte técnico da aplicação. | Aceito | A retenção probatória de integridade de logs com imutabilidade física e lógica é um atributo de Confiabilidade e Governança Legal. No URPS+, foi reclassificado para `Reliability / Legal (+)` (o "+" abrange conformidade legal/regulamentar). Em Sommerville, ratificado como `Requisito Externo — Requisito Legal / Regulatório`. | Classificação atualizada nas tabelas do Módulo 4, Seção 8.4, Seção 8.5 e Priorização. |
+| **FB-18** | Base Legal / Governança (CLT e LGPD) | Imprecisões na fundamentação jurídica: 1) O Art. 11 da CLT trata de prazo prescricional de ações trabalhistas, não de obrigação legal de guardar logs; deve figurar como decisão de política defensiva; 2) A retenção imutável de 5 anos colide com o direito de eliminação da LGPD (Art. 18, VI) se não fundamentada; 3) CPF e dados bancários foram chamados de "dados sensíveis", quando são dados pessoais comuns sob sigilo (Art. 5º, II da LGPD). | Aceito | Adequação terminológica e jurídica rigorosa: 1) A retenção por 5 anos é fundamentada como política defensiva corporativa baseada no prazo prescricional do Art. 11 da CLT; 2) A retenção contra o pedido de eliminação da LGPD é fundamentada expressamente no Art. 16, I e II da LGPD (cumprimento de obrigação legal e exercício regular de direitos em processo judicial/administrativo); 3) Saneamento do conceito de dados: CPF, agência, conta e salários são tratados como "dados pessoais confidenciais sujeitos a sigilo e segurança" (Art. 6º, VII) e não como "dados pessoais sensíveis" (Art. 5º, II da LGPD). | Seção 8.2.4.4 criada no Capítulo 8 detalhando a governança legal; saneamento terminológico em todos os RFs/RNFs dos Capítulos 2 e 8. |
+
+---
+
 <a id="matriz-antes-depois"></a>
 ## Matriz Rastreável de Transformação dos Requisitos: Comparativo "Antes vs. Depois"
 
@@ -109,6 +125,13 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 | **FB-09** | **CAR-03 / RF21** | O RNF08 exigia justificativa e auditoria em estornos, mas **nenhum RF descrevia a ação de estorno** do fechamento homologado pelo gestor. | Criação do **RF21 — Estornar fechamento financeiro**: ação explícita com justificativa textual mínima de 15 caracteres (RN08), trilha de auditoria e preservação do extrato histórico. | Fornece a funcionalidade observável necessária para exercitar a RN08 e o RNF08. | `CT-M2-09` |
 | **FB-10** | **RN06 / RN18** | **RN06:** ditava extensões de arquivo (`.pdf`, `.png`, `.jpeg`) e limite de 5MB.<br>**RN18:** ditava proibições de comandos SQL diretos (`UPDATE` e `DELETE`). | **RN06:** reformulada como política de negócio (comprovação fiscal obrigatória para repasse), delegando extensões e tamanho ao RNF07.<br>**RN18:** reformulada como princípio de imutabilidade transacional (*append-only*), vinculada aos RNF15 e RNF16. | Desacopla regras de negócio de detalhes de implementação e sintaxe de banco de dados. | `CT-M2-04`<br>`CT-M4-08` |
 | **FB-11** | **CAR-02 / RF04 / RF22** | RF04 reunia texto corrido sem estrutura formal de aceitação, acumulando horas, escopo e fotos. | **RF04:** preservado como submissão de apontamento atômica com status "Pendente de Homologação" (CT-M1-04). A anexação multimídia e captura de geolocalização foram decompostas no **RF22 — Anexar evidências e geolocalização ao apontamento** (CAR-02 / CT-M1-11). | Garante critérios de aceitação atômicos e segregação de anexos e coordenadas de campo. | `CT-M1-04`<br>`CT-M1-11` |
+| **FB-12** | **Termos Operacionais (Módulos 1-4)** | Termos vagos como "tempo real", "dados válidos", "carga nominal", "alertas de extrapolação" sem limiar. | Substituição por métricas determinísticas: validação de CPF (módulo 11) e COMPE; propagação síncrona < 500 ms; carga nominal de 50 usuários a 10 req/s (p95 ≤ 800 ms); limiar percentual de orçamento configurável (padrão 100% com pré-alerta aos 90%). | Elimina ambiguidade e torna todos os requisitos rigorosamente testáveis e auditáveis. | Transversal a todos os RFs/RNFs |
+| **FB-13** | **RF06** | Acumulava ajustes manuais e conferência com o ato de homologação e fechamento. | Refatorado estritamente para homologação, encerramento de lote e bloqueio automático contra edição por perfis operacionais. | Garante atomicidade funcional e segregação de responsabilidades no ciclo financeiro. | `CT-M2-02` |
+| **FB-14** | **Atores e Papéis (Seção 8.1.1 / RFs)** | ~8 atores distintos dispersos nos RFs (RH, analista financeiro, gestor financeiro, coordenador etc.), incompatíveis com os 4 perfis do RF14 e a realidade de equipe enxuta da DUOC. | Instituição da Matriz Canônica RBAC com 4 perfis (`TECNICO_CAMPO`, `GESTOR_OBRAS`, `ADMIN_FINANCEIRO`, `ADMIN_SISTEMA`) com harmonização integral nos 36 RFs e reflexo da atuação de Maria Beatryz. | Alinha especificação técnica à governança de acesso e estrutura sociotécnica real da empresa parceira. | Transversal aos RFs / `CT-M4-02` |
+| **FB-15** | **RNF07 / RNF08** | Redigidos como validações funcionais (presença de comprovante fiscal e obrigatoriedade de justificativa de estorno). | Redefinidos como atributos de qualidade: RNF07 como Robustez e Segurança no processamento de anexos (magic numbers e isolamento); RNF08 como Não-Repúdio e Auditabilidade em reversões financeiras. | Eleva a maturidade de engenharia de software ao separar regra de negócio de atributo arquitetural. | `CT-M2-07`<br>`CT-M2-08` |
+| **FB-16** | **RN vs. RNF (RN17/19/16 vs RNF15/16/10/14)** | Sobreposição conceitual entre regras de negócio e requisitos não funcionais. | Desambiguação formal: RNs expressam políticas de domínio (ex: direitos do colaborador e obrigatoriedade de log); RNFs especificam propriedades de arquitetura (ex: latência de guard < 15 ms, ACID < 50 ms, imutabilidade física). | Clareza taxonômica e eliminação de redundâncias conceituais entre domínio e software. | `CT-M4-07`<br>`CT-M4-08`<br>`CT-M3-05` |
+| **FB-17** | **RNF16 (Classificação)** | RNF16 classificado como "Supportability" em URPS+, sugerindo incorretamente esforço de manutenção. | Reclassificado como `Reliability / Legal (+)` em URPS+ e `Requisito Externo — Requisito Legal / Regulatório` em Sommerville. | Correção metodológica estrita alinhada aos modelos internacionais de Engenharia de Software. | `CT-M4-08` |
+| **FB-18** | **Fundamentação Legal (CLT e LGPD)** | Art. 11 da CLT citado como imposição de retenção; retenção de 5 anos desamparada perante Art. 18, VI da LGPD; e dados bancários/CPF classificados como "dados sensíveis". | Art. 11 CLT contextualizado como prescrição quinquenal que orienta política defensiva; retenção amparada nas exceções do Art. 16, I e II da LGPD; saneamento terminológico para "dados pessoais confidenciais sob sigilo" (Art. 6º, VII da LGPD). | Segurança jurídica inatacável e conformidade estrita com o arcabouço normativo trabalhista e de proteção de dados. | Transversal / Seção 8.2.4.4 |
 
 ---
 
@@ -250,7 +273,7 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 
 ---
 
-### Detalhamento de Transformações nas Regras de Negócio (`FB-10`)
+### Detalhamento das Transformações nas Regras de Negócio (`FB-10`)
 
 === "Antes do Ajuste (Versão Preliminar)"
     !!! warning "Estado anterior"
@@ -270,30 +293,153 @@ Para atender de forma inequívoca às exigências de **rastreabilidade bidirecio
 
 ---
 
+### Detalhamento das Transformações do Ciclo 2 (Qualidade, Papéis e Governança Legal)
+
+#### Definições Operacionais e Eliminação de Ambiguidade (`FB-12`)
+
+=== "Antes do Ajuste (Versão Preliminar)"
+    !!! warning "Problemas de Ambiguidade Identificados"
+        Vários requisitos utilizavam termos sem critério determinístico ou mensuração objetiva:
+        - *"Dados válidos"* e *"mensagem amigável"* sem critérios de validação e formato de erro.
+        - *"Tempo real"* e *"imediatamente"* sem métrica de latência de rede/banco.
+        - *"Módulos dependentes"* sem especificar os módulos destinatários.
+        - *"Despesas autorizadas"* e *"contratos sob sua alçada"* sem definir alçada e gestor.
+        - *"Carga nominal"* sem parametrização de concorrência ou vazão.
+        - *"Alertas de extrapolação orçamentária"* sem definição do limiar percentual de disparo.
+
+=== "Depois do Ajuste (Especificação Refinada Vigente)"
+    !!! success "Definições Operacionais Determinísticas"
+        Todos os termos ambíguos foram substituídos por especificações rigorosas:
+        - **Dados Válidos:** Validação algorítmica de CPF via módulo 11 (Receita Federal) e validação de agência/conta contra código COMPE do Bacen (RF01 / RNF03).
+        - **Mensagem Amigável:** Identificação visual do campo incorreto com texto orientador acionável (ex.: *"CPF inválido: informe 11 dígitos numéricos com dígitos verificadores corretos"*).
+        - **Tempo Real / Imediatamente:** Propagação síncrona com latência máxima ≤ 500 ms (RF01, RF02) ou persistência transacional ACID ≤ 50 ms (RNF15).
+        - **Módulos Dependentes:** Especificados formalmente como Módulo de Fechamento de Diárias e Comissões (OE2) e Módulo de Apropriação de Custos por Contrato (OE3).
+        - **Despesas Autorizadas / Alçada:** Despesas submetidas por técnicos e expressamente aprovadas pelo perfil `GESTOR_OBRAS` responsável pelo contrato no RBAC (RF07, RF08).
+        - **Carga Nominal:** Suporte a 50 usuários simultâneos a uma taxa de 10 requisições/segundo, mantendo latência no percentil 95 (p95) ≤ 800 ms (RNF02).
+        - **Alerta de Extrapolação:** Limiar percentual configurável por contrato com disparo padrão aos 100% e pré-alerta de advertência aos 90% do orçamento contratual (RF31, RN29).
+
+---
+
+#### Refatoração e Atomicidade do RF06 (`FB-13`)
+
+=== "Antes do Ajuste (Versão Preliminar)"
+    | Código | Requisito Funcional | Critério Anterior |
+    | :---: | :--- | :--- |
+    | RF06 | Homologar fechamento financeiro | O gestor financeiro pode ajustar valores de horas ou despesas antes de homologar e em seguida encerra o lote, bloqueando edições. |
+
+    !!! warning "Problema identificado"
+        O requisito acumulava duas responsabilidades funcionais distintas: a edição/ajuste de valores e o ato solene de homologação com trancamento irrevogável.
+
+=== "Depois do Ajuste (Especificação Refinada Vigente)"
+    | Código | Requisito Funcional | Ator Canônico | Critério de Aceitação Refatorado |
+    | :---: | :--- | :---: | :--- |
+    | **RF06** | **Homologar fechamento financeiro** | `ADMIN_FINANCEIRO` | O `ADMIN_FINANCEIRO` visualiza a lista de fechamentos com status "Aguardando Homologação", confere os totais apurados e executa a homologação definitiva. O sistema altera o status do lote para "Homologado", registra a data e a identidade do homologador e bloqueia automaticamente qualquer edição de diárias, comissões ou despesas do lote por perfis operacionais (RN02). Qualquer ajuste posterior exige o fluxo formal de estorno (RF21). |
+
+---
+
+#### Harmonização da Matriz Canônica de Papéis RBAC (`FB-14`)
+
+=== "Antes do Ajuste (Versão Preliminar)"
+    !!! warning "Inconsistência de Atores Identificada"
+        A especificação continha dispersão terminológica com cerca de 8 papéis distintos ("RH", "gestor de RH", "analista financeiro", "gestor financeiro", "coordenador de obras", "auditor", "colaborador", "técnico"), colidindo com a declaração do RF14 (4 perfis) e com a estrutura real da DUOC, onde a auxiliar administrativa Maria Beatryz centraliza DP/RH e financeiro.
+
+=== "Depois do Ajuste (Especificação Refinada Vigente)"
+    !!! success "Matriz Canônica de 4 Papéis (Seção 8.1.1)"
+        Instituição de 4 papéis canônicos aplicados de forma consistente nos 36 RFs:
+        1. **`TECNICO_CAMPO`:** Engenheiros residentes, arquitetos de campo e diaristas. Preenchem RVT, anexam evidências e consultam seus apontamentos.
+        2. **`GESTOR_OBRAS`:** Sócios e engenheiros coordenadores. Vinculam colaboradores a contratos/centros de custo e deliberam formalmente RVTs e despesas de sua alçada.
+        3. **`ADMIN_FINANCEIRO`:** Perfil operacional centralizado (ocupado na DUOC pela colaboradora focal Maria Beatryz). Unifica cadastro geral, importação do Shifton, fechamento de diárias/comissões, relatórios de custo e apropriação por contrato.
+        4. **`ADMIN_SISTEMA`:** Sócios-diretores ou suporte técnico. Gerenciam perfis RBAC (RF14), configuram parâmetros do sistema e inspecionam logs de auditoria e segurança.
+
+---
+
+#### Refatoração dos Atributos de Qualidade RNF07 e RNF08 (`FB-15`)
+
+=== "Antes do Ajuste (Versão Preliminar)"
+    | Código | Requisito | Classificação Anterior | Problema Identificado |
+    | :---: | :--- | :--- | :--- |
+    | RNF07 | Validação de comprovantes | Reliability | Redigido como regra funcional: obrigar envio de comprovante legível com menos de 5 MB. |
+    | RNF08 | Auditoria em estornos | Reliability | Redigido como regra funcional: exigir campo de justificativa textual com mais de 15 caracteres. |
+
+=== "Depois do Ajuste (Especificação Refinada Vigente)"
+    | Código | Requisito Verificável | URPS+ | Sommerville | Critério Mensurável Refatorado |
+    | :---: | :--- | :--- | :--- | :--- |
+    | **RNF07** | **Garantir robustez e segurança no processamento e integridade de arquivos de comprovantes fiscais** | Reliability (Confiabilidade) / Security | Requisito do Produto — Confiabilidade / Segurança | O sistema deve validar uploads de comprovantes fiscais através de inspeção binária de *magic numbers* MIME (rejeitando executáveis e arquivos maliciosos mascarados), verificar integridade por hash criptográfico SHA-256 e armazenar arquivos em repositório seguro com isolamento de execução em tempo de processamento ≤ 2 segundos por arquivo de até 5 MB. |
+    | **RNF08** | **Garantir não-repúdio, atomicidade e auditabilidade em operações de estorno e retificação financeira** | Reliability (Confiabilidade) / Auditability | Requisito do Produto — Confiabilidade | Toda operação de estorno de fechamento homologado deve ser executada sob transação ACID indivisível, gerando registro de auditoria com garantia de não-repúdio contendo carimbo temporal UTC sincronizado via NTP, identificador imutável do usuário autenticado, IP de origem, justificativa obrigatória e snapshot diferencial (*before/after*) dos saldos afetados em tempo ≤ 100 ms. |
+
+---
+
+#### Desambiguação Estrutural entre Regras de Negócio e RNFs (`FB-16`)
+
+=== "Antes do Ajuste (Versão Preliminar)"
+    !!! warning "Sobreposição Conceitual"
+        - RNF15 (atomicidade) vs. RN17 (política de expiração de token).
+        - RNF16 (retenção de logs) vs. RN19 (obrigatoriedade de auditoria nas ações).
+        - RNF10 (desempenho/anonimização) vs. RNF14 (tempo de guard) vs. RN16 (segregação de dados por usuário).
+
+=== "Depois do Ajuste (Especificação Refinada Vigente)"
+    !!! success "Desambiguação e Segregação de Camadas"
+        - **Regras de Negócio (RNs):** Políticas corporativas, invariantes e direitos de domínio. Ex.: RN16 dita que colaboradores operacionais só podem visualizar seus próprios apontamentos; RN19 dita que nenhuma transação financeira pode ocorrer sem registro de auditoria.
+        - **Requisitos Não Funcionais (RNFs):** Propriedades de software, métricas de engenharia e restrições de arquitetura. Ex.: RNF10 afere que a rotina analítica de anonimização e mascaramento de dados executa com overhead < 10 ms; RNF14 afere que a verificação de permissões do RBAC nas rotas de API adiciona latência < 15 ms; RNF15 garante atomicidade transacional ACID com commit ou rollback total em até 50 ms.
+
+---
+
+#### Reclassificação Taxonômica do RNF16 (`FB-17`)
+
+=== "Antes do Ajuste (Versão Preliminar)"
+    | Código | Requisito | Classificação Anterior | Inadequação Metodológica |
+    | :---: | :--- | :--- | :--- |
+    | RNF16 | Retenção de logs por 5 anos | Supportability (URPS+) | Supportability trata de manutenibilidade, testabilidade, configurabilidade e extensibilidade de código, não de guarda de registros legais. |
+
+=== "Depois do Ajuste (Especificação Refinada Vigente)"
+    | Código | Requisito | Classificação URPS+ Refatorada | Classificação Sommerville Refatorada | Justificativa |
+    | :---: | :--- | :---: | :---: | :--- |
+    | **RNF16** | **Assegurar retenção imutável de logs de auditoria por 5 anos** | **Reliability / Legal (+)** | **Requisito Externo — Requisito Legal / Regulatório** | A retenção é um requisito de conformidade jurídica externa com garantia de integridade e confiabilidade física e lógica dos dados (Reliability / Legal). |
+
+---
+
+#### Fundamentação e Rigor Jurídico-Normativo — CLT e LGPD (`FB-18`)
+
+=== "Antes do Ajuste (Versão Preliminar)"
+    !!! warning "Fragilidades Jurídicas Apontadas"
+        1. O Art. 11 da CLT foi citado como imposição de retenção de logs, quando o artigo apenas disciplina o prazo prescricional para créditos trabalhistas.
+        2. A retenção imutável de 5 anos colidia com o direito de eliminação de dados pessoais assegurado pelo Art. 18, inciso VI da LGPD, gerando aparente antinomia jurídica.
+        3. CPF, dados bancários e remunerações de colaboradores foram rotulados genericamente como "dados sensíveis".
+
+=== "Depois do Ajuste (Especificação Refinada Vigente)"
+    !!! success "Adequação Jurídica Rigorosa (Seção 8.2.4.4)"
+        1. **Prescrição Trabalhista como Política Defensiva:** O Art. 11 da CLT estabelece o prazo prescricional de 5 anos (até o limite de 2 anos após extinção contratual) para ações trabalhistas. A retenção de logs por 5 anos é formalizada como decisão interna de governança defensiva e suporte probatório contábil da DUOC.
+        2. **Confronto com o Direito de Eliminação da LGPD:** O direito à eliminação dos dados (Art. 18, VI) é expressamente harmonizado com o **Art. 16, incisos I e II da LGPD**, que autoriza a conservação de dados pessoais mesmo após requisição de eliminação para fins de *"cumprimento de obrigação legal ou regulatória"* e *"estudo por órgão de pesquisa ou defesa em processo judicial, administrativo ou arbitral"*.
+        3. **Saneamento Terminológico de Dados:** Em obediência estrita ao Art. 5º, inciso II da LGPD (que restringe "dados pessoais sensíveis" a origem racial, convicção religiosa, saúde, biometria etc.), CPF, agência bancária, conta e valores salariais foram reclassificados como **dados pessoais comuns confidenciais sujeitos a sigilo e segurança** (Art. 6º, VII da LGPD), eliminando qualquer vício terminológico.
+
+---
+
 ## Rastreabilidade de Impacto nos Artefatos de Requisitos
 
 Mapeamento consolidado das seções e artefatos modificados em decorrência das deliberações de feedback e do comparativo "Antes vs. Depois":
 
 | Artefato / Seção Afetada | Natureza do Ajuste | Requisitos / Itens Impactados | Versão Pós-Ajuste |
 | :--- | :--- | :--- | :---: |
-| **Seção 8.1 do Capítulo 8 (Modelo Metodológico)** | Inclusão de nota explicativa formal sobre o propósito das classificações complementares URPS+ e Sommerville (FB-01). | RNFs (Classificação Metodológica) | v2.4 |
-| **Tabela de Requisitos Funcionais** | Criação de novos RFs para suprir lacunas funcionais de integração com Shifton, acompanhamento em campo, autenticação segura e estorno contábil (FB-02, FB-03, FB-04, FB-05, FB-09, FB-11). | RF17, RF18, RF19, RF20, RF21, RF22, RF04, RF36 | v2.7 |
-| **Tabela de Requisitos Não Funcionais** | Refinamento rigoroso de critérios mensuráveis em usabilidade e modo offline; criação do requisito de backup e recuperação (FB-06, FB-07, FB-08). | RNF01, RNF04, RNF17 | v2.7 |
-| **Regras de Negócio (RNs)** | Reescrita de regras eliminando referências a código SQL ou extensões de arquivos, preservando a pureza de domínio (FB-10). | RN06, RN18 | v2.7 |
-| **Matriz de Rastreabilidade e Casos de Teste** | Vinculação estrita dos requisitos criados/ajustados com seus Casos de Teste formais e Características correspondentes. | `CT-M1-04` (RF04), `CT-M1-05` (RNF01), `CT-M1-08` (RNF04), `CT-M1-09` (RF19), `CT-M1-10` (RF20), `CT-M1-11` (RF22), `CT-M2-09` (RF21), `CT-M4-09` (RF17), `CT-M4-10` (RF18), `CT-M4-11` (RNF17), `CT-M1-17` (RF36) | v2.7 |
-| **Capítulo 2 — Características do Produto (CARs)** | Expansão da CAR-09 para cobrir importação de presenças (*Shifton*), vinculação de RF36 na CAR-10, notas de escopo em CAR-11/CAR-12 e estorno em CAR-03 (FB-02, FB-09). | CAR-03, CAR-09, CAR-10, CAR-11, CAR-12 | v2.4 (Cap. 2) |
-| **Priorização e Matriz 4x4 (Capítulo 8)** | Incorporação de RF17 a RF22 e RNF17 na avaliação de valor e esforço técnico; consolidação da linha de corte do MVP. | RFs e RNFs na Matriz 4x4 | v2.2 (Priorização) |
+| **Seção 8.1 do Capítulo 8 (Modelo Metodológico)** | Inclusão de nota explicativa formal sobre o propósito das classificações complementares URPS+ e Sommerville (FB-01) e nota de desambiguação entre RN e RNF (FB-16). | RNFs (Classificação Metodológica e Desambiguação) | v3.3 |
+| **Seção 8.1.1 do Capítulo 8 (Atores e RBAC)** | Instituição formal da Matriz Canônica de Papéis com 4 perfis (`TECNICO_CAMPO`, `GESTOR_OBRAS`, `ADMIN_FINANCEIRO`, `ADMIN_SISTEMA`) alinhada à realidade da DUOC (FB-14). | Atores do Sistema e RBAC | v3.3 |
+| **Seção 8.2 do Capítulo 8 (Especificação OE1 a OE4)** | Refatoração atômica do RF06; eliminação de termos ambíguos; refatoração de RNF07 e RNF08 para atributos de qualidade; e inclusão da seção 8.2.4.4 de governança CLT/LGPD (FB-12, FB-13, FB-15, FB-18). | Módulos 1, 2, 3 e 4 | v3.3 |
+| **Seção 8.4 e 8.5 do Capítulo 8 (Cards e Catálogos)** | Atualização de 100% dos 36 RFs com atores canônicos; atualização dos 20 RNFs com métricas operacionais; reclassificação do RNF16 para Reliability / Legal (+) e desambiguação RN/RNF (FB-12, FB-14, FB-15, FB-16, FB-17). | Cards Executivos, Catálogo Geral de RFs/RNFs e RNs | v3.3 |
+| **Capítulo 2 — Visão do Produto** | Harmonização da arquitetura de backend (4 perfis RBAC); saneamento residual de folha CLT/tempo real e adequação terminológica sobre dados confidenciais (FB-12, FB-14, FB-18). | Seções 2.3, 2.4, 2.5 e 2.6 | v2.5 (Cap. 2) |
+| **Priorização de Requisitos (Capítulo 8)** | Harmonização de métricas (RNF02 a 50 usuários/10 req/s), reclassificação do RNF16, saneamento de dados confidenciais (RNF03) e refatoração de RNF07/RNF08 (FB-12, FB-15, FB-17, FB-18). | Tabela Geral de RNFs e Critérios | v2.9 (Priorização) |
 
 ---
 
 ## Checklist de Validação e Homologação Interna
 
-- [x] Todos os 11 apontamentos enviados pela equipe avaliadora foram catalogados com ID único e rastreável.
+- [x] Todos os 18 apontamentos enviados pela equipe avaliadora (Ciclos 1 e 2) foram catalogados com ID único e rastreável.
 - [x] 100% dos feedbacks receberam uma das quatro deliberações formais com justificativa técnica explícita.
-- [x] Inclusão de comparativo rastreável completo **"Antes vs. Depois"** demonstrando textualmente as alterações aplicadas.
+- [x] Inclusão de comparativo rastreável completo **"Antes vs. Depois"** demonstrando textualmente as alterações aplicadas nos dois ciclos.
 - [x] 100% dos Requisitos Funcionais (RFs) novos e refinados seguem a sintaxe canônica `[Verbo no Infinitivo] + [Objeto]` e possuem critério de aceitação verificável em texto corrido.
 - [x] 100% dos Requisitos Não Funcionais (RNFs) novos e refinados possuem critérios mensuráveis objetivos e verificáveis.
 - [x] Regras de Negócio e Casos de Teste afetados foram devidamente sincronizados e numerados.
+- [x] Atores de todos os RFs harmonizados conforme a Matriz Canônica de Papéis RBAC (4 perfis).
+- [x] Desambiguação formal entre Regras de Negócio (políticas) e Requisitos Não Funcionais (atributos de qualidade).
+- [x] Fundamentação jurídica precisa: prescrição defensiva (Art. 11 CLT), retenção probatória ante o Art. 18, VI da LGPD (Art. 16, I e II), e distinção de dados confidenciais comuns (Art. 6º, VII da LGPD).
 - [x] Referências a sistemas legados atualizadas de forma harmonizada (sistema *Shifton* para frequência eletrônica).
 - [x] Navegação e renderização validadas com sucesso no MkDocs (`mkdocs build --strict`).
 
@@ -310,3 +456,4 @@ Mapeamento consolidado das seções e artefatos modificados em decorrência das 
 | `2.2` | 08/10/2026 | Consistência terminológica com a remoção do BDD da especificação de requisitos (feedback docente da Unidade 2): diretrizes, deliberação FB-11, comparativo "Antes vs. Depois" e checklist passam a referenciar critérios de aceitação em texto corrido. | Paulo Nery | — |
 | `2.3` | 11/10/2026 | Harmonização hierárquica do título do documento com a estrutura do Capítulo 8 (Unidade 2) no menu de navegação e correção de inconsistência na numeração da Seção 8.1 (ajuste de 9.1 para 8.1, alinhando com 8.1.1 e 8.1.2). | Matheus Ribeiro Szervinsk | Matheus Saraiva Camargo |
 | `2.4` | 12/10/2026 | Saneamento e harmonização pós-revisão por pares: desambiguação de RF22 (alocado na CAR-02 com CT-M1-11 para anexação/GPS), RF20 único na CAR-09 (Shifton), associação de RF36 na CAR-10, substituição terminológica de "aplicativo móvel" por "aplicação web responsiva (Web App / PWA)" e sincronização de rastreabilidade. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `2.5` | 12/10/2026 | Incorporação das deliberações do Ciclo 2 de avaliação por pares (FB-12 a FB-18): definições operacionais para termos ambíguos, refatoração e isolamento do RF06, Matriz Canônica RBAC de 4 papéis, refatoração de RNF07/RNF08 como atributos de qualidade, desambiguação entre RNs e RNFs, reclassificação do RNF16 (Reliability / Legal +) e adequação jurídica (CLT Art. 11 e LGPD). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
