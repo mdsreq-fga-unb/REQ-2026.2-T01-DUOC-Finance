@@ -257,10 +257,15 @@
   }
 }
 
-/* Tabelas e matrizes preenchem a largura disponível horizontalmente */
+/* Tabelas e matrizes preenchem a largura disponível horizontalmente e padronizam fonte em 12.8px */
 .md-typeset table:not([class]) {
   width: 100%;
   display: table;
+}
+
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  font-size: 12.8px !important;
 }
 
 /* ============================================================
@@ -671,12 +676,13 @@
 .status-pill {
   display: inline-flex;
   align-items: center;
-  padding: 0.1rem 0.35rem;
-  border-radius: 4px;
-  font-size: 0.6rem;
+  padding: 0.05rem 0.32rem;
+  border-radius: 3px;
+  font-size: 0.56rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .status-pill.concluido {
@@ -1484,7 +1490,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   background: #141720 !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22) !important;
-  margin: 1.25rem 0 !important;
+  margin: 0.85rem 0 !important;
   padding: 0 !important;
   overflow: hidden !important;
   transition: all 0.2s ease !important;
@@ -1551,8 +1557,8 @@
   justify-content: space-between !important;
   align-items: center !important;
   flex-wrap: wrap !important;
-  gap: 0.5rem !important;
-  padding: 0.55rem 0.95rem !important;
+  gap: 0.4rem !important;
+  padding: 0.38rem 0.75rem !important;
   margin: 0 !important;
   border-bottom: 1px solid transparent !important;
 }
@@ -1614,7 +1620,7 @@
   color: #1e3a8a !important;
 }
 
-/* Tipografia padronizada com o projeto: font-size 12.8px dentro dos cards */
+/* Tipografia padronizada com o projeto: font-size reduzido dentro dos cards */
 .week-card,
 .week-card p,
 .week-card ul,
@@ -1625,28 +1631,28 @@
 .week-meta-label,
 .week-meta-value,
 .week-section-title {
-  font-size: 12.8px !important;
+  font-size: 11.2px !important;
 }
 
 .week-card-header-left {
   display: flex !important;
   align-items: center !important;
-  gap: 0.6rem !important;
+  gap: 0.45rem !important;
   flex-wrap: wrap !important;
 }
 
 .week-card-title {
-  font-size: 13.5px !important;
+  font-size: 12.2px !important;
   font-weight: 700 !important;
   margin: 0 !important;
   letter-spacing: 0.01em !important;
 }
 
 .week-card-period {
-  font-size: 12px !important;
+  font-size: 10px !important;
   font-weight: 600 !important;
-  padding: 0.12rem 0.45rem !important;
-  border-radius: 4px !important;
+  padding: 0.05rem 0.32rem !important;
+  border-radius: 3px !important;
   background: rgba(0, 0, 0, 0.3) !important;
   color: rgba(255, 255, 255, 0.9) !important;
   border: 1px solid rgba(255, 255, 255, 0.15) !important;
@@ -1662,8 +1668,8 @@
 .week-card-meta {
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 1.25rem !important;
-  padding: 0.75rem 0.95rem 0.5rem 0.95rem !important;
+  gap: 0.75rem !important;
+  padding: 0.35rem 0.75rem 0.3rem 0.75rem !important;
   margin: 0 !important;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.08) !important;
 }
@@ -1675,13 +1681,14 @@
 .week-meta-item {
   display: flex !important;
   align-items: baseline !important;
-  gap: 0.35rem !important;
+  gap: 0.3rem !important;
 }
 
 .week-meta-label {
   text-transform: uppercase !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: 0.03em !important;
   font-weight: 700 !important;
+  font-size: 10px !important;
   color: var(--duoc-gold) !important;
 }
 
@@ -1690,7 +1697,8 @@
 }
 
 .week-meta-value {
-  line-height: 1.4 !important;
+  line-height: 1.35 !important;
+  font-size: 11px !important;
   color: rgba(255, 255, 255, 0.88) !important;
 }
 
@@ -1702,26 +1710,27 @@
 .week-card-grid {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
-  gap: 1.25rem !important;
-  padding: 0.85rem 0.95rem 1rem 0.95rem !important;
+  gap: 0.85rem !important;
+  padding: 0.5rem 0.75rem 0.65rem 0.75rem !important;
 }
 
 @media screen and (max-width: 768px) {
   .week-card-grid {
     grid-template-columns: 1fr !important;
-    gap: 0.85rem !important;
+    gap: 0.6rem !important;
   }
 }
 
 .week-section-title {
   font-weight: 700 !important;
+  font-size: 10.5px !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: 0.03em !important;
   color: var(--duoc-gold) !important;
-  margin: 0 0 0.45rem 0 !important;
+  margin: 0 0 0.3rem 0 !important;
   display: flex !important;
   align-items: center !important;
-  gap: 0.35rem !important;
+  gap: 0.3rem !important;
 }
 
 [data-md-color-scheme="default"] .week-section-title {
@@ -1729,13 +1738,14 @@
 }
 
 .week-card ul {
-  margin: 0.25rem 0 0.5rem 0 !important;
-  padding-left: 1.15rem !important;
+  margin: 0.15rem 0 0.3rem 0 !important;
+  padding-left: 0.95rem !important;
 }
 
 .week-card li {
-  line-height: 1.55 !important;
-  margin-bottom: 0.35rem !important;
+  line-height: 1.38 !important;
+  font-size: 10.8px !important;
+  margin-bottom: 0.2rem !important;
   color: rgba(255, 255, 255, 0.85) !important;
 }
 
@@ -1848,4 +1858,432 @@
   border: 0;
 }
 
+/* ============================================================
+   CARDS DE RASTREABILIDADE MODULAR (SEÇÃO 8.4)
+   Cores temáticas dedicadas para cada módulo
+   ============================================================ */
 
+/* Tipografia ajustada para 12.8px nos cards de rastreabilidade modular */
+.week-card[class*="card-mod-"],
+.week-card[class*="card-mod-"] p,
+.week-card[class*="card-mod-"] ul,
+.week-card[class*="card-mod-"] ol,
+.week-card[class*="card-mod-"] li,
+.week-card[class*="card-mod-"] .week-meta-value {
+  font-size: 12.8px !important;
+  line-height: 1.48 !important;
+}
+
+.week-card[class*="card-mod-"] .week-card-title {
+  font-size: 14px !important;
+}
+
+.week-card[class*="card-mod-"] .week-card-period {
+  font-size: 11.5px !important;
+}
+
+.week-card[class*="card-mod-"] .status-pill {
+  font-size: 11.5px !important;
+}
+
+.week-card[class*="card-mod-"] .week-meta-label {
+  font-size: 11px !important;
+}
+
+.week-card[class*="card-mod-"] .week-section-title {
+  font-size: 12px !important;
+}
+
+/* Módulo 1: Azul (#3b82f6) */
+.week-card.card-mod-1 {
+  border: 1px solid rgba(59, 130, 246, 0.55) !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-1 {
+  border: 1px solid #3b82f6 !important;
+}
+.week-card.card-mod-1:hover {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.22) !important;
+}
+.week-card.card-mod-1 .week-card-header {
+  background: rgba(59, 130, 246, 0.16) !important;
+  border-bottom-color: rgba(59, 130, 246, 0.35) !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-1 .week-card-header {
+  background: #dbeafe !important;
+  border-bottom-color: #bfdbfe !important;
+}
+.week-card.card-mod-1 .week-card-title {
+  color: #60a5fa !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-1 .week-card-title {
+  color: #1e3a8a !important;
+}
+.status-pill.pill-mod-1 {
+  background: rgba(59, 130, 246, 0.16) !important;
+  color: #93c5fd !important;
+  border: 1px solid #3b82f6 !important;
+}
+[data-md-color-scheme="default"] .status-pill.pill-mod-1 {
+  background: #dbeafe !important;
+  color: #1d4ed8 !important;
+  border: 1px solid #3b82f6 !important;
+}
+
+/* Módulo 2: Verde (#22c55e) */
+.week-card.card-mod-2 {
+  border: 1px solid rgba(34, 197, 94, 0.55) !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-2 {
+  border: 1px solid #22c55e !important;
+}
+.week-card.card-mod-2:hover {
+  border-color: #22c55e !important;
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.22) !important;
+}
+.week-card.card-mod-2 .week-card-header {
+  background: rgba(34, 197, 94, 0.16) !important;
+  border-bottom-color: rgba(34, 197, 94, 0.35) !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-2 .week-card-header {
+  background: #dcfce7 !important;
+  border-bottom-color: #bbf7d0 !important;
+}
+.week-card.card-mod-2 .week-card-title {
+  color: #4ade80 !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-2 .week-card-title {
+  color: #14532d !important;
+}
+.status-pill.pill-mod-2 {
+  background: rgba(34, 197, 94, 0.16) !important;
+  color: #86efac !important;
+  border: 1px solid #22c55e !important;
+}
+[data-md-color-scheme="default"] .status-pill.pill-mod-2 {
+  background: #dcfce7 !important;
+  color: #15803d !important;
+  border: 1px solid #22c55e !important;
+}
+
+/* Módulo 3: Âmbar / Laranja (#f59e0b) */
+.week-card.card-mod-3 {
+  border: 1px solid rgba(245, 158, 11, 0.55) !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-3 {
+  border: 1px solid #f59e0b !important;
+}
+.week-card.card-mod-3:hover {
+  border-color: #f59e0b !important;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.22) !important;
+}
+.week-card.card-mod-3 .week-card-header {
+  background: rgba(245, 158, 11, 0.16) !important;
+  border-bottom-color: rgba(245, 158, 11, 0.35) !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-3 .week-card-header {
+  background: #fef3c7 !important;
+  border-bottom-color: #fde68a !important;
+}
+.week-card.card-mod-3 .week-card-title {
+  color: #fbbf24 !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-3 .week-card-title {
+  color: #78350f !important;
+}
+.status-pill.pill-mod-3 {
+  background: rgba(245, 158, 11, 0.16) !important;
+  color: #fde68a !important;
+  border: 1px solid #f59e0b !important;
+}
+[data-md-color-scheme="default"] .status-pill.pill-mod-3 {
+  background: #fef3c7 !important;
+  color: #b45309 !important;
+  border: 1px solid #f59e0b !important;
+}
+
+/* Módulo 4: Roxo / Púrpura (#a855f7) */
+.week-card.card-mod-4 {
+  border: 1px solid rgba(168, 85, 247, 0.55) !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-4 {
+  border: 1px solid #a855f7 !important;
+}
+.week-card.card-mod-4:hover {
+  border-color: #a855f7 !important;
+  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.22) !important;
+}
+.week-card.card-mod-4 .week-card-header {
+  background: rgba(168, 85, 247, 0.16) !important;
+  border-bottom-color: rgba(168, 85, 247, 0.35) !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-4 .week-card-header {
+  background: #f3e8ff !important;
+  border-bottom-color: #e9d5ff !important;
+}
+.week-card.card-mod-4 .week-card-title {
+  color: #c084fc !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-4 .week-card-title {
+  color: #581c87 !important;
+}
+.status-pill.pill-mod-4 {
+  background: rgba(168, 85, 247, 0.16) !important;
+  color: #d8b4fe !important;
+  border: 1px solid #a855f7 !important;
+}
+[data-md-color-scheme="default"] .status-pill.pill-mod-4 {
+  background: #f3e8ff !important;
+  color: #7e22ce !important;
+  border: 1px solid #a855f7 !important;
+}
+
+/* Módulo Transversal: Dourado DUOC (#DAA520) */
+.week-card.card-mod-trans {
+  border: 1px solid rgba(218, 165, 32, 0.55) !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-trans {
+  border: 1px solid #DAA520 !important;
+}
+.week-card.card-mod-trans:hover {
+  border-color: var(--duoc-gold) !important;
+  box-shadow: 0 4px 14px rgba(218, 165, 32, 0.22) !important;
+}
+.week-card.card-mod-trans .week-card-header {
+  background: rgba(218, 165, 32, 0.16) !important;
+  border-bottom-color: rgba(218, 165, 32, 0.35) !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-trans .week-card-header {
+  background: #fefce8 !important;
+  border-bottom-color: #fef08a !important;
+}
+.week-card.card-mod-trans .week-card-title {
+  color: #ffd866 !important;
+}
+[data-md-color-scheme="default"] .week-card.card-mod-trans .week-card-title {
+  color: #713f12 !important;
+}
+.status-pill.pill-mod-trans {
+  background: rgba(218, 165, 32, 0.16) !important;
+  color: #ffe082 !important;
+  border: 1px solid var(--duoc-gold) !important;
+}
+[data-md-color-scheme="default"] .status-pill.pill-mod-trans {
+  background: #fefce8 !important;
+  color: #854d0e !important;
+  border: 1px solid var(--duoc-gold) !important;
+}
+
+/* ============================================================
+   BADGES MODULARES E DESTALHAMENTO DE LINHAS DE TABELAS (8.5)
+   Colorização clara e semântica por módulo no catálogo
+   ============================================================ */
+
+.mod-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.08rem 0.42rem;
+  border-radius: 3px;
+  font-size: 11.5px !important;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  line-height: 1.25;
+}
+
+/* Compactação elegante e tipografia em 12.8px para as tabelas do catálogo e matriz (8.4 e 8.5) */
+.md-typeset table:not([class]):has(.mod-badge) td {
+  padding: 0.38rem 0.55rem !important;
+  font-size: 12.8px !important;
+  line-height: 1.45 !important;
+}
+
+.md-typeset table:not([class]):has(.mod-badge) th {
+  padding: 0.42rem 0.55rem !important;
+  font-size: 12.8px !important;
+  font-weight: 700 !important;
+}
+
+/* Abas compactas no Material for MkDocs */
+.md-typeset .tabbed-set > .tabbed-labels > label {
+  font-size: 0.72rem !important;
+  padding: 0.4rem 0.75rem !important;
+}
+
+/* Módulo 1 (Azul) */
+.mod-badge.mod-1 {
+  background: rgba(59, 130, 246, 0.18) !important;
+  color: #93c5fd !important;
+  border: 1px solid rgba(59, 130, 246, 0.45) !important;
+}
+[data-md-color-scheme="default"] .mod-badge.mod-1 {
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border-color: #bfdbfe !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-1) td {
+  background-color: rgba(59, 130, 246, 0.07) !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-1):hover td {
+  background-color: rgba(59, 130, 246, 0.14) !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-1) td:first-child {
+  border-left: 2.5px solid #3b82f6 !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-1) td {
+  background-color: rgba(59, 130, 246, 0.05) !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-1):hover td {
+  background-color: rgba(59, 130, 246, 0.10) !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-1) td:first-child {
+  border-left: 2.5px solid #2563eb !important;
+}
+
+/* Módulo 2 (Verde) */
+.mod-badge.mod-2 {
+  background: rgba(34, 197, 94, 0.18) !important;
+  color: #86efac !important;
+  border: 1px solid rgba(34, 197, 94, 0.45) !important;
+}
+[data-md-color-scheme="default"] .mod-badge.mod-2 {
+  background: #f0fdf4 !important;
+  color: #15803d !important;
+  border-color: #bbf7d0 !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-2) td {
+  background-color: rgba(34, 197, 94, 0.07) !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-2):hover td {
+  background-color: rgba(34, 197, 94, 0.14) !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-2) td:first-child {
+  border-left: 2.5px solid #22c55e !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-2) td {
+  background-color: rgba(34, 197, 94, 0.05) !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-2):hover td {
+  background-color: rgba(34, 197, 94, 0.10) !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-2) td:first-child {
+  border-left: 2.5px solid #16a34a !important;
+}
+
+/* Módulo 3 (Âmbar/Laranja) */
+.mod-badge.mod-3 {
+  background: rgba(245, 158, 11, 0.18) !important;
+  color: #fde68a !important;
+  border: 1px solid rgba(245, 158, 11, 0.45) !important;
+}
+[data-md-color-scheme="default"] .mod-badge.mod-3 {
+  background: #fffbeb !important;
+  color: #b45309 !important;
+  border-color: #fcd34d !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-3) td {
+  background-color: rgba(245, 158, 11, 0.07) !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-3):hover td {
+  background-color: rgba(245, 158, 11, 0.14) !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-3) td:first-child {
+  border-left: 2.5px solid #f59e0b !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-3) td {
+  background-color: rgba(245, 158, 11, 0.05) !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-3):hover td {
+  background-color: rgba(245, 158, 11, 0.10) !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-3) td:first-child {
+  border-left: 2.5px solid #d97706 !important;
+}
+
+/* Módulo 4 (Roxo) */
+.mod-badge.mod-4 {
+  background: rgba(168, 85, 247, 0.18) !important;
+  color: #d8b4fe !important;
+  border: 1px solid rgba(168, 85, 247, 0.45) !important;
+}
+[data-md-color-scheme="default"] .mod-badge.mod-4 {
+  background: #faf5ff !important;
+  color: #7e22ce !important;
+  border-color: #e9d5ff !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-4) td {
+  background-color: rgba(168, 85, 247, 0.07) !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-4):hover td {
+  background-color: rgba(168, 85, 247, 0.14) !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-4) td:first-child {
+  border-left: 2.5px solid #a855f7 !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-4) td {
+  background-color: rgba(168, 85, 247, 0.05) !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-4):hover td {
+  background-color: rgba(168, 85, 247, 0.10) !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-4) td:first-child {
+  border-left: 2.5px solid #9333ea !important;
+}
+
+/* Módulo Transversal / Universal (Dourado Ocre) */
+.mod-badge.mod-trans {
+  background: rgba(218, 165, 32, 0.18) !important;
+  color: #ffe082 !important;
+  border: 1px solid rgba(218, 165, 32, 0.45) !important;
+}
+[data-md-color-scheme="default"] .mod-badge.mod-trans {
+  background: #fefce8 !important;
+  color: #854d0e !important;
+  border-color: #fef08a !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-trans) td {
+  background-color: rgba(218, 165, 32, 0.08) !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-trans):hover td {
+  background-color: rgba(218, 165, 32, 0.15) !important;
+}
+.md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-trans) td:first-child {
+  border-left: 2.5px solid #DAA520 !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-trans) td {
+  background-color: rgba(218, 165, 32, 0.06) !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-trans):hover td {
+  background-color: rgba(218, 165, 32, 0.11) !important;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:has(.mod-badge.mod-trans) td:first-child {
+  border-left: 2.5px solid #b8860b !important;
+}
+
+/* ============================================================
+   CONTAINER DE ESPECIFICAÇÃO MODULAR EM ABAS (SEÇÃO 8.3)
+   Fluxo de leitura aberto e fluido (sem caixas rígidas)
+   ============================================================ */
+.module-spec-pane {
+  padding: 0.75rem 0.25rem 1.5rem 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.module-spec-pane h3:first-of-type {
+  margin-top: 0.25rem !important;
+  color: var(--duoc-gold);
+}
+
+.module-spec-pane h4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+  font-size: 1.05rem !important;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.3rem;
+}
+
+[data-md-color-scheme="default"] .module-spec-pane h4 {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}

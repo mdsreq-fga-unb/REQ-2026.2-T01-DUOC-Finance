@@ -21,11 +21,11 @@ As atividades de Engenharia de Requisitos (ER) a serem empregadas no desenvolvim
 ---
 
 <a id="51-elementos-de-engenharia-de-requisitos"></a>
-## 5.1 Elementos de Engenharia de Requisitos
+## Elementos de Engenharia de Requisitos
 
 Nesta seção é formalizada a vinculação entre as seis atividades clássicas da Engenharia de Requisitos (Kotonya & Sommerville, Wiegers & Beatty) e os elementos concretos (categorizados em técnicas, práticas, ferramentas, artefatos e critérios de trabalho) aplicados pela equipe Cascata Ágil no projeto **DUOC Finance**.
 
-### 1. Elicitação e Descoberta de Requisitos
+### Elicitação e Descoberta de Requisitos
 * **Objetivo Geral:** Descobrir as necessidades operacionais reais, regras de negócio e expectativas sociotécnicas dos atores da DUOC.
 *   **Técnicas de ER:**
     *   **Entrevistas Semiestruturadas com Stakeholder Chave:** Condução planejada de reuniões síncronas com a auxiliar-administradora Maria Beatryz para mapear a rotina de fechamento de folha, gestão de canteiros e cálculo de comissões. | **Status:** Realizado | **Evidência:** [Ata da Reunião 1](../atas/reuniao-01.md).
@@ -38,7 +38,7 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 
 ---
 
-### 2. Análise e Consenso de Requisitos
+### Análise e Consenso de Requisitos
 * **Objetivo Geral:** Estruturar, desambiguar e delimitar as fronteiras do sistema, resolvendo conflitos de interesse e priorizando o escopo viável.
 *   **Técnicas de ER:**
     *   **Rich Picture (Soft Systems Methodology):** Modelagem visual planejada do ecossistema sociotécnico da DUOC para explicitar fluxos informacionais, zonas de atrito e as fronteiras do produto proposto. | **Status:** Realizado | **Evidência:** [Rich Picture do Sistema DUOC Finance](../visao-produto/capitulo-1/index.md#13-rich-picture-fluxo-sociotecnico).
@@ -49,7 +49,7 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 
 ---
 
-### 3. Declaração e Especificação de Requisitos
+### Declaração e Especificação de Requisitos
 * **Objetivo Geral:** Registrar formalmente as necessidades de software de maneira clara, verificável e compreensível para negócio e desenvolvimento.
 *   **Técnicas de ER:**
     *   **Modelagem de Dados:** Técnica de abstração planejada para estruturar o domínio da aplicação e garantir a integridade relacional entre usuários, contratos, RVTs e folha. | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 2](../cronograma/index.md#detalhamento-metodologico-por-marco-avaliativo).
@@ -60,7 +60,7 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 
 ---
 
-### 4. Representação de Requisitos
+### Representação de Requisitos
 * **Objetivo Geral:** Traduzir especificações conceituais em modelos visuais tangíveis que facilitem a compreensão e o alinhamento com os usuários.
 *   **Técnicas de ER:**
     *   **Prototipação:** Técnica de criação de interfaces navegáveis para validação das estações de trabalho (Desktop) e dispositivos móveis (*mobile-first* para canteiro de obras). | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 2](../cronograma/index.md#detalhamento-metodologico-por-marco-avaliativo).
@@ -73,7 +73,7 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 
 ---
 
-### 5. Verificação e Validação de Requisitos (V&V)
+### Verificação e Validação de Requisitos (V&V)
 * **Objetivo Geral:** Assegurar a corretude técnica interna dos documentos (Verificação) e confirmar que o software atende às necessidades reais do negócio (Validação).
 *   **Técnicas de ER:**
     *   **Inspeção (Fagan Adaptado):** Aplicação planejada de listas de verificação (checklists) de qualidade técnica, completeza e conformidade gramatical na documentação. | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 3](../cronograma/index.md#detalhamento-metodologico-por-marco-avaliativo).
@@ -88,7 +88,7 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 
 ---
 
-### 6. Organização e Atualização de Requisitos (Gestão)
+### Organização e Atualização de Requisitos (Gestão)
 * **Objetivo Geral:** Rastrear a evolução dos requisitos ao longo do ciclo de vida, controlar mudanças de escopo e garantir a rastreabilidade bidirecional.
 *   **Práticas:**
     *   **Documentação Viva (*Docs as Code*):** Prática planejada de publicação contínua da documentação versionada no Git, garantindo que o portal reflita sempre o estado atual do projeto. | **Status:** Em Execução | **Evidência:** [GitPages do Projeto](https://mdsreq-fga-unb.github.io/REQ-2026.2-T01-DUOC-Finance/).
@@ -101,7 +101,7 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 ---
 
 <a id="52-mapeamento-de-engenharia-de-requisitos-ao-processo"></a>
-## 5.2 Mapeamento de Engenharia de Requisitos ao Processo
+## Mapeamento de Engenharia de Requisitos ao Processo
 
 ### Integração entre as Fases do Processo e a Engenharia de Requisitos
 

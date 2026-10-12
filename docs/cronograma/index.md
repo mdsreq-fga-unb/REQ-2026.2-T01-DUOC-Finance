@@ -1389,7 +1389,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
         </div>
         <div class="week-meta-item">
           <span class="week-meta-label">Responsáveis Principais</span>
-          <span class="week-meta-value">Eric Araújo, Carlos Gabriel, Giovana Ferreira</span>
+          <span class="week-meta-value">Eric Araújo, Giovana Ferreira</span>
         </div>
       </div>
       <div class="week-card-grid">
@@ -1561,7 +1561,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
         </div>
         <div class="week-meta-item">
           <span class="week-meta-label">Responsáveis Principais</span>
-          <span class="week-meta-value">Giovana Ferreira, Carlos Gabriel, Maria Beatryz</span>
+          <span class="week-meta-value">Giovana Ferreira, Maria Beatryz</span>
         </div>
       </div>
       <div class="week-card-grid">

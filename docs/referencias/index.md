@@ -6,9 +6,9 @@ A fundamentação teórica, os modelos conceituais e os padrões metodológicos 
 
 ---
 
-## 1. Referências Estruturadas segundo a Norma ABNT (NBR 6023)
+## Referências Estruturadas segundo a Norma ABNT (NBR 6023)
 
-### 1.1 Bibliografia Básica
+### Bibliografia Básica (ABNT)
 
 1. **AMBLER, Scott.** *Agile Modeling: Effective Practices for eXtreme Programming and the Unified Process.* Nova York: John Wiley & Sons, 2002.
 2. **BOEHM, Barry; TURNER, Richard.** *Balancing Agility and Discipline: A Guide for the Perplexed.* Boston: Addison-Wesley, 2004.
@@ -21,7 +21,7 @@ A fundamentação teórica, os modelos conceituais e os padrões metodológicos 
 9. **SOMMERVILLE, Ian.** *Engenharia de Software.* 10. ed. São Paulo: Pearson Addison Wesley, 2019.
 10. **WIEGERS, Karl; BEATTY, Joy.** *Software Requirements.* 3. ed. Redmond: Microsoft Press, 2013.
 
-### 1.2 Bibliografia Complementar
+### Bibliografia Complementar (ABNT)
 
 1. **AGUIAR, Fabio; CAROLI, Paulo.** *Product Backlog Building: Um guia prático para criação e refinamento de backlog para produtos de sucesso.* 1. ed. Rio de Janeiro: Editora Caroli, 2021.
 2. **CHEMUTURI, Murali.** *Requirements Engineering and Management for Software Development Projects.* Londres: Springer, 2013. DOI: [10.1007/978-1-4614-5377-2](https://doi.org/10.1007/978-1-4614-5377-2).
@@ -42,9 +42,9 @@ A fundamentação teórica, os modelos conceituais e os padrões metodológicos 
 
 ---
 
-## 2. Referências Estruturadas no Padrão IEEE
+## Referências Estruturadas no Padrão IEEE
 
-### 2.1 Bibliografia Básica
+### Bibliografia Básica (IEEE)
 
 * [1] S. Ambler, *Agile Modeling: Effective Practices for eXtreme Programming and the Unified Process*. New York, NY, USA: John Wiley & Sons, 2002.
 * [2] B. Boehm and R. Turner, *Balancing Agility and Discipline: A Guide for the Perplexed*. Boston, MA, USA: Addison-Wesley, 2004.
@@ -57,7 +57,7 @@ A fundamentação teórica, os modelos conceituais e os padrões metodológicos 
 * [9] I. Sommerville, *Engenharia de Software*, 10ª ed. São Paulo, SP, Brasil: Pearson Addison Wesley, 2019.
 * [10] K. Wiegers and J. Beatty, *Software Requirements*, 3rd ed. Redmond, WA, USA: Microsoft Press, 2013.
 
-### 2.2 Bibliografia Complementar
+### Bibliografia Complementar (IEEE)
 
 * [11] F. Aguiar e P. Caroli, *Product Backlog Building: Um guia prático para criação e refinamento de backlog para produtos de sucesso*, 1ª ed. Rio de Janeiro, RJ, Brasil: Editora Caroli, 2021.
 * [12] M. Chemuturi, *Requirements Engineering and Management for Software Development Projects*. London, UK: Springer, 2013.
