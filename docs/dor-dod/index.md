@@ -1,9 +1,6 @@
 # Capítulo 9: Definition of Ready (DoR) e Definition of Done (DoD)
 
-Este capítulo formaliza os acordos de trabalho da equipe **Cascata Ágil** para selecionar itens que podem avançar à construção e verificar quando um incremento do **DUOC Finance** está concluído. Os critérios consideram o contexto sociotécnico da DUOC, a participação da cliente **Maria Beatryz** e o processo **RAD UI-First**.
-
-!!! info "Rastreabilidade acadêmica"
-    Artefato transversal de Governança e Qualidade, previsto para a **Unidade 2 (Ponto de Controle 2, em 15/10/2026)**. Atende à Seção 9 do Template Oficial da disciplina (**Definition of Ready — DoR** e **Definition of Done — DoD**).
+Este capítulo formaliza os acordos de trabalho da equipe **Cascata Ágil** para selecionar itens aptos à construção e verificar quando um incremento do **DUOC Finance** está concluído. Os critérios consideram o contexto sociotécnico da DUOC, a participação da cliente parceira **Maria Beatryz** e o processo **RAD UI-First**, constituindo o artefato transversal de Governança e Qualidade da **Unidade 2** em atendimento à Seção 9 do Template Oficial da disciplina (**Definition of Ready — DoR** e **Definition of Done — DoD**).
 
 <a id="91-definition-of-ready-dor"></a>
 <a id="definition-of-ready-dor"></a>
@@ -82,4 +79,5 @@ Na **Unidade 2 / Incremento 1**, o marco de 15/10/2026 associa telas homologadas
 | `1.1` | 21/09/2026 | Ajuste do DoR alinhando a estratégia UI-First (base no Figma e designs via Frontend com posterior codificação de lógica) | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `1.2` | 11/10/2026 | Consolidação dos checklists DoR/DoD, perguntas de verificação, evidências operacionais e rastreabilidade aos capítulos 4, 6, 7 e 8 | Giovana Ferreira Santos | Pendente de revisão |
 | `1.3` | 13/10/2026 | Remoção dos prefixos numéricos das seções (9.1 e 9.2) alinhando a estrutura com os demais capítulos e preservando âncoras para rastreabilidade | Matheus Ribeiro Szervinsk | Eric Araújo |
+| `1.4` | 13/10/2026 | Remoção do card de alerta de rastreabilidade acadêmica e integração direta na introdução textual | Matheus Ribeiro Szervinsk | Eric Araújo |
 
