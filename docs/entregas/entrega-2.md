@@ -47,44 +47,39 @@ A equipe **Cascata Ágil** desenvolveu integralmente o conjunto de artefatos sol
 | **Capítulo 8** | Conformidade Jurídica (CLT e LGPD) | Fundamentação do Art. 11 da CLT (retenção defensiva), Art. 16, I e II da LGPD (exceção à eliminação) e distinção entre dados confidenciais e sensíveis. | [Acessar Conformidade](../requisitos/index.md#conformidade-juridica-clt-lgpd) |
 | **Capítulo 8 (8.3)** | Matriz-Síntese Geral de Rastreabilidade | Correlação OE principal/secundário × CAR × Valor de Negócio × RF × RNF × CT, conforme a Seção 8.3 do Template Oficial. | [Acessar Matriz-Síntese](../requisitos/index.md#matriz-sintese-geral-de-rastreabilidade) |
 | **Capítulo 8 (8.1 e 8.2)** | Catálogo Geral Consolidado | Visão única de RF01 a RF36, RNF01 a RNF20 e RN01 a RN31, com fonte de elicitação, regras associadas e alocação no MVP. | [Acessar Catálogo](../requisitos/index.md#catalogo-geral-consolidado) |
-| **Capítulo 8** | Avaliação do Valor de Negócio | Escala de valor 1 a 4 com rubrica de julgamento, critérios qualitativos e quantitativos e rastreabilidade dos gargalos (TR-01 a TR-04). | [Acessar Valor](../requisitos/priorizacao.md#101-avaliacao-do-valor-de-negocio) |
-| **Capítulo 8** | Avaliação do Esforço Técnico | Estimativa por horas de implementação, complexidade técnica e lacuna de capacidade da equipe, com fórmula de consolidação. | [Acessar Esforço](../requisitos/priorizacao.md#102-avaliacao-do-esforco-tecnico) |
-| **Capítulo 8 (10.2)** | Matriz 4 × 4 (Valor × Esforço) | Diagrama cartesiano, fundamentação matemática das coordenadas e análise estratégica dos quadrantes Q1 a Q4. | [Acessar Matriz 4 × 4](../requisitos/priorizacao.md#104-matriz-4-x-4) |
-| **Capítulo 8 (10.2)** | Definição do MVP | Linha de corte com 27 RFs no MVP (75,0%) e 9 no backlog evolutivo, tratamento dos itens de alto valor e alto esforço e 18 de 20 RNFs no MVP. | [Acessar MVP](../requisitos/priorizacao.md#105-definicao-dos-requisitos-funcionais-do-mvp) |
-| **Capítulo 8** | Validação do MVP com a Cliente | Ficha técnica da sessão de 24/09/2026 e quadro de deliberações (inclusão do RF11, rebaixamento do RF21, postergação de RF16, RF20 e RNF01). | [Acessar Validação](../requisitos/priorizacao.md#107-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente) |
+| **Capítulo 8** | Avaliação do Valor de Negócio | Escala de valor 1 a 4 com rubrica de julgamento, critérios qualitativos e quantitativos e rastreabilidade dos gargalos (TR-01 a TR-04). | [Acessar Valor](../requisitos/priorizacao.md#avaliacao-do-valor-de-negocio) |
+| **Capítulo 8** | Avaliação do Esforço Técnico | Estimativa por horas de implementação, complexidade técnica e lacuna de capacidade da equipe, com fórmula de consolidação. | [Acessar Esforço](../requisitos/priorizacao.md#avaliacao-do-esforco-tecnico) |
+| **Capítulo 8** | Matriz 4 × 4 (Valor × Esforço) | Diagrama cartesiano, fundamentação matemática das coordenadas e análise estratégica dos quadrantes Q1 a Q4. | [Acessar Matriz 4 × 4](../requisitos/priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico) |
+| **Capítulo 8** | Definição do MVP | Linha de corte com 23 RFs no MVP (74,2% dos 31 RFs do backlog) e 8 no backlog evolutivo (25,8%), além de 5 RFs complementares (RF32 a RF36), tratamento de itens de alto valor e alto esforço e 18 de 20 RNFs no MVP. | [Acessar MVP](../requisitos/priorizacao.md#definicao-dos-requisitos-funcionais-do-mvp) |
+| **Capítulo 8** | Validação do MVP com a Cliente | Ficha técnica da sessão de 24/09/2026 e quadro de deliberações (inclusão do RF11, rebaixamento do RF21, postergação de RF16, RF20 e RNF01). | [Acessar Validação](../requisitos/priorizacao.md#evidencia-e-registro-da-validacao-do-mvp-com-o-cliente) |
 | **Capítulo 8** | Feedback da Avaliação em Pares | Deliberação dos 18 apontamentos da equipe Guerreiros do Backlog (2 ciclos) e matriz rastreável "Antes vs. Depois" dos requisitos. | [Acessar Feedback](../requisitos/feedback.md) |
-| **Capítulo 9 (9.1)** | Definition of Ready (DoR) | Checklist operacional de entrada (escopo, INVEST, critérios verificáveis, RNFs, base visual e validação sociotécnica) e perguntas de refinamento. | [Acessar 9.1](../dor-dod/index.md#91-definition-of-ready-dor) |
-| **Capítulo 9 (9.2)** | Definition of Done (DoD) | Checklist operacional de conclusão (incremento funcional, testes, RNFs, Docs as Code, homologação) e registro mínimo de evidências. | [Acessar 9.2](../dor-dod/index.md#92-definition-of-done-dod) |
-| **Capítulo 10 (10.1)** | Backlog Geral | Hierarquia de 4 Temas (OE1 a OE4), 9 Épicos (CARs) e Histórias de Usuário derivadas 1:1 dos RFs, com vínculo aos RNFs específicos e transversais. | [Acessar 10.1](../backlog/index.md#101-backlog-geral) |
-| **Capítulo 10 (10.2)** | Priorização do Backlog e MVP | Indicadores de valor, complexidade e esforço, quadrantes Q1 a Q4, prioridade sugerida e composição do MVP e do backlog evolutivo. | [Acessar 10.2](../backlog/index.md#102-priorizacao-do-backlog-e-mvp) |
+| **Capítulo 9** | Definition of Ready (DoR) | Checklist operacional de entrada (escopo, INVEST, critérios verificáveis, RNFs, base visual e validação sociotécnica) e perguntas de refinamento. | [Acessar DoR](../dor-dod/index.md#definition-of-ready-dor) |
+| **Capítulo 9** | Definition of Done (DoD) | Checklist operacional de conclusão (incremento funcional, testes, RNFs, Docs as Code, homologação) e registro mínimo de evidências. | [Acessar DoD](../dor-dod/index.md#definition-of-done-dod) |
+| **Capítulo 10** | Backlog Geral | Hierarquia de 4 Temas (OE1 a OE4), 9 Épicos (CARs) e Histórias de Usuário derivadas 1:1 dos RFs, com vínculo aos RNFs específicos e transversais. | [Acessar Backlog Geral](../backlog/index.md#backlog-geral) |
+| **Capítulo 10** | Priorização do Backlog e MVP | Indicadores de valor, complexidade e esforço, quadrantes Q1 a Q4, prioridade sugerida e composição do MVP e do backlog evolutivo. | [Acessar Priorização](../backlog/index.md#priorizacao-do-backlog-e-linha-de-corte-do-mvp) |
 | **Atas** | Reuniões da Unidade 2 | **Reunião 04** (Retrospectiva da U1 e Planejamento da U2) e **Reunião 05** (Priorização, Matriz 4 × 4 e Alinhamento do MVP). | [Acessar Atas](../atas/index.md) |
-| **Capítulo 11 (11.2)** | Lições Aprendidas (Unidade 2) | Pontos fortes, gargalos e lições práticas da Unidade 2, com ações de melhoria, responsáveis, prazos e critérios de avaliação. | [Acessar 11.2](../licoes-aprendidas/index.md#marco-avaliativo-2-unidade-2-elicitacao-aprofundada-furps-e-gestao-de-backlog) |
+| **Capítulo 11** | Lições Aprendidas (Unidade 2) | Pontos fortes, gargalos e lições práticas da Unidade 2, com ações de melhoria, responsáveis, prazos e critérios de avaliação. | [Acessar Lições](../licoes-aprendidas/index.md#marco-avaliativo-2-unidade-2-elicitacao-aprofundada-furps-e-gestao-de-backlog) |
 
 ---
 
 ## 3. Vídeo da Apresentação da Entrega 2
 
-A apresentação formal do Ponto de Controle 2 será gravada em vídeo pela equipe **Cascata Ágil**, com participação distribuída de todos os integrantes, contemplando a especificação modular dos requisitos, a rastreabilidade, a priorização e definição do MVP, os acordos de DoR/DoD, o backlog do produto e a retrospectiva da Unidade 2.
+A apresentação formal do Ponto de Controle 2 foi gravada em vídeo pela equipe **Cascata Ágil**, com participação distribuída de todos os integrantes, contemplando a especificação modular dos requisitos, a rastreabilidade, a priorização e definição do MVP, os acordos de DoR/DoD, o backlog do produto e a retrospectiva da Unidade 2.
 
 ### Gravação Oficial da Apresentação
 
-!!! warning "Vídeo pendente"
-    O link da gravação será incorporado nesta seção após a apresentação do Ponto de Controle 2. Para publicar, substitua `ID_DO_VIDEO` no player abaixo e no link direto pelo identificador do vídeo no YouTube e remova este aviso.
-
-<!--
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; border: 1px solid var(--duoc-gold, #DAA520); margin: 1.5rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
   <iframe 
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-    src="https://www.youtube-nocookie.com/embed/ID_DO_VIDEO" 
+    src="https://www.youtube-nocookie.com/embed/JF_cYRJM7vk" 
     title="Vídeo de Apresentação — Entrega 2 (Unidade 2) — Equipe Cascata Ágil" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
   </iframe>
 </div>
--->
 
 > Caso o player incorporado acima apresente restrições de rede ou dispositivo, utilize o acesso direto:
-> **[Assistir à Apresentação da Entrega 2 no YouTube (Link Direto: *a inserir*)](#3-video-da-apresentacao-da-entrega-2)**
+> **[Assistir à Apresentação da Entrega 2 no YouTube (Link Direto: youtu.be/JF_cYRJM7vk)](https://youtu.be/JF_cYRJM7vk)**
 
 ### Distribuição dos Temas e Responsabilidades de Apresentação por Integrante
 
@@ -131,15 +126,15 @@ A tabela a seguir consolida o checklist de conformidade dos artefatos da Entrega
 | **04** | Matriz-síntese de rastreabilidade (OE × CAR × VN × RF × RNF) | :white_check_mark: Atendido | [Capítulo 8 — Matriz-Síntese](../requisitos/index.md#matriz-sintese-geral-de-rastreabilidade) |
 | **05** | Definição dos papéis de usuário e controle de acesso | :white_check_mark: Atendido | [Capítulo 8 — Matriz RBAC](../requisitos/index.md#atores-do-sistema-e-matriz-canonica-de-papeis-rbac) |
 | **06** | Revisão por pares dos requisitos com deliberação registrada | :white_check_mark: Atendido | [Feedback da Avaliação em Pares](../requisitos/feedback.md) |
-| **07** | Definition of Ready (DoR) com critérios operacionais | :white_check_mark: Atendido | [Capítulo 9.1](../dor-dod/index.md#91-definition-of-ready-dor) |
-| **08** | Definition of Done (DoD) com critérios operacionais | :white_check_mark: Atendido | [Capítulo 9.2](../dor-dod/index.md#92-definition-of-done-dod) |
-| **09** | Backlog Geral detalhado em Temas, Épicos e Histórias de Usuário | :white_check_mark: Atendido | [Capítulo 10.1](../backlog/index.md#101-backlog-geral) |
-| **10** | Priorização do backlog por valor de negócio e complexidade | :white_check_mark: Atendido | [Matriz 4 × 4](../requisitos/priorizacao.md#104-matriz-4-x-4) e [Capítulo 10.2](../backlog/index.md#102-priorizacao-do-backlog-e-mvp) |
-| **11** | Definição do MVP com justificativa dos itens postergados | :white_check_mark: Atendido | [Definição do MVP](../requisitos/priorizacao.md#105-definicao-dos-requisitos-funcionais-do-mvp) |
-| **12** | Validação do escopo priorizado com a cliente registrada em ata | :white_check_mark: Atendido | [Validação do MVP](../requisitos/priorizacao.md#107-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente) e [Ata da Reunião 05](../atas/reuniao-05.md) |
+| **07** | Definition of Ready (DoR) com critérios operacionais | :white_check_mark: Atendido | [Definition of Ready (DoR)](../dor-dod/index.md#definition-of-ready-dor) |
+| **08** | Definition of Done (DoD) com critérios operacionais | :white_check_mark: Atendido | [Definition of Done (DoD)](../dor-dod/index.md#definition-of-done-dod) |
+| **09** | Backlog Geral detalhado em Temas, Épicos e Histórias de Usuário | :white_check_mark: Atendido | [Backlog Geral](../backlog/index.md#backlog-geral) |
+| **10** | Priorização do backlog por valor de negócio e complexidade | :white_check_mark: Atendido | [Matriz 4 × 4](../requisitos/priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico) e [Priorização e MVP](../backlog/index.md#priorizacao-do-backlog-e-linha-de-corte-do-mvp) |
+| **11** | Definição do MVP com justificativa dos itens postergados | :white_check_mark: Atendido | [Definição do MVP](../requisitos/priorizacao.md#definicao-dos-requisitos-funcionais-do-mvp) |
+| **12** | Validação do escopo priorizado com a cliente registrada em ata | :white_check_mark: Atendido | [Validação do MVP](../requisitos/priorizacao.md#evidencia-e-registro-da-validacao-do-mvp-com-o-cliente) e [Ata da Reunião 05](../atas/reuniao-05.md) |
 | **13** | Incorporação das correções do feedback docente da Unidade 1 | :white_check_mark: Atendido | [Ata da Reunião 04](../atas/reuniao-04.md) |
 | **14** | Retrospectiva da Unidade 2 e lições aprendidas registradas | :white_check_mark: Atendido | [Capítulo 11.2](../licoes-aprendidas/index.md#marco-avaliativo-2-unidade-2-elicitacao-aprofundada-furps-e-gestao-de-backlog) |
-| **15** | Gravação em vídeo com participação distribuída de todos os integrantes | :hourglass_flowing_sand: Pendente | [Seção 3 deste Documento](#3-video-da-apresentacao-da-entrega-2) |
+| **15** | Gravação em vídeo com participação distribuída de todos os integrantes | :white_check_mark: Atendido | [Seção 3 deste Documento](#3-video-da-apresentacao-da-entrega-2) |
 | **16** | Portal Docs as Code estruturado, navegável e versionado | :white_check_mark: Atendido | [Repositório GitHub e GH Pages](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance) |
 
 ---
@@ -150,3 +145,4 @@ A tabela a seguir consolida o checklist de conformidade dos artefatos da Entrega
 | :---: | :---: | :--- | :--- | :--- |
 | `0.1` | 07/09/2026 | Criação da página com alerta de documento em desenvolvimento | Matheus Ribeiro | Eric Araújo |
 | `1.0` | 12/10/2026 | Estruturação formal do Ponto de Controle 2 com base no Template Oficial (v8): O Que Foi Solicitado (Seções 8, 9, 10 e 11.2), matriz de rastreabilidade dos artefatos entregues, seção de vídeo com espaço reservado para o link da gravação, distribuição por integrante, decisões estruturantes, autoavaliação e checklist de auditoria e conformidade | Paulo Nery | |
+| `1.1` | 13/10/2026 | Atualização de âncoras semânticas da Seção 2 e Checklist da Seção 5 (Priorização, DoR/DoD, Backlog), alinhamento métrico com o escopo consolidado do MVP e incorporação da gravação oficial em vídeo da apresentação da Entrega 2 | Matheus Ribeiro | Eric Araújo | |

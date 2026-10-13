@@ -3,9 +3,11 @@
 Este capítulo formaliza os acordos de trabalho da equipe **Cascata Ágil** para selecionar itens que podem avançar à construção e verificar quando um incremento do **DUOC Finance** está concluído. Os critérios consideram o contexto sociotécnico da DUOC, a participação da cliente **Maria Beatryz** e o processo **RAD UI-First**.
 
 !!! info "Rastreabilidade acadêmica"
-    Artefato transversal de Governança e Qualidade, previsto para a **Unidade 2 (Ponto de Controle 2, em 15/10/2026)**. Atende à Seção 9 do Template Oficial da disciplina: **9.1 DoR** e **9.2 DoD**.
+    Artefato transversal de Governança e Qualidade, previsto para a **Unidade 2 (Ponto de Controle 2, em 15/10/2026)**. Atende à Seção 9 do Template Oficial da disciplina (**Definition of Ready — DoR** e **Definition of Done — DoD**).
 
-## 9.1 Definition of Ready (DoR)
+<a id="91-definition-of-ready-dor"></a>
+<a id="definition-of-ready-dor"></a>
+## Definition of Ready (DoR)
 
 O **DoR** é o portão de entrada para a construção de um item do backlog. Um item só pode avançar para a implementação de lógica de negócio e persistência quando **todos** os critérios abaixo forem atendidos e houver evidência registrada. A preparação e a prototipagem visual fazem parte do próprio ciclo: o DoR não substitui a validação UI-First, nem autoriza antecipar a construção de backend ou banco de dados.
 
@@ -33,7 +35,9 @@ O **DoR** é o portão de entrada para a construção de um item do backlog. Um 
 - O item é pequeno o bastante para ser construído, verificado e demonstrado dentro do incremento planejado?
 - A cliente validou o fluxo real no Frontend com mocks, e ficou registrado o que foi aprovado ou precisa mudar?
 
-## 9.2 Definition of Done (DoD)
+<a id="92-definition-of-done-dod"></a>
+<a id="definition-of-done-dod"></a>
+## Definition of Done (DoD)
 
 O **DoD** é o portão de saída: confirma que a história ou incremento está funcional, integrado, verificado e apto à homologação/entrega. A conclusão não é determinada apenas por código implementado; exige atendimento dos critérios de aceitação, qualidade aplicável, documentação e validação sociotécnica.
 
@@ -77,4 +81,5 @@ Na **Unidade 2 / Incremento 1**, o marco de 15/10/2026 associa telas homologadas
 | `1.0` | 07/09/2026 | Criação e estruturação da página preliminar de acordos DoR e DoD (Unidade 2) | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `1.1` | 21/09/2026 | Ajuste do DoR alinhando a estratégia UI-First (base no Figma e designs via Frontend com posterior codificação de lógica) | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `1.2` | 11/10/2026 | Consolidação dos checklists DoR/DoD, perguntas de verificação, evidências operacionais e rastreabilidade aos capítulos 4, 6, 7 e 8 | Giovana Ferreira Santos | Pendente de revisão |
+| `1.3` | 13/10/2026 | Remoção dos prefixos numéricos das seções (9.1 e 9.2) alinhando a estrutura com os demais capítulos e preservando âncoras para rastreabilidade | Matheus Ribeiro Szervinsk | Eric Araújo |
 

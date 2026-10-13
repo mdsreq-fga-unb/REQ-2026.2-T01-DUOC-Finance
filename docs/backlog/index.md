@@ -1,7 +1,7 @@
 # Capítulo 10: Backlog do Produto e MVP
 
 !!! info "Enquadramento Metodológico — Unidade 2 e Seção 10 do Template Oficial"
-    Este capítulo decompõe o escopo do ***DUOC Finance*** em **Temas, Épicos e Histórias de Usuário (*User Stories*)**, atendendo à **Seção 10 do Template Oficial** da disciplina: a **Seção 10.1 (Backlog Geral)** é atendida por [Backlog Geral](#101-backlog-geral) e a **Seção 10.2 (Priorização do Backlog e MVP)** por [Priorização do Backlog e Linha de Corte do MVP](#102-priorizacao-do-backlog-e-mvp).
+    Este capítulo decompõe o escopo do ***DUOC Finance*** em **Temas, Épicos e Histórias de Usuário (*User Stories*)**, atendendo à **Seção 10 do Template Oficial** da disciplina: a diretriz de **Backlog Geral** (Seção 10.1 do Template) é atendida pela seção [Backlog Geral](#backlog-geral) e a de **Priorização do Backlog e MVP** (Seção 10.2 do Template) pela seção [Priorização do Backlog e Linha de Corte do MVP](#priorizacao-do-backlog-e-linha-de-corte-do-mvp).
 
     Os códigos, nomenclaturas, notas de valor e de esforço adotados aqui são **reproduzidos sem alteração** da [Especificação de Requisitos (Capítulo 8)](../requisitos/index.md) e da [Priorização e MVP (Capítulo 8)](../requisitos/priorizacao.md). Este capítulo não redefine nenhum requisito, apenas o expressa na perspectiva do usuário e o ordena para a construção iterativa do modelo RAD.
 
@@ -78,7 +78,8 @@ flowchart LR
 ---
 
 <a id="101-backlog-geral"></a>
-## 10.1 Backlog Geral
+<a id="backlog-geral"></a>
+## Backlog Geral
 
 Esta seção atende à **Seção 10.1 do Template Oficial**. A tabela canônica a seguir mapeia **100% dos 31 Requisitos Funcionais** (RF01 a RF31) em Histórias de Usuário e vincula a cada história os **Requisitos Não Funcionais** (RNF01 a RNF20) aplicáveis. Os **RF32 a RF36** (revisão por pares de 12/10/2026) são tratados na [Priorização](../requisitos/priorizacao.md#requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte) como requisitos complementares, sem história nesta versão do backlog.
 
@@ -170,9 +171,10 @@ A matriz inversa garante a rastreabilidade bidirecional: para cada RNF, indica a
 ---
 
 <a id="102-priorizacao-do-backlog-e-mvp"></a>
-## 10.2 Priorização do Backlog e Linha de Corte do MVP
+<a id="priorizacao-do-backlog-e-linha-de-corte-do-mvp"></a>
+## Priorização do Backlog e Linha de Corte do MVP
 
-Esta seção atende à **Seção 10.2 do Template Oficial**. A priorização das histórias reutiliza integralmente as notas formalizadas na [Tabela Consolidada das Avaliações](../requisitos/priorizacao.md#8-8-tabela-consolidada-das-avaliacoes) do Capítulo 8 e as expressa nos indicadores do template.
+Esta seção atende à **Seção 10.2 do Template Oficial**. A priorização das histórias reutiliza integralmente as notas formalizadas na [Tabela Consolidada das Avaliações](../requisitos/priorizacao.md#tabela-consolidada-das-avaliacoes) do Capítulo 8 e as expressa nos indicadores do template.
 
 ### Indicadores do Template Oficial
 
@@ -213,7 +215,7 @@ Quanto **maior o IP**, maior o retorno de negócio por unidade de esforço técn
 
 ### Quadrantes e Prioridade Sugerida
 
-O quadrante de cada história é obtido pelo cruzamento do **VB** com a **classe do EC** (classes 1 e 2: esforço baixo/moderado, EC < 2,50; classes 3 e 4: esforço alto, EC ≥ 2,50), usando os mesmos cortes da [Matriz 4 × 4](../requisitos/priorizacao.md#8-9-matriz-4-x-4-valor-de-negocio-x-esforco-tecnico) do Capítulo 8:
+O quadrante de cada história é obtido pelo cruzamento do **VB** com a **classe do EC** (classes 1 e 2: esforço baixo/moderado, EC < 2,50; classes 3 e 4: esforço alto, EC ≥ 2,50), usando os mesmos cortes da [Matriz 4 × 4](../requisitos/priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico) do Capítulo 8:
 
 | Quadrante | Critério | Correspondência no Capítulo 8 | Prioridade Sugerida | Destinação |
 | :---: | :--- | :--- | :--- | :---: |
@@ -341,3 +343,4 @@ flowchart LR
 | `1.1` | 07/09/2026 | Alinhamento da priorização com as iterações de construção do RAD | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `2.0` | 12/10/2026 | Estruturação completa do capítulo conforme a Seção 10 do Template Oficial: hierarquia de 4 temas (OE1 a OE4), 9 épicos (CAR-01 a CAR-09) e 31 histórias de usuário derivadas de RF01 a RF31; tabela canônica do Backlog Geral (10.1) com vínculo aos RNFs específicos e ao pacote transversal, e matriz inversa RNF × US; priorização (10.2) com VB, CX, ES, PT, IP, quadrantes Q1 a Q4 e prioridade sugerida, sincronizada com a Matriz 4 × 4 do Capítulo 8; linha de corte com 23 histórias no MVP e 8 no backlog evolutivo pós-MVP. | Paulo Nery | — |
 | `2.1` | 12/10/2026 | Numeração das seções do capítulo (10.1 e 10.2) e atualização dos vínculos para as seções 8.6 a 8.12 da Priorização; atores das histórias alinhados à Matriz Canônica de Papéis (RBAC) do Capítulo 8; priorização passa a usar as três dimensões do Esforço Consolidado (ES, CX e LC) no lugar da Pontuação Técnica de duas dimensões, com reordenação por IP; indicação dos RF32 a RF36 como requisitos complementares sem história. | Eric Araújo | — |
+| `2.2` | 13/10/2026 | Remoção dos prefixos numéricos dos títulos de seção (10.1 e 10.2) e atualização das referências internas e âncoras para alinhamento com a estrutura da Unidade 2 | Matheus Ribeiro Szervinsk | Eric Araújo |
