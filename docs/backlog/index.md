@@ -78,21 +78,21 @@ flowchart LR
 ---
 
 <a id="101-backlog-geral"></a>
-## Backlog Geral
+## 10.1 Backlog Geral
 
-Esta seção atende à **Seção 10.1 do Template Oficial**. A tabela canônica a seguir mapeia **100% dos 31 Requisitos Funcionais** (RF01 a RF31) em Histórias de Usuário e vincula a cada história os **Requisitos Não Funcionais** (RNF01 a RNF20) aplicáveis.
+Esta seção atende à **Seção 10.1 do Template Oficial**. A tabela canônica a seguir mapeia **100% dos 31 Requisitos Funcionais** (RF01 a RF31) em Histórias de Usuário e vincula a cada história os **Requisitos Não Funcionais** (RNF01 a RNF20) aplicáveis. Os **RF32 a RF36** (revisão por pares de 12/10/2026) são tratados na [Priorização](../requisitos/priorizacao.md#requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte) como requisitos complementares, sem história nesta versão do backlog.
 
 ### Papéis de Usuário
 
-Os papéis citados nas histórias reproduzem os atores descritos nos Critérios de Aceitação do [Capítulo 8](../requisitos/index.md#especificacao-modular-dos-requisitos). A tabela abaixo apresenta o **enquadramento proposto** desses atores nos quatro perfis RBAC atribuídos pelo **RF14**, a ser confirmado na configuração de perfis (US14):
+Os papéis citados nas histórias são os **quatro papéis sistêmicos canônicos** da [Matriz Canônica de Papéis (RBAC)](../requisitos/index.md#atores-do-sistema-e-matriz-canonica-de-papeis-rbac) do Capítulo 8, atribuídos pelo **RF14** (US14). Na DUOC, as rotinas de RH/Departamento Pessoal e de finanças são centralizadas no **Administrador Financeiro**; por isso, não são usados cargos como "analista de RH" ou "analista financeiro".
 
-| Perfil RBAC (RF14) | Papéis citados nas histórias |
-| :--- | :--- |
-| **Diarista / Técnico de Campo** | Colaborador de campo |
-| **Gestor de Contrato** | Gestor de contrato, coordenador técnico |
-| **Analista Financeiro** | Analista financeiro, gestor financeiro, responsável financeiro, coordenador financeiro |
-| **Administrador** | Administrador, profissional e gestor de RH, usuário com perfil de auditoria |
-| **Qualquer perfil** | Colaborador da DUOC, usuário autenticado, colaborador que esqueceu a senha |
+| Papel Canônico (RBAC) | Código | Histórias em que atua |
+| :--- | :---: | :--- |
+| **Técnico de Campo / Diarista** | `TECNICO_CAMPO` | US04, US07, US19, US22, US28 (US07 também pelo Gestor Operacional de Obras) |
+| **Gestor Operacional de Obras** | `GESTOR_OBRAS` | US10, US11, US12, US30, US31 (US10, US11, US12 e US30 compartilhadas com outros papéis) |
+| **Administrador Financeiro** | `ADMIN_FINANCEIRO` | US01, US02, US03, US05, US06, US08, US09, US10, US11, US12, US15, US20, US21, US25, US26, US27, US29, US30 |
+| **Administrador do Sistema** | `ADMIN_SISTEMA` | US11, US14, US15, US16, US23, US24 |
+| **Qualquer usuário autenticado** | — | US13, US17, US18 (histórias transversais de acesso, sem restrição de papel) |
 
 ### Convenções de Rastreabilidade dos RNFs
 
@@ -105,37 +105,37 @@ Os papéis citados nas histórias reproduzem os atores descritos nos Critérios 
 
 | US | Épico | História de Usuário | RF de Origem | RNFs Relacionados | Linha de Corte |
 | :---: | :---: | :--- | :---: | :--- | :---: |
-| **US01** | <span class="mod-badge mod-1">EP01 · OE1</span> | Como **profissional de RH**, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por CPF que sustente os apontamentos e os pagamentos de diárias. | RF01 | RNF02 + **T** | **MVP** |
-| **US02** | <span class="mod-badge mod-1">EP01 · OE1</span> | Como **gestor de RH**, quero atualizar os dados cadastrais e bancários de um colaborador ativo, para que todos os módulos passem a usar imediatamente as informações corretas, sem perder a versão anterior da ficha. | RF02 | RNF02 + **T** | **MVP** |
-| **US03** | <span class="mod-badge mod-1">EP01 · OE1</span> | Como **profissional de RH**, quero registrar afastamentos, férias e desligamentos de um colaborador, para que sua situação funcional fique atualizada e o acesso de campo seja revogado, evitando pagamentos indevidos. | RF03 | RNF02 + **T** | **MVP** |
-| **US25**<sup>†</sup> | <span class="mod-badge mod-1">EP01 · OE1</span> | Como **profissional de RH**, quero classificar o colaborador como Diarista, CLT ou Prestador de Serviço, para que o sistema aplique as regras administrativas e financeiras do vínculo correto. | RF25 | RNF02 + **T** | **MVP** |
-| **US26**<sup>†</sup> | <span class="mod-badge mod-1">EP01 · OE1</span> | Como **profissional de RH**, quero consultar o histórico de alterações cadastrais e bancárias de um colaborador, com autor e data de cada mudança, para que divergências administrativas possam ser rastreadas e esclarecidas. | RF26 | RNF02 + **T** | **MVP** |
-| **US04** | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **colaborador de campo**, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de WhatsApp. | RF04 | RNF01 *(evolutivo)*, RNF04 + **T** | **MVP** |
-| **US19** | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **colaborador de campo**, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e possa retificá-los antes do fechamento. | RF19 | RNF04 + **T** | **MVP** |
-| **US22**<sup>†</sup> | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **colaborador de campo**, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no RVT. | RF22 | RNF04, RNF07 + **T** | **MVP** |
-| **US20** | <span class="mod-badge mod-1">EP03 · OE1</span> | Como **analista financeiro**, quero importar as presenças homologadas do *Shifton* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação. | RF20 | RNF02<sup>¹</sup> + **T** | Pós-MVP |
-| **US05** | <span class="mod-badge mod-2">EP04 · OE2</span> | Como **analista financeiro**, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente. | RF05 | RNF05, RNF06, RNF10 + **T** | **MVP** |
-| **US06** | <span class="mod-badge mod-2">EP04 · OE2</span> | Como **gestor financeiro**, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança. | RF06 | RNF05, RNF06, RNF10 + **T** | **MVP** |
-| **US21** | <span class="mod-badge mod-2">EP04 · OE2</span> | Como **gestor financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original. | RF21 | RNF08 *(evolutivo)* + **T** | Pós-MVP |
-| **US27**<sup>†</sup> | <span class="mod-badge mod-2">EP04 · OE2</span> | Como **gestor financeiro**, quero cadastrar as categorias de diária técnica com valor e período de vigência, para que prévias e fechamentos usem sempre o valor vigente da competência. | RF27 | RNF06 + **T** | **MVP** |
-| **US07** | <span class="mod-badge mod-2">EP05 · OE2</span> | Como **colaborador de campo**, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas. | RF07 | RNF07 + **T** | **MVP** |
-| **US08** | <span class="mod-badge mod-2">EP05 · OE2</span> | Como **coordenador técnico ou financeiro**, quero aprovar ou reprovar as solicitações de reembolso dos contratos sob minha alçada, para que apenas despesas comprovadas sejam repassadas e o solicitante seja informado da decisão. | RF08 | RNF06 + **T** | **MVP** |
-| **US28**<sup>†</sup> | <span class="mod-badge mod-2">EP05 · OE2</span> | Como **colaborador de campo**, quero solicitar um adiantamento para uma despesa operacional de um contrato ativo, para que eu disponha dos recursos antes de executar a atividade. | RF28 | **T** | **MVP** |
-| **US29**<sup>†</sup> | <span class="mod-badge mod-2">EP05 · OE2</span> | Como **responsável financeiro**, quero aprovar ou reprovar os adiantamentos pendentes de análise, para que a liberação de recursos seja formal, rastreável e comunicada ao solicitante. | RF29 | RNF06 + **T** | **MVP** |
-| **US09** | <span class="mod-badge mod-3">EP06 · OE3</span> | Como **gestor de contrato**, quero disparar a apropriação dos custos homologados da competência aos respectivos contratos, para que eu conheça o custo real de cada obra sem duplicidade com a folha CLT. | RF09 | RNF10, RNF11 + **T** | **MVP** |
-| **US10** | <span class="mod-badge mod-3">EP06 · OE3</span> | Como **gestor de contrato**, quero visualizar a origem completa de cada custo apropriado, para que eu possa justificar e auditar qualquer linha de despesa do contrato. | RF10 | RNF10 + **T** | **MVP** |
-| **US30**<sup>†</sup> | <span class="mod-badge mod-3">EP06 · OE3</span> | Como **gestor de contrato**, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras. | RF30 | RNF09, RNF10<sup>¹</sup>, RNF12 + **T** | Pós-MVP |
-| **US11** | <span class="mod-badge mod-3">EP07 · OE3</span> | Como **gestor de contrato ou analista financeiro**, quero combinar filtros de período, contrato, colaborador e centro de custo no painel de custos, para que eu analise os custos diretos de cada obra no fechamento. | RF11 | RNF09, RNF10, RNF12 + **T** | **MVP** |
-| **US12** | <span class="mod-badge mod-3">EP07 · OE3</span> | Como **gestor de contrato**, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir. | RF12 | RNF09, RNF10<sup>¹</sup>, RNF12 + **T** | Pós-MVP |
-| **US31**<sup>†</sup> | <span class="mod-badge mod-3">EP07 · OE3</span> | Como **gestor de contrato**, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado. | RF31 | RNF09, RNF10<sup>¹</sup>, RNF12 + **T** | Pós-MVP |
-| **US13** | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **colaborador da DUOC**, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil. | RF13 | RNF13, RNF14 + **T** | **MVP** |
-| **US14** | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **administrador**, quero atribuir a cada usuário um papel de acesso, para que campo, gestão e financeiro visualizem apenas os dados da sua alçada (princípio do menor privilégio). | RF14 | RNF14 + **T** | **MVP** |
+| **US01** | <span class="mod-badge mod-1">EP01 · OE1</span> | Como **Administrador Financeiro**, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por CPF que sustente os apontamentos e os pagamentos de diárias. | RF01 | RNF02 + **T** | **MVP** |
+| **US02** | <span class="mod-badge mod-1">EP01 · OE1</span> | Como **Administrador Financeiro**, quero atualizar os dados cadastrais e bancários de um colaborador ativo, para que todos os módulos passem a usar imediatamente as informações corretas, sem perder a versão anterior da ficha. | RF02 | RNF02 + **T** | **MVP** |
+| **US03** | <span class="mod-badge mod-1">EP01 · OE1</span> | Como **Administrador Financeiro**, quero registrar afastamentos, férias e desligamentos de um colaborador, para que sua situação funcional fique atualizada e o acesso de campo seja revogado, evitando pagamentos indevidos. | RF03 | RNF02 + **T** | **MVP** |
+| **US25**<sup>†</sup> | <span class="mod-badge mod-1">EP01 · OE1</span> | Como **Administrador Financeiro**, quero classificar o colaborador como Diarista, CLT ou Prestador de Serviço, para que o sistema aplique as regras administrativas e financeiras do vínculo correto. | RF25 | RNF02 + **T** | **MVP** |
+| **US26**<sup>†</sup> | <span class="mod-badge mod-1">EP01 · OE1</span> | Como **Administrador Financeiro**, quero consultar o histórico de alterações cadastrais e bancárias de um colaborador, com autor e data de cada mudança, para que divergências administrativas possam ser rastreadas e esclarecidas. | RF26 | RNF02 + **T** | **MVP** |
+| **US04** | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **Técnico de Campo**, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de WhatsApp. | RF04 | RNF01 *(evolutivo)*, RNF04 + **T** | **MVP** |
+| **US19** | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **Técnico de Campo**, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e possa retificá-los antes do fechamento. | RF19 | RNF04 + **T** | **MVP** |
+| **US22**<sup>†</sup> | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **Técnico de Campo**, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no RVT. | RF22 | RNF04, RNF07 + **T** | **MVP** |
+| **US20** | <span class="mod-badge mod-1">EP03 · OE1</span> | Como **Administrador Financeiro**, quero importar as presenças homologadas do *Shifton* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação. | RF20 | RNF02<sup>¹</sup> + **T** | Pós-MVP |
+| **US05** | <span class="mod-badge mod-2">EP04 · OE2</span> | Como **Administrador Financeiro**, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente. | RF05 | RNF05, RNF06, RNF10 + **T** | **MVP** |
+| **US06** | <span class="mod-badge mod-2">EP04 · OE2</span> | Como **Administrador Financeiro**, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança. | RF06 | RNF05, RNF06, RNF10 + **T** | **MVP** |
+| **US21** | <span class="mod-badge mod-2">EP04 · OE2</span> | Como **Administrador Financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original. | RF21 | RNF08 *(evolutivo)* + **T** | Pós-MVP |
+| **US27**<sup>†</sup> | <span class="mod-badge mod-2">EP04 · OE2</span> | Como **Administrador Financeiro**, quero cadastrar as categorias de diária técnica com valor e período de vigência, para que prévias e fechamentos usem sempre o valor vigente da competência. | RF27 | RNF06 + **T** | **MVP** |
+| **US07** | <span class="mod-badge mod-2">EP05 · OE2</span> | Como **Técnico de Campo ou Gestor Operacional de Obras**, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas. | RF07 | RNF07 + **T** | **MVP** |
+| **US08** | <span class="mod-badge mod-2">EP05 · OE2</span> | Como **Administrador Financeiro**, quero aprovar ou reprovar as solicitações de reembolso com parecer obrigatório na reprovação, para que apenas despesas comprovadas sejam repassadas e o solicitante seja informado da decisão. | RF08 | RNF06 + **T** | **MVP** |
+| **US28**<sup>†</sup> | <span class="mod-badge mod-2">EP05 · OE2</span> | Como **Técnico de Campo**, quero solicitar um adiantamento para uma despesa operacional de um contrato ativo, para que eu disponha dos recursos antes de executar a atividade. | RF28 | **T** | **MVP** |
+| **US29**<sup>†</sup> | <span class="mod-badge mod-2">EP05 · OE2</span> | Como **Administrador Financeiro**, quero aprovar ou reprovar os adiantamentos pendentes de análise, para que a liberação de recursos seja formal, rastreável e comunicada ao solicitante. | RF29 | RNF06 + **T** | **MVP** |
+| **US09** | <span class="mod-badge mod-3">EP06 · OE3</span> | Como **Administrador Financeiro**, quero disparar a apropriação dos custos homologados da competência aos respectivos contratos, para que eu conheça o custo real de cada obra sem duplicidade com a folha CLT. | RF09 | RNF10, RNF11 + **T** | **MVP** |
+| **US10** | <span class="mod-badge mod-3">EP06 · OE3</span> | Como **Gestor Operacional de Obras ou Administrador Financeiro**, quero visualizar a origem completa de cada custo apropriado, para que eu possa justificar e auditar qualquer linha de despesa do contrato. | RF10 | RNF10 + **T** | **MVP** |
+| **US30**<sup>†</sup> | <span class="mod-badge mod-3">EP06 · OE3</span> | Como **Gestor Operacional de Obras ou Administrador Financeiro**, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras. | RF30 | RNF09, RNF10<sup>¹</sup>, RNF12 + **T** | Pós-MVP |
+| **US11** | <span class="mod-badge mod-3">EP07 · OE3</span> | Como **Gestor Operacional de Obras, Administrador Financeiro ou Administrador do Sistema**, quero combinar filtros de período, contrato, colaborador e centro de custo no painel de custos, para que eu analise os custos diretos de cada obra no fechamento. | RF11 | RNF09, RNF10, RNF12 + **T** | **MVP** |
+| **US12** | <span class="mod-badge mod-3">EP07 · OE3</span> | Como **Gestor Operacional de Obras ou Administrador Financeiro**, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir. | RF12 | RNF09, RNF10<sup>¹</sup>, RNF12 + **T** | Pós-MVP |
+| **US31**<sup>†</sup> | <span class="mod-badge mod-3">EP07 · OE3</span> | Como **Gestor Operacional de Obras**, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado. | RF31 | RNF09, RNF10<sup>¹</sup>, RNF12 + **T** | Pós-MVP |
+| **US13** | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **usuário da plataforma**, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil. | RF13 | RNF13, RNF14 + **T** | **MVP** |
+| **US14** | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **Administrador do Sistema**, quero atribuir a cada usuário um papel de acesso, para que campo, gestão e financeiro visualizem apenas os dados da sua alçada (princípio do menor privilégio). | RF14 | RNF14 + **T** | **MVP** |
 | **US17** | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **colaborador que esqueceu a senha**, quero receber no e-mail corporativo um link de redefinição de uso único, para que eu recupere o acesso sem depender de *reset* manual pela gestão. | RF17 | **T** | **MVP** |
 | **US18** | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **usuário autenticado**, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado. | RF18 | RNF13<sup>¹</sup> + **T** | **MVP** |
-| **US23**<sup>†</sup> | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **administrador**, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta. | RF23 | **T** | **MVP** |
-| **US24**<sup>†</sup> | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **administrador**, quero que as senhas expirem periodicamente e não possam repetir as últimas utilizadas, para que credenciais antigas ou vazadas deixem de dar acesso ao sistema. | RF24 | **T** | Pós-MVP |
-| **US15** | <span class="mod-badge mod-4">EP09 · OE4</span> | Como **usuário com perfil de auditoria**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. | RF15 | RNF15<sup>¹</sup>, RNF16<sup>¹</sup>, RNF17<sup>¹</sup> + **T** | Pós-MVP |
-| **US16** | <span class="mod-badge mod-4">EP09 · OE4</span> | Como **administrador**, quero exportar um dossiê em PDF/CSV com o histórico imutável das operações auditadas, para que a DUOC comprove conformidade legal e trabalhista (CLT Art. 11). | RF16 | RNF15<sup>¹</sup>, RNF16<sup>¹</sup>, RNF17<sup>¹</sup> + **T** | Pós-MVP |
+| **US23**<sup>†</sup> | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **Administrador do Sistema**, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta. | RF23 | **T** | **MVP** |
+| **US24**<sup>†</sup> | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **Administrador do Sistema**, quero que as senhas expirem periodicamente e não possam repetir as últimas utilizadas, para que credenciais antigas ou vazadas deixem de dar acesso ao sistema. | RF24 | **T** | Pós-MVP |
+| **US15** | <span class="mod-badge mod-4">EP09 · OE4</span> | Como **Administrador do Sistema ou Administrador Financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. | RF15 | RNF15<sup>¹</sup>, RNF16<sup>¹</sup>, RNF17<sup>¹</sup> + **T** | Pós-MVP |
+| **US16** | <span class="mod-badge mod-4">EP09 · OE4</span> | Como **Administrador do Sistema**, quero exportar um dossiê em PDF/CSV com o histórico imutável das operações auditadas, para que a DUOC comprove conformidade legal e trabalhista (CLT Art. 11). | RF16 | RNF15<sup>¹</sup>, RNF16<sup>¹</sup>, RNF17<sup>¹</sup> + **T** | Pós-MVP |
 
 !!! note "Critérios de aceitação"
     Os critérios de aceitação de cada história são os **Critérios de Aceitação** do RF de origem no [Capítulo 8](../requisitos/index.md#especificacao-modular-dos-requisitos), complementados pelos **Critérios Mensuráveis** dos RNFs relacionados. A entrada e a saída de cada história nas iterações seguem a [Definition of Ready e Definition of Done (Capítulo 9)](../dor-dod/index.md).
@@ -170,9 +170,9 @@ A matriz inversa garante a rastreabilidade bidirecional: para cada RNF, indica a
 ---
 
 <a id="102-priorizacao-do-backlog-e-mvp"></a>
-## Priorização do Backlog e Linha de Corte do MVP
+## 10.2 Priorização do Backlog e Linha de Corte do MVP
 
-Esta seção atende à **Seção 10.2 do Template Oficial**. A priorização das histórias reutiliza integralmente as notas formalizadas na [Tabela Consolidada das Avaliações](../requisitos/priorizacao.md#103-tabela-consolidada-das-avaliacoes) do Capítulo 8 e as expressa nos indicadores do template.
+Esta seção atende à **Seção 10.2 do Template Oficial**. A priorização das histórias reutiliza integralmente as notas formalizadas na [Tabela Consolidada das Avaliações](../requisitos/priorizacao.md#8-8-tabela-consolidada-das-avaliacoes) do Capítulo 8 e as expressa nos indicadores do template.
 
 ### Indicadores do Template Oficial
 
@@ -181,18 +181,19 @@ Esta seção atende à **Seção 10.2 do Template Oficial**. A priorização das
 | **Valor de Negócio** | **VB** | 1 a 4 | Coluna *Valor Negócio*, atribuída com a cliente na [Reunião 05](../atas/reuniao-05.md) conforme a [Rubrica de Julgamento (D1 a D4)](../requisitos/priorizacao.md#rubrica-de-julgamento-do-valor-de-negocio). |
 | **Complexidade Técnica** | **CX** | 1 a 4 | Coluna *Complex.* da [escala de Complexidade Técnica](../requisitos/priorizacao.md#complexidade-tecnica). |
 | **Esforço de Implementação** | **ES** | 1 a 4 | Nota da coluna *Esforço (h) / Nota*, da [escala de Esforço de Implementação](../requisitos/priorizacao.md#esforco-de-implementacao-tempo-em-horas). |
-| **Pontuação Técnica** | **PT** | 1,00 a 4,00 | Calculada: média de CX e ES. |
-| **Índice de Prioridade** | **IP** | 0,25 a 4,00 | Calculado: razão entre VB e PT. |
+| **Lacuna de Capacidade** | **LC** | 1 a 4 | Coluna *Lacuna* da [escala de Lacuna de Capacidade](../requisitos/priorizacao.md#lacuna-de-capacidade-da-equipe). |
+| **Esforço Consolidado** | **EC** | 1,00 a 4,00 | Calculado: média de ES, CX e LC, convertida na classe 1 a 4 da [Regra de Conversão](../requisitos/priorizacao.md#formula-de-consolidacao-e-regra-de-conversao) do Capítulo 8. |
+| **Índice de Prioridade** | **IP** | 0,25 a 4,00 | Calculado: razão entre VB e a média EC. |
 
 <div style="background-color: var(--md-code-bg-color); border-left: 3px solid var(--md-primary-fg-color); border-radius: 4px; padding: 6px 14px; margin: 12px auto; text-align: center; font-size: 0.90rem; max-width: 1000px;">
-  <span style="font-weight: 600;">PT</span>
+  <span style="font-weight: 600;">EC</span>
   <span style="margin: 0 6px; font-weight: bold; font-size: 12px">=</span>
   <span style="display: inline-block; vertical-align: middle; text-align: center;">
     <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 6px 2px 6px; font-weight: 500;">
-      CX + ES
+      ES + CX + LC
     </span>
     <span style="display: block; padding-top: 2px; font-weight: 600; font-size: 1.05em;">
-      2
+      3
     </span>
   </span>
   <span style="margin: 0 24px;"></span>
@@ -203,71 +204,71 @@ Esta seção atende à **Seção 10.2 do Template Oficial**. A priorização das
       VB
     </span>
     <span style="display: block; padding-top: 2px; font-weight: 600; font-size: 1.05em;">
-      PT
+      EC
     </span>
   </span>
 </div>
 
-Quanto **maior o IP**, maior o retorno de negócio por unidade de esforço técnico. A *Lacuna de Capacidade* da equipe, terceira dimensão do Esforço Consolidado do Capítulo 8, não integra a PT do template, mas continua sendo considerada no planejamento das iterações.
+Quanto **maior o IP**, maior o retorno de negócio por unidade de esforço técnico. O EC reproduz **exatamente** o Esforço Consolidado do Capítulo 8, com as três dimensões (esforço em horas, complexidade e lacuna de capacidade), e a classe 1 a 4 segue as mesmas faixas: 1,00–1,49; 1,50–2,49; 2,50–3,49; 3,50–4,00.
 
 ### Quadrantes e Prioridade Sugerida
 
-O quadrante de cada história é obtido pelo cruzamento do **VB** com a **PT**, usando os mesmos cortes da [Matriz 4 × 4](../requisitos/priorizacao.md#104-matriz-4-x-4-valor-de-negocio-x-esforco-tecnico) do Capítulo 8:
+O quadrante de cada história é obtido pelo cruzamento do **VB** com a **classe do EC** (classes 1 e 2: esforço baixo/moderado, EC < 2,50; classes 3 e 4: esforço alto, EC ≥ 2,50), usando os mesmos cortes da [Matriz 4 × 4](../requisitos/priorizacao.md#8-9-matriz-4-x-4-valor-de-negocio-x-esforco-tecnico) do Capítulo 8:
 
 | Quadrante | Critério | Correspondência no Capítulo 8 | Prioridade Sugerida | Destinação |
 | :---: | :--- | :--- | :--- | :---: |
-| **Q1** | VB ≥ 3 e PT ≤ 2,5 | Alto valor × esforço baixo/moderado — *"Candidatos ao MVP"* | **Alta — implementar no MVP** | MVP |
-| **Q2** | VB ≥ 3 e PT > 2,5 | Alto valor × esforço alto — *"Avaliar / Decompor"* | **Alta — MVP com escopo controlado** | MVP |
-| **Q3** | VB ≤ 2 e PT ≤ 2,5 | Valor moderado/baixo × esforço baixo/moderado — *"Oportunidade / Futuro"* | **Média — capacidade residual** | Pós-MVP |
-| **Q4** | VB ≤ 2 e PT > 2,5 | Valor moderado/baixo × esforço alto — *"Não Priorizar"* | **Baixa — backlog evolutivo** | Pós-MVP |
+| **Q1** | VB ≥ 3 e EC < 2,50 | Alto valor × esforço baixo/moderado — *"Candidatos ao MVP"* | **Alta — implementar no MVP** | MVP |
+| **Q2** | VB ≥ 3 e EC ≥ 2,50 | Alto valor × esforço alto — *"Avaliar / Decompor"* | **Alta — MVP com escopo controlado** | MVP |
+| **Q3** | VB ≤ 2 e EC < 2,50 | Valor moderado/baixo × esforço baixo/moderado — *"Oportunidade / Futuro"* | **Média — capacidade residual** | Pós-MVP |
+| **Q4** | VB ≤ 2 e EC ≥ 2,50 | Valor moderado/baixo × esforço alto — *"Não Priorizar"* | **Baixa — backlog evolutivo** | Pós-MVP |
 
 ### Tabela Consolidada de Priorização
 
 A ordem sugerida posiciona primeiro as histórias do MVP e, dentro de cada grupo, ordena por **IP decrescente**. Em caso de empate, prevalece o maior **VB** e, depois, o menor código.
 
-| Ordem | US | RF | História de Usuário (resumo) | Épico | VB | CX | ES | PT | IP | Quadrante | Prioridade Sugerida | Linha de Corte |
-| :---: | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- | :---: |
-| 1 | **US13** | RF13 | Efetuar login no sistema | <span class="mod-badge mod-4">EP08</span> | **4** | 1 | 1 | 1,00 | **4,00** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 2 | **US18** | RF18 | Encerrar sessão manualmente | <span class="mod-badge mod-4">EP08</span> | **3** | 1 | 1 | 1,00 | **3,00** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 3 | **US01** | RF01 | Cadastrar colaborador | <span class="mod-badge mod-1">EP01</span> | **4** | 2 | 2 | 2,00 | **2,00** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 4 | **US07** | RF07 | Submeter solicitação de reembolso | <span class="mod-badge mod-2">EP05</span> | **4** | 2 | 2 | 2,00 | **2,00** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 5 | **US08** | RF08 | Deliberar solicitação de reembolso | <span class="mod-badge mod-2">EP05</span> | **4** | 2 | 2 | 2,00 | **2,00** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 6 | **US19** | RF19 | Consultar apontamentos registrados | <span class="mod-badge mod-1">EP02</span> | **4** | 2 | 2 | 2,00 | **2,00** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 7 | **US27** | RF27 | Configurar tabela de valores de diárias técnicas | <span class="mod-badge mod-2">EP04</span> | **4** | 2 | 2 | 2,00 | **2,00** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 8 | **US06** | RF06 | Homologar fechamento financeiro | <span class="mod-badge mod-2">EP04</span> | **4** | 3 | 2 | 2,50 | **1,60** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 9 | **US02** | RF02 | Atualizar cadastro de colaborador | <span class="mod-badge mod-1">EP01</span> | **3** | 2 | 2 | 2,00 | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 10 | **US03** | RF03 | Registrar movimentação funcional | <span class="mod-badge mod-1">EP01</span> | **3** | 2 | 2 | 2,00 | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 11 | **US10** | RF10 | Consultar rastreabilidade de custos | <span class="mod-badge mod-3">EP06</span> | **3** | 2 | 2 | 2,00 | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 12 | **US11** | RF11 | Filtrar indicadores de custos | <span class="mod-badge mod-3">EP07</span> | **3** | 2 | 2 | 2,00 | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 13 | **US17** | RF17 | Recuperar credenciais de acesso | <span class="mod-badge mod-4">EP08</span> | **3** | 2 | 2 | 2,00 | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 14 | **US23** | RF23 | Bloquear acesso após tentativas falhas consecutivas | <span class="mod-badge mod-4">EP08</span> | **3** | 2 | 2 | 2,00 | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 15 | **US25** | RF25 | Cadastrar tipo de contratação do colaborador | <span class="mod-badge mod-1">EP01</span> | **3** | 2 | 2 | 2,00 | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 16 | **US28** | RF28 | Submeter solicitação de adiantamento operacional | <span class="mod-badge mod-2">EP05</span> | **3** | 2 | 2 | 2,00 | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 17 | **US29** | RF29 | Deliberar solicitação de adiantamento operacional | <span class="mod-badge mod-2">EP05</span> | **3** | 2 | 2 | 2,00 | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 18 | **US04** | RF04 | Submeter apontamento de campo | <span class="mod-badge mod-1">EP02</span> | **4** | 3 | 3 | 3,00 | **1,33** | **Q2** | Alta — MVP com escopo controlado | **MVP** |
-| 19 | **US14** | RF14 | Gerenciar perfis de acesso | <span class="mod-badge mod-4">EP08</span> | **3** | 3 | 2 | 2,50 | **1,20** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 20 | **US22** | RF22 | Anexar evidências e geolocalização ao apontamento | <span class="mod-badge mod-1">EP02</span> | **3** | 3 | 2 | 2,50 | **1,20** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 21 | **US26** | RF26 | Consultar histórico de alterações cadastrais e bancárias | <span class="mod-badge mod-1">EP01</span> | **3** | 3 | 2 | 2,50 | **1,20** | **Q1** | Alta — implementar no MVP | **MVP** |
-| 22 | **US05** | RF05 | Solicitar prévia de fechamento | <span class="mod-badge mod-2">EP04</span> | **4** | 4 | 3 | 3,50 | **1,14** | **Q2** | Alta — MVP com escopo controlado | **MVP** |
-| 23 | **US09** | RF09 | Apropriar custos operacionais | <span class="mod-badge mod-3">EP06</span> | **3** | 4 | 3 | 3,50 | **0,86** | **Q2** | Alta — MVP com escopo controlado | **MVP** |
-| 24 | **US24** | RF24 | Expirar senha periodicamente e impedir reutilização | <span class="mod-badge mod-4">EP08</span> | **2** | 2 | 2 | 2,00 | **1,00** | **Q3** | Média — capacidade residual | Pós-MVP |
-| 25 | **US12** | RF12 | Monitorar execução orçamentária | <span class="mod-badge mod-3">EP07</span> | **2** | 3 | 3 | 3,00 | **0,67** | **Q4** | Baixa — backlog evolutivo | Pós-MVP |
-| 26 | **US15** | RF15 | Consultar trilha de auditoria | <span class="mod-badge mod-4">EP09</span> | **2** | 3 | 3 | 3,00 | **0,67** | **Q4** | Baixa — backlog evolutivo | Pós-MVP |
-| 27 | **US20** | RF20 | Importar presenças homologadas | <span class="mod-badge mod-1">EP03</span> | **2** | 3 | 3 | 3,00 | **0,67** | **Q4** | Baixa — backlog evolutivo | Pós-MVP |
-| 28 | **US21** | RF21 | Estornar fechamento financeiro | <span class="mod-badge mod-2">EP04</span> | **2** | 3 | 3 | 3,00 | **0,67** | **Q4** | Baixa — backlog evolutivo | Pós-MVP |
-| 29 | **US30** | RF30 | Consultar comparativo histórico de custos entre contratos | <span class="mod-badge mod-3">EP06</span> | **2** | 3 | 3 | 3,00 | **0,67** | **Q4** | Baixa — backlog evolutivo | Pós-MVP |
-| 30 | **US31** | RF31 | Configurar alertas de execução orçamentária | <span class="mod-badge mod-3">EP07</span> | **2** | 3 | 3 | 3,00 | **0,67** | **Q4** | Baixa — backlog evolutivo | Pós-MVP |
-| 31 | **US16** | RF16 | Exportar relatório de auditoria | <span class="mod-badge mod-4">EP09</span> | **1** | 3 | 3 | 3,00 | **0,33** | **Q4** | Baixa — backlog evolutivo | Pós-MVP |
+| Ordem | US | RF | História de Usuário (resumo) | Épico | VB | ES | CX | LC | EC (classe) | IP | Quadrante | Prioridade Sugerida | Linha de Corte |
+| :---: | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- | :---: |
+| 1 | **US13** | RF13 | Efetuar login no sistema | <span class="mod-badge mod-4">EP08</span> | **4** | 1 | 1 | 1 | 1,00 (1) | **4,00** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 2 | **US18** | RF18 | Encerrar sessão manualmente | <span class="mod-badge mod-4">EP08</span> | **3** | 1 | 1 | 1 | 1,00 (1) | **3,00** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 3 | **US01** | RF01 | Cadastrar colaborador | <span class="mod-badge mod-1">EP01</span> | **4** | 2 | 2 | 1 | 1,67 (2) | **2,40** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 4 | **US19** | RF19 | Consultar apontamentos registrados | <span class="mod-badge mod-1">EP02</span> | **4** | 2 | 2 | 1 | 1,67 (2) | **2,40** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 5 | **US27** | RF27 | Configurar tabela de valores de diárias técnicas | <span class="mod-badge mod-2">EP04</span> | **4** | 2 | 2 | 1 | 1,67 (2) | **2,40** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 6 | **US07** | RF07 | Submeter solicitação de reembolso | <span class="mod-badge mod-2">EP05</span> | **4** | 2 | 2 | 2 | 2,00 (2) | **2,00** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 7 | **US08** | RF08 | Deliberar solicitação de reembolso | <span class="mod-badge mod-2">EP05</span> | **4** | 2 | 2 | 2 | 2,00 (2) | **2,00** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 8 | **US02** | RF02 | Atualizar cadastro de colaborador | <span class="mod-badge mod-1">EP01</span> | **3** | 2 | 2 | 1 | 1,67 (2) | **1,80** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 9 | **US17** | RF17 | Recuperar credenciais de acesso | <span class="mod-badge mod-4">EP08</span> | **3** | 2 | 2 | 1 | 1,67 (2) | **1,80** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 10 | **US23** | RF23 | Bloquear acesso após tentativas falhas consecutivas | <span class="mod-badge mod-4">EP08</span> | **3** | 2 | 2 | 1 | 1,67 (2) | **1,80** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 11 | **US25** | RF25 | Cadastrar tipo de contratação do colaborador | <span class="mod-badge mod-1">EP01</span> | **3** | 2 | 2 | 1 | 1,67 (2) | **1,80** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 12 | **US06** | RF06 | Homologar fechamento financeiro | <span class="mod-badge mod-2">EP04</span> | **4** | 2 | 3 | 2 | 2,33 (2) | **1,71** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 13 | **US03** | RF03 | Registrar movimentação funcional | <span class="mod-badge mod-1">EP01</span> | **3** | 2 | 2 | 2 | 2,00 (2) | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 14 | **US10** | RF10 | Consultar rastreabilidade de custos | <span class="mod-badge mod-3">EP06</span> | **3** | 2 | 2 | 2 | 2,00 (2) | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 15 | **US11** | RF11 | Filtrar indicadores de custos | <span class="mod-badge mod-3">EP07</span> | **3** | 2 | 2 | 2 | 2,00 (2) | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 16 | **US28** | RF28 | Submeter solicitação de adiantamento operacional | <span class="mod-badge mod-2">EP05</span> | **3** | 2 | 2 | 2 | 2,00 (2) | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 17 | **US29** | RF29 | Deliberar solicitação de adiantamento operacional | <span class="mod-badge mod-2">EP05</span> | **3** | 2 | 2 | 2 | 2,00 (2) | **1,50** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 18 | **US04** | RF04 | Submeter apontamento de campo | <span class="mod-badge mod-1">EP02</span> | **4** | 3 | 3 | 3 | 3,00 (3) | **1,33** | **Q2** | Alta — MVP com escopo controlado | **MVP** |
+| 19 | **US14** | RF14 | Gerenciar perfis de acesso | <span class="mod-badge mod-4">EP08</span> | **3** | 2 | 3 | 2 | 2,33 (2) | **1,29** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 20 | **US22** | RF22 | Anexar evidências e geolocalização ao apontamento | <span class="mod-badge mod-1">EP02</span> | **3** | 2 | 3 | 2 | 2,33 (2) | **1,29** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 21 | **US26** | RF26 | Consultar histórico de alterações cadastrais e bancárias | <span class="mod-badge mod-1">EP01</span> | **3** | 2 | 3 | 2 | 2,33 (2) | **1,29** | **Q1** | Alta — implementar no MVP | **MVP** |
+| 22 | **US05** | RF05 | Solicitar prévia de fechamento | <span class="mod-badge mod-2">EP04</span> | **4** | 3 | 4 | 3 | 3,33 (3) | **1,20** | **Q2** | Alta — MVP com escopo controlado | **MVP** |
+| 23 | **US09** | RF09 | Apropriar custos operacionais | <span class="mod-badge mod-3">EP06</span> | **3** | 3 | 4 | 3 | 3,33 (3) | **0,90** | **Q2** | Alta — MVP com escopo controlado | **MVP** |
+| 24 | **US24** | RF24 | Expirar senha periodicamente e impedir reutilização | <span class="mod-badge mod-4">EP08</span> | **2** | 2 | 2 | 2 | 2,00 (2) | **1,00** | **Q3** | Média — capacidade residual | **Pós-MVP** |
+| 25 | **US21** | RF21 | Estornar fechamento financeiro | <span class="mod-badge mod-2">EP04</span> | **2** | 3 | 3 | 2 | 2,67 (3) | **0,75** | **Q4** | Baixa — backlog evolutivo | **Pós-MVP** |
+| 26 | **US30** | RF30 | Consultar comparativo histórico de custos entre contratos | <span class="mod-badge mod-3">EP06</span> | **2** | 3 | 3 | 2 | 2,67 (3) | **0,75** | **Q4** | Baixa — backlog evolutivo | **Pós-MVP** |
+| 27 | **US31** | RF31 | Configurar alertas de execução orçamentária | <span class="mod-badge mod-3">EP07</span> | **2** | 3 | 3 | 2 | 2,67 (3) | **0,75** | **Q4** | Baixa — backlog evolutivo | **Pós-MVP** |
+| 28 | **US12** | RF12 | Monitorar execução orçamentária | <span class="mod-badge mod-3">EP07</span> | **2** | 3 | 3 | 3 | 3,00 (3) | **0,67** | **Q4** | Baixa — backlog evolutivo | **Pós-MVP** |
+| 29 | **US15** | RF15 | Consultar trilha de auditoria | <span class="mod-badge mod-4">EP09</span> | **2** | 3 | 3 | 3 | 3,00 (3) | **0,67** | **Q4** | Baixa — backlog evolutivo | **Pós-MVP** |
+| 30 | **US20** | RF20 | Importar presenças homologadas | <span class="mod-badge mod-1">EP03</span> | **2** | 3 | 3 | 3 | 3,00 (3) | **0,67** | **Q4** | Baixa — backlog evolutivo | **Pós-MVP** |
+| 31 | **US16** | RF16 | Exportar relatório de auditoria | <span class="mod-badge mod-4">EP09</span> | **1** | 3 | 3 | 3 | 3,00 (3) | **0,33** | **Q4** | Baixa — backlog evolutivo | **Pós-MVP** |
 
 ### Tratamento das Histórias do Quadrante Q2
 
 As três histórias de **alto valor e alto esforço** permanecem no MVP com a estratégia de redução de escopo definida no [Tratamento dos Requisitos de Alto Valor e Alto Esforço](../requisitos/priorizacao.md#tratamento-dos-requisitos-de-alto-valor-e-alto-esforco) do Capítulo 8:
 
-| História | PT | IP | Estratégia no MVP |
+| História | EC | IP | Estratégia no MVP |
 | :---: | :---: | :---: | :--- |
 | **US04** — Submeter apontamento de campo | 3,00 | 1,33 | **Escopo controlado:** coleta dos campos essenciais de horas, contrato e escopo executado; a operação *offline* completa (**RNF01**) segue para a fase evolutiva. |
-| **US05** — Solicitar prévia de fechamento | 3,50 | 1,14 | **Escopo concentrado:** regras contratuais ativas e valores vigentes de diárias (**US27**), sem encargos e provisões da folha CLT mantidos em sistemas contábeis externos. |
-| **US09** — Apropriar custos operacionais | 3,50 | 0,86 | **Apropriação direta:** lotes homologados vinculados ao contrato ativo; comparativos históricos (**US30**) e alertas (**US31**) ficam para a evolução do produto. |
+| **US05** — Solicitar prévia de fechamento | 3,33 | 1,20 | **Escopo concentrado:** regras contratuais ativas e valores vigentes de diárias (**US27**), sem encargos e provisões da folha CLT mantidos em sistemas contábeis externos. |
+| **US09** — Apropriar custos operacionais | 3,33 | 0,90 | **Apropriação direta:** lotes homologados vinculados ao contrato ativo; comparativos históricos (**US30**) e alertas (**US31**) ficam para a evolução do produto. |
 
 ### Composição do MVP e do Backlog Evolutivo
 
@@ -339,3 +340,4 @@ flowchart LR
 | `1.0` | 07/09/2026 | Criação e estruturação da página preliminar de backlog do produto e MVP (Unidade 2) | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `1.1` | 07/09/2026 | Alinhamento da priorização com as iterações de construção do RAD | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `2.0` | 12/10/2026 | Estruturação completa do capítulo conforme a Seção 10 do Template Oficial: hierarquia de 4 temas (OE1 a OE4), 9 épicos (CAR-01 a CAR-09) e 31 histórias de usuário derivadas de RF01 a RF31; tabela canônica do Backlog Geral (10.1) com vínculo aos RNFs específicos e ao pacote transversal, e matriz inversa RNF × US; priorização (10.2) com VB, CX, ES, PT, IP, quadrantes Q1 a Q4 e prioridade sugerida, sincronizada com a Matriz 4 × 4 do Capítulo 8; linha de corte com 23 histórias no MVP e 8 no backlog evolutivo pós-MVP. | Paulo Nery | — |
+| `2.1` | 12/10/2026 | Numeração das seções do capítulo (10.1 e 10.2) e atualização dos vínculos para as seções 8.6 a 8.12 da Priorização; atores das histórias alinhados à Matriz Canônica de Papéis (RBAC) do Capítulo 8; priorização passa a usar as três dimensões do Esforço Consolidado (ES, CX e LC) no lugar da Pontuação Técnica de duas dimensões, com reordenação por IP; indicação dos RF32 a RF36 como requisitos complementares sem história. | Eric Araújo | — |
