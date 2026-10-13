@@ -16,7 +16,7 @@ O planejamento e o acompanhamento operacional do projeto **DUOC Finance** são g
         `Backlog do Produto` ➔ `Refinamento` ➔ `Pronto (DoR)` ➔ `Em Desenvolvimento` ➔ `Em Verificação` ➔ `Em Validação` ➔ `Concluído (DoD)`
 
     *   **Portão de Entrada (DoR — Definition of Ready):**  
-        Nenhum item avança para a implementação da lógica de backend e persistência sem ter cumprido previamente o DoR (história INVEST descrita, critérios de aceitação BDD formalizados, contrato de dados preliminar, base visual no Figma e designs de interface estabelecidos e validados no Frontend com dados *mockados* junto à cliente).
+        Nenhum item avança para a implementação da lógica de backend e persistência sem ter cumprido previamente o DoR (história INVEST descrita, critérios objetivos de aceitação formalizados, contrato de dados preliminar, base visual no Figma e designs de interface estabelecidos e validados no Frontend com dados *mockados* junto à cliente).
 
     *   **Portão de Saída (DoD — Definition of Done):**  
         Critério final que atesta a integração da lógica de backend e persistência com a interface, código tipado, cobertura de testes automatizados, revisão por pares (*checklists Fagan*), deploy em homologação (*Staging* na Vercel) e validação funcional.
@@ -1059,7 +1059,7 @@ A tabela-síntese a seguir apresenta o alinhamento executivo entre os quatro mar
 | Marco Avaliativo | Período Oficial | Ciclos RAD Intersectantes | Entregável Principal Homologado | Status |
 | :--- | :---: | :--- | :--- | :---: |
 | **Unidade 1 (PC1)** | Aulas 11/08 a 10/09; publicação até 08/09 às 08h; apresentações 08 e 10/09 | **Ciclo 0:** Concepção & Fundação | Visão de Produto, Rich Picture v2, Ishikawa 4M, Atas 01–03 e Docs as Code | :white_check_mark: **Concluída** |
-| **Unidade 2 (PC2)** | Aulas 15/09 a 15/10; publicação até 13/10 às 08h; apresentações 13 e 15/10 | **Incremento 1:** Requisitos, Design do Usuário & RVT | 31 RFs / 20 RNFs, priorização do MVP, histórias INVEST/BDD e evolução dos protótipos conforme evidência | :warning: **Em Desenvolvimento** |
+| **Unidade 2 (PC2)** | Aulas 15/09 a 15/10; publicação até 13/10 às 08h; apresentações 13 e 15/10 | **Incremento 1:** Requisitos, Design do Usuário & RVT | 31 RFs / 20 RNFs, priorização do MVP, histórias INVEST e evolução dos protótipos conforme evidência | :warning: **Em Desenvolvimento** |
 | **Unidade 3 (PC3)** | Aulas 20/10 a 19/11; publicação até 17/11 às 08h; apresentações 17 e 19/11 | **Incrementos 2 & 3:** Motor Financeiro & Custos | MVP progressivo em Staging, verificações, demonstração e rastreabilidade conforme aceite dos incrementos | :hourglass_flowing_sand: **Planejado** |
 | **Unidade 4 (PC4)** | Aulas 24/11 a 10/12; publicação até 01/12 às 08h; apresentações 01 e 03/12 | **Fase Cutover:** transição e UAT previstos a partir de 20/11 | MVP demonstrável, UAT e aceite sujeitos à efetiva realização e comprovação documental | :hourglass_flowing_sand: **Planejado** |
 
@@ -1143,7 +1143,7 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
             <li>Criação de Personas representativas e cenários contextuais de uso para escritório e canteiros;</li>
             <li>Base visual e tokens no Figma; estabelecimento dos designs de tela diretamente no Frontend (React SPA) com dados mockados;</li>
             <li>Planejamento de sessão de validação sociotécnica com Maria Beatryz navegando pelas telas no frontend; somente registrar como realizada e homologada após evidência específica;</li>
-            <li>Decomposição em Histórias de Usuário <strong>INVEST</strong> com critérios de aceitação BDD (Gherkin);</li>
+            <li>Decomposição em Histórias de Usuário <strong>INVEST</strong> com critérios de aceitação objetivos;</li>
             <li>Priorização de Backlog usando <strong>MoSCoW</strong> e <strong>atendimento formal ao DoR do Incr. 1</strong> antes da codificação de lógica e banco;</li>
             <li>Modelagem Conceitual e Física de Dados (DER / Supabase / PostgreSQL) e arquitetura de dados sintéticos LGPD.</li>
           </ul>
@@ -1154,7 +1154,7 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
             <li>Especificação URPS+ do catálogo vigente: 31 RFs e 20 RNFs; histórico da ata de 24/09 preservado com o quantitativo daquela data;</li>
             <li>Designs de RVT Móvel (<a href="../visao-produto/capitulo-2/index.md#car-02">CAR-02</a>) e Cadastros (<a href="../visao-produto/capitulo-2/index.md#car-01">CAR-01</a>) no frontend, com homologação condicionada a registro de aceite da cliente;</li>
             <li>Product Backlog priorizado e gerido no GitHub Projects #119;</li>
-            <li>Histórias de Usuário INVEST com critérios BDD formalizados;</li>
+            <li>Histórias de Usuário INVEST com critérios de aceitação formalizados;</li>
             <li>Critérios formais de DoR/DoD; atendimento do DoR deve ser comprovado antes de declarar uma interface aprovada;</li>
             <li>Diagrama Entidade-Relacionamento (DER) e documento oficial da <a href="../entregas/entrega-2.md">Entrega 2</a>.</li>
           </ul>
@@ -1510,7 +1510,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
             <li><strong>Janela prevista de validação sociotécnica do frontend (02/10/2026):</strong> o plano original reservava a data para avaliação das telas pela cliente, mas as atas fornecidas não comprovam realização; a Reunião 04 ocorreu em 17/09 e foi interna;</li>
             <li>Registrar ajustes de IHC e eventual homologação das interfaces somente quando houver evidência de validação;</li>
             <li>Decomposição dos requisitos em Histórias de Usuário no padrão <strong>INVEST</strong>;</li>
-            <li>Redação de critérios de aceitação no formato BDD/Gherkin (<em>Dado / Quando / Então</em>);</li>
+            <li>Redação de critérios de aceitação objetivos em listas estruturadas de regras de negócio;</li>
             <li>Priorização do Backlog usando <strong>MoSCoW</strong> (Must, Should, Could, Won't) e matriz Valor vs. Complexidade;</li>
             <li><strong>Verificação do DoR do Incremento 1</strong> antes da liberação de demandas de lógica e persistência, mediante critérios e aceite registrados.</li>
           </ul>
@@ -1521,7 +1521,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
             <li>Ata da Reunião 04 de 17/09 (retrospectiva interna); evidência de validação do frontend em 02/10 permanece pendente;</li>
             <li>Telas do Incremento 1 no frontend, com homologação pela cliente dependente de comprovação;</li>
             <li>Product Backlog priorizado e cadastrado no GitHub Projects #119;</li>
-            <li>Histórias de Usuário INVEST com critérios BDD formalizados;</li>
+            <li>Histórias de Usuário INVEST com critérios de aceitação formalizados;</li>
             <li>Registro de verificação do DoR do Incremento 1, condicionando avanço ao aceite.</li>
           </ul>
         </div>

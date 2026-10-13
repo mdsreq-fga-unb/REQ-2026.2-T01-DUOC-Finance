@@ -339,20 +339,20 @@ Para garantir aderência às melhores práticas da Engenharia de Software Ágil 
 
 | Dimensão DEEP | Definição Metodológica | Evidência Operacional no DUOC Finance |
 | :--- | :--- | :--- |
-| **D — Detailed Appropriately**<br>*(Detalhado Apropriadamente)* | Itens próximos da implementação possuem granularidade fina e detalhamento exaustivo; itens futuros permanecem em nível macro. | As histórias prioritárias do topo do MVP contam com especificação formal nos **3Cs** (Cartão, Conversa e Confirmação BDD *Given-When-Then*), enquanto itens do backlog evolutivo pós-MVP (ex.: US15, US16, US30) permanecem descritos no nível de história canônica para refinamento progressivo. |
+| **D — Detailed Appropriately**<br>*(Detalhado Apropriadamente)* | Itens próximos da implementação possuem granularidade fina e detalhamento exaustivo; itens futuros permanecem em nível macro. | As histórias prioritárias do topo do MVP contam com especificação formal nos **3Cs** (Cartão, Conversa e Confirmação com critérios objetivos de aceitação e regras de negócio verificáveis), enquanto itens do backlog evolutivo pós-MVP (ex.: US15, US16, US30) permanecem descritos no nível de história canônica para refinamento progressivo. |
 | **E — Estimated**<br>*(Estimado)* | Todos os itens do backlog possuem estimativas de custo e esforço relativas ou absolutas. | 100% das 31 histórias possuem estimativas multidimensionais auditáveis: **Esforço em horas (ES)**, **Complexidade Técnica (CX)** e **Lacuna de Capacidade (LC)**, cuja média ponderada determina a classe de **Esforço Consolidado (EC)** de 1,00 a 4,00. |
 | **E — Emergent**<br>*(Emergente)* | O backlog é vivo e adaptável, evoluindo continuamente a partir do feedback dos usuários e avaliações técnicas. | O backlog incorporou os feedbacks das reuniões com a cliente parceira (Ata 04 e Ata 05) e das deliberações de revisão por pares ([Feedback dos Requisitos](../requisitos/feedback.md)), resultando na criação de US22 a US31 e no refinamento contínuo dos portões DoR e DoD. |
 | **P — Prioritized**<br>*(Priorizado)* | Os itens são estritamente ordenados pelo valor agregado e urgência técnica. | O backlog está ordenado de forma decrescente pelo **Índice de Prioridade ($IP = VB / EC$)**, dividindo o produto com base na **Matriz 4 × 4** entre o núcleo inegociável do MVP (23 histórias / 74,2%) e o backlog evolutivo (8 histórias / 25,8%). |
 
 ---
 
-## Modelo dos 3Cs e Especificação BDD das Histórias do Topo do Backlog
+## Modelo dos 3Cs e Especificação das Histórias do Topo do Backlog
 
 Conforme preconizado por **Ron Jeffries (2001)**, uma História de Usuário atinge maturidade ágil quando expressa nas três dimensões dos **3Cs**:
 
 1. **Card (Cartão):** A declaração sintética de papel, intenção e valor (*Como... Quero... Para que...*), complementada por metadados de estimativa e rastreabilidade.
 2. **Conversation (Conversa):** O registro do diálogo contínuo de refinamento entre a equipe de desenvolvimento e a cliente parceira (**Maria Beatryz**), alinhando regras de negócio, dados e premissas operacionais.
-3. **Confirmation (Confirmação):** Os critérios objetivos de aceitação redigidos no formato **BDD (*Behavior-Driven Development*)** utilizando a sintaxe **Gherkin (*Dado que / Quando / Então*)**, determinando de forma inatacável as condições para o aceite da história.
+3. **Confirmation (Confirmação):** Os critérios objetivos de aceitação redigidos em formato de lista estruturada de regras de negócio e validações observáveis, determinando de forma clara e inatacável as condições para homologação e aceite da história.
 
 Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**, aptas a inaugurar os ciclos de construção do modelo RAD:
 
@@ -368,21 +368,10 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
     #### Conversa (Conversation)
     - **Alinhamento Sociotécnico:** Maria Beatryz destacou a importância de logins distintos para colaboradores de obra e gestores, evitando que dados salariais fiquem visíveis para quem preenche horas em campo. Acordou-se autenticação por e-mail corporativo e senha criptografada, gerando token JWT com expiração máxima de 8 horas (RNF13) e bloqueio de enumeração de contas (mensagens genéricas de erro).
 
-    #### Confirmação (Confirmation / BDD Gherkin)
-    ```gherkin
-    Cenário: Autenticação bem-sucedida de usuário com credenciais válidas
-      Dado que o colaborador está previamente cadastrado e ativo no sistema
-      Quando submeter seu e-mail corporativo válido e sua senha correta na tela de autenticação
-      Então o sistema deve validar as credenciais em latência ≤ 500 ms
-      E emitir um token JWT temporário de acesso com o papel RBAC correspondente (RN15)
-      E redirecionar o usuário para o painel operacional da sua respectiva alçada.
-
-    Cenário: Tentativa de login com senha incorreta
-      Dado que o usuário informa um e-mail corporativo cadastrado
-      Quando submeter uma senha incorreta
-      Então o sistema deve recusar a autenticação com código HTTP 401
-      E exibir a mensagem padronizada "E-mail ou senha inválidos", sem revelar a existência do e-mail.
-    ```
+    #### Confirmação (Critérios de Aceitação Objetivos)
+    - **CA01 — Autenticação Válida:** O sistema deve autenticar colaboradores ativos mediante fornecimento de e-mail corporativo e senha cadastrados, gerando token JWT com tempo de expiração de 8 horas e redirecionando para a visão do respectivo papel (RN15, RNF13).
+    - **CA02 — Latência de Autenticação:** A validação das credenciais e resposta da API devem ocorrer em tempo inferior a 500 ms sob condições nominais.
+    - **CA03 — Proteção contra Enumeração e Erro Padronizado:** Em caso de fornecimento de senha incorreta ou e-mail inexistente, o sistema deve recusar a requisição com HTTP 401 e exibir a mensagem genérica *"E-mail ou senha inválidos"*, sem informar se o e-mail existe na base.
 
     </div>
 
@@ -398,15 +387,10 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
     #### Conversa (Conversation)
     - **Alinhamento Sociotécnico:** Identificado na avaliação por pares que tablets e celulares são compartilhados entre encarregados e diaristas em canteiros de obra remotos. O encerramento voluntário (*logout*) deve revogar o token no backend de forma atômica e sumária, impedindo reutilização do token via cache do navegador.
 
-    #### Confirmação (Confirmation / BDD Gherkin)
-    ```gherkin
-    Cenário: Logout voluntário com revogação imediata de token
-      Dado que o usuário possui uma sessão ativa autenticada na aplicação web
-      Quando acionar a opção "Encerrar Sessão" no menu de perfil
-      Então o sistema deve revogar e invalidar compulsoriamente o token de autenticação no backend
-      E limpar os tokens de acesso e dados da sessão local no cliente
-      E redirecionar o navegador para a tela inicial de login.
-    ```
+    #### Confirmação (Critérios de Aceitação Objetivos)
+    - **CA01 — Revogação Imediata:** Ao acionar "Encerrar Sessão", o sistema deve invalidar sumariamente o token de autenticação no backend, impedindo sua reutilização posterior.
+    - **CA02 — Limpeza de Cache e Sessão:** O cliente web deve expurgar quaisquer dados de sessão, tokens locais e informações temporárias da memória do navegador.
+    - **CA03 — Redirecionamento Mandatório:** O navegador deve ser redirecionado imediatamente para a tela inicial de autenticação, bloqueando a navegação pelas páginas protegidas via botão "Voltar" do navegador.
 
     </div>
 
@@ -422,22 +406,11 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
     #### Conversa (Conversation)
     - **Alinhamento Sociotécnico:** Maria Beatryz confirmou que os dados bancários (código COMPE de 3 dígitos, agência e conta com dígito) são essenciais para evitar repasses errôneos de PIX/TED. A validação de CPF deve seguir o algoritmo oficial da Receita Federal (módulo 11) com bloqueio estrito de duplicidades.
 
-    #### Confirmação (Confirmation / BDD Gherkin)
-    ```gherkin
-    Cenário: Cadastro bem-sucedido de novo colaborador
-      Dado que o Administrador Financeiro está autenticado com o papel ADMIN_FINANCEIRO
-      Quando preencher os dados obrigatórios com CPF válido inédito e dados bancários completos
-      E submeter o formulário de cadastro
-      Então o sistema deve persistir a ficha unificada do colaborador com identificador único
-      E disparar link seguro de primeiro acesso para o e-mail corporativo informado (RF17)
-      E registrar o evento de criação na trilha de auditoria (RN17).
-
-    Cenário: Tentativa de cadastro com CPF duplicado
-      Dado que já existe um colaborador ativo cadastrado com o CPF "123.456.789-00"
-      Quando o Administrador tentar cadastrar outro colaborador com o mesmo CPF
-      Então o sistema deve abortar o cadastro com HTTP 409 Conflict
-      E exibir alerta informando "CPF já cadastrado na base de dados" (RN01).
-    ```
+    #### Confirmação (Critérios de Aceitação Objetivos)
+    - **CA01 — Validação Algorítmica de CPF:** O sistema deve validar o CPF utilizando o algoritmo oficial da Receita Federal (dígitos verificadores via módulo 11), rejeitando CPFs inválidos ou mascarados incorretamente (RN01).
+    - **CA02 — Unicidade Cadastral:** O sistema deve rejeitar o cadastro com alerta *"CPF já cadastrado na base de dados"* caso o documento já exista na base de dados ativa ou inativa.
+    - **CA03 — Dados Bancários Obrigatórios:** Exigir preenchimento completo de banco (código COMPE de 3 dígitos), agência e conta corrente com dígito verificador para viabilizar pagamentos de diárias.
+    - **CA04 — Trilha de Auditoria e Convite de Acesso:** Persistir o registro na trilha de auditoria (RN17) e disparar automaticamente o e-mail de convite com link temporário para definição do primeiro acesso (RF17).
 
     </div>
 
@@ -453,20 +426,10 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
     #### Conversa (Conversation)
     - **Alinhamento Sociotécnico:** Originada do feedback docente e de pares (FB-03), esta história dá transparência ao colaborador de obra. O técnico deve visualizar unicamente seus próprios registros (princípio do menor privilégio / RN16) com exibição clara do status ("Pendente", "Homologado" ou "Rejeitado") e dos pareceres de recusa registrados pelo gestor.
 
-    #### Confirmação (Confirmation / BDD Gherkin)
-    ```gherkin
-    Cenário: Consulta transparente de apontamentos próprios
-      Dado que o Técnico de Campo está autenticado com o perfil TECNICO_CAMPO
-      Quando acessar a listagem de apontamentos de campo
-      Então o sistema deve exibir apenas os registros vinculados ao seu próprio identificador (RN16)
-      E exibir para cada registro a data, o contrato de obra, as horas trabalhadas e o status atual
-      E permitir abrir o histórico detalhado com pareceres de homologação ou rejeição.
-
-    Cenário: Bloqueio de acesso a apontamentos de outros colaboradores
-      Dado que o Técnico de Campo tenta requisitar registros pertencentes a outro colaborador via API
-      Quando a requisição for interceptada pelos guards de segurança
-      Então o sistema deve retornar código HTTP 403 Forbidden em latência ≤ 15 ms (RNF14).
-    ```
+    #### Confirmação (Critérios de Aceitação Objetivos)
+    - **CA01 — Isolamento por Colaborador (Menor Privilégio):** O Técnico de Campo deve visualizar exclusivamente os apontamentos associados ao seu próprio identificador (RN16).
+    - **CA02 — Transparência de Dados:** Cada apontamento listado deve exibir claramente: data do serviço, contrato de obra vinculado, horas trabalhadas, status operacional (*Pendente*, *Homologado* ou *Rejeitado*) e eventuais pareceres de recusa registrados pela gestão.
+    - **CA03 — Bloqueio de Acesso Não Autorizado:** Tentativas de requisição a registros de terceiros via API devem ser interceptadas e rejeitadas com código HTTP 403 Forbidden em latência ≤ 15 ms (RNF14).
 
     </div>
 
@@ -482,14 +445,10 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
     #### Conversa (Conversation)
     - **Alinhamento Sociotécnico:** Maria Beatryz confirmou na Reunião 05 que a DUOC possui categorias distintas de diárias conforme o porte da obra e a senioridade técnica. A parametrização temporal garante que alterações de tabela não distorçam competências passadas.
 
-    #### Confirmação (Confirmation / BDD Gherkin)
-    ```gherkin
-    Cenário: Parametrização de nova diária com vigência temporal
-      Dado que o Administrador Financeiro cadastra a categoria "Técnico Residente" com valor de R$ 220,00 e vigência a partir de 01/10/2026
-      Quando a rotina de fechamento financeiro da competência 10/2026 for processada
-      Então o sistema deve computar as diárias dessa categoria pelo valor nominal exato de R$ 220,00 (RN25, RN31)
-      E manter inalterados os cálculos de competências anteriores a outubro de 2026.
-    ```
+    #### Confirmação (Critérios de Aceitação Objetivos)
+    - **CA01 — Parametrização com Vigência:** O sistema deve permitir o cadastro de categorias de diária técnica com nome, valor nominal monetário em reais e data de início de vigência (RN25).
+    - **CA02 — Imutabilidade Histórica:** Alterações na tabela de diárias não podem afetar retroativamente apurações de competências anteriores à data de vigência configurada (RN31).
+    - **CA03 — Aplicação no Motor de Fechamento:** A rotina de fechamento financeiro deve aplicar compulsoriamente a tarifa correspondente à categoria e à vigência do contrato da obra (TR-03).
 
     </div>
 
@@ -505,20 +464,10 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
     #### Conversa (Conversation)
     - **Alinhamento Sociotécnico:** Trata da erradicação do extravio de cupons fiscais térmicos que se apagam na carteira dos técnicos. A solicitação exige vínculo mandatório a um contrato de obra ativo (RN09) e upload do comprovante digitalizado (RN06) com validação de formato e tamanho (RNF07).
 
-    #### Confirmação (Confirmation / BDD Gherkin)
-    ```gherkin
-    Cenário: Solicitação de reembolso com comprovante fiscal válido
-      Dado que o colaborador seleciona um contrato de obra ativo e informa o valor monetário de R$ 85,50
-      Quando anexar comprovante fiscal em formato PDF com tamanho inferior a 5 MB e submeter o formulário
-      Então o sistema deve registrar a solicitação com status "Pendente de Análise"
-      E vincular o arquivo sanitizado ao registro (RNF07)
-      E disparar notificação de pendência no painel do Administrador Financeiro (RN27).
-
-    Cenário: Tentativa de envio de reembolso sem comprovante fiscal
-      Dado que o solicitante preenche valor e contrato mas não anexa o documento fiscal
-      Quando tentar submeter a solicitação
-      Então o sistema deve bloquear o envio exibindo "O comprovante fiscal digitalizado é obrigatório para reembolso" (RN06).
-    ```
+    #### Confirmação (Critérios de Aceitação Objetivos)
+    - **CA01 — Vínculo Contratual Obrigatório:** A solicitação de reembolso deve estar vinculada compulsoriamente a um contrato de obra ativo selecionado pelo solicitante (RN09).
+    - **CA02 — Obrigatoriedade de Comprovante Fiscal:** O sistema deve bloquear a submissão caso não seja anexado comprovante digitalizado (imagem JPEG/PNG ou documento PDF) de tamanho até 5 MB (RN06, RNF07).
+    - **CA03 — Notificação de Fluxo:** Após submissão com sucesso, a despesa deve assumir o status *"Pendente de Análise"* e gerar pendência no painel do Administrador Financeiro (RN27).
 
     </div>
 
@@ -534,15 +483,10 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
     #### Conversa (Conversation)
     - **Alinhamento Sociotécnico:** Item central da operação em obra. Por ser um item de alto valor e alto esforço (Q2), seu escopo no MVP foi estrategicamente controlado: foco na coleta web responsiva com status "Pendente de Homologação", validação de horas e envio de evidências (RF22); a operação offline completa (RNF01) foi postergada para a fase evolutiva.
 
-    #### Confirmação (Confirmation / BDD Gherkin)
-    ```gherkin
-    Cenário: Submissão de apontamento diário de produção (RVT)
-      Dado que o Técnico de Campo está alocado a um contrato de obra ativo
-      Quando preencher as horas trabalhadas, o escopo de serviços executado e submeter o formulário via Web App
-      Então o sistema deve gravar o registro com status inicial "Pendente de Homologação"
-      E disponibilizar o apontamento para deliberação do Gestor de Obras responsável (RF32)
-      E permitir ao autor retificar dados em até 5 dias úteis enquanto o status permanecer pendente (RN02, RF35).
-    ```
+    #### Confirmação (Critérios de Aceitação Objetivos)
+    - **CA01 — Registro com Status Pendente:** Ao submeter horas e escopo de produção, o sistema deve gravar o registro com status inicial *"Pendente de Homologação"* e disponibilizá-lo ao Gestor de Obras (RF32).
+    - **CA02 — Janela de Retificação:** O autor do apontamento deve poder retificar dados de horas e escopo em até 5 dias úteis a partir do envio, desde que o registro permaneça com status pendente (RN02, RF35).
+    - **CA03 — Validação de Horas Diárias:** O sistema deve validar a consistência das horas lançadas, alertando sobre jornadas superiores a 12 horas diárias no mesmo contrato.
 
     </div>
 
@@ -558,15 +502,10 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
     #### Conversa (Conversation)
     - **Alinhamento Sociotécnico:** Conforme acordado na Reunião 05 e refinado no feedback FB-13, a homologação representa o ato formal e irrevogável de trancamento da competência mensal. Todos os apontamentos conferidos tornam-se imutáveis; qualquer ajuste posterior exige o fluxo auditável de estorno (RF21).
 
-    #### Confirmação (Confirmation / BDD Gherkin)
-    ```gherkin
-    Cenário: Homologação e trancamento de lote financeiro
-      Dado que o Administrador Financeiro conferiu o extrato preliminar consolidado da competência
-      Quando confirmar formalmente a homologação do lote da competência selecionada
-      Então o sistema deve encerrar o lote e bloquear compulsoriamente os apontamentos contra qualquer edição (RN08)
-      E gravar o carimbo temporal UTC e o identificador do homologador na trilha de auditoria (RN17)
-      E disponibilizar o extrato definitivo com tolerância aritmética de R$ 0,00 (RNF06).
-    ```
+    #### Confirmação (Critérios de Aceitação Objetivos)
+    - **CA01 — Trancamento Compulsório de Competência:** A homologação do fechamento pelo Administrador Financeiro deve bloquear definitivamente todos os apontamentos da competência contra edição direta (RN08).
+    - **CA02 — Auditoria e Rastreabilidade:** O encerramento do lote deve registrar na trilha de auditoria o carimbo temporal UTC exato e o identificador do homologador (RN17).
+    - **CA03 — Emissão de Extrato sem Divergência:** O sistema deve gerar o extrato final consolidado com tolerância aritmética de R$ 0,00 entre soma de diárias/reembolsos e total liquidado (RNF06).
 
     </div>
 
@@ -600,4 +539,5 @@ Para auditar o alinhamento com as diretrizes metodológicas de **Bill Wake (2003
 | `2.1` | 12/10/2026 | Numeração das seções do capítulo (10.1 e 10.2) e atualização dos vínculos para as seções 8.6 a 8.12 da Priorização; atores das histórias alinhados à Matriz Canônica de Papéis (RBAC) do Capítulo 8; priorização passa a usar as três dimensões do Esforço Consolidado (ES, CX e LC) no lugar da Pontuação Técnica de duas dimensões, com reordenação por IP; indicação dos RF32 a RF36 como requisitos complementares sem história. | Eric Araújo | — |
 | `2.2` | 13/10/2026 | Remoção dos prefixos numéricos dos títulos de seção (10.1 e 10.2) e atualização das referências internas e âncoras para alinhamento com a estrutura da Unidade 2 | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `2.3` | 13/10/2026 | Remoção dos cards de alerta de enquadramento metodológico e critérios de aceitação com integração direta ao texto, destaque em branco e dourado para o nó raiz no diagrama da hierarquia do backlog e estilização da fórmula de priorização | Matheus Ribeiro Szervinsk | Eric Araújo |
-| `2.4` | 13/10/2026 | Auditoria metodológica e completude ágil: inclusão formal do enquadramento DEEP do Product Backlog; detalhamento das histórias do topo do backlog no Modelo dos 3Cs (Card, Conversation e Confirmation) com critérios BDD (Gherkin Dado-Quando-Então); e elaboração da Matriz de Conformidade INVEST para as histórias do MVP. | Matheus Ribeiro Szervinsk | Eric Araújo |
+| `2.4` | 13/10/2026 | Auditoria metodológica e completude ágil: inclusão formal do enquadramento DEEP do Product Backlog; detalhamento das histórias do topo do backlog no Modelo dos 3Cs (Card, Conversation e Confirmation) com critérios objetivos de aceitação e regras de negócio; e elaboração da Matriz de Conformidade INVEST para as histórias do MVP. | Matheus Ribeiro Szervinsk | Eric Araújo |
+
