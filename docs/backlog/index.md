@@ -1,9 +1,8 @@
 # Capítulo 10: Backlog do Produto e MVP
 
-!!! info "Enquadramento Metodológico — Unidade 2 e Seção 10 do Template Oficial"
-    Este capítulo decompõe o escopo do ***DUOC Finance*** em **Temas, Épicos e Histórias de Usuário (*User Stories*)**, atendendo à **Seção 10 do Template Oficial** da disciplina: a diretriz de **Backlog Geral** (Seção 10.1 do Template) é atendida pela seção [Backlog Geral](#backlog-geral) e a de **Priorização do Backlog e MVP** (Seção 10.2 do Template) pela seção [Priorização do Backlog e Linha de Corte do MVP](#priorizacao-do-backlog-e-linha-de-corte-do-mvp).
+Este capítulo decompõe o escopo do ***DUOC Finance*** em **Temas, Épicos e Histórias de Usuário (*User Stories*)**, atendendo à **Seção 10 do Template Oficial** da disciplina: a diretriz de [Backlog Geral](#backlog-geral) atende à Seção 10.1 e a [Priorização do Backlog e Linha de Corte do MVP](#priorizacao-do-backlog-e-linha-de-corte-do-mvp) à Seção 10.2.
 
-    Os códigos, nomenclaturas, notas de valor e de esforço adotados aqui são **reproduzidos sem alteração** da [Especificação de Requisitos (Capítulo 8)](../requisitos/index.md) e da [Priorização e MVP (Capítulo 8)](../requisitos/priorizacao.md). Este capítulo não redefine nenhum requisito, apenas o expressa na perspectiva do usuário e o ordena para a construção iterativa do modelo RAD.
+Os códigos, nomenclaturas, notas de valor e de esforço adotados aqui são reproduzidos sem alteração da [Especificação de Requisitos](../requisitos/index.md) e da [Priorização e MVP](../requisitos/priorizacao.md). Este capítulo organiza o escopo na perspectiva do usuário e o ordena para a construção iterativa e incremental do modelo RAD.
 
 ---
 
@@ -17,7 +16,7 @@ O backlog é organizado em três níveis de abstração, com rastreabilidade ver
 
 ```mermaid
 flowchart LR
-    PROD["<b>DUOC Finance</b><br>Backlog do Produto<br>31 histórias"]
+    PROD["<b style='color:#16181d;'>DUOC Finance</b><br><span style='color:#334155;'>Backlog do Produto</span><br><span style='color:#64748b; font-size:11px;'>31 histórias</span>"]
 
     TM01["<b>TM01 · OE1</b><br>Padronizar e Unificar<br>os Dados"]
     TM02["<b>TM02 · OE2</b><br>Aumentar a Eficiência<br>Administrativo-Financeira"]
@@ -40,7 +39,7 @@ flowchart LR
     TM03 --> EP06 & EP07
     TM04 --> EP08 & EP09
 
-    classDef prodClass fill:#334155,stroke:#1e293b,stroke-width:2px,color:#ffffff;
+    classDef prodClass fill:#ffffff,stroke:#DAA520,stroke-width:2.5px,color:#16181d;
     classDef oe1Class fill:#0284c7,stroke:#0369a1,stroke-width:2px,color:#ffffff;
     classDef oe2Class fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff;
     classDef oe3Class fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#ffffff;
@@ -138,8 +137,7 @@ Os papéis citados nas histórias são os **quatro papéis sistêmicos canônico
 | **US15** | <span class="mod-badge mod-4">EP09 · OE4</span> | Como **Administrador do Sistema ou Administrador Financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. | RF15 | RNF15<sup>¹</sup>, RNF16<sup>¹</sup>, RNF17<sup>¹</sup> + **T** | Pós-MVP |
 | **US16** | <span class="mod-badge mod-4">EP09 · OE4</span> | Como **Administrador do Sistema**, quero exportar um dossiê em PDF/CSV com o histórico imutável das operações auditadas, para que a DUOC comprove conformidade legal e trabalhista (CLT Art. 11). | RF16 | RNF15<sup>¹</sup>, RNF16<sup>¹</sup>, RNF17<sup>¹</sup> + **T** | Pós-MVP |
 
-!!! note "Critérios de aceitação"
-    Os critérios de aceitação de cada história são os **Critérios de Aceitação** do RF de origem no [Capítulo 8](../requisitos/index.md#especificacao-modular-dos-requisitos), complementados pelos **Critérios Mensuráveis** dos RNFs relacionados. A entrada e a saída de cada história nas iterações seguem a [Definition of Ready e Definition of Done (Capítulo 9)](../dor-dod/index.md).
+**Critérios de aceitação e rastreabilidade:** Os critérios de aceitação de cada história correspondem aos **Critérios de Aceitação** do RF de origem na [Especificação Modular dos Requisitos](../requisitos/index.md#especificacao-modular-dos-requisitos), complementados pelos **Critérios Mensuráveis** dos RNFs relacionados. A admissão de entrada e a conclusão de cada história nas iterações do RAD seguem a [Definition of Ready (DoR) e Definition of Done (DoD)](../dor-dod/index.md).
 
 ### Matriz de Rastreabilidade RNF × Histórias de Usuário
 
@@ -187,25 +185,25 @@ Esta seção atende à **Seção 10.2 do Template Oficial**. A priorização das
 | **Esforço Consolidado** | **EC** | 1,00 a 4,00 | Calculado: média de ES, CX e LC, convertida na classe 1 a 4 da [Regra de Conversão](../requisitos/priorizacao.md#formula-de-consolidacao-e-regra-de-conversao) do Capítulo 8. |
 | **Índice de Prioridade** | **IP** | 0,25 a 4,00 | Calculado: razão entre VB e a média EC. |
 
-<div style="background-color: var(--md-code-bg-color); border-left: 3px solid var(--md-primary-fg-color); border-radius: 4px; padding: 6px 14px; margin: 12px auto; text-align: center; font-size: 0.90rem; max-width: 1000px;">
-  <span style="font-weight: 600;">EC</span>
-  <span style="margin: 0 6px; font-weight: bold; font-size: 12px">=</span>
+<div style="background-color: var(--md-code-bg-color); border-left: 3px solid var(--duoc-gold, #DAA520); border-radius: 4px; padding: 8px 16px; margin: 14px auto; text-align: center; font-size: 0.92rem; max-width: 900px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+  <span style="font-weight: 700; color: var(--duoc-gold, #DAA520);">EC</span>
+  <span style="margin: 0 8px; font-weight: bold; font-size: 14px;">=</span>
   <span style="display: inline-block; vertical-align: middle; text-align: center;">
-    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 6px 2px 6px; font-weight: 500;">
+    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 8px 3px 8px; font-weight: 600;">
       ES + CX + LC
     </span>
-    <span style="display: block; padding-top: 2px; font-weight: 600; font-size: 1.05em;">
+    <span style="display: block; padding-top: 3px; font-weight: 700; font-size: 1.1em;">
       3
     </span>
   </span>
-  <span style="margin: 0 24px;"></span>
-  <span style="font-weight: 600;">IP</span>
-  <span style="margin: 0 6px; font-weight: bold; font-size: 12px">=</span>
+  <span style="margin: 0 28px;"></span>
+  <span style="font-weight: 700; color: var(--duoc-gold, #DAA520);">IP</span>
+  <span style="margin: 0 8px; font-weight: bold; font-size: 14px;">=</span>
   <span style="display: inline-block; vertical-align: middle; text-align: center;">
-    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 6px 2px 6px; font-weight: 500;">
+    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 8px 3px 8px; font-weight: 600;">
       VB
     </span>
-    <span style="display: block; padding-top: 2px; font-weight: 600; font-size: 1.05em;">
+    <span style="display: block; padding-top: 3px; font-weight: 700; font-size: 1.1em;">
       EC
     </span>
   </span>
@@ -344,3 +342,4 @@ flowchart LR
 | `2.0` | 12/10/2026 | Estruturação completa do capítulo conforme a Seção 10 do Template Oficial: hierarquia de 4 temas (OE1 a OE4), 9 épicos (CAR-01 a CAR-09) e 31 histórias de usuário derivadas de RF01 a RF31; tabela canônica do Backlog Geral (10.1) com vínculo aos RNFs específicos e ao pacote transversal, e matriz inversa RNF × US; priorização (10.2) com VB, CX, ES, PT, IP, quadrantes Q1 a Q4 e prioridade sugerida, sincronizada com a Matriz 4 × 4 do Capítulo 8; linha de corte com 23 histórias no MVP e 8 no backlog evolutivo pós-MVP. | Paulo Nery | — |
 | `2.1` | 12/10/2026 | Numeração das seções do capítulo (10.1 e 10.2) e atualização dos vínculos para as seções 8.6 a 8.12 da Priorização; atores das histórias alinhados à Matriz Canônica de Papéis (RBAC) do Capítulo 8; priorização passa a usar as três dimensões do Esforço Consolidado (ES, CX e LC) no lugar da Pontuação Técnica de duas dimensões, com reordenação por IP; indicação dos RF32 a RF36 como requisitos complementares sem história. | Eric Araújo | — |
 | `2.2` | 13/10/2026 | Remoção dos prefixos numéricos dos títulos de seção (10.1 e 10.2) e atualização das referências internas e âncoras para alinhamento com a estrutura da Unidade 2 | Matheus Ribeiro Szervinsk | Eric Araújo |
+| `2.3` | 13/10/2026 | Remoção dos cards de alerta de enquadramento metodológico e critérios de aceitação com integração direta ao texto, destaque em branco e dourado para o nó raiz no diagrama da hierarquia do backlog e estilização da fórmula de priorização | Matheus Ribeiro Szervinsk | Eric Araújo |

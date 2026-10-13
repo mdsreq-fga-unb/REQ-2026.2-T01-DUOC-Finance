@@ -1,19 +1,13 @@
 # Priorização de Requisitos e Definição do MVP
 
-!!! info "Enquadramento Metodológico — Capítulo 8 (Unidade 2) e Seção 10.2 do Template Oficial"
-    Este documento consolida o embasamento analítico e consensual da **Priorização de Requisitos e Definição da Linha de Corte do MVP**, subsidiando diretamente tanto a especificação dos [Requisitos de Software (Capítulo 8)](index.md) quanto o [Backlog do Produto (Capítulo 10)](../backlog/index.md). Na estrutura do Template Oficial da disciplina, este artefato fornece o embasamento metodológico da **Seção 10.2 (Priorização do Backlog e MVP)**, formalizada no [Capítulo 10](../backlog/index.md#priorizacao-do-backlog-e-linha-de-corte-do-mvp).
-
 Este documento consolida a estratégia integrada de priorização do sistema **DUOC Finance**, articulando os **Requisitos Funcionais (RF)** e **Requisitos Não Funcionais (RNF)** sob duas perspectivas complementares e interdependentes:
 
 1. **Valor de Negócio:** avaliado com a participação direta da cliente parceira **Maria Beatryz Vieira de Sousa** (Auxiliar-Administradora da DUOC Arquitetura e Engenharia), formalizado na [Ata da Reunião 05 (24/09/2026)](../atas/reuniao-05.md). Para os requisitos incorporados ou redefinidos após essa sessão, a classificação de valor apresentada neste documento é **preliminar** e deverá ser ratificada em validação posterior com a cliente.
 2. **Esforço Técnico:** avaliado pela equipe técnica do projeto (**Cascata Ágil**), considerando esforço em horas, complexidade arquitetural e lacuna de capacidade técnica.
 
-Os resultados dessas avaliações são cruzados na **Matriz 4 × 4 (Valor de Negócio × Esforço Técnico)**, fornecendo o embasamento analítico para a delimitação da linha de corte do **Produto Mínimo Viável (MVP)**, o tratamento dos requisitos de alto valor e alto esforço, a vinculação dos atributos de qualidade (RNFs) e a evolução controlada do escopo.
+Os resultados dessas avaliações são cruzados na **Matriz 4 × 4 (Valor de Negócio × Esforço Técnico)**, fornecendo o embasamento analítico para a delimitação da linha de corte do **Produto Mínimo Viável (MVP)**, o tratamento dos requisitos de alto valor e alto esforço, a vinculação dos atributos de qualidade (RNFs) e a evolução controlada do escopo. Este artefato subsidia diretamente tanto a especificação dos [Requisitos de Software](index.md) quanto a gestão do [Backlog do Produto e MVP](../backlog/index.md#priorizacao-do-backlog-e-linha-de-corte-do-mvp), atendendo à Seção 10.2 do Template Oficial da disciplina.
 
-!!! warning "Escopo da linha de corte do MVP"
-    A linha de corte é aplicada aos **31 Requisitos Funcionais (RF01 a RF31)** decompostos em histórias de usuário no [Backlog do Produto (Capítulo 10)](../backlog/index.md): **23 RFs no MVP (74,2%)** e **8 RFs no backlog pós-MVP (25,8%)**.
-
-    Os **RF32 a RF36** (incorporados na revisão por pares de 12/10/2026) foram avaliados em valor e esforço e posicionados na Matriz 4 × 4, mas são tratados como **requisitos complementares**: não compõem a contagem da linha de corte e não possuem história nesta versão do backlog (ver [Requisitos Complementares](#requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte)).
+A linha de corte do MVP é aplicada aos **31 Requisitos Funcionais (RF01 a RF31)** mapeados em histórias de usuário no [Backlog do Produto](../backlog/index.md): **23 RFs compõem o MVP (74,2%)** e **8 RFs integram o backlog evolutivo pós-MVP (25,8%)**. Adicionalmente, os **RF32 a RF36** (incorporados na revisão por pares de 12/10/2026) foram avaliados em valor e esforço e posicionados na Matriz 4 × 4, sendo tratados como [requisitos complementares](#requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte) fora da contagem inicial da linha de corte nesta versão do backlog.
 
 ---
 
@@ -174,14 +168,14 @@ Mede a distância entre o domínio tecnológico/conceitual necessário e a exper
 
 Para consolidar as três dimensões técnicas em um indicador único e reprodutível, adota-se a média aritmética simples:
 
-<div style="background-color: var(--md-code-bg-color); border-left: 3px solid var(--md-primary-fg-color); border-radius: 4px; padding: 6px 14px; margin: 12px auto; text-align: center; font-size: 0.90rem; max-width: 1000px;">
-  <span style="font-weight: 600;">Média Consolidada</span>
-  <span style="margin: 0 6px; font-weight: bold; font-size: 12px">=</span>
+<div style="background-color: var(--md-code-bg-color); border-left: 3px solid var(--duoc-gold, #DAA520); border-radius: 4px; padding: 8px 16px; margin: 14px auto; text-align: center; font-size: 0.92rem; max-width: 900px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+  <span style="font-weight: 700; color: var(--duoc-gold, #DAA520);">Média Consolidada</span>
+  <span style="margin: 0 8px; font-weight: bold; font-size: 14px;">=</span>
   <span style="display: inline-block; vertical-align: middle; text-align: center;">
-    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 6px 2px 6px; font-weight: 500;">
+    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 8px 3px 8px; font-weight: 600;">
       Esforço (Nota) + Complexidade + Lacuna de Capacidade
     </span>
-    <span style="display: block; padding-top: 2px; font-weight: 600; font-size: 1.05em;">
+    <span style="display: block; padding-top: 3px; font-weight: 700; font-size: 1.1em;">
       3
     </span>
   </span>
@@ -366,9 +360,21 @@ As coordenadas `[x, y]` do diagrama da [Representação Visual da Matriz 4 × 4]
 
 O plano do `quadrantChart` é o quadrado unitário, dividido em 4 × 4 células de lado 0,25. As notas ordinais (1 a 4) são mapeadas ao **centro da célula** correspondente:
 
-```text
-x_base = (E - 0,5) / 4          y_base = (V - 0,5) / 4
-```
+<div style="background-color: var(--md-code-bg-color); border-left: 3px solid var(--duoc-gold, #DAA520); border-radius: 4px; padding: 8px 16px; margin: 14px auto; text-align: center; font-size: 0.92rem; max-width: 900px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+  <span style="font-weight: 700; color: var(--duoc-gold, #DAA520);">x<sub>base</sub></span>
+  <span style="margin: 0 6px; font-weight: bold;">=</span>
+  <span style="display: inline-block; vertical-align: middle; text-align: center;">
+    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 6px 2px 6px; font-weight: 600;">E − 0,5</span>
+    <span style="display: block; padding-top: 2px; font-weight: 700;">4</span>
+  </span>
+  <span style="margin: 0 32px;"></span>
+  <span style="font-weight: 700; color: var(--duoc-gold, #DAA520);">y<sub>base</sub></span>
+  <span style="margin: 0 6px; font-weight: bold;">=</span>
+  <span style="display: inline-block; vertical-align: middle; text-align: center;">
+    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 6px 2px 6px; font-weight: 600;">V − 0,5</span>
+    <span style="display: block; padding-top: 2px; font-weight: 700;">4</span>
+  </span>
+</div>
 
 | Nota (1 a 4) | 1 | 2 | 3 | 4 |
 | :--- | :---: | :---: | :---: | :---: |
@@ -381,12 +387,35 @@ Como o centro da célula nunca coincide com os eixos de corte (0,5), a divisão 
 
 Quando *n* requisitos ocupam a mesma célula, todos teriam o mesmo par `(x_base, y_base)` e seriam desenhados sobrepostos. Para evitar isso, os requisitos da célula são ordenados pelo código (RF crescente) e distribuídos em uma grade de *k* colunas × *m* linhas, preenchida por linha, de cima para baixo e da esquerda para a direita:
 
-```text
-k = menor inteiro tal que k² ≥ n        m = ⌈ n / k ⌉
-
-x = x_base + (c - (k - 1) / 2) · s_x
-y = y_base + ((m - 1) / 2 - r) · s_y
-```
+<div style="background-color: var(--md-code-bg-color); border-left: 3px solid var(--duoc-gold, #DAA520); border-radius: 4px; padding: 10px 16px; margin: 14px auto; text-align: center; font-size: 0.92rem; max-width: 900px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+  <div style="margin-bottom: 8px; font-weight: 600;">
+    <span>k = menor inteiro tal que k² ≥ n</span>
+    <span style="margin: 0 20px; opacity: 0.5;">|</span>
+    <span>m = ⌈ n / k ⌉</span>
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center; gap: 28px; flex-wrap: wrap;">
+    <div>
+      <span style="font-weight: 700; color: var(--duoc-gold, #DAA520);">x</span>
+      <span style="margin: 0 4px; font-weight: bold;">=</span>
+      <span>x<sub>base</sub> + [ c − </span>
+      <span style="display: inline-block; vertical-align: middle; text-align: center;">
+        <span style="display: block; border-bottom: 1px solid currentColor; padding: 0 3px; font-size: 0.88em;">k − 1</span>
+        <span style="display: block; font-size: 0.88em;">2</span>
+      </span>
+      <span> ] · s<sub>x</sub></span>
+    </div>
+    <div>
+      <span style="font-weight: 700; color: var(--duoc-gold, #DAA520);">y</span>
+      <span style="margin: 0 4px; font-weight: bold;">=</span>
+      <span>y<sub>base</sub> + [ </span>
+      <span style="display: inline-block; vertical-align: middle; text-align: center;">
+        <span style="display: block; border-bottom: 1px solid currentColor; padding: 0 3px; font-size: 0.88em;">m − 1</span>
+        <span style="display: block; font-size: 0.88em;">2</span>
+      </span>
+      <span> − r ] · s<sub>y</sub></span>
+    </div>
+  </div>
+</div>
 
 Onde `c` (0 a k−1) é a coluna e `r` (0 a m−1) é a linha do requisito na grade. Os fatores de espaçamento garantem que o deslocamento máximo permaneça **dentro da célula de origem** (meia-largura de 0,125); portanto, a dispersão **nunca altera o quadrante nem a nota** de nenhum requisito.
 
@@ -441,8 +470,7 @@ Onde `c` (0 a k−1) é a coluna e `r` (0 a m−1) é a linha do requisito na gr
 | (2, 3) | RF31 | 3 | 2 | 0,625 | 0,375 | 2 | 1 | **[0,715; 0,335]** |
 | (1, 3) | RF16 | 3 | 1 | 0,625 | 0,125 | 0 | 0 | **[0,625; 0,125]** |
 
-!!! note "Auditabilidade e manutenção"
-    As colunas **E** e **V** reproduzem exatamente a [Tabela Consolidada](#tabela-consolidada-das-avaliacoes) e a [Tabela da Matriz 4 × 4](#tabela-da-matriz-4-x-4). Ao incluir ou reclassificar um requisito, basta recalcular `(x_base, y_base)`, reordenar a célula afetada e reaplicar a Etapa 2. A posição dentro da célula é apenas um recurso de legibilidade: **não possui significado analítico** — vale somente a célula (V, E).
+**Auditabilidade e manutenção:** As colunas **E** e **V** reproduzem exatamente a [Tabela Consolidada](#tabela-consolidada-das-avaliacoes) e a [Tabela da Matriz 4 × 4](#tabela-da-matriz-4-x-4). Ao incluir ou reclassificar um requisito, basta recalcular `(x_base, y_base)`, reordenar a célula afetada e reaplicar a Etapa 2. A posição dentro da célula é apenas um recurso de legibilidade: **não possui significado analítico** — vale somente a célula (V, E).
 
 ### Análise Estratégica dos Quadrantes
 
@@ -602,9 +630,7 @@ A Reunião 05 registrou a validação do núcleo funcional disponível em **24/0
 
 ### Quadro de Deliberações e Aceite de Escopo
 
-!!! note "Atualizações posteriores à validação"
-
-    A Reunião 05 registrou a validação do núcleo funcional existente naquele momento. Requisitos incorporados posteriormente por refinamento da especificação — incluindo a redefinição do RF22 e os RF23 a RF36 — possuem classificação preliminar neste capítulo e deverão ser ratificados em uma próxima sessão de validação com a cliente. O quadro abaixo preserva as decisões efetivamente registradas em 24/09/2026 e esclarece alterações posteriores de identificação quando necessário.
+A Reunião 05 registrou a validação do núcleo funcional existente naquele momento. Requisitos incorporados posteriormente por refinamento da especificação — incluindo a redefinição do RF22 e os RF23 a RF36 — possuem classificação preliminar neste capítulo e deverão ser ratificados em uma próxima sessão de validação com a cliente. O quadro a seguir preserva as decisões efetivamente registradas em 24/09/2026 e esclarece alterações posteriores de identificação quando necessário.
 
 | Tópico da Validação | Decisão Registrada | Fundamentação e Rastreabilidade |
 | :--- | :---: | :--- |
@@ -640,3 +666,4 @@ A Reunião 05 registrou a validação do núcleo funcional disponível em **24/0
 | `2.9` | 12/10/2026 | Aprimoramento da qualidade dos requisitos não funcionais e adequação legal/conceitual: redefinição de RNF07 (robustez/integridade) e RNF08 (não-repúdio/auditabilidade); desambiguação de RNF10, RNF14, RNF15 e RNF16; reclassificação do RNF16 para Reliability / Legal (+); parametrização operacional de carga nominal (50 usuários a 10 req/s); e explicitação da fundamentação jurídica da retenção probatória (Art. 11 da CLT e Art. 16 da LGPD). | Matheus Ribeiro Szervinsk | Eric Araújo e Matheus Saraiva Camargo |
 | `3.0` | 12/10/2026 | Alinhamento com o Backlog do Produto (Capítulo 10): linha de corte aplicada aos 31 RFs com histórias (23 no MVP / 74,2% e 8 pós-MVP / 25,8%); RF32 a RF36 tratados como requisitos complementares, avaliados na matriz mas fora da contagem; renumeração das seções para 8.6 a 8.12 (continuidade do Capítulo 8) e das referências internas. | Eric Araújo | — |
 | `3.1` | 13/10/2026 | Remoção dos prefixos numéricos das seções principais (8.6 a 8.12) e de referências numéricas internas em aderência ao padrão textual dos Capítulos 8, 9 e 10, com preservação de âncoras para rastreabilidade e integridade de links externos. | Matheus Ribeiro Szervinsk | Eric Araújo |
+| `3.2` | 13/10/2026 | Remoção de caixas de alerta (enquadramento metodológico, escopo da linha de corte e auditabilidade) com integração direta à narrativa fluida do texto e estilização visual das fórmulas matemáticas de normalização e dispersão da Matriz 4×4. | Matheus Ribeiro Szervinsk | Eric Araújo |
