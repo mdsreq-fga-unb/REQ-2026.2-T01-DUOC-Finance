@@ -26,7 +26,6 @@ O **DUOC Finance** é uma solução digital desenvolvida para a empresa **DUOC A
 | <img src="https://github.com/Matheus-S-Camargo.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Matheus Saraiva Camargo"> | Matheus Saraiva Camargo | [@Matheus-S-Camargo](https://github.com/Matheus-S-Camargo) | 241011475 | Arquiteto de Software, Banco de Dados Relacional e Infraestrutura Docker |
 | <img src="https://github.com/Gustavo2703.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Gustavo"> | Gustavo | [@Gustavo2703](https://github.com/Gustavo2703) | 241025659 | Gestão de Qualidade (QA), Automação de Testes e Governança DoR/DoD |
 | <img src="https://github.com/gih7915.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Giovana Ferreira"> | Giovana Ferreira | [@gih7915](https://github.com/gih7915) | 231034707 | Interface Humano-Computador (IHC), Design UI/UX e Frontend React |
-| <img src="https://github.com/cgbriel28.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Carlos Gabriel"> | Carlos Gabriel | [@cgbriel28](https://github.com/cgbriel28) | 242015450 | Interface Humano-Computador (IHC), Design UI/UX e Frontend React (Mobile-First) |
 | <img src="https://github.com/Pnery2004.png" width="64" height="64" style="border-radius: 50%; border: 2px solid #DAA520;" alt="Paulo Nery"> | Paulo Nery | [@Pnery2004](https://github.com/Pnery2004) | 221008740 | Engenheiro Backend, APIs RESTful e Motor de Regras Financeiras |
 
 ---

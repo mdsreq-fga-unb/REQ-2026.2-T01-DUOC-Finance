@@ -18,15 +18,15 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 ---
 
 <a id="21-e-22-objetivos-do-produto"></a>
-## 2.1 e 2.2 Objetivos do Produto
+## Objetivos do Produto
 
-### 2.1 Objetivo Geral do Produto
+### Objetivo Geral do Produto
 
 > **Centralizar o fluxo de informações sobre gestão administrativa da DUOC Arquitetura e Engenharia em um único sistema, assegurando a sustentabilidade de seus projetos sob contrato.**
 
 ---
 
-### 2.2 Objetivos Específicos (OE) do Produto
+### Objetivos Específicos (OE) do Produto
 
 <a id="oe1-padronizar-e-unificar-os-dados"></a>
 <a id="oe1-padronizacao-e-unificacao-de-dados-operacionais"></a>
@@ -49,7 +49,7 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 ??? abstract "OE3: Transparecer as informações sobre os Custos por Contrato"
 
     * **Natureza:** Estratégica e Analítica
-    * **Valor de Negócio:** Prover inteligência analítica e visibilidade contínua em tempo real sobre o custo de mão de obra apropriado e sua aderência ao orçamento previsto por obra, assegurando a sustentabilidade financeira de cada projeto sob contrato.
+    * **Valor de Negócio:** Prover inteligência analítica e visibilidade contínua sobre o custo de mão de obra apropriado e sua aderência ao orçamento previsto por obra, assegurando a sustentabilidade financeira de cada projeto sob contrato.
     * **Características Relacionadas:** [CAR-05](#car-05), [CAR-06](#car-06) (Principais); CAR-02, CAR-04 (Apoio).
 
 <a id="oe4-garantir-seguranca-e-governanca-de-dados"></a>
@@ -57,13 +57,13 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 ??? abstract "OE4: Garantir Segurança e Governança de Dados"
 
     * **Natureza:** Governança Corporativa e Conformidade
-    * **Valor de Negócio:** Garante a integridade, confidencialidade e segregação de acesso sobre registros de pessoal e dados financeiros sensíveis, resguardando a privacidade e blindando a organização.
+    * **Valor de Negócio:** Garante a integridade, confidencialidade e segregação de acesso sobre registros de pessoal e dados financeiros confidenciais, resguardando a privacidade e blindando a organização.
     * **Características Relacionadas:** [CAR-07](#car-07), [CAR-08](#car-08) (Principais); CAR-01, CAR-03 (Apoio).
 
 ---
 
 <a id="23-caracteristicas-do-produto-car"></a>
-## 2.3 Características do Produto (CAR)
+## Características do Produto (CAR)
 
 As características do produto descrevem as capacidades funcionais do **DUOC Finance** no escopo do MVP, mapeadas diretamente aos Objetivos Específicos do negócio.
 
@@ -78,9 +78,9 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
         * **Contribuição Secundária:** [OE2: Aumentar a Eficiência Administrativo-Financeira](#oe2-aumentar-a-eficiencia-administrativo-financeira)
 
 <a id="car-02"></a>
-??? note "CAR-02: Apontamento Móvel de Atividades e Registros de Campo"
+??? note "CAR-02: Apontamento de Campo e Registros Técnicos de Obra (RVT)"
 
-    * **Valor de Negócio:** Padroniza e agiliza a captação de dados diretamente no canteiro de obras e em viagens técnicas, erradicando a perda de anotações físicas em papel e mensagens dispersas no WhatsApp.
+    * **Valor de Negócio:** Padroniza e agiliza a captação de dados diretamente no canteiro de obras e em viagens técnicas através da aplicação web responsiva (Web App / PWA), erradicando a perda de anotações físicas em papel e mensagens dispersas no WhatsApp.
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
         * **Contribuição Secundária:** [OE3: Transparecer as informações sobre os Custos por Contrato](#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato)
@@ -145,7 +145,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 <a id="car-09"></a>
 ??? note "CAR-09: Integração com Shifton e Gestão de Presenças Homologadas"
 
-    * **Valor de Negócio:** Evita a duplicação de um sistema de marcação de ponto já resolvido pela DUOC, consumindo os registros de presença homologados pelo *Shifton* (reconhecimento facial e ponto eletrônico) para apropriação financeira direta das horas aos contratos de obras (RF20), e possibilitando a emissão e exportação estruturada de relatórios/espelhos individuais de presença para conferência dos colaboradores e rotinas trabalhistas do RH (RF22).
+    * **Valor de Negócio:** Evita a duplicação de um sistema de marcação de ponto já resolvido pela DUOC, consumindo os registros de presença homologados pelo *Shifton* (reconhecimento facial e ponto eletrônico) para apropriação financeira direta das horas aos contratos de obras (RF20).
     * **Decisão Arquitetural de Origem:** [Ata da Reunião 02](../../atas/index.md) e alinhamento de escopo na [Ata da Reunião 05](../../atas/reuniao-05.md).
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
@@ -155,7 +155,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 ??? note "CAR-10: Importação e Exportação de Dados com ERPs e Planilhas Legadas"
 
     * **Valor de Negócio:** Permite migrar dados históricos de planilhas de Excel e exportar relatórios em formato compatível (CSV/Excel) para os ERPs e ferramentas contábeis já usados pela DUOC, evitando redigitação manual e retrabalho na transição.
-    * **Nota de Escopo:** Esta característica está fora do recorte do MVP definido na [Delimitação do Escopo do MVP](#26-viabilidade-da-proposta-analise-do-mvp) (seção 2.6). O desenho técnico da integração (formatos de arquivo, direção do fluxo e sistemas de destino) será definido em fase posterior; esta CAR registra apenas o compromisso de escopo.    
+    * **Nota de Escopo:** Esta característica contempla a exportação operacional de dados consolidados em planilha (CSV/XLSX), especificada formalmente no [Capítulo 8](../../requisitos/index.md) como **RF36**. A funcionalidade foi alocada no backlog de evolução (Fase 2 / pós-MVP), preservando o compromisso de interoperabilidade com os sistemas contábeis da DUOC.
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
 
@@ -163,7 +163,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 ??? note "CAR-11: Integração com Sistemas BIM (Revit/ArchiCAD)"
 
     * **Valor de Negócio:** Conecta o DUOC Finance à infraestrutura de modelagem BIM já em uso pela equipe de Arquitetura/Estrutural, evitando retrabalho de dados entre a coordenação técnica e a gestão administrativo-financeira.
-    * **Nota de Escopo:** O desenho técnico exato desta integração (dados trocados, direção do fluxo, frequência) ainda será definido durante a Fase 2 (Design do Usuário); esta CAR registra apenas o compromisso de escopo.
+    * **Nota de Escopo:** Característica arquitetural planejada para a Fase 2 (Design do Usuário / Evolutivo). Registra o compromisso de integração com modelos BIM para fases futuras, permanecendo sem requisito funcional (RF) ativo na primeira release do MVP.
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
 
@@ -171,14 +171,14 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 ??? note "CAR-12: Integração com Slack e E-mail"
 
     * **Valor de Negócio:** Conecta o DUOC Finance aos canais de comunicação já usados pela equipe (Slack e e-mail), evitando que decisões e alertas relevantes fiquem isolados de fluxos informais dispersos.
-    * **Nota de Escopo:** O desenho técnico exato desta integração (eventos notificados, direção do fluxo, formato) ainda será definido durante a Fase 2 (Design do Usuário); esta CAR registra apenas o compromisso de escopo.
+    * **Nota de Escopo:** Característica arquitetural planejada para a Fase 2 (Design do Usuário / Evolutivo). Registra o compromisso de integração com canais externos de comunicação (Slack e e-mail), permanecendo sem requisito funcional (RF) ativo na primeira release do MVP.
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
 
 ---
 
 <a id="24-tecnologias-a-serem-utilizadas-e-arquitetura"></a>
-## 2.4 Tecnologias a Serem Utilizadas e Arquitetura
+## Tecnologias a Serem Utilizadas e Arquitetura
 
 Nesta seção são formalizadas as decisões de arquitetura e a composição da stack tecnológica selecionada para a construção do **DUOC Finance**. Cada escolha técnica foi fundamentada em critérios objetivos de engenharia de software: integridade transacional de dados financeiros, segurança da informação (LGPD), ergonomia de uso em campo (*mobile-first*), domínio técnico prévio da equipe e viabilidade de manutenção no semestre letivo.
 
@@ -201,7 +201,7 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
 | **Integração Contínua (CI/CD)** | GitHub Actions | :simple-githubactions: | Pipelines automatizadas para linting, validações de tipagem (`tsc`) e testes |
 | **Documentação Viva** | MkDocs Material | | Abordagem *Docs as Code* versionada com suporte a Markdown, tabelas e Mermaid |
 
-### 1. Banco de Dados Relacional
+### Banco de Dados Relacional
 
 <div class="tech-tags" markdown="1">
 <span class="tech-tag">:simple-postgresql: PostgreSQL</span>
@@ -214,7 +214,7 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
 * **Gerenciamento de Schema via Scripts de Migration:** O versionamento do banco de dados é automatizado por scripts de *migration* executados no pipeline de inicialização da aplicação, garantindo que todos os ambientes (desenvolvimento e produção) mantenham schemas idênticos.
 * **Segurança e LGPD:** O PostgreSQL oferece suporte maduro a criptografia em repouso e em trânsito (SSL/TLS), além de mecanismos de controle de privilégios em nível de linha (*Row Level Security - RLS*), resguardando informações salariais e dados bancários confidenciais.
 
-### 2. Backend e Arquitetura Física
+### Backend e Arquitetura Física
 
 <div class="tech-tags" markdown="1">
 <span class="tech-tag">:fontawesome-brands-node-js: Node.js</span>
@@ -223,13 +223,13 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
 </div>
 
 * **Tipo:** API RESTful com plataforma de execução assíncrona orientada a serviços, tipagem estática e arquitetura modular.
-* **Justificativa Técnica:** A tipagem estática do TypeScript elimina classes comuns de erros em tempo de compilação, protegendo algoritmos de folha de pagamento e fórmulas de comissionamento contra coerções de tipos inesperadas. A estrutura modular do NestJS facilita a injeção de dependências e a segregação limpa de responsabilidades entre controladores, serviços e repositórios.
+* **Justificativa Técnica:** A tipagem estática do TypeScript elimina classes comuns de erros em tempo de compilação, protegendo apurações financeiras de diárias e fórmulas de comissionamento contra coerções de tipos inesperadas. A estrutura modular do NestJS facilita a injeção de dependências e a segregação limpa de responsabilidades entre controladores, serviços e repositórios.
 * **Mecanismo de Autenticação e Perfis de Acesso (RBAC):** 
   * **Autenticação:** Implementação stateless via *JSON Web Tokens* (JWT) assinados com algoritmos de chave assimétrica e tempo de expiração curto.
-  * **Autorização Baseada em Papéis (RBAC — Role-Based Access Control):** Controle granular de acesso baseado em *Guards* e *Decorators* na API, validando permissões por perfis de acesso definidos na regra de negócio (ex.: `ADMINISTRADOR`, `GESTOR_OBRA`, `COLABORADOR`).
+  * **Autorização Baseada em Papéis (RBAC — Role-Based Access Control):** Controle granular de acesso baseado em *Guards* e *Decorators* na API, validando permissões pelos 4 papéis canônicos de acesso estabelecidos no Capítulo 8 (`ADMIN_SISTEMA`, `ADMIN_FINANCEIRO`, `GESTOR_OBRAS` e `TECNICO_CAMPO`).
 * **Automação via Scripts CLI:** A base de código conta com scripts automatizados via `package.json` para tarefas recorrentes de *seed* de dados sintéticos para testes, execução de suítes de teste de integração e geração de build de produção.
 
-### 3. Frontend
+### Frontend
 
 <div class="tech-tags" markdown="1">
 <span class="tech-tag">:fontawesome-brands-react: React</span>
@@ -243,7 +243,7 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
 * **Justificativa Técnica:** O ecossistema React suporta a criação de interfaces reativas e modulares. O utilitário de build *Vite* proporciona recarregamento rápido em desenvolvimento e empacotamento otimizado de ativos estáticos, garantindo alto desempenho e baixo consumo de dados tanto em estações de trabalho quanto em dispositivos móveis conectados via redes 4G/5G nos canteiros de obra.
 * **Ergonomia e Usabilidade (IHC):** O uso do Tailwind CSS aliado ao Shadcn UI viabiliza o desenvolvimento guiado por utilitários com suporte nativo a *design tokens*. Permite a rápida prototipação de componentes com paleta de cores de alto contraste, otimizados para leitura sob incidência de luz solar direta e com áreas de toque ampliadas para operação em smartphones nos canteiros.
 
-### 4. Domínio da Equipe e Capacidade Operacional
+### Domínio da Equipe e Capacidade Operacional
 
 <div class="tech-tags" markdown="1">
 <span class="tech-tag">:simple-typescript: TypeScript</span>
@@ -254,7 +254,7 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
 
 As escolhas do ecossistema **TypeScript/JavaScript (Node.js + React)** e do banco **PostgreSQL** levaram em consideração a maturidade e o domínio prévio de código dos membros da equipe de desenvolvimento. A padronização de uma única linguagem (TypeScript) tanto no Frontend quanto no Backend minimiza o contexto cognitivo de transição, acelera o reaproveitamento de interfaces/DTOs entre as camadas e garante entregas rápidas e previsíveis no ciclo de vida das Unidades de entrega do projeto.
 
-### 5. Infraestrutura, Hospedagem e CI/CD
+### Infraestrutura, Hospedagem e CI/CD
 
 <div class="tech-tags" markdown="1">
 <span class="tech-tag">:fontawesome-brands-docker: Docker</span>
@@ -272,7 +272,7 @@ As escolhas do ecossistema **TypeScript/JavaScript (Node.js + React)** e do banc
 ---
 
 <a id="25-pesquisa-de-mercado-e-analise-competitiva"></a>
-## 2.5 Pesquisa de Mercado e Análise Competitiva
+## Pesquisa de Mercado e Análise Competitiva
 
 ### Cenário de Mercado: Softwares de Prateleira (COTS) vs. Demanda Real
 
@@ -316,19 +316,19 @@ O DUOC Finance não pretende atuar como um ERP genérico e massivo de engenharia
       custo por contrato.       da DUOC (Anti-Bloatware). conformidade legal.
 ```
 
-#### 1. Hub Centralizador e Orquestrador do Fluxo Administrativo
+#### Hub Centralizador e Orquestrador do Fluxo Administrativo
 * **Captura no Campo:** A equipe técnica registra ponto e RVT em interface ágil, no próprio canteiro de serviço.
-* **Homologação Administrativa:** O setor financeiro/DP confere horas e despesas em tempo real, apoiando o cálculo de custo de folha e comissões.
+* **Homologação Administrativa:** O setor financeiro/DP confere horas e despesas de forma contínua, apoiando a apuração de diárias e comissões.
 * **Inteligência de Custos:** Os sócios visualizam o custo de mão de obra apurado de cada obra contratada.
 
-#### 2. Desenvolvimento Sob Medida e Personalização Cultural (*Tailor-Made*)
+#### Desenvolvimento Sob Medida e Personalização Cultural (*Tailor-Made*)
 O principal diferencial competitivo da solução frente a qualquer software de mercado é a **personalização sociotécnica total**:
 * **O Software se Adapta à DUOC (e não o contrário):** Softwares de prateleira exigem que a empresa mude seu modo de trabalhar para se adequar ao sistema. O DUOC Finance foi concebido a partir da observação direta dos fluxos reais da DUOC, preservando suas práticas bem-sucedidas e digitalizando os pontos de atrito.
 * **Identidade Visual e Cultura da Empresa ("A Cara da DUOC"):** A interface é construída seguindo rigorosamente o manual de identidade visual da DUOC Arquitetura e Engenharia (paleta institucional com destaque em Dourado Ocre `#DAA520`, tipografia limpa e modo escuro sofisticado). Essa estética gera sentimento de pertencimento, profissionalismo e engajamento imediato da equipe.
 * **Ergonomia *Anti-Bloatware* (Design Enxuto):** Sistemas genéricos de mercado sobrecarregam os usuários com centenas de botões, abas e configurações irrelevantes. O DUOC Finance implementa fluxos rápidos (*mobile-first*) focados estritamente na rotina do técnico de campo e do auxiliar administrativo.
 * **Terminologia Nativa do Negócio:** A interface adota o vocabulário real utilizado no cotidiano da DUOC (Relatório de Viagem Técnica - RVT, centros de custos vinculados a contratos multidisciplinares de arquitetura e engenharia), reduzindo drasticamente a curva de aprendizado e eliminando a resistência à adoção.
 
-#### 3. Governança, Privacidade e Conformidade com a LGPD
+#### Governança, Privacidade e Conformidade com a LGPD
 Diferente do compartilhamento indiscriminado de arquivos em nuvem e planilhas de rede, o DUOC Finance implementa controle de acesso por papéis (RBAC). Dados salariais e remunerações de sócios são blindados contra acessos indevidos, garantindo conformidade rigorosa com a Lei nº 13.709/2018.
 
 ### Fontes de Referência
@@ -341,7 +341,7 @@ Diferente do compartilhamento indiscriminado de arquivos em nuvem e planilhas de
 ---
 
 <a id="26-viabilidade-da-proposta-analise-do-mvp"></a>
-## 2.6 Viabilidade da Proposta (Análise do MVP)
+## Viabilidade da Proposta (Análise do MVP)
 
 ### Parecer de Viabilidade
 
@@ -358,7 +358,9 @@ O Produto Mínimo Viável (MVP) do DUOC Finance é viável no ciclo acadêmico e
 
 ### Delimitação do Escopo do MVP
 
-O MVP abrange o controle de acesso e papéis por perfis fixos (RBAC), consumo de presenças já homologadas pelo Shifton (conforme Decisão Arquitetural da Ata 02) para apropriação financeira das horas aos contratos, preenchimento e homologação de Relatório de Viagem Técnica (RVT) — que já inclui o registro de despesas de campo e reembolso —, motor de apoio ao cálculo de custo de mão de obra de diaristas e comissões contratuais simplificadas (não substituto de folha de pagamento oficial), e apropriação dos custos ao contrato correspondente. Uma visualização tabular direta de custo apurado por contrato e um registro básico de auditoria (log de alterações) para conformidade com a LGPD completam o valor tangível entregue à diretoria, sem a necessidade de um módulo de business intelligence dedicado. O cálculo de comissões contratuais será tratado como regra simplificada nesta primeira versão, com refinamento previsto para ciclos futuros.
+O MVP abrange o controle de acesso baseado em papéis (RBAC - CAR-07), o preenchimento, retificação e deliberação formal de Relatórios de Viagem Técnica (RVT de campo - CAR-02, abrangendo envio, anexos de evidências, retificação pendente, deliberação da supervisão com bloqueio e consulta própria), a gestão cadastral de colaboradores, contratos de obras e centros de custo (CAR-01, CAR-05 e CAR-06), o fluxo digital de despesas operacionais, adiantamentos e reembolsos (CAR-04), e o motor de fechamento de diárias técnicas e comissões simplificadas de campo com apropriação direta aos contratos de obra (CAR-03 e CAR-05), sem substituir a folha de pagamento CLT oficial nem rotinas contábeis de encargos e provisões.
+
+A integração direta automatizada via API com o sistema *Shifton* (CAR-09 / RF20) e as interfaces visuais analíticas dedicadas de auditoria (CAR-08 / RF15 e RF16) foram alocadas no backlog de evolução (Fase 2 / pós-MVP) conforme a priorização formal da Reunião 05. No MVP, a integridade e a governança de auditoria para fins da LGPD e trabalhistas são asseguradas a nível de infraestrutura e persistência de banco por meio de logs de eventos atômicos e imutáveis (*append-only*), garantidos pelos requisitos não funcionais RNF15 e RNF16.
 
 Permanecem fora deste primeiro ciclo os módulos de engenharia civil pesada (como cronogramas de Gantt de obra, composições orçamentárias SINAPI e controle físico de estoque de canteiro). Essas capacidades poderão ser integradas futuramente através de APIs abertas.
 
@@ -376,30 +378,30 @@ Os seguintes princípios da LGPD (Lei 13.709/2018, Art. 6º) orientam o MVP e su
 - **Base legal:** execução de contrato de trabalho e cumprimento de obrigação legal (Art. 7º, incisos II e V).
 - **Segurança:** criptografia em trânsito/repouso e Row Level Security (detalhadas na 2.4).
 - **Livre acesso:** cada colaborador consulta suas próprias informações (CAR-01/CAR-02).
-- **Responsabilização e prestação de contas:** trilha de auditoria básica (CAR-08).
+- **Responsabilização e prestação de contas:** trilha de auditoria atômica no banco de dados e controle de acesso (RNF15/RNF16, CAR-07/CAR-08).
 
 **Condição de Aceite:** nenhuma publicação em produção com dados reais ocorre sem aprovação formal de um checklist de conformidade LGPD cobrindo os itens acima, validado com a representante da DUOC antes do Termo de Aceite Formal (Unidade 4).
 
 ---
 
 <a id="27-beneficios-esperados"></a>
-## 2.7 Benefícios Esperados
+## Benefícios Esperados
 
-O DUOC Finance deverá gerar benefícios para a organização e para as pessoas que utilizarão continuamente o portal. A centralização dos registros de ponto, horas de RVT, férias, folha e reembolsos reduz a fragmentação atual e melhora a confiabilidade das informações financeiras e trabalhistas.
+O DUOC Finance deverá gerar benefícios tangíveis para a organização e para as pessoas que utilizarão continuamente o portal. A centralização dos registros de campo (RVT), controle de diárias técnicas e prestação digital de contas de despesas e adiantamentos reduz a fragmentação atual e melhora a confiabilidade das informações financeiras e de custos de obra.
 
 ### Benefícios para a DUOC
 
 - **Visibilidade de custo por contrato:** a correlação entre horas registradas, custos de pessoal e contratos permite acompanhar o custo real da mão de obra por projeto, apoiando decisões comerciais e de precificação.
-- **Redução de erros e retrabalho:** a centralização de ponto, férias e horas de RVT em um único ambiente reduz divergências, duplicidade de lançamentos e falhas humanas no fechamento de folha, comissões e reembolsos.
+- **Redução de erros e retrabalho:** a centralização dos apontamentos de RVT, conferência de diárias e prestação de contas em um único ambiente reduz divergências, duplicidade de lançamentos e falhas manuais na conciliação de despesas e apropriação de custos de obra.
 - **Agilidade no fechamento financeiro:** informações padronizadas e disponíveis em tempo hábil tornam mais rápida a conferência das rotinas de Departamento Pessoal e Financeiro.
 - **Conformidade jurídica e proteção de dados:** o registro formal das informações apoia a conformidade trabalhista e fiscal, enquanto o controle de acesso por perfis e a proteção dos dados pessoais contribuem para o atendimento à LGPD.
 - **Base histórica para gestão:** o histórico consolidado de horas e custos oferece dados para avaliar contratos, identificar desvios e aperfeiçoar futuras propostas de serviço.
 
 ### Benefícios para os Usuários
 
-- **Registro prático no canteiro de obras:** colaboradores poderão lançar horas e ponto de forma simples, inclusive por dispositivos móveis, sem repetir o preenchimento em diferentes planilhas.
+- **Registro prático no canteiro de obras:** colaboradores poderão registrar suas atividades e despesas de campo de forma ágil via aplicação web responsiva (Web App / PWA), inclusive por dispositivos móveis, sem repetir o preenchimento em diferentes planilhas.
 - **Consulta facilitada de reembolsos:** o acompanhamento digital dos recibos e da situação das solicitações reduz a perda de documentos e torna mais previsível o processo de reembolso.
-- **Clareza sobre férias e folha:** cada colaborador poderá consultar as informações autorizadas sobre férias, benefícios, folha de pagamento e histórico funcional.
+- **Clareza sobre remunerações e apontamentos:** cada colaborador poderá consultar com transparência seus próprios apontamentos técnicos homologados, o status de deliberação das atividades e o andamento de solicitações de reembolso e adiantamento.
 - **Confidencialidade das informações:** dados salariais e funcionais serão acessíveis somente aos perfis autorizados, preservando a privacidade entre os colaboradores.
 - **Maior transparência no trabalho:** o histórico dos registros e o acompanhamento das aprovações tornam mais claro como as horas informadas são conferidas e utilizadas no processamento financeiro.
 
@@ -416,3 +418,5 @@ O DUOC Finance deverá gerar benefícios para a organização e para as pessoas 
 | `2.1` | 19/09/2026 | Reconciliação pós-merge com `develop`: adição de CAR-09 a CAR-12 (integrações externas) vinculadas a OE1; correção de terminologia financeira em OE3 e CAR-06 ("margem líquida"/"lucro real" → "custo de mão de obra apropriado"/"desvio orçamentário"), com nota de escopo explicitando ausência de receita e custos totais no MVP | Paulo Nery | |
 | `2.2` | 21/09/2026 | Ajuste da estratégia de mitigação de riscos: adoção de UI-First com base no Figma e designs via Frontend, garantindo validação de interface antes da codificação de lógica e persistência | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `2.3` | 28/09/2026 | Inclusão de nota de escopo em CAR-10 e de menção ao estorno de fechamentos em CAR-03, decorrentes da avaliação por pares dos requisitos (ver [Feedback dos Requisitos](../../requisitos/feedback.md)) | Matheus Saraiva Camargo | Matheus Szervinsk |
+| `2.4` | 12/10/2026 | Harmonização do escopo do MVP (seção 2.6) com deliberações da Ata 05 e Capítulo 8 (postergação de Shifton e telas analíticas de auditoria para Fase 2, mantendo logs atômicos no MVP); inclusão do RF36 na CAR-10 e notas em CAR-11/CAR-12; saneamento de benefícios e explicitação de Web App / PWA. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `2.5` | 12/10/2026 | Harmonização da Matriz Canônica de Papéis RBAC (4 perfis na arquitetura backend), eliminação de menções residuais a folha CLT/tempo real e adequação terminológica sobre dados pessoais confidenciais (LGPD Art. 6º, VII). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

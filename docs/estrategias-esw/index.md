@@ -15,7 +15,7 @@ A fundamentação metodológica está estruturada em:
 ---
 
 <a id="41-estrategia-priorizada"></a>
-## 4.1 Estratégia Priorizada
+## Estratégia Priorizada
 
 A partir das informações sobre o cenário atual da DUOC Arquitetura e Engenharia e da solução proposta para o sistema DUOC Finance, esta seção detalha as estratégias de engenharia de software escolhidas para orientar o desenvolvimento do projeto.
 
@@ -37,7 +37,7 @@ Para atender à necessidade de integração sistêmica e consistência técnica,
 ---
 
 <a id="42-quadro-comparativo-de-processos"></a>
-## 4.2 Quadro Comparativo de Processos
+## Quadro Comparativo de Processos
 
 O quadro a seguir apresenta uma comparação analítica entre o processo **RAD** e o processo **XP (Extreme Programming)**, avaliando qual se adequa melhor à natureza do produto DUOC Finance.
 
@@ -52,7 +52,7 @@ O quadro a seguir apresenta uma comparação analítica entre o processo **RAD**
 ---
 
 <a id="43-justificativa-metodologica"></a>
-## 4.3 Justificativa Metodológica
+## Justificativa Metodológica
 
 Com base nas características intrínsecas do produto DUOC Finance, na decomposição do escopo e no perfil dos usuários, o **RAD (Rapid Application Development)** foi selecionado como o processo de desenvolvimento ideal pelas seguintes razões:
 

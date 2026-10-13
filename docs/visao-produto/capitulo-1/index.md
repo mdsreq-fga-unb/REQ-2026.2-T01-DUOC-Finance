@@ -19,7 +19,7 @@ Para sustentar este diagnóstico, foram produzidos e integrados os seguintes art
 ---
 
 <a id="11-identificacao-do-cliente"></a>
-## 1.1 Identificação do Cliente
+## Identificação do Cliente
 
 A tabela abaixo apresenta os dados cadastrais e institucionais da organização parceira, detalhando sua natureza jurídica, canais de contato e vínculo formal com o projeto de software.
 
@@ -48,7 +48,7 @@ Para evitar ambiguidade em referências anteriores do repositório, distinguem-s
 ---
 
 <a id="12-introducao-ao-negocio-e-contexto-operacional"></a>
-## 1.2 Introdução ao Negócio e Contexto Operacional
+## Introdução ao Negócio e Contexto Operacional
 
 A DUOC Arquitetura e Engenharia LTDA ME (CNPJ: 53.616.784/0001-43) é uma microempresa do setor privado fundada em 23 de janeiro de 2024, com sede de operações localizada em Brasília - DF. Inicialmente registrada sob a atividade econômica principal de instalação e manutenção elétrica, a DUOC rapidamente evoluiu suas operações para um modelo de negócios híbrido e multidisciplinar. Atualmente, a organização integra serviços de concepção e projeto arquitetônico, engenharia civil estrutural, projetos complementares (instalações hidrossanitárias e elétricas) e coordenação técnica com acompanhamento físico de canteiros de obras.
 
@@ -68,7 +68,7 @@ A partir do diálogo inicial e das entrevistas semiestruturadas com a auxiliar a
 ---
 
 <a id="13-rich-picture-fluxo-sociotecnico"></a>
-## 1.3 Rich Picture (Fluxo Sociotécnico)
+## Rich Picture (Fluxo Sociotécnico)
 
 ### Análise do Rich Picture — Sistema DUOC Finance
 
@@ -90,7 +90,7 @@ Ao redor desse núcleo, o diagrama posiciona os **atores externos e interfaces**
 
 ### Fluxos de Informação e Transações Rotineiras
 
-O diagrama mostra um fluxo processual na base (Captação → Concepção → Compatibilização → Acompanhamento de Obra), que corresponde ao ciclo de vida do projeto. É nesse fluxo que residem as transações operacionais e financeiras rotineiras entre canteiro e sede: apontamento de horas, prestação de contas de campo, emissão de comprovantes e o cálculo consolidado da folha e comissões — exatamente o que a tabela de transações abaixo detalha.
+O diagrama mostra um fluxo processual na base (Captação → Concepção → Compatibilização → Acompanhamento de Obra), que corresponde ao ciclo de vida do projeto. É nesse fluxo que residem as transações operacionais e financeiras rotineiras entre canteiro e sede: apontamento de horas de campo (RVT), prestação de contas de despesas, emissão de comprovantes e a conferência consolidada de diárias, reembolsos e comissões técnicas de obra — exatamente o que a tabela de transações abaixo detalha.
 
 ### Pontos de Atrito Evidenciados
 
@@ -98,7 +98,7 @@ O bloco "**Problemas**", na zona da Situação Atual, nomeia os principais ponto
 
 ### Fronteira do Sistema DUOC Finance
 
-O escopo do novo sistema é delimitado na zona "**Solução Proposta (TO-BE)**", à direita do diagrama, com borda tracejada verde para diferenciá-la visualmente da zona "Situação Atual (AS-IS)": lançamento de ponto/RVT, cadastro de férias e benefícios, motor de cálculo de folha, cálculo de comissões e reembolsos, apuração de custo real por projeto, controle de acesso/perfis, conformidade LGPD e as integrações externas com Shifton, ERPs/planilhas, BIM e Slack (CAR-09 a CAR-12 — ver [2.6 Viabilidade da Proposta](../capitulo-2/index.md#26-viabilidade-da-proposta-analise-do-mvp)). O bloco "Oportunidades Estratégicas" também está posicionado nessa zona, pois representa benefícios habilitados pela solução, não características do estado atual. Tudo que estiver fora dessa lista (ex.: gestão de projetos via MS Project) permanece como sistema de apoio externo, na zona da Situação Atual, sem integração planejada nesta fase.
+O escopo do novo sistema é delimitado na zona "**Solução Proposta (TO-BE)**", à direita do diagrama, com borda tracejada verde para diferenciá-la visualmente da zona "Situação Atual (AS-IS)": lançamento de apontamentos de campo (RVT), fluxo digital de despesas e reembolsos operacionais, cálculo parametrizado de diárias técnicas e comissões de obra (sem rotinas de folha de pagamento CLT, encargos fiscais ou gestão de benefícios/férias), apuração de custo direto de mão de obra por projeto/contrato, controle de acesso/perfis (RBAC), conformidade LGPD e as integrações externas com Shifton, ERPs/planilhas, BIM e Slack (CAR-09 a CAR-12 — ver [2.6 Viabilidade da Proposta](../capitulo-2/index.md#26-viabilidade-da-proposta-analise-do-mvp)). O bloco "Oportunidades Estratégicas" também está posicionado nessa zona, pois representa benefícios habilitados pela solução, não características do estado atual. Tudo que estiver fora dessa lista (ex.: gestão de projetos via MS Project) permanece como sistema de apoio externo, na zona da Situação Atual, sem integração planejada nesta fase.
 
 ### Estrutura Detalhada das Transações
 
@@ -106,7 +106,7 @@ O escopo do novo sistema é delimitado na zona "**Solução Proposta (TO-BE)**",
 |:---:|:---|:---|:---|:---|:---|
 | **TR-01** | Envio do Relatório de Viagem Técnica (RVT) | Engenheiro/Técnico em Campo | Administrativo / DP | O técnico registra, ao final de uma visita de obra, as horas trabalhadas e o escopo executado (fiscalização, engenharia estrutural, acompanhamento), normalmente em papel ou planilha isolada, para posterior lançamento no sistema de ponto. | Atraso no preenchimento por acúmulo de visitas; letra ou registro manual ilegível; ausência de padronização do escopo descrito, dificultando o cruzamento com o cronograma do projeto. |
 | **TR-02** | Submissão de Comprovantes de Despesa | Equipe de Campo | Financeiro | O colaborador em campo acumula cupons fiscais de combustível, alimentação e pedágio durante a visita e os entrega fisicamente (ou por foto) ao setor financeiro para reembolso. | Extravio de cupons fiscais físicos; comprovantes ilegíveis ou incompletos; falta de padronização do formato de envio, gerando retrabalho na conferência. |
-| **TR-03** | Consolidação de Folha e Comissões | Administrativo / DP | Sócios / Diretoria | O DP cruza manualmente as horas apontadas via RVT com as tabelas de comissionamento por projeto/venda, consolidando os valores em planilhas Excel para fechamento da folha mensal. | Alto risco de erro de cálculo humano; retrabalho constante em planilhas descentralizadas; dependência de uma única pessoa para o fechamento, criando gargalo operacional. |
+| **TR-03** | Consolidação de Diárias, Reembolsos e Comissões | Administrativo / DP | Sócios / Diretoria | O setor administrativo-financeiro cruza os apontamentos homologados de campo (RVT) com as tabelas de diárias técnicas vigentes e comissões de obra, consolidando os valores para fechamento financeiro operacional e apropriação por centro de custo (sem substituir o processamento contábil de folha CLT). | Alto risco de erro de cálculo humano; retrabalho constante em planilhas descentralizadas; dependência de uma única pessoa para o fechamento, criando gargalo operacional. |
 | **TR-04** | Apropriação de Custo por Contrato | Financeiro | Gestão Estratégica | O financeiro apura o custo real de mão de obra (horas + comissões + reembolsos) alocado a cada obra/contrato, comparando-o com o orçamento previsto para acompanhar o desvio orçamentário do projeto. | Opacidade financeira por falta de rastreabilidade em tempo real; impossibilidade de apurar o custo de mão de obra por contrato antes do fechamento mensal; decisões estratégicas tomadas com dados defasados. |
 
 **Observação metodológica:** este Rich Picture segue a lógica da Soft Systems Methodology (SSM), evidenciando não apenas o fluxo formal de processos, mas também as relações informais e os pontos de conflito do sistema atual. A fronteira entre "situação atual" e "solução proposta" é demarcada por duas zonas com bordas visualmente distintas (sólida azul à esquerda, tracejada verde à direita) e uma legenda explícita — recurso necessário para justificar, na redação técnica, por que o novo sistema DP + Financeiro é necessário e onde exatamente ele intervém no fluxo existente, sem sobrepor diagnóstico e proposta no mesmo elemento visual.
@@ -114,7 +114,7 @@ O escopo do novo sistema é delimitado na zona "**Solução Proposta (TO-BE)**",
 ---
 
 <a id="14-diagnostico-do-problema-e-diagrama-de-ishikawa"></a>
-## 1.4 Diagnóstico do Problema e Diagrama de Ishikawa
+## Diagnóstico do Problema e Diagrama de Ishikawa
 
 ### Declaração do Problema Central
 
@@ -159,7 +159,7 @@ Os dados disponíveis não são consolidados em indicadores de custo de mão de 
 ---
 
 <a id="15-desafios-do-projeto"></a>
-## 1.5 Desafios do Projeto
+## Desafios do Projeto
 
 O principal desafio do DUOC Finance é integrar o registro de horas operacionais (RVT) ao processamento financeiro de folha de pagamento e comissões. Essa integração precisa funcionar em uma equipe com diferentes níveis de letramento tecnológico, que inclui engenheiros especialistas, arquitetos, encarregados, estagiários, assistentes pessoais e operários de obra.
 
@@ -181,7 +181,7 @@ Ficam fora desta entrega os módulos de gestão de engenharia e de obras, como c
 ---
 
 <a id="16-mapa-de-stakeholders"></a>
-## 1.6 Mapa de Stakeholders
+## Mapa de Stakeholders
 
 A tabela a seguir apresenta as partes interessadas internas e externas, seu interesse no DUOC Finance, o grau de influência sobre o projeto e o nível de acesso esperado na plataforma. Os níveis de acesso devem ser implementados conforme o princípio do menor privilégio, permitindo que cada perfil visualize e altere somente os dados necessários para sua atividade.
 
@@ -202,7 +202,7 @@ A tabela a seguir apresenta as partes interessadas internas e externas, seu inte
 ---
 
 <a id="17-segmentacao-de-usuarios-e-perfis-de-ihc"></a>
-## 1.7 Segmentação de Usuários e Perfis de Interação Humano-Computador
+## Segmentação de Usuários e Perfis de Interação Humano-Computador
 
 A caracterização dos segmentos de usuários que interagem com o ecossistema do **DUOC Finance** é estruturada sob a lente da Engenharia de Requisitos Sociotécnica. Cada perfil de interação é mapeado segundo suas características demográficas, letramento tecnológico, restrições ambientais de hardware e rotina de tarefas operacionais, conforme as diretrizes de Interação Humano-Computador (IHC). Sob essa perspectiva, trabalharemos seguindo os 2 tipos de perfis:
 
@@ -242,3 +242,4 @@ A caracterização dos segmentos de usuários que interagem com o ecossistema do
 | `2.0` | 15/09/2026 | Unificação integral de todos os artefatos 1.1 a 1.7 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `2.1` | 19/09/2026 | Reconciliação pós-merge com `develop`: correção do papel de Maria Beatryz (1.1); notas de limitação metodológica sobre caracterização de perfis (1.2, 1.5, 1.7); Rich Picture v2 com fronteiras AS-IS/TO-BE e lastro a CAR-09/CAR-12 (1.3); adaptação do modelo 6M para 4M no Ishikawa (1.4); correção de terminologia financeira ("margem líquida" → "custo apropriado") | Paulo Nery | |
 | `2.2` | 20/09/2026 | Atualização do Rich Picture (1.3) para novo arquivo de imagem `Rich_picture_DUOC.png`; habilitação de ampliação (zoom) de imagens em toda a documentação via plugin `mkdocs-glightbox`, registrada como regra de estilo no `CONTRIBUTING.md` | Paulo Nery | |
+| `2.3` | 12/10/2026 | Saneamento de escopo pós-revisão por pares: remoção de menções residuais a folha CLT, férias e benefícios, alinhando a fronteira do sistema a diárias técnicas, comissões de obra e prestação de contas operacionais (TR-03). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
