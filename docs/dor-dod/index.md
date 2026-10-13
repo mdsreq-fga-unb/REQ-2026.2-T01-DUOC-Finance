@@ -17,7 +17,7 @@ O **DoR** é o portão de entrada para a construção de um item do backlog. Um 
 | **Sem ambiguidades impeditivas** | Duas pessoas da equipe interpretariam da mesma forma os dados de entrada, as regras e o resultado esperado? Dúvidas que mudariam a solução foram resolvidas com a cliente ou registradas como decisão explícita? | Regras de negócio identificadas e decisões ou dependências documentadas. |
 | **Tamanho adequado ao incremento** | O item entrega valor observável e cabe em um ciclo/incremento RAD planejado? Se não, foi dividido em fatias menores, cada uma verificável e priorizável? | Escopo e prioridade do item associados ao incremento no backlog/GitHub Projects. |
 | **História canônica e INVEST** | A história segue “Como [papel], quero [ação], para [benefício]”? Ela é **Independente**, **Negociável**, **Valiosa**, **Estimável**, **Pequena** e **Testável**? | História registrada no backlog em formato INVEST, vinculada aos requisitos aplicáveis. |
-| **Critérios de aceitação verificáveis** | Cada critério descreve um resultado observável e pode ser aprovado ou reprovado sem interpretação subjetiva? Os cenários relevantes incluem sucesso, rejeição e limites aplicáveis? | Critérios escritos em BDD (*Dado / Quando / Então*), vinculados à história e aos casos de teste quando definidos. |
+| **Critérios de aceitação verificáveis** | Cada critério descreve um resultado observável e pode ser aprovado ou reprovado sem interpretação subjetiva? Os cenários relevantes incluem sucesso, rejeição e limites aplicáveis? | Critérios documentados em linguagem clara, vinculados à história e aos casos de teste quando definidos. |
 | **Regras de negócio explícitas** | Cálculos, permissões, estados, exceções, dados necessários e restrições estão identificados? Há regra financeira ou de acesso que precise de confirmação? | Regras de negócio referenciadas ou descritas no requisito; dúvidas bloqueadoras resolvidas. |
 | **Qualidade e dependências consideradas** | Foram identificados os RNFs aplicáveis, dependências de dados/API, integrações, restrições legais e riscos que afetam o item? Seus critérios mensuráveis estão claros? | RNFs e dependências vinculados; critérios quantitativos referenciados no Capítulo 8, sem criar limites novos para o item. |
 | **Base visual preparada** | A interface tem referência visual no Figma (identidade, tokens ou wireframe pertinente) e o fluxo completo foi estabelecido no Frontend, navegável e com dados sintéticos/mockados? | Link para Figma e preview do protótipo no Frontend associados à Issue. |
@@ -42,7 +42,7 @@ O **DoD** é o portão de saída: confirma que a história ou incremento está f
 | Dimensão | Critério de conclusão | Evidência esperada |
 | :--- | :--- | :--- |
 | **Incremento funcional** | O fluxo da história está operável de ponta a ponta no ambiente definido para demonstração. A interface validada no DoR está integrada à lógica e à persistência previstas para o item; quando aplicável, está disponível em *Staging*. | Demonstração ou link do ambiente; PR/Issue identifica o incremento e seus componentes. |
-| **Critérios de aceitação** | **100%** dos critérios aprovados. Nenhum critério permanece sem execução, resultado ou justificativa acordada. | Resultado dos cenários BDD/casos de teste ligado à Issue ou PR. |
+| **Critérios de aceitação** | **100%** dos critérios aprovados. Nenhum critério permanece sem execução, resultado ou justificativa acordada. | Resultado da verificação de cada critério/caso de teste ligado à Issue ou PR. |
 | **Código e revisão** | Código segue os padrões do repositório e a stack vigente documentada no projeto; tipagem estrita e lint/verificações estáticas aplicáveis passam. Alterações foram revisadas por pares e integradas pelo fluxo de PR definido. | Checks do CI, lint e verificação de tipos aprovados; PR aprovado e vinculado. |
 | **Testes automatizados** | Testes automatizados pertinentes à alteração foram executados e aprovados. Regras de domínio e cálculos têm cobertura de testes apropriada; integrações e regressões afetadas foram verificadas. | Relatório de execução do CI e links/saídas dos testes. |
 | **Requisitos não funcionais** | Todos os RNFs aplicáveis ao escopo foram verificados contra os critérios mensuráveis especificados. Para valores monetários, aplica-se a exatidão exigida pelo requisito pertinente; para acesso, RBAC e autorização são testados nos perfis/rotas abrangidos; desempenho segue os limites definidos para a funcionalidade. | Resultado de testes ou inspeções com referência ao RNF e ao seu critério de aceite no Capítulo 8. |
@@ -57,7 +57,7 @@ O **DoD** é o portão de saída: confirma que a história ou incremento está f
 Para cada item concluído, a Issue ou PR deve permitir localizar:
 
 1. História de usuário e requisitos/RNs/RNFs relacionados;
-2. Critérios BDD e resultados dos testes correspondentes;
+2. Critérios de aceitação e resultados dos testes correspondentes;
 3. Evidência da validação visual do DoR e da homologação do DoD;
 4. PR aprovado, verificações automatizadas e estado de integração;
 5. Atualização documental pertinente e resultado do build MkDocs.
@@ -77,3 +77,4 @@ Na **Unidade 2 / Incremento 1**, o marco de 15/10/2026 associa telas homologadas
 | `1.0` | 07/09/2026 | Criação e estruturação da página preliminar de acordos DoR e DoD (Unidade 2) | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `1.1` | 21/09/2026 | Ajuste do DoR alinhando a estratégia UI-First (base no Figma e designs via Frontend com posterior codificação de lógica) | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `1.2` | 11/10/2026 | Consolidação dos checklists DoR/DoD, perguntas de verificação, evidências operacionais e rastreabilidade aos capítulos 4, 6, 7 e 8 | Giovana Ferreira Santos | Pendente de revisão |
+
