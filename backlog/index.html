@@ -1561,11 +1561,8 @@
 
 
 <h1 id="capitulo-10-backlog-do-produto-e-mvp">Capítulo 10: Backlog do Produto e MVP<a class="headerlink" href="#capitulo-10-backlog-do-produto-e-mvp" title="Permanent link">¶</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Enquadramento Metodológico — Unidade 2 e Seção 10 do Template Oficial</p>
-<p>Este capítulo decompõe o escopo do <strong><em>DUOC Finance</em></strong> em <strong>Temas, Épicos e Histórias de Usuário (<em>User Stories</em>)</strong>, atendendo à <strong>Seção 10 do Template Oficial</strong> da disciplina: a diretriz de <strong>Backlog Geral</strong> (Seção 10.1 do Template) é atendida pela seção <a href="#backlog-geral">Backlog Geral</a> e a de <strong>Priorização do Backlog e MVP</strong> (Seção 10.2 do Template) pela seção <a href="#priorizacao-do-backlog-e-linha-de-corte-do-mvp">Priorização do Backlog e Linha de Corte do MVP</a>.</p>
-<p>Os códigos, nomenclaturas, notas de valor e de esforço adotados aqui são <strong>reproduzidos sem alteração</strong> da <a href="../requisitos/">Especificação de Requisitos (Capítulo 8)</a> e da <a href="../requisitos/priorizacao/">Priorização e MVP (Capítulo 8)</a>. Este capítulo não redefine nenhum requisito, apenas o expressa na perspectiva do usuário e o ordena para a construção iterativa do modelo RAD.</p>
-</div>
+<p>Este capítulo decompõe o escopo do <strong><em>DUOC Finance</em></strong> em <strong>Temas, Épicos e Histórias de Usuário (<em>User Stories</em>)</strong>, atendendo à <strong>Seção 10 do Template Oficial</strong> da disciplina: a diretriz de <a href="#backlog-geral">Backlog Geral</a> atende à Seção 10.1 e a <a href="#priorizacao-do-backlog-e-linha-de-corte-do-mvp">Priorização do Backlog e Linha de Corte do MVP</a> à Seção 10.2.</p>
+<p>Os códigos, nomenclaturas, notas de valor e de esforço adotados aqui são reproduzidos sem alteração da <a href="../requisitos/">Especificação de Requisitos</a> e da <a href="../requisitos/priorizacao/">Priorização e MVP</a>. Este capítulo organiza o escopo na perspectiva do usuário e o ordena para a construção iterativa e incremental do modelo RAD.</p>
 <hr>
 <h2 id="estrutura-hierarquica-do-backlog">Estrutura Hierárquica do Backlog<a class="headerlink" href="#estrutura-hierarquica-do-backlog" title="Permanent link">¶</a></h2>
 <p>O backlog é organizado em três níveis de abstração, com rastreabilidade vertical até os <strong>Objetivos Específicos (OE1 a OE4)</strong> definidos no <a href="../visao-produto/capitulo-2/">Capítulo 2: Solução Proposta</a>:</p>
@@ -1575,7 +1572,7 @@
 <li><strong>História de Usuário (US):</strong> menor incremento de valor negociável com a cliente, redigido no padrão <em>"Como [papel], quero [ação], para que [benefício]"</em>. Cada história deriva de <strong>exatamente um Requisito Funcional</strong>, preservando a numeração (<strong>US<em>nn</em></strong> ↔ <strong>RF<em>nn</em></strong>), resultando em <strong>31 histórias</strong> (US01 a US31).</li>
 </ol>
 <pre class="mermaid"><code>flowchart LR
-    PROD["&lt;b&gt;DUOC Finance&lt;/b&gt;&lt;br&gt;Backlog do Produto&lt;br&gt;31 histórias"]
+    PROD["&lt;b style='color:#16181d;'&gt;DUOC Finance&lt;/b&gt;&lt;br&gt;&lt;span style='color:#334155;'&gt;Backlog do Produto&lt;/span&gt;&lt;br&gt;&lt;span style='color:#64748b; font-size:11px;'&gt;31 histórias&lt;/span&gt;"]
 
     TM01["&lt;b&gt;TM01 · OE1&lt;/b&gt;&lt;br&gt;Padronizar e Unificar&lt;br&gt;os Dados"]
     TM02["&lt;b&gt;TM02 · OE2&lt;/b&gt;&lt;br&gt;Aumentar a Eficiência&lt;br&gt;Administrativo-Financeira"]
@@ -1598,7 +1595,7 @@
     TM03 --&gt; EP06 &amp; EP07
     TM04 --&gt; EP08 &amp; EP09
 
-    classDef prodClass fill:#334155,stroke:#1e293b,stroke-width:2px,color:#ffffff;
+    classDef prodClass fill:#ffffff,stroke:#DAA520,stroke-width:2.5px,color:#16181d;
     classDef oe1Class fill:#0284c7,stroke:#0369a1,stroke-width:2px,color:#ffffff;
     classDef oe2Class fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff;
     classDef oe3Class fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#ffffff;
@@ -2059,10 +2056,7 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">Critérios de aceitação</p>
-<p>Os critérios de aceitação de cada história são os <strong>Critérios de Aceitação</strong> do RF de origem no <a href="../requisitos/#especificacao-modular-dos-requisitos">Capítulo 8</a>, complementados pelos <strong>Critérios Mensuráveis</strong> dos RNFs relacionados. A entrada e a saída de cada história nas iterações seguem a <a href="../dor-dod/">Definition of Ready e Definition of Done (Capítulo 9)</a>.</p>
-</div>
+<p><strong>Critérios de aceitação e rastreabilidade:</strong> Os critérios de aceitação de cada história correspondem aos <strong>Critérios de Aceitação</strong> do RF de origem na <a href="../requisitos/#especificacao-modular-dos-requisitos">Especificação Modular dos Requisitos</a>, complementados pelos <strong>Critérios Mensuráveis</strong> dos RNFs relacionados. A admissão de entrada e a conclusão de cada história nas iterações do RAD seguem a <a href="../dor-dod/">Definition of Ready (DoR) e Definition of Done (DoD)</a>.</p>
 <h3 id="matriz-de-rastreabilidade-rnf-historias-de-usuario">Matriz de Rastreabilidade RNF × Histórias de Usuário<a class="headerlink" href="#matriz-de-rastreabilidade-rnf-historias-de-usuario" title="Permanent link">¶</a></h3>
 <p>A matriz inversa garante a rastreabilidade bidirecional: para cada RNF, indica as histórias que devem satisfazer seu critério mensurável dentro e fora do MVP.</p>
 <table>
@@ -2293,25 +2287,25 @@
 </tr>
 </tbody>
 </table>
-<div style="background-color: var(--md-code-bg-color); border-left: 3px solid var(--md-primary-fg-color); border-radius: 4px; padding: 6px 14px; margin: 12px auto; text-align: center; font-size: 0.90rem; max-width: 1000px;">
-  <span style="font-weight: 600;">EC</span>
-  <span style="margin: 0 6px; font-weight: bold; font-size: 12px">=</span>
+<div style="background-color: var(--md-code-bg-color); border-left: 3px solid var(--duoc-gold, #DAA520); border-radius: 4px; padding: 8px 16px; margin: 14px auto; text-align: center; font-size: 0.92rem; max-width: 900px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+  <span style="font-weight: 700; color: var(--duoc-gold, #DAA520);">EC</span>
+  <span style="margin: 0 8px; font-weight: bold; font-size: 14px;">=</span>
   <span style="display: inline-block; vertical-align: middle; text-align: center;">
-    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 6px 2px 6px; font-weight: 500;">
+    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 8px 3px 8px; font-weight: 600;">
       ES + CX + LC
     </span>
-    <span style="display: block; padding-top: 2px; font-weight: 600; font-size: 1.05em;">
+    <span style="display: block; padding-top: 3px; font-weight: 700; font-size: 1.1em;">
       3
     </span>
   </span>
-  <span style="margin: 0 24px;"></span>
-  <span style="font-weight: 600;">IP</span>
-  <span style="margin: 0 6px; font-weight: bold; font-size: 12px">=</span>
+  <span style="margin: 0 28px;"></span>
+  <span style="font-weight: 700; color: var(--duoc-gold, #DAA520);">IP</span>
+  <span style="margin: 0 8px; font-weight: bold; font-size: 14px;">=</span>
   <span style="display: inline-block; vertical-align: middle; text-align: center;">
-    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 6px 2px 6px; font-weight: 500;">
+    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 8px 3px 8px; font-weight: 600;">
       VB
     </span>
-    <span style="display: block; padding-top: 2px; font-weight: 600; font-size: 1.05em;">
+    <span style="display: block; padding-top: 3px; font-weight: 700; font-size: 1.1em;">
       EC
     </span>
   </span>
@@ -3074,6 +3068,13 @@
 <td style="text-align: center;"><code>2.2</code></td>
 <td style="text-align: center;">13/10/2026</td>
 <td style="text-align: left;">Remoção dos prefixos numéricos dos títulos de seção (10.1 e 10.2) e atualização das referências internas e âncoras para alinhamento com a estrutura da Unidade 2</td>
+<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+<td style="text-align: left;">Eric Araújo</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>2.3</code></td>
+<td style="text-align: center;">13/10/2026</td>
+<td style="text-align: left;">Remoção dos cards de alerta de enquadramento metodológico e critérios de aceitação com integração direta ao texto, destaque em branco e dourado para o nó raiz no diagrama da hierarquia do backlog e estilização da fórmula de priorização</td>
 <td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
 <td style="text-align: left;">Eric Araújo</td>
 </tr>
