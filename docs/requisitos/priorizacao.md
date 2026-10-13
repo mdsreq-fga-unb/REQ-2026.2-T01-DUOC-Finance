@@ -1,7 +1,7 @@
 # Priorização de Requisitos e Definição do MVP
 
-!!! info "Enquadramento Metodológico — Unidade 2 e Seção 10.2 do Template Oficial"
-    Este documento consolida o embasamento analítico e consensual da **Priorização de Requisitos e Definição da Linha de Corte do MVP**, subsidiando diretamente tanto a especificação dos [Requisitos de Software (Capítulo 8)](index.md) quanto o futuro [Backlog do Produto (Capítulo 10)](../backlog/index.md). Na estrutura do Template Oficial da disciplina, este artefato atende integralmente às exigências metodológicas da **Seção 10.2 (Priorização do Backlog e MVP)**.
+!!! info "Enquadramento Metodológico — Capítulo 8 (Unidade 2) e Seção 10.2 do Template Oficial"
+    Este documento consolida o embasamento analítico e consensual da **Priorização de Requisitos e Definição da Linha de Corte do MVP**, subsidiando diretamente tanto a especificação dos [Requisitos de Software (Capítulo 8)](index.md) quanto o [Backlog do Produto (Capítulo 10)](../backlog/index.md). Na estrutura do Template Oficial da disciplina, este artefato fornece o embasamento metodológico da **Seção 10.2 (Priorização do Backlog e MVP)**, formalizada no [Capítulo 10](../backlog/index.md#102-priorizacao-do-backlog-e-mvp). As seções deste documento são numeradas a partir de **8.6**, em continuidade ao [Capítulo 8](index.md).
 
 Este documento consolida a estratégia integrada de priorização do sistema **DUOC Finance**, articulando os **Requisitos Funcionais (RF)** e **Requisitos Não Funcionais (RNF)** sob duas perspectivas complementares e interdependentes:
 
@@ -10,10 +10,15 @@ Este documento consolida a estratégia integrada de priorização do sistema **D
 
 Os resultados dessas avaliações são cruzados na **Matriz 4 × 4 (Valor de Negócio × Esforço Técnico)**, fornecendo o embasamento analítico para a delimitação da linha de corte do **Produto Mínimo Viável (MVP)**, o tratamento dos requisitos de alto valor e alto esforço, a vinculação dos atributos de qualidade (RNFs) e a evolução controlada do escopo.
 
+!!! warning "Escopo da linha de corte do MVP"
+    A linha de corte é aplicada aos **31 Requisitos Funcionais (RF01 a RF31)** decompostos em histórias de usuário no [Backlog do Produto (Capítulo 10)](../backlog/index.md): **23 RFs no MVP (74,2%)** e **8 RFs no backlog pós-MVP (25,8%)**.
+
+    Os **RF32 a RF36** (incorporados na revisão por pares de 12/10/2026) foram avaliados em valor e esforço e posicionados na Matriz 4 × 4, mas são tratados como **requisitos complementares**: não compõem a contagem da linha de corte e não possuem história nesta versão do backlog (ver [Requisitos Complementares](#requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte)).
+
 ---
 
-<a id="101-avaliacao-do-valor-de-negocio"></a>
-## Avaliação do Valor de Negócio
+<a id="8-6-avaliacao-do-valor-de-negocio"></a>
+## 8.6 Avaliação do Valor de Negócio
 
 A Engenharia de Requisitos orientada ao valor assegura que os esforços de modelagem, prototipação ágil (*UI-First*) e implementação concentrem-se prioritariamente nas funcionalidades que geram o mais alto retorno operacional e mitigam os maiores riscos institucionais da organização parceira.
 
@@ -41,7 +46,7 @@ Os parâmetros quantitativos abaixo alimentam as dimensões **D2** e **D4** (e s
 
 ### Escala de Valor de Negócio (1 a 4)
 
-Para tornar a avaliação auditável e comparável, o valor de cada requisito é expresso em uma **escala quantitativa de 1 a 4**. Os **pesos de valor permanecem os previstos e validados com a cliente** na Reunião 05; não há classificação categórica adicional: a priorização decorre exclusivamente do cruzamento **Valor de Negócio × Esforço Técnico** (Matriz 4 × 4, Seção 10.4).
+Para tornar a avaliação auditável e comparável, o valor de cada requisito é expresso em uma **escala quantitativa de 1 a 4**. Os **pesos de valor permanecem os previstos e validados com a cliente** na Reunião 05; não há classificação categórica adicional: a priorização decorre exclusivamente do cruzamento **Valor de Negócio × Esforço Técnico** (Matriz 4 × 4, Seção 8.9).
 
 | Pontuação | Nível de Valor | Interpretação e Impacto no Negócio | Diretriz Operacional para o MVP |
 | :---: | :---: | :--- | :--- |
@@ -52,7 +57,7 @@ Para tornar a avaliação auditável e comparável, o valor de cada requisito é
 
 #### Rubrica de Julgamento do Valor de Negócio
 
-As notas de 1 a 4 acima são atribuídas à luz das quatro dimensões abaixo, que explicitam os parâmetros qualitativos (Seção 10.1.1) e quantitativos (Seção 10.1.2). As faixas de economia de horas são calculadas sobre a base de referência de **mais de 30 h/mês** de conferência manual da auxiliar-administradora.
+As notas de 1 a 4 acima são atribuídas à luz das quatro dimensões abaixo, que explicitam os parâmetros qualitativos (Seção 8.6, Critérios Qualitativos de Negócio) e quantitativos (Seção 8.6, Critérios Quantitativos de Negócio). As faixas de economia de horas são calculadas sobre a base de referência de **mais de 30 h/mês** de conferência manual da auxiliar-administradora.
 
 | Dimensão de Julgamento | **Nota 4** — Valor muito alto | **Nota 3** — Valor alto | **Nota 2** — Valor moderado | **Nota 1** — Valor baixo |
 | :--- | :--- | :--- | :--- | :--- |
@@ -75,16 +80,16 @@ As notas de 1 a 4 acima são atribuídas à luz das quatro dimensões abaixo, qu
 
 ### Distribuição por Nível de Valor e Linha de Corte do MVP
 
-A linha de corte é definida diretamente pelo eixo de **Valor de Negócio** da Matriz 4 × 4: requisitos de **valor 4 ou 3** compõem o MVP e requisitos de **valor 2 ou 1** seguem para o backlog de evolução. O **esforço técnico não exclui** requisitos de alto valor; ele orienta a estratégia de entrega (decomposição e redução de escopo, Seção 10.5.2). O núcleo originalmente discutido com a cliente foi preservado; os requisitos incorporados ou redefinidos posteriormente aparecem como refinamento técnico preliminar até nova ratificação.
+A linha de corte, aplicada aos 31 RFs do backlog, é definida diretamente pelo eixo de **Valor de Negócio** da Matriz 4 × 4: requisitos de **valor 4 ou 3** compõem o MVP e requisitos de **valor 2 ou 1** seguem para o backlog de evolução. O **esforço técnico não exclui** requisitos de alto valor; ele orienta a estratégia de entrega (decomposição e redução de escopo, Seção 8.10, Tratamento dos Requisitos de Alto Valor e Alto Esforço). O núcleo originalmente discutido com a cliente foi preservado; os requisitos incorporados ou redefinidos posteriormente aparecem como refinamento técnico preliminar até nova ratificação.
 
 ```mermaid
 flowchart LR
-    subgraph NIVEIS["Distribuição por Valor de Negócio dos 36 Requisitos Funcionais"]
+    subgraph NIVEIS["Distribuição por Valor de Negócio dos 31 RFs do Backlog"]
         direction TB
-        V4["<b>VALOR 4 — Muito alto</b><br>10 RFs (27,8%)<br>RF01, RF04, RF05, RF06, RF07, RF08, RF13, RF19, RF27, RF32"]
-        V3["<b>VALOR 3 — Alto</b><br>17 RFs (47,2%)<br>RF02, RF03, RF09, RF10, RF11, RF14, RF17, RF18, RF22, RF23, RF25, RF26, RF28, RF29, RF33, RF34, RF35"]
-        V2["<b>VALOR 2 — Moderado</b><br>8 RFs (22,2%)<br>RF12, RF15, RF20, RF21, RF24, RF30, RF31, RF36"]
-        V1["<b>VALOR 1 — Baixo</b><br>1 RF (2,8%)<br>RF16"]
+        V4["<b>VALOR 4 — Muito alto</b><br>9 RFs (29,0%)<br>RF01, RF04, RF05, RF06, RF07, RF08, RF13, RF19, RF27"]
+        V3["<b>VALOR 3 — Alto</b><br>14 RFs (45,2%)<br>RF02, RF03, RF09, RF10, RF11, RF14, RF17, RF18, RF22, RF23, RF25, RF26, RF28, RF29"]
+        V2["<b>VALOR 2 — Moderado</b><br>7 RFs (22,6%)<br>RF12, RF15, RF20, RF21, RF24, RF30, RF31"]
+        V1["<b>VALOR 1 — Baixo</b><br>1 RF (3,2%)<br>RF16"]
         V4 ~~~ V3
         V3 ~~~ V2
         V2 ~~~ V1
@@ -92,8 +97,8 @@ flowchart LR
 
     subgraph DEST["Linha de Corte e Destinação"]
         direction TB
-        MVP["<b>PRODUTO MÍNIMO VIÁVEL (MVP)</b><br>27 RFs selecionados (75,0% do total)<br>Núcleo validado + refinamentos posteriores a ratificar"]
-        POST["<b>BACKLOG DE EVOLUÇÃO</b><br>9 RFs postergados (25,0% do total)<br>Fase 2 / Release posterior"]
+        MVP["<b>PRODUTO MÍNIMO VIÁVEL (MVP)</b><br>23 RFs selecionados (74,2% dos 31 RFs do backlog)<br>Núcleo validado + refinamentos posteriores a ratificar"]
+        POST["<b>BACKLOG DE EVOLUÇÃO</b><br>8 RFs postergados (25,8% dos 31 RFs do backlog)<br>Fase 2 / Release posterior"]
         MVP ~~~ POST
     end
 
@@ -119,8 +124,8 @@ flowchart LR
 
 ---
 
-<a id="102-avaliacao-do-esforco-tecnico"></a>
-## Avaliação do Esforço Técnico
+<a id="8-7-avaliacao-do-esforco-tecnico"></a>
+## 8.7 Avaliação do Esforço Técnico
 
 A avaliação técnica foi conduzida pela equipe de desenvolvimento e arquitetura da **Cascata Ágil**, analisando a demanda de implementação para cada um dos **36 Requisitos Funcionais**.
 
@@ -187,14 +192,14 @@ Para viabilizar o cruzamento na **Matriz 4 × 4**, a média decimal é convertid
 | **2,50 a 3,49** | **3 — Alto** | 3ª coluna (0,625) | Demanda substancial, regras de negócio densas e necessidade de atenção a testes. |
 | **3,50 a 4,00** | **4 — Muito alto** | 4ª coluna (0,875) | Elevada incerteza, múltiplos componentes acoplados ou risco de retrabalho expressivo. |
 
-> **Regra de leitura:** a coluna da Matriz 4 × 4 é determinada **exclusivamente** pelo intervalo da média consolidada; horas, complexidade e lacuna influenciam a posição apenas por meio da média. Os critérios de revisão e a análise de sensibilidade nas fronteiras de cada intervalo estão na Seção 10.3.1.
+> **Regra de leitura:** a coluna da Matriz 4 × 4 é determinada **exclusivamente** pelo intervalo da média consolidada; horas, complexidade e lacuna influenciam a posição apenas por meio da média. Os critérios de revisão e a análise de sensibilidade nas fronteiras de cada intervalo estão na Seção 8.8, Revisão e Calibração do Esforço Técnico.
 
 ---
 
-<a id="103-tabela-consolidada-das-avaliacoes"></a>
-## Tabela Consolidada das Avaliações
+<a id="8-8-tabela-consolidada-das-avaliacoes"></a>
+## 8.8 Tabela Consolidada das Avaliações
 
-A tabela a seguir consolida as avaliações de **todos os 36 Requisitos Funcionais** da especificação (RF01 a RF36), integrando o **Valor de Negócio**, a justificativa operacional, as três dimensões técnicas e o **Esforço Técnico Consolidado**. Para os requisitos adicionados ou redefinidos após a Reunião 05, a classificação de valor é preliminar e deverá ser ratificada em validação posterior com a cliente.
+A tabela a seguir consolida as avaliações de **todos os 36 Requisitos Funcionais** da especificação (RF01 a RF36), integrando o **Valor de Negócio**, a justificativa operacional, as três dimensões técnicas e o **Esforço Técnico Consolidado**. Para os requisitos adicionados ou redefinidos após a Reunião 05, a classificação de valor é preliminar e deverá ser ratificada em validação posterior com a cliente. Os requisitos marcados com **‡** (RF32 a RF36) são **complementares**: foram avaliados e posicionados na matriz, mas não compõem a linha de corte do backlog (ver [Requisitos Complementares](#requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte)).
 
 | Código | Requisito Funcional | OE / CAR | Valor Negócio | Justificativa Operacional / de Negócio | Esforço (h) / Nota | Complex. | Lacuna | Média Consolidada | Esforço Consolidado |
 | :---: | :--- | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -207,9 +212,9 @@ A tabela a seguir consolida as avaliações de **todos os 36 Requisitos Funciona
 | **RF22** | **Anexar evidências e geolocalização ao apontamento** | OE1 / CAR-02 | **3** | Complementa o apontamento com evidências da atividade e geolocalização quando disponível, fortalecendo a comprovação do RVT. | 8h (2) | 3 | 2 | 2,33 | **2 — Moderado** |
 | **RF25** | **Cadastrar tipo de contratação do colaborador** | OE1 / CAR-01 | **3** | Diferencia Diarista, CLT e Prestador de Serviço, permitindo aplicar corretamente as regras administrativas e financeiras correspondentes. | 4h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
 | **RF26** | **Consultar histórico de alterações cadastrais e bancárias** | OE1 / CAR-01 | **3** | Preserva rastreabilidade de alterações sensíveis de cadastro e dados bancários, reduzindo divergências administrativas. | 8h (2) | 3 | 2 | 2,33 | **2 — Moderado** |
-| **RF32** | **Deliberar apontamento de campo** | OE1 / CAR-02 | **4** | Garante a homologação ou rejeição com justificativa obrigatória dos apontamentos, viabilizando o consumo financeiro (RN05, RN30). | 6h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
-| **RF35** | **Retificar apontamento de campo pendente** | OE1 / CAR-02 | **3** | Permite ao colaborador ajustar apontamentos antes da homologação dentro do prazo de 5 dias úteis (RN02). | 4h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
-| **RF36** | **Exportar dados consolidados em planilha CSV/XLSX** | OE1 / CAR-10 | **2** | Permite extração tabular consolidada para análises complementares fora do sistema; dispensável no ciclo inicial perante telas e relatórios nativos. | 6h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
+| **RF32**‡ | **Deliberar apontamento de campo** | OE1 / CAR-02 | **4** | Garante a homologação ou rejeição com justificativa obrigatória dos apontamentos, viabilizando o consumo financeiro (RN05, RN30). | 6h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
+| **RF35**‡ | **Retificar apontamento de campo pendente** | OE1 / CAR-02 | **3** | Permite ao colaborador ajustar apontamentos antes da homologação dentro do prazo de 5 dias úteis (RN02). | 4h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
+| **RF36**‡ | **Exportar dados consolidados em planilha CSV/XLSX** | OE1 / CAR-10 | **2** | Permite extração tabular consolidada para análises complementares fora do sistema; dispensável no ciclo inicial perante telas e relatórios nativos. | 6h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
 | **RF05** | **Solicitar prévia de fechamento** | OE2 / CAR-03 | **4** | Ataca o maior gargalo administrativo ao automatizar a consolidação de apontamentos, diárias e comissões para conferência. | 16h (3) | 4 | 3 | 3,33 | **3 — Alto** |
 | **RF06** | **Homologar fechamento financeiro** | OE2 / CAR-03 | **4** | Garante a imutabilidade do lote financeiro antes do repasse, reduzindo alterações indevidas após conferência. | 6h (2) | 3 | 2 | 2,33 | **2 — Moderado** |
 | **RF07** | **Submeter solicitação de reembolso** | OE2 / CAR-04 | **4** | Digitaliza a prestação de contas e exige comprovante fiscal conforme RN06. | 6h (2) | 2 | 2 | 2,00 | **2 — Moderado** |
@@ -224,8 +229,8 @@ A tabela a seguir consolida as avaliações de **todos os 36 Requisitos Funciona
 | **RF12** | **Monitorar execução orçamentária** | OE3 / CAR-06 | **2** | Útil à gestão, mas a apropriação correta do custo real tem precedência sobre a visualização de previsto versus realizado. | 12h (3) | 3 | 3 | 3,00 | **3 — Alto** |
 | **RF30** | **Consultar comparativo histórico de custos entre contratos** | OE3 / CAR-05 | **2** | Oferece análise histórica útil, mas depende da existência de uma base consolidada de custos para gerar valor consistente. | 10h (3) | 3 | 2 | 2,67 | **3 — Alto** |
 | **RF31** | **Configurar alertas de execução orçamentária** | OE3 / CAR-06 | **2** | Automatiza alertas gerenciais, porém a apropriação e a consulta básica dos custos têm precedência no primeiro ciclo. | 10h (3) | 3 | 2 | 2,67 | **3 — Alto** |
-| **RF33** | **Gerenciar contratos de obras e clientes** | OE3 / CAR-05 | **3** | Base de vínculo contratual: sem cadastro de contratos ativos (RN09, RN11), despesas, reembolsos e apropriações não podem ser vinculados. | 8h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
-| **RF34** | **Gerenciar centros de custo e orçamentos de obra** | OE3 / CAR-06 | **3** | Base orçamentária: viabiliza centros de custo e tetos para controle de execução e desvios orçamentários (RN13, RN29). | 8h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
+| **RF33**‡ | **Gerenciar contratos de obras e clientes** | OE3 / CAR-05 | **3** | Base de vínculo contratual: sem cadastro de contratos ativos (RN09, RN11), despesas, reembolsos e apropriações não podem ser vinculados. | 8h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
+| **RF34**‡ | **Gerenciar centros de custo e orçamentos de obra** | OE3 / CAR-06 | **3** | Base orçamentária: viabiliza centros de custo e tetos para controle de execução e desvios orçamentários (RN13, RN29). | 8h (2) | 2 | 1 | 1,67 | **2 — Moderado** |
 | **RF13** | **Efetuar login no sistema** | OE4 / CAR-07 | **4** | Condição indispensável de segurança da informação para proteger dados pessoais, bancários e financeiros. | 2h (1) | 1 | 1 | 1,00 | **1 — Baixo** |
 | **RF14** | **Gerenciar perfis de acesso** | OE4 / CAR-07 | **3** | Garante o princípio do menor privilégio (RBAC), segregando campo, gestão e administração. | 6h (2) | 3 | 2 | 2,33 | **2 — Moderado** |
 | **RF15** | **Consultar trilha de auditoria** | OE4 / CAR-08 | **2** | A persistência dos logs é obrigatória, mas a interface avançada de consulta e filtros pode aguardar a fase seguinte. | 10h (3) | 3 | 3 | 3,00 | **3 — Alto** |
@@ -239,8 +244,8 @@ A tabela a seguir consolida as avaliações de **todos os 36 Requisitos Funciona
 
 A revisão do esforço técnico verificou, requisito a requisito, a coerência analítica entre as três dimensões (horas, complexidade e lacuna de capacidade), a média consolidada e a **coluna** ocupada na Matriz 4 × 4. Foram aplicadas quatro verificações:
 
-1. **Aderência das horas à faixa da nota:** todas as estimativas respeitam as faixas da Seção 10.2.1 (limites inclusivos no extremo superior). Os casos de fronteira são **RF22, RF26 e RF29 (8 h → nota 2)** e **RF04, RF05 e RF09 (16 h → nota 3)**; nenhum requisito excede 16 h, razão pela qual a nota 4 em horas não é atribuída.
-2. **Conferência aritmética:** as 36 médias foram recalculadas pela fórmula da Seção 10.2.2 e conferem com a tabela acima, sem divergências.
+1. **Aderência das horas à faixa da nota:** todas as estimativas respeitam as faixas da Seção 8.7, Escalas Técnicas (limites inclusivos no extremo superior). Os casos de fronteira são **RF22, RF26 e RF29 (8 h → nota 2)** e **RF04, RF05 e RF09 (16 h → nota 3)**; nenhum requisito excede 16 h, razão pela qual a nota 4 em horas não é atribuída.
+2. **Conferência aritmética:** as 36 médias foram recalculadas pela fórmula da Seção 8.7, Fórmula de Consolidação e conferem com a tabela acima, sem divergências.
 3. **Coerência entre dimensões:** a complexidade supera a nota de horas em +1 apenas quando há regra estrutural que não aumenta a codificação, mas aumenta o risco (ex.: **RF05**, cálculo monetário centesimal, RNF06; **RF06**, imutabilidade, RN08; **RF14**, RBAC em camadas, RN16; **RF22/RF26**, mídia e versionamento, RN23/RN24). A lacuna de capacidade é 3 nos sete requisitos de maior esforço (RF04, RF05, RF09, RF12, RF15, RF16 e RF20), e nenhum requisito atinge lacuna crítica (nota 4).
 4. **Sensibilidade às fronteiras de conversão:** requisitos com média a até 0,17 ponto de um limite de faixa foram identificados como **sensíveis** e permanecem monitorados.
 
@@ -258,21 +263,21 @@ A revisão do esforço técnico verificou, requisito a requisito, a coerência a
 | **1 — Baixo** | 1ª | 0,125 | 2 | RF13, RF18 |
 | **2 — Moderado** | 2ª | 0,375 | 24 | RF01, RF02, RF03, RF06, RF07, RF08, RF10, RF11, RF14, RF17, RF19, RF22, RF23, RF24, RF25, RF26, RF27, RF28, RF29, RF32, RF33, RF34, RF35, RF36 |
 | **3 — Alto** | 3ª | 0,625 | 10 | RF04, RF05, RF09, RF12, RF15, RF16, RF20, RF21, RF30, RF31 |
-| **4 — Muito alto** | 4ª | 0,875 | 0 | — (coluna vazia: o esforço dos requisitos foi tratado por decomposição, conforme Seção 10.5.2) |
+| **4 — Muito alto** | 4ª | 0,875 | 0 | — (coluna vazia: o esforço dos requisitos foi tratado por decomposição, conforme Seção 8.10, Tratamento dos Requisitos de Alto Valor e Alto Esforço) |
 
-A calibração **não alterou nenhuma nota de esforço nem a classe consolidada** dos requisitos; ela documenta a regra de enquadramento e torna explícito o vínculo entre as colunas da Matriz 4 × 4 (Seção 10.4.2) e a coordenada horizontal do gráfico (Seção 10.4.3).
+A calibração **não alterou nenhuma nota de esforço nem a classe consolidada** dos requisitos; ela documenta a regra de enquadramento e torna explícito o vínculo entre as colunas da Matriz 4 × 4 (Seção 8.9, Tabela da Matriz 4 × 4) e a coordenada horizontal do gráfico (Seção 8.9, Fundamentação Matemática das Coordenadas Cartesianas).
 
 ---
 
-<a id="104-matriz-4-x-4"></a>
-<a id="104-matriz-4-x-4-valor-de-negocio-x-esforco-tecnico"></a>
-## Matriz 4 × 4 — Valor de Negócio × Esforço Técnico
+<a id="8-9-matriz-4-x-4"></a>
+<a id="8-9-matriz-4-x-4-valor-de-negocio-x-esforco-tecnico"></a>
+## 8.9 Matriz 4 × 4 — Valor de Negócio × Esforço Técnico
 
 O cruzamento bidimensional entre o **Valor de Negócio** (eixo vertical) e o **Esforço Técnico Consolidado** (eixo horizontal) posiciona os **36 requisitos funcionais** do sistema.
 
 ### Representação Visual da Matriz 4 × 4 (Diagrama Cartesiano)
 
-O gráfico cartesiano a seguir mapeia a posição relativa dos requisitos. As **setas nos eixos** indicam o sentido de crescimento das grandezas: o **esforço cresce da esquerda para a direita** (eixo x) e o **valor cresce de baixo para cima** (eixo y). Cada requisito é posicionado no centro da célula (V, E) da Matriz 4 × 4, com pequena dispersão interna para evitar sobreposição; a derivação completa de cada par `[x, y]` encontra-se na Seção 10.4.3 (*Fundamentação Matemática das Coordenadas Cartesianas*).
+O gráfico cartesiano a seguir mapeia a posição relativa dos requisitos. As **setas nos eixos** indicam o sentido de crescimento das grandezas: o **esforço cresce da esquerda para a direita** (eixo x) e o **valor cresce de baixo para cima** (eixo y). Cada requisito é posicionado no centro da célula (V, E) da Matriz 4 × 4, com pequena dispersão interna para evitar sobreposição; a derivação completa de cada par `[x, y]` encontra-se na Seção 8.9, *Fundamentação Matemática das Coordenadas Cartesianas*.
 
 ```mermaid
 quadrantChart
@@ -334,14 +339,14 @@ quadrantChart
 
 | Valor de Negócio ↓ / Esforço Técnico → | 1 — Baixo | 2 — Moderado | 3 — Alto | 4 — Muito alto |
 | :---: | :--- | :--- | :--- | :---: |
-| **4 — Muito alto** | **RF13** *(Efetuar login)*<br><br><small><strong>Prioridade máxima</strong></small> | **RF01** *(Cadastrar colaborador)*<br>**RF06** *(Homologar fechamento)*<br>**RF07** *(Submeter reembolso)*<br>**RF08** *(Deliberar reembolso)*<br>**RF19** *(Consultar apontamentos)*<br>**RF27** *(Configurar diárias técnicas)*<br>**RF32** *(Deliberar apontamento)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | **RF04** *(Submeter apontamento)*<br>**RF05** *(Solicitar prévia de fechamento)*<br><br><small><strong>Avaliar viabilidade / Decompor para MVP</strong></small> | —<br><br><small><strong>Planejar, reduzir ou decompor</strong></small> |
-| **3 — Alto** | **RF18** *(Encerrar sessão)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | **RF02** *(Atualizar cadastro)*<br>**RF03** *(Registrar movimentação)*<br>**RF10** *(Rastreabilidade de custos)*<br>**RF11** *(Filtrar indicadores)*<br>**RF14** *(Gerenciar perfis RBAC)*<br>**RF17** *(Recuperar credenciais)*<br>**RF22** *(Anexar evidências e geolocalização)*<br>**RF23** *(Bloquear tentativas falhas)*<br>**RF25** *(Cadastrar tipo de contratação)*<br>**RF26** *(Consultar histórico cadastral/bancário)*<br>**RF28** *(Submeter adiantamento)*<br>**RF29** *(Deliberar adiantamento)*<br>**RF33** *(Gerenciar contratos)*<br>**RF34** *(Gerenciar orçamentos)*<br>**RF35** *(Retificar apontamento)*<br><br><small><strong>Candidatos ao MVP</strong></small> | **RF09** *(Apropriar custos)*<br><br><small><strong>Avaliar contexto / Reduzir escopo para MVP</strong></small> | —<br><br><small><strong>Entrega futura</strong></small> |
-| **2 — Moderado** | —<br><br><small><strong>Avaliar oportunidade</strong></small> | **RF24** *(Expirar senha e impedir reutilização)*<br>**RF36** *(Exportar dados em planilha)*<br><br><small><strong>Entrega futura / Capacidade residual</strong></small> | **RF12** *(Monitorar execução orçamentária)*<br>**RF15** *(Consultar trilha de auditoria)*<br>**RF20** *(Importar presenças Shifton)*<br>**RF21** *(Estornar fechamento)*<br>**RF30** *(Comparativo histórico de custos)*<br>**RF31** *(Alertas de execução orçamentária)*<br><br><small><strong>Entrega futura</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> |
+| **4 — Muito alto** | **RF13** *(Efetuar login)*<br><br><small><strong>Prioridade máxima</strong></small> | **RF01** *(Cadastrar colaborador)*<br>**RF06** *(Homologar fechamento)*<br>**RF07** *(Submeter reembolso)*<br>**RF08** *(Deliberar reembolso)*<br>**RF19** *(Consultar apontamentos)*<br>**RF27** *(Configurar diárias técnicas)*<br>**RF32**‡ *(Deliberar apontamento)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | **RF04** *(Submeter apontamento)*<br>**RF05** *(Solicitar prévia de fechamento)*<br><br><small><strong>Avaliar viabilidade / Decompor para MVP</strong></small> | —<br><br><small><strong>Planejar, reduzir ou decompor</strong></small> |
+| **3 — Alto** | **RF18** *(Encerrar sessão)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | **RF02** *(Atualizar cadastro)*<br>**RF03** *(Registrar movimentação)*<br>**RF10** *(Rastreabilidade de custos)*<br>**RF11** *(Filtrar indicadores)*<br>**RF14** *(Gerenciar perfis RBAC)*<br>**RF17** *(Recuperar credenciais)*<br>**RF22** *(Anexar evidências e geolocalização)*<br>**RF23** *(Bloquear tentativas falhas)*<br>**RF25** *(Cadastrar tipo de contratação)*<br>**RF26** *(Consultar histórico cadastral/bancário)*<br>**RF28** *(Submeter adiantamento)*<br>**RF29** *(Deliberar adiantamento)*<br>**RF33**‡ *(Gerenciar contratos)*<br>**RF34**‡ *(Gerenciar orçamentos)*<br>**RF35**‡ *(Retificar apontamento)*<br><br><small><strong>Candidatos ao MVP</strong></small> | **RF09** *(Apropriar custos)*<br><br><small><strong>Avaliar contexto / Reduzir escopo para MVP</strong></small> | —<br><br><small><strong>Entrega futura</strong></small> |
+| **2 — Moderado** | —<br><br><small><strong>Avaliar oportunidade</strong></small> | **RF24** *(Expirar senha e impedir reutilização)*<br>**RF36**‡ *(Exportar dados em planilha)*<br><br><small><strong>Entrega futura / Capacidade residual</strong></small> | **RF12** *(Monitorar execução orçamentária)*<br>**RF15** *(Consultar trilha de auditoria)*<br>**RF20** *(Importar presenças Shifton)*<br>**RF21** *(Estornar fechamento)*<br>**RF30** *(Comparativo histórico de custos)*<br>**RF31** *(Alertas de execução orçamentária)*<br><br><small><strong>Entrega futura</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> |
 | **1 — Baixo** | —<br><br><small><strong>Avaliar oportunidade</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> | **RF16** *(Exportar relatório de auditoria)*<br><br><small><strong>Não priorizar agora</strong></small> | —<br><br><small><strong>Não priorizar agora</strong></small> |
 
 ### Fundamentação Matemática das Coordenadas Cartesianas
 
-As coordenadas `[x, y]` do diagrama da Seção 10.4.1 **não são estimativas visuais**: derivam deterministicamente das duas notas ordinais da Matriz 4 × 4 — **V** (Valor de Negócio, Seção 10.3) e **E** (Esforço Consolidado, Seção 10.2.2) — por meio de duas etapas: *normalização* (posiciona o requisito no centro da célula) e *dispersão* (*jitter* determinístico que evita a sobreposição de requisitos que ocupam a mesma célula).
+As coordenadas `[x, y]` do diagrama da Seção 8.9, Representação Visual da Matriz 4 × 4 **não são estimativas visuais**: derivam deterministicamente das duas notas ordinais da Matriz 4 × 4 — **V** (Valor de Negócio, Seção 8.8) e **E** (Esforço Consolidado, Seção 8.7, Fórmula de Consolidação) — por meio de duas etapas: *normalização* (posiciona o requisito no centro da célula) e *dispersão* (*jitter* determinístico que evita a sobreposição de requisitos que ocupam a mesma célula).
 
 #### Etapa 1 — Normalização para o intervalo [0, 1]
 
@@ -423,24 +428,24 @@ Onde `c` (0 a k−1) é a coluna e `r` (0 a m−1) é a linha do requisito na gr
 | (1, 3) | RF16 | 3 | 1 | 0,625 | 0,125 | 0 | 0 | **[0,625; 0,125]** |
 
 !!! note "Auditabilidade e manutenção"
-    As colunas **E** e **V** reproduzem exatamente a Tabela Consolidada (Seção 10.3) e a Tabela da Matriz 4 × 4 (Seção 10.4.2). Ao incluir ou reclassificar um requisito, basta recalcular `(x_base, y_base)`, reordenar a célula afetada e reaplicar a Etapa 2. A posição dentro da célula é apenas um recurso de legibilidade: **não possui significado analítico** — vale somente a célula (V, E).
+    As colunas **E** e **V** reproduzem exatamente a Tabela Consolidada (Seção 8.8) e a Tabela da Matriz 4 × 4 (Seção 8.9, Tabela da Matriz 4 × 4). Ao incluir ou reclassificar um requisito, basta recalcular `(x_base, y_base)`, reordenar a célula afetada e reaplicar a Etapa 2. A posição dentro da célula é apenas um recurso de legibilidade: **não possui significado analítico** — vale somente a célula (V, E).
 
 ### Análise Estratégica dos Quadrantes
 
 1. **Prioridade máxima e fortes candidatos ao MVP (alto valor × baixo/moderado esforço):**
     - **RF13** e **RF18** apresentam esforço muito baixo e atendem diretamente ao controle de sessão.
-    - **RF01, RF06, RF07, RF08, RF19, RF27 e RF32** combinam valor muito alto com esforço moderado e sustentam cadastro, fechamento, reembolso, consulta de apontamentos, parametrização das diárias e deliberação supervisionada de campo.
+    - **RF01, RF06, RF07, RF08, RF19 e RF27** combinam valor muito alto com esforço moderado e sustentam cadastro, fechamento, reembolso, consulta de apontamentos e parametrização das diárias.
 2. **Candidatos estruturantes ao MVP (valor alto × esforço moderado):**
-    - **RF02, RF03, RF10, RF11, RF14, RF17, RF22, RF23, RF25, RF26, RF28, RF29, RF33, RF34 e RF35** complementam autonomia cadastral, rastreabilidade, evidências de campo, segurança, gestão de contratos, tetos orçamentários, retificação e fluxos financeiros. O **RF11** permanece no MVP por sua relevância para a visibilidade financeira por obra.
-    - **RF22, RF25, RF26, RF28, RF29, RF32, RF33, RF34 e RF35** foram incorporados ou redefinidos após a validação original e, portanto, entram como priorização preliminar sujeita à ratificação da cliente.
+    - **RF02, RF03, RF10, RF11, RF14, RF17, RF22, RF23, RF25, RF26, RF28 e RF29** complementam autonomia cadastral, rastreabilidade, evidências de campo, segurança e fluxos financeiros. O **RF11** permanece no MVP por sua relevância para a visibilidade financeira por obra.
+    - **RF22 e RF23 a RF31** foram incorporados ou redefinidos após a validação original e, portanto, entram como priorização preliminar sujeita à ratificação da cliente. **RF32 a RF36** (revisão por pares) estão avaliados na matriz, porém fora da linha de corte (ver Requisitos Complementares).
     - **RF04**, **RF05** e **RF09** possuem esforço alto, mas representam elos vitais do fluxo ponta a ponta; por isso recebem estratégia de controle e redução de escopo em vez de postergação.
 3. **Entrega futura e baixa prioridade (valor moderado/baixo):**
-    - **RF12, RF15, RF16, RF20, RF21, RF24, RF30, RF31 e RF36** são postergados para o backlog evolutivo por dependerem de histórico consolidado, integração externa, rotinas de exceção, interfaces avançadas de auditoria, exportações tabulares ou capacidade residual.
+    - **RF12, RF15, RF16, RF20, RF21, RF24, RF30 e RF31** são postergados para o backlog evolutivo por dependerem de histórico consolidado, integração externa, rotinas de exceção, interfaces avançadas de auditoria ou capacidade residual.
 
 ---
 
-<a id="105-definicao-dos-requisitos-funcionais-do-mvp"></a>
-## Definição dos Requisitos Funcionais do MVP
+<a id="8-10-definicao-dos-requisitos-funcionais-do-mvp"></a>
+## 8.10 Definição dos Requisitos Funcionais do MVP
 
 A delimitação do Produto Mínimo Viável não se resumiu a agrupar funcionalidades fáceis. O corte considerou a formação de um **fluxo operacional minimamente completo, coerente e autossuficiente**, capaz de sanar as maiores dores da DUOC no primeiro ciclo de uso e, ao mesmo tempo, manter explícita a distinção entre itens já validados com a cliente e refinamentos posteriores sujeitos à ratificação.
 
@@ -456,7 +461,7 @@ Requisitos posicionados na combinação de **Valor 4 e Esforço 3** (ou Valor 3 
 
 ### Lista Consolidada dos Requisitos Funcionais do MVP
 
-A linha de corte consolidada contempla **27 Requisitos Funcionais**, cobrindo os fluxos essenciais de governança, cadastro, campo, fechamento, prestação de contas, apropriação e contratos. Os itens incorporados ou redefinidos após a Reunião 05 permanecem sujeitos à ratificação formal da cliente.
+A linha de corte consolidada contempla **23 dos 31 Requisitos Funcionais do backlog (74,2%)**, cobrindo os fluxos essenciais de governança, cadastro, campo, fechamento, prestação de contas e apropriação. Os itens incorporados ou redefinidos após a Reunião 05 permanecem sujeitos à ratificação formal da cliente.
 
 | RF | Requisito Funcional | Módulo / OE | CAR | Valor | Esforço | Justificativa de Inclusão no MVP |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -468,8 +473,6 @@ A linha de corte consolidada contempla **27 Requisitos Funcionais**, cobrindo os
 | **RF22** | Anexar evidências e geolocalização ao apontamento | Módulo 1 (OE1) | CAR-02 | **3** | **2** | Fortalece a comprovação do RVT com evidências e localização quando disponível. |
 | **RF25** | Cadastrar tipo de contratação do colaborador | Módulo 1 (OE1) | CAR-01 | **3** | **2** | Permite aplicar as regras administrativas e financeiras adequadas a cada vínculo. |
 | **RF26** | Consultar histórico de alterações cadastrais e bancárias | Módulo 1 (OE1) | CAR-01 | **3** | **2** | Preserva rastreabilidade das alterações cadastrais e bancárias sensíveis. |
-| **RF32** | Deliberar apontamento de campo | Módulo 1 (OE1) | CAR-02 | **4** | **2** | Homologa ou rejeita apontamentos com parecer e bloqueia edição pós-homologação. |
-| **RF35** | Retificar apontamento de campo pendente | Módulo 1 (OE1) | CAR-02 | **3** | **2** | Permite ao colaborador retificar dados e anexos em apontamentos pendentes. |
 | **RF05** | Solicitar prévia de fechamento | Módulo 2 (OE2) | CAR-03 | **4** | **3** | Automatiza a consolidação da competência para conferência. |
 | **RF06** | Homologar fechamento financeiro | Módulo 2 (OE2) | CAR-03 | **4** | **2** | Trava lotes financeiros aprovados contra alterações diretas indevidas. |
 | **RF07** | Submeter solicitação de reembolso | Módulo 2 (OE2) | CAR-04 | **4** | **2** | Digitaliza a prestação de contas com comprovante fiscal obrigatório. |
@@ -480,8 +483,6 @@ A linha de corte consolidada contempla **27 Requisitos Funcionais**, cobrindo os
 | **RF09** | Apropriar custos operacionais | Módulo 3 (OE3) | CAR-05 | **3** | **3** | Aloca custos homologados às obras correspondentes. |
 | **RF10** | Consultar rastreabilidade de custos | Módulo 3 (OE3) | CAR-05 | **3** | **2** | Evidencia a origem de cada custo apropriado. |
 | **RF11** | Filtrar indicadores de custos | Módulo 3 (OE3) | CAR-06 | **3** | **2** | Permite analisar custos por período, contrato, colaborador e centro de custo. |
-| **RF33** | Gerenciar contratos de obras e clientes | Módulo 3 (OE3) | CAR-05 | **3** | **2** | Cadastra contratos ativos indispensáveis para vínculo em despesas e apropriação. |
-| **RF34** | Gerenciar centros de custo e orçamentos de obra | Módulo 3 (OE3) | CAR-06 | **3** | **2** | Parametriza centros de custo e tetos orçamentários para controle de custos. |
 | **RF13** | Efetuar login no sistema | Módulo 4 (OE4) | CAR-07 | **4** | **1** | Porta de entrada mandatória de segurança. |
 | **RF14** | Gerenciar perfis de acesso | Módulo 4 (OE4) | CAR-07 | **3** | **2** | Segrega alçadas entre campo, gestão e administração. |
 | **RF17** | Recuperar credenciais de acesso | Módulo 4 (OE4) | CAR-07 | **3** | **2** | Dá autonomia aos usuários e reduz dependência de suporte. |
@@ -490,7 +491,7 @@ A linha de corte consolidada contempla **27 Requisitos Funcionais**, cobrindo os
 
 ### Requisitos Funcionais Postergados (Backlog Pós-MVP)
 
-Os **9 requisitos** abaixo ficam alocados para a **Fase 2 (Pós-MVP)** ou release posterior:
+Os **8 requisitos** abaixo ficam alocados para a **Fase 2 (Pós-MVP)** ou release posterior:
 
 | RF | Requisito Funcional | Módulo / OE | CAR | Valor | Esforço | Justificativa da Postergação |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -502,12 +503,23 @@ Os **9 requisitos** abaixo ficam alocados para a **Fase 2 (Pós-MVP)** ou releas
 | **RF24** | Expirar senha periodicamente e impedir reutilização | Módulo 4 (OE4) | CAR-07 | **2** | **2** | Política adicional de credenciais não bloqueante para a primeira versão operacional. |
 | **RF30** | Consultar comparativo histórico de custos entre contratos | Módulo 3 (OE3) | CAR-05 | **2** | **3** | Depende de histórico consolidado de custos para produzir comparação representativa. |
 | **RF31** | Configurar alertas de execução orçamentária | Módulo 3 (OE3) | CAR-06 | **2** | **3** | Automatiza monitoramento gerencial, mas a apropriação e consulta básica dos custos têm precedência. |
-| **RF36** | Exportar dados consolidados em planilha CSV/XLSX | Módulo 1 (OE1) | CAR-10 | **2** | **2** | Extração tabular em lote para análises complementares fora do sistema; telas do MVP atendem ao ciclo piloto. |
+
+### Requisitos Complementares (RF32 a RF36): Fora da Linha de Corte
+
+Os requisitos abaixo foram incorporados na revisão por pares de 12/10/2026 e avaliados com os mesmos critérios, mas **não possuem história no backlog atual** e, por isso, **não integram a contagem da linha de corte** (23 no MVP e 8 pós-MVP). Permanecem registrados para decomposição em histórias de usuário em revisão futura do backlog.
+
+| RF | Requisito Funcional | Módulo / OE | CAR | Valor | Esforço | Observação |
+| :---: | :--- | :---: | :---: | :---: | :---: | :--- |
+| **RF32**‡ | Deliberar apontamento de campo | Módulo 1 (OE1) | CAR-02 | **4** | **2** | Homologação do apontamento é pré-condição do RF05 e do RF09 (RN05, RN10); recomenda-se decompor em história antes da construção. |
+| **RF33**‡ | Gerenciar contratos de obras e clientes | Módulo 3 (OE3) | CAR-05 | **3** | **2** | Cadastro de contratos ativos exigido pelo vínculo contratual (RN09, RN11). |
+| **RF34**‡ | Gerenciar centros de custo e orçamentos de obra | Módulo 3 (OE3) | CAR-06 | **3** | **2** | Base para centros de custo e tetos orçamentários (RN13, RN29). |
+| **RF35**‡ | Retificar apontamento de campo pendente | Módulo 1 (OE1) | CAR-02 | **3** | **2** | Retificação em até 5 dias úteis (RN02); parcialmente refletida na US19. |
+| **RF36**‡ | Exportar dados consolidados em planilha CSV/XLSX | Módulo 1 (OE1) | CAR-10 | **2** | **2** | Extração tabular de apoio; alocada à evolução (CAR-10). |
 
 ---
 
-<a id="106-tratamento-dos-requisitos-nao-funcionais-rnfs"></a>
-## Tratamento dos Requisitos Não Funcionais (RNFs)
+<a id="8-11-tratamento-dos-requisitos-nao-funcionais-rnfs"></a>
+## 8.11 Tratamento dos Requisitos Não Funcionais (RNFs)
 
 Os atributos de qualidade e restrições técnicas do sistema receberam análise individualizada e foram vinculados ao escopo do MVP, garantindo que aspectos críticos de segurança, confiabilidade, desempenho, acessibilidade e conformidade acompanhem a primeira versão operacional.
 
@@ -555,8 +567,8 @@ Cada um dos **20 RNFs** especificados no [Capítulo 8: Requisitos de Software](i
 
 ---
 
-<a id="107-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
-## Evidência e Registro da Validação do MVP com o Cliente
+<a id="8-12-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
+## 8.12 Evidência e Registro da Validação do MVP com o Cliente
 
 A Reunião 05 registrou a validação do núcleo funcional disponível em **24/09/2026**. O escopo foi posteriormente refinado pela equipe com novos requisitos e com a redefinição de alguns itens; essas alterações posteriores permanecem explicitamente marcadas como **preliminares** até nova ratificação da cliente.
 
@@ -573,7 +585,7 @@ A Reunião 05 registrou a validação do núcleo funcional disponível em **24/0
 
 !!! note "Atualizações posteriores à validação"
 
-    A Reunião 05 registrou a validação do núcleo funcional existente naquele momento. Requisitos incorporados posteriormente por refinamento da especificação — incluindo RF23 a RF31 e a redefinição do RF22 — possuem classificação preliminar neste capítulo e deverão ser ratificados em uma próxima sessão de validação com a cliente. O quadro abaixo preserva as decisões efetivamente registradas em 24/09/2026 e esclarece alterações posteriores de identificação quando necessário.
+    A Reunião 05 registrou a validação do núcleo funcional existente naquele momento. Requisitos incorporados posteriormente por refinamento da especificação — incluindo a redefinição do RF22 e os RF23 a RF36 — possuem classificação preliminar neste capítulo e deverão ser ratificados em uma próxima sessão de validação com a cliente. O quadro abaixo preserva as decisões efetivamente registradas em 24/09/2026 e esclarece alterações posteriores de identificação quando necessário.
 
 | Tópico da Validação | Decisão Registrada | Fundamentação e Rastreabilidade |
 | :--- | :---: | :--- |
@@ -607,3 +619,4 @@ A Reunião 05 registrou a validação do núcleo funcional disponível em **24/0
 | `2.7` | 11/10/2026 | Harmonização hierárquica do título do documento com a estrutura do Capítulo 8 (Unidade 2) no menu de navegação, inserção de nota de conformidade com a Seção 10.2 do Template Oficial da disciplina e substituição de referências residuais ao sistema externo (*Shifton*). | Matheus Ribeiro Szervinsk | Matheus Saraiva Camargo |
 | `2.8` | 12/10/2026 | Saneamento e ajustes decorrentes da revisão por pares: incorporação de RF32 a RF36 na matriz 4×4 e listas de priorização; expansão do MVP para 27 RFs (75,0%) com inclusão de RF32, RF33, RF34 e RF35; alocação de RF36 ao backlog de evolução (9 RFs / 25,0%); recálculo das coordenadas cartesianas anti-sobreposição e atualização dos diagramas visuais. | Matheus Ribeiro Szervinsk | Eric Araújo e Matheus Saraiva Camargo |
 | `2.9` | 12/10/2026 | Aprimoramento da qualidade dos requisitos não funcionais e adequação legal/conceitual: redefinição de RNF07 (robustez/integridade) e RNF08 (não-repúdio/auditabilidade); desambiguação de RNF10, RNF14, RNF15 e RNF16; reclassificação do RNF16 para Reliability / Legal (+); parametrização operacional de carga nominal (50 usuários a 10 req/s); e explicitação da fundamentação jurídica da retenção probatória (Art. 11 da CLT e Art. 16 da LGPD). | Matheus Ribeiro Szervinsk | Eric Araújo e Matheus Saraiva Camargo |
+| `3.0` | 12/10/2026 | Alinhamento com o Backlog do Produto (Capítulo 10): linha de corte aplicada aos 31 RFs com histórias (23 no MVP / 74,2% e 8 pós-MVP / 25,8%); RF32 a RF36 tratados como requisitos complementares, avaliados na matriz mas fora da contagem; renumeração das seções para 8.6 a 8.12 (continuidade do Capítulo 8) e das referências internas. | Eric Araújo | — |

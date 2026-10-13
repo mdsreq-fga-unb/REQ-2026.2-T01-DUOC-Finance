@@ -1842,7 +1842,7 @@ O cronograma do DUOC Finance é um **artefato vivo** sujeito a refinamento cont�
 
 - **Calendário acadêmico:** Plano de Ensino assinado de Requisitos de Software (REQ), turma 01, semestre 2026.2, versão de 10/08/2026, especialmente seções 3, 9.1 e 11. Eventuais atualizações posteriores publicadas pelo professor prevalecem sobre o calendário aqui reproduzido.
 - **Registro de acontecimentos efetivos:** [Atas 01 a 05](../atas/index.md). Reuniões internas não são descritas como validações com a cliente. Compromissos previstos sem ata/evidência permanecem classificados como planejados ou pendentes de confirmação.
-- **Escopo atual de requisitos:** [Capítulo 8 — Especificação](../requisitos/index.md) (31 RFs, 20 RNFs) e [Capítulo 10 — Priorização/MVP](../requisitos/priorizacao.md). Quantitativos históricos de atas não são reescritos retroativamente.
+- **Escopo atual de requisitos:** [Capítulo 8 — Especificação](../requisitos/index.md) (31 RFs, 20 RNFs) e [Capítulo 8 — Priorização e MVP](../requisitos/priorizacao.md). Quantitativos históricos de atas não são reescritos retroativamente.
 - **Marco de referência desta revisão:** 11/10/2026; status futuros e entregas efetivamente concluídas devem ser conferidos no [GitHub Projects](https://github.com/orgs/mdsreq-fga-unb/projects/119/) antes da publicação.
 
 ---
