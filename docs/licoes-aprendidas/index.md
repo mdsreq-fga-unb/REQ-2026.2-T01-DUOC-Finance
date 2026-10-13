@@ -60,3 +60,5 @@ Na Unidade 2, a equipe aprofundou a elicitação, a modelagem e a gestão de req
 | `1.0` | 05/09/2026 | Estruturação inicial do template de retrospectivas e melhoria contínua | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `1.1` | 07/09/2026 | Registro formal das lições aprendidas da Unidade 1 e padronização | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `1.2` | 07/09/2026 | Reestruturação dos marcos de retrospectiva para contemplar as 4 Unidades letivas | Matheus Ribeiro | Eric Araújo |
+| `1.3` | 12/10/2026 | Adição da versão preliminar do Marco Avaliativo 2 (Unidade 2) com estruturação de pontos fortes, fracos e lições aprendidas baseada nas experiências do ciclo. | Gustavo Bonifácio | Eric Araújo |
+| `1.4` | 12/10/2026 | Refatoração e aprimoramento do Marco Avaliativo 2: alinhamento com os requisitos da issue (elicitação, FURPS+, modelagem modular, backlog e rastreabilidade), substituição de MoSCoW por valor de negócio vs. esforço técnico, refinamento dos diagnósticos e preenchimento das colunas de responsável, prazo e critério de avaliação. | Gustavo Bonifácio | Eric Araújo |
