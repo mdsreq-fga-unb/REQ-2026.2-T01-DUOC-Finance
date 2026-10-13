@@ -133,7 +133,7 @@ Os papéis citados nas histórias são os **quatro papéis sistêmicos canônico
 | **US17** | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **colaborador que esqueceu a senha**, quero receber no e-mail corporativo um link de redefinição de uso único, para que eu recupere o acesso sem depender de *reset* manual pela gestão. | RF17 | **T** | **MVP** |
 | **US18** | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **usuário autenticado**, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado. | RF18 | RNF13<sup>¹</sup> + **T** | **MVP** |
 | **US23**<sup>†</sup> | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **Administrador do Sistema**, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta. | RF23 | **T** | **MVP** |
-| **US24**<sup>†</sup> | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **Administrador do Sistema**, quero que as senhas expirem periodicamente e não possam repetir as últimas utilizadas, para que credenciais antigas ou vazadas deixem de dar acesso ao sistema. | RF24 | **T** | Pós-MVP |
+| **US24**<sup>†</sup> | <span class="mod-badge mod-4">EP08 · OE4</span> | Como **Administrador do Sistema**, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema. | RF24 | **T** | Pós-MVP |
 | **US15** | <span class="mod-badge mod-4">EP09 · OE4</span> | Como **Administrador do Sistema ou Administrador Financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. | RF15 | RNF15<sup>¹</sup>, RNF16<sup>¹</sup>, RNF17<sup>¹</sup> + **T** | Pós-MVP |
 | **US16** | <span class="mod-badge mod-4">EP09 · OE4</span> | Como **Administrador do Sistema**, quero exportar um dossiê em PDF/CSV com o histórico imutável das operações auditadas, para que a DUOC comprove conformidade legal e trabalhista (CLT Art. 11). | RF16 | RNF15<sup>¹</sup>, RNF16<sup>¹</sup>, RNF17<sup>¹</sup> + **T** | Pós-MVP |
 
@@ -146,10 +146,10 @@ A matriz inversa garante a rastreabilidade bidirecional: para cada RNF, indica a
 | RNF | Atributo de Qualidade | Abrangência | US no MVP | US Pós-MVP | Categoria no MVP (Cap. 8) |
 | :---: | :--- | :---: | :--- | :--- | :---: |
 | **RNF01** | Operar em modo *offline* em canteiros sem rede | Específica | US04 | — | **Evolutivo** |
-| **RNF02** | Consulta cadastral com tempo ágil | Específica | US01, US02, US03, US25, US26 | US20<sup>¹</sup> | **Associado ao MVP** |
+| **RNF02** | Garantir tempo de resposta para consulta cadastral inferior a 2,0 s | Específica | US01, US02, US03, US25, US26 | US20<sup>¹</sup> | **Associado ao MVP** |
 | **RNF03** | Criptografia em repouso e em trânsito | Transversal (**T**) | Todas as 23 US do MVP | Todas as 8 US Pós-MVP | **Obrigatório para o MVP** |
 | **RNF04** | Usabilidade e agilidade no RVT de campo | Específica | US04, US19, US22 | — | **Associado ao MVP** |
-| **RNF05** | Fechamento financeiro com alta eficiência | Específica | US05, US06 | — | **Associado ao MVP** |
+| **RNF05** | Processar rotina de fechamento financeiro em até 5,0 s | Específica | US05, US06 | — | **Associado ao MVP** |
 | **RNF06** | Exatidão aritmética centesimal | Específica | US05, US06, US08, US27, US29 | — | **Associado ao MVP** |
 | **RNF07** | Validação no upload de comprovantes | Específica | US07, US22 | — | **Associado ao MVP** |
 | **RNF08** | Justificativa mandatória em estornos | Específica | — | US21 | **Evolutivo** |
@@ -162,7 +162,7 @@ A matriz inversa garante a rastreabilidade bidirecional: para cada RNF, indica a
 | **RNF15** | Atomicidade na gravação dos logs de auditoria | Transversal (**T**) | Todas as 23 US do MVP | Todas as 8 US Pós-MVP; ênfase em US15<sup>¹</sup>, US16<sup>¹</sup> | **Obrigatório para o MVP** |
 | **RNF16** | Retenção de logs por no mínimo 5 anos | Transversal (**T**) | Todas as 23 US do MVP | Todas as 8 US Pós-MVP; ênfase em US15<sup>¹</sup>, US16<sup>¹</sup> | **Obrigatório para o MVP** |
 | **RNF17** | Backup diário automático com restauração verificada | Transversal (**T**) | Todas as 23 US do MVP | Todas as 8 US Pós-MVP; ênfase em US15<sup>¹</sup>, US16<sup>¹</sup> | **Obrigatório para o MVP** |
-| **RNF18** | Disponibilidade mínima mensal do sistema | Transversal (**T**) | Todas as 23 US do MVP | Todas as 8 US Pós-MVP | **Obrigatório para o MVP** |
+| **RNF18** | Disponibilidade mensal ≥ 99,5% com aviso de 48h fora do horário comercial | Transversal (**T**) | Todas as 23 US do MVP | Todas as 8 US Pós-MVP | **Obrigatório para o MVP** |
 | **RNF19** | Acessibilidade digital nas interfaces | Transversal (**T**) | Todas as 23 US do MVP | Todas as 8 US Pós-MVP | **Obrigatório para o MVP** |
 | **RNF20** | Integridade de payloads nas rotas de escrita da API | Transversal (**T**) | Todas as 23 US do MVP | Todas as 8 US Pós-MVP | **Obrigatório para o MVP** |
 
@@ -251,7 +251,7 @@ A ordem sugerida posiciona primeiro as histórias do MVP e, dentro de cada grupo
 | 21 | **US26** | RF26 | Consultar histórico de alterações cadastrais e bancárias | <span class="mod-badge mod-1">EP01</span> | **3** | 2 | 3 | 2 | 2,33 (2) | **1,29** | **Q1** | Alta — implementar no MVP | **MVP** |
 | 22 | **US05** | RF05 | Solicitar prévia de fechamento | <span class="mod-badge mod-2">EP04</span> | **4** | 3 | 4 | 3 | 3,33 (3) | **1,20** | **Q2** | Alta — MVP com escopo controlado | **MVP** |
 | 23 | **US09** | RF09 | Apropriar custos operacionais | <span class="mod-badge mod-3">EP06</span> | **3** | 3 | 4 | 3 | 3,33 (3) | **0,90** | **Q2** | Alta — MVP com escopo controlado | **MVP** |
-| 24 | **US24** | RF24 | Expirar senha periodicamente e impedir reutilização | <span class="mod-badge mod-4">EP08</span> | **2** | 2 | 2 | 2 | 2,00 (2) | **1,00** | **Q3** | Média — capacidade residual | **Pós-MVP** |
+| 24 | **US24** | RF24 | Impor renovação periódica de senhas | <span class="mod-badge mod-4">EP08</span> | **2** | 2 | 2 | 2 | 2,00 (2) | **1,00** | **Q3** | Média — capacidade residual | **Pós-MVP** |
 | 25 | **US21** | RF21 | Estornar fechamento financeiro | <span class="mod-badge mod-2">EP04</span> | **2** | 3 | 3 | 2 | 2,67 (3) | **0,75** | **Q4** | Baixa — backlog evolutivo | **Pós-MVP** |
 | 26 | **US30** | RF30 | Consultar comparativo histórico de custos entre contratos | <span class="mod-badge mod-3">EP06</span> | **2** | 3 | 3 | 2 | 2,67 (3) | **0,75** | **Q4** | Baixa — backlog evolutivo | **Pós-MVP** |
 | 27 | **US31** | RF31 | Configurar alertas de execução orçamentária | <span class="mod-badge mod-3">EP07</span> | **2** | 3 | 3 | 2 | 2,67 (3) | **0,75** | **Q4** | Baixa — backlog evolutivo | **Pós-MVP** |
@@ -333,6 +333,263 @@ flowchart LR
 
 ---
 
+## Enquadramento do Product Backlog no Padrão DEEP
+
+Para garantir aderência às melhores práticas da Engenharia de Software Ágil (Cohn, 2004; Pichler, 2010), o backlog do **DUOC Finance** é governado e auditado segundo as quatro propriedades do padrão **DEEP**:
+
+| Dimensão DEEP | Definição Metodológica | Evidência Operacional no DUOC Finance |
+| :--- | :--- | :--- |
+| **D — Detailed Appropriately**<br>*(Detalhado Apropriadamente)* | Itens próximos da implementação possuem granularidade fina e detalhamento exaustivo; itens futuros permanecem em nível macro. | As histórias prioritárias do topo do MVP contam com especificação formal nos **3Cs** (Cartão, Conversa e Confirmação BDD *Given-When-Then*), enquanto itens do backlog evolutivo pós-MVP (ex.: US15, US16, US30) permanecem descritos no nível de história canônica para refinamento progressivo. |
+| **E — Estimated**<br>*(Estimado)* | Todos os itens do backlog possuem estimativas de custo e esforço relativas ou absolutas. | 100% das 31 histórias possuem estimativas multidimensionais auditáveis: **Esforço em horas (ES)**, **Complexidade Técnica (CX)** e **Lacuna de Capacidade (LC)**, cuja média ponderada determina a classe de **Esforço Consolidado (EC)** de 1,00 a 4,00. |
+| **E — Emergent**<br>*(Emergente)* | O backlog é vivo e adaptável, evoluindo continuamente a partir do feedback dos usuários e avaliações técnicas. | O backlog incorporou os feedbacks das reuniões com a cliente parceira (Ata 04 e Ata 05) e das deliberações de revisão por pares ([Feedback dos Requisitos](../requisitos/feedback.md)), resultando na criação de US22 a US31 e no refinamento contínuo dos portões DoR e DoD. |
+| **P — Prioritized**<br>*(Priorizado)* | Os itens são estritamente ordenados pelo valor agregado e urgência técnica. | O backlog está ordenado de forma decrescente pelo **Índice de Prioridade ($IP = VB / EC$)**, dividindo o produto com base na **Matriz 4 × 4** entre o núcleo inegociável do MVP (23 histórias / 74,2%) e o backlog evolutivo (8 histórias / 25,8%). |
+
+---
+
+## Modelo dos 3Cs e Especificação BDD das Histórias do Topo do Backlog
+
+Conforme preconizado por **Ron Jeffries (2001)**, uma História de Usuário atinge maturidade ágil quando expressa nas três dimensões dos **3Cs**:
+
+1. **Card (Cartão):** A declaração sintética de papel, intenção e valor (*Como... Quero... Para que...*), complementada por metadados de estimativa e rastreabilidade.
+2. **Conversation (Conversa):** O registro do diálogo contínuo de refinamento entre a equipe de desenvolvimento e a cliente parceira (**Maria Beatryz**), alinhando regras de negócio, dados e premissas operacionais.
+3. **Confirmation (Confirmação):** Os critérios objetivos de aceitação redigidos no formato **BDD (*Behavior-Driven Development*)** utilizando a sintaxe **Gherkin (*Dado que / Quando / Então*)**, determinando de forma inatacável as condições para o aceite da história.
+
+Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**, aptas a inaugurar os ciclos de construção do modelo RAD:
+
+=== "US13 — Efetuar Login (IP: 4,00 | Topo Geral)"
+
+    <div class="module-spec-pane" markdown="1">
+
+    #### Cartão (Card)
+    - **ID:** `US13` | **Épico:** `EP08 · CAR-07` | **Origem:** `RF13` (RN15, RN16)
+    - **Estimativa:** ES: 1h (1) • CX: 1 • LC: 1 • EC: 1,00 • VB: 4 • **IP: 4,00 (Rank 1)**
+    - **História:** *Como **usuário da plataforma**, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil.*
+
+    #### Conversa (Conversation)
+    - **Alinhamento Sociotécnico:** Maria Beatryz destacou a importância de logins distintos para colaboradores de obra e gestores, evitando que dados salariais fiquem visíveis para quem preenche horas em campo. Acordou-se autenticação por e-mail corporativo e senha criptografada, gerando token JWT com expiração máxima de 8 horas (RNF13) e bloqueio de enumeração de contas (mensagens genéricas de erro).
+
+    #### Confirmação (Confirmation / BDD Gherkin)
+    ```gherkin
+    Cenário: Autenticação bem-sucedida de usuário com credenciais válidas
+      Dado que o colaborador está previamente cadastrado e ativo no sistema
+      Quando submeter seu e-mail corporativo válido e sua senha correta na tela de autenticação
+      Então o sistema deve validar as credenciais em latência ≤ 500 ms
+      E emitir um token JWT temporário de acesso com o papel RBAC correspondente (RN15)
+      E redirecionar o usuário para o painel operacional da sua respectiva alçada.
+
+    Cenário: Tentativa de login com senha incorreta
+      Dado que o usuário informa um e-mail corporativo cadastrado
+      Quando submeter uma senha incorreta
+      Então o sistema deve recusar a autenticação com código HTTP 401
+      E exibir a mensagem padronizada "E-mail ou senha inválidos", sem revelar a existência do e-mail.
+    ```
+
+    </div>
+
+=== "US18 — Encerrar Sessão Manualmente (IP: 3,00)"
+
+    <div class="module-spec-pane" markdown="1">
+
+    #### Cartão (Card)
+    - **ID:** `US18` | **Épico:** `EP08 · CAR-07` | **Origem:** `RF18` (RN15, Feedback FB-05)
+    - **Estimativa:** ES: 1h (1) • CX: 1 • LC: 1 • EC: 1,00 • VB: 3 • **IP: 3,00 (Rank 2)**
+    - **História:** *Como **usuário autenticado**, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado no canteiro.*
+
+    #### Conversa (Conversation)
+    - **Alinhamento Sociotécnico:** Identificado na avaliação por pares que tablets e celulares são compartilhados entre encarregados e diaristas em canteiros de obra remotos. O encerramento voluntário (*logout*) deve revogar o token no backend de forma atômica e sumária, impedindo reutilização do token via cache do navegador.
+
+    #### Confirmação (Confirmation / BDD Gherkin)
+    ```gherkin
+    Cenário: Logout voluntário com revogação imediata de token
+      Dado que o usuário possui uma sessão ativa autenticada na aplicação web
+      Quando acionar a opção "Encerrar Sessão" no menu de perfil
+      Então o sistema deve revogar e invalidar compulsoriamente o token de autenticação no backend
+      E limpar os tokens de acesso e dados da sessão local no cliente
+      E redirecionar o navegador para a tela inicial de login.
+    ```
+
+    </div>
+
+=== "US01 — Cadastrar Colaborador (IP: 2,40 | Topo Cadastral)"
+
+    <div class="module-spec-pane" markdown="1">
+
+    #### Cartão (Card)
+    - **ID:** `US01` | **Épico:** `EP01 · CAR-01` | **Origem:** `RF01` (RN01, RN03, RN22, RN23)
+    - **Estimativa:** ES: 4h (2) • CX: 2 • LC: 1 • EC: 1,67 • VB: 4 • **IP: 2,40 (Rank 3)**
+    - **História:** *Como **Administrador Financeiro**, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por CPF que sustente os apontamentos e os pagamentos de diárias.*
+
+    #### Conversa (Conversation)
+    - **Alinhamento Sociotécnico:** Maria Beatryz confirmou que os dados bancários (código COMPE de 3 dígitos, agência e conta com dígito) são essenciais para evitar repasses errôneos de PIX/TED. A validação de CPF deve seguir o algoritmo oficial da Receita Federal (módulo 11) com bloqueio estrito de duplicidades.
+
+    #### Confirmação (Confirmation / BDD Gherkin)
+    ```gherkin
+    Cenário: Cadastro bem-sucedido de novo colaborador
+      Dado que o Administrador Financeiro está autenticado com o papel ADMIN_FINANCEIRO
+      Quando preencher os dados obrigatórios com CPF válido inédito e dados bancários completos
+      E submeter o formulário de cadastro
+      Então o sistema deve persistir a ficha unificada do colaborador com identificador único
+      E disparar link seguro de primeiro acesso para o e-mail corporativo informado (RF17)
+      E registrar o evento de criação na trilha de auditoria (RN17).
+
+    Cenário: Tentativa de cadastro com CPF duplicado
+      Dado que já existe um colaborador ativo cadastrado com o CPF "123.456.789-00"
+      Quando o Administrador tentar cadastrar outro colaborador com o mesmo CPF
+      Então o sistema deve abortar o cadastro com HTTP 409 Conflict
+      E exibir alerta informando "CPF já cadastrado na base de dados" (RN01).
+    ```
+
+    </div>
+
+=== "US19 — Consultar Apontamentos Registrados (IP: 2,40 | Topo de Campo)"
+
+    <div class="module-spec-pane" markdown="1">
+
+    #### Cartão (Card)
+    - **ID:** `US19` | **Épico:** `EP02 · CAR-02` | **Origem:** `RF19` (RN02, RN05, RN16, RN30, FB-03)
+    - **Estimativa:** ES: 4h (2) • CX: 2 • LC: 1 • EC: 1,67 • VB: 4 • **IP: 2,40 (Rank 4)**
+    - **História:** *Como **Técnico de Campo**, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e possa retificá-los antes do fechamento.*
+
+    #### Conversa (Conversation)
+    - **Alinhamento Sociotécnico:** Originada do feedback docente e de pares (FB-03), esta história dá transparência ao colaborador de obra. O técnico deve visualizar unicamente seus próprios registros (princípio do menor privilégio / RN16) com exibição clara do status ("Pendente", "Homologado" ou "Rejeitado") e dos pareceres de recusa registrados pelo gestor.
+
+    #### Confirmação (Confirmation / BDD Gherkin)
+    ```gherkin
+    Cenário: Consulta transparente de apontamentos próprios
+      Dado que o Técnico de Campo está autenticado com o perfil TECNICO_CAMPO
+      Quando acessar a listagem de apontamentos de campo
+      Então o sistema deve exibir apenas os registros vinculados ao seu próprio identificador (RN16)
+      E exibir para cada registro a data, o contrato de obra, as horas trabalhadas e o status atual
+      E permitir abrir o histórico detalhado com pareceres de homologação ou rejeição.
+
+    Cenário: Bloqueio de acesso a apontamentos de outros colaboradores
+      Dado que o Técnico de Campo tenta requisitar registros pertencentes a outro colaborador via API
+      Quando a requisição for interceptada pelos guards de segurança
+      Então o sistema deve retornar código HTTP 403 Forbidden em latência ≤ 15 ms (RNF14).
+    ```
+
+    </div>
+
+=== "US27 — Configurar Tabela de Diárias Técnicas (IP: 2,40 | Topo Financeiro)"
+
+    <div class="module-spec-pane" markdown="1">
+
+    #### Cartão (Card)
+    - **ID:** `US27` | **Épico:** `EP04 · CAR-03` | **Origem:** `RF27` (RN25, RN31, TR-03)
+    - **Estimativa:** ES: 4h (2) • CX: 2 • LC: 1 • EC: 1,67 • VB: 4 • **IP: 2,40 (Rank 5)**
+    - **História:** *Como **Administrador Financeiro**, quero cadastrar as categorias de diária técnica com valor e período de vigência, para que prévias e fechamentos usem sempre o valor vigente da competência.*
+
+    #### Conversa (Conversation)
+    - **Alinhamento Sociotécnico:** Maria Beatryz confirmou na Reunião 05 que a DUOC possui categorias distintas de diárias conforme o porte da obra e a senioridade técnica. A parametrização temporal garante que alterações de tabela não distorçam competências passadas.
+
+    #### Confirmação (Confirmation / BDD Gherkin)
+    ```gherkin
+    Cenário: Parametrização de nova diária com vigência temporal
+      Dado que o Administrador Financeiro cadastra a categoria "Técnico Residente" com valor de R$ 220,00 e vigência a partir de 01/10/2026
+      Quando a rotina de fechamento financeiro da competência 10/2026 for processada
+      Então o sistema deve computar as diárias dessa categoria pelo valor nominal exato de R$ 220,00 (RN25, RN31)
+      E manter inalterados os cálculos de competências anteriores a outubro de 2026.
+    ```
+
+    </div>
+
+=== "US07 — Submeter Solicitação de Reembolso (IP: 2,00)"
+
+    <div class="module-spec-pane" markdown="1">
+
+    #### Cartão (Card)
+    - **ID:** `US07` | **Épico:** `EP05 · CAR-04` | **Origem:** `RF07` (RN03, RN06, RN09, TR-02)
+    - **Estimativa:** ES: 4h (2) • CX: 2 • LC: 2 • EC: 2,00 • VB: 4 • **IP: 2,00 (Rank 6)**
+    - **História:** *Como **Técnico de Campo ou Gestor Operacional de Obras**, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas.*
+
+    #### Conversa (Conversation)
+    - **Alinhamento Sociotécnico:** Trata da erradicação do extravio de cupons fiscais térmicos que se apagam na carteira dos técnicos. A solicitação exige vínculo mandatório a um contrato de obra ativo (RN09) e upload do comprovante digitalizado (RN06) com validação de formato e tamanho (RNF07).
+
+    #### Confirmação (Confirmation / BDD Gherkin)
+    ```gherkin
+    Cenário: Solicitação de reembolso com comprovante fiscal válido
+      Dado que o colaborador seleciona um contrato de obra ativo e informa o valor monetário de R$ 85,50
+      Quando anexar comprovante fiscal em formato PDF com tamanho inferior a 5 MB e submeter o formulário
+      Então o sistema deve registrar a solicitação com status "Pendente de Análise"
+      E vincular o arquivo sanitizado ao registro (RNF07)
+      E disparar notificação de pendência no painel do Administrador Financeiro (RN27).
+
+    Cenário: Tentativa de envio de reembolso sem comprovante fiscal
+      Dado que o solicitante preenche valor e contrato mas não anexa o documento fiscal
+      Quando tentar submeter a solicitação
+      Então o sistema deve bloquear o envio exibindo "O comprovante fiscal digitalizado é obrigatório para reembolso" (RN06).
+    ```
+
+    </div>
+
+=== "US04 — Submeter Apontamento de Campo (IP: 1,33 | Escopo Controlado Q2)"
+
+    <div class="module-spec-pane" markdown="1">
+
+    #### Cartão (Card)
+    - **ID:** `US04` | **Épico:** `EP02 · CAR-02` | **Origem:** `RF04` (RN02, RN04, RN24, TR-01)
+    - **Estimativa:** ES: 8h (3) • CX: 3 • LC: 3 • EC: 3,00 • VB: 4 • **IP: 1,33 (Rank 18 | Q2)**
+    - **História:** *Como **Técnico de Campo**, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de WhatsApp.*
+
+    #### Conversa (Conversation)
+    - **Alinhamento Sociotécnico:** Item central da operação em obra. Por ser um item de alto valor e alto esforço (Q2), seu escopo no MVP foi estrategicamente controlado: foco na coleta web responsiva com status "Pendente de Homologação", validação de horas e envio de evidências (RF22); a operação offline completa (RNF01) foi postergada para a fase evolutiva.
+
+    #### Confirmação (Confirmation / BDD Gherkin)
+    ```gherkin
+    Cenário: Submissão de apontamento diário de produção (RVT)
+      Dado que o Técnico de Campo está alocado a um contrato de obra ativo
+      Quando preencher as horas trabalhadas, o escopo de serviços executado e submeter o formulário via Web App
+      Então o sistema deve gravar o registro com status inicial "Pendente de Homologação"
+      E disponibilizar o apontamento para deliberação do Gestor de Obras responsável (RF32)
+      E permitir ao autor retificar dados em até 5 dias úteis enquanto o status permanecer pendente (RN02, RF35).
+    ```
+
+    </div>
+
+=== "US06 — Homologar Fechamento Financeiro (IP: 1,71)"
+
+    <div class="module-spec-pane" markdown="1">
+
+    #### Cartão (Card)
+    - **ID:** `US06` | **Épico:** `EP04 · CAR-03` | **Origem:** `RF06` (RN08, RN17, TR-03)
+    - **Estimativa:** ES: 6h (2) • CX: 3 • LC: 2 • EC: 2,33 • VB: 4 • **IP: 1,71 (Rank 12)**
+    - **História:** *Como **Administrador Financeiro**, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança.*
+
+    #### Conversa (Conversation)
+    - **Alinhamento Sociotécnico:** Conforme acordado na Reunião 05 e refinado no feedback FB-13, a homologação representa o ato formal e irrevogável de trancamento da competência mensal. Todos os apontamentos conferidos tornam-se imutáveis; qualquer ajuste posterior exige o fluxo auditável de estorno (RF21).
+
+    #### Confirmação (Confirmation / BDD Gherkin)
+    ```gherkin
+    Cenário: Homologação e trancamento de lote financeiro
+      Dado que o Administrador Financeiro conferiu o extrato preliminar consolidado da competência
+      Quando confirmar formalmente a homologação do lote da competência selecionada
+      Então o sistema deve encerrar o lote e bloquear compulsoriamente os apontamentos contra qualquer edição (RN08)
+      E gravar o carimbo temporal UTC e o identificador do homologador na trilha de auditoria (RN17)
+      E disponibilizar o extrato definitivo com tolerância aritmética de R$ 0,00 (RNF06).
+    ```
+
+    </div>
+
+---
+
+## Avaliação de Qualidade INVEST das Histórias do MVP
+
+Para auditar o alinhamento com as diretrizes metodológicas de **Bill Wake (2003)**, a matriz a seguir afere o cumprimento dos critérios **INVEST** sobre as histórias do topo do Product Backlog:
+
+| US | Título / Ação | Independent (I) | Negotiable (N) | Valuable (V) | Estimable (E) | Small (S) | Testable (T) | Conformidade Global |
+| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **US13** | Efetuar login no sistema | :white_check_mark: Independente de regras de negócio | :white_check_mark: Fluxo de tela e UX ajustáveis no DoR | :white_check_mark: Garante segurança e acesso RBAC | :white_check_mark: ES: 1h, CX: 1, LC: 1 | :white_check_mark: Cabe em 1 ciclo RAD | :white_check_mark: Teste com mock e JWT | **100% INVEST** |
+| **US18** | Encerrar sessão manualmente | :white_check_mark: Independente | :white_check_mark: Interface de menu negociável | :white_check_mark: Mitiga riscos em dispositivos compartilhados | :white_check_mark: ES: 1h, CX: 1, LC: 1 | :white_check_mark: Executável em < 1 dia | :white_check_mark: Invalidação observável | **100% INVEST** |
+| **US01** | Cadastrar colaborador | :white_check_mark: Base para outros módulos | :white_check_mark: Campos opcionais ajustáveis | :white_check_mark: Unicidade por CPF e base unificada | :white_check_mark: ES: 4h, CX: 2, LC: 1 | :white_check_mark: Cabe em 1 incremento | :white_check_mark: Algoritmo módulo 11 | **100% INVEST** |
+| **US19** | Consultar apontamentos registrados | :white_check_mark: Consome API de apontamentos | :white_check_mark: Paginação e filtros negociáveis | :white_check_mark: Transparência e menor privilégio | :white_check_mark: ES: 4h, CX: 2, LC: 1 | :white_check_mark: Componente enxuto | :white_check_mark: Verificação por ID | **100% INVEST** |
+| **US27** | Configurar diárias técnicas | :white_check_mark: Tabela independente | :white_check_mark: Formato de grid negociável | :white_check_mark: Alimenta o motor de fechamento | :white_check_mark: ES: 4h, CX: 2, LC: 1 | :white_check_mark: CRUD direto | :white_check_mark: Validação de vigência | **100% INVEST** |
+| **US07** | Submeter reembolso operacional | :white_check_mark: Independente da homologação | :white_check_mark: Interface de upload negociável | :white_check_mark: Erradica perda de recibos físicos | :white_check_mark: ES: 4h, CX: 2, LC: 2 | :white_check_mark: Fluxo autônomo | :white_check_mark: Validação de PDF/tamanho | **100% INVEST** |
+| **US08** | Deliberar reembolso operacional | :white_check_mark: Depende de US07 mas desacoplada | :white_check_mark: Exibição de parecer negociável | :white_check_mark: Governança em contas a pagar | :white_check_mark: ES: 4h, CX: 2, LC: 2 | :white_check_mark: Tela de deliberação | :white_check_mark: Status aprovado/recusado | **100% INVEST** |
+| **US06** | Homologar fechamento financeiro | :white_check_mark: Opera sobre prévia existente | :white_check_mark: Layout de extrato negociável | :white_check_mark: Blindagem contábil de lotes | :white_check_mark: ES: 6h, CX: 3, LC: 2 | :white_check_mark: Transação atômica | :white_check_mark: Trava contra edição | **100% INVEST** |
+| **US04** | Submeter apontamento de campo | :white_check_mark: Desacoplada do offline (Q2) | :white_check_mark: Layout responsivo refinado no DoR | :white_check_mark: Coleta direta de produção | :white_check_mark: ES: 8h, CX: 3, LC: 3 | :white_check_mark: Fatiada no MVP | :white_check_mark: Gravação com status pendente | **100% INVEST** |
+
+---
+
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
@@ -343,3 +600,4 @@ flowchart LR
 | `2.1` | 12/10/2026 | Numeração das seções do capítulo (10.1 e 10.2) e atualização dos vínculos para as seções 8.6 a 8.12 da Priorização; atores das histórias alinhados à Matriz Canônica de Papéis (RBAC) do Capítulo 8; priorização passa a usar as três dimensões do Esforço Consolidado (ES, CX e LC) no lugar da Pontuação Técnica de duas dimensões, com reordenação por IP; indicação dos RF32 a RF36 como requisitos complementares sem história. | Eric Araújo | — |
 | `2.2` | 13/10/2026 | Remoção dos prefixos numéricos dos títulos de seção (10.1 e 10.2) e atualização das referências internas e âncoras para alinhamento com a estrutura da Unidade 2 | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `2.3` | 13/10/2026 | Remoção dos cards de alerta de enquadramento metodológico e critérios de aceitação com integração direta ao texto, destaque em branco e dourado para o nó raiz no diagrama da hierarquia do backlog e estilização da fórmula de priorização | Matheus Ribeiro Szervinsk | Eric Araújo |
+| `2.4` | 13/10/2026 | Auditoria metodológica e completude ágil: inclusão formal do enquadramento DEEP do Product Backlog; detalhamento das histórias do topo do backlog no Modelo dos 3Cs (Card, Conversation e Confirmation) com critérios BDD (Gherkin Dado-Quando-Então); e elaboração da Matriz de Conformidade INVEST para as histórias do MVP. | Matheus Ribeiro Szervinsk | Eric Araújo |
