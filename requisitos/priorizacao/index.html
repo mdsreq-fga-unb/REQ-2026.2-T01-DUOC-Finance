@@ -2768,7 +2768,7 @@
 </tr>
 <tr>
 <td style="text-align: center;"><strong>RF24</strong></td>
-<td style="text-align: left;"><strong>Expirar senha periodicamente e impedir reutilização</strong></td>
+<td style="text-align: left;"><strong>Impor renovação periódica de senhas</strong></td>
 <td style="text-align: center;">OE4 / CAR-07</td>
 <td style="text-align: center;"><strong>2</strong></td>
 <td style="text-align: left;">Recurso adicional de política de credenciais que não é bloqueante para o primeiro ciclo operacional.</td>
@@ -2965,7 +2965,7 @@
 <tr>
 <td style="text-align: center;"><strong>2 — Moderado</strong></td>
 <td style="text-align: left;">—<br><br><small><strong>Avaliar oportunidade</strong></small></td>
-<td style="text-align: left;"><strong>RF24</strong> <em>(Expirar senha e impedir reutilização)</em><br><strong>RF36</strong>‡ <em>(Exportar dados em planilha)</em><br><br><small><strong>Entrega futura / Capacidade residual</strong></small></td>
+<td style="text-align: left;"><strong>RF24</strong> <em>(Impor renovação de senhas)</em><br><strong>RF36</strong>‡ <em>(Exportar dados em planilha)</em><br><br><small><strong>Entrega futura / Capacidade residual</strong></small></td>
 <td style="text-align: left;"><strong>RF12</strong> <em>(Monitorar execução orçamentária)</em><br><strong>RF15</strong> <em>(Consultar trilha de auditoria)</em><br><strong>RF20</strong> <em>(Importar presenças Shifton)</em><br><strong>RF21</strong> <em>(Estornar fechamento)</em><br><strong>RF30</strong> <em>(Comparativo histórico de custos)</em><br><strong>RF31</strong> <em>(Alertas de execução orçamentária)</em><br><br><small><strong>Entrega futura</strong></small></td>
 <td style="text-align: center;">—<br><br><small><strong>Baixa prioridade</strong></small></td>
 </tr>
@@ -3867,7 +3867,7 @@
 </tr>
 <tr>
 <td style="text-align: center;"><strong>RF24</strong></td>
-<td style="text-align: left;">Expirar senha periodicamente e impedir reutilização</td>
+<td style="text-align: left;">Impor renovação periódica de senhas</td>
 <td style="text-align: center;">Módulo 4 (OE4)</td>
 <td style="text-align: center;">CAR-07</td>
 <td style="text-align: center;"><strong>2</strong></td>
@@ -3994,7 +3994,7 @@
 </tr>
 <tr>
 <td style="text-align: center;"><strong>RNF02</strong></td>
-<td style="text-align: left;">Consulta cadastral com tempo ágil</td>
+<td style="text-align: left;">Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos</td>
 <td style="text-align: left;">Performance</td>
 <td style="text-align: left;">Requisito do Produto</td>
 <td style="text-align: center;">RF01, RF02, RF03, RF25, RF26</td>
@@ -4021,7 +4021,7 @@
 </tr>
 <tr>
 <td style="text-align: center;"><strong>RNF05</strong></td>
-<td style="text-align: left;">Fechamento financeiro com alta eficiência</td>
+<td style="text-align: left;">Processar rotina de fechamento financeiro em até 5,0 segundos</td>
 <td style="text-align: left;">Performance</td>
 <td style="text-align: left;">Requisito do Produto</td>
 <td style="text-align: center;">RF05, RF06</td>
@@ -4143,7 +4143,7 @@
 <td style="text-align: left;">Requisito do Produto</td>
 <td style="text-align: center;">Transversal</td>
 <td style="text-align: center;"><strong>Obrigatório para o MVP</strong></td>
-<td style="text-align: left;">Disponibilidade mínima mensal de 99,5%, com manutenção programada comunicada previamente.</td>
+<td style="text-align: left;">Disponibilidade mínima mensal de 99,5%, com manutenção programada comunicada com no mínimo 48h de antecedência em janela fora do horário comercial (22h às 06h UTC).</td>
 </tr>
 <tr>
 <td style="text-align: center;"><strong>RNF19</strong></td>
@@ -4379,6 +4379,13 @@
 <td style="text-align: center;"><code>3.2</code></td>
 <td style="text-align: center;">13/10/2026</td>
 <td style="text-align: left;">Remoção de caixas de alerta (enquadramento metodológico, escopo da linha de corte e auditabilidade) com integração direta à narrativa fluida do texto e estilização visual das fórmulas matemáticas de normalização e dispersão da Matriz 4×4.</td>
+<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+<td style="text-align: left;">Eric Araújo</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>3.3</code></td>
+<td style="text-align: center;">13/10/2026</td>
+<td style="text-align: left;">Auditoria metodológica e padronização: alinhamento do RF24 ao padrão "Impor renovação periódica de senhas", adequação de critérios objetivos para RNF02, RNF05 e RNF18 na Tabela de Vinculação dos RNFs ao MVP e sincronização com o Capítulo 8.</td>
 <td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
 <td style="text-align: left;">Eric Araújo</td>
 </tr>

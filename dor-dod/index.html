@@ -1449,13 +1449,13 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>História canônica e INVEST</strong></td>
-<td style="text-align: left;">A história segue “Como [papel], quero [ação], para [benefício]”? Ela é <strong>Independente</strong>, <strong>Negociável</strong>, <strong>Valiosa</strong>, <strong>Estimável</strong>, <strong>Pequena</strong> e <strong>Testável</strong>?</td>
-<td style="text-align: left;">História registrada no backlog em formato INVEST, vinculada aos requisitos aplicáveis.</td>
+<td style="text-align: left;">A história segue “Como [papel], quero [ação], para [benefício]”? Ela atende aos critérios <strong>INVEST</strong> (<strong>Independente</strong>, <strong>Negociável</strong>, <strong>Valiosa</strong>, <strong>Estimável</strong>, <strong>Pequena</strong> e <strong>Testável</strong>)?</td>
+<td style="text-align: left;">História registrada no backlog em formato INVEST, vinculada aos requisitos funcionais aplicáveis.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Critérios de aceitação verificáveis</strong></td>
-<td style="text-align: left;">Cada critério descreve um resultado observável e pode ser aprovado ou reprovado sem interpretação subjetiva? Os cenários relevantes incluem sucesso, rejeição e limites aplicáveis?</td>
-<td style="text-align: left;">Critérios documentados em linguagem clara, vinculados à história e aos casos de teste quando definidos.</td>
+<td style="text-align: left;"><strong>Critérios de aceitação BDD</strong></td>
+<td style="text-align: left;">Cada critério descreve um resultado observável em formato BDD (<em>Dado que / Quando / Então</em>), podendo ser aprovado ou reprovado sem interpretação subjetiva? Os cenários contemplam caminho feliz, exceções e limites?</td>
+<td style="text-align: left;">Critérios BDD documentados no backlog e casos de teste executáveis associados.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Regras de negócio explícitas</strong></td>
@@ -1463,9 +1463,9 @@
 <td style="text-align: left;">Regras de negócio referenciadas ou descritas no requisito; dúvidas bloqueadoras resolvidas.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Qualidade e dependências consideradas</strong></td>
-<td style="text-align: left;">Foram identificados os RNFs aplicáveis, dependências de dados/API, integrações, restrições legais e riscos que afetam o item? Seus critérios mensuráveis estão claros?</td>
-<td style="text-align: left;">RNFs e dependências vinculados; critérios quantitativos referenciados no Capítulo 8, sem criar limites novos para o item.</td>
+<td style="text-align: left;"><strong>Qualidade, dados e dependências</strong></td>
+<td style="text-align: left;">O contrato de dados preliminar (schemas JSON / DTOs de API) está estabelecido? Foram identificados os RNFs aplicáveis, dependências de integração, restrições legais e riscos? Seus critérios mensuráveis estão claros?</td>
+<td style="text-align: left;">Contrato de dados e RNFs vinculados; critérios quantitativos referenciados no Capítulo 8, sem criar limites novos para o item.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Base visual preparada</strong></td>
@@ -1513,9 +1513,9 @@
 <td style="text-align: left;">Resultado da verificação de cada critério/caso de teste ligado à Issue ou PR.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Código e revisão</strong></td>
-<td style="text-align: left;">Código segue os padrões do repositório e a stack vigente documentada no projeto; tipagem estrita e lint/verificações estáticas aplicáveis passam. Alterações foram revisadas por pares e integradas pelo fluxo de PR definido.</td>
-<td style="text-align: left;">Checks do CI, lint e verificação de tipos aprovados; PR aprovado e vinculado.</td>
+<td style="text-align: left;"><strong>Código e inspeção por pares</strong></td>
+<td style="text-align: left;">O código segue os padrões do repositório e tipagem estrita; passou por inspeção formal por pares com checklist estruturado de qualidade (baseado no método Fagan) e checks de CI (lint e types). PR aprovado por revisores.</td>
+<td style="text-align: left;">Checklist de inspeção Fagan preenchido no PR; checks de CI aprovados e merge autorizado.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Testes automatizados</strong></td>
@@ -1602,6 +1602,13 @@
 <td style="text-align: center;"><code>1.4</code></td>
 <td style="text-align: center;">13/10/2026</td>
 <td style="text-align: left;">Remoção do card de alerta de rastreabilidade acadêmica e integração direta na introdução textual</td>
+<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+<td style="text-align: left;">Eric Araújo</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>1.5</code></td>
+<td style="text-align: center;">13/10/2026</td>
+<td style="text-align: left;">Auditoria de governança metodológica: inclusão explícita de contrato de dados preliminar e critérios BDD no DoR; formalização de checklists de inspeção baseados no método de Fagan no DoD.</td>
 <td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
 <td style="text-align: left;">Eric Araújo</td>
 </tr>
