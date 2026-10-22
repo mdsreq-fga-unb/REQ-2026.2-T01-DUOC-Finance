@@ -80,7 +80,7 @@ flowchart LR
 <a id="backlog-geral"></a>
 ## Backlog Geral
 
-Esta seção atende à **Seção 10.1 do Template Oficial**. A tabela canônica a seguir mapeia **100% dos 31 Requisitos Funcionais** (RF01 a RF31) em Histórias de Usuário e vincula a cada história os **Requisitos Não Funcionais** (RNF01 a RNF20) aplicáveis. Os **RF32 a RF36** (revisão por pares de 12/10/2026) são tratados na [Priorização](../requisitos/priorizacao.md#requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte) como requisitos complementares, sem história nesta versão do backlog.
+Esta seção atende à **Seção 10.1 do Template Oficial**. A tabela canônica a seguir mapeia **100% dos 31 Requisitos Funcionais** (RF01 a RF31) em Histórias de Usuário e vincula a cada história os **Requisitos Não Funcionais** (RNF01 a RNF20) aplicáveis. Os **RF32 a RF40** são tratados na [Priorização](../requisitos/priorizacao.md#requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte) como requisitos complementares, ainda sem histórias próprias nesta versão do backlog. Os RF37 a RF40 surgiram da decomposição dos requisitos de contratos e centros de custo e aguardam avaliação individual de valor e esforço.
 
 ### Papéis de Usuário
 
@@ -540,4 +540,4 @@ Para auditar o alinhamento com as diretrizes metodológicas de **Bill Wake (2003
 | `2.2` | 13/10/2026 | Remoção dos prefixos numéricos dos títulos de seção (10.1 e 10.2) e atualização das referências internas e âncoras para alinhamento com a estrutura da Unidade 2 | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `2.3` | 13/10/2026 | Remoção dos cards de alerta de enquadramento metodológico e critérios de aceitação com integração direta ao texto, destaque em branco e dourado para o nó raiz no diagrama da hierarquia do backlog e estilização da fórmula de priorização | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `2.4` | 13/10/2026 | Auditoria metodológica e completude ágil: inclusão formal do enquadramento DEEP do Product Backlog; detalhamento das histórias do topo do backlog no Modelo dos 3Cs (Card, Conversation e Confirmation) com critérios objetivos de aceitação e regras de negócio; e elaboração da Matriz de Conformidade INVEST para as histórias do MVP. | Matheus Ribeiro Szervinsk | Eric Araújo |
-
+| `2.5` | 22/10/2026 | Atualização das referências aos requisitos complementares RF32 a RF40, registrando a decomposição dos requisitos de contratos e centros de custo, sem modificar as 31 histórias de usuário e a linha de corte original do backlog. | Matheus Saraiva Camargo | Matheus Ribeiro |
