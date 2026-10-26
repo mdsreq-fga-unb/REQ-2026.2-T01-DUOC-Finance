@@ -125,7 +125,7 @@ flowchart LR
 <a id="avaliacao-do-esforco-tecnico"></a>
 ## Avaliação do Esforço Técnico
 
-A avaliação técnica foi conduzida pela equipe de desenvolvimento e arquitetura da **Cascata Ágil**, analisando a demanda de implementação para cada um dos **36 Requisitos Funcionais**.
+O catálogo atual contempla **40 Requisitos Funcionais (RF01 a RF40)**. A equipe de desenvolvimento e arquitetura da **Cascata Ágil** registrou avaliações técnicas para **36 requisitos**, anteriores à decomposição de RF33 e RF34. As avaliações desses dois requisitos permanecem como registros históricos e aguardam revisão conforme seus escopos atuais. Os **RF37 a RF40** ainda aguardam avaliação técnica individual.
 
 Para manter o rigor analítico e escalas orientadas no mesmo sentido (onde **1 representa menor barreira e 4 representa maior desafio**), o esforço técnico consolidado é composto por três dimensões mensuráveis:
 
@@ -198,7 +198,12 @@ Para viabilizar o cruzamento na **Matriz 4 × 4**, a média decimal é convertid
 <a id="tabela-consolidada-das-avaliacoes"></a>
 ## Tabela Consolidada das Avaliações
 
-A tabela a seguir preserva as avaliações originalmente registradas para os RF01 a RF36, anteriores ao desdobramento dos RF33 e RF34. A especificação atual contempla 40 Requisitos Funcionais, dos quais RF37 a RF40 ainda aguardam avaliação individual de valor de negócio e esforço técnico. As pontuações de RF33 e RF34 são mantidas como referência histórica, não representando estimativas revalidadas após a decomposição. Os requisitos complementares permanecem fora da linha de corte original das 31 histórias do backlog.
+A tabela reúne as avaliações de 36 requisitos funcionais realizadas antes da divisão dos RF33 e RF34. Ela apresenta o valor de negócio, as justificativas, as dimensões de esforço técnico e a classificação consolidada de cada requisito.
+
+As avaliações posteriores à Reunião 05 possuem caráter preliminar. As notas históricas de RF33 e RF34 precisam ser revistas conforme seus novos escopos, enquanto RF37 a RF40 ainda aguardam avaliação individual.
+
+Os requisitos marcados com **‡** foram incorporados após a linha de corte original do backlog. Sua inclusão definitiva no MVP depende da revisão da priorização e das histórias de usuário.
+
 
 | Código | Requisito Funcional | OE / CAR | Valor Negócio | Justificativa Operacional / de Negócio | Esforço (h) / Nota | Complex. | Lacuna | Média Consolidada | Esforço Consolidado |
 | :---: | :--- | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -243,7 +248,7 @@ A tabela a seguir preserva as avaliações originalmente registradas para os RF0
 <a id="revisao-e-calibracao-do-esforco-tecnico-frente-a-matriz-4-4"></a>
 ### Revisão e Calibração do Esforço Técnico frente à Matriz 4 × 4
 
-A revisão do esforço técnico verificou, requisito a requisito, a coerência analítica entre as três dimensões (horas, complexidade e lacuna de capacidade), a média consolidada e a **coluna** ocupada na Matriz 4 × 4. Foram aplicadas quatro verificações:
+A revisão do esforço técnico verificou, para os **36 registros históricos da Tabela Consolidada**, a coerência analítica entre as três dimensões (horas, complexidade e lacuna de capacidade), a média consolidada e a **coluna** ocupada na Matriz 4 × 4. Essa conferência preserva os valores registrados: não constitui reavaliação dos escopos atuais de RF33 e RF34 nem avaliação dos RF37 a RF40. Foram aplicadas quatro verificações:
 
 1. **Aderência das horas à faixa da nota:** todas as estimativas respeitam as faixas de [Escalas Técnicas](#escalas-tecnicas) (limites inclusivos no extremo superior). Os casos de fronteira são **RF22, RF26 e RF29 (8 h → nota 2)** e **RF04, RF05 e RF09 (16 h → nota 3)**; nenhum requisito excede 16 h, razão pela qual a nota 4 em horas não é atribuída.
 2. **Conferência aritmética:** as 36 médias foram recalculadas pela [Fórmula de Consolidação e Regra de Conversão](#formula-de-consolidacao-e-regra-de-conversao) e conferem com a tabela acima, sem divergências.
@@ -551,7 +556,9 @@ Os **8 requisitos** abaixo ficam alocados para a **Fase 2 (Pós-MVP)** ou releas
 <a id="requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte"></a>
 ### Requisitos Complementares (RF32 a RF40): Fora da Linha de Corte
 
-Os RF32 a RF36 foram incorporados na revisão por pares de 12/10/2026. Posteriormente, o refinamento dos RF33 e RF34 originou os RF37 a RF40, com responsabilidades funcionais individualizadas. Esses requisitos permanecem sem histórias próprias no backlog atual e, portanto, fora da contagem original da linha de corte (23 RFs no MVP e 8 pós-MVP). As avaliações anteriores de RF33 e RF34 são históricas e deverão ser revistas, enquanto RF37 a RF40 ainda precisam de avaliação individual de valor de negócio e esforço técnico.
+Os RF32 a RF36 foram incorporados na revisão por pares de 12/10/2026. Posteriormente, o refinamento dos RF33 e RF34 originou os RF37 a RF40, com responsabilidades funcionais individualizadas. Os RF32 a RF40 permanecem sem histórias próprias no backlog atual e, portanto, fora da contagem original da linha de corte (**23 RFs no MVP e 8 pós-MVP**).
+
+As notas de RF32 a RF36 reproduzem os registros históricos. Para **RF33 e RF34**, os valores apresentados não constituem avaliação dos escopos atuais e deverão ser revistos. Para **RF37 a RF40**, as expressões **A validar** e **A estimar** indicam avaliações individuais pendentes; não representam notas atribuídas nem posicionamento na Matriz 4 × 4. Nenhuma nota histórica será transferida automaticamente para os requisitos resultantes da decomposição.
 
 | RF | Requisito Funcional | Módulo / OE | CAR | Valor | Esforço | Observação |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -635,7 +642,7 @@ A Reunião 05 registrou a validação do núcleo funcional disponível em **24/0
 
 ### Quadro de Deliberações e Aceite de Escopo
 
-A Reunião 05 registrou a validação do núcleo funcional existente naquele momento. Requisitos incorporados posteriormente por refinamento da especificação — incluindo a redefinição do RF22, os RF23 a RF36 e a posterior decomposição dos RF33 e RF34 em RF37 a RF40 — possuem classificação preliminar neste capítulo e deverão ser ratificados em uma próxima sessão de validação com a cliente. O quadro a seguir preserva as decisões efetivamente registradas em 24/09/2026 e esclarece alterações posteriores de identificação quando necessário.
+A Reunião 05 registrou a validação do núcleo funcional existente naquele momento. As classificações registradas para requisitos incorporados ou redefinidos posteriormente, incluindo RF22 e RF23 a RF36, possuem caráter preliminar e dependem de ratificação da cliente. As notas históricas de RF33 e RF34 também aguardam reavaliação conforme seus escopos atuais. Os RF37 a RF40 permanecem sem avaliação individual de valor de negócio e esforço técnico; sua priorização deverá ser definida antes da ratificação com a cliente. O quadro a seguir preserva as decisões efetivamente registradas em 24/09/2026 e esclarece alterações posteriores de identificação quando necessário.
 
 | Tópico da Validação | Decisão Registrada | Fundamentação e Rastreabilidade |
 | :--- | :---: | :--- |
@@ -673,3 +680,4 @@ A Reunião 05 registrou a validação do núcleo funcional existente naquele mom
 | `3.1` | 13/10/2026 | Remoção dos prefixos numéricos das seções principais (8.6 a 8.12) e de referências numéricas internas em aderência ao padrão textual dos Capítulos 8, 9 e 10, com preservação de âncoras para rastreabilidade e integridade de links externos. | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `3.2` | 13/10/2026 | Remoção de caixas de alerta (enquadramento metodológico, escopo da linha de corte e auditabilidade) com integração direta à narrativa fluida do texto e estilização visual das fórmulas matemáticas de normalização e dispersão da Matriz 4×4. | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `3.3` | 13/10/2026 | Auditoria metodológica e padronização: alinhamento do RF24 ao padrão "Impor renovação periódica de senhas", adequação de critérios objetivos para RNF02, RNF05 e RNF18 na Tabela de Vinculação dos RNFs ao MVP e sincronização com o Capítulo 8. | Matheus Ribeiro Szervinsk | Eric Araújo |
+| `3.4` | 22/10/2026 | Adequação da priorização à decomposição de RF33 e RF34; inclusão dos RF37 a RF40 como requisitos complementares pendentes de avaliação individual; preservação da Matriz 4×4 histórica e da linha de corte original do MVP. | Matheus Saraiva Camargo | Matheus Ribeiro |
