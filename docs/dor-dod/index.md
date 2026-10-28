@@ -81,6 +81,14 @@ O acordo complementa as fases e a adaptação do processo **RAD** descritas no [
 
 Na **Unidade 2 / Incremento 1**, o marco de 15/10/2026 associa telas homologadas pela cliente, DoR, DER e backlog INVEST. O marco acadêmico é um ponto de controle; não substitui o avanço contínuo dos ciclos RAD nem dispensa o DoD de cada incremento.
 
+### Registro da aplicação do DoD — Unidade 2 / Incremento 1
+
+A definição do DoD está estabelecida neste capítulo. **Até esta revisão, não há neste repositório um registro de aplicação preenchido que comprove o atendimento de todos os critérios do DoD para o Incremento 1.** Portanto, o incremento não é declarado Concluído (Done) por este documento; a aplicação permanece **não evidenciada**. Isso registra o estado atual da documentação e não antecipa a cobrança de implementação completa nesta unidade.
+
+| Incremento | Situação do DoD | Evidência disponível | Próximo registro necessário |
+| :--- | :--- | :--- | :--- |
+| Unidade 2 / Incremento 1 | Definição existente; aplicação ainda não evidenciada; não declarado Done | Este acordo define os critérios, mas não há checklist preenchido do incremento | Vincular Issue/PR do incremento e preencher o checklist de cada critério com resultado e evidência; registrar inspeção por pares e aceite da homologação quando realizados |
+
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
@@ -93,4 +101,4 @@ Na **Unidade 2 / Incremento 1**, o marco de 15/10/2026 associa telas homologadas
 | `1.5` | 13/10/2026 | Auditoria de governança metodológica: inclusão de contrato de dados preliminar e critérios objetivos de aceitação no DoR; formalização de checklists de inspeção baseados no método de Fagan no DoD. | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `1.8` | 28/10/2026 | Esclarecimento do estado representado por Done: exige homologação aceita e não implica publicação em produção. | Giovana Ferreira| Pendente de revisão |
 | `1.9` | 28/10/2026 | Definição de procedimento viável de inspeção por pares inspirado em Fagan e do registro comprobatório no PR. | Giovana Ferreira | Pendente de revisão |
-
+| `2.0` | 28/10/2026 | Registro de que o DoD está definido, mas sua aplicação no Incremento 1 ainda não está evidenciada. | Giovana Ferreira | Pendente de revisão |
