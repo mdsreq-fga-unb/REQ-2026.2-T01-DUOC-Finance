@@ -341,7 +341,7 @@ Para garantir aderência às melhores práticas da Engenharia de Software Ágil 
 | :--- | :--- | :--- |
 | **D — Detailed Appropriately**<br>*(Detalhado Apropriadamente)* | Itens próximos da implementação possuem granularidade fina e detalhamento exaustivo; itens futuros permanecem em nível macro. | As histórias prioritárias do topo do MVP contam com especificação formal nos **3Cs** (Cartão, Conversa e Confirmação com critérios objetivos de aceitação e regras de negócio verificáveis), enquanto itens do backlog evolutivo pós-MVP (ex.: US15, US16, US30) permanecem descritos no nível de história canônica para refinamento progressivo. |
 | **E — Estimated**<br>*(Estimado)* | Todos os itens do backlog possuem estimativas de custo e esforço relativas ou absolutas. | 100% das 31 histórias possuem estimativas multidimensionais auditáveis: **Esforço em horas (ES)**, **Complexidade Técnica (CX)** e **Lacuna de Capacidade (LC)**, cuja média ponderada determina a classe de **Esforço Consolidado (EC)** de 1,00 a 4,00. |
-| **E — Emergent**<br>*(Emergente)* | O backlog é vivo e adaptável, evoluindo continuamente a partir do feedback dos usuários e avaliações técnicas. | O backlog incorporou os feedbacks das reuniões com a cliente parceira (Ata 04 e Ata 05) e das deliberações de revisão por pares ([Feedback dos Requisitos](../requisitos/feedback.md)), resultando na criação de US22 a US31 e no refinamento contínuo dos portões DoR e DoD. |
+| **E — Emergent**<br>*(Emergente)* | O backlog é vivo e adaptável, evoluindo continuamente a partir do feedback dos usuários e avaliações técnicas. | O backlog incorporou informações das reuniões com a cliente registradas na [Ata 01](../atas/reuniao-01.md), deliberações internas das [Atas 04](../atas/reuniao-04.md) e [05](../atas/reuniao-05.md) e apontamentos de revisão por pares ([Feedback dos Requisitos](../requisitos/feedback.md)), resultando na criação de US22 a US31 e no refinamento contínuo dos portões DoR e DoD. |
 | **P — Prioritized**<br>*(Priorizado)* | Os itens são estritamente ordenados pelo valor agregado e urgência técnica. | O backlog está ordenado de forma decrescente pelo **Índice de Prioridade ($IP = VB / EC$)**, dividindo o produto com base na **Matriz 4 × 4** entre o núcleo inegociável do MVP (23 histórias / 74,2%) e o backlog evolutivo (8 histórias / 25,8%). |
 
 ---
@@ -443,7 +443,7 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
     - **História:** *Como **Administrador Financeiro**, quero cadastrar as categorias de diária técnica com valor e período de vigência, para que prévias e fechamentos usem sempre o valor vigente da competência.*
 
     #### Conversa (Conversation)
-    - **Alinhamento Sociotécnico:** Maria Beatryz confirmou na Reunião 05 que a DUOC possui categorias distintas de diárias conforme o porte da obra e a senioridade técnica. A parametrização temporal garante que alterações de tabela não distorçam competências passadas.
+    - **Alinhamento Sociotécnico:** A história formaliza a parametrização de categorias e vigências de diárias, de modo que alterações de tabela não distorçam competências passadas. Essa definição foi registrada pela equipe;
 
     #### Confirmação (Critérios de Aceitação Objetivos)
     - **CA01 — Parametrização com Vigência:** O sistema deve permitir o cadastro de categorias de diária técnica com nome, valor nominal monetário em reais e data de início de vigência (RN25).
@@ -540,4 +540,4 @@ Para auditar o alinhamento com as diretrizes metodológicas de **Bill Wake (2003
 | `2.2` | 13/10/2026 | Remoção dos prefixos numéricos dos títulos de seção (10.1 e 10.2) e atualização das referências internas e âncoras para alinhamento com a estrutura da Unidade 2 | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `2.3` | 13/10/2026 | Remoção dos cards de alerta de enquadramento metodológico e critérios de aceitação com integração direta ao texto, destaque em branco e dourado para o nó raiz no diagrama da hierarquia do backlog e estilização da fórmula de priorização | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `2.4` | 13/10/2026 | Auditoria metodológica e completude ágil: inclusão formal do enquadramento DEEP do Product Backlog; detalhamento das histórias do topo do backlog no Modelo dos 3Cs (Card, Conversation e Confirmation) com critérios objetivos de aceitação e regras de negócio; e elaboração da Matriz de Conformidade INVEST para as histórias do MVP. | Matheus Ribeiro Szervinsk | Eric Araújo |
-
+| `2.5` | 28/10/2026 | Alinhamento da priorização e das histórias ao feedback docente: identificação da Reunião 05 como interna | Giovana Ferreira | — |

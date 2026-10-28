@@ -112,8 +112,6 @@ A distribuição dos tópicos da apresentação audiovisual acompanha as frentes
 
 A equipe **Cascata Ágil** consolidou na Unidade 2 uma especificação de requisitos extensa, modular e rastreável, sustentada por dois ciclos de avaliação em pares (18 apontamentos deliberados, dos quais 17 aceitos integral ou parcialmente) e pela incorporação do feedback docente. A cliente reconheceu que os requisitos e objetivos definidos representam adequadamente as dores organizacionais da DUOC. Como pontos de atenção, conforme registrado no [Capítulo 11 — Lições Aprendidas](../licoes-aprendidas/index.md#marco-avaliativo-2-unidade-2-elicitacao-aprofundada-furps-e-gestao-de-backlog), a equipe identificou a necessidade de decompor requisitos amplos em ações atômicas desde a primeira versão, de reduzir redundâncias editoriais no GitHub Pages e de ratificar formalmente com a cliente os requisitos incorporados após a Reunião 05. Para a Unidade 3, o foco será a validação das interfaces no Frontend com a cliente, a verificação do DoR do Incremento 1 e o início da construção rápida no ciclo RAD.
 
----
-
 ## 5. Checklist de Auditoria e Conformidade da Entrega 2
 
 A tabela a seguir consolida o checklist de conformidade dos artefatos da Entrega 2 frente às diretrizes avaliativas da disciplina de Requisitos de Software:
