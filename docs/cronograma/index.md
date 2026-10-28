@@ -92,7 +92,7 @@ Para assegurar rastreabilidade inequívoca entre os Objetivos Específicos (OEs)
 | Ciclo / Incremento RAD | Foco Arquitetural e de Domínio | Características Contempladas (CARs) | Atividades Metodológicas e Validações | Marco Externo Intersectante |
 | :--- | :--- | :--- | :--- | :---: |
 | **Ciclo 0: Concepção & Fundação**<br>*(Semanas 01 a 03 / Ago-Set)* | Diagnóstico de processos, viabilidade e governança | [CAR-01 a CAR-08](../visao-produto/capitulo-2/index.md) *(Especificação preliminar)*<br>[CAR-09 a CAR-12](../visao-produto/capitulo-2/index.md#car-09) *(Escopo técnico)* | - Contato exploratório inicial com a DUOC (19/08)<br>- Reunião 01 Oficial de Elicitação de Escopo e MVP (05/09)<br>- Reunião 02 de alinhamento interno (07/09) e Reunião 03 de apresentação gravada do PC1 (07/09)<br>- Rich Picture v2, Ishikawa 4M, Stakeholders e Mixer Board<br>- Estruturação do repositório *Docs as Code* no GitHub Pages | **Ponto de Controle 1**<br>*(publicação 08/09; apresentações 08 e 10/09)* |
-| **Incremento 1: Gestão Cadastral e RVT de Campo**<br>*(Semanas 04 a 07 / Set-Out)* | Base cadastral unificada, autenticação e apontamento de viagens em obras | [CAR-01: Gestão Cadastral Unificada](../visao-produto/capitulo-2/index.md#car-01)<br>[CAR-02: Apontamento Móvel / RVT](../visao-produto/capitulo-2/index.md#car-02)<br>[CAR-07: Controle de Acesso RBAC (Base)](../visao-produto/capitulo-2/index.md#car-07) | - Elicitação aprofundada URPS+ e personas de campo<br>- Base visual e Design System no Figma; estabelecimento dos designs de tela (RVT e Cadastros) diretamente no Frontend (React/Tailwind)<br>- **Reunião 04 (17/09):** Retrospectiva interna da Unidade 1 e planejamento da Unidade 2<br>- **Reunião 05 (24/09):** Priorização interna MoSCoW/Matriz 4×4 e aprovação do MVP com ressalvas pela equipe<br>- **Janela prevista de validação do frontend (02/10):** realização e eventual aceite da cliente sem comprovação nas Atas 01 a 05<br>- Verificação do DoR do Incr. 1, condicionada ao registro de aceite das telas<br>- Codificação da lógica de regras cadastrais e persistência no Supabase | **Ponto de Controle 2**<br>*(publicação 13/10; apresentações 13 e 15/10)* |
+| **Incremento 1: Gestão Cadastral e RVT de Campo**<br>*(Semanas 04 a 07 / Set-Out)* | Base cadastral unificada, autenticação e apontamento de viagens em obras | [CAR-01: Gestão Cadastral Unificada](../visao-produto/capitulo-2/index.md#car-01)<br>[CAR-02: Apontamento Móvel / RVT](../visao-produto/capitulo-2/index.md#car-02)<br>[CAR-07: Controle de Acesso RBAC (Base)](../visao-produto/capitulo-2/index.md#car-07) | - Elicitação aprofundada URPS+ e personas de campo<br>- Base visual e Design System no Figma; estabelecimento dos designs de tela (RVT e Cadastros) diretamente no Frontend (React/Tailwind)<br>- **Reunião 04 (17/09):** Retrospectiva interna da Unidade 1 e planejamento da Unidade 2<br>- **Reunião 05 (24/09):** Priorização interna MoSCoW/Matriz 4×4 e aprovação do MVP com ressalvas pela equipe<br>- **Reunião 06 (02/10):** validação presencial do protótipo no Figma com Maria Beatryz, aprovado sem alterações ([Ata 06](../atas/reuniao-06.md))<br>- Verificação do DoR do Incr. 1, condicionada à validação das telas no frontend navegável<br>- Codificação da lógica de regras cadastrais e persistência no Supabase | **Ponto de Controle 2**<br>*(publicação 13/10; apresentações 13 e 15/10)* |
 | **Incremento 2: Motor Financeiro e Reembolsos**<br>*(Semanas 08 a 10 / Out-Nov)* | Apuração de diárias, fechamento de obras, conciliação e prestação de contas | [CAR-03: Motor Financeiro de Fechamento](../visao-produto/capitulo-2/index.md#car-03)<br>[CAR-04: Prestação de Contas e Reembolsos](../visao-produto/capitulo-2/index.md#car-04)<br>[CAR-08: Trilha de Auditoria (Logs)](../visao-produto/capitulo-2/index.md#car-08) | - Desenho dos fluxos e telas de fechamento financeiro e reembolsos diretamente no Frontend (tendo o Figma como base)<br>- **Validação prevista no Frontend (23/10):** sessão com Maria Beatryz, sujeita a confirmação de agenda e registro de resultado<br>- Verificação do DoR após validação das telas e contratos de dados<br>- **Construção da lógica do Motor Financeiro (CAR-03):** codificação das regras de cálculo de diárias, adiantamentos e persistência com folga técnica<br>- Upload de comprovantes simulados e logs de auditoria<br>- Testes aritméticos com planilhas de controle da DUOC | *Transição entre PC2 e PC3* |
 | **Incremento 3: Custos por Contrato, Dashboards e Integrações**<br>*(Semanas 10 a 11 / Nov)* | Rateio de despesas por obra, painel gerencial e interoperabilidade | [CAR-05: Apropriação de Custos por Contrato](../visao-produto/capitulo-2/index.md#car-05)<br>[CAR-06: Painel Analítico de Desvio Orçamentário](../visao-produto/capitulo-2/index.md#car-06)<br>[CAR-09: Integração auditor.ia (Presença)](../visao-produto/capitulo-2/index.md#car-09)<br>[CAR-10: Importação/Exportação ERP e CSV](../visao-produto/capitulo-2/index.md#car-10) | - Construção dos módulos de rateio de custos por contrato<br>- Indicadores e filtros de custos do MVP (RF11); monitoramento orçamentário avançado no pós-MVP<br>- Estudos de conectores com dados sintéticos de auditor.ia e ERP, sujeitos à capacidade do backlog pós-MVP<br>- Inspeção estática de requisitos e código (Fagan)<br>- Matriz de Rastreabilidade Bidirecional (*Forward/Backward*)<br>- Deploy contínuo e integrado em *Staging* | **Ponto de Controle 3**<br>*(publicação 17/11; apresentações 17 e 19/11)* |
 | **Fase Final: Transição / Cutover, Estabilização e Aceite**<br>*(Semanas 12 e 13 / 20/11 a 02/12)* | Homologação final, UAT com a cliente, saneamento de defeitos e transição operacional | **CARs selecionadas para o MVP integradas para aceite** *(funcionalidades evolutivas permanecem no backlog)* | - *Code Freeze* operacional (20 a 23/11)<br>- **Sessão de UAT prevista (24/11):** agendamento e ata pendentes com Maria Beatryz<br>- **Janela Dedicada de Correção de Defeitos pós-UAT (25 a 27/11)**<br>- **Termo de Aceite Formal previsto (28/11), condicionado ao UAT e à assinatura da cliente**<br>- Transição operacional (*Cutover*), Manual do Usuário e capacitação<br>- Apresentação Final perante a banca e Retrospectiva | **Ponto de Controle 4**<br>*(publicação 01/12; apresentações 01 e 03/12)* |
@@ -183,7 +183,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
           <div class="tooltip-body">
             <p><strong>Período:</strong> 01/10 a 31/10</p>
             <p><strong>Marcos:</strong> PC2: publicação 13/10; apresentações 13 e 15/10</p>
-            <p><strong>Validações:</strong> janela prevista para frontend do Incremento 1 (02/10; ocorrência não comprovada pelas atas recebidas) • validação do Incremento 2 prevista para 23/10</p>
+            <p><strong>Validações:</strong> validação presencial do protótipo do Incremento 1 no Figma realizada em 02/10 (Ata 06) • validação do Incremento 2 prevista para 23/10</p>
           </div>
           <div class="tooltip-hint">Clique para alternar para Outubro</div>
         </div>
@@ -624,9 +624,9 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             <tr>
               <td class="empty-day"></td><td class="empty-day"></td><td class="empty-day"></td><td class="empty-day"></td>
               <td class="day-u2" title="Critérios BDD/Gherkin e refinamento"><div class="cell-top"><span class="cell-num">1</span></div></td>
-              <td class="day-u2" title="Janela prevista de validação do frontend do Incremento 1; realização não confirmada pelas Atas 01 a 05">
+              <td class="day-u2 day-meet" title="Reunião 06 com Maria Beatryz — Validação presencial do protótipo de alta fidelidade no Figma (Incremento 1)">
                 <div class="cell-top"><span class="cell-num">2</span></div>
-                <span class="event-chip active-phase">Validação prevista</span>
+                <span class="event-chip meet">Validação Figma</span>
               </td>
               <td class="day-u2"><div class="cell-top"><span class="cell-num">3</span></div></td>
             </tr>
@@ -697,13 +697,13 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
 
         <div class="month-event-item">
           <div class="month-event-left">
-            <span class="event-date-badge"><span class="ev-d">02</span><span class="ev-m">OUT</span></span>
+            <span class="event-date-badge done"><span class="ev-d">02</span><span class="ev-m">OUT</span></span>
             <div class="event-info">
-              <div class="event-name">Janela prevista de validação do Frontend (Incremento 1)</div>
-              <div class="event-desc">Data prevista no plano para possível avaliação de usabilidade das telas RVT/Cadastro. Não corresponde à Reunião 04 (realizada internamente em 17/09). Realização, participação da cliente e aceite das telas/DoR ainda precisam de evidência específica.</div>
+              <div class="event-name">Reunião 06: Validação do Protótipo no Figma com Maria Beatryz (Incremento 1)</div>
+              <div class="event-desc">Sessão presencial conduzida por Eric Araújo sobre o protótipo de alta fidelidade no Figma (Colaboradores, Visão Geral, Análise de Custos e Perfis e Permissões). Telas aprovadas sem alterações; a validação no frontend navegável segue como próximo passo antes do DoR. <a href="../atas/reuniao-06/">Ver Ata 06</a> • <a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39" target="_blank" rel="noopener noreferrer">Abrir protótipo no Figma</a>.</div>
             </div>
           </div>
-          <span class="status-pill planejado">Verificar realização</span>
+          <span class="status-pill concluido">Realizada</span>
         </div>
 
         <div class="month-event-item">
@@ -1131,7 +1131,7 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
         </div>
         <div class="week-meta-item">
           <span class="week-meta-label">Validações com a Cliente e Reuniões</span>
-          <span class="week-meta-value">Reunião 04 interna (17/09 — retrospectiva e planejamento) • Reunião 05 interna (24/09 — MoSCoW/MVP com ressalvas) • janela de validação do frontend prevista para 02/10 (realização sem comprovação pelas atas)</span>
+          <span class="week-meta-value">Reunião 04 interna (17/09 — retrospectiva e planejamento) • Reunião 05 interna (24/09 — MoSCoW/MVP com ressalvas) • Reunião 06 com a cliente (02/10 — validação presencial do protótipo no Figma, aprovado sem alterações)</span>
         </div>
       </div>
       <div class="week-card-grid">
@@ -1142,7 +1142,7 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
             <li>Classificação e especificação rigorosa de requisitos sob o framework <strong>URPS+</strong>;</li>
             <li>Criação de Personas representativas e cenários contextuais de uso para escritório e canteiros;</li>
             <li>Base visual e tokens no Figma; estabelecimento dos designs de tela diretamente no Frontend (React SPA) com dados mockados;</li>
-            <li>Planejamento de sessão de validação sociotécnica com Maria Beatryz navegando pelas telas no frontend; somente registrar como realizada e homologada após evidência específica;</li>
+            <li>Validação presencial do protótipo no Figma com Maria Beatryz em 02/10 (<a href="../atas/reuniao-06/">Ata 06</a>); a sessão no frontend navegável permanece como próximo passo antes do DoR;</li>
             <li>Decomposição em Histórias de Usuário <strong>INVEST</strong> com critérios de aceitação objetivos;</li>
             <li>Priorização de Backlog usando <strong>MoSCoW</strong> e <strong>atendimento formal ao DoR do Incr. 1</strong> antes da codificação de lógica e banco;</li>
             <li>Modelagem Conceitual e Física de Dados (DER / Supabase / PostgreSQL) e arquitetura de dados sintéticos LGPD.</li>
@@ -1862,3 +1862,4 @@ O cronograma do DUOC Finance é um **artefato vivo** sujeito a refinamento cont�
 | `2.0` | 21/09/2026 | Reestruturação metodológica, arquitetural e visual integral do cronograma: desacoplamento dos marcos acadêmicos (PC1 a PC4) dos ciclos e incrementos RAD; distribuição das 8 CARs e integrações nos incrementos; estratégia de prototipagem evolutiva UI-First com base no Figma e validação de interfaces mockadas no Frontend antes da lógica de persistência (Supabase); antecipação do motor financeiro (CAR-03) e UAT com janela dedicada para correção de defeitos; inclusão de diagramas metodológicos com suporte nativo a temas claro e escuro; eliminação de conflitos de contraste cromático no calendário e reestruturação ergonômica das unidades e semanas em cards padronizados | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `2.1` | 24/09/2026 | Inclusão da Reunião 05 (Priorização MoSCoW, Matriz 4x4 e alinhamento do MVP) realizada em 24/09 no calendário de Setembro, feed de eventos, tabela de incrementos e detalhamento da Semana 05. | Matheus Ribeiro Szervinsk | Eric Araújo e Lucas Zanetti |
 | `2.2` | 11/10/2026 | Auditoria cronológica do Capítulo 6 conforme Plano de Ensino oficial: identificação dos primeiros e segundos dias de apresentações dos PCs 1–4 e corte de publicação às 08h; correção das Reuniões 03 (07/09), 04 (17/09) e natureza interna da 05; atualização dos calendários e semanas; padronização URPS+ e auditor.ia no planejamento vigente; registro de 31 RFs/20 RNFs e ressalvas de validação não comprovada; distinção entre marcos RAD e períodos acadêmicos. | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |
+| `2.3` | 28/10/2026 | Registro da validação presencial do protótipo do Incremento 1 no Figma em 02/10/2026 (Ata 06) no calendário, no feed de eventos e no detalhamento semanal, substituindo as marcações de realização não comprovada. | Paulo Nery | — |
