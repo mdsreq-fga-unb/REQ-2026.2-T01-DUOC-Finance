@@ -44,7 +44,7 @@ O **DoD** é o portão de saída: confirma que a história ou incremento está f
 | :--- | :--- | :--- |
 | **Incremento funcional** | O fluxo da história está operável de ponta a ponta no ambiente definido para demonstração. A interface validada no DoR está integrada à lógica e à persistência previstas para o item; quando aplicável, está disponível em *Staging*. | Demonstração ou link do ambiente; PR/Issue identifica o incremento e seus componentes. |
 | **Critérios de aceitação** | **100%** dos critérios aprovados. Nenhum critério permanece sem execução, resultado ou justificativa acordada. | Resultado da verificação de cada critério/caso de teste ligado à Issue ou PR. |
-| **Código e inspeção por pares** | O código segue os padrões do repositório e tipagem estrita; passou por inspeção formal por pares com checklist estruturado de qualidade (baseado no método Fagan) e checks de CI (lint e types). PR aprovado por revisores. | Checklist de inspeção Fagan preenchido no PR; checks de CI aprovados e merge autorizado. |
+| **Código e inspeção por pares** | O código segue os padrões do repositório e tipagem estrita; passou por inspeção estruturada por pares, adaptada à realidade da equipe e inspirada no fluxo de Fagan; os checks de CI (lint e types) foram aprovados. | Checklist de inspeção preenchido no PR, registro de achados e respectivas resoluções, aprovação de revisor diferente do autor e checks de CI aprovados. |
 | **Testes automatizados** | Testes automatizados pertinentes à alteração foram executados e aprovados. Regras de domínio e cálculos têm cobertura de testes apropriada; integrações e regressões afetadas foram verificadas. | Relatório de execução do CI e links/saídas dos testes. |
 | **Requisitos não funcionais** | Todos os RNFs aplicáveis ao escopo foram verificados contra os critérios mensuráveis especificados. Para valores monetários, aplica-se a exatidão exigida pelo requisito pertinente; para acesso, RBAC e autorização são testados nos perfis/rotas abrangidos; desempenho segue os limites definidos para a funcionalidade. | Resultado de testes ou inspeções com referência ao RNF e ao seu critério de aceite no Capítulo 8. |
 | **Documentação — Docs as Code** | Documentação afetada foi atualizada no repositório/MkDocs, incluindo orientações operacionais ou técnicas necessárias para compreender e usar o incremento. A compilação local do site termina sem warnings. | Alterações documentais no PR e saída bem-sucedida de `mkdocs build --strict`. |
@@ -53,6 +53,16 @@ O **DoD** é o portão de saída: confirma que a história ou incremento está f
 
 **Decisão do portão:** marque como **Concluído (DoD)** somente quando todos os critérios aplicáveis forem aprovados, a homologação tiver sido realizada e aceita pela cliente e as evidências estiverem registradas. Falha ou homologação pendente mantém o item em **Verificação** ou **Validação**, conforme o fluxo; registre o defeito ou a pendência e retorne à construção/refinamento necessário. Um RNF não aplicável ao escopo deve ser identificado como tal, não tratado como aprovado sem verificação.
 
+### Procedimento e registro da inspeção por pares
+
+A equipe realizará uma inspeção estruturada por pares, inspirada nas etapas de preparação, inspeção, tratamento de achados e acompanhamento do método de Fagan, sem afirmar que aplica o método formal completo. O registro será mantido no próprio **Pull Request (PR)** do GitHub:
+
+1. **Preparação:** o autor abre o PR, vincula a Issue e resume o escopo e os critérios de aceitação afetados.
+2. **Inspeção:** pelo menos uma pessoa diferente do autor revisa as alterações e preenche no PR um checklist com o resultado de cada verificação (**aprovado**, **ajustar** ou **não aplicável**) e uma referência à evidência ou ao trecho revisado. O checklist verifica regras de negócio e critérios de aceitação, tratamento de erros e limites, segurança/RNFs aplicáveis, testes e documentação.
+3. **Tratamento e acompanhamento:** achados são registrados como comentários ou solicitação de alterações no PR. O autor corrige ou responde a cada achado; o revisor confirma a resolução antes de aprovar. Itens não aplicáveis devem vir acompanhados de justificativa.
+
+O PR aprovado, com checklist preenchido, comentários/alterações resolvidos e verificações de CI aprovadas, é o registro comprobatório da inspeção. A aprovação do PR não substitui a homologação pela cliente nem os demais critérios do DoD.
+
 ### Registro mínimo de evidências
 
 Para cada item concluído, a Issue ou PR deve permitir localizar:
@@ -60,7 +70,7 @@ Para cada item concluído, a Issue ou PR deve permitir localizar:
 1. História de usuário e requisitos/RNs/RNFs relacionados;
 2. Critérios de aceitação e resultados dos testes correspondentes;
 3. Evidência da validação visual do DoR e da homologação do DoD;
-4. PR aprovado, verificações automatizadas e estado de integração;
+4. PR aprovado, checklist e resolução dos achados da inspeção por pares, verificações automatizadas e estado de integração;
 5. Atualização documental pertinente e resultado do build MkDocs.
 
 ## Aplicação no processo RAD e rastreabilidade
@@ -82,4 +92,5 @@ Na **Unidade 2 / Incremento 1**, o marco de 15/10/2026 associa telas homologadas
 | `1.4` | 13/10/2026 | Remoção do card de alerta de rastreabilidade acadêmica e integração direta na introdução textual | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `1.5` | 13/10/2026 | Auditoria de governança metodológica: inclusão de contrato de dados preliminar e critérios objetivos de aceitação no DoR; formalização de checklists de inspeção baseados no método de Fagan no DoD. | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `1.8` | 28/10/2026 | Esclarecimento do estado representado por Done: exige homologação aceita e não implica publicação em produção. | Giovana Ferreira| Pendente de revisão |
+| `1.9` | 28/10/2026 | Definição de procedimento viável de inspeção por pares inspirado em Fagan e do registro comprobatório no PR. | Giovana Ferreira | Pendente de revisão |
 
