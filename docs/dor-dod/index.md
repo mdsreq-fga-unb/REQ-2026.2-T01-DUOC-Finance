@@ -6,7 +6,7 @@ Este capítulo formaliza os acordos de trabalho da equipe **Cascata Ágil** para
 <a id="definition-of-ready-dor"></a>
 ## Definition of Ready (DoR)
 
-O **DoR** é o portão de entrada para a construção de um item do backlog. Um item só pode avançar para a implementação de lógica de negócio e persistência quando **todos** os critérios abaixo forem atendidos e houver evidência registrada. A preparação e a prototipagem visual fazem parte do próprio ciclo: o DoR não substitui a validação UI-First, nem autoriza antecipar a construção de backend ou banco de dados.
+O **DoR** é o acordo de prontidão para iniciar a construção da lógica de negócio e da persistência definitiva de cada item do backlog; não é um requisito para iniciar qualquer atividade de desenvolvimento. No ciclo UI-First, a prototipagem do frontend com dados mockados e a validação da interface acontecem antes do DoR. A passagem para a implementação da lógica e da persistência só pode ocorrer quando **todos** os critérios abaixo forem atendidos e houver evidência registrada. Assim, o DoR não substitui a validação UI-First nem autoriza antecipar a construção de backend ou banco de dados.
 
 ### Checklist operacional de entrada
 
@@ -81,4 +81,4 @@ Na **Unidade 2 / Incremento 1**, o marco de 15/10/2026 associa telas homologadas
 | `1.3` | 13/10/2026 | Remoção dos prefixos numéricos das seções (9.1 e 9.2) alinhando a estrutura com os demais capítulos e preservando âncoras para rastreabilidade | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `1.4` | 13/10/2026 | Remoção do card de alerta de rastreabilidade acadêmica e integração direta na introdução textual | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `1.5` | 13/10/2026 | Auditoria de governança metodológica: inclusão de contrato de dados preliminar e critérios objetivos de aceitação no DoR; formalização de checklists de inspeção baseados no método de Fagan no DoD. | Matheus Ribeiro Szervinsk | Eric Araújo |
-
+| `1.6` | 28/10/2026 | Esclarecimento de que o DoR é o acordo de prontidão para lógica e persistência após a prototipagem frontend UI-First. | Giovana Ferreira Santos | Pendente de revisão |
