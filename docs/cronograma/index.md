@@ -722,7 +722,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             <span class="event-date-badge milestone"><span class="ev-d">13</span><span class="ev-m">OUT</span></span>
             <div class="event-info">
               <div class="event-name">Ponto de Controle 2: Publicação e Primeiro Dia de Apresentações da Unidade 2</div>
-              <div class="event-desc">Prazo oficial de publicação até as 08h de 13/10; segundo dia de apresentações em 15/10. Entrega prevista: especificação URPS+ (31 RFs e 20 RNFs), backlog INVEST/MoSCoW e critérios DoR/DoD. DER e telas são acompanhados conforme evidências efetivamente concluídas. [Acessar Entrega 2](../entregas/entrega-2.md).</div>
+              <div class="event-desc">Prazo oficial de publicação até as 08h de 13/10; segundo dia de apresentações em 15/10. Entrega prevista: especificação URPS+ (36 RFs e 20 RNFs), backlog INVEST/MoSCoW e critérios DoR/DoD. DER e telas são acompanhados conforme evidências efetivamente concluídas. [Acessar Entrega 2](../entregas/entrega-2.md).</div>
             </div>
           </div>
           <span class="status-pill planejado">Marco de Entrega</span>
@@ -1059,7 +1059,7 @@ A tabela-síntese a seguir apresenta o alinhamento executivo entre os quatro mar
 | Marco Avaliativo | Período Oficial | Ciclos RAD Intersectantes | Entregável Principal Homologado | Status |
 | :--- | :---: | :--- | :--- | :---: |
 | **Unidade 1 (PC1)** | Aulas 11/08 a 10/09; publicação até 08/09 às 08h; apresentações 08 e 10/09 | **Ciclo 0:** Concepção & Fundação | Visão de Produto, Rich Picture v2, Ishikawa 4M, Atas 01–03 e Docs as Code | :white_check_mark: **Concluída** |
-| **Unidade 2 (PC2)** | Aulas 15/09 a 15/10; publicação até 13/10 às 08h; apresentações 13 e 15/10 | **Incremento 1:** Requisitos, Design do Usuário & RVT | 31 RFs / 20 RNFs, priorização do MVP, histórias INVEST e evolução dos protótipos conforme evidência | :warning: **Em Desenvolvimento** |
+| **Unidade 2 (PC2)** | Aulas 15/09 a 15/10; publicação até 13/10 às 08h; apresentações 13 e 15/10 | **Incremento 1:** Requisitos, Design do Usuário & RVT | 36 RFs / 20 RNFs, priorização do MVP, histórias INVEST e evolução dos protótipos conforme evidência | :warning: **Em Desenvolvimento** |
 | **Unidade 3 (PC3)** | Aulas 20/10 a 19/11; publicação até 17/11 às 08h; apresentações 17 e 19/11 | **Incrementos 2 & 3:** Motor Financeiro & Custos | MVP progressivo em Staging, verificações, demonstração e rastreabilidade conforme aceite dos incrementos | :hourglass_flowing_sand: **Planejado** |
 | **Unidade 4 (PC4)** | Aulas 24/11 a 10/12; publicação até 01/12 às 08h; apresentações 01 e 03/12 | **Fase Cutover:** transição e UAT previstos a partir de 20/11 | MVP demonstrável, UAT e aceite sujeitos à efetiva realização e comprovação documental | :hourglass_flowing_sand: **Planejado** |
 
@@ -1151,7 +1151,7 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
         <div>
           <div class="week-section-title">Produtos e Artefatos Homologados</div>
           <ul>
-            <li>Especificação URPS+ do catálogo vigente: 31 RFs e 20 RNFs; histórico da ata de 24/09 preservado com o quantitativo daquela data;</li>
+            <li>Especificação URPS+ do catálogo vigente: 36 RFs e 20 RNFs; histórico da ata de 24/09 preservado com o quantitativo daquela data;</li>
             <li>Designs de RVT Móvel (<a href="../visao-produto/capitulo-2/index.md#car-02">CAR-02</a>) e Cadastros (<a href="../visao-produto/capitulo-2/index.md#car-01">CAR-01</a>) no frontend, com homologação condicionada a registro de aceite da cliente;</li>
             <li>Product Backlog priorizado e gerido no GitHub Projects #119;</li>
             <li>Histórias de Usuário INVEST com critérios de aceitação formalizados;</li>
@@ -1842,7 +1842,7 @@ O cronograma do DUOC Finance é um **artefato vivo** sujeito a refinamento cont�
 
 - **Calendário acadêmico:** Plano de Ensino assinado de Requisitos de Software (REQ), turma 01, semestre 2026.2, versão de 10/08/2026, especialmente seções 3, 9.1 e 11. Eventuais atualizações posteriores publicadas pelo professor prevalecem sobre o calendário aqui reproduzido.
 - **Registro de acontecimentos efetivos:** [Atas 01 a 05](../atas/index.md). Reuniões internas não são descritas como validações com a cliente. Compromissos previstos sem ata/evidência permanecem classificados como planejados ou pendentes de confirmação.
-- **Escopo atual de requisitos:** [Capítulo 8 — Especificação](../requisitos/index.md) (31 RFs, 20 RNFs) e [Capítulo 8 — Priorização e MVP](../requisitos/priorizacao.md). Quantitativos históricos de atas não são reescritos retroativamente.
+- **Escopo atual de requisitos:** [Capítulo 8 — Especificação](../requisitos/index.md) (36 RFs, 20 RNFs) e [Capítulo 8 — Priorização e MVP](../requisitos/priorizacao.md). Quantitativos históricos de atas não são reescritos retroativamente.
 - **Marco de referência desta revisão:** 11/10/2026; status futuros e entregas efetivamente concluídas devem ser conferidos no [GitHub Projects](https://github.com/orgs/mdsreq-fga-unb/projects/119/) antes da publicação.
 
 ---
@@ -1862,3 +1862,4 @@ O cronograma do DUOC Finance é um **artefato vivo** sujeito a refinamento cont�
 | `2.0` | 21/09/2026 | Reestruturação metodológica, arquitetural e visual integral do cronograma: desacoplamento dos marcos acadêmicos (PC1 a PC4) dos ciclos e incrementos RAD; distribuição das 8 CARs e integrações nos incrementos; estratégia de prototipagem evolutiva UI-First com base no Figma e validação de interfaces mockadas no Frontend antes da lógica de persistência (Supabase); antecipação do motor financeiro (CAR-03) e UAT com janela dedicada para correção de defeitos; inclusão de diagramas metodológicos com suporte nativo a temas claro e escuro; eliminação de conflitos de contraste cromático no calendário e reestruturação ergonômica das unidades e semanas em cards padronizados | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `2.1` | 24/09/2026 | Inclusão da Reunião 05 (Priorização MoSCoW, Matriz 4x4 e alinhamento do MVP) realizada em 24/09 no calendário de Setembro, feed de eventos, tabela de incrementos e detalhamento da Semana 05. | Matheus Ribeiro Szervinsk | Eric Araújo e Lucas Zanetti |
 | `2.2` | 11/10/2026 | Auditoria cronológica do Capítulo 6 conforme Plano de Ensino oficial: identificação dos primeiros e segundos dias de apresentações dos PCs 1–4 e corte de publicação às 08h; correção das Reuniões 03 (07/09), 04 (17/09) e natureza interna da 05; atualização dos calendários e semanas; padronização URPS+ e auditor.ia no planejamento vigente; registro de 31 RFs/20 RNFs e ressalvas de validação não comprovada; distinção entre marcos RAD e períodos acadêmicos. | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |
+| `2.3` | 28/10/2026 | Atualização do quantitativo do catálogo vigente de requisitos para 36 RFs e 20 RNFs, em sincronia com o Capítulo 8. | Paulo Nery | — |
