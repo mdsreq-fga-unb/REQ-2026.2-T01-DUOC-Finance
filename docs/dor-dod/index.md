@@ -36,7 +36,7 @@ O **DoR** é o portão de entrada para a construção de um item do backlog. Um 
 <a id="definition-of-done-dod"></a>
 ## Definition of Done (DoD)
 
-O **DoD** é o portão de saída: confirma que a história ou incremento está funcional, integrado, verificado e apto à homologação/entrega. A conclusão não é determinada apenas por código implementado; exige atendimento dos critérios de aceitação, qualidade aplicável, documentação e validação sociotécnica.
+O **DoD** é o portão de saída: confirma que a história ou incremento está funcional, integrado, verificado e **homologado pela cliente**. Neste acordo, **Concluído (Done)** significa que a homologação ocorreu e foi aceita, além de todos os demais critérios aplicáveis terem sido verificados e registrados; estar apenas pronto ou apto para homologação não é suficiente. A publicação/entrega em produção não é implícita no Done e, quando fizer parte do escopo, deve seguir o processo de liberação correspondente.
 
 ### Checklist operacional de conclusão
 
@@ -51,7 +51,7 @@ O **DoD** é o portão de saída: confirma que a história ou incremento está f
 | **Homologação sociotécnica** | O incremento foi demonstrado à cliente em condições adequadas, com dados sintéticos/anonimizados quando necessário. Maria Beatryz validou o comportamento no contexto de uso; divergências impeditivas foram corrigidas antes da conclusão. | Aceite, resultado da homologação ou ressalvas registrados em ata, Issue ou evidência equivalente. |
 | **Rastreabilidade e encerramento** | Requisito, história, critérios de aceitação, testes e PR permanecem vinculados. Pendências não impeditivas, se houver, têm responsável, prioridade e destino acordados; não são declaradas como concluídas por omissão. | Links cruzados no GitHub Projects/Issue/PR e registro explícito de pendências acordadas. |
 
-**Decisão do portão:** marque como **Concluído (DoD)** somente quando todos os critérios aplicáveis forem aprovados e suas evidências estiverem registradas. Falha em critério de aceitação, teste, RNF aplicável, revisão, build documental ou homologação mantém o item em **Verificação** ou **Validação**, conforme o fluxo; registre o defeito e retorne à construção/refinamento necessário. Um RNF não aplicável ao escopo deve ser identificado como tal, não tratado como aprovado sem verificação.
+**Decisão do portão:** marque como **Concluído (DoD)** somente quando todos os critérios aplicáveis forem aprovados, a homologação tiver sido realizada e aceita pela cliente e as evidências estiverem registradas. Falha ou homologação pendente mantém o item em **Verificação** ou **Validação**, conforme o fluxo; registre o defeito ou a pendência e retorne à construção/refinamento necessário. Um RNF não aplicável ao escopo deve ser identificado como tal, não tratado como aprovado sem verificação.
 
 ### Registro mínimo de evidências
 
@@ -81,4 +81,5 @@ Na **Unidade 2 / Incremento 1**, o marco de 15/10/2026 associa telas homologadas
 | `1.3` | 13/10/2026 | Remoção dos prefixos numéricos das seções (9.1 e 9.2) alinhando a estrutura com os demais capítulos e preservando âncoras para rastreabilidade | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `1.4` | 13/10/2026 | Remoção do card de alerta de rastreabilidade acadêmica e integração direta na introdução textual | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `1.5` | 13/10/2026 | Auditoria de governança metodológica: inclusão de contrato de dados preliminar e critérios objetivos de aceitação no DoR; formalização de checklists de inspeção baseados no método de Fagan no DoD. | Matheus Ribeiro Szervinsk | Eric Araújo |
+| `1.8` | 28/10/2026 | Esclarecimento do estado representado por Done: exige homologação aceita e não implica publicação em produção. | Giovana Ferreira| Pendente de revisão |
 
