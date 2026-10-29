@@ -485,7 +485,7 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
 
     #### Confirmação (Critérios de Aceitação Objetivos)
     - **CA01 — Registro com Status Pendente:** Ao submeter horas e escopo de produção, o sistema deve gravar o registro com status inicial *"Pendente de Homologação"* e disponibilizá-lo ao Gestor de Obras (RF32).
-    - **CA02 — Janela de Retificação:** O autor do apontamento deve poder retificar dados de horas e escopo em até 5 dias úteis a partir do envio, desde que o registro permaneça com status pendente (RN02, RF35).
+    - **CA02 — Janela de Retificação:** O autor pode retificar dados de horas, escopo e anexos enquanto o apontamento estiver pendente, dentro da janela definida na RN02. Apontamentos rejeitados permitem correção e reenvio mesmo após o prazo anterior; cada reenvio retorna o registro para "Pendente de Homologação" e reinicia a janela de 5 dias úteis, preservando o identificador e o histórico. A homologação bloqueia a edição pelo autor (RF32, RF35).
     - **CA03 — Validação de Horas Diárias:** O sistema deve validar a consistência das horas lançadas, alertando sobre jornadas superiores a 12 horas diárias no mesmo contrato.
 
     </div>
@@ -541,3 +541,4 @@ Para auditar o alinhamento com as diretrizes metodológicas de **Bill Wake (2003
 | `2.3` | 13/10/2026 | Remoção dos cards de alerta de enquadramento metodológico e critérios de aceitação com integração direta ao texto, destaque em branco e dourado para o nó raiz no diagrama da hierarquia do backlog e estilização da fórmula de priorização | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `2.4` | 13/10/2026 | Auditoria metodológica e completude ágil: inclusão formal do enquadramento DEEP do Product Backlog; detalhamento das histórias do topo do backlog no Modelo dos 3Cs (Card, Conversation e Confirmation) com critérios objetivos de aceitação e regras de negócio; e elaboração da Matriz de Conformidade INVEST para as histórias do MVP. | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `2.5` | 22/10/2026 | Atualização das referências aos requisitos complementares RF32 a RF40, registrando a decomposição dos requisitos de contratos e centros de custo, sem modificar as 31 histórias de usuário e a linha de corte original do backlog. | Matheus Saraiva Camargo | Matheus Ribeiro |
+| `2.6` | 29/10/2026 | Alinhamento do CA02 da US04 à RN02 e ao RF35: correção e reenvio de apontamentos rejeitados, reinício da janela de 5 dias úteis após cada reenvio e bloqueio de edição após homologação. | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk (revisão pendente) |

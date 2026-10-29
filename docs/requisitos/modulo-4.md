@@ -13,16 +13,33 @@ Os requisitos abaixo expressam as **ações dos usuários** para autenticação 
 | <span id="rf14"></span>**RF14** | **Gerenciar perfis de acesso** | CAR-07 | O Administrador do Sistema (`ADMIN_SISTEMA`) atribui a cada usuário um dos 4 papéis canônicos de acesso (`TECNICO_CAMPO`, `GESTOR_OBRAS`, `ADMIN_FINANCEIRO` ou `ADMIN_SISTEMA`), passando as permissões e restrições a vigorar na camada de autenticação/autorização em todas as telas e rotas de API da aplicação (RN16, RNF14). |
 | <span id="rf15"></span>**RF15** | **Consultar trilha de auditoria** | CAR-08 | Usuários com perfil de auditoria (`ADMIN_SISTEMA` ou `ADMIN_FINANCEIRO`) consultam a trilha de auditoria filtrando eventos por período, operador, tipo de operação, módulo afetado e faixa de valor financeiro; cada evento exibe autor, ação, estado anterior e posterior serializados e carimbo temporal UTC (RN17, RN18). |
 | <span id="rf16"></span>**RF16** | **Exportar relatório de auditoria** | CAR-08 | O Administrador do Sistema (`ADMIN_SISTEMA`) exporta relatórios de auditoria em formatos estruturados (PDF/CSV) contendo o histórico integral e imutável de operações auditadas, para fins de governança corporativa e instrução probatória defensiva em conformidade com o prazo prescricional trabalhista (Artigo 11 da CLT). |
-| <span id="rf17"></span>**RF17** | **Recuperar credenciais de acesso** | CAR-07 | O colaborador que esqueceu a senha informa o e-mail corporativo cadastrado e recebe nele um link de redefinição de uso único válido por 30 minutos (RN15); a resposta exibida não revela se o e-mail existe ou não na base, prevenindo a enumeração de usuários. |
+| <span id="rf17"></span>**RF17** | **Ativar acesso inicial e recuperar credenciais** | CAR-07 | O colaborador autorizado a acessar o sistema recebe, após seu cadastro (RF01), um link seguro de primeiro acesso enviado ao e-mail corporativo cadastrado, permitindo a ativação da conta e a definição da senha inicial. Para recuperação de credenciais esquecidas, o colaborador informa seu e-mail corporativo e recebe um link de redefinição de senha de uso único, válido por 30 minutos (RN15). Ambos os fluxos devem utilizar links de uso único e prazo de validade de 30 minutos, sem revelar a existência de contas cadastradas nas respostas públicas do sistema. Após definir a senha, o colaborador poderá autenticar-se normalmente (RF13). |
 | <span id="rf18"></span>**RF18** | **Encerrar sessão manualmente** | CAR-07 | Ao acionar o encerramento voluntário de sessão (*logout*), o token de autenticação ativo é compulsoriamente revogado e invalidado na hora no backend, redirecionando o usuário para a tela de login. |
 | <span id="rf23"></span>**RF23** | **Bloquear acesso após tentativas falhas consecutivas** | CAR-07 | Após 5 tentativas de login com credenciais inválidas em até 15 minutos, a conta fica bloqueada preventivamente por 30 minutos, com mensagem informativa padronizada que não revela se a divergência decorreu do e-mail ou da senha (RN20). |
 | <span id="rf24"></span>**RF24** | **Impor renovação periódica de senhas** | CAR-07 | Quando a senha atinge 90 dias de vigência desde a última alteração, o acesso só é liberado mediante definição de nova credencial, sendo vedada a repetição de qualquer uma das últimas 5 senhas cadastradas (RN21). |
+
+
+## Rastreabilidade entre Requisitos Funcionais
+
+A tabela apresenta as dependências e integrações entre os requisitos deste módulo e os demais módulos do DUOC Finance.
+
+| Requisito | Relações com outros requisitos |
+| :---: | :--- |
+| [RF13](#rf13) | **Integração:** [RF14](#rf14) (aplicação das permissões RBAC), [RF17](#rf17) (ativação inicial e recuperação de credenciais), [RF23](#rf23) (bloqueio por tentativas inválidas) e [RF24](#rf24) (renovação periódica de senhas). |
+| [RF14](#rf14) | **Integração:** [RF13](#rf13) (autenticação com perfil de acesso) e [RF01](modulo-1.md#rf01) (gestão de acesso dos colaboradores cadastrados). **Apoio:** controle de permissões das operações protegidas dos demais módulos. |
+| [RF15](#rf15) | **Integração:** [RF16](#rf16) (exportação dos registros auditáveis), [RF06](modulo-2.md#rf06) (homologação de fechamentos), [RF21](modulo-2.md#rf21) (estornos) e [RF32](modulo-1.md#rf32) (homologação de apontamentos). |
+| [RF16](#rf16) | **Dependência de dados:** [RF15](#rf15) (registros da trilha de auditoria). |
+| [RF17](#rf17) | **Integração:** [RF01](modulo-1.md#rf01) (cadastro e primeiro acesso) e [RF13](#rf13) (autenticação após definição ou recuperação da senha). |
+| [RF18](#rf18) | **Dependência:** [RF13](#rf13) (sessão autenticada a ser encerrada). |
+| [RF23](#rf23) | **Integração:** [RF13](#rf13) (monitoramento das tentativas de autenticação). |
+| [RF24](#rf24) | **Integração:** [RF13](#rf13) (verificação da validade da senha durante a autenticação) e [RF17](#rf17) (definição e redefinição de credenciais). |
 
 ## Regras de Negócio
 
 1. **RN15 — Autenticação Mandatória com Token Válido:** O sistema exige token temporário válido e não expirado para qualquer requisição a recursos e dados protegidos.
 
-2. **RN16 — Princípio do Menor Privilégio e Matriz Canônica RBAC:** O sistema aplica controle de acesso baseado em papéis (RBAC) estruturado nos 4 papéis canônicos (`TECNICO_CAMPO`, `GESTOR_OBRAS`, `ADMIN_FINANCEIRO` e `ADMIN_SISTEMA`): técnicos de campo acessam apenas seus próprios apontamentos e reembolsos; gestores de obras deliberam apontamentos e despesas de seus contratos; o administrador financeiro consolida e fecha competências; e administradores do sistema gerenciam papéis e infraestrutura.
+2. **RN16 — Princípio do Menor Privilégio e Matriz Canônica RBAC:** O sistema aplica controle de acesso baseado em papéis (RBAC), estruturado nos quatro papéis canônicos (`TECNICO_CAMPO`, `GESTOR_OBRAS`, `ADMIN_FINANCEIRO` e `ADMIN_SISTEMA`). Técnicos de campo acessam apenas seus próprios apontamentos, histórico cadastral e solicitações financeiras, podendo submeter reembolsos e adiantamentos (RF07, RF28). Gestores de obras administram os contratos de sua alçada, deliberam apontamentos de campo (RF32) e podem submeter solicitações de reembolso (RF07). O Administrador Financeiro delibera reembolsos e adiantamentos (RF08, RF29), consolida informações financeiras e homologa fechamentos (RF05, RF06). O Administrador do Sistema gerencia papéis, permissões e infraestrutura de segurança.
+
 
 3. **RN17 — Registro Mandatório e Integridade de Eventos na Trilha de Auditoria:** Toda operação de inclusão, alteração ou exclusão sobre dados cadastrais, apontamentos, fechamentos e despesas gera compulsoriamente um registro de auditoria com autor, endereço IP, carimbo UTC e dados modificados (RNF15).
 
@@ -58,7 +75,7 @@ Os requisitos abaixo expressam as **ações dos usuários** para autenticação 
 | **RNF14** | OE4 | CAR-07 | Reunião 04, LGPD Art. 6º | RN16 | **CT-M4-06:** Validar conformidade regulatória (LGPD) e isolamento horizontal em 100% das rotas de dados protegidos. |
 | **RNF15** | OE4 | CAR-08 | Reunião 05, Arquitetura de Banco | RN17 | **CT-M4-07:** Confirmar persistência atômica da entrada de auditoria na mesma transação da base de dados. |
 | **RNF16** | OE4 | CAR-08 | CLT Art. 11, Diretrizes Jurídicas | RN19 | **CT-M4-08:** Auditar retenção mínima por 5 anos (1.825 dias) e proteção ativa contra rotinas de expurgo. |
-| **RF17** | OE4 | CAR-07 | Feedback FB-04, Reunião 04 | RN15 | **CT-M4-09:** Solicitar recuperação de senha e validar envio do link com validade de 30 minutos e uso único, sem revelar a existência do e-mail. |
+| **RF17** | OE4 | CAR-07 | Feedback FB-04, Reunião 04 | RN15 | **CT-M4-09:** Validar o envio do link de primeiro acesso após o cadastro de um colaborador autorizado (RF01), a ativação da conta e a definição da senha inicial. Testar também a recuperação de senha esquecida, verificando a validade de 30 minutos, o uso único dos links e a ausência de exposição da existência de contas nas respostas públicas. |
 | **RF18** | OE4 | CAR-07 | Feedback FB-05, Reunião 04 | RN15 | **CT-M4-10:** Encerrar a sessão manualmente e validar invalidação imediata do token e redirecionamento para a tela de login. |
 | **RNF17** | OE4 | CAR-08 | Feedback FB-08, Segurança de Infraestrutura | — | **CT-M4-11:** Executar o backup diário, verificar a integridade e restaurar em ambiente de teste em até 4 horas, confirmando perda máxima de 24 horas de dados e retenção de 30 dias. |
 | **RF23** | OE4 | CAR-07 | Reunião 05, Políticas de Segurança | RN20 | **CT-M4-12:** Simular 5 tentativas de login inválidas em 15 minutos e validar bloqueio temporário de 30 minutos da conta. |
