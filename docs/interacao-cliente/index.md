@@ -144,27 +144,6 @@ Nesta seção são detalhados os canais oficiais de comunicação, a frequência
   <li>Havendo divergência de regras, o ciclo entra na janela dedicada de correções; caso contrário, a funcionalidade é homologada para release.</li>
 </ul>
 
-<h4>5. Sessões de Validação Realizadas</h4>
-
-<table>
-  <thead>
-    <tr><th>Data</th><th>Artefato avaliado</th><th>Condução e avaliação</th><th>Resultado</th><th>Registro</th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>02/10/2026</td>
-      <td><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39" target="_blank" rel="noopener noreferrer">Protótipo de alta fidelidade no Figma</a> (Incremento 1)</td>
-      <td>Conduzida por Eric Araújo; avaliada por Maria Beatryz, presencialmente</td>
-      <td>Aprovado sem alterações; validação no frontend navegável pendente para o DoR</td>
-      <td><a href="../atas/reuniao-06/">Ata 06</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>
-  A primeira sessão foi realizada sobre o protótipo no Figma, e não no frontend, porque o frontend navegável ainda não estava pronto. O ciclo completo e o desvio em relação à dinâmica acima estão descritos na <a href="../estrategias-esw/#execucao-do-design-do-usuario-no-incremento-1">Execução do Design do Usuário no Incremento 1</a> (Capítulo 4).
-</p>
-
 </div>
 <div class="split-layout-right">
 
@@ -198,4 +177,3 @@ flowchart TD
 | `1.1` | 07/09/2026 | Detalhamento dos ritos sociotécnicos e matriz de canais de comunicação | Eric Araújo, Gustavo | Matheus Ribeiro Szervinsk |
 | `2.0` | 15/09/2026 | Unificação integral dos artefatos 7.1 a 7.3 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `2.1` | 21/09/2026 | Refinamento metodológico do fluxo de validação (UI-First): base conceitual no Figma, estabelecimento ágil dos designs via Frontend com mocks e implementação posterior da lógica de backend e persistência após validação do DoR | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `2.2` | 28/10/2026 | Inclusão das sessões de validação realizadas: validação presencial do protótipo do Incremento 1 no Figma em 02/10/2026, com link para o protótipo, a Ata 06 e o ciclo descrito no Capítulo 4. | Paulo Nery | — |
