@@ -80,6 +80,10 @@ nav:
   - 'Capítulo 7 - Interação com Cliente': interacao-cliente/index.md
   - 'Capítulo 8 - Requisitos':
       - 'Especificação de Requisitos': requisitos/index.md
+      - 'Módulo 1 - Dados e Campo': requisitos/modulo-1.md
+      - 'Módulo 2 - Gestão Financeira': requisitos/modulo-2.md
+      - 'Módulo 3 - Custos por Contrato': requisitos/modulo-3.md
+      - 'Módulo 4 - Segurança e Governança': requisitos/modulo-4.md
       - 'Priorização e MVP': requisitos/priorizacao.md
       - 'Feedback da Avaliação em Pares': requisitos/feedback.md
   - 'Capítulo 9 - DoR e DoD': dor-dod/index.md
