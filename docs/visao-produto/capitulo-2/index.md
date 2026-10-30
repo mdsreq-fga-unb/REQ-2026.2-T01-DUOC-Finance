@@ -9,7 +9,7 @@ Este capítulo formaliza a visão de produto do DUOC Finance. Ele descreve como 
 A definição da proposta de solução apoia-se nas seguintes especificações estruturadas:
 
 *   **Declaração de Posição e Objetivos do Produto:** Síntese estratégica no padrão canônico (Para/Que/Diferente de/Nosso produto) e metas operacionais desdobradas na Pirâmide de Abstração.
-*   **Características do Produto (CARs):** Mapeamento e rastreabilidade modular em cards (CAR-01 a CAR-12) subordinados aos objetivos de negócio e vinculados ao MVP.
+*   **Características do Produto (CARs):** Mapeamento e rastreabilidade modular em cards (CAR-01 a CAR-12) subordinados aos objetivos de negócio e classificados por fase de entrega (MVP ou Fase 2).
 *   **Tecnologias a Serem Utilizadas e Arquitetura:** Definição fundamentada da stack tecnológica, banco de dados e arquitetura de implantação.
 *   **Pesquisa de Mercado e Análise Competitiva:** Mapeamento de soluções similares de prateleira e posicionamento do diferencial da solução.
 *   **Viabilidade da Proposta (Análise do MVP):** Avaliação pragmática do cronograma, competências técnicas e mitigação de riscos de projeto.
@@ -34,7 +34,7 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 
     * **Natureza:** Operacional e Cadastral
     * **Valor de Negócio:** Assegura unicidade e integridade aos dados corporativos, eliminando redundâncias e retrabalho gerados por planilhas paralelas e envios em canais informais.
-    * **Características Relacionadas:** [CAR-01](#car-01), [CAR-02](#car-02) (Principais); CAR-03, CAR-05, CAR-07 (Apoio); [CAR-09](#car-09), [CAR-10](#car-10), [CAR-11](#car-11), [CAR-12](#car-12) (Integrações Externas).
+    * **Características Relacionadas:** [CAR-01](#car-01), [CAR-02](#car-02) (Principais); CAR-05, CAR-07 (Apoio); [CAR-09](#car-09), [CAR-10](#car-10), [CAR-11](#car-11), [CAR-12](#car-12) (Integrações Externas).
 
 <a id="oe2-aumentar-a-eficiencia-administrativo-financeira"></a>
 <a id="oe2-eficiencia-e-otimizacao-administrativo-financeira"></a>
@@ -42,7 +42,7 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 
     * **Natureza:** Tática e Operacional
     * **Valor de Negócio:** Reduz o tempo de processamento e consolida rotinas financeiras e reembolsos com rapidez e exatidão, mitigando erros manuais e eliminando custos operacionais invisíveis.
-    * **Características Relacionadas:** [CAR-03](#car-03), [CAR-04](#car-04) (Principais); CAR-01, CAR-06, CAR-08 (Apoio).
+    * **Características Relacionadas:** [CAR-03](#car-03), [CAR-04](#car-04) (Principais); CAR-01, CAR-06, CAR-08, CAR-09, CAR-10 (Apoio).
 
 <a id="oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato"></a>
 <a id="oe3-inteligencia-de-custos-e-rentabilidade-por-contrato"></a>
@@ -58,14 +58,29 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 
     * **Natureza:** Governança Corporativa e Conformidade
     * **Valor de Negócio:** Garante a integridade, confidencialidade e segregação de acesso sobre registros de pessoal e dados financeiros confidenciais, resguardando a privacidade e blindando a organização.
-    * **Características Relacionadas:** [CAR-07](#car-07), [CAR-08](#car-08) (Principais); CAR-01, CAR-03 (Apoio).
+    * **Características Relacionadas:** [CAR-07](#car-07), [CAR-08](#car-08) (Principais); CAR-03 (Apoio).
 
 ---
 
 <a id="23-caracteristicas-do-produto-car"></a>
 ## Características do Produto (CAR)
 
-As características do produto descrevem as capacidades funcionais do **DUOC Finance** no escopo do MVP, mapeadas diretamente aos Objetivos Específicos do negócio.
+As características do produto descrevem as capacidades funcionais do **DUOC Finance**, mapeadas diretamente aos Objetivos Específicos do negócio. Nem todas pertencem à primeira release: cada característica é classificada por fase de entrega conforme o catálogo de requisitos do [Capítulo 8](../../requisitos/index.md).
+
+| CAR | Fase | Base da classificação |
+| :---: | :--- | :--- |
+| CAR-01 | MVP | RF01, RF02, RF03, RF25 e RF26 no MVP |
+| CAR-02 | MVP | RF04, RF19, RF22, RF32 e RF35 no MVP |
+| CAR-03 | MVP (parcial) | RF05, RF06 e RF27 no MVP; RF21 (estorno) evolutivo |
+| CAR-04 | MVP | RF07, RF08, RF28 e RF29 no MVP |
+| CAR-05 | MVP (parcial) | RF09, RF10 e RF33 no MVP; RF30 evolutivo |
+| CAR-06 | MVP (parcial) | RF11 e RF34 no MVP; RF12 e RF31 evolutivos |
+| CAR-07 | MVP (parcial) | RF13, RF14, RF17, RF18 e RF23 no MVP; RF24 evolutivo |
+| CAR-08 | MVP (infraestrutura) | RNF15 a RNF18 e RNF20 no MVP; telas RF15 e RF16 na Fase 2 |
+| CAR-09 | Fase 2 | RF20 evolutivo |
+| CAR-10 | Fase 2 | RF36 evolutivo |
+| CAR-11 | Fase 2 | Evolutiva, sem RF ativo |
+| CAR-12 | Fase 2 | Evolutiva, sem RF ativo |
 
 ### Módulo de Padronização e Unificação de Dados (Suporte a OE1)
 
@@ -94,7 +109,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
     * **Nota de Escopo:** A característica contempla também o estorno formal de fechamentos já homologados, mediante justificativa auditável, como único caminho para retificar lotes fechados (ver RF21 e RN08 no [Capítulo 8](../../requisitos/index.md)).
     * **OEs Relacionadas:**
         * **OE Principal:** [OE2: Aumentar a Eficiência Administrativo-Financeira](#oe2-aumentar-a-eficiencia-administrativo-financeira)
-        * **Contribuição Secundária:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
+        * **Contribuição Secundária:** [OE4: Garantir Segurança e Governança de Dados](#oe4-garantir-seguranca-e-governanca-de-dados)
 
 <a id="car-04"></a>
 ??? note "CAR-04: Fluxo Digital de Prestação de Contas e Reembolsos"
@@ -158,6 +173,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
     * **Nota de Escopo:** Esta característica contempla a exportação operacional de dados consolidados em planilha (CSV/XLSX), especificada formalmente no [Capítulo 8](../../requisitos/index.md) como **RF36**. A funcionalidade foi alocada no backlog de evolução (Fase 2 / pós-MVP), preservando o compromisso de interoperabilidade com os sistemas contábeis da DUOC.
     * **OEs Relacionadas:**
         * **OE Principal:** [OE1: Padronizar e Unificar os Dados](#oe1-padronizar-e-unificar-os-dados)
+        * **Contribuição Secundária:** [OE2: Aumentar a Eficiência Administrativo-Financeira](#oe2-aumentar-a-eficiencia-administrativo-financeira)
 
 <a id="car-11"></a>
 ??? note "CAR-11: Integração com Sistemas BIM (Revit/ArchiCAD)"
@@ -420,3 +436,4 @@ O DUOC Finance deverá gerar benefícios tangíveis para a organização e para 
 | `2.3` | 28/09/2026 | Inclusão de nota de escopo em CAR-10 e de menção ao estorno de fechamentos em CAR-03, decorrentes da avaliação por pares dos requisitos (ver [Feedback dos Requisitos](../../requisitos/feedback.md)) | Matheus Saraiva Camargo | Matheus Szervinsk |
 | `2.4` | 12/10/2026 | Harmonização do escopo do MVP (seção 2.6) com deliberações da Ata 05 e Capítulo 8 (postergação de Shifton e telas analíticas de auditoria para Fase 2, mantendo logs atômicos no MVP); inclusão do RF36 na CAR-10 e notas em CAR-11/CAR-12; saneamento de benefícios e explicitação de Web App / PWA. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `2.5` | 12/10/2026 | Harmonização da Matriz Canônica de Papéis RBAC (4 perfis na arquitetura backend), eliminação de menções residuais a folha CLT/tempo real e adequação terminológica sobre dados pessoais confidenciais (LGPD Art. 6º, VII). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `2.6` | 29/10/2026 | Classificação das características (CAR) por fase de entrega (MVP ou Fase 2), esclarecendo o escopo das CAR-08 a CAR-12, conforme issue docente; harmonização das contribuições secundárias das CAR-03 e CAR-10 e das listas de apoio das OEs com a matriz-síntese do Capítulo 8. | Gustavo Bonifácio |  |
