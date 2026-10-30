@@ -6,7 +6,7 @@ Este capítulo formaliza os acordos de trabalho da equipe **Cascata Ágil** para
 <a id="definition-of-ready-dor"></a>
 ## Definition of Ready (DoR)
 
-O **DoR** é o portão de entrada para a construção de um item do backlog. Um item só pode avançar para a implementação de lógica de negócio e persistência quando **todos** os critérios abaixo forem atendidos e houver evidência registrada. A preparação e a prototipagem visual fazem parte do próprio ciclo: o DoR não substitui a validação UI-First, nem autoriza antecipar a construção de backend ou banco de dados.
+O **DoR** é o acordo de prontidão para iniciar a construção da lógica de negócio e da persistência definitiva de cada item do backlog; não é um requisito para iniciar qualquer atividade de desenvolvimento. No ciclo UI-First, a prototipagem do frontend com dados mockados e a validação da interface acontecem antes do DoR. A passagem para a implementação da lógica e da persistência só pode ocorrer quando **todos** os critérios abaixo forem atendidos e houver evidência registrada. Assim, o DoR não substitui a validação UI-First nem autoriza antecipar a construção de backend ou banco de dados.
 
 ### Checklist operacional de entrada
 
@@ -23,6 +23,24 @@ O **DoR** é o portão de entrada para a construção de um item do backlog. Um 
 | **Validação sociotécnica concluída** | Maria Beatryz conseguiu percorrer o fluxo e validar campos, linguagem, sequência e resultado visual antes da implementação da lógica e da persistência? Os ajustes solicitados foram incorporados ou acordados? | Aprovação ou ressalvas registradas em ata/sessão; link, data e pendências associadas ao item. |
 
 **Decisão do portão:** marque o item como **Pronto (DoR)** somente quando todas as respostas forem afirmativas e as evidências estiverem acessíveis à equipe. Se algum critério não for atendido, o item permanece em **Refinamento**; registre a dúvida, dependência ou ação pendente na Issue. A aprovação da tela não equivale à aprovação da lógica de negócio, que será verificada no DoD.
+
+### Registro de aplicação — US04 no Incremento 1 (Gestão Cadastral e RVT)
+
+O checklist foi aplicado documentalmente à história **US04 — Submeter Apontamento de Campo**, do Incremento 1. O registro abaixo considera as evidências disponíveis no repositório; “pendente” significa que não foi localizada comprovação documental, e não que a atividade necessariamente deixou de ocorrer.
+
+| Verificação | Estado | Evidência localizada ou pendência |
+| :--- | :--- | :--- |
+| **Problema e escopo claros** | Documentado | O [backlog](../backlog/index.md) descreve a US04 e o escopo controlado do apontamento de campo; o [cronograma](../cronograma/index.md) associa o Incremento 1 à gestão cadastral e ao RVT. |
+| **Sem ambiguidades impeditivas** | Parcial | A descrição e as regras do fluxo constam na US04 do [backlog](../backlog/index.md); falta evidência vinculada ao item de que dúvidas e decisões impeditivas foram confirmadas com a cliente. |
+| **Tamanho adequado ao incremento** | Documentado | A US04 está priorizada no MVP com escopo controlado e consta como fatiada para o MVP na avaliação INVEST do [backlog](../backlog/index.md). |
+| **História canônica e INVEST** | Documentado | A US04 está no formato “Como [papel], quero [ação], para [benefício]” e aparece como 100% INVEST no [backlog](../backlog/index.md). |
+| **Critérios de aceitação objetivos** | Documentado | A US04 lista CA01 a CA03 no [backlog](../backlog/index.md). Este registro confirma que os critérios estão especificados, não que foram executados ou aceitos. |
+| **Regras de negócio explícitas** | Parcial | O [backlog](../backlog/index.md) descreve status inicial, retificação em até cinco dias úteis e validação de horas; falta evidência vinculada ao item de confirmação das regras com a cliente. |
+| **Qualidade, dados e dependências** | Parcial | A US04 relaciona RF04 e requisitos não funcionais no [backlog](../backlog/index.md); não foi localizada evidência do contrato de dados preliminar associado ao item. |
+| **Base visual preparada** | Parcial | O [cronograma](../cronograma/index.md) registra o estabelecimento de designs de tela de RVT e cadastros no Frontend; não foi localizado neste registro um link para o Figma ou para o preview navegável associado ao item. |
+| **Validação sociotécnica concluída** | Pendente | O [cronograma](../cronograma/index.md) registra a janela prevista de validação em 02/10/2026 e informa que não há comprovação do aceite nas [Atas 01 a 05](../atas/index.md). |
+
+**Decisão registrada:** **a prontidão da US04 não está comprovada; não liberar como Pronto (DoR) com as evidências atualmente localizadas**. Para este registro, a história fica em **Refinamento** até que sejam vinculados a ela o aceite ou as ressalvas da interface e as demais evidências pendentes, especialmente o contrato de dados preliminar e o link do protótipo. Esta é uma avaliação documental, não uma confirmação do estado histórico no GitHub Projects, e deve ser atualizada caso novas evidências sejam registradas.
 
 ### Perguntas rápidas para refinamento
 
@@ -102,3 +120,5 @@ A definição do DoD está estabelecida neste capítulo. **Até esta revisão, n
 | `1.8` | 28/10/2026 | Esclarecimento do estado representado por Done: exige homologação aceita e não implica publicação em produção. | Giovana Ferreira| Pendente de revisão |
 | `1.9` | 28/10/2026 | Definição de procedimento viável de inspeção por pares inspirado em Fagan e do registro comprobatório no PR. | Giovana Ferreira | Pendente de revisão |
 | `2.0` | 28/10/2026 | Registro de que o DoD está definido, mas sua aplicação no Incremento 1 ainda não está evidenciada. | Giovana Ferreira | Pendente de revisão |
+| `1.6` | 28/10/2026 | Esclarecimento de que o DoR é o acordo de prontidão para lógica e persistência após a prototipagem frontend UI-First. | Giovana Ferreira Santos | Pendente de revisão |
+| `1.7` | 28/10/2026 | Registro da aplicação documental do checklist DoR à US04 no Incremento 1, com evidências disponíveis, pendências e decisão de prontidão. | Giovana Ferreira Santos | Pendente de revisão |
