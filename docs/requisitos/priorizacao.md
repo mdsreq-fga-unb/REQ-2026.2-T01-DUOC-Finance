@@ -2,7 +2,7 @@
 
 Este documento consolida a estratégia integrada de priorização do sistema **DUOC Finance**, articulando os **Requisitos Funcionais (RF)** e **Requisitos Não Funcionais (RNF)** sob duas perspectivas complementares e interdependentes:
 
-1. **Valor de Negócio:** avaliado com a participação direta da cliente parceira **Maria Beatryz Vieira de Sousa** (Auxiliar-Administradora da DUOC Arquitetura e Engenharia), formalizado na [Ata da Reunião 05 (24/09/2026)](../atas/reuniao-05.md). Para os requisitos incorporados ou redefinidos após essa sessão, a classificação de valor apresentada neste documento é **preliminar** e deverá ser ratificada em validação posterior com a cliente.
+1. **Valor de Negócio:** estimado pela equipe a partir do diagnóstico, das informações de negócio registradas na [Ata da Reunião 01](../atas/reuniao-01.md) e da especificação vigente. A [Reunião 05](../atas/reuniao-05.md) foi um alinhamento interno: suas decisões de priorização não representam aceite da cliente. A classificação de valor deste documento, inclusive a do núcleo discutido nessa reunião, permanece **pendente de ratificação formal** por Maria Beatryz.
 2. **Esforço Técnico:** avaliado pela equipe técnica do projeto (**Cascata Ágil**), considerando esforço em horas, complexidade arquitetural e lacuna de capacidade técnica.
 
 Os resultados dessas avaliações são cruzados na **Matriz 4 × 4 (Valor de Negócio × Esforço Técnico)**, fornecendo o embasamento analítico para a delimitação da linha de corte do **Produto Mínimo Viável (MVP)**, o tratamento dos requisitos de alto valor e alto esforço, a vinculação dos atributos de qualidade (RNFs) e a evolução controlada do escopo. Este artefato subsidia diretamente tanto a especificação dos [Requisitos de Software](index.md) quanto a gestão do [Backlog do Produto e MVP](../backlog/index.md#priorizacao-do-backlog-e-linha-de-corte-do-mvp), atendendo à Seção 10.2 do Template Oficial da disciplina.
@@ -42,7 +42,7 @@ Os parâmetros quantitativos abaixo alimentam as dimensões **D2** e **D4** (e s
 
 ### Escala de Valor de Negócio (1 a 4)
 
-Para tornar a avaliação auditável e comparável, o valor de cada requisito é expresso em uma **escala quantitativa de 1 a 4**. Os **pesos de valor permanecem os previstos e validados com a cliente** na Reunião 05; não há classificação categórica adicional: a priorização decorre exclusivamente do cruzamento **Valor de Negócio × Esforço Técnico** ([Matriz 4 × 4](#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico)).
+Para tornar a avaliação auditável e comparável, o valor de cada requisito é expresso em uma **escala quantitativa de 1 a 4**. Os pesos e as notas foram estimados pela equipe e discutidos internamente na Reunião 05; Não há classificação categórica adicional: a priorização decorre exclusivamente do cruzamento **Valor de Negócio × Esforço Técnico** ([Matriz 4 × 4](#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico)).
 
 | Pontuação | Nível de Valor | Interpretação e Impacto no Negócio | Diretriz Operacional para o MVP |
 | :---: | :---: | :--- | :--- |
@@ -62,7 +62,7 @@ As notas de 1 a 4 acima são atribuídas à luz das quatro dimensões abaixo, qu
 | **D3 — Risco jurídico-trabalhista, fiscal e LGPD** | Ausência gera exposição direta e imediata: reembolso sem comprovante fiscal (RN06), acesso sem autenticação a dados pessoais e bancários (RN15, RN16) ou lançamento financeiro sem base cadastral válida (RN01, RN03). | Controle preventivo ou de rastreabilidade que reduz a probabilidade ou o impacto do risco (ex.: RN04, RN14, RN23). | Risco indireto ou residual, com controle compensatório existente (ex.: gravação de logs pelo backend, RN19). | Risco tratável por suporte técnico pontual. |
 | **D4 — Frequência de operação** | Contínua: a cada apontamento, transação ou acesso, ou pré-requisito de todos os perfis. | Recorrente: por solicitação, por competência ou por evento de cadastro. | Ocasional: análise gerencial periódica ou política de manutenção. | Eventual ou de exceção. |
 
-**Regra de consolidação:** a nota final é definida pelo **maior grau atingido entre D1 e D3** (critérios eliminatórios, pois representam bloqueio de processo ou exposição de risco). As dimensões **D2 e D4** funcionam como critérios de ajuste: podem confirmar a nota ou deslocá-la em, no máximo, 1 ponto entre notas adjacentes quando divergirem de forma consistente. O resultado é correspondente aos níveis da escala acima e define o **eixo vertical** da Matriz 4 × 4. A rubrica é um instrumento de **reprodutibilidade e revisão**: as notas já validadas com a cliente na Reunião 05 permanecem inalteradas, e as notas dos requisitos posteriores seguem preliminares até ratificação.
+**Regra de consolidação:** a nota final é definida pelo **maior grau atingido entre D1 e D3** (critérios eliminatórios, pois representam bloqueio de processo ou exposição de risco). As dimensões **D2 e D4** funcionam como critérios de ajuste: podem confirmar a nota ou deslocá-la em, no máximo, 1 ponto entre notas adjacentes quando divergirem de forma consistente. O resultado corresponde aos níveis da escala acima e define o **eixo vertical** da Matriz 4 × 4. A rubrica é um instrumento de **reprodutibilidade e revisão**;
 
 #### Rastreabilidade dos Gargalos (TR) para os Requisitos
 
@@ -198,7 +198,7 @@ Para viabilizar o cruzamento na **Matriz 4 × 4**, a média decimal é convertid
 <a id="tabela-consolidada-das-avaliacoes"></a>
 ## Tabela Consolidada das Avaliações
 
-A tabela a seguir consolida as avaliações de **todos os 36 Requisitos Funcionais** da especificação (RF01 a RF36), integrando o **Valor de Negócio**, a justificativa operacional, as três dimensões técnicas e o **Esforço Técnico Consolidado**. Para os requisitos adicionados ou redefinidos após a Reunião 05 (RF22 a RF36), a classificação de valor é preliminar e deverá ser ratificada em validação posterior com a cliente. As horas, notas e médias desta tabela são a **fonte única de estimativa** do projeto: o [Backlog do Produto](../backlog/index.md#tabela-consolidada-de-priorizacao) e os cartões das histórias reproduzem esses valores sem alteração.
+A tabela a seguir consolida as avaliações da equipe para **todos os 36 Requisitos Funcionais** da especificação (RF01 a RF36), integrando o **Valor de Negócio**, a justificativa operacional, as três dimensões técnicas e o **Esforço Técnico Consolidado**. Todas as notas de valor e a linha de corte são propostas internas e estão ratificadas pela cliente; os requisitos adicionados ou redefinidos após a Reunião 05 também são preliminares. Os requisitos marcados com **‡** (RF32 a RF36) são **complementares**: foram avaliados e posicionados na matriz, mas não compõem a linha de corte do backlog (ver [Requisitos Complementares](#requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte)).
 
 | Código | Requisito Funcional | OE / CAR | Valor Negócio | Justificativa Operacional / de Negócio | Esforço (h) / Nota | Complex. | Lacuna | Média Consolidada | Esforço Consolidado |
 | :---: | :--- | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -490,9 +490,9 @@ Onde `c` (0 a k−1) é a coluna e `r` (0 a m−1) é a linha do requisito na gr
 <a id="8-10-definicao-dos-requisitos-funcionais-do-mvp"></a>
 <a id="105-definicao-dos-requisitos-funcionais-do-mvp"></a>
 <a id="definicao-dos-requisitos-funcionais-do-mvp"></a>
-## Definição dos Requisitos Funcionais do MVP
+## Proposta de Definição dos Requisitos Funcionais do MVP
 
-A delimitação do Produto Mínimo Viável não se resumiu a agrupar funcionalidades fáceis. O corte considerou a formação de um **fluxo operacional minimamente completo, coerente e autossuficiente**, capaz de sanar as maiores dores da DUOC no primeiro ciclo de uso e, ao mesmo tempo, manter explícita a distinção entre itens já validados com a cliente e refinamentos posteriores sujeitos à ratificação.
+A delimitação do Produto Mínimo Viável não se resumiu a agrupar funcionalidades fáceis. O corte considerou a formação de um **fluxo operacional minimamente completo, coerente e autossuficiente**, capaz de sanar as maiores dores da DUOC no primeiro ciclo de uso. A linha de corte é uma decisão interna da equipe e da cliente; 
 
 ### Tratamento dos Requisitos de Alto Valor e Alto Esforço
 
@@ -504,11 +504,12 @@ Requisitos posicionados na combinação de **Valor 4 e Esforço 3** (ou Valor 3 
 | **RF05** | **Solicitar prévia de fechamento** | Consolidação de apontamentos e cálculo automático de diárias. | **Escopo concentrado:** a prévia utiliza as regras contratuais ativas, valores vigentes de diárias técnicas e comissões simplificadas (RN31), sem incorporar encargos e provisões da folha CLT mantidos nos sistemas contábeis externos. |
 | **RF09** | **Apropriar custos operacionais** | Múltiplas transações vinculando despesas a contratos e centros de custo. | **Apropriação direta:** o motor vincula os lotes homologados de diárias e reembolsos diretamente ao contrato ativo, deixando comparativos históricos e alertas orçamentários avançados para a evolução do produto. |
 
-### Lista Consolidada dos Requisitos Funcionais do MVP
+<a id="lista-consolidada-dos-requisitos-funcionais-do-mvp"></a>
+### Lista Proposta de Requisitos Funcionais do MVP
 
 A linha de corte consolidada contempla **27 dos 36 Requisitos Funcionais do backlog (75,0%)**, cobrindo os fluxos essenciais de governança, cadastro, campo (envio, retificação e homologação), fechamento, prestação de contas, contratos, centros de custo e apropriação. Os itens incorporados ou redefinidos após a Reunião 05 permanecem sujeitos à ratificação formal da cliente.
 
-| RF | Requisito Funcional | Módulo / OE | CAR | Valor | Esforço | Justificativa de Inclusão no MVP |
+| RF | Requisito Funcional | Módulo / OE | CAR | Valor | Esforço | Justificativa de Inclusão na Proposta |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- |
 | **RF01** | Cadastrar colaborador | Módulo 1 (OE1) | CAR-01 | **4** | **2** | Base unificada indispensável para apontamentos e rotinas financeiras. |
 | **RF02** | Atualizar cadastro de colaborador | Módulo 1 (OE1) | CAR-01 | **3** | **2** | Mantém os dados cadastrais e bancários atualizados. |
@@ -538,7 +539,8 @@ A linha de corte consolidada contempla **27 dos 36 Requisitos Funcionais do back
 | **RF18** | Encerrar sessão manualmente | Módulo 4 (OE4) | CAR-07 | **3** | **1** | Permite invalidar imediatamente a sessão ativa. |
 | **RF23** | Bloquear acesso após tentativas falhas consecutivas | Módulo 4 (OE4) | CAR-07 | **3** | **2** | Reduz risco de ataques de força bruta. |
 
-### Requisitos Funcionais Postergados (Backlog Pós-MVP)
+<a id="requisitos-funcionais-postergados-backlog-pos-mvp"></a>
+### Requisitos Funcionais Postergados na Proposta (Backlog Pós-MVP)
 
 Os **9 requisitos** abaixo ficam alocados para a **Fase 2 (Pós-MVP)** ou release posterior:
 
@@ -612,34 +614,27 @@ Cada um dos **20 RNFs** especificados no [Capítulo 8: Requisitos de Software](i
 <a id="8-12-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
 <a id="107-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
 <a id="evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
-## Evidência e Registro da Validação do MVP com o Cliente
+## Registro da Priorização Interna e Pendência de Validação com a Cliente
 
-A Reunião 05 registrou a validação do núcleo funcional disponível em **24/09/2026**. O escopo foi posteriormente refinado pela equipe com novos requisitos e com a redefinição de alguns itens; essas alterações posteriores permanecem explicitamente marcadas como **preliminares** até nova ratificação da cliente.
+A [Ata da Reunião 05](../atas/reuniao-05.md) registra uma sessão **interna da equipe**, realizada em 24/09/2026, para revisar requisitos, discutir a matriz 4 × 4 e propor o escopo do MVP. A ata não registra o aceite da cliente. 
 
-### Ficha Técnica da Sessão de Validação
+### Registro da sessão interna
 
-- **Data e Horário:** 24 de setembro de 2026, das 19h30 às 20h45 (GMT-03:00).
-- **Formato:** reunião síncrona por videoconferência via Google Meet, conforme registro interno da equipe.
-- **Participantes:**
-    - **Representante da Cliente Parceira:** Maria Beatryz Vieira de Sousa (Auxiliar-Administradora da DUOC Arquitetura e Engenharia).
-    - **Membros da Equipe Cascata Ágil:** Eric Araújo (Product Owner e condução da sessão), Matheus Ribeiro (Scrum Master e Co-PO), Giovana Ferreira (Engenheira Frontend e UI/UX), Paulo Nery (Engenheiro Backend), Matheus Saraiva Camargo (Arquiteto de Software e Banco de Dados), Gustavo Bonifácio (QA e Testes) e Lucas Zanetti (Garantia de Qualidade).
-- **Registro Detalhado:** a ata formal com os debates e deliberações encontra-se publicada na [Ata da Reunião 05](../atas/reuniao-05.md).
+- **Data:** 24 de setembro de 2026.
+- **Formato e natureza:** reunião síncrona interna da equipe, via Google Meet.
+- **Participantes:** integrantes da equipe Cascata Ágil relacionados na [Ata da Reunião 05](../atas/reuniao-05.md).
+- **Evidência:** [Ata da Reunião 05 — Priorização de Requisitos, Matriz 4 × 4 e MVP](../atas/reuniao-05.md).
 
-### Quadro de Deliberações e Aceite de Escopo
+### Deliberações internas e status de validação
 
-A Reunião 05 registrou a validação do núcleo funcional existente naquele momento. Requisitos incorporados posteriormente por refinamento da especificação — incluindo a redefinição do RF22 e os RF23 a RF36 — possuem classificação preliminar neste capítulo e deverão ser ratificados em uma próxima sessão de validação com a cliente. O quadro a seguir preserva as decisões efetivamente registradas em 24/09/2026 e esclarece alterações posteriores de identificação quando necessário.
-
-| Tópico da Validação | Decisão Registrada | Fundamentação e Rastreabilidade |
-| :--- | :---: | :--- |
-| **Aprovação do Núcleo do MVP** | **Aprovado com Ressalvas** | A cliente confirmou que os **16 RFs então selecionados** atacavam as dores centrais de conferência manual de diárias e extravio de comprovantes fiscais, com continuidade do refinamento documental pela equipe. |
-| **Inclusão de Indicadores de Custos no MVP (RF11)** | **Aprovado pela Cliente** | Maria Beatryz alinhou a inclusão da filtragem de indicadores de custos por obra (**RF11**) no escopo prioritário. O monitoramento orçamentário avançado (**RF12**) permaneceu postergado. |
-| **Rebaixamento do Requisito de Estorno (RF21)** | **Consensuado** | O grupo acordou reduzir a prioridade e retirar o estorno financeiro (**RF21**) do MVP, mantendo tratamento operacional assistido para exceções no primeiro ciclo. |
-| **Postergação do Modo Offline (RNF01)** | **Consensuado** | A operação *offline* completa (**RNF01**) foi postergada para a fase evolutiva; o requisito permanece documentado, mas não bloqueia o MVP. |
-| **Postergação da Exportação de Auditoria (RF16)** | **Aprovado pela Cliente** | Ficou acordado manter a exportação de relatórios de auditoria (**RF16**) fora do escopo inicial, preservando a gravação obrigatória dos logs no backend. |
-| **Postergação da Importação de Presenças Externas (RF20)** | **Aprovado pela Cliente** | A importação de presenças homologadas do *Shifton* (**RF20**) não foi considerada impeditiva para o primeiro ciclo, pois o RVT próprio atende à coleta inicial. A exportação de espelhos de frequência, presente em versão anterior da especificação sob o identificador RF22, deixou de compor o catálogo atual; o **RF22 atual** refere-se a evidências e geolocalização do apontamento. |
-| **Ajuste no Fluxo de Reembolso** | **Consensuado** | A cliente solicitou tratamento rigoroso para comprovantes de reembolso, refletido na regra **RN06** e no **RNF07**. |
-| **Homologação dos Atributos de Qualidade e Segurança discutidos na sessão** | **Homologado** | Foram validados como relevantes ao MVP a exatidão monetária (**RNF06**), a criptografia em repouso e trânsito (**RNF03**), a expiração de sessão (**RNF13**) e o backup diário (**RNF17**). |
-
+| Tópico | Decisão interna registrada | Status perante a cliente | Evidência |
+| :--- | :--- | :--- | :--- |
+| **Linha de corte do MVP** | Escopo aprovado pela equipe com ressalvas, sujeito a revisão documental posterior. | **Pendente de validação** | [Ata 05, decisão D5](../atas/reuniao-05.md#decisao-d5-mvp) e [linha de corte do backlog](../backlog/index.md#priorizacao-do-backlog-e-linha-de-corte-do-mvp). |
+| **Inclusão de indicadores de custos (RF11)** | Equipe decidiu incluir a filtragem de indicadores por obra no escopo prioritário do MVP. | **Pendente de validação** | [Ata 05, decisão D1](../atas/reuniao-05.md#decisao-d1-rf11) e [especificação do RF11](index.md#oe3-inteligencia-de-custos-por-contrato). |
+| **Rebaixamento do estorno (RF21)** | Equipe decidiu retirar o RF21 do MVP e manter tratamento operacional assistido para exceções. | **Pendente de validação** | [Ata 05, decisão D2](../atas/reuniao-05.md#decisao-d2-rf21) e [backlog geral](../backlog/index.md#backlog-geral). |
+| **Postergação do modo offline (RNF01)** | Equipe classificou a operação offline completa como evolutiva. | **Pendente de validação** | [Ata 05, decisão D4](../atas/reuniao-05.md#decisao-d4-rnf01) e [classificação dos RNFs](#tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp). |
+| **Exportação de auditoria (RF16)** | Equipe decidiu manter a funcionalidade fora do escopo inicial do MVP. | **Pendente de validação** | [Ata 05, decisão D3](../atas/reuniao-05.md#decisao-d3-rf16) e [backlog geral](../backlog/index.md#backlog-geral). |
+| **Requisitos de segurança e infraestrutura** | Equipe registrou como mandatórios no MVP os itens discutidos na ata. | **Pendente de validação** | [Ata 05, decisão D6](../atas/reuniao-05.md#decisao-d6-seguranca-infraestrutura) e [classificação dos RNFs](#tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp). |
 ---
 
 ## Histórico de Versão
@@ -666,3 +661,4 @@ A Reunião 05 registrou a validação do núcleo funcional existente naquele mom
 | `3.2` | 13/10/2026 | Remoção de caixas de alerta (enquadramento metodológico, escopo da linha de corte e auditabilidade) com integração direta à narrativa fluida do texto e estilização visual das fórmulas matemáticas de normalização e dispersão da Matriz 4×4. | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `3.3` | 13/10/2026 | Auditoria metodológica e padronização: alinhamento do RF24 ao padrão "Impor renovação periódica de senhas", adequação de critérios objetivos para RNF02, RNF05 e RNF18 na Tabela de Vinculação dos RNFs ao MVP e sincronização com o Capítulo 8. | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `3.4` | 28/10/2026 | Integração dos RF32 a RF36 à linha de corte em resposta à avaliação do backlog: eliminação da categoria de requisitos complementares; linha de corte aplicada aos 36 RFs (27 no MVP / 75,0%, com inclusão de RF32, RF33, RF34 e RF35; 9 pós-MVP / 25,0%, com inclusão de RF36); atualização da distribuição por nível de valor, da análise estratégica dos quadrantes e das listas do MVP e do backlog evolutivo; vínculo de RNF04 e RNF07 ao RF35; Tabela Consolidada declarada fonte única de estimativa para o Backlog. Nenhuma nota de valor ou de esforço foi alterada. | Paulo Nery | — |
+| `3.4` | 28/10/2026 | Correção da natureza da Reunião 05 como sessão interna; remoção de atribuições de aceite à cliente sem evidência; explicitação da pendência de ratificação do MVP e dos valores de negócio, com links para as deliberações e artefatos correspondentes. | Equipe Cascata Ágil | — |
