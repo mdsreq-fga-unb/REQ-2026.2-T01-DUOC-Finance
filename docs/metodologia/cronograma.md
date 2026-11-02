@@ -87,14 +87,14 @@ O diagrama a seguir detalha a dinâmica interna de cada Incremento RAD: o design
 
 ### Mapeamento das Características (CARs) aos Ciclos e Incrementos do Produto
 
-Para assegurar rastreabilidade inequívoca entre os Objetivos Específicos (OEs), a especificação atual de **31 requisitos funcionais (RF01 a RF31)** e **20 requisitos não funcionais (RNF01 a RNF20)**, as 8 Características centrais do produto ([CAR-01 a CAR-08](../visao-produto/solucao-proposta.md#car-01)) e as integrações externas ([CAR-09 a CAR-12](../visao-produto/solucao-proposta.md#car-09)), o escopo do DUOC Finance foi distribuído em incrementos evolutivos gerenciáveis, garantindo que os designs de interface sejam estabelecidos ágilmente via frontend, e o motor financeiro e os módulos críticos tenham sua lógica construída e verificada **antes da fase de transição (Cutover)**. Recursos de integração externa e análises avançadas não pertencentes ao MVP permanecem no backlog evolutivo:
+Para assegurar rastreabilidade inequívoca entre os Objetivos Específicos (OEs), a especificação atual de **40 requisitos funcionais (RF01 a RF40)** e **20 requisitos não funcionais (RNF01 a RNF20)**, as 8 Características centrais do produto ([CAR-01 a CAR-08](../visao-produto/solucao-proposta.md#car-01)) e as integrações externas ([CAR-09 a CAR-12](../visao-produto/solucao-proposta.md#car-09)), o escopo do DUOC Finance foi distribuído em incrementos evolutivos gerenciáveis, garantindo que os designs de interface sejam estabelecidos ágilmente via frontend, e o motor financeiro e os módulos críticos tenham sua lógica construída e verificada **antes da fase de transição (Cutover)**. Recursos de integração externa e análises avançadas não pertencentes ao MVP permanecem no backlog evolutivo:
 
 | Ciclo / Incremento RAD | Foco Arquitetural e de Domínio | Características Contempladas (CARs) | Atividades Metodológicas e Validações | Marco Externo Intersectante |
 | :--- | :--- | :--- | :--- | :---: |
 | **Ciclo 0: Concepção & Fundação**<br>*(Semanas 01 a 03 / Ago-Set)* | Diagnóstico de processos, viabilidade e governança | [CAR-01 a CAR-08](../visao-produto/solucao-proposta.md) *(Especificação preliminar)*<br>[CAR-09 a CAR-12](../visao-produto/solucao-proposta.md#car-09) *(Escopo técnico)* | - Contato exploratório inicial com a DUOC (19/08)<br>- Reunião 01 Oficial de Elicitação de Escopo e MVP (05/09)<br>- Reunião 02 de alinhamento interno (07/09) e Reunião 03 de apresentação gravada do PC1 (07/09)<br>- Rich Picture v2, Ishikawa 4M, Stakeholders e Mixer Board<br>- Estruturação do repositório *Docs as Code* no GitHub Pages | **Ponto de Controle 1**<br>*(publicação 08/09; apresentações 08 e 10/09)* |
-| **Incremento 1: Gestão Cadastral e RVT de Campo**<br>*(Semanas 04 a 07 / Set-Out)* | Base cadastral unificada, autenticação e apontamento de viagens em obras | [CAR-01: Gestão Cadastral Unificada](../visao-produto/solucao-proposta.md#car-01)<br>[CAR-02: Apontamento Móvel / RVT](../visao-produto/solucao-proposta.md#car-02)<br>[CAR-07: Controle de Acesso RBAC (Base)](../visao-produto/solucao-proposta.md#car-07) | - Elicitação aprofundada URPS+ e personas de campo<br>- Base visual e Design System no Figma; estabelecimento dos designs de tela (RVT e Cadastros) diretamente no Frontend (React/Tailwind)<br>- **Reunião 04 (17/09):** Retrospectiva interna da Unidade 1 e planejamento da Unidade 2<br>- **Reunião 05 (24/09):** Priorização interna MoSCoW/Matriz 4×4 e aprovação do MVP com ressalvas pela equipe<br>- **Reunião 06 (02/10):** validação presencial do protótipo no Figma com Maria Beatryz, aprovado sem alterações ([Ata 06](../governanca/atas/reuniao-06.md))<br>- Verificação do DoR do Incr. 1, condicionada à validação das telas no frontend navegável<br>- Codificação da lógica de regras cadastrais e persistência no Supabase | **Ponto de Controle 2**<br>*(publicação 13/10; apresentações 13 e 15/10)* |
+| **Incremento 1: Gestão Cadastral e RVT de Campo**<br>*(Semanas 04 a 07 / Set-Out)* | Base cadastral unificada, autenticação e apontamento de viagens em obras | [CAR-01: Gestão Cadastral Unificada](../visao-produto/solucao-proposta.md#car-01)<br>[CAR-02: Apontamento Móvel / RVT](../visao-produto/solucao-proposta.md#car-02)<br>[CAR-07: Controle de Acesso RBAC (Base)](../visao-produto/solucao-proposta.md#car-07) | - Elicitação aprofundada URPS+ e personas de campo<br>- Base visual e Design System no Figma; estabelecimento dos designs de tela (RVT e Cadastros) diretamente no Frontend (React/Tailwind)<br>- **Reunião 04 (17/09):** Retrospectiva interna da Unidade 1 e planejamento da Unidade 2<br>- **Reunião 05 (24/09):** Priorização interna pela Matriz 4×4 e aprovação do MVP com ressalvas pela equipe<br>- **Reunião 06 (02/10):** validação presencial do protótipo no Figma com Maria Beatryz, aprovado sem alterações ([Ata 06](../governanca/atas/reuniao-06.md))<br>- Verificação do DoR do Incr. 1, condicionada à validação das telas no frontend navegável<br>- Codificação da lógica de regras cadastrais e persistência no Supabase | **Ponto de Controle 2**<br>*(publicação 13/10; apresentações 13 e 15/10)* |
 | **Incremento 2: Motor Financeiro e Reembolsos**<br>*(Semanas 08 a 10 / Out-Nov)* | Apuração de diárias, fechamento de obras, conciliação e prestação de contas | [CAR-03: Motor Financeiro de Fechamento](../visao-produto/solucao-proposta.md#car-03)<br>[CAR-04: Prestação de Contas e Reembolsos](../visao-produto/solucao-proposta.md#car-04)<br>[CAR-08: Trilha de Auditoria (Logs)](../visao-produto/solucao-proposta.md#car-08) | - Desenho dos fluxos e telas de fechamento financeiro e reembolsos diretamente no Frontend (tendo o Figma como base)<br>- **Validação prevista no Frontend (23/10):** sessão com Maria Beatryz, sujeita a confirmação de agenda e registro de resultado<br>- Verificação do DoR após validação das telas e contratos de dados<br>- **Construção da lógica do Motor Financeiro (CAR-03):** codificação das regras de cálculo de diárias, adiantamentos e persistência com folga técnica<br>- Upload de comprovantes simulados e logs de auditoria<br>- Testes aritméticos com planilhas de controle da DUOC | *Transição entre PC2 e PC3* |
-| **Incremento 3: Custos por Contrato, Dashboards e Integrações**<br>*(Semanas 10 a 11 / Nov)* | Rateio de despesas por obra, painel gerencial e interoperabilidade | [CAR-05: Apropriação de Custos por Contrato](../visao-produto/solucao-proposta.md#car-05)<br>[CAR-06: Painel Analítico de Desvio Orçamentário](../visao-produto/solucao-proposta.md#car-06)<br>[CAR-09: Integração auditor.ia (Presença)](../visao-produto/solucao-proposta.md#car-09)<br>[CAR-10: Importação/Exportação ERP e CSV](../visao-produto/solucao-proposta.md#car-10) | - Construção dos módulos de rateio de custos por contrato<br>- Indicadores e filtros de custos do MVP (RF11); monitoramento orçamentário avançado no pós-MVP<br>- Estudos de conectores com dados sintéticos de auditor.ia e ERP, sujeitos à capacidade do backlog pós-MVP<br>- Inspeção estática de requisitos e código (Fagan)<br>- Matriz de Rastreabilidade Bidirecional (*Forward/Backward*)<br>- Deploy contínuo e integrado em *Staging* | **Ponto de Controle 3**<br>*(publicação 17/11; apresentações 17 e 19/11)* |
+| **Incremento 3: Custos por Contrato, Dashboards e Integrações**<br>*(Semanas 10 a 11 / Nov)* | Rateio de despesas por obra, painel gerencial e interoperabilidade | [CAR-05: Apropriação de Custos por Contrato](../visao-produto/solucao-proposta.md#car-05)<br>[CAR-06: Painel Analítico de Desvio Orçamentário](../visao-produto/solucao-proposta.md#car-06)<br>[CAR-09: Integração FLIT (Presença)](../visao-produto/solucao-proposta.md#car-09)<br>[CAR-10: Importação/Exportação ERP e CSV](../visao-produto/solucao-proposta.md#car-10) | - Construção dos módulos de rateio de custos por contrato<br>- Indicadores e filtros de custos do MVP (RF11); monitoramento orçamentário avançado no pós-MVP<br>- Estudos de conectores com dados sintéticos de FLIT e ERP, sujeitos à capacidade do backlog pós-MVP<br>- Inspeção estática de requisitos e código (Fagan)<br>- Matriz de Rastreabilidade Bidirecional (*Forward/Backward*)<br>- Deploy contínuo e integrado em *Staging* | **Ponto de Controle 3**<br>*(publicação 17/11; apresentações 17 e 19/11)* |
 | **Fase Final: Transição / Cutover, Estabilização e Aceite**<br>*(Semanas 12 e 13 / 20/11 a 02/12)* | Homologação final, UAT com a cliente, saneamento de defeitos e transição operacional | **CARs selecionadas para o MVP integradas para aceite** *(funcionalidades evolutivas permanecem no backlog)* | - *Code Freeze* operacional (20 a 23/11)<br>- **Sessão de UAT prevista (24/11):** agendamento e ata pendentes com Maria Beatryz<br>- **Janela Dedicada de Correção de Defeitos pós-UAT (25 a 27/11)**<br>- **Termo de Aceite Formal previsto (28/11), condicionado ao UAT e à assinatura da cliente**<br>- Transição operacional (*Cutover*), Manual do Usuário e capacitação<br>- Apresentação Final perante a banca e Retrospectiva | **Ponto de Controle 4**<br>*(publicação 01/12; apresentações 01 e 03/12)* |
 
 ---
@@ -480,7 +480,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
                 <div class="cell-top"><span class="cell-num">23</span></div>
                 <span class="event-chip active-phase">URPS+</span>
               </td>
-              <td class="day-u2 day-meet day-done" title="Reunião 05 — Priorização de Requisitos (MoSCoW), Matriz 4x4 e Alinhamento do MVP">
+              <td class="day-u2 day-meet day-done" title="Reunião 05 — Priorização de Requisitos (Matriz 4x4) e Alinhamento do MVP">
                 <div class="cell-top"><span class="cell-num">24</span></div>
                 <span class="event-chip meet-done">Reunião 05</span>
               </td>
@@ -580,8 +580,8 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
           <div class="month-event-left">
             <span class="event-date-badge done"><span class="ev-d">24</span><span class="ev-m">SET</span></span>
             <div class="event-info">
-              <div class="event-name">Reunião 05 Interna: Priorização MoSCoW, Matriz 4×4 e Alinhamento do MVP</div>
-              <div class="event-desc">Revisão e priorização de requisitos com MoSCoW e matriz 4x4. Inclusão de RF11 (indicadores de custo), rebaixamento de RF21 (estorno financeiro), exclusão de RF16 e postergação de RNF01 (modo offline). Aprovação interna do MVP com ressalvas e definição do subdomínio finance.doc.br na Vercel; o aceite direto da cliente não foi registrado nessa reunião. [Ver Ata 05](../governanca/atas/reuniao-05.md).</div>
+              <div class="event-name">Reunião 05 Interna: Priorização por Matriz 4×4 e Alinhamento do MVP</div>
+              <div class="event-desc">Revisão e priorização de requisitos com a Matriz 4×4 (Valor × Esforço). Inclusão de RF11 (indicadores de custo), rebaixamento de RF21 (estorno financeiro), exclusão de RF16 e postergação de RNF01 (modo offline). Aprovação interna do MVP com ressalvas e definição do subdomínio finance.doc.br na Vercel; o aceite direto da cliente não foi registrado nessa reunião. [Ver Ata 05](../governanca/atas/reuniao-05.md).</div>
             </div>
           </div>
           <span class="status-pill concluido">Realizada</span>
@@ -608,7 +608,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
           <span class="panel-month-phase">Incr. 1 (requisitos, designs e DoR) — publicação PC2 em 13/10; apresentações 13 e 15/10</span>
         </div>
         <div class="panel-month-badges">
-          <span class="status-pill andamento">Em andamento</span>
+          <span class="status-pill concluido">Período encerrado</span>
           <span class="milestone-badge">PC2: publicação 13/10; apresentações 13 e 15/10</span>
         </div>
       </div>
@@ -722,7 +722,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             <span class="event-date-badge milestone"><span class="ev-d">13</span><span class="ev-m">OUT</span></span>
             <div class="event-info">
               <div class="event-name">Ponto de Controle 2: Publicação e Primeiro Dia de Apresentações da Unidade 2</div>
-              <div class="event-desc">Prazo oficial de publicação até as 08h de 13/10; segundo dia de apresentações em 15/10. Entrega prevista: especificação URPS+ (36 RFs e 20 RNFs), backlog INVEST/MoSCoW e critérios DoR/DoD. DER e telas são acompanhados conforme evidências efetivamente concluídas. [Acessar Entrega 2](../entregas/entrega-2.md).</div>
+              <div class="event-desc">Prazo oficial de publicação até as 08h de 13/10; segundo dia de apresentações em 15/10. Entrega prevista: especificação URPS+ (40 RFs e 20 RNFs), backlog INVEST, priorização pela Matriz 4×4 e critérios DoR/DoD. DER e telas são acompanhados conforme evidências efetivamente concluídas. [Acessar Entrega 2](../entregas/entrega-2.md).</div>
             </div>
           </div>
           <span class="status-pill planejado">Marco de Entrega</span>
@@ -789,7 +789,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
               <td class="day-u3"><div class="cell-top"><span class="cell-num">8</span></div></td>
               <td class="day-u3" title="Apropriação de Custos por Contrato (CAR-05)"><div class="cell-top"><span class="cell-num">9</span></div></td>
               <td class="day-u3" title="Painel Analítico de Desvio Orçamentário (CAR-06)"><div class="cell-top"><span class="cell-num">10</span></div></td>
-              <td class="day-u3" title="Integrações externas (CAR-09 auditor.ia e CAR-10 CSV)"><div class="cell-top"><span class="cell-num">11</span></div></td>
+              <td class="day-u3" title="Integrações externas (CAR-09 FLIT e CAR-10 CSV)"><div class="cell-top"><span class="cell-num">11</span></div></td>
               <td class="day-u3" title="Deploy integrado em Staging na Vercel">
                 <div class="cell-top"><span class="cell-num">12</span></div>
                 <span class="event-chip active-phase">Staging Vercel</span>
@@ -1116,13 +1116,13 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
 
 === "Unidade 2 (Ponto de Controle 2)"
 
-    <div class="week-card status-andamento">
+    <div class="week-card status-concluido">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <span class="week-card-title">Marco Avaliativo 2: Unidade 2</span>
           <span class="week-card-period">15/09 a 15/10/2026 (entrega até 13/10 às 08h)</span>
         </div>
-        <span class="status-pill andamento">Em Desenvolvimento</span>
+        <span class="status-pill concluido">Concluído</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -1131,7 +1131,7 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
         </div>
         <div class="week-meta-item">
           <span class="week-meta-label">Validações com a Cliente e Reuniões</span>
-          <span class="week-meta-value">Reunião 04 interna (17/09 — retrospectiva e planejamento) • Reunião 05 interna (24/09 — MoSCoW/MVP com ressalvas) • Reunião 06 com a cliente (02/10 — validação presencial do protótipo no Figma, aprovado sem alterações)</span>
+          <span class="week-meta-value">Reunião 04 interna (17/09 — retrospectiva e planejamento) • Reunião 05 interna (24/09 — Matriz 4×4/MVP com ressalvas) • Reunião 06 com a cliente (02/10 — validação presencial do protótipo no Figma, aprovado sem alterações)</span>
         </div>
       </div>
       <div class="week-card-grid">
@@ -1144,7 +1144,7 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
             <li>Base visual e tokens no Figma; estabelecimento dos designs de tela diretamente no Frontend (React SPA) com dados mockados;</li>
             <li>Validação presencial do protótipo no Figma com Maria Beatryz em 02/10 (<a href="../governanca/atas/reuniao-06/">Ata 06</a>); a sessão no frontend navegável permanece como próximo passo antes do DoR;</li>
             <li>Decomposição em Histórias de Usuário <strong>INVEST</strong> com critérios de aceitação objetivos;</li>
-            <li>Priorização de Backlog usando <strong>MoSCoW</strong> e <strong>atendimento formal ao DoR do Incr. 1</strong> antes da codificação de lógica e banco;</li>
+            <li>Priorização de Backlog usando <strong>Matriz 4 × 4 (Valor × Esforço)</strong> e <strong>atendimento formal ao DoR do Incr. 1</strong> antes da codificação de lógica e banco;</li>
             <li>Modelagem Conceitual e Física de Dados (DER / Supabase / PostgreSQL) e arquitetura de dados sintéticos LGPD.</li>
           </ul>
         </div>
@@ -1192,7 +1192,7 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
             <li>Desenvolvimento do módulo de Apropriação de Custos por Contrato (CAR-05);</li>
             <li>Construção do Painel de indicadores e filtros de custos (RF11/CAR-06); desvio orçamentário avançado no pós-MVP;</li>
             <li>Implementação da Trilha de Auditoria imutável (CAR-08) e segregação RBAC (CAR-07);</li>
-            <li>Estudo de conectores evolutivos de presença via <em>auditor.ia</em> (CAR-09) e CSV de ERP (CAR-10), condicionado ao backlog pós-MVP;</li>
+            <li>Estudo de conectores evolutivos de presença via <em>FLIT</em> (CAR-09) e CSV de ERP (CAR-10), condicionado ao backlog pós-MVP;</li>
             <li>Verificação por inspeções estáticas (Checklists Fagan), testes unitários e CI na Vercel;</li>
             <li>Estruturação e preenchimento da Matriz de Rastreabilidade Bidirecional.</li>
           </ul>
@@ -1397,8 +1397,8 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
 
 === "Unidade 2: Incremento 1 — Design do Usuário & Prototipagem (Semanas 04 a 07)"
 
-    > **Período acadêmico:** 15/09 a 15/10/2026 • **Publicação PC2:** 13/10 antes das 08h • **Apresentações:** 13 e 15/10 (Em Desenvolvimento)<br>
-    > **Foco:** Engenharia de Requisitos aprofundada, base visual no Figma, estabelecimento ágil dos designs de interface no Frontend (React SPA), sessões de validação participativa com a cliente, priorização MoSCoW, modelagem de dados (DER) e atendimento estrito ao DoR antes de codificar a lógica por trás.
+    > **Período acadêmico:** 15/09 a 15/10/2026 • **Publicação PC2:** 13/10 antes das 08h • **Apresentações:** 13 e 15/10 (Concluído)<br>
+    > **Foco:** Engenharia de Requisitos aprofundada, base visual no Figma, estabelecimento ágil dos designs de interface no Frontend (React SPA), sessões de validação participativa com a cliente, priorização pela Matriz 4 × 4, modelagem de dados (DER) e atendimento estrito ao DoR antes de codificar a lógica por trás.
 
     <div class="week-card status-andamento">
       <div class="week-card-header">
@@ -1528,13 +1528,13 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
       </div>
     </div>
 
-    <div class="week-card status-planejado">
+    <div class="week-card status-concluido">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <span class="week-card-title">Semana 07</span>
           <span class="week-card-period">08/10 a 15/10/2026 (PC2 até 13/10, 08h)</span>
         </div>
-        <span class="status-pill andamento">Em andamento</span>
+        <span class="status-pill concluido">Período encerrado</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -1551,7 +1551,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
           <div class="week-section-title">Atividades Planejadas e Técnicas de ER</div>
           <ul>
             <li>Modelagem Conceitual de Dados (DER / Supabase) cobrindo colaboradores CLT, diaristas, contratos de obras e despesas de campo;</li>
-            <li>Setup do repositório da aplicação (Next.js/React + Supabase) e pipeline CI/CD na Vercel com carga de dados sintéticos;</li>
+            <li>Setup do repositório da aplicação (React SPA/NestJS + Supabase) e pipeline CI/CD na Vercel com carga de dados sintéticos;</li>
             <li>Início da implementação da lógica de backend por trás das telas validadas: regras de cadastro unificado (<a href="../visao-produto/solucao-proposta.md#car-01">CAR-01</a>) e autenticação RBAC base (<a href="../visao-produto/solucao-proposta.md#car-07">CAR-07</a>);</li>
             <li>Consolidação da documentação da Unidade 2 no MkDocs e gravação do vídeo do <strong>PC2, com publicação até 13/10/2026 às 08h</strong> e apresentações em 13 e 15/10.</li>
           </ul>
@@ -1714,7 +1714,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
           <div class="week-section-title">Atividades Planejadas e Técnicas de ER</div>
           <ul>
             <li>Construção do <strong>Painel Analítico de Custo Apropriado e Desvio Orçamentário por Projeto (<a href="../visao-produto/solucao-proposta.md#car-06">CAR-06</a>)</strong> com gráficos gerenciais de rentabilidade;</li>
-            <li>Desenvolvimento dos conectores preliminares: estudo de consumo de presença de <em>auditor.ia</em> (<a href="../visao-produto/solucao-proposta.md#car-09">CAR-09</a>) e importação/exportação CSV com ERPs legados (<a href="../visao-produto/solucao-proposta.md#car-10">CAR-10</a>);</li>
+            <li>Desenvolvimento dos conectores preliminares: estudo de consumo de presença de <em>FLIT</em> (<a href="../visao-produto/solucao-proposta.md#car-09">CAR-09</a>) e importação/exportação CSV com ERPs legados (<a href="../visao-produto/solucao-proposta.md#car-10">CAR-10</a>);</li>
             <li>Verificação de Software: Execução de inspeções estáticas de código e documentação por checklists (<strong>Inspeções Fagan</strong>);</li>
             <li>Estruturação e preenchimento da <strong>Matriz de Rastreabilidade Bidirecional</strong> (<em>Forward/Backward</em>);</li>
             <li>Deploy contínuo da solução completa integrada em ambiente de <strong>Staging na Vercel</strong>;</li>
@@ -1864,3 +1864,4 @@ O cronograma do DUOC Finance é um **artefato vivo** sujeito a refinamento cont�
 | `2.2` | 11/10/2026 | Auditoria cronológica do Capítulo 6 conforme Plano de Ensino oficial: identificação dos primeiros e segundos dias de apresentações dos PCs 1–4 e corte de publicação às 08h; correção das Reuniões 03 (07/09), 04 (17/09) e natureza interna da 05; atualização dos calendários e semanas; padronização URPS+ e auditor.ia no planejamento vigente; registro de 31 RFs/20 RNFs e ressalvas de validação não comprovada; distinção entre marcos RAD e períodos acadêmicos. | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |
 | `2.3` | 28/10/2026 | Registro da validação presencial do protótipo do Incremento 1 no Figma em 02/10/2026 (Ata 06) no calendário, no feed de eventos e no detalhamento semanal, substituindo as marcações de realização não comprovada. | Paulo Nery | — |
 | `2.3` | 28/10/2026 | Atualização do quantitativo do catálogo vigente de requisitos para 36 RFs e 20 RNFs, em sincronia com o Capítulo 8. | Paulo Nery | — |
+| `2.4` | 02/11/2026 | Alinhamento do encerramento da Unidade 2 e Semana 07 (concluídos); substituição de termos legados (auditor.ia por FLIT, Next.js por React/NestJS, MoSCoW por Matriz 4x4) e atualização da especificação vigente para 40 RFs. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

@@ -68,7 +68,7 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 *   **Ferramentas:**
     *   **Figma:** Plataforma planejada para a construção e testes dos protótipos de alta fidelidade. | **Status:** Planejado | **Evidência:** [Lista de Ferramentas Previstas](../visao-produto/solucao-proposta.md#24-tecnologias-a-serem-utilizadas-e-arquitetura).
 *   **Artefatos e Formas de Representação:**
-    *   **Protótipos de Alta Fidelidade:** Telas e interfaces navegáveis do sistema planejadas para desktop e mobile. | **Status:** Planejado | **Evidência:** [Detalhamento Metodológico da Unidade 2](../metodologia/cronograma.md#detalhamento-metodologico-por-marco-avaliativo).
+    *   **Protótipos de Alta Fidelidade:** Telas e interfaces navegáveis no Figma validadas presencialmente com a cliente em 02/10/2026. | **Status:** Realizado no Figma (transposição para frontend em execução) | **Evidência:** [Ata da Reunião 06](../governanca/atas/reuniao-06.md).
     *   **Fluxo do Ciclo de Validação Sociotécnica:** Representação do fluxo UI-First previsto para preparação, validação e homologação dos incrementos. | **Status:** Documentado como processo | **Evidência:** [Processo de Validação Sociotécnica e Homologação](../metodologia/interacao-cliente.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente).
 
 ---
@@ -83,7 +83,7 @@ Nesta seção é formalizada a vinculação entre as seis atividades clássicas 
 *   **Ferramentas:**
     *   **GitHub:** Plataforma utilizada para gestão do repositório, issues e documentação do projeto. | **Status:** Em uso | **Evidência:** [Repositório e portal do projeto](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance) e [GitHub Pages](https://mdsreq-fga-unb.github.io/REQ-2026.2-T01-DUOC-Finance/).
     *   **MkDocs:** Ferramenta utilizada para publicação e visualização da documentação do projeto. | **Status:** Em uso | **Evidência:** [Portal de documentação](https://mdsreq-fga-unb.github.io/REQ-2026.2-T01-DUOC-Finance/).
-    *   **Figma:** Ambiente planejado para a apresentação interativa dos protótipos durante as sessões de homologação. | **Status:** Planejado | **Evidência:** [Lista de Ferramentas Previstas](../visao-produto/solucao-proposta.md#24-tecnologias-a-serem-utilizadas-e-arquitetura).
+    *   **Figma:** Plataforma colaborativa utilizada na concepção dos protótipos de alta fidelidade e validação com a cliente. | **Status:** Em uso | **Evidência:** [Protótipo no Figma](https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39) e [Ata da Reunião 06](../governanca/atas/reuniao-06.md).
 *   **Critérios e Acordos de Trabalho Planejados:**
     *   **Definition of Ready (DoR) e Definition of Done (DoD):** Acordos formais para reger a entrada de requisitos em desenvolvimento e a conclusão das entregas. | **Status:** Realizado | **Evidência:** [Definition of Ready (DoR)](../mvp/dor-dod.md#definition-of-ready-dor) e [Definition of Done (DoD)](../mvp/dor-dod.md#definition-of-done-dod).
 

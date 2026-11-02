@@ -6,9 +6,9 @@
     * **Projeto:** DUOC Finance (Gestão Financeira, Operacional e RH de Obras)
     * **Cliente Parceira:** Maria Beatryz Vieira de Sousa (Auxiliar Administrativa e Ponto Focal do Cliente na DUOC Arquitetura e Engenharia)
     * **Data de Fechamento do Marco:** 13 de Outubro de 2026 (publicação no GitHub Pages até as 08h; apresentações em 13 e 15/10/2026)
-    * **Status da Entrega:** **Artefatos Concluídos — Gravação da Apresentação Pendente**
+    * **Status da Entrega:** **Concluída com Apresentação Homologada**
     * **Fase do Ciclo RAD:** *Fase 2: Design do Usuário (User Design) — Incremento 1*
-    * **Gravação Oficial da Apresentação:** *[Link do vídeo a ser inserido após a gravação](#3-video-da-apresentacao-da-entrega-2)*
+    * **Gravação Oficial da Apresentação:** [Assistir à Apresentação da Entrega 2 no YouTube (youtu.be/JF_cYRJM7vk)](#3-video-da-apresentacao-da-entrega-2)
 
 ---
 
@@ -145,3 +145,4 @@ A tabela a seguir consolida o checklist de conformidade dos artefatos da Entrega
 | `1.0` | 12/10/2026 | Estruturação formal do Ponto de Controle 2 com base no Template Oficial (v8): O Que Foi Solicitado (Seções 8, 9, 10 e 11.2), matriz de rastreabilidade dos artefatos entregues, seção de vídeo com espaço reservado para o link da gravação, distribuição por integrante, decisões estruturantes, autoavaliação e checklist de auditoria e conformidade | Paulo Nery | |
 | `1.1` | 13/10/2026 | Atualização de âncoras semânticas da Seção 2 e Checklist da Seção 5 (Priorização, DoR/DoD, Backlog), alinhamento métrico com o escopo consolidado do MVP e incorporação da gravação oficial em vídeo da apresentação da Entrega 2 | Matheus Ribeiro | Eric Araújo | |
 | `1.2` | 28/10/2026 | Atualização da descrição da Definição do MVP (36 RFs: 27 no MVP e 9 no backlog evolutivo, sem requisitos complementares) e do Backlog Geral (10 épicos e 36 histórias), em sincronia com os Capítulos 8 e 10. | Paulo Nery | — |
+| `1.3` | 02/11/2026 | Atualização do status da Entrega 2 para concluída com link direto para o vídeo oficial incorporado na Seção 3. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
