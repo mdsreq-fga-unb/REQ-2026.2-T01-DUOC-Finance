@@ -700,7 +700,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             <span class="event-date-badge done"><span class="ev-d">02</span><span class="ev-m">OUT</span></span>
             <div class="event-info">
               <div class="event-name">Reunião 06: Validação do Protótipo no Figma com Maria Beatryz (Incremento 1)</div>
-              <div class="event-desc">Sessão presencial conduzida por Eric Araújo sobre o protótipo de alta fidelidade no Figma (Colaboradores, Visão Geral, Análise de Custos e Perfis e Permissões). Telas aprovadas sem alterações; a validação no frontend navegável segue como próximo passo antes do DoR. <a href="../governanca/atas/reuniao-06/">Ver Ata 06</a> • <a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39" target="_blank" rel="noopener noreferrer">Abrir protótipo no Figma</a>.</div>
+              <div class="event-desc">Sessão presencial conduzida por Eric Araújo sobre o protótipo de alta fidelidade no Figma (Colaboradores, Visão Geral, Análise de Custos e Perfis e Permissões). Telas aprovadas sem alterações; a validação no frontend navegável segue como próximo passo antes do DoR. <a href="../../governanca/atas/reuniao-06/">Ver Ata 06</a> • <a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39" target="_blank" rel="noopener noreferrer">Abrir protótipo no Figma</a>.</div>
             </div>
           </div>
           <span class="status-pill concluido">Realizada</span>
@@ -1105,10 +1105,10 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
           <ul>
             <li>Portal MkDocs publicado com 13 capítulos estruturados;</li>
             <li>Visão de Produto e Projeto preliminar;</li>
-            <li>Matriz de Características preliminar (<a href="../visao-produto/solucao-proposta.md#car-01">CAR-01 a CAR-08</a>);</li>
-            <li>Escopo preliminar de integrações externas (<a href="../visao-produto/solucao-proposta.md#car-09">CAR-09 a CAR-12</a>);</li>
-            <li>Repositório oficial de Atas de Reunião (<a href="../governanca/atas/index.md">Ata 01</a> e <a href="../governanca/atas/index.md">Ata 02</a>);</li>
-            <li>Painel de Entregas e vídeo oficial homologado (<a href="../entregas/entrega-1.md">Acessar Entrega 1</a>).</li>
+            <li>Matriz de Características preliminar (<a href="../../visao-produto/solucao-proposta/#car-01">CAR-01 a CAR-08</a>);</li>
+            <li>Escopo preliminar de integrações externas (<a href="../../visao-produto/solucao-proposta/#car-09">CAR-09 a CAR-12</a>);</li>
+            <li>Repositório oficial de Atas de Reunião (<a href="../../governanca/atas/">Ata 01</a> e <a href="../../governanca/atas/">Ata 02</a>);</li>
+            <li>Painel de Entregas e vídeo oficial homologado (<a href="../../entregas/entrega-1/">Acessar Entrega 1</a>).</li>
           </ul>
         </div>
       </div>
@@ -1142,7 +1142,7 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
             <li>Classificação e especificação rigorosa de requisitos sob o framework <strong>URPS+</strong>;</li>
             <li>Criação de Personas representativas e cenários contextuais de uso para escritório e canteiros;</li>
             <li>Base visual e tokens no Figma; estabelecimento dos designs de tela diretamente no Frontend (React SPA) com dados mockados;</li>
-            <li>Validação presencial do protótipo no Figma com Maria Beatryz em 02/10 (<a href="../governanca/atas/reuniao-06/">Ata 06</a>); a sessão no frontend navegável permanece como próximo passo antes do DoR;</li>
+            <li>Validação presencial do protótipo no Figma com Maria Beatryz em 02/10 (<a href="../../governanca/atas/reuniao-06/">Ata 06</a>); a sessão no frontend navegável permanece como próximo passo antes do DoR;</li>
             <li>Decomposição em Histórias de Usuário <strong>INVEST</strong> com critérios de aceitação objetivos;</li>
             <li>Priorização de Backlog usando <strong>Matriz 4 × 4 (Valor × Esforço)</strong> e <strong>atendimento formal ao DoR do Incr. 1</strong> antes da codificação de lógica e banco;</li>
             <li>Modelagem Conceitual e Física de Dados (DER / Supabase / PostgreSQL) e arquitetura de dados sintéticos LGPD.</li>
@@ -1152,11 +1152,11 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
           <div class="week-section-title">Produtos e Artefatos Homologados</div>
           <ul>
             <li>Especificação URPS+ do catálogo vigente: 36 RFs e 20 RNFs; histórico da ata de 24/09 preservado com o quantitativo daquela data;</li>
-            <li>Designs de RVT Móvel (<a href="../visao-produto/solucao-proposta.md#car-02">CAR-02</a>) e Cadastros (<a href="../visao-produto/solucao-proposta.md#car-01">CAR-01</a>) no frontend, com homologação condicionada a registro de aceite da cliente;</li>
+            <li>Designs de RVT Móvel (<a href="../../visao-produto/solucao-proposta/#car-02">CAR-02</a>) e Cadastros (<a href="../../visao-produto/solucao-proposta/#car-01">CAR-01</a>) no frontend, com homologação condicionada a registro de aceite da cliente;</li>
             <li>Product Backlog priorizado e gerido no GitHub Projects #119;</li>
             <li>Histórias de Usuário INVEST com critérios de aceitação formalizados;</li>
             <li>Critérios formais de DoR/DoD; atendimento do DoR deve ser comprovado antes de declarar uma interface aprovada;</li>
-            <li>Diagrama Entidade-Relacionamento (DER) e documento oficial da <a href="../entregas/entrega-2.md">Entrega 2</a>.</li>
+            <li>Diagrama Entidade-Relacionamento (DER) e documento oficial da <a href="../../entregas/entrega-2/">Entrega 2</a>.</li>
           </ul>
         </div>
       </div>
@@ -1201,11 +1201,11 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
           <div class="week-section-title">Produtos e Artefatos Homologados</div>
           <ul>
             <li>Sistema DUOC Finance funcional em ambiente de <em>Staging</em> na Vercel;</li>
-            <li><strong>Lógica do Motor Financeiro (<a href="../visao-produto/solucao-proposta.md#car-03">CAR-03</a>) e Reembolsos (<a href="../visao-produto/solucao-proposta.md#car-04">CAR-04</a>) operacionais e verificados</strong>;</li>
-            <li>Painel Analítico de Rentabilidade e Custos (<a href="../visao-produto/solucao-proposta.md#car-06">CAR-06</a>);</li>
+            <li><strong>Lógica do Motor Financeiro (<a href="../../visao-produto/solucao-proposta/#car-03">CAR-03</a>) e Reembolsos (<a href="../../visao-produto/solucao-proposta/#car-04">CAR-04</a>) operacionais e verificados</strong>;</li>
+            <li>Painel Analítico de Rentabilidade e Custos (<a href="../../visao-produto/solucao-proposta/#car-06">CAR-06</a>);</li>
             <li>Relatório de Inspeção Fagan e testes automatizados aprovados no CI;</li>
             <li>Matriz de Rastreabilidade Bidirecional preliminar;</li>
-            <li>Documento oficial e vídeo da <a href="../entregas/entrega-3.md">Entrega 3</a>.</li>
+            <li>Documento oficial e vídeo da <a href="../../entregas/entrega-3/">Entrega 3</a>.</li>
           </ul>
         </div>
       </div>
@@ -1252,7 +1252,7 @@ Utilize as abas abaixo para consultar as atividades detalhadas, entregáveis pre
             <li><strong>Termo de Aceite Formal previsto</strong>, condicionado ao UAT, às correções e à assinatura efetiva de Maria Beatryz;</li>
             <li>Manual Operacional do Usuário publicado no portal MkDocs;</li>
             <li>Matriz de Rastreabilidade Bidirecional completa (<em>Forward/Backward</em>);</li>
-            <li>Documento oficial e vídeo da <a href="../entregas/entrega-4.md">Entrega 4</a>;</li>
+            <li>Documento oficial e vídeo da <a href="../../entregas/entrega-4/">Entrega 4</a>;</li>
             <li>Relatório de Retrospectiva Final e Lições Aprendidas previsto, sujeito à reunião interna de encerramento.</li>
           </ul>
         </div>
@@ -1370,9 +1370,9 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
         <div>
           <div class="week-section-title">Atividades Executadas e Metodologia</div>
           <ul>
-            <li>Realização da <strong>Reunião 01 Oficial (05/09/2026)</strong> de Elicitação de Escopo e MVP (<a href="../governanca/atas/index.md">Ver Ata 01</a>);</li>
-            <li>Realização da <strong>Reunião 02 interna (07/09/2026)</strong> de Alinhamento Metodológico e ESW (<a href="../governanca/atas/index.md">Ver Ata 02</a>);</li>
-            <li>Realização da <strong>Reunião 03 interna (07/09/2026, às 21h34)</strong> para gravação da apresentação do PC1 (<a href="../governanca/atas/index.md">Ver Ata 03</a>);</li>
+            <li>Realização da <strong>Reunião 01 Oficial (05/09/2026)</strong> de Elicitação de Escopo e MVP (<a href="../../governanca/atas/">Ver Ata 01</a>);</li>
+            <li>Realização da <strong>Reunião 02 interna (07/09/2026)</strong> de Alinhamento Metodológico e ESW (<a href="../../governanca/atas/">Ver Ata 02</a>);</li>
+            <li>Realização da <strong>Reunião 03 interna (07/09/2026, às 21h34)</strong> para gravação da apresentação do PC1 (<a href="../../governanca/atas/">Ver Ata 03</a>);</li>
             <li>Formalização do Rich Picture v2 sistêmico com delimitação das zonas AS-IS e TO-BE;</li>
             <li>Elaboração do Diagrama de Ishikawa 4M (Método, Mão de Obra, Máquina e Meio Ambiente);</li>
             <li>Mapeamento de Stakeholders (Matriz Poder x Interesse) e Perfis de Usuários (IHC);</li>
@@ -1389,7 +1389,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
             <li>Portal MkDocs publicado no GitHub Pages com 13 capítulos estruturados;</li>
             <li>Páginas oficiais das Atas de Reuniões 01 e 02;</li>
             <li>Painel de Entregas (Entrega 1 completa e templates das Entregas 2 a 4);</li>
-            <li>Vídeo oficial da Entrega 1 gravado e indexado (<a href="../entregas/entrega-1.md">Ver Entrega 1</a>).</li>
+            <li>Vídeo oficial da Entrega 1 gravado e indexado (<a href="../../entregas/entrega-1/">Ver Entrega 1</a>).</li>
           </ul>
         </div>
       </div>
@@ -1475,8 +1475,8 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
           <div class="week-section-title">Entregáveis Esperados</div>
           <ul>
             <li>Especificação de Requisitos no padrão URPS+ formalizada;</li>
-            <li>Ata da Reunião 05 (<a href="../governanca/atas/reuniao-05.md">Ata 05</a>) com deliberações de escopo e matriz de priorização;</li>
-            <li>Guia formal de DoR e DoD aprovado e indexado (<a href="../mvp/dor-dod.md">Ver Capítulo 9</a>);</li>
+            <li>Ata da Reunião 05 (<a href="../../governanca/atas/reuniao-05/">Ata 05</a>) com deliberações de escopo e matriz de priorização;</li>
+            <li>Guia formal de DoR e DoD aprovado e indexado (<a href="../../mvp/dor-dod/">Ver Capítulo 9</a>);</li>
             <li>Catálogo de Requisitos de Segurança e Conformidade LGPD;</li>
             <li>Design System base no Figma e componentes UI no Frontend.</li>
           </ul>
@@ -1506,7 +1506,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
         <div>
           <div class="week-section-title">Atividades Planejadas e Técnicas de ER</div>
           <ul>
-            <li>Estabelecimento dos designs de tela de Apontamento Móvel (RVT) e Gestão Cadastral (<a href="../visao-produto/solucao-proposta.md#car-01">CAR-01</a> e <a href="../visao-produto/solucao-proposta.md#car-02">CAR-02</a>) diretamente no Frontend com dados mockados, guiados pela base do Figma;</li>
+            <li>Estabelecimento dos designs de tela de Apontamento Móvel (RVT) e Gestão Cadastral (<a href="../../visao-produto/solucao-proposta/#car-01">CAR-01</a> e <a href="../../visao-produto/solucao-proposta/#car-02">CAR-02</a>) diretamente no Frontend com dados mockados, guiados pela base do Figma;</li>
             <li><strong>Janela prevista de validação sociotécnica do frontend (02/10/2026):</strong> o plano original reservava a data para avaliação das telas pela cliente, mas as atas fornecidas não comprovam realização; a Reunião 04 ocorreu em 17/09 e foi interna;</li>
             <li>Registrar ajustes de IHC e eventual homologação das interfaces somente quando houver evidência de validação;</li>
             <li>Decomposição dos requisitos em Histórias de Usuário no padrão <strong>INVEST</strong>;</li>
@@ -1552,7 +1552,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
           <ul>
             <li>Modelagem Conceitual de Dados (DER / Supabase) cobrindo colaboradores CLT, diaristas, contratos de obras e despesas de campo;</li>
             <li>Setup do repositório da aplicação (React SPA/NestJS + Supabase) e pipeline CI/CD na Vercel com carga de dados sintéticos;</li>
-            <li>Início da implementação da lógica de backend por trás das telas validadas: regras de cadastro unificado (<a href="../visao-produto/solucao-proposta.md#car-01">CAR-01</a>) e autenticação RBAC base (<a href="../visao-produto/solucao-proposta.md#car-07">CAR-07</a>);</li>
+            <li>Início da implementação da lógica de backend por trás das telas validadas: regras de cadastro unificado (<a href="../../visao-produto/solucao-proposta/#car-01">CAR-01</a>) e autenticação RBAC base (<a href="../../visao-produto/solucao-proposta/#car-07">CAR-07</a>);</li>
             <li>Consolidação da documentação da Unidade 2 no MkDocs e gravação do vídeo do <strong>PC2, com publicação até 13/10/2026 às 08h</strong> e apresentações em 13 e 15/10.</li>
           </ul>
         </div>
@@ -1561,7 +1561,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
           <ul>
             <li>Diagrama Entidade-Relacionamento (DER) revisado, com homologação sujeita a registro;</li>
             <li>Repositório de código configurado com pipeline na Vercel;</li>
-            <li>Documento oficial da Entrega 2 e vídeo do Ponto de Controle 2 publicado (<a href="../entregas/entrega-2.md">Ver Entrega 2</a>).</li>
+            <li>Documento oficial da Entrega 2 e vídeo do Ponto de Controle 2 publicado (<a href="../../entregas/entrega-2/">Ver Entrega 2</a>).</li>
           </ul>
         </div>
       </div>
@@ -1594,7 +1594,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
         <div>
           <div class="week-section-title">Atividades Planejadas e Técnicas de ER</div>
           <ul>
-            <li>Abertura do Incremento 2: Estabelecimento dos designs das telas do <strong>Motor Financeiro (<a href="../visao-produto/solucao-proposta.md#car-03">CAR-03</a>)</strong> e <strong>Prestação de Contas/Reembolsos (<a href="../visao-produto/solucao-proposta.md#car-04">CAR-04</a>)</strong> diretamente no Frontend com base de referência no Figma;</li>
+            <li>Abertura do Incremento 2: Estabelecimento dos designs das telas do <strong>Motor Financeiro (<a href="../../visao-produto/solucao-proposta/#car-03">CAR-03</a>)</strong> e <strong>Prestação de Contas/Reembolsos (<a href="../../visao-produto/solucao-proposta/#car-04">CAR-04</a>)</strong> diretamente no Frontend com base de referência no Figma;</li>
             <li>Desenho funcional dos fluxos de aprovação de diárias de campo, cálculo visual de adiantamentos e upload de comprovantes com dados simulados;</li>
             <li><strong>Sessão Formal de Validação Sociotécnica Invertida (em 23/10/2026):</strong> Maria Beatryz navega pelas telas financeiras no Frontend via Google Meet, validando campos, layouts e regras visuais;</li>
             <li>Registro de apontamentos de IHC e <strong>homologação formal do DoR para o Incremento 2</strong>;</li>
@@ -1635,9 +1635,9 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
         <div>
           <div class="week-section-title">Atividades Planejadas e Técnicas de ER</div>
           <ul>
-            <li><strong>Construção da Lógica do Motor Financeiro (<a href="../visao-produto/solucao-proposta.md#car-03">CAR-03</a>):</strong> Codificação dos algoritmos de cálculo de fechamento quinzenal de diaristas, comissões contratuais simplificadas e apropriação de adiantamentos conectando as telas já validadas no Frontend;</li>
+            <li><strong>Construção da Lógica do Motor Financeiro (<a href="../../visao-produto/solucao-proposta/#car-03">CAR-03</a>):</strong> Codificação dos algoritmos de cálculo de fechamento quinzenal de diaristas, comissões contratuais simplificadas e apropriação de adiantamentos conectando as telas já validadas no Frontend;</li>
             <li><strong>Aplicação da Folga Técnica (buffer de 3 dias úteis):</strong> Período de reserva para validação aritmética fina e tratamento de exceções de cálculo em relação às planilhas reais da DUOC;</li>
-            <li>Desenvolvimento da lógica do módulo de Prestação de Contas e Reembolsos (<a href="../visao-produto/solucao-proposta.md#car-04">CAR-04</a>) com upload e conferência de cupons fiscais simulados;</li>
+            <li>Desenvolvimento da lógica do módulo de Prestação de Contas e Reembolsos (<a href="../../visao-produto/solucao-proposta/#car-04">CAR-04</a>) com upload e conferência de cupons fiscais simulados;</li>
             <li>Criação de suíte de testes unitários automatizados para o motor de cálculo financeiro.</li>
           </ul>
         </div>
@@ -1675,9 +1675,9 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
           <div class="week-section-title">Atividades Planejadas e Técnicas de ER</div>
           <ul>
             <li>Conclusão e integração do motor financeiro e reembolsos à interface web;</li>
-            <li>Implementação da <strong>Trilha de Auditoria (<a href="../visao-produto/solucao-proposta.md#car-08">CAR-08</a>)</strong>: registro cronológico e imutável de todas as operações sensíveis (aprovações de folha, estornos e lançamentos);</li>
-            <li>Refinamento dos papéis de acesso <strong>RBAC (<a href="../visao-produto/solucao-proposta.md#car-07">CAR-07</a>)</strong> para segregação de privilégios (Sócio Administrador vs. Colaborador de Campo);</li>
-            <li>Início da construção do módulo de <strong>Apropriação e Rastreabilidade de Custos por Contrato (<a href="../visao-produto/solucao-proposta.md#car-05">CAR-05</a>)</strong>: rateio automático de despesas e mão de obra por obra.</li>
+            <li>Implementação da <strong>Trilha de Auditoria (<a href="../../visao-produto/solucao-proposta/#car-08">CAR-08</a>)</strong>: registro cronológico e imutável de todas as operações sensíveis (aprovações de folha, estornos e lançamentos);</li>
+            <li>Refinamento dos papéis de acesso <strong>RBAC (<a href="../../visao-produto/solucao-proposta/#car-07">CAR-07</a>)</strong> para segregação de privilégios (Sócio Administrador vs. Colaborador de Campo);</li>
+            <li>Início da construção do módulo de <strong>Apropriação e Rastreabilidade de Custos por Contrato (<a href="../../visao-produto/solucao-proposta/#car-05">CAR-05</a>)</strong>: rateio automático de despesas e mão de obra por obra.</li>
           </ul>
         </div>
         <div>
@@ -1713,8 +1713,8 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
         <div>
           <div class="week-section-title">Atividades Planejadas e Técnicas de ER</div>
           <ul>
-            <li>Construção do <strong>Painel Analítico de Custo Apropriado e Desvio Orçamentário por Projeto (<a href="../visao-produto/solucao-proposta.md#car-06">CAR-06</a>)</strong> com gráficos gerenciais de rentabilidade;</li>
-            <li>Desenvolvimento dos conectores preliminares: estudo de consumo de presença de <em>FLIT</em> (<a href="../visao-produto/solucao-proposta.md#car-09">CAR-09</a>) e importação/exportação CSV com ERPs legados (<a href="../visao-produto/solucao-proposta.md#car-10">CAR-10</a>);</li>
+            <li>Construção do <strong>Painel Analítico de Custo Apropriado e Desvio Orçamentário por Projeto (<a href="../../visao-produto/solucao-proposta/#car-06">CAR-06</a>)</strong> com gráficos gerenciais de rentabilidade;</li>
+            <li>Desenvolvimento dos conectores preliminares: estudo de consumo de presença de <em>FLIT</em> (<a href="../../visao-produto/solucao-proposta/#car-09">CAR-09</a>) e importação/exportação CSV com ERPs legados (<a href="../../visao-produto/solucao-proposta/#car-10">CAR-10</a>);</li>
             <li>Verificação de Software: Execução de inspeções estáticas de código e documentação por checklists (<strong>Inspeções Fagan</strong>);</li>
             <li>Estruturação e preenchimento da <strong>Matriz de Rastreabilidade Bidirecional</strong> (<em>Forward/Backward</em>);</li>
             <li>Deploy contínuo da solução completa integrada em ambiente de <strong>Staging na Vercel</strong>;</li>
@@ -1729,7 +1729,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
             <li>Integrações CAR-09 e CAR-10 em ambiente de homologação;</li>
             <li>Relatório de Inspeção Fagan e testes automatizados aprovados;</li>
             <li>Matriz de Rastreabilidade Bidirecional preliminar;</li>
-            <li>Documento e vídeo oficial da <a href="../entregas/entrega-3.md">Entrega 3</a> indexados.</li>
+            <li>Documento e vídeo oficial da <a href="../../entregas/entrega-3/">Entrega 3</a> indexados.</li>
           </ul>
         </div>
       </div>
@@ -1819,7 +1819,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional estruturad
             <li>Sistema DUOC Finance em produção estável na Vercel;</li>
             <li>Manual Operacional do Usuário publicado no portal;</li>
             <li>Matriz de Rastreabilidade Bidirecional completa (<em>Forward/Backward</em>);</li>
-            <li>Documento oficial e vídeo da <a href="../entregas/entrega-4.md">Entrega 4</a> indexados;</li>
+            <li>Documento oficial e vídeo da <a href="../../entregas/entrega-4/">Entrega 4</a> indexados;</li>
             <li>Relatório de Retrospectiva Final e Lições Aprendidas previsto, sujeito à reunião interna de encerramento.</li>
           </ul>
         </div>

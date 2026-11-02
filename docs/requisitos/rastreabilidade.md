@@ -25,7 +25,7 @@ A **Pirâmide de Abstração** sintetiza o desdobramento hierárquico da soluç�
 </div>
 
 <p align="center">
-  <a href="https://miro.com/app/board/uXjVEd_ZDOg=/?share_link_id=457510525802" target="_blank" rel="noopener noreferrer">Abrir Pirâmide Completa no Miro (Interativo) ↗</a> &nbsp;|&nbsp; <a href="../assets/images/requisitos/piramide_abstracao.jpg" target="_blank" rel="noopener noreferrer">Ver Imagem em JPG ↗</a> &nbsp;|&nbsp; <a href="../assets/images/piramide_abstracao_vetorizada.svg" target="_blank" rel="noopener noreferrer" download="piramide_abstracao_vetorizada.svg">Baixar Vetor (SVG Alta Resolução) ↗</a>
+  <a href="https://miro.com/app/board/uXjVEd_ZDOg=/?share_link_id=457510525802" target="_blank" rel="noopener noreferrer">Abrir Pirâmide Completa no Miro (Interativo) ↗</a> &nbsp;|&nbsp; <a href="../../assets/images/requisitos/piramide_abstracao.jpg" target="_blank" rel="noopener noreferrer">Ver Imagem em JPG ↗</a> &nbsp;|&nbsp; <a href="../../assets/images/piramide_abstracao_vetorizada.svg" target="_blank" rel="noopener noreferrer" download="piramide_abstracao_vetorizada.svg">Baixar Vetor (SVG Alta Resolução) ↗</a>
 </p>
 
 ---

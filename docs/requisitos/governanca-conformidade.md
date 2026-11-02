@@ -26,9 +26,9 @@ Essa retenção garante a integridade e a disponibilidade imediata de um acervo 
 
 ### 2.2 Requisitos Vinculados e Controles Técnicos
 
-*   <a href="index.md#rn19" class="req-tag req-tag-rn"># RN19 · Política Corporativa de Retenção Quinquenal de Logs ↗</a>: Veda compulsoriamente rotinas de expurgo ou expiração física ou lógica de eventos de auditoria operacional e financeira com tempo de retenção inferior a 1.825 dias.
-*   <a href="index.md#rnf16" class="req-tag req-tag-rnf"># RNF16 · Preservar trilha de auditoria por no mínimo 5 anos ↗</a>: Estabelece o requisito de confiabilidade e guarda do histórico integral de alterações.
-*   <a href="index.md#rf16" class="req-tag req-tag-rf"># RF16 · Exportar trilha probatória de auditoria (PDF/CSV) ↗</a>: Disponibiliza mecanismo de extração em lote dos registros probatórios para instrução processual com assinatura digital e carimbo temporal.
+*   <a href="../#rn19" class="req-tag req-tag-rn"># RN19 · Política Corporativa de Retenção Quinquenal de Logs ↗</a>: Veda compulsoriamente rotinas de expurgo ou expiração física ou lógica de eventos de auditoria operacional e financeira com tempo de retenção inferior a 1.825 dias.
+*   <a href="../#rnf16" class="req-tag req-tag-rnf"># RNF16 · Preservar trilha de auditoria por no mínimo 5 anos ↗</a>: Estabelece o requisito de confiabilidade e guarda do histórico integral de alterações.
+*   <a href="../#rf16" class="req-tag req-tag-rf"># RF16 · Exportar trilha probatória de auditoria (PDF/CSV) ↗</a>: Disponibiliza mecanismo de extração em lote dos registros probatórios para instrução processual com assinatura digital e carimbo temporal.
 
 ---
 
@@ -70,11 +70,11 @@ Ressalta-se que números de CPF, informações de domicílio bancário e valores
 
 ## 5. Alinhamento de Escopo Arquitetural: Ponto Biométrico e Sistema FLIT
 
-Conforme deliberado na Reunião Técnica de Alinhamento com a diretoria da DUOC (Ata de Reunião 02, Característica <a href="../visao-produto/solucao-proposta.md#car-09" class="req-tag req-tag-car"># CAR-09 ↗</a>):
+Conforme deliberado na Reunião Técnica de Alinhamento com a diretoria da DUOC (Ata de Reunião 02, Característica <a href="../../visao-produto/solucao-proposta/#car-09" class="req-tag req-tag-car"># CAR-09 ↗</a>):
 
 1.  **Fronteira de Responsabilidade de Ponto:** O registro formal de frequência e marcação de ponto eletrônico biométrico dos colaboradores é executado de forma independente pelo software externo parceiro *FLIT*.
-2.  **Escopo do DUOC Finance em Campo:** O módulo móvel do DUOC Finance destina-se estritamente à coleta de **apontamentos técnicos de produção por contrato de obra** e ao preenchimento de **Relatórios de Viagem Técnica (RVT)** pelos eletricistas e técnicos de campo (<a href="index.md#rf04" class="req-tag req-tag-rf"># RF04 ↗</a>, <a href="index.md#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>).
-3.  **Interface de Integração de Presenças:** O DUOC Finance apenas importa e referencia as presenças consolidadas geradas no painel do *FLIT* (<a href="index.md#rf20" class="req-tag req-tag-rf"># RF20 ↗</a>, <a href="index.md#rn10" class="req-tag req-tag-rn"># RN10 ↗</a>), consumindo contagens numéricas homologadas para fins de apuração de diárias, sem qualquer contato com o repositório biométrico original.
+2.  **Escopo do DUOC Finance em Campo:** O módulo móvel do DUOC Finance destina-se estritamente à coleta de **apontamentos técnicos de produção por contrato de obra** e ao preenchimento de **Relatórios de Viagem Técnica (RVT)** pelos eletricistas e técnicos de campo (<a href="../#rf04" class="req-tag req-tag-rf"># RF04 ↗</a>, <a href="../../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>).
+3.  **Interface de Integração de Presenças:** O DUOC Finance apenas importa e referencia as presenças consolidadas geradas no painel do *FLIT* (<a href="../#rf20" class="req-tag req-tag-rf"># RF20 ↗</a>, <a href="../#rn10" class="req-tag req-tag-rn"># RN10 ↗</a>), consumindo contagens numéricas homologadas para fins de apuração de diárias, sem qualquer contato com o repositório biométrico original.
 
 ---
 
@@ -84,7 +84,7 @@ A governança corporativa e a segurança jurídica do *DUOC Finance* operam sust
 
 ### 6.1 Matriz Canônica de Papéis (RBAC)
 
-O acesso aos dados sensíveis é governado pelo **Princípio do Menor Privilégio** (<a href="index.md#rn16" class="req-tag req-tag-rn"># RN16 ↗</a>, <a href="index.md#rnf14" class="req-tag req-tag-rnf"># RNF14 ↗</a>), operando sob quatro papéis canônicos de autorização:
+O acesso aos dados sensíveis é governado pelo **Princípio do Menor Privilégio** (<a href="../#rn16" class="req-tag req-tag-rn"># RN16 ↗</a>, <a href="../#rnf14" class="req-tag req-tag-rnf"># RNF14 ↗</a>), operando sob quatro papéis canônicos de autorização:
 
 ```
 +---------------------------------------------------------------------------------+
@@ -108,8 +108,8 @@ O acesso aos dados sensíveis é governado pelo **Princípio do Menor Privilégi
 
 ### 6.2 Trilha de Auditoria Imutável (*Append-Only*)
 
-*   **Persistência Atômica:** Cada inserção, modificação ou exclusão de dados operacionais gera de forma síncrona um evento de auditoria com carimbo temporal UTC, IP de origem, identidade do operador e estados anterior e posterior serializados (<a href="index.md#rn17" class="req-tag req-tag-rn"># RN17 ↗</a>, <a href="index.md#rnf15" class="req-tag req-tag-rnf"># RNF15 ↗</a>).
-*   **Imutabilidade Estrita (*Append-Only*):** A tabela de auditoria opera sob regime exclusivo de inserção, sendo vedada qualquer operação de alteração ou exclusão física ou lógica por qualquer perfil, inclusive administradores do sistema (<a href="index.md#rn18" class="req-tag req-tag-rn"># RN18 ↗</a>).
+*   **Persistência Atômica:** Cada inserção, modificação ou exclusão de dados operacionais gera de forma síncrona um evento de auditoria com carimbo temporal UTC, IP de origem, identidade do operador e estados anterior e posterior serializados (<a href="../#rn17" class="req-tag req-tag-rn"># RN17 ↗</a>, <a href="../#rnf15" class="req-tag req-tag-rnf"># RNF15 ↗</a>).
+*   **Imutabilidade Estrita (*Append-Only*):** A tabela de auditoria opera sob regime exclusivo de inserção, sendo vedada qualquer operação de alteração ou exclusão física ou lógica por qualquer perfil, inclusive administradores do sistema (<a href="../#rn18" class="req-tag req-tag-rn"># RN18 ↗</a>).
 
 ---
 
@@ -119,12 +119,12 @@ A tabela a seguir consolida a correlação entre as exigências legais e os requ
 
 | Dispositivo Legal / Diretriz | Tema de Governança | Requisitos Funcionais | Regras de Negócio | Requisitos Não Funcionais |
 | :--- | :--- | :---: | :---: | :---: |
-| **CLT — Artigo 11** | Prescrição quinquenal de créditos e instrução defensiva | <a href="index.md#rf15" class="req-tag req-tag-rf"># RF15 ↗</a>, <a href="index.md#rf16" class="req-tag req-tag-rf"># RF16 ↗</a> | <a href="index.md#rn19" class="req-tag req-tag-rn"># RN19 ↗</a> | <a href="index.md#rnf16" class="req-tag req-tag-rnf"># RNF16 ↗</a> |
-| **LGPD — Artigo 16, I e II** | Conservação legal de dados operacionais e defesa judicial | <a href="index.md#rf06" class="req-tag req-tag-rf"># RF06 ↗</a>, <a href="index.md#rf16" class="req-tag req-tag-rf"># RF16 ↗</a> | <a href="index.md#rn18" class="req-tag req-tag-rn"># RN18 ↗</a>, <a href="index.md#rn19" class="req-tag req-tag-rn"># RN19 ↗</a> | <a href="index.md#rnf16" class="req-tag req-tag-rnf"># RNF16 ↗</a> |
-| **LGPD — Artigo 18, VI** | Limitação ao direito de eliminação perante dever legal | <a href="index.md#rf02" class="req-tag req-tag-rf"># RF02 ↗</a>, <a href="index.md#rf03" class="req-tag req-tag-rf"># RF03 ↗</a> | <a href="index.md#rn04" class="req-tag req-tag-rn"># RN04 ↗</a>, <a href="index.md#rn23" class="req-tag req-tag-rn"># RN23 ↗</a> | <a href="index.md#rnf16" class="req-tag req-tag-rnf"># RNF16 ↗</a> |
-| **LGPD — Artigo 5º, II e Art. 6º, VII** | Classificação de dados pessoais comuns e dever de segurança | <a href="index.md#rf01" class="req-tag req-tag-rf"># RF01 ↗</a>, <a href="index.md#rf25" class="req-tag req-tag-rf"># RF25 ↗</a> | <a href="index.md#rn01" class="req-tag req-tag-rn"># RN01 ↗</a>, <a href="index.md#rn22" class="req-tag req-tag-rn"># RN22 ↗</a> | <a href="index.md#rnf03" class="req-tag req-tag-rnf"># RNF03 ↗</a>, <a href="index.md#rnf10" class="req-tag req-tag-rnf"># RNF10 ↗</a> |
-| **Princípio do Menor Privilégio** | Controle de acesso e segregação de funções | <a href="index.md#rf13" class="req-tag req-tag-rf"># RF13 ↗</a>, <a href="index.md#rf14" class="req-tag req-tag-rf"># RF14 ↗</a> | <a href="index.md#rn15" class="req-tag req-tag-rn"># RN15 ↗</a>, <a href="index.md#rn16" class="req-tag req-tag-rn"># RN16 ↗</a> | <a href="index.md#rnf13" class="req-tag req-tag-rnf"># RNF13 ↗</a>, <a href="index.md#rnf14" class="req-tag req-tag-rnf"># RNF14 ↗</a> |
-| **Auditoria e Não Repúdio** | Trilha probatória imutável e carimbo UTC | <a href="index.md#rf15" class="req-tag req-tag-rf"># RF15 ↗</a>, <a href="index.md#rf16" class="req-tag req-tag-rf"># RF16 ↗</a> | <a href="index.md#rn17" class="req-tag req-tag-rn"># RN17 ↗</a>, <a href="index.md#rn18" class="req-tag req-tag-rn"># RN18 ↗</a> | <a href="index.md#rnf15" class="req-tag req-tag-rnf"># RNF15 ↗</a> |
+| **CLT — Artigo 11** | Prescrição quinquenal de créditos e instrução defensiva | <a href="../#rf15" class="req-tag req-tag-rf"># RF15 ↗</a>, <a href="../#rf16" class="req-tag req-tag-rf"># RF16 ↗</a> | <a href="../#rn19" class="req-tag req-tag-rn"># RN19 ↗</a> | <a href="../#rnf16" class="req-tag req-tag-rnf"># RNF16 ↗</a> |
+| **LGPD — Artigo 16, I e II** | Conservação legal de dados operacionais e defesa judicial | <a href="../#rf06" class="req-tag req-tag-rf"># RF06 ↗</a>, <a href="../#rf16" class="req-tag req-tag-rf"># RF16 ↗</a> | <a href="../#rn18" class="req-tag req-tag-rn"># RN18 ↗</a>, <a href="../#rn19" class="req-tag req-tag-rn"># RN19 ↗</a> | <a href="../#rnf16" class="req-tag req-tag-rnf"># RNF16 ↗</a> |
+| **LGPD — Artigo 18, VI** | Limitação ao direito de eliminação perante dever legal | <a href="../#rf02" class="req-tag req-tag-rf"># RF02 ↗</a>, <a href="../#rf03" class="req-tag req-tag-rf"># RF03 ↗</a> | <a href="../#rn04" class="req-tag req-tag-rn"># RN04 ↗</a>, <a href="../#rn23" class="req-tag req-tag-rn"># RN23 ↗</a> | <a href="../#rnf16" class="req-tag req-tag-rnf"># RNF16 ↗</a> |
+| **LGPD — Artigo 5º, II e Art. 6º, VII** | Classificação de dados pessoais comuns e dever de segurança | <a href="../#rf01" class="req-tag req-tag-rf"># RF01 ↗</a>, <a href="../#rf25" class="req-tag req-tag-rf"># RF25 ↗</a> | <a href="../#rn01" class="req-tag req-tag-rn"># RN01 ↗</a>, <a href="../#rn22" class="req-tag req-tag-rn"># RN22 ↗</a> | <a href="../#rnf03" class="req-tag req-tag-rnf"># RNF03 ↗</a>, <a href="../#rnf10" class="req-tag req-tag-rnf"># RNF10 ↗</a> |
+| **Princípio do Menor Privilégio** | Controle de acesso e segregação de funções | <a href="../#rf13" class="req-tag req-tag-rf"># RF13 ↗</a>, <a href="../#rf14" class="req-tag req-tag-rf"># RF14 ↗</a> | <a href="../#rn15" class="req-tag req-tag-rn"># RN15 ↗</a>, <a href="../#rn16" class="req-tag req-tag-rn"># RN16 ↗</a> | <a href="../#rnf13" class="req-tag req-tag-rnf"># RNF13 ↗</a>, <a href="../#rnf14" class="req-tag req-tag-rnf"># RNF14 ↗</a> |
+| **Auditoria e Não Repúdio** | Trilha probatória imutável e carimbo UTC | <a href="../#rf15" class="req-tag req-tag-rf"># RF15 ↗</a>, <a href="../#rf16" class="req-tag req-tag-rf"># RF16 ↗</a> | <a href="../#rn17" class="req-tag req-tag-rn"># RN17 ↗</a>, <a href="../#rn18" class="req-tag req-tag-rn"># RN18 ↗</a> | <a href="../#rnf15" class="req-tag req-tag-rnf"># RNF15 ↗</a> |
 
 ---
 

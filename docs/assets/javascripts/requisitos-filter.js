@@ -269,6 +269,7 @@
     // Se o link for para a mesma pagina
     if (!pathPart || window.location.pathname.endsWith(pathPart) || pathPart === window.location.pathname) {
       if (hashPart && hashPart.length > 1) {
+        e.preventDefault();
         history.pushState(null, "", hashPart);
         handleUniversalHashNavigation();
       }
