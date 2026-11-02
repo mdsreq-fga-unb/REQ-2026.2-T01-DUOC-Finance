@@ -25,7 +25,7 @@ flowchart LR
 
     EP01["<b>EP01 · CAR-01</b><br>Gestão Cadastral<br>US01 · US02 · US03 · US25 · US26"]
     EP02["<b>EP02 · CAR-02</b><br>Apontamento de Campo<br>US04 · US19 · US22 · US32 · US35"]
-    EP03["<b>EP03 · CAR-09</b><br>Integração Shifton<br>US20"]
+    EP03["<b>EP03 · CAR-09</b><br>Integração FLIT<br>US20"]
     EP04["<b>EP04 · CAR-03</b><br>Fechamento Financeiro<br>US05 · US06 · US21 · US27"]
     EP05["<b>EP05 · CAR-04</b><br>Prestação de Contas<br>US07 · US08 · US28 · US29"]
     EP06["<b>EP06 · CAR-05</b><br>Apropriação de Custos<br>US09 · US10 · US30 · US33"]
@@ -66,7 +66,7 @@ flowchart LR
 | :---: | :--- | :---: | :--- | :---: | :---: | :---: |
 | **EP01** | **CAR-01** — Gestão Cadastral Unificada de Pessoal | <span class="mod-badge mod-1">TM01 · OE1</span> | US01, US02, US03, US25, US26 | 5 | 5 | 0 |
 | **EP02** | **CAR-02** — Apontamento Móvel de Atividades e Registros de Campo | <span class="mod-badge mod-1">TM01 · OE1</span> | US04, US19, US22, US32, US35 | 5 | 5 | 0 |
-| **EP03** | **CAR-09** — Integração com Shifton e Presenças Homologadas | <span class="mod-badge mod-1">TM01 · OE1</span> | US20 | 1 | 0 | 1 |
+| **EP03** | **CAR-09** — Integração com FLIT e Presenças Homologadas | <span class="mod-badge mod-1">TM01 · OE1</span> | US20 | 1 | 0 | 1 |
 | **EP04** | **CAR-03** — Motor de Processamento e Fechamento Financeiro | <span class="mod-badge mod-2">TM02 · OE2</span> | US05, US06, US21, US27 | 4 | 3 | 1 |
 | **EP05** | **CAR-04** — Fluxo Digital de Prestação de Contas e Reembolsos | <span class="mod-badge mod-2">TM02 · OE2</span> | US07, US08, US28, US29 | 4 | 4 | 0 |
 | **EP06** | **CAR-05** — Apropriação e Rastreabilidade de Custos por Contrato | <span class="mod-badge mod-3">TM03 · OE3</span> | US09, US10, US30, US33 | 4 | 3 | 1 |
@@ -117,7 +117,7 @@ Os papéis citados nas histórias são os **quatro papéis sistêmicos canônico
 | **US22**<sup>†</sup> | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **Técnico de Campo**, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no RVT. | RF22 | RNF04, RNF07 + **T** | **MVP** |
 | **US32**<sup>†</sup> | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **Gestor Operacional de Obras**, quero homologar ou rejeitar os apontamentos de campo pendentes dos contratos sob minha responsabilidade, com parecer obrigatório na rejeição, para que apenas horas validadas sigam para o fechamento financeiro e o autor seja informado da decisão. | RF32 | **T** | **MVP** |
 | **US35**<sup>†</sup> | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **Técnico de Campo**, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão. | RF35 | RNF04, RNF07 + **T** | **MVP** |
-| **US20** | <span class="mod-badge mod-1">EP03 · OE1</span> | Como **Administrador Financeiro**, quero importar as presenças homologadas do *Shifton* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação. | RF20 | **T** | Pós-MVP |
+| **US20** | <span class="mod-badge mod-1">EP03 · OE1</span> | Como **Administrador Financeiro**, quero importar as presenças homologadas do *FLIT* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação. | RF20 | **T** | Pós-MVP |
 | **US05** | <span class="mod-badge mod-2">EP04 · OE2</span> | Como **Administrador Financeiro**, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente. | RF05 | RNF05, RNF06, RNF10 + **T** | **MVP** |
 | **US06** | <span class="mod-badge mod-2">EP04 · OE2</span> | Como **Administrador Financeiro**, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança. | RF06 | RNF05, RNF06, RNF10 + **T** | **MVP** |
 | **US21** | <span class="mod-badge mod-2">EP04 · OE2</span> | Como **Administrador Financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original. | RF21 | RNF08 *(evolutivo)* + **T** | Pós-MVP |
@@ -350,7 +350,7 @@ flowchart LR
 | :--- | :---: | :--- | :--- |
 | **EP01** — Gestão Cadastral Unificada de Pessoal | OE1 | US01, US02, US03, US25, US26 | — |
 | **EP02** — Apontamento Móvel de Atividades e Registros de Campo | OE1 | US04, US19, US22, US32<sup>†</sup>, US35<sup>†</sup> | — |
-| **EP03** — Integração com Shifton e Presenças Homologadas | OE1 | — | US20 |
+| **EP03** — Integração com FLIT e Presenças Homologadas | OE1 | — | US20 |
 | **EP04** — Motor de Processamento e Fechamento Financeiro | OE2 | US05, US06, US27 | US21 |
 | **EP05** — Fluxo Digital de Prestação de Contas e Reembolsos | OE2 | US07, US08, US28, US29 | — |
 | **EP06** — Apropriação e Rastreabilidade de Custos por Contrato | OE3 | US09, US10, US33<sup>†</sup> | US30 |
@@ -615,4 +615,4 @@ Para auditar o alinhamento com as diretrizes metodológicas de **Bill Wake (2003
 | `2.3` | 13/10/2026 | Remoção dos cards de alerta de enquadramento metodológico e critérios de aceitação com integração direta ao texto, destaque em branco e dourado para o nó raiz no diagrama da hierarquia do backlog e estilização da fórmula de priorização | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `2.4` | 13/10/2026 | Auditoria metodológica e completude ágil: inclusão formal do enquadramento DEEP do Product Backlog; detalhamento das histórias do topo do backlog no Modelo dos 3Cs (Card, Conversation e Confirmation) com critérios objetivos de aceitação e regras de negócio; e elaboração da Matriz de Conformidade INVEST para as histórias do MVP. | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `2.5` | 29/10/2026 | Incorporação dos RF32 a RF36 ao backlog conforme issue docente (US32 a US36 e épico EP10 para a CAR-10), ampliando para 36 histórias e 10 épicos; linha de corte provisória de 27 histórias no MVP e 9 no pós-MVP, conforme o Capítulo 8, com notas de priorização das novas histórias pendentes (†); remoção do vínculo RNF02 da US20 após revisão da matriz-síntese; atualização da tabela de papéis e da matriz RNF × US. | Gustavo Bonifácio | |
-
+| `2.6` | 02/11/2026 | Revisão cruzada com os Capítulos 2, 4 e 6 após feedback do professor: ferramenta de presença padronizada como FLIT (nome anteriormente registrado como Shifton) (EP03/US20) | Gustavo Bonifácio |  |
