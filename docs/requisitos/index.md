@@ -1,35 +1,40 @@
-# Capítulo 8: Requisitos de Software
+<a id="visao-geral-e-modelo-metodologico"></a>
+# Catálogo Geral de Requisitos de Software
 
-Este documento consolida a especificação de **requisitos funcionais** e **não funcionais** do sistema ***DUOC Finance***, estruturados modularmente em torno dos **quatro  Objetivos Específicos (OE)** do produto e suas respectivas **Características (CAR)**, definidas no [Capítulo 2: Solução Proposta](../visao-produto/capitulo-2/index.md).
+Este capítulo consolida o **Catálogo Geral de Requisitos de Software** do sistema ***DUOC Finance***, unificando a especificação detalhada dos **Requisitos Funcionais (RF01 a RF40)**, das **Regras de Negócio (RN01 a RN31)** e dos **Requisitos Não Funcionais (RNF01 a RNF20)** em torno dos quatro **Objetivos Específicos (OE)** e suas respectivas **Características (CAR)**, definidas na [Solução Proposta](../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados).
 
----
+Todos os elementos estão interligados por **vínculos bidirecionais navegáveis**: ao consultar um Requisito Funcional, é possível transicionar diretamente para suas Regras de Negócio e Requisitos Não Funcionais condicionantes e, a partir de qualquer regra ou métrica, retornar imediatamente aos requisitos que a executam.
 
-## Visão Geral e Modelo Metodológico
+<div class="catalog-nav-deck">
+  <a href="#catalogo-funcionais" class="catalog-nav-btn">
+    <span class="nav-btn-badge">40</span>
+    <span class="nav-btn-text">Requisitos Funcionais</span>
+  </a>
+  <a href="#catalogo-regras-de-negocio" class="catalog-nav-btn">
+    <span class="nav-btn-badge">31</span>
+    <span class="nav-btn-text">Regras de Negócio</span>
+  </a>
+  <a href="#catalogo-nao-funcionais" class="catalog-nav-btn">
+    <span class="nav-btn-badge">20</span>
+    <span class="nav-btn-text">Requisitos Não Funcionais</span>
+  </a>
+  <a href="rastreabilidade.md" class="catalog-nav-btn catalog-nav-btn-ext">
+    <span class="nav-btn-text">Pirâmide & Rastreabilidade Miro ↗</span>
+  </a>
+  <a href="priorizacao.md" class="catalog-nav-btn catalog-nav-btn-ext">
+    <span class="nav-btn-text">Matriz 4 × 4 de Priorização ↗</span>
+  </a>
+</div>
 
-Para assegurar o rigor analítico, a testabilidade e a rastreabilidade exigidos pela disciplina de Engenharia de Requisitos, a especificação adota os seguintes pilares metodológicos:
+<a id="atores-do-sistema-e-matriz-canonica-de-papeis-rbac"></a>
+### Atores Canônicos do Sistema
 
-- **Requisitos Funcionais (RF):** Representam **ações observáveis e deliberadas do usuário** dentro da aplicação que geram valor de negócio mensurável. Rotinas de cálculo interno, processamentos em segundo plano e validações restritivas não são formulados como RFs isolados, mas sim modelados como regras de negócio condicionantes da ação do usuário. Cada RF traz um **Critério de Aceitação** redigido em texto corrido, que descreve o que o usuário consegue fazer, as regras de negócio que condicionam a ação e o resultado observável que permite verificá-la.
-- **Regras de Negócio (RN):** Políticas operacionais, fórmulas de cálculo, automatismos do sistema, restrições e invariantes de domínio da **DUOC Arquitetura e Engenharia** que governam a execução das ações dos usuários. As regras são numeradas sequencialmente em escopo global (RN01 a RN31) e mapeadas bidirecionalmente às fontes de elicitação e requisitos executores.
-- **Requisitos Não Funcionais (RNF):** Atributos de qualidade e restrições técnicas do produto, classificados simultaneamente pelo modelo **URPS+** (*Usability*, *Reliability*, *Performance*, *Supportability* e o modificador `+` para *Security* e Legais) e pela taxonomia de **Sommerville** (Requisitos do Produto e Requisitos Externos). Cada RNF conta com um **Critério Mensurável** baseado em parâmetros objetivos de verificação.
-- **Rastreabilidade Bidirecional:** Mapeamento integral entre Fontes de Elicitação (atas de reuniões, termos de referência, planilhas), Objetivos Específicos (OE), Características (CAR), Regras de Negócio (RN), Requisitos (RF/RNF) e Casos de Teste (CT-Mx-xx).
+O ecossistema operacional do ***DUOC Finance*** é estruturado em torno de **quatro papéis de autorização (RBAC)**:
 
-### Estrutura Modular dos Requisitos
-
-| Módulo | Objetivo Específico | Características Cobertas (CAR) | Requisitos Funcionais (Ação do Usuário) | Requisitos Não Funcionais | Casos de Teste |
-| :---: | :--- | :---: | :---: | :---: | :---: |
-| <span class="mod-badge mod-1">Módulo 1</span> | [**OE1 — Padronização e Unificação de Dados**](modulo-1.md) | CAR-01, CAR-02, CAR-09, CAR-10 | RF01 a RF04, RF19, RF20, RF22, RF25, RF26, RF32, RF35 e RF36 | RNF01 a RNF04, RNF19 | CT-M1-01 a CT-M1-17 |
-| <span class="mod-badge mod-2">Módulo 2</span> | [**OE2 — Eficiência Administrativo-Financeira**](modulo-2.md) | CAR-03, CAR-04 | RF05 a RF08, RF21, RF27, RF28 e RF29 | RNF05 a RNF08 | CT-M2-01 a CT-M2-12 |
-| <span class="mod-badge mod-3">Módulo 3</span> | [**OE3 — Inteligência de Custos por Contrato**](modulo-3.md) | CAR-05, CAR-06 | RF09 a RF12, RF30, RF31, RF33, RF34 e RF37 a RF40 | RNF09 a RNF12 | CT-M3-01 a CT-M3-16 |
-| <span class="mod-badge mod-4">Módulo 4</span> | [**OE4 — Governança, Segurança e Rastreabilidade**](modulo-4.md) | CAR-07, CAR-08 | RF13 a RF18, RF23 e RF24 | RNF13 a RNF18, RNF20 | CT-M4-01 a CT-M4-15 |
-
-### Atores do Sistema e Matriz Canônica de Papéis (RBAC)
-
-Para sanar ambiguidades de papéis decorrentes da multiplicidade de funções operacionais da engenharia civil e alinhar os requisitos à realidade sociotécnica da **DUOC Arquitetura e Engenharia** (conforme mapeado no [Mapa de Stakeholders](../visao-produto/capitulo-1/index.md#16-mapa-de-stakeholders) e na [Segmentação IHC](../visao-produto/capitulo-1/index.md#17-segmentacao-de-usuarios-e-perfis-de-ihc)), a especificação estabelece **quatro papéis sistêmicos de acesso (*roles*) canônicos**, aplicados rigorosamente em todas as telas, regras de negócio e rotinas de API da aplicação (RF14, RN16):
-
-| Papel Sistêmico (RBAC) | Código no Sistema | Descrição Operacional das Atribuições | Mapeamento com Stakeholders da DUOC |
+| Papel (Ator) | Código RBAC | Escopo Operacional e Responsabilidades Funcionais | Perfil Organizacional na DUOC |
 | :--- | :---: | :--- | :--- |
 | **Técnico de Campo / Diarista** | `TECNICO_CAMPO` | Preenche e retifica apontamentos de produção e horas de campo (RVT) via aplicação web responsiva (RF04, RF35), anexa fotos e evidências da atividade (RF22), consulta exclusivamente os próprios registros (RF19) e submete solicitações de reembolso e adiantamento operacional (RF07, RF28). | Operários, diaristas, técnicos residentes, arquitetos em visita técnica e estagiários. |
-| **Gestor Operacional de Obras** | `GESTOR_OBRAS` | Cadastra, atualiza e consulta contratos de obras (RF33, RF37, RF38), cadastra e atualiza centros de custo (RF34, RF39), define tetos orçamentários por obra (RF40) e delibera apontamentos de campo de sua alçada com homologação ou rejeição justificada (RF32). | Mapeamento a confirmar com a equipe e a cliente. |
+| **Gestor Operacional de Obras** | `GESTOR_OBRAS` | Cadastra, atualiza e consulta contratos de obras (RF33, RF37, RF38), cadastra e atualiza centros de custo (RF34, RF39), define tetos orçamentários por obra (RF40) e delibera apontamentos de campo de sua alçada com homologação ou rejeição justificada (RF32). | Engenheiros residentes, coordenadores de contratos e diretores de engenharia. |
 | **Administrador Financeiro** | `ADMIN_FINANCEIRO` | Gerencia o cadastro de colaboradores (RF01, RF02, RF03, RF25, RF26), configura a tabela vigente de diárias (RF27), emite prévias (RF05), homologa fechamentos mensais (RF06), delibera despesas e reembolsos (RF08, RF29), dispara apropriações de custos (RF09) e exporta dados consolidados (RF36). | **Auxiliar-Administradora (Maria Beatryz)**, que na estrutura corporativa enxuta da DUOC centraliza rotinas de DP/RH, contas a pagar e finanças. |
 | **Administrador do Sistema** | `ADMIN_SISTEMA` | Gerencia perfis e atribuição de papéis de usuários (RF14), monitora a segurança global da plataforma, expiração de senhas e bloqueios por tentativas falhas (RF23, RF24), e audita eventos probatórios (RF15, RF16). | Sócios-diretores e equipe técnica responsável pela sustentação de TI e governança da segurança da informação. |
 
@@ -37,797 +42,11130 @@ Para sanar ambiguidades de papéis decorrentes da multiplicidade de funções op
 
 ---
 
-## Rastreabilidade Estratégica e Diagramas Visuais
-
-A rastreabilidade entre a estratégia corporativa da DUOC e a engenharia de software é formalizada pelos diagramas a seguir.
-
-### Pirâmide de Abstração (Rastreabilidade Vertical)
-
-O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução: do Objetivo Geral (OG) às metas táticas (OEs), descendo para as capacidades do sistema (CARs) e derivando nos Requisitos Funcionais e Não Funcionais executáveis.
-
-<div  class="miro-diagram-box">
-  <iframe
-    src="https://miro.com/app/live-embed/uXjVEd_ZDOg=/?focusWidget=3458764686279042166&embedMode=view_only_without_ui&embedId=760334862252"
-    title="Pirâmide de Abstração — Rastreabilidade Vertical"
-    frameborder="0"
-    scrolling="no"
-    allow="fullscreen; clipboard-read; clipboard-write"
-    allowfullscreen>
-  </iframe>
-</div>
-
-<p align="center">
-  <a href="https://miro.com/app/board/uXjVEd_ZDOg=/?share_link_id=457510525802"
-     target="_blank"
-     rel="noopener noreferrer">
-    Abrir Piramide Completo no Miro (Interativo) ↗
-  </a>
-    &nbsp;|&nbsp;
-  <a href="../assets/images/requisitos/piramide_abstracao.jpg"
-     target="_blank"
-     rel="noopener noreferrer">
-    Ver Pirâmide de Abstração em JPG ↗
-  </a>
-    &nbsp;|&nbsp;
-  <a href="../assets/images/piramide_abstracao_vetorizada.svg" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      download="piramide_abstracao_vetorizada.svg">
-    Baixar Piramide em Vetor (SVG Alta Resolução) ↗
-</a>
-</p>
-
-> **Nota de atualização (22/10/2026):** As representações gráficas de rastreabilidade ainda refletem a estrutura anterior à decomposição dos RF33 e RF34. Os requisitos RF37 a RF40 já estão documentados nas tabelas e matrizes de rastreabilidade atualizadas. A atualização das imagens e do diagrama original no Miro permanece pendente.
-**Rastreabilidade dos Requisitos Não Funcionais na Pirâmide de Abstração:** O grafo estrutural da Pirâmide de Abstração acima formaliza a descendência vertical estrita do escopo observável e das ações do usuário (**Objetivo Geral ➔ Objetivos Específicos ➔ Características ➔ Requisitos Funcionais**). Os **Requisitos Não Funcionais (RNFs)**, por constituírem atributos de qualidade sistêmica e restrições arquiteturais (*cross-cutting concerns*), não figuram como folhas exclusivas de uma única funcionalidade, mas qualificam as características e o produto como um todo (por exemplo, segurança e integridade no RNF03 e RNF14, usabilidade no RNF04 e RNF19, e confiabilidade no RNF06 e RNF18). A amarração individualizada e auditável de cada um dos 20 RNFs às CARs e às metas de negócio é detalhada na [Especificação Modular dos Requisitos](#especificacao-modular-dos-requisitos) e na [Matriz-Síntese Geral de Rastreabilidade](#matriz-sintese-geral-de-rastreabilidade).
-
 ---
 
-### Mapeamento de Necessidades do Cliente (Dores do Ishikawa e Rich Picture ➔ Requisitos)
-
-A rastreabilidade horizontal do **DUOC Finance** conecta diretamente as causas-raiz identificadas no [Diagrama de Causa e Efeito (Ishikawa)](../visao-produto/capitulo-1/index.md#diagrama-de-causa-e-efeito-ishikawa) (estruturado nas 4 categorias adaptadas: *Métodos*, *Medição*, *Tecnologia* e *Pessoas*) e as tensões operacionais do [Rich Picture](../visao-produto/capitulo-1/index.md#rich-picture-fluxo-sociotecnico) (TR-01 a TR-04) às respostas arquiteturais e funcionais da solução, cobrindo o catálogo atual de **40 Requisitos Funcionais** e **20 Requisitos Não Funcionais** projetados para mitigar as dores operacionais da organização parceira.
-
-<div class="cronograma-diagram-box" markdown="1">
-
-![Mapeamento de Necessidades do Cliente](../assets/images/requisitos/mapeamento_necessidades_duoc_light.png#only-light){ .img-light-mode }
-![Mapeamento de Necessidades do Cliente](../assets/images/requisitos/mapeamento_necessidades_duoc_dark.png#only-dark){ .img-dark-mode }
-
-<p align="center"><small><em>Figura 8.2: Mapeamento de Necessidades do Cliente — Correlação entre Dores Operacionais e Respostas Sistêmicas (Clique na imagem para zoom interativo via glightbox).</em></small></p>
-
-</div>
-
-| Dimensão da Causa-Raiz | Tensão Operacional (Rich Picture) | Problema / Fricção no Cenário Atual | Resposta Sistêmica (DUOC Finance) | Requisitos Funcionais Associados (RF) | Requisitos Não Funcionais Críticos (RNF) | Módulo / CAR |
-| :--- | :--- | :--- | :--- | :--- | :--- | :---: |
-| **Métodos & Pessoas**<br><br>*(Ishikawa)* | **Tensão TR-03**<br><br>Consolidação de diárias, reembolsos e comissões: conferência manual de horas e fechamento em planilhas fragmentadas | **Fechamento mensal de diárias moroso e vulnerável a erros aritméticos:** A Auxiliar-Administradora gasta dias compilando anotações físicas de canteiro e mensagens para calcular diárias técnicas e comissões, gerando divergências com prestadores e atrasos na emissão de prévias. | **Motor de apuração automatizado e conferência supervisionada:** Centralização dos apontamentos homologados em prévia de fechamento financeiro, cálculo automático com fórmulas parametrizadas (RN31), bloqueio compulsório de lotes aprovados e estorno auditável com histórico preservado. | • **RF05:** Solicitar prévia de fechamento<br>• **RF06:** Homologar fechamento financeiro<br>• **RF21:** Estornar fechamento financeiro<br>• **RF27:** Configurar tabela de valores de diárias técnicas | • **RNF05:** Fechamento em ≤ 5,0 s sob 500 registros<br>• **RNF06:** Exatidão monetária centesimal (tolerância R$ 0,00)<br>• **RNF08:** Não-repúdio e justificativa formal (≥ 15 caracteres) | **Módulo 2 (OE2)**<br><br>[CAR-03](../visao-produto/capitulo-2/index.md#car-03) |
-| **Métodos & Tecnologia**<br><br>*(Ishikawa)* | **Tensões TR-01 e TR-02**<br><br>Envio do RVT em papel ou planilha isolada (TR-01) e de comprovantes de despesa por foto, WhatsApp ou papel térmico (TR-02) | **Extravio de notas fiscais físicas e anotações informais de campo:** Colaboradores em obras remotas enviam comprovantes em papel térmico que apaga ou mensagens informais de WhatsApp, provocando perda de cupons fiscais, atrasos em reembolsos e falta de comprovação perante clientes. | **Coleta web móvel padronizada e fluxo digital de prestação de contas:** Aplicação web responsiva para envio de apontamentos de campo (RVT) com upload seguro de evidências, captura de coordenadas, retificação de itens pendentes e fluxo deliberativo com parecer obrigatório. | • **RF04:** Submeter apontamento de campo<br>• **RF07:** Submeter solicitação de reembolso<br>• **RF08:** Deliberar solicitação de reembolso<br>• **RF19:** Consultar apontamentos registrados<br>• **RF22:** Anexar evidências e geolocalização ao apontamento<br>• **RF28:** Submeter solicitação de adiantamento operacional<br>• **RF29:** Deliberar solicitação de adiantamento operacional<br>• **RF32:** Deliberar apontamento de campo<br>• **RF35:** Retificar apontamento de campo pendente | • **RNF01:** Modo offline com fila mínima de 100 registros<br>• **RNF04:** Usabilidade em até 5 passos/telas (taxa ≥ 90%)<br>• **RNF07:** Validação de anexos (≤ 5 MB, magic numbers MIME)<br>• **RNF19:** Acessibilidade WCAG 2.1 AA | **Módulo 1 (OE1)**<br>[CAR-02](../visao-produto/capitulo-2/index.md#car-02)<br><br>**Módulo 2 (OE2)**<br>[CAR-04](../visao-produto/capitulo-2/index.md#car-04) |
-| **Tecnologia**<br><br>*(Ishikawa)* | **Sem transação TR dedicada no Rich Picture**<br><br>Cadastros descentralizados e divergência com o ponto externo (causa de Tecnologia do Ishikawa) | **Descentralização cadastral e inconsistência em dados bancários:** Ausência de base única de pessoal e diaristas, com dados de pagamento desatualizados que acarretam transferências errôneas e falta de sincronia com a ferramenta externa de ponto eletrônico (*FLIT*). | **Gestão cadastral unificada e integração interoperável:** Ficha cadastral com identificador único e validação compulsória de CPF (módulo 11), atualização com versionamento histórico, enquadramento de contratação, consumo de presenças do *FLIT* e exportação em CSV/XLSX. | • **RF01:** Cadastrar colaborador<br>• **RF02:** Atualizar cadastro de colaborador<br>• **RF03:** Registrar movimentação funcional<br>• **RF20:** Importar presenças homologadas<br>• **RF25:** Cadastrar tipo de contratação do colaborador<br>• **RF26:** Consultar histórico de alterações cadastrais e bancárias<br>• **RF36:** Exportar dados consolidados em planilha CSV/XLSX | • **RNF02:** Tempo de resposta da consulta cadastral (ficha do colaborador, CAR-01) em ≤ 2,0 s (p95)<br>• **RNF03:** Criptografia AES-256 em repouso e TLS 1.3 em trânsito | **Módulo 1 (OE1)**<br><br>[CAR-01](../visao-produto/capitulo-2/index.md#car-01), [CAR-09](../visao-produto/capitulo-2/index.md#car-09) e [CAR-10](../visao-produto/capitulo-2/index.md#car-10) |
-| **Medição**<br><br>*(Ishikawa)* | **Tensão TR-04**<br><br>Apropriação de custo por contrato: rateios arbitrários e falta de visibilidade do custo real | **Opacidade do custo operacional por obra e detecção tardia de estouro orçamentário:** A diretoria desconhece o custo de mão de obra apropriado a cada contrato durante a execução, trabalhando com precificação empírica e rateios globais arbitrários sem rastreabilidade documental do gasto. | **Apropriação analítica direta e governança de contratos de obra:** Alocação de custos diretamente a contratos ativos e centros de custo, rastreabilidade documental integral até a comprovação de origem, parametrização de orçamentos e painel com filtros e alertas preventivos. | • **RF09:** Apropriar custos operacionais<br>• **RF10:** Consultar rastreabilidade de custos<br>• **RF11:** Filtrar indicadores de custos<br>• **RF12:** Monitorar execução orçamentária<br>• **RF30:** Consultar comparativo histórico de custos entre contratos<br>• **RF31:** Configurar alertas de execução orçamentária<br>• **RF33:** Gerenciar contratos de obras e clientes<br>• **RF34:** Gerenciar centros de custo e orçamentos de obra | • **RNF09:** Carga do painel analítico em ≤ 3,0 s sob 10.000 lançamentos<br>• **RNF10:** Mascaramento salarial para perfis de obra (≤ 10 ms)<br>• **RNF11:** Atomicidade ACID em apropriações concorrentes<br>• **RNF12:** Responsividade em desktop e tablet | **Módulo 3 (OE3)**<br><br>[CAR-05](../visao-produto/capitulo-2/index.md#car-05) e [CAR-06](../visao-produto/capitulo-2/index.md#car-06) |
-| **Tecnologia**<br><br>*(Ishikawa)* | **Sem transação TR dedicada no Rich Picture**<br><br>Planilhas salariais compartilhadas sem trilha probatória (causa de Tecnologia do Ishikawa) | **Compartilhamento inseguro de remunerações e vulnerabilidade jurídica:** Circulação desprotegida de dados financeiros confidenciais por mensageria e ausência de trilha probatória para comprovar pagamentos e conciliações perante auditorias e fiscalizações trabalhistas. | **Controle estrito de acesso RBAC e trilha de auditoria imutável:** Governança com 4 perfis canônicos, bloqueio de força bruta, imposição de renovação de senhas, sessão com token de 8h, logs *append-only* gravados atomicamente e retidos por 5 anos (CLT Art. 11 e LGPD Art. 16) e rotina diária de backup. | • **RF13:** Efetuar login no sistema<br>• **RF14:** Gerenciar perfis de acesso<br>• **RF15:** Consultar trilha de auditoria<br>• **RF16:** Exportar relatório de auditoria<br>• **RF17:** Recuperar credenciais de acesso<br>• **RF18:** Encerrar sessão manualmente<br>• **RF23:** Bloquear acesso após tentativas falhas consecutivas<br>• **RF24:** Impor renovação periódica de senhas | • **RNF13:** Expiração de token temporário em ≤ 8 h<br>• **RNF14:** 100% dos endpoints sensíveis com RBAC e resposta HTTP 403 ≤ 15 ms<br>• **RNF15:** Gravação atômica ACID de auditoria (latência ≤ 50 ms)<br>• **RNF16:** Retenção imutável por 1.825 dias (5 anos)<br>• **RNF17:** Backup diário com restauração verificada em ≤ 4 h<br>• **RNF18:** Disponibilidade mensal ≥ 99,5%<br>• **RNF20:** Validação de schemas em 100% das requisições de escrita | **Módulo 4 (OE4)**<br><br>[CAR-07](../visao-produto/capitulo-2/index.md#car-07) e [CAR-08](../visao-produto/capitulo-2/index.md#car-08) |
-
----
-
-### Grafo de Interdependência e Facilidades dos Requisitos
-
-O grafo visual abaixo explicita a **rede de relacionamentos, dependências e facilidades** entre os requisitos do sistema: a camada de segurança e governança (RBAC / Módulo 4) protege e habilita o acesso à base cadastral unificada (Módulo 1); os apontamentos de campo coletados e homologados alimentam diretamente o motor de fechamento de diárias (Módulo 2); os lotes conferidos sustentam a apropriação de custos diretos aos contratos de obra (Módulo 3); e todas as transações de escrita alimentam a trilha imutável de auditoria corporativa.
-
-<div class="cronograma-diagram-box" markdown="1">
-
-![Grafo de Interdependência e Facilidades dos Requisitos](../assets/images/requisitos/grafo_interdependencia_requisitos_light.png#only-light){ .img-light-mode }
-![Grafo de Interdependência e Facilidades dos Requisitos](../assets/images/requisitos/grafo_interdependencia_requisitos_dark.png#only-dark){ .img-dark-mode }
-
-<p align="center"><small><em>Figura 8.3: Grafo de Interdependência e Facilidades entre os Requisitos do DUOC Finance (Clique na imagem para zoom interativo via glightbox).</em></small></p>
-
-</div>
-
----
-
-## Especificação Modular dos Requisitos
-
-Os requisitos estão divididos em quatro módulos, cada um com sua própria página. Nelas estão as definições completas dos requisitos funcionais, regras de negócio, requisitos não funcionais e casos de teste.
-
-Para cada módulo são apresentados:
-
-- **Requisitos Funcionais (RF):** Ações deliberadas e observáveis do usuário orientadas a valor de negócio, com Critérios de Aceitação em texto corrido e verificável.
-- **Regras de Negócio (RN):** Políticas operacionais, restrições e cálculos que governam a execução das ações dos usuários.
-- **Requisitos Não Funcionais (RNF):** Atributos de qualidade e restrições técnicas classificados em **URPS+** e **Sommerville**, com Critérios Mensuráveis quantitativos.
-- **Matriz de Rastreabilidade do Módulo:** Mapeamento explícito entre Requisito, OE, CAR e o respectivo Caso de Teste (CT) executável.
-
-Utilize as abas interativas abaixo para alternar entre os módulos e consultar a especificação completa de cada domínio operacional:
-
-=== "Módulo 1: Padronização e Unificação de Dados (OE1)"
-
-    <div class="module-spec-pane" markdown="1">
-
-    <a id="oe1-padronizacao-e-unificacao-de-dados"></a>
-    <a id="oe1"></a>
-    ### Módulo 1 (OE1) — Padronização e Unificação de Dados
-
-    Esta seção detalha os requisitos da **DUOC Finance** associados ao **OE1 — Padronizar e Unificar os Dados**. O módulo cobre as características **CAR-01 — Gestão Cadastral Unificada de Pessoal**, **CAR-02 — Apontamento de Campo e Registros Técnicos de Obra (RVT)**, **CAR-09 — Integração com FLIT e Presenças Homologadas** e **CAR-10 — Importação e Exportação de Dados com ERPs e Planilhas Legadas**.
-
-    !!! note "Alinhamento de Escopo — Ponto Biométrico e FLIT"
-        Conforme estabelecido no alinhamento de escopo técnico com a DUOC (Ata de Reunião 02 e CAR-09), o controle formal de frequência biométrica dos colaboradores é suprido externamente pelo sistema *FLIT*. O escopo operacional do DUOC Finance em campo concentra-se estritamente na coleta de apontamentos técnicos de produção por contrato e no preenchimento de Relatórios de Viagem Técnica (RVT).
-
-    #### Requisitos Funcionais
-
-    Os requisitos abaixo expressam as **ações observáveis dos usuários** para gestão da base cadastral e coleta de dados de produção em campo.
-
-    | Código | Requisito (Ação do Usuário) | CAR relacionada | Critério de Aceitação |
-    | :---: | :--- | :---: | :--- |
-    | **RF01** | **Cadastrar colaborador** | CAR-01 | O Administrador Financeiro (`ADMIN_FINANCEIRO`) cadastra um novo profissional informando seus dados cadastrais, bancários (código de compensação COMPE de 3 dígitos, agência e conta corrente) e trabalhistas validados (RN01, RN03, RN22), e o sistema grava o registro com um identificador único. Se for concedido acesso ao sistema, é gerado e despachado um link seguro de primeiro acesso e ativação para o e-mail corporativo cadastrado (RF17), permitindo definir senha para autenticação subsequente (RF13). Se o CPF informado for inválido segundo o algoritmo oficial da Receita Federal (módulo 11) ou já constar na base de dados, o cadastro é recusado e nenhum registro novo é criado (RN01). |
-    | **RF02** | **Atualizar cadastro de colaborador** | CAR-01 | As alterações nos dados cadastrais ou bancários de um colaborador ativo, submetidas pelo Administrador Financeiro (`ADMIN_FINANCEIRO`), propagam-se de forma síncrona na mesma transação atômica (em latência inferior a 500 ms) para as rotinas financeiras de fechamento e apropriação de custos, preservando a versão anterior da ficha no histórico imutável (RN23). |
-    | **RF03** | **Registrar movimentação funcional** | CAR-01 | O Administrador Financeiro (`ADMIN_FINANCEIRO`) registra afastamentos, férias e rescisões contratuais, atualizando a situação funcional do colaborador no sistema. Em caso de afastamento ou desligamento, o acesso do colaborador à aplicação web responsiva (Web App / PWA) é revogado compulsoriamente na mesma transação de persistência no banco (RN04). |
-    | **RF04** | **Submeter apontamento de campo** | CAR-02 | Ao término da jornada em obra ou visita técnica, o Técnico de Campo (`TECNICO_CAMPO`) envia pela aplicação web responsiva (Web App / PWA) as horas trabalhadas e o escopo de serviços executado, juntamente com os anexos do apontamento (RF22). O registro é gravado com status inicial "Pendente de Homologação" e disponibilizado para análise do Gestor Operacional de Obras (`GESTOR_OBRAS`) responsável pelo contrato (RN02). |
-    | **RF19** | **Consultar apontamentos registrados** | CAR-02 | O Técnico de Campo (`TECNICO_CAMPO`) consulta na aplicação web exclusivamente os próprios apontamentos sob o princípio do menor privilégio (RN16), visualizando data, contrato e status ("Pendente de Homologação", "Homologado" ou "Rejeitado"), com acesso ao histórico completo de pareceres de deliberação. |
-    | **RF20** | **Importar presenças homologadas** | CAR-09 | O Administrador Financeiro (`ADMIN_FINANCEIRO`) seleciona a competência mensal e os contratos de obras e importa as presenças homologadas disponibilizadas pelo painel (*dashboard*) do sistema externo *FLIT*. Os registros importados são vinculados a cada colaborador e contrato na competência selecionada, viabilizando a apuração financeira de horas sem modificar os dados de origem no *FLIT* (RN10). |
-    | **RF22** | **Anexar evidências e geolocalização ao apontamento** | CAR-02 | Durante o preenchimento de um apontamento na aplicação web responsiva, o Técnico de Campo (`TECNICO_CAMPO`) anexa fotos ou comprovantes da atividade, e o sistema captura a geolocalização do dispositivo quando a permissão do navegador estiver concedida. Os arquivos e coordenadas são vinculados ao registro, a lista de anexos pode ser revisada e qualquer item pode ser removido antes da submissão; a ausência de sinal de GPS ou recusa de permissão não impede o envio das evidências (RN24). |
-    | **RF25** | **Cadastrar tipo de contratação do colaborador** | CAR-01 | No cadastro ou atualização de colaborador, o Administrador Financeiro (`ADMIN_FINANCEIRO`) seleciona o enquadramento de contratação entre Diarista, CLT ou Prestador de Serviço, determinando as regras de apuração de diárias e custos aplicáveis (RN22). |
-    | **RF26** | **Consultar histórico de alterações cadastrais e bancárias** | CAR-01 | O Administrador Financeiro (`ADMIN_FINANCEIRO`) e o próprio colaborador consultam o histórico da ficha cadastral, visualizando cada versão anterior dos dados pessoais e bancários com indicação do campo modificado, autor da alteração e carimbo temporal UTC (RN23). |
-    | **RF32** | **Deliberar apontamento de campo** | CAR-02 | O Gestor Operacional de Obras (`GESTOR_OBRAS`) analisa os apontamentos com status "Pendente de Homologação" vinculados aos contratos sob sua responsabilidade técnica e delibera aprovando ou rejeitando cada registro. A aprovação transiciona o status para "Homologado", bloqueia edições pelo autor (RN02) e disponibiliza as horas/diárias para apuração financeira (RN05, RN10). A rejeição exige compulsoriamente parecer formal justificado com no mínimo 15 caracteres (RN30), transiciona o status para "Rejeitado" e notifica o colaborador para ciência e retificação (RF35). |
-    | **RF35** | **Retificar apontamento de campo pendente** | CAR-02 | O Técnico de Campo (`TECNICO_CAMPO`) retifica horas, escopo ou anexos de um apontamento submetido enquanto seu status permanecer como "Pendente de Homologação" e dentro da janela limite de até 5 dias úteis após o envio (RN02). Após a homologação pelo gestor (RF32) ou o decurso do prazo de 5 dias úteis, o apontamento é compulsoriamente bloqueado contra alterações. |
-    | **RF36** | **Exportar dados consolidados em planilha** | CAR-10 | O Administrador Financeiro (`ADMIN_FINANCEIRO`) seleciona períodos, contratos e centros de custo e exporta os dados consolidados de apontamentos, presenças e apropriações em arquivos estruturados de planilha (formatos abertos CSV e XLSX) para conciliação contábil externa ou arquivamento. |
-
-    #### Regras de Negócio
-
-    1. **RN01 — Unicidade e Validação Cadastral por CPF:** O sistema valida compulsoriamente a unicidade do CPF através do algoritmo oficial de validação dos dígitos verificadores (módulo 11) da Receita Federal do Brasil, bloqueando cadastros duplicados ou formatos inconsistentes.
-    2. **RN02 — Bloqueio Automático de Edição Retroativa:** Apontamentos de campo homologados pelo Gestor Operacional de Obras (RF32) ou submetidos há mais de 5 dias úteis tornam-se automaticamente bloqueados para qualquer edição ou exclusão por usuários de campo.
-    3. **RN03 — Validação Cadastral para Lançamentos Financeiros:** O sistema impede a aprovação de qualquer diária, comissão, reembolso ou adiantamento caso o colaborador não esteja com status funcional "Ativo" e dados bancários completos (código COMPE de 3 dígitos, agência de 4 dígitos e conta corrente com dígito verificador).
-    4. **RN04 — Revogação Automática de Acessos:** A transição do status cadastral para "Desligado" ou "Afastado" dispara o cancelamento automático e imediato de tokens de sessão e credenciais ativas do usuário na aplicação web responsiva (Web App / PWA) na mesma transação atômica do banco de dados.
-    5. **RN22 — Tipos de Contratação Válidos:** O sistema restringe o tipo de contratação às opções Diarista, CLT ou Prestador de Serviço, aplicando regras de cálculo de custo específicas por tipo nas rotinas financeiras.
-    6. **RN23 — Versionamento Obrigatório de Dados Cadastrais e Bancários:** O sistema preserva toda versão anterior de campo cadastral ou bancário alterado, com autor e carimbo temporal UTC, nunca sobrescrevendo o valor anterior.
-    7. **RN24 — Captura de Geolocalização Não Bloqueante:** O sistema tenta capturar a geolocalização do dispositivo no momento do anexo de evidências; caso a permissão seja negada ou a localização esteja indisponível, o anexo prossegue normalmente, sendo sinalizado como "localização não disponível".
-    8. **RN30 — Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos:** O Gestor Operacional de Obras deve registrar compulsoriamente parecer justificatório com no mínimo 15 caracteres ao rejeitar um apontamento de campo. A aprovação transiciona o status para "Homologado" e bloqueia compulsoriamente a edição do registro pelo colaborador (RN02), habilitando-o para as rotinas financeiras (RN05).
-
-    #### Requisitos Não Funcionais
-
-    | Código | Requisito Verificável | URPS+ | Sommerville | Critério Mensurável |
-    | :---: | :--- | :--- | :--- | :--- |
-    | **RNF01** | **Operar em modo *offline* para coleta de dados em canteiros sem conectividade** | Reliability (Confiabilidade) | Requisito do Produto — Confiabilidade | A aplicação web responsiva (Web App / PWA) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. |
-    | **RNF02** | **Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos** | Performance (Desempenho) | Requisito do Produto — Desempenho | O tempo de resposta para busca, paginação e renderização da ficha unificada de qualquer colaborador deve ser inferior ou igual a 2,0 segundos em 95% das requisições sob carga nominal (concorrência típica esperada de até 50 usuários simultâneos autenticados operando a uma taxa de 10 requisições por segundo). |
-    | **RNF03** | **Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito** | Security (+) (Segurança) | Requisito do Produto — Segurança | 100% dos dados pessoais e cadastrais confidenciais (CPF, dados de conta bancária, chave Pix e remuneração) armazenados em banco devem utilizar criptografia AES-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo TLS 1.3 (em conformidade com o princípio de segurança do Art. 6º, VII da LGPD). |
-    | **RNF04** | **Garantir usabilidade e agilidade no preenchimento de apontamentos de campo** | Usability (Usabilidade) | Requisito do Produto — Usabilidade | O preenchimento completo de um apontamento diário de campo deve ser concluído por usuários em primeiro uso, sem suporte externo ou treinamento prévio, em no máximo 5 passos/telas, com taxa de conclusão bem-sucedida ≥ 90% em teste de usabilidade. |
-    | **RNF19** | **Garantir acessibilidade digital nas interfaces do sistema** | Usability (Usabilidade) | Requisito do Produto — Usabilidade | 100% dos formulários de cadastro e apontamento devem dispor de navegação completa por teclado e rótulos ARIA; contraste mínimo de 4.5:1 em texto, validado por ferramenta automatizada (ex.: axe-core) sem erros críticos, alinhado a WCAG 2.1 nível AA. |
-
-    #### Matriz de Rastreabilidade do Módulo 1
-
-    | Requisito | Objetivo Específico | Característica | Fonte de Elicitação / Origem | Regras de Negócio Associadas | Caso de Teste |
-    | :---: | :---: | :---: | :--- | :--- | :--- |
-    | **RF01** | OE1 | CAR-01 | Reunião 01, Planilhas Sanitizadas de Pessoal | RN01, RN03, RN22, RN23 | **CT-M1-01:** Submeter cadastro de colaborador e validar persistência, despacho de link de 1º acesso e bloqueio de CPF duplicado. |
-    | **RF02** | OE1 | CAR-01 | Reunião 01, Reunião 04 | RN23 | **CT-M1-02:** Atualizar ficha cadastral e verificar propagação em tempo real e versionamento. |
-    | **RF03** | OE1 | CAR-01 | Reunião 01, Reunião 04 | RN04 | **CT-M1-03:** Registrar movimentação funcional de colaborador e validar revogação automática de credenciais na aplicação web. |
-    | **RF04** | OE1 | CAR-02 | Reunião 03, Reunião 05, TR-01 | RN02 | **CT-M1-04:** Submeter apontamento de campo na aplicação web responsiva com horas e escopo e validar registro com status "Pendente de Homologação" e anexos vinculados. |
-    | **RNF01** | OE1 | CAR-02 | Reunião 03, Ata 05 (D4) | — | **CT-M1-05:** Testar persistência local de, no mínimo, 100 registros em modo desconectado sem perda de dados, exibição do alerta visual ao atingir 80% da capacidade e tempo de sincronização ≤ 30 s. |
-    | **RNF02** | OE1 | CAR-01 | Reunião 01, Diretrizes de Performance | — | **CT-M1-06:** Medir tempo de resposta da busca e detalhamento de colaboradores (meta ≤ 2,0 s). |
-    | **RNF03** | OE1 | CAR-01 | Reunião 04, LGPD Art. 6º | — | **CT-M1-07:** Validar aplicação de criptografia AES-256 na base de dados e TLS 1.3 nas conexões de rede. |
-    | **RNF04** | OE1 | CAR-02 | Reunião 03, Feedback FB-06 | — | **CT-M1-08:** Avaliar, em teste de usabilidade com usuários em primeiro uso e sem treinamento, a conclusão do apontamento em no máximo 5 passos/telas com taxa de conclusão bem-sucedida ≥ 90%. |
-    | **RF19** | OE1 | CAR-02 | Feedback FB-03, Reunião 03, TR-01 | RN16 | **CT-M1-09:** Consultar a listagem de apontamentos próprios e validar exibição de status e histórico, bloqueando o acesso a registros de outros colaboradores. |
-    | **RF20** | OE1 | CAR-09 | Reunião 02, Reunião 05 (FLIT) | RN10 | **CT-M1-10:** Importar presenças homologadas do *FLIT* para uma competência e validar vínculo por colaborador e contrato, sem alteração dos dados de origem. |
-    | **RF22** | OE1 | CAR-02 | Reunião 03, Feedback FB-11, TR-01 | RN24 | **CT-M1-11:** Anexar fotos e comprovantes a um apontamento em preenchimento, validar a tentativa de captura da geolocalização, o vínculo dos arquivos e coordenadas ao registro e a possibilidade de remover anexos antes da submissão, inclusive quando a localização estiver indisponível. |
-    | **RF25** | OE1 | CAR-01 | Reunião 01, Reunião 04 | RN22 | **CT-M1-12:** Cadastrar e atualizar o tipo de contratação de um colaborador com as opções Diarista, CLT e Prestador de Serviço e validar o vínculo correto ao perfil. |
-    | **RF26** | OE1 | CAR-01 | Reunião 04, LGPD | RN23 | **CT-M1-13:** Consultar o histórico de alterações cadastrais e bancárias de um colaborador e validar exibição do valor anterior, autor, data/hora e campo alterado. |
-    | **RNF19** | OE1 | CAR-01, CAR-02 | Diretrizes WCAG 2.1 AA, Revisão de Pares | — | **CT-M1-14:** Rodar ferramenta de acessibilidade em formulários de cadastro e campo e validar ausência de erros críticos (WCAG 2.1 AA) e navegação completa por teclado. |
-    | **RF32** | OE1 | CAR-02 | Reunião 03, Reunião 05, Revisão de Pares, TR-01 | RN02, RN05, RN10, RN30 | **CT-M1-15:** Deliberar apontamento de campo pendente, validando transição para Homologado, bloqueio de edição pela RN02 e exigência de parecer formal com no mínimo 15 caracteres na rejeição. |
-    | **RF35** | OE1 | CAR-02 | Reunião 03, Revisão de Pares, TR-01 | RN02 | **CT-M1-16:** Retificar dados e anexos de apontamento em estado pendente dentro da janela de 5 dias úteis e verificar bloqueio após homologação ou expiração do prazo. |
-    | **RF36** | OE1 | CAR-10 | Reunião 01, Reunião 05, Revisão de Pares | — | **CT-M1-17:** Exportar dados consolidados de apontamentos e apropriações em arquivos estruturados de planilha nos formatos CSV e XLSX. |
-
-    </div>
-
-=== "Módulo 2: Eficiência Administrativo-Financeira (OE2)"
-
-    <div class="module-spec-pane" markdown="1">
-
-    <a id="oe2-eficiencia-administrativo-financeira"></a>
-    <a id="oe2"></a>
-    ### Módulo 2 (OE2) — Eficiência Administrativo-Financeira
-
-    Esta seção detalha os requisitos da **DUOC Finance** associados ao **OE2 — Aumentar a Eficiência Administrativo-Financeira**. O módulo cobre as características **CAR-03 — Motor de Processamento e Fechamento Financeiro** e **CAR-04 — Fluxo Digital de Prestação de Contas e Reembolsos**.
-
-    !!! note "Escopo de Fechamento Financeiro e Rotinas Contábeis"
-        O motor financeiro do DUOC Finance apoia estritamente a apuração de diárias técnicas e comissões simplificadas de prestadores de serviços e a gestão ágil de reembolsos. O sistema não substitui as rotinas formais de folha de pagamento CLT nem o cálculo de encargos e provisões legais (INSS, FGTS, IRRF), que permanecem nos softwares contábeis legados da DUOC.
-
-    #### Requisitos Funcionais
-
-    Os requisitos abaixo expressam as **ações dos usuários** na condução e supervisão do fechamento mensal e no ciclo de prestação de contas operacionais.
-
-    | Código | Requisito (Ação do Usuário) | CAR relacionada | Critério de Aceitação |
-    | :---: | :--- | :---: | :--- |
-    | **RF05** | **Solicitar prévia de fechamento** | CAR-03 | O Administrador Financeiro (`ADMIN_FINANCEIRO`) gera um extrato preliminar consolidado para a competência mensal e contratos de obra selecionados, computando estritamente os apontamentos de campo previamente homologados pelo Gestor Operacional de Obras (RF32, RN05) e aplicando as fórmulas de diárias técnicas e comissões simplificadas parametrizadas (RN25, RN31) para conferência supervisionada antes do fechamento definitivo. |
-    | **RF06** | **Homologar fechamento financeiro** | CAR-03 | O Administrador Financeiro (`ADMIN_FINANCEIRO`), após conferir o extrato preliminar consolidado (RF05), confirma formalmente a homologação do lote da competência mensal dos contratos selecionados. A confirmação encerra a competência, bloqueia compulsoriamente os apontamentos e despesas contra qualquer modificação direta (RN08), grava o carimbo de homologação com UTC e autor na trilha de auditoria (RN17) e emite o extrato financeiro definitivo para conciliação contábil; eventuais retificações posteriores exigem compulsoriamente o procedimento de estorno formal (RF21). |
-    | **RF07** | **Submeter solicitação de reembolso** | CAR-04 | O Técnico de Campo (`TECNICO_CAMPO`) ou gestor solicita o reembolso de uma despesa operacional autorizada (hospedagem, combustível, alimentação de canteiro ou materiais emergenciais vinculados ao contrato ativo) informando valor monetário, categoria de despesa e contrato de obra, anexando compulsoriamente o comprovante fiscal digitalizado (RN06, RN09). A solicitação aceita é registrada com status "Pendente de Análise". |
-    | **RF08** | **Deliberar solicitação de reembolso** | CAR-04 | O Administrador Financeiro (`ADMIN_FINANCEIRO`) analisa as solicitações pendentes de reembolso vinculadas a contratos ativos e delibera aprovando ou reprovando cada item, sendo o parecer formal obrigatório na reprovação. A decisão é registrada, o status do reembolso é atualizado, o valor aprovado é limitado ao montante do documento fiscal (RN07) e o solicitante é notificado via sistema (RN27). |
-    | **RF21** | **Estornar fechamento financeiro** | CAR-03 | Diante de divergência material em lote de competência já homologado, o Administrador Financeiro (`ADMIN_FINANCEIRO`) estorna o fechamento financeiro informando compulsoriamente justificativa formal com no mínimo 15 caracteres (RN08, RNF08). A competência é reaberta para retificação, o fechamento original permanece preservado no histórico imutável e o evento de estorno é gravado na trilha de auditoria com autor, justificativa e carimbo UTC (RN17). |
-    | **RF27** | **Configurar tabela de valores de diárias técnicas** | CAR-03 | O Administrador Financeiro (`ADMIN_FINANCEIRO`) cadastra e atualiza as categorias de diária técnica com valor nominal e período de vigência, passando as rotinas financeiras de fechamento a adotar automaticamente o valor vigente na competência apurada (RN25, RN31). |
-    | **RF28** | **Submeter solicitação de adiantamento operacional** | CAR-04 | O Técnico de Campo (`TECNICO_CAMPO`) solicita adiantamento de recursos para despesa operacional autorizada de um contrato ativo informando valor, categoria, contrato e justificativa formal de aplicação. O adiantamento é registrado com status "Pendente de Análise" e fica disponível para análise financeira (RN03, RN09, RN26). |
-    | **RF29** | **Deliberar solicitação de adiantamento operacional** | CAR-04 | O Administrador Financeiro (`ADMIN_FINANCEIRO`) analisa os adiantamentos pendentes vinculados a contratos ativos e aprova ou reprova cada solicitação, com justificativa obrigatória na reprovação. O status da solicitação é atualizado, a deliberação é registrada e o solicitante é notificado via sistema (RN27). |
-
-    #### Regras de Negócio
-
-    1. **RN05 — Homologação Prévia Mandatória:** O sistema consolida exclusivamente apontamentos de RVT e horas técnicas que possuam status prévio de "Homologado" pelo Gestor Operacional de Obras (RF32), aplicando as fórmulas de cálculo de diárias e comissões simplificadas (RN31).
-    2. **RN06 — Obrigatoriedade de Comprovante Fiscal e Integridade:** Nenhuma solicitação de reembolso pode ser submetida sem um comprovante fiscal digital anexado (DANFE, NFC-e ou recibo formal), cuja integridade estrutural e formato são validados pelo subsistema de armazenamento conforme RNF07, ficando a verificação visual de conteúdo sob encargo do Administrador Financeiro na deliberação (RF08).
-    3. **RN07 — Limite do Montante Reembolsável:** O sistema impede que o valor aprovado para reembolso ultrapasse o valor nominal discriminado no documento fiscal comprobatório.
-    4. **RN08 — Imutabilidade de Lotes Homologados:** O sistema bloqueia modificações diretas em lotes financeiros homologados, exigindo procedimento formal de estorno com justificativa auditável para qualquer retificação.
-    5. **RN09 — Vínculo Contratual Obrigatório:** Todo reembolso, adiantamento ou despesa operacional deve estar estritamente vinculado a um contrato de obra ativo e a um centro de custos operacional válido cadastrados no sistema (RF33, RF34).
-    6. **RN25 — Vigência dos Valores de Diárias Técnicas:** O sistema deve manter os valores parametrizados de diárias técnicas associados às respectivas categorias e períodos de vigência, utilizando exclusivamente o valor vigente para o cálculo financeiro da competência correspondente.
-    7. **RN26 — Elegibilidade do Adiantamento Operacional:** O sistema permite solicitações de adiantamento somente para colaboradores ativos e despesas vinculadas a contrato ativo, mantendo a solicitação em status "Pendente de Análise" até a deliberação do responsável.
-    8. **RN27 — Notificação de Pendências Financeiras:** O sistema deve gerar notificação no painel e por e-mail ao responsável sempre que uma solicitação de reembolso ou adiantamento entrar em estado que exija análise ou deliberação, mantendo a pendência identificável até sua resolução.
-    9. **RN31 — Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo:** O sistema apura os valores financeiros de campo estritamente pelas equações: (a) Total de Diárias Técnicas = $\sum (\text{Quantidade de Diárias Homologadas} \times \text{Valor Vigente da Categoria})$ (RF27, RN25); (b) Comissão Técnica Simplificada = $\text{Percentual Contratual Homologado (\%)} \times \text{Valor da Medição Técnica Aprovada no Contrato}$; sem incidência de encargos tributários ou trabalhistas de folha CLT (INSS, FGTS, IRRF), os quais permanecem sob responsabilidade dos sistemas contábeis externos da DUOC.
-
-    #### Requisitos Não Funcionais
-
-    | Código | Requisito Verificável | URPS+ | Sommerville | Critério Mensurável |
-    | :---: | :--- | :--- | :--- | :--- |
-    | **RNF05** | **Processar rotina de fechamento financeiro em até 5,0 segundos** | Performance (Desempenho) | Requisito do Produto — Eficiência/Desempenho | Em 95 de 100 execuções sob base sintética de até 500 apontamentos de campo, o tempo de cálculo, consolidação e renderização do extrato deve ocorrer em no máximo 5,0 segundos. |
-    | **RNF06** | **Garantir exatidão aritmética centesimal em cálculos monetários** | Reliability (Confiabilidade) | Requisito do Produto — Confiabilidade/Acurácia | Em 100% dos cálculos comparados com o gabarito contábil formal, a discrepância aritmética monetária deve ser de exatamente R$ 0,00, operando com tipos de ponto fixo centesimal sem perdas por arredondamento flutuante. |
-    | **RNF07** | **Garantir robustez e segurança no processamento e armazenamento de comprovantes** | Security (+) / Reliability | Requisito do Produto — Confiabilidade e Robustez | Em 100% dos uploads de comprovantes e evidências, o subsistema de armazenamento deve validar a integridade estrutural do arquivo e cabeçalhos binários (*magic numbers*) no backend; rejeitar arquivos malformados ou corrompidos; bloquear uploads com tamanho superior a 5,0 MB em tempo inferior a 500 ms retornando código HTTP 400 Bad Request com payload JSON padronizado (`FILE_SIZE_EXCEEDED` ou `INVALID_FILE_FORMAT`); e assegurar persistência segura apenas dos formatos homologados (PDF, PNG e JPEG) com hash SHA-256 e tempo de upload ≤ 3,0 segundos. |
-    | **RNF08** | **Garantir rastreabilidade probatória e não-repúdio em operações de estorno** | Security (+) / Reliability | Requisito do Produto — Segurança da Informação e Auditoria | Em 100% das operações de estorno de fechamento homologado, o motor transacional de auditoria deve coletar compulsoriamente os metadados de não-repúdio (identificador único do operador, endereço IP de origem, *user-agent*, carimbo UTC em microssegundos, cópia serializada em JSON do estado financeiro anterior e justificativa formal com no mínimo 15 caracteres não-vazios), abortando atômica e sumariamente qualquer requisição com metadados faltantes sob isolamento serializável com taxa de perda de logs de 0,00%. |
-
-    #### Matriz de Rastreabilidade do Módulo 2
-
-    | Requisito | Objetivo Específico | Característica | Fonte de Elicitação / Origem | Regras de Negócio Associadas | Caso de Teste |
-    | :---: | :---: | :---: | :--- | :--- | :--- |
-    | **RF05** | OE2 | CAR-03 | Reunião 01, Reunião 05, TR-03 | RN03, RN05, RN25, RN31 | **CT-M2-01:** Solicitar prévia de fechamento e validar consolidação de apontamentos homologados e fórmulas de cálculo de diárias e comissões. |
-    | **RF06** | OE2 | CAR-03 | Reunião 05, TR-03 | RN08, RN17 | **CT-M2-02:** Homologar fechamento financeiro e validar bloqueio de edições subsequentes e emissão de extrato final. |
-    | **RF07** | OE2 | CAR-04 | Reunião 02, Reunião 04, TR-02 | RN03, RN06, RN09 | **CT-M2-03:** Submeter solicitação de reembolso com vínculo a contrato ativo e validar anexação fiscal obrigatória. |
-    | **RF08** | OE2 | CAR-04 | Reunião 02, Reunião 05, TR-02 | RN07, RN27 | **CT-M2-04:** Deliberar solicitação de reembolso com registro de parecer justificatório. |
-    | **RNF05** | OE2 | CAR-03 | Reunião 05, Diretrizes de Performance | — | **CT-M2-05:** Medir tempo de processamento do fechamento para 500 lançamentos (meta ≤ 5,0 s). |
-    | **RNF06** | OE2 | CAR-03 | Reunião 01, Reunião 05, Gabarito Contábil | — | **CT-M2-06:** Validar exatidão monetária centesimal com tolerância zero (discrepância R$ 0,00). |
-    | **RNF07** | OE2 | CAR-02, CAR-04 | Reunião 02, Feedback FB-10 | — | **CT-M2-07:** Testar validação de cabeçalhos binários (magic numbers), persistência segura de arquivos homologados e rejeição automática de payloads acima de 5 MB em tempo inferior a 500 ms com HTTP 400. |
-    | **RNF08** | OE2 | CAR-03 | Feedback FB-09, Reunião 05 | — | **CT-M2-08:** Verificar coleta de metadados de não-repúdio (IP, UTC, autor, JSON do estado anterior) e abortamento de estorno sem justificativa mínima de 15 caracteres. |
-    | **RF21** | OE2 | CAR-03 | Feedback FB-09, Reunião 05, TR-03 | RN08, RN17 | **CT-M2-09:** Estornar fechamento homologado com justificativa formal e validar reabertura da competência, preservação do fechamento original e registro na trilha de auditoria. |
-    | **RF27** | OE2 | CAR-03 | Reunião 05, TR-03 | RN25, RN31 | **CT-M2-10:** Cadastrar ou atualizar uma categoria de diária técnica com valor e período de vigência e validar a utilização do valor vigente correspondente. |
-    | **RF28** | OE2 | CAR-04 | Reunião 02, Reunião 05, TR-02 | RN03, RN09, RN26 | **CT-M2-11:** Submeter solicitação de adiantamento operacional informando valor, categoria, contrato e justificativa e validar o registro com status "Pendente de Análise". |
-    | **RF29** | OE2 | CAR-04 | Reunião 02, Reunião 05, TR-02 | RN27 | **CT-M2-12:** Aprovar e reprovar solicitações de adiantamento operacional, validando atualização de status, registro da deliberação, justificativa em caso de reprovação e notificação ao solicitante. |
-
-    </div>
-
-=== "Módulo 3: Inteligência de Custos por Contrato (OE3)"
-
-    <div class="module-spec-pane" markdown="1">
-
-    <a id="oe3-inteligencia-de-custos-por-contrato"></a>
-    <a id="oe3"></a>
-    ### Módulo 3 (OE3) — Inteligência de Custos por Contrato
-
-    Esta seção detalha os requisitos da **DUOC Finance** associados ao **OE3 — Transparecer as informações sobre os Custos por Contrato**. O módulo cobre as características **CAR-05 — Apropriação e Rastreabilidade de Custos por Contrato** e **CAR-06 — Painel Analítico de Custo Apropriado e Desvio Orçamentário por Projeto**.
-
-    #### Requisitos Funcionais
-
-    Os requisitos abaixo expressam as **ações analíticas dos gestores** para apropriação, filtragem dinâmica e monitoramento contínuo da saúde financeira das obras.
-
-    | Código | Requisito (Ação do Usuário) | CAR relacionada | Critério de Aceitação |
-    | :---: | :--- | :---: | :--- |
-    | **RF09** | **Apropriar custos operacionais** | CAR-05 | O Administrador Financeiro (`ADMIN_FINANCEIRO`) dispara a apropriação de custos da competência mensal, e os montantes financeiros de apontamentos técnicos e diárias já homologados pelo Gestor Operacional de Obras (RF32, RN05) são alocados diretamente aos respectivos contratos ativos e centros de custo cadastrados (RF33, RF34), sem duplicar nem sobrepor os relatórios de folha CLT legados (RN09, RN10, RN11). |
-    | **RF10** | **Consultar rastreabilidade de custos** | CAR-05 | O Gestor Operacional de Obras (`GESTOR_OBRAS`) ou o Administrador Financeiro (`ADMIN_FINANCEIRO`) consultam a rastreabilidade integral de qualquer custo apropriado a um contrato, visualizando o apontamento de origem, o colaborador executor, o carimbo UTC de homologação e a identificação do gestor responsável pela deliberação (RN12). |
-    | **RF11** | **Filtrar indicadores de custos** | CAR-06 | No painel analítico de custos, usuários autorizados (`GESTOR_OBRAS`, `ADMIN_FINANCEIRO` e `ADMIN_SISTEMA`) combinam simultaneamente filtros de período, contrato de obra ativo, colaborador e centro de custo, recalculando dinamicamente os valores acumulados e gráficos com mascaramento automático de remunerações individuais para perfis não autorizados (RN14, RNF10). |
-    | **RF12** | **Monitorar execução orçamentária** | CAR-06 | Na visão executiva de um contrato com meta orçamentária definida (RF34), o Gestor Operacional de Obras (`GESTOR_OBRAS`) e o Administrador Financeiro (`ADMIN_FINANCEIRO`) monitoram o valor orçado previsto, o realizado apropriado, o desvio financeiro e o percentual de execução orçamentária, com destaque visual em caso de extrapolação do teto (RN13). |
-    | **RF30** | **Consultar comparativo histórico de custos entre contratos** | CAR-05 | O Gestor Operacional de Obras (`GESTOR_OBRAS`) ou o Administrador Financeiro (`ADMIN_FINANCEIRO`) selecionam dois ou mais contratos (ativos ou encerrados) e um período de comparação, e o sistema renderiza os custos apropriados de cada obra com as variações absolutas (em R$) e percentuais consolidadas no período (RN28). |
-    | **RF31** | **Configurar alertas de execução orçamentária** | CAR-06 | Para contratos de obras com teto orçamentário configurado (RF34), o Gestor Operacional de Obras (`GESTOR_OBRAS`) parametriza os limiares percentuais de execução que disparam alertas preventivos (ex.: 80%, 90% ou 100% do orçamento); ao atingir ou superar o limiar definido, o sistema gera notificação em destaque no painel e despacha alerta por e-mail aos responsáveis (RN29). |
-    | **RF33** | **Gerenciar contratos de obras e clientes** | CAR-05 | O Administrador Financeiro (`ADMIN_FINANCEIRO`) e o Gestor Operacional de Obras (`GESTOR_OBRAS`) cadastram, editam e consultam contratos de obras vinculados a clientes, definindo vigência, valor global, objeto contratual, retenções contratuais e alçadas de supervisão, viabilizando o vínculo obrigatório para despesas, reembolsos e apropriação direta de custos (RN09, RN11). |
-    | **RF34** | **Gerenciar centros de custo e orçamentos de obra** | CAR-06 | O Gestor Operacional de Obras (`GESTOR_OBRAS`) cadastra e atualiza centros de custo vinculados aos contratos ativos e define os tetos orçamentários por categoria de despesa, viabilizando o cálculo percentual de execução (RN13) e o monitoramento de desvios orçamentários (RN29). |
-
-    #### Regras de Negócio
-
-    1. **RN10 — Condição de Homologação para Apropriação:** O sistema permite apropriação financeira em contratos estritamente a partir de registros e despesas previamente homologados pelo Gestor Operacional de Obras (RF32).
-    2. **RN11 — Vínculo Contratual Mandatório:** O sistema bloqueia a apropriação de despesas sem vínculo estrito a um contrato ativo da DUOC, impedindo a existência de custos órfãos.
-    3. **RN12 — Versionamento de Apropriações:** Alterações retroativas em apontamentos já apropriados preservam o histórico da versão anterior e exigem nova homologação formal quando alterarem valores monetários.
-    4. **RN13 — Cálculo Padronizado de Execução Orçamentária:** O sistema calcula o percentual de execução orçamentária estritamente pela equação `(Custo Apropriado Acumulado / Orçamento Previsto) * 100`.
-    5. **RN14 — Segregação de Visualização Salarial e Sigilo de Remunerações:** O sistema oculta compulsoriamente campos de taxas salariais individuais e valores nominais de diárias para usuários que não possuam perfil `ADMIN_FINANCEIRO` ou `ADMIN_SISTEMA`, exibindo apenas totais agregados por obra para a gestão operacional de campo.
-    6. **RN28 — Comparativo Histórico de Custos:** O sistema deve calcular a variação absoluta e percentual dos custos apropriados entre os contratos e períodos selecionados, utilizando os valores consolidados e homologados disponíveis na base.
-    7. **RN29 — Disparo de Alertas Preventivos de Extrapolação Orçamentária:** O sistema deve disparar alertas quando o percentual de execução orçamentária de um contrato atingir ou ultrapassar o limiar percentual configurado pelo gestor (RF31) em relação ao teto orçamentário definido (RF34), registrando o evento e mantendo a notificação disponível no painel até sua resolução ou reconhecimento formal.
-
-    #### Requisitos Não Funcionais
-
-    | Código | Requisito Verificável | URPS+ | Sommerville | Critério Mensurável |
-    | :---: | :--- | :--- | :--- | :--- |
-    | **RNF09** | **Carregar o painel analítico em tempo inferior a 3 segundos** | Performance (Desempenho) | Requisito do Produto — Eficiência/Desempenho | Em 95 de 100 execuções medidas em ambiente de testes com base sintética de até 10.000 lançamentos de custos e 100 contratos, a renderização completa dos indicadores analíticos deve ocorrer em no máximo 3,0 segundos. |
-    | **RNF10** | **Sanitizar e mascarar dados financeiros confidenciais em projeções analíticas** | Security (+) (Segurança) | Requisito do Produto — Segurança da Informação | Nas consultas analíticas do Módulo 3, requisições originadas por usuários sem perfil de diretoria ou finanças (`ADMIN_FINANCEIRO` e `ADMIN_SISTEMA`) devem ter 100% dos dados de taxas horárias e remunerações individuais omitidos ou mascarados em nível de projeção de API/banco de dados, retornando estritamente agregados sem vínculo nominal direto, com sobrecarga de processamento de sanitização ≤ 10 ms. |
-    | **RNF11** | **Garantir consistência transacional ACID na apropriação concorrente de custos** | Reliability (Confiabilidade) | Requisito do Produto — Confiabilidade/Dependabilidade | Em 100 testes de concorrência com acessos simultâneos de inclusão e homologação, não deve haver ocorrência de custos duplicados ou divergências entre a soma dos apontamentos e o total consolidado do contrato. |
-    | **RNF12** | **Assegurar responsividade do painel em resoluções de *desktop* e *tablet*** | Usability (Usabilidade) | Requisito do Produto — Usabilidade | Nas resoluções de tela (*viewports*) de 1024 × 768 px e 768 × 1024 px, 100% dos gráficos, tabelas e filtros essenciais devem permanecer visíveis e operáveis sem a necessidade de barra de rolagem horizontal. |
-
-    #### Matriz de Rastreabilidade do Módulo 3
-
-    | Requisito | Objetivo Específico | Característica | Fonte de Elicitação / Origem | Regras de Negócio Associadas | Caso de Teste |
-    | :---: | :---: | :---: | :--- | :--- | :--- |
-    | **RF09** | OE3 | CAR-05 | Reunião 01, Reunião 05, TR-04 | RN09, RN10, RN11 | **CT-M3-01:** Disparar apropriação financeira e validar alocação correta de horas e diárias aos contratos ativos. |
-    | **RF10** | OE3 | CAR-05 | Reunião 05, TR-04 | RN12 | **CT-M3-02:** Consultar linha de custo apropriado e verificar exibição da trilha documental de origem. |
-    | **RF11** | OE3 | CAR-06 | Reunião 04, Reunião 05, TR-04 | RN14 | **CT-M3-03:** Aplicar simultaneamente filtros por período, contrato, colaborador e centro de custo e validar o recálculo dinâmico dos indicadores e mascaramento salarial. |
-    | **RF12** | OE3 | CAR-06 | Reunião 05, TR-04 | RN13 | **CT-M3-04:** Monitorar painel orçamentário e validar exibição de alertas de extrapolação e percentuais. |
-    | **RNF09** | OE3 | CAR-06 | Reunião 05, Diretrizes de Performance | — | **CT-M3-05:** Medir tempo de renderização do painel analítico sob carga de 10.000 registros (meta ≤ 3,0 s). |
-    | **RNF10** | OE3 | CAR-05, CAR-06 | Reunião 04, LGPD Art. 6º | RN14 | **CT-M3-06:** Validar sanitização e mascaramento de valores salariais em consultas analíticas fora do perfil financeiro. |
-    | **RNF11** | OE3 | CAR-05 | Reunião 05, Arquitetura ACID | — | **CT-M3-07:** Validar atomicidade transacional e ausência de inconsistências em apropriações concorrentes. |
-    | **RNF12** | OE3 | CAR-06 | Reunião 03, Reunião 04 | — | **CT-M3-08:** Inspecionar responsividade e ausência de *scroll* horizontal em resoluções de *desktop* e *tablet*. |
-    | **RF30** | OE3 | CAR-05 | Reunião 05 (Visão Executiva), TR-04 | RN28 | **CT-M3-09:** Selecionar dois ou mais contratos e um período de comparação e validar a apresentação dos custos apropriados, das variações absolutas e das variações percentuais. |
-    | **RF31** | OE3 | CAR-06 | Reunião 05, TR-04 | RN29 | **CT-M3-10:** Configurar um limite de execução orçamentária para um contrato e validar o disparo do alerta no painel e por e-mail quando o percentual atingir ou ultrapassar o valor definido. |
-    | **RF33** | OE3 | CAR-05 | Reunião 01, Reunião 05, Revisão de Pares, TR-04 | RN09, RN11 | **CT-M3-11:** Cadastrar e atualizar contratos de obra com clientes, vigência, valor global e retenções, validando persistência e vinculação aos fluxos de apropriação. |
-    | **RF34** | OE3 | CAR-06 | Reunião 01, Reunião 05, Revisão de Pares, TR-04 | RN09, RN11, RN13, RN29 | **CT-M3-12:** Cadastrar centros de custo e tetos orçamentários por obra e validar aplicação de travas em despesas e cálculo de desvio percentual. |
-
-    </div>
-
-=== "Módulo 4: Governança, Segurança e Rastreabilidade (OE4)"
-
-    <div class="module-spec-pane" markdown="1">
-
-    <a id="oe4-governanca-seguranca-e-rastreabilidade"></a>
-    <a id="oe4"></a>
-    ### Módulo 4 (OE4) — Governança, Segurança e Rastreabilidade
-
-    Esta seção detalha os requisitos da **DUOC Finance** associados ao **OE4 — Garantir Segurança e Governança de Dados**. O módulo cobre as características **CAR-07 — Controle de Acesso Baseado em Papéis (RBAC)** e **CAR-08 — Trilha de Auditoria e Histórico de Operações Sensíveis**.
-
-    #### Requisitos Funcionais
-
-    Os requisitos abaixo expressam as **ações dos usuários** para autenticação corporativa, gestão de permissões e auditoria probatória de eventos.
-
-    | Código | Requisito (Ação do Usuário) | CAR relacionada | Critério de Aceitação |
-    | :---: | :--- | :---: | :--- |
-    | **RF13** | **Efetuar login no sistema** | CAR-07 | O usuário autentica-se na plataforma informando e-mail e senha corporativos válidos, recebendo token JWT temporário com perfil de acesso RBAC associado (RN15). Credenciais inválidas geram mensagem de erro genérica sem enumeração de contas. |
-    | **RF14** | **Gerenciar perfis de acesso** | CAR-07 | O Administrador do Sistema (`ADMIN_SISTEMA`) atribui a cada usuário um dos 4 papéis canônicos de acesso (`TECNICO_CAMPO`, `GESTOR_OBRAS`, `ADMIN_FINANCEIRO` ou `ADMIN_SISTEMA`), passando as permissões e restrições a vigorar na camada de autenticação/autorização em todas as telas e rotas de API da aplicação (RN16, RNF14). |
-    | **RF15** | **Consultar trilha de auditoria** | CAR-08 | Usuários com perfil de auditoria (`ADMIN_SISTEMA` ou `ADMIN_FINANCEIRO`) consultam a trilha de auditoria filtrando eventos por período, operador, tipo de operação, módulo afetado e faixa de valor financeiro; cada evento exibe autor, ação, estado anterior e posterior serializados e carimbo temporal UTC (RN17, RN18). |
-    | **RF16** | **Exportar relatório de auditoria** | CAR-08 | O Administrador do Sistema (`ADMIN_SISTEMA`) exporta relatórios de auditoria em formatos estruturados (PDF/CSV) contendo o histórico integral e imutável de operações auditadas, para fins de governança corporativa e instrução probatória defensiva em conformidade com o prazo prescricional trabalhista (Artigo 11 da CLT). |
-    | **RF17** | **Recuperar credenciais de acesso** | CAR-07 | O colaborador que esqueceu a senha informa o e-mail corporativo cadastrado e recebe nele um link de redefinição de uso único válido por 30 minutos (RN15); a resposta exibida não revela se o e-mail existe ou não na base, prevenindo a enumeração de usuários. |
-    | **RF18** | **Encerrar sessão manualmente** | CAR-07 | Ao acionar o encerramento voluntário de sessão (*logout*), o token de autenticação ativo é compulsoriamente revogado e invalidado na hora no backend, redirecionando o usuário para a tela de login. |
-    | **RF23** | **Bloquear acesso após tentativas falhas consecutivas** | CAR-07 | Após 5 tentativas de login com credenciais inválidas em até 15 minutos, a conta fica bloqueada preventivamente por 30 minutos, com mensagem informativa padronizada que não revela se a divergência decorreu do e-mail ou da senha (RN20). |
-    | **RF24** | **Impor renovação periódica de senhas** | CAR-07 | Quando a senha atinge 90 dias de vigência desde a última alteração, o acesso só é liberado mediante definição de nova credencial, sendo vedada a repetição de qualquer uma das últimas 5 senhas cadastradas (RN21). |
-
-    #### Regras de Negócio
-
-    1. **RN15 — Autenticação Mandatória com Token Válido:** O sistema exige token temporário válido e não expirado para qualquer requisição a recursos e dados protegidos.
-    2. **RN16 — Princípio do Menor Privilégio e Matriz Canônica RBAC:** O sistema aplica controle de acesso baseado em papéis (RBAC) estruturado nos 4 papéis canônicos (`TECNICO_CAMPO`, `GESTOR_OBRAS`, `ADMIN_FINANCEIRO` e `ADMIN_SISTEMA`): técnicos de campo acessam apenas seus próprios apontamentos e reembolsos; gestores de obras deliberam apontamentos e despesas de seus contratos; o administrador financeiro consolida e fecha competências; e administradores do sistema gerenciam papéis e infraestrutura.
-    3. **RN17 — Registro Mandatório e Integridade de Eventos na Trilha de Auditoria:** Toda operação de inclusão, alteração ou exclusão sobre dados cadastrais, apontamentos, fechamentos e despesas gera compulsoriamente um registro de auditoria com autor, endereço IP, carimbo UTC e dados modificados (RNF15).
-    4. **RN18 — Imutabilidade Estrita da Trilha de Auditoria (*Append-Only*):** Os registros da trilha de auditoria operam sob regime exclusivo de inserção (*append-only*), sendo tecnicamente vedada qualquer operação de edição, atualização ou exclusão lógica ou física por qualquer usuário ou perfil do sistema.
-    5. **RN19 — Política Corporativa de Retenção Quinquenal de Logs:** Como diretriz de conformidade preventiva e governança defensiva alinhada ao prazo prescricional trabalhista quinquenal (Artigo 11 da CLT), a organização veda o expurgo de registros de auditoria operacional e financeira com tempo de retenção inferior a 5 anos (1.825 dias), resguardada a prerrogativa do Artigo 16, II da LGPD.
-    6. **RN20 — Limite de Tentativas de Autenticação:** O sistema contabiliza tentativas falhas de login por conta e aplica bloqueio temporário de 30 minutos ao atingir 5 erros consecutivos em 15 minutos, resetando o contador após login bem-sucedido.
-    7. **RN21 — Política de Expiração e Histórico de Senhas:** O sistema mantém hash das últimas 5 senhas utilizadas por usuário, impedindo sua reutilização, e força redefinição compulsória a cada 90 dias corridos.
-
-    #### Requisitos Não Funcionais
-
-    | Código | Requisito Verificável | URPS+ | Sommerville | Critério Mensurável |
-    | :---: | :--- | :--- | :--- | :--- |
-    | **RNF13** | **Expirar token de acesso temporário em no máximo 8 horas** | Security (+) (Segurança) | Requisito do Produto — Confiabilidade/Segurança | Em 100% dos testes de segurança automatizados, requisições submetidas com tokens emitidos há mais de 8 horas (28.800 segundos) devem ser sumariamente rejeitadas com código HTTP 401 Unauthorized. |
-    | **RNF14** | **Validar perfil de autorização em 100% das rotas de API com dados protegidos** | Security (+) / Legal | Requisito Externo — Legislativo/Regulamentar (LGPD Art. 6º) | Cobertura de 100% dos endpoints de backend que trafegam dados financeiros ou cadastrais confidenciais por filtros/guards de permissão RBAC, com resposta obrigatória HTTP 403 Forbidden em no máximo 15 ms para papéis não autorizados. |
-    | **RNF15** | **Garantir consistência transacional e atomicidade na gravação de logs de auditoria** | Reliability (Confiabilidade) | Requisito do Produto — Confiabilidade/Dependabilidade | Em 100% das operações de escrita disparadas contra dados de pessoal e financeiros na suíte de testes, a entrada correspondente de auditoria deve ser confirmada na mesma transação atômica ACID do banco de dados (PostgreSQL), com taxa de perda zero e latência de persistência ≤ 50 ms. |
-    | **RNF16** | **Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido** | Reliability / Legal (+) | Requisito Externo — Requisito Legal / Regulatório (Conformidade CLT / LGPD) | Inexistência comprovada por análise estática e testes de vulnerabilidade de comandos ou permissões de banco que permitam a deleção física de registros com tempo de retenção inferior a 5 anos (1.825 dias), assegurando persistência em conformidade defensiva com o Art. 11 da CLT e Art. 16 da LGPD. |
-    | **RNF17** | **Realizar backup automático diário com restauração verificada** | Reliability (Confiabilidade) | Requisito do Produto — Confiabilidade/Dependabilidade | O sistema deve executar backup automático completo diário do banco de dados e dos comprovantes anexados, reter as cópias por no mínimo 30 dias e verificar a integridade de 100% dos backups gerados; a restauração completa em ambiente de teste deve ser concluída em até 4 horas, com perda máxima de dados de 24 horas. |
-    | **RNF18** | **Garantir disponibilidade mínima mensal do sistema** | Reliability (Confiabilidade) | Requisito do Produto — Confiabilidade | Disponibilidade mínima de 99,5% ao mês, medida por monitoramento externo automatizado, com janelas de manutenção programada comunicadas com no mínimo 48h de antecedência e em janela fora do horário comercial (22h às 06h UTC). |
-    | **RNF20** | **Validar integridade de payloads em todas as rotas de escrita da API** | Reliability / Security (+) | Requisito do Produto — Confiabilidade | 100% das requisições POST/PUT/PATCH são validadas contra schema de dados antes da persistência; payload malformado retorna HTTP 400 com mensagem de erro estruturada, sem exceção não tratada. |
-
-    #### Matriz de Rastreabilidade do Módulo 4
-
-    | Requisito | Objetivo Específico | Característica | Fonte de Elicitação / Origem | Regras de Negócio Associadas | Caso de Teste |
-    | :---: | :---: | :---: | :--- | :--- | :--- |
-    | **RF13** | OE4 | CAR-07 | Reunião 04 (Sessão de Acesso) | RN15, RN16 | **CT-M4-01:** Submeter credenciais corporativas válidas e verificar autenticação e emissão de token temporário. |
-    | **RF14** | OE4 | CAR-07 | Reunião 04, LGPD | RN16 | **CT-M4-02:** Atribuir perfil RBAC e verificar aplicação imediata e bloqueio de rotas não autorizadas (HTTP 403). |
-    | **RF15** | OE4 | CAR-08 | Reunião 05, LGPD | RN17, RN18 | **CT-M4-03:** Consultar log de auditoria com filtros e validar exibição de autor, operação e carimbo temporal UTC. |
-    | **RF16** | OE4 | CAR-08 | Reunião 05, CLT Art. 11 | RN18, RN19 | **CT-M4-04:** Exportar dossiê de auditoria e confirmar bloqueio estrito contra comandos de edição ou deleção. |
-    | **RNF13** | OE4 | CAR-07 | Reunião 04, Segurança da Informação | RN15 | **CT-M4-05:** Testar expiração compulsória de tokens de sessão após decorridas 8 horas com retorno HTTP 401. |
-    | **RNF14** | OE4 | CAR-07 | Reunião 04, LGPD Art. 6º | RN16 | **CT-M4-06:** Validar conformidade regulatória (LGPD) e isolamento horizontal em 100% das rotas de dados protegidos. |
-    | **RNF15** | OE4 | CAR-08 | Reunião 05, Arquitetura de Banco | RN17 | **CT-M4-07:** Confirmar persistência atômica da entrada de auditoria na mesma transação da base de dados. |
-    | **RNF16** | OE4 | CAR-08 | CLT Art. 11, Diretrizes Jurídicas | RN19 | **CT-M4-08:** Auditar retenção mínima por 5 anos (1.825 dias) e proteção ativa contra rotinas de expurgo. |
-    | **RF17** | OE4 | CAR-07 | Feedback FB-04, Reunião 04 | RN15 | **CT-M4-09:** Solicitar recuperação de senha e validar envio do link com validade de 30 minutos e uso único, sem revelar a existência do e-mail. |
-    | **RF18** | OE4 | CAR-07 | Feedback FB-05, Reunião 04 | RN15 | **CT-M4-10:** Encerrar a sessão manualmente e validar invalidação imediata do token e redirecionamento para a tela de login. |
-    | **RNF17** | OE4 | CAR-08 | Feedback FB-08, Segurança de Infraestrutura | — | **CT-M4-11:** Executar o backup diário, verificar a integridade e restaurar em ambiente de teste em até 4 horas, confirmando perda máxima de 24 horas de dados e retenção de 30 dias. |
-    | **RF23** | OE4 | CAR-07 | Reunião 05, Políticas de Segurança | RN20 | **CT-M4-12:** Simular 5 tentativas de login inválidas em 15 minutos e validar bloqueio temporário de 30 minutos da conta. |
-    | **RF24** | OE4 | CAR-07 | Reunião 05, Políticas de Segurança | RN21 | **CT-M4-13:** Simular senha com 90 dias de uso e validar exigência de redefinição; tentar reutilizar uma das últimas 5 senhas e validar bloqueio. |
-    | **RNF18** | OE4 | CAR-08 | Diretrizes de SLA, Revisão de Pares | — | **CT-M4-14:** Monitorar uptime mensal da aplicação e validar disponibilidade do sistema ≥ 99,5%, com manutenções comunicadas com antecedência. |
-    | **RNF20** | OE4 | CAR-07, CAR-08 | Padrões RESTful, Revisão de Pares | RN15 | **CT-M4-15:** Submeter payloads malformados a todas as rotas de escrita da API e validar rejeição HTTP 400 estruturada, sem exceção não tratada. |
-
-    <a id="conformidade-juridica-clt-lgpd"></a>
-    ### Conformidade Jurídica, Privacidade e Governança Legal (CLT e LGPD)
-
-    Para fundamentar as regras de negócio e os atributos de qualidade relacionados à retenção probatória e à proteção de dados, esta especificação estabelece as seguintes diretrizes normativas:
-
-    1. **Prazo Prescricional Trabalhista (Art. 11 da CLT) e Política de Retenção Quinquenal:**  
-       O Artigo 11 da Consolidação das Leis do Trabalho (CLT) fixa o prazo prescricional de cinco anos para os créditos resultantes das relações de trabalho (até o limite de dois anos após a extinção do contrato). Embora o artigo trate estritamente da prescrição do direito de ação e não constitua comando normativo direto que obrigue sistemas de software a reter logs, a DUOC adota a **retenção imutável de 5 anos (1.825 dias) como decisão de política corporativa de governança defensiva e conformidade preventiva** (RN19, RNF16). Essa retenção assegura a produção de acervo probatório íntegro para instrução e defesa em eventuais demandas trabalhistas, tributárias ou cíveis.
-
-    2. **Direito de Eliminação (Art. 18, VI da LGPD) vs. Prerrogativa de Retenção Legal (Art. 16 da LGPD):**  
-       O direito de eliminação de dados pessoais titularizado pelo colaborador (Art. 18, VI da Lei nº 13.709/2018 — LGPD) não tem caráter absoluto. Em consonância com o **Artigo 16, incisos I e II da LGPD**, a retenção dos registros operacionais, contratos e logs de auditoria pelo prazo de 5 anos é expressamente respaldada pelas hipóteses de conservação para:  
-       - *(I) cumprimento de obrigação legal ou regulatória pelo controlador;* e  
-       - *(II) exercício regular de direitos em processo judicial, administrativo ou arbitral.*  
-       Portanto, solicitações de exclusão de registros de apontamentos, reembolsos e logs de acesso durante o prazo quinquenal prescricional são indeferidas com fundamento na tutela judicial e cumprimento de obrigações legais da DUOC, resguardando a integridade probatória do sistema.
-
-    3. **Natureza Jurídica dos Dados Pessoais (Art. 5º, II da LGPD):**  
-       Em estrita aderência à taxonomia da LGPD (Art. 5º, inciso II), o *DUOC Finance* esclarece que informações cadastrais e financeiras — tais como número de CPF, agência/conta bancária, chave Pix e remuneração/diárias — constituem **dados pessoais comuns sujeitos a sigilo e dever de segurança (Art. 6º, VII)**, e **não "dados pessoais sensíveis"** na acepção da lei (que são restritos a origem racial, convicção religiosa, dados de saúde, biométricos ou genéticos). O tratamento biométrico, quando existente, ocorre exclusivamente no ambiente externo do software parceiro *FLIT*, trafegando no *DUOC Finance* apenas o registro numérico e homologado das presenças (RF20).
-
-    </div>
-
----
-
-
-<a id="matriz-sintese-geral-de-rastreabilidade"></a>
-
-## Matriz-Síntese Geral de Rastreabilidade
-
-Esta matriz relaciona os objetivos específicos (OE), as características do produto (CAR), os valores de negócio (VN), os requisitos funcionais (RF), os requisitos não funcionais (RNF) e os casos de teste (CT) do DUOC Finance.
-
-Ela permite identificar quais requisitos atendem a cada característica e quais testes verificam seu funcionamento. As definições completas estão disponíveis nas páginas dos módulos:
-
-- [Módulo 1 — Padronização e Unificação de Dados](modulo-1.md)
-- [Módulo 2 — Eficiência Administrativo-Financeira](modulo-2.md)
-- [Módulo 3 — Inteligência de Custos por Contrato](modulo-3.md)
-- [Módulo 4 — Governança, Segurança e Rastreabilidade](modulo-4.md)
-
-Os códigos dos RFs na tabela são links para suas definições oficiais. Os casos de teste estão detalhados nas matrizes de rastreabilidade de cada módulo.
-
-| Contribuição Principal (OE) | Contribuição Secundária (OE) | Característica do Produto (CAR) | Valor de Negócio (VN) | Requisitos Funcionais (RF) | Requisitos Não Funcionais (RNF) | Casos de Teste (CT) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| <span class="mod-badge mod-1">OE1</span> — Padronizar e Unificar os Dados | OE2 — Eficiência Administrativo-Financeira | [**CAR-01:** Gestão Cadastral Unificada de Pessoal](../visao-produto/capitulo-2/index.md#car-01) | Centraliza dados cadastrais, bancários e trabalhistas com identificador único e validação de CPF, eliminando redundâncias e inconsistências em folha e diárias. | RF01, RF02, RF03, RF25, RF26 | RNF02, RNF03, RNF19 | CT-M1-01, CT-M1-02, CT-M1-03, CT-M1-06, CT-M1-07, CT-M1-12, CT-M1-13, CT-M1-14 |
-| <span class="mod-badge mod-1">OE1</span> — Padronizar e Unificar os Dados | OE3 — Transparecer os Custos por Contrato | [**CAR-02:** Apontamento de Campo e Registros Técnicos de Obra (RVT)](../visao-produto/capitulo-2/index.md#car-02) | Habilita coleta ágil e padronizada de horas e atividades em canteiros via Web App/PWA, com anexos, geolocalização, retificação pendente e deliberação supervisionada. | RF04, RF19, RF22, RF32, RF35 | RNF01, RNF04, RNF07, RNF19 | CT-M1-04, CT-M1-05, CT-M1-08, CT-M1-09, CT-M1-11, CT-M1-14, CT-M1-15, CT-M1-16, CT-M2-07 |
-| <span class="mod-badge mod-1">OE1</span> — Padronizar e Unificar os Dados | OE2 — Eficiência Administrativo-Financeira | [**CAR-09:** Integração com FLIT e Presenças Homologadas](../visao-produto/capitulo-2/index.md#car-09) | Reaproveita a solução biométrica FLIT já utilizada pela DUOC, importando presenças homologadas por competência e contrato sem duplicar registros. | RF20 | — | CT-M1-10 |
-| <span class="mod-badge mod-1">OE1</span> — Padronizar e Unificar os Dados | OE2 — Eficiência Administrativo-Financeira | [**CAR-10:** Importação e Exportação de Dados com ERPs e Planilhas Legadas](../visao-produto/capitulo-2/index.md#car-10) | Viabiliza interoperabilidade com ferramentas contábeis e planilhas legadas através de exportação estruturada em formatos abertos CSV e XLSX. | RF36 | — | CT-M1-17 |
-| <span class="mod-badge mod-2">OE2</span> — Aumentar a Eficiência Administrativo-Financeira | OE4 — Governança, Segurança e Rastreabilidade | [**CAR-03:** Motor de Processamento e Fechamento Financeiro](../visao-produto/capitulo-2/index.md#car-03) | Garante celeridade e precisão matemática centesimal no fechamento mensal de diárias e comissões simplificadas, blindando lotes e permitindo estorno auditável. | RF05, RF06, RF21, RF27 | RNF05, RNF06, RNF08 | CT-M2-01, CT-M2-02, CT-M2-05, CT-M2-06, CT-M2-08, CT-M2-09, CT-M2-10 |
-| <span class="mod-badge mod-2">OE2</span> — Aumentar a Eficiência Administrativo-Financeira | OE3 — Transparecer os Custos por Contrato | [**CAR-04:** Fluxo Digital de Prestação de Contas e Reembolsos](../visao-produto/capitulo-2/index.md#car-04) | Digitaliza solicitações e deliberações de adiantamentos e reembolsos operacionais com validação obrigatória de comprovantes fiscais e alçadas vinculadas a contratos. | RF07, RF08, RF28, RF29 | RNF07 | CT-M2-03, CT-M2-04, CT-M2-07, CT-M2-11, CT-M2-12 |
-| <span class="mod-badge mod-3">OE3</span> — Transparecer os Custos por Contrato | OE1 — Padronizar e Unificar os Dados | [**CAR-05:** Apropriação e Rastreabilidade de Custos por Contrato](../visao-produto/capitulo-2/index.md#car-05) | Gerencia contratos de obra e aloca custos operacionais diretamente a contratos ativos sem rateios arbitrários, assegurando rastreabilidade da origem do gasto. | RF09, RF10, RF30, RF33 | RNF10, RNF11 | CT-M3-01, CT-M3-02, CT-M3-06, CT-M3-07, CT-M3-09, CT-M3-11 |
-| <span class="mod-badge mod-3">OE3</span> — Transparecer os Custos por Contrato | OE2 — Eficiência Administrativo-Financeira | [**CAR-06:** Painel Analítico de Custo Apropriado e Desvio Orçamentário](../visao-produto/capitulo-2/index.md#car-06) | Gerencia centros de custo e orçamentos, fornecendo visibilidade gerencial sobre desvios e custos realizados com filtros dinâmicos e alertas preventivos. | RF11, RF12, RF31, RF34 | RNF09, RNF10, RNF12 | CT-M3-03, CT-M3-04, CT-M3-05, CT-M3-06, CT-M3-08, CT-M3-10, CT-M3-12 |
-| <span class="mod-badge mod-4">OE4</span> — Garantir Segurança e Governança de Dados | OE1 — Padronizar e Unificar os Dados | [**CAR-07:** Controle de Acesso Baseado em Papéis (RBAC)](../visao-produto/capitulo-2/index.md#car-07) | Garante confidencialidade e segregação de privilégios de dados via RBAC, validação de integridade de API, governança de senhas, bloqueio por força bruta e expiração de sessão. | RF13, RF14, RF17, RF18, RF23, RF24 | RNF13, RNF14, RNF20 | CT-M4-01, CT-M4-02, CT-M4-05, CT-M4-06, CT-M4-09, CT-M4-10, CT-M4-12, CT-M4-13, CT-M4-15 |
-| <span class="mod-badge mod-4">OE4</span> — Garantir Segurança e Governança de Dados | OE2 — Eficiência Administrativo-Financeira | [**CAR-08:** Trilha de Auditoria e Histórico de Operações Sensíveis](../visao-produto/capitulo-2/index.md#car-08) | Assegura rastreabilidade probatória e governança corporativa com trilha de auditoria imutável (*append-only*), retenção quinquenal (CLT Art. 11), backup diário e SLA de 99,5%. | RF15, RF16 | RNF15, RNF16, RNF17, RNF18, RNF20 | CT-M4-03, CT-M4-04, CT-M4-07, CT-M4-08, CT-M4-11, CT-M4-14, CT-M4-15 |
-
-**Nota sobre RNFs transversais:** os RNF17 (backup diário) e RNF18 (disponibilidade mínima) são atributos sistêmicos e estão vinculados à CAR-08 por sustentarem a disponibilidade, a recuperação e a retenção da trilha de auditoria; não implementam funcionalidade específica dessa característica. O RNF07 (validação de comprovantes) atende às CAR-02 (anexos do apontamento, RF22) e CAR-04 (comprovantes de reembolso).
-
-### Síntese Visual de Rastreabilidade por Módulo
-
-Utilize as abas abaixo para consultar o detalhamento metodológico e a síntese executiva de rastreabilidade de cada módulo do sistema, correlacionando objetivos, características, requisitos e casos de teste:
-
-=== "Módulo 1: Padronização e Unificação de Dados (OE1)"
-
-    <div class="week-card card-mod-1">
-      <div class="week-card-header">
-        <div class="week-card-header-left">
-          <span class="week-card-title">Módulo 1: Padronização e Unificação de Dados</span>
-          <span class="week-card-period">OE1 • CAR-01, CAR-02, CAR-09, CAR-10</span>
-        </div>
-        <span class="status-pill pill-mod-1">12 RFs • 5 RNFs • 8 RNs • 17 CTs</span>
-      </div>
-      <div class="week-card-meta">
-        <div class="week-meta-item">
-          <span class="week-meta-label">Objetivo Específico Principal</span>
-          <span class="week-meta-value">OE1 — Padronizar e unificar os dados cadastrais, operacionais e de apontamento em canteiro</span>
-        </div>
-        <div class="week-meta-item">
-          <span class="week-meta-label">Contribuições Secundárias</span>
-          <span class="week-meta-value">OE2 (Eficiência em conferência de diárias) • OE3 (Base para apropriação de custos por contrato)</span>
-        </div>
-        <div class="week-meta-item">
-          <span class="week-meta-label">Valor de Negócio Entregue</span>
-          <span class="week-meta-value">Centraliza o cadastro unificado com validação de CPF; viabiliza apontamento de campo via Web App responsivo com fotos, GPS, retificação pendente e deliberação; consome presenças biométricas via FLIT; e exporta planilhas abertas (CSV/XLSX).</span>
-        </div>
-      </div>
-      <div class="week-card-grid">
-        <div>
-          <div class="week-section-title">Requisitos Funcionais e Regras de Negócio</div>
-          <ul>
-            <li><strong>RF01:</strong> Cadastrar colaborador (<a href="../visao-produto/capitulo-2/index.md#car-01">CAR-01</a> | RN01: Unicidade mandatória por CPF e link de 1º acesso);</li>
-            <li><strong>RF02:</strong> Atualizar cadastro de colaborador (<a href="../visao-produto/capitulo-2/index.md#car-01">CAR-01</a> | Propagação imediata e versionamento);</li>
-            <li><strong>RF03:</strong> Registrar movimentação funcional (<a href="../visao-produto/capitulo-2/index.md#car-01">CAR-01</a> | RN04: Revogação automática de acessos);</li>
-            <li><strong>RF04:</strong> Submeter apontamento de campo (<a href="../visao-produto/capitulo-2/index.md#car-02">CAR-02</a> | RN02: Bloqueio pós-homologação);</li>
-            <li><strong>RF19:</strong> Consultar apontamentos registrados (<a href="../visao-produto/capitulo-2/index.md#car-02">CAR-02</a> | RN16: Menor privilégio, visão própria);</li>
-            <li><strong>RF20:</strong> Importar presenças homologadas (<a href="../visao-produto/capitulo-2/index.md#car-09">CAR-09</a> | Integração sem alteração da origem FLIT);</li>
-            <li><strong>RF22:</strong> Anexar evidências e geolocalização (<a href="../visao-produto/capitulo-2/index.md#car-02">CAR-02</a> | RN24: Captura de GPS não bloqueante);</li>
-            <li><strong>RF25:</strong> Cadastrar tipo de contratação (<a href="../visao-produto/capitulo-2/index.md#car-01">CAR-01</a> | RN22: Diarista, CLT ou Prestador de Serviço);</li>
-            <li><strong>RF26:</strong> Consultar histórico de alterações (<a href="../visao-produto/capitulo-2/index.md#car-01">CAR-01</a> | RN23: Versionamento temporal bancário);</li>
-            <li><strong>RF32:</strong> Deliberar apontamento de campo (<a href="../visao-produto/capitulo-2/index.md#car-02">CAR-02</a> | RN30: Homologação e rejeição com parecer obrigatório);</li>
-            <li><strong>RF35:</strong> Retificar apontamento pendente (<a href="../visao-produto/capitulo-2/index.md#car-02">CAR-02</a> | RN02: Edição permitida em até 5 dias úteis antes da homologação);</li>
-            <li><strong>RF36:</strong> Exportar dados consolidados em planilha (<a href="../visao-produto/capitulo-2/index.md#car-10">CAR-10</a> | Formatos interoperáveis CSV e XLSX).</li>
-          </ul>
-        </div>
-        <div>
-          <div class="week-section-title">Requisitos Não Funcionais e Casos de Teste</div>
-          <ul>
-            <li><strong>RNF01 (Confiabilidade):</strong> Operação offline para ≥ 100 apontamentos com sincronização em ≤ 30 s (CT-M1-05);</li>
-            <li><strong>RNF02 (Desempenho):</strong> Tempo de consulta cadastral ≤ 2,0 s em 95% das requisições (CT-M1-06);</li>
-            <li><strong>RNF03 (Segurança):</strong> Criptografia de dados sensíveis em repouso AES-256 e trânsito em TLS 1.3 (CT-M1-07);</li>
-            <li><strong>RNF04 (Usabilidade):</strong> Apontamento em até 5 telas com taxa de conclusão ≥ 90% em 1º uso sem suporte (CT-M1-08);</li>
-            <li><strong>RNF19 (Usabilidade):</strong> Acessibilidade digital WCAG 2.1 AA em formulários com suporte a teclado e ARIA (CT-M1-14);</li>
-            <li><strong>Rastreabilidade de Testes:</strong> 17 Casos de Teste (CT-M1-01 a CT-M1-17) cobrindo cadastro, modo offline, deliberação, retificação, FLIT, exportação e acessibilidade.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-=== "Módulo 2: Eficiência Administrativo-Financeira (OE2)"
-
-    <div class="week-card card-mod-2">
-      <div class="week-card-header">
-        <div class="week-card-header-left">
-          <span class="week-card-title">Módulo 2: Eficiência Administrativo-Financeira</span>
-          <span class="week-card-period">OE2 • CAR-03, CAR-04</span>
-        </div>
-        <span class="status-pill pill-mod-2">8 RFs • 4 RNFs • 9 RNs • 12 CTs</span>
-      </div>
-      <div class="week-card-meta">
-        <div class="week-meta-item">
-          <span class="week-meta-label">Objetivo Específico Principal</span>
-          <span class="week-meta-value">OE2 — Aumentar a eficiência administrativo-financeira em fechamentos e prestação de contas</span>
-        </div>
-        <div class="week-meta-item">
-          <span class="week-meta-label">Contribuições Secundárias</span>
-          <span class="week-meta-value">OE3 (Transparência nos custos apropriados) • OE4 (Imutabilidade e auditoria de lotes homologados)</span>
-        </div>
-        <div class="week-meta-item">
-          <span class="week-meta-label">Valor de Negócio Entregue</span>
-          <span class="week-meta-value">Automatiza apuração de diárias e comissões com fórmulas parametrizadas (RN31) e tolerância centesimal zero; digitaliza reembolsos e adiantamentos com comprovante; e blinda fechamentos com estorno formal.</span>
-        </div>
-      </div>
-      <div class="week-card-grid">
-        <div>
-          <div class="week-section-title">Requisitos Funcionais e Regras de Negócio</div>
-          <ul>
-            <li><strong>RF05:</strong> Solicitar prévia de fechamento (<a href="../visao-produto/capitulo-2/index.md#car-03">CAR-03</a> | RN05/RN31: Apontamentos homologados e fórmulas de diárias/comissões);</li>
-            <li><strong>RF06:</strong> Homologar fechamento financeiro (<a href="../visao-produto/capitulo-2/index.md#car-03">CAR-03</a> | RN08: Imutabilidade de lote fechado);</li>
-            <li><strong>RF07:</strong> Submeter solicitação de reembolso (<a href="../visao-produto/capitulo-2/index.md#car-04">CAR-04</a> | RN06/RN09: Comprovante fiscal obrigatório);</li>
-            <li><strong>RF08:</strong> Deliberar solicitação de reembolso (<a href="../visao-produto/capitulo-2/index.md#car-04">CAR-04</a> | RN07: Trava do montante fiscal aprovado);</li>
-            <li><strong>RF21:</strong> Estornar fechamento financeiro (<a href="../visao-produto/capitulo-2/index.md#car-03">CAR-03</a> | RNF08: Justificativa auditável ≥ 15 caracteres);</li>
-            <li><strong>RF27:</strong> Configurar tabela de diárias técnicas (<a href="../visao-produto/capitulo-2/index.md#car-03">CAR-03</a> | RN25: Parametrização por vigência);</li>
-            <li><strong>RF28:</strong> Submeter adiantamento operacional (<a href="../visao-produto/capitulo-2/index.md#car-04">CAR-04</a> | RN26: Elegibilidade estrita a contratos ativos);</li>
-            <li><strong>RF29:</strong> Deliberar adiantamento operacional (<a href="../visao-produto/capitulo-2/index.md#car-04">CAR-04</a> | RN27: Notificação de pendências e parecer obrigatório).</li>
-          </ul>
-        </div>
-        <div>
-          <div class="week-section-title">Requisitos Não Funcionais e Casos de Teste</div>
-          <ul>
-            <li><strong>RNF05 (Desempenho):</strong> Fechamento financeiro de 500 lançamentos em tempo ≤ 5,0 s (CT-M2-05);</li>
-            <li><strong>RNF06 (Confiabilidade):</strong> Exatidão aritmética com tolerância zero (discrepância monetária R$ 0,00) (CT-M2-06);</li>
-            <li><strong>RNF07 (Segurança/Confiabilidade):</strong> Robustez e integridade no upload de comprovantes com bloqueio de arquivos > 5 MB e formatos fora de PDF/PNG/JPEG (CT-M2-07);</li>
-            <li><strong>RNF08 (Segurança/Confiabilidade):</strong> Não-repúdio e rastreabilidade probatória em estornos de fechamento com justificativa ≥ 15 caracteres (CT-M2-08);</li>
-            <li><strong>Rastreabilidade de Testes:</strong> 12 Casos de Teste (CT-M2-01 a CT-M2-12) validando exatidão monetária, uploads e fluxos de alçada.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-=== "Módulo 3: Inteligência de Custos por Contrato (OE3)"
-
-    <div class="week-card card-mod-3">
-      <div class="week-card-header">
-        <div class="week-card-header-left">
-          <span class="week-card-title">Módulo 3: Inteligência de Custos por Contrato</span>
-          <span class="week-card-period">OE3 • CAR-05, CAR-06</span>
-        </div>
-        <span class="status-pill pill-mod-3">8 RFs • 4 RNFs • 7 RNs • 12 CTs</span>
-      </div>
-      <div class="week-card-meta">
-        <div class="week-meta-item">
-          <span class="week-meta-label">Objetivo Específico Principal</span>
-          <span class="week-meta-value">OE3 — Transparecer as informações sobre custos diretos e desvios orçamentários por contrato</span>
-        </div>
-        <div class="week-meta-item">
-          <span class="week-meta-label">Contribuições Secundárias</span>
-          <span class="week-meta-value">OE1 (Unificação de dados de produção) • OE2 (Eficiência em conciliação e fechamento)</span>
-        </div>
-        <div class="week-meta-item">
-          <span class="week-meta-label">Valor de Negócio Entregue</span>
-          <span class="week-meta-value">Gerencia contratos e centros de custo; elimina rateios arbitrários alocando despesas aos contratos reais; entrega painel analítico dinâmico de previsto vs. realizado; e dispara alertas orçamentários preventivos.</span>
-        </div>
-      </div>
-      <div class="week-card-grid">
-        <div>
-          <div class="week-section-title">Requisitos Funcionais e Regras de Negócio</div>
-          <ul>
-            <li><strong>RF09:</strong> Apropriar custos operacionais (<a href="../visao-produto/capitulo-2/index.md#car-05">CAR-05</a> | RN10/RN11: Alocação a contratos ativos homologados);</li>
-            <li><strong>RF10:</strong> Consultar rastreabilidade de custos (<a href="../visao-produto/capitulo-2/index.md#car-05">CAR-05</a> | RN12: Origem documental integral do gasto);</li>
-            <li><strong>RF11:</strong> Filtrar indicadores de custos (<a href="../visao-produto/capitulo-2/index.md#car-06">CAR-06</a> | RN14: Segregação automática de dados salariais individuais);</li>
-            <li><strong>RF12:</strong> Monitorar execução orçamentária (<a href="../visao-produto/capitulo-2/index.md#car-06">CAR-06</a> | RN13: Cálculo padronizado de execução percentual);</li>
-            <li><strong>RF30:</strong> Consultar comparativo histórico (<a href="../visao-produto/capitulo-2/index.md#car-05">CAR-05</a> | RN28: Variação absoluta e relativa entre obras);</li>
-            <li><strong>RF31:</strong> Configurar alertas orçamentários (<a href="../visao-produto/capitulo-2/index.md#car-06">CAR-06</a> | RN29: Disparo de alertas preventivos configuráveis no painel e por e-mail);</li>
-            <li><strong>RF33:</strong> Gerenciar contratos de obras e clientes (<a href="../visao-produto/capitulo-2/index.md#car-05">CAR-05</a> | RN09/RN11: Cadastro e vigência contratual);</li>
-            <li><strong>RF34:</strong> Gerenciar centros de custo e orçamentos (<a href="../visao-produto/capitulo-2/index.md#car-06">CAR-06</a> | RN13/RN29: Tetos orçamentários e centros de custo).</li>
-          </ul>
-        </div>
-        <div>
-          <div class="week-section-title">Requisitos Não Funcionais e Casos de Teste</div>
-          <ul>
-            <li><strong>RNF09 (Desempenho):</strong> Carga do painel analítico em tempo ≤ 3,0 s para bases com até 10.000 lançamentos (CT-M3-05);</li>
-            <li><strong>RNF10 (Segurança):</strong> Sanitização e mascaramento de dados financeiros confidenciais em projeções analíticas (CT-M3-06);</li>
-            <li><strong>RNF11 (Confiabilidade):</strong> Consistência transacional ACID em concorrência de inclusão e apropriação (CT-M3-07);</li>
-            <li><strong>RNF12 (Usabilidade):</strong> Responsividade completa em desktop e tablet sem rolagem horizontal (CT-M3-08);</li>
-            <li><strong>Rastreabilidade de Testes:</strong> 12 Casos de Teste (CT-M3-01 a CT-M3-12) cobrindo atomicidade transacional, filtros, contratos, centros de custo e métricas orçamentárias.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-=== "Módulo 4: Governança, Segurança e Rastreabilidade (OE4)"
-
-    <div class="week-card card-mod-4">
-      <div class="week-card-header">
-        <div class="week-card-header-left">
-          <span class="week-card-title">Módulo 4: Governança, Segurança e Rastreabilidade</span>
-          <span class="week-card-period">OE4 • CAR-07, CAR-08</span>
-        </div>
-        <span class="status-pill pill-mod-4">8 RFs • 7 RNFs • 7 RNs • 15 CTs</span>
-      </div>
-      <div class="week-card-meta">
-        <div class="week-meta-item">
-          <span class="week-meta-label">Objetivo Específico Principal</span>
-          <span class="week-meta-value">OE4 — Garantir governança corporativa, segurança da informação e rastreabilidade probatória</span>
-        </div>
-        <div class="week-meta-item">
-          <span class="week-meta-label">Contribuições Secundárias</span>
-          <span class="week-meta-value">OE1 (Blindagem da base cadastral) • OE2 (Segurança e auditoria de lançamentos financeiros)</span>
-        </div>
-        <div class="week-meta-item">
-          <span class="week-meta-label">Valor de Negócio Entregue</span>
-          <span class="week-meta-value">Assegura isolamento de alçadas via Matriz Canônica RBAC (4 perfis); mantém trilha de auditoria imutável (append-only); valida integridade estrutural de payloads de API; garante disponibilidade mensal ≥ 99,5%; atende política de conformidade defensiva baseada no Art. 11 da CLT e Art. 16 da LGPD; e garante rotina de backup diário com restauração ágil.</span>
-        </div>
-      </div>
-      <div class="week-card-grid">
-        <div>
-          <div class="week-section-title">Requisitos Funcionais e Regras de Negócio</div>
-          <ul>
-            <li><strong>RF13:</strong> Efetuar login no sistema (<a href="../visao-produto/capitulo-2/index.md#car-07">CAR-07</a> | RN15: Autenticação mandatória com token temporário);</li>
-            <li><strong>RF14:</strong> Gerenciar perfis de acesso (<a href="../visao-produto/capitulo-2/index.md#car-07">CAR-07</a> | RN16: Matriz Canônica RBAC nos papéis Técnico, Gestor, Financeiro e Admin);</li>
-            <li><strong>RF15:</strong> Consultar trilha de auditoria (<a href="../visao-produto/capitulo-2/index.md#car-08">CAR-08</a> | Filtros avançados por período, usuário, módulo e valor);</li>
-            <li><strong>RF16:</strong> Exportar relatório de auditoria (<a href="../visao-produto/capitulo-2/index.md#car-08">CAR-08</a> | Dossiê estruturado imutável em PDF/CSV para conformidade CLT/LGPD);</li>
-            <li><strong>RF17:</strong> Recuperar credenciais de acesso (<a href="../visao-produto/capitulo-2/index.md#car-07">CAR-07</a> | Link de uso único válido por 30 min sem enumeração de contas);</li>
-            <li><strong>RF18:</strong> Encerrar sessão manualmente (<a href="../visao-produto/capitulo-2/index.md#car-07">CAR-07</a> | Invalidação imediata do token de acesso);</li>
-            <li><strong>RF23:</strong> Bloquear acesso após tentativas falhas (<a href="../visao-produto/capitulo-2/index.md#car-07">CAR-07</a> | RN20: Bloqueio de 30 min após 5 falhas);</li>
-            <li><strong>RF24:</strong> Impor renovação periódica de senhas (<a href="../visao-produto/capitulo-2/index.md#car-07">CAR-07</a> | RN21: Renovação a cada 90 dias e bloqueio de 5 senhas anteriores).</li>
-          </ul>
-        </div>
-        <div>
-          <div class="week-section-title">Requisitos Não Funcionais e Casos de Teste</div>
-          <ul>
-            <li><strong>RNF13 (Segurança):</strong> Expiração compulsória de tokens de sessão em no máximo 8 horas (CT-M4-05);</li>
-            <li><strong>RNF14 (Segurança/LGPD):</strong> 100% das rotas com dados protegidos validadas por guards RBAC (CT-M4-06);</li>
-            <li><strong>RNF15 (Confiabilidade):</strong> Consistência transacional ACID na gravação de logs de auditoria com perda zero (CT-M4-07);</li>
-            <li><strong>RNF16 (Confiabilidade/Legal):</strong> Retenção de logs por 5 anos (1.825 dias) contra expurgo físico indevido (CT-M4-08);</li>
-            <li><strong>RNF17 (Confiabilidade):</strong> Backup diário completo com retenção de 30 dias e restauração em até 4h (CT-M4-11);</li>
-            <li><strong>RNF18 (Confiabilidade):</strong> Disponibilidade mínima mensal de 99,5% monitorada externamente (CT-M4-14);</li>
-            <li><strong>RNF20 (Confiabilidade/Segurança):</strong> Validação de 100% dos payloads das rotas de escrita contra schema (CT-M4-15);</li>
-            <li><strong>Rastreabilidade de Testes:</strong> 15 Casos de Teste (CT-M4-01 a CT-M4-15) cobrindo RBAC, persistência de auditoria, backup, disponibilidade e integridade de API.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
----
-
+<a id="catalogo-funcionais"></a>
+<a id="especificacao-modular-dos-requisitos"></a>
 <a id="catalogo-geral-consolidado"></a>
+## Catálogo Geral de Requisitos Funcionais (Cards Interativos)
 
-## Catálogo Geral Consolidado de Requisitos
+Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicamente entre os **91 Itens Estruturantes** do catálogo (**40 Requisitos Funcionais**, **31 Regras de Negócio** e **20 Requisitos Não Funcionais**). Cada card consolida a especificação oficial, critérios de aceitação DoR/DoD e rastreabilidade direta com os **elementos estruturantes do projeto** como <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OEs ↗</a>, <a href="../visao-produto/solucao-proposta.md#23-caracteristicas-do-produto-car" class="req-tag req-tag-car"># CARs ↗</a>, <a href="../mvp/backlog.md" class="req-tag req-tag-us"># USs ↗</a>, <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix"># Matriz 4 × 4 ↗</a>, <a href="governanca-conformidade.md" class="req-tag req-tag-law"># Governança & CLT/LGPD ↗</a>, <a href="#catalogo-regras-de-negocio" class="req-tag req-tag-rn"># RNs ↗</a> e <a href="#catalogo-nao-funcionais" class="req-tag req-tag-rnf"># RNFs ↗</a>.
 
-Este catálogo reúne os requisitos do **DUOC Finance** e permite localizar suas especificações completas. Cada requisito funcional possui uma definição oficial na página do módulo correspondente.
+<div class="req-toolbar">
+  <div class="req-search-row">
+    <div class="req-search-wrapper">
+      <span class="req-search-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+      <input type="text" id="req-search-input" class="req-search-input" placeholder="Buscar por código (ex: RF04, RN15, RNF03), termo (ex: apontamento, LGPD, token), ator ou CAR..." autocomplete="off">
+      <button id="req-search-clear" class="req-search-clear" title="Limpar busca">×</button>
+    </div>
+    <button type="button" id="req-toggle-filters-btn" class="req-toggle-filters-btn" aria-expanded="false">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+      <span>Filtros</span>
+      <span class="req-filter-indicator"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+    </button>
+  </div>
+  <div id="req-filters-drawer" class="req-filters-drawer" style="display: none;">
+    <div class="req-filter-tabs-header">
+      <button type="button" class="req-filter-tab-btn active" data-filter-tab="tipo">Tipo de Item</button>
+      <button type="button" class="req-filter-tab-btn" data-filter-tab="modulos">Módulos & OEs</button>
+      <button type="button" class="req-filter-tab-btn" data-filter-tab="mvp">Escopo (MVP)</button>
+      <button type="button" class="req-filter-tab-btn" data-filter-tab="prioridade">Prioridade (Matriz)</button>
+    </div>
+    <div class="req-filter-tabs-body">
+      <div class="req-filter-tab-pane active" data-filter-pane="tipo">
+        <button class="req-filter-pill active" data-filter-type="type" data-filter="all">Todos os Tipos (91)</button>
+        <button class="req-filter-pill" data-filter-type="type" data-filter="rf">Requisitos Funcionais · RF (40)</button>
+        <button class="req-filter-pill" data-filter-type="type" data-filter="rn">Regras de Negócio · RN (31)</button>
+        <button class="req-filter-pill" data-filter-type="type" data-filter="rnf">Requisitos Não Funcionais · RNF (20)</button>
+      </div>
+      <div class="req-filter-tab-pane" data-filter-pane="modulos">
+        <button class="req-filter-pill active" data-filter-type="oe" data-filter="all">Todos os Módulos (91)</button>
+        <button class="req-filter-pill" data-filter-type="oe" data-filter="oe1">Módulo 1: OE1 (Dados e Pessoal)</button>
+        <button class="req-filter-pill" data-filter-type="oe" data-filter="oe2">Módulo 2: OE2 (Fechamento e Reembolsos)</button>
+        <button class="req-filter-pill" data-filter-type="oe" data-filter="oe3">Módulo 3: OE3 (Custos e Orçamento)</button>
+        <button class="req-filter-pill" data-filter-type="oe" data-filter="oe4">Módulo 4: OE4 (Segurança e Auditoria)</button>
+        <button class="req-filter-pill" data-filter-type="oe" data-filter="transversal">Transversais (T)</button>
+      </div>
+      <div class="req-filter-tab-pane" data-filter-pane="mvp">
+        <button class="req-filter-pill active" data-filter-type="mvp" data-filter="all">Todo o Escopo (91)</button>
+        <button class="req-filter-pill" data-filter-type="mvp" data-filter="mvp">Escopo MVP (88)</button>
+        <button class="req-filter-pill" data-filter-type="mvp" data-filter="pos-mvp">Evolutivo Pós-MVP (3)</button>
+      </div>
+      <div class="req-filter-tab-pane" data-filter-pane="prioridade">
+        <button class="req-filter-pill active" data-filter-type="quad" data-filter="all">Todas as Prioridades (91)</button>
+        <button class="req-filter-pill" data-filter-type="quad" data-filter="q1">Q1 — MVP / Alta Prioridade / Mandatório</button>
+        <button class="req-filter-pill" data-filter-type="quad" data-filter="q2">Q2 — Planejado / Complexo</button>
+        <button class="req-filter-pill" data-filter-type="quad" data-filter="q3">Q3 — Secundário / Evolutivo</button>
+        <button class="req-filter-pill" data-filter-type="quad" data-filter="q4">Q4 — Fora de Escopo</button>
+      </div>
+    </div>
+  </div>
+  <div class="req-toolbar-footer">
+    <div class="req-count-wrapper">
+      <span class="req-count-label">Itens Exibidos:</span>
+      <span id="req-count-badge" class="req-count-badge">91 de 91</span>
+    </div>
+    <div class="req-actions-wrapper">
+      <button type="button" id="req-expand-all" class="req-action-btn" title="Expandir todos os cards visíveis"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg> Expandir Todos</button>
+      <button type="button" id="req-collapse-all" class="req-action-btn" title="Recolher todos os cards visíveis"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg> Recolher Todos</button>
+    </div>
+  </div>
+</div>
 
-As relações entre requisitos funcionais, regras de negócio, fontes de elicitação e casos de teste estão documentadas nas páginas de cada módulo e em suas matrizes de rastreabilidade.
-
-A avaliação do valor de negócio, do esforço técnico e a definição do escopo do MVP estão disponíveis em [Priorização de Requisitos e Definição do MVP](priorizacao.md). A linha de corte original contempla RF01 a RF31; os requisitos RF32 a RF40 possuem tratamento complementar, com avaliações históricas ou pendentes de revisão, conforme detalhado na [seção de requisitos complementares](priorizacao.md#requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte).
-
-
-### Catálogo de Requisitos Funcionais
-
-| Código | Nome | Módulo / OE | CAR | Fonte de Elicitação / Origem | Regras de Negócio Associadas | Prioridade / MVP | Resumo |
-| :---: | :--- | :---: | :---: | :--- | :--- | :---: | :--- |
-| **RF01** | Cadastrar colaborador | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | CAR-01 | Reunião 01, Reunião 04 | RN01, RN03, RN22, RN23 | MVP | Permite ao Administrador Financeiro cadastrar colaboradores com dados pessoais, bancários e trabalhistas, gerando link seguro de primeiro acesso (RF17) e garantindo unicidade por CPF. |
-| **RF02** | Atualizar cadastro de colaborador | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | CAR-01 | Reunião 04 | RN23 | MVP | Permite ao Administrador Financeiro atualizar informações cadastrais e bancárias, propagando as alterações de forma síncrona e preservando o histórico. |
-| **RF03** | Registrar movimentação funcional | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | CAR-01 | Reunião 04 | RN04 | MVP | Registra afastamentos, férias e rescisões, atualizando a situação funcional do colaborador e revogando credenciais ativas. |
-| **RF04** | Submeter apontamento de campo | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | CAR-02 | Reunião 03, Reunião 05, TR-01 | RN02 | MVP | Permite ao Técnico de Campo registrar horas trabalhadas e atividades executadas em obra ou visita técnica via aplicação web responsiva (Web App / PWA). |
-| **RF05** | Solicitar prévia de fechamento | <span class="mod-badge mod-2">Módulo 2 / OE2</span> | CAR-03 | Reunião 01, Reunião 05, TR-03 | RN03, RN05, RN25, RN31 | MVP | Consolida apontamentos previamente homologados e calcula a prévia de diárias e comissões da competência pelas fórmulas parametrizadas (RN31). |
-| **RF06** | Homologar fechamento financeiro | <span class="mod-badge mod-2">Módulo 2 / OE2</span> | CAR-03 | Reunião 05, TR-03 | RN08, RN17 | MVP | Permite ao Administrador Financeiro confirmar a homologação do fechamento financeiro, bloqueando alterações diretas posteriores e emitindo extrato final. |
-| **RF07** | Submeter solicitação de reembolso | <span class="mod-badge mod-2">Módulo 2 / OE2</span> | CAR-04 | Reunião 02, Reunião 04, TR-02 | RN03, RN06, RN09 | MVP | Permite ao colaborador solicitar reembolso de despesas operacionais vinculadas a contratos ativos com comprovante fiscal digitalizado anexado. |
-| **RF08** | Deliberar solicitação de reembolso | <span class="mod-badge mod-2">Módulo 2 / OE2</span> | CAR-04 | Reunião 02, Reunião 05, TR-02 | RN07, RN27 | MVP | Permite ao Administrador Financeiro aprovar ou rejeitar solicitações de reembolso com parecer obrigatório na recusa. |
-| **RF09** | Apropriar custos operacionais | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | CAR-05 | Reunião 01, Reunião 05, TR-04 | RN09, RN10, RN11 | MVP | Aloca custos provenientes de apontamentos e diárias homologadas aos respectivos contratos ativos e centros de custo. |
-| **RF10** | Consultar rastreabilidade de custos | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | CAR-05 | Reunião 05, TR-04 | RN12 | MVP | Permite identificar a origem documental, autoria e homologação de cada custo apropriado a um contrato de obra. |
-| **RF11** | Filtrar indicadores de custos | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | CAR-06 | Reunião 04, Reunião 05, TR-04 | RN14 | MVP | Permite combinar filtros de período, contrato, colaborador e centro de custo, com mascaramento salarial para perfis não financeiros. |
-| **RF12** | Monitorar execução orçamentária | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | CAR-06 | Reunião 05, TR-04 | RN13 | Evolutivo | Exibe valores orçados previstos, realizados, desvios e percentual de execução orçamentária dos contratos de obra. |
-| **RF13** | Efetuar login no sistema | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | CAR-07 | Reunião 01, Reunião 05, Segurança | RN15, RN16 | MVP | Autentica usuários por credenciais corporativas e cria uma sessão com token temporário e permissões associadas ao papel canônico. |
-| **RF14** | Gerenciar perfis de acesso | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | CAR-07 | Reunião 04, Reunião 05, LGPD | RN16 | MVP | Permite ao Administrador do Sistema gerenciar a atribuição dos 4 papéis canônicos de acesso RBAC aos usuários. |
-| **RF15** | Consultar trilha de auditoria | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | CAR-08 | Reunião 05, Auditoria | RN17, RN18 | Evolutivo | Permite consultar eventos auditáveis por período, usuário, operação, módulo e faixa de valor financeiro. |
-| **RF16** | Exportar relatório de auditoria | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | CAR-08 | Reunião 05, Legal | RN18, RN19 | Evolutivo | Gera relatórios estruturados em PDF/CSV com o histórico de operações auditadas para instrução probatória defensiva (CLT Art. 11 e LGPD Art. 16). |
-| **RF17** | Recuperar credenciais de acesso | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | CAR-07 | Reunião 05, Segurança | RN15 | MVP | Permite redefinir a senha ou ativar primeiro acesso por link temporário enviado ao e-mail cadastrado sem enumeração de contas. |
-| **RF18** | Encerrar sessão manualmente | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | CAR-07 | Reunião 05, Segurança | RN15 | MVP | Permite ao usuário efetuar logout e invalidar imediatamente o token de sessão ativo no backend. |
-| **RF19** | Consultar apontamentos registrados | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | CAR-02 | Reunião 03, Reunião 05, TR-01 | RN16 | MVP | Permite ao Técnico de Campo consultar exclusivamente seus próprios apontamentos e respectivos status de homologação ou rejeição. |
-| **RF20** | Importar presenças homologadas | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | CAR-09 | Reunião 02, Reunião 05 | RN10 | Evolutivo | Importa registros homologados do sistema externo *FLIT* e os associa a colaboradores e contratos de obras. |
-| **RF21** | Estornar fechamento financeiro | <span class="mod-badge mod-2">Módulo 2 / OE2</span> | CAR-03 | Feedback FB-09, Reunião 05, TR-03 | RN08, RN17 | Evolutivo | Permite ao Administrador Financeiro reabrir uma competência homologada mediante justificativa formal obrigatória (≥ 15 caracteres) e registro na auditoria. |
-| **RF22** | Anexar evidências e geolocalização ao apontamento | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | CAR-02 | Reunião 03, Feedback FB-11, TR-01 | RN24 | MVP | Permite anexar fotos e comprovantes ao apontamento e associar geolocalização quando disponível no dispositivo de campo. |
-| **RF23** | Bloquear acesso após tentativas falhas consecutivas | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | CAR-07 | Reunião 05, Segurança | RN20 | MVP | Bloqueia temporariamente a autenticação por 30 minutos após 5 tentativas inválidas consecutivas em 15 minutos. |
-| **RF24** | Impor renovação periódica de senhas | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | CAR-07 | Reunião 05, Segurança | RN21 | Evolutivo | Exige renovação periódica da senha a cada 90 dias e impede a reutilização das 5 senhas anteriores cadastradas. |
-| **RF25** | Cadastrar tipo de contratação do colaborador | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | CAR-01 | Reunião 01, Reunião 04 | RN22 | MVP | Classifica o colaborador como Diarista, CLT ou Prestador de Serviço para aplicação das regras financeiras correspondentes. |
-| **RF26** | Consultar histórico de alterações cadastrais e bancárias | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | CAR-01 | Reunião 04, LGPD | RN23 | MVP | Permite consultar versões anteriores dos dados cadastrais e bancários, registrando autoria, data e valor modificado. |
-| **RF27** | Configurar tabela de valores de diárias técnicas | <span class="mod-badge mod-2">Módulo 2 / OE2</span> | CAR-03 | Reunião 05, TR-03 | RN25, RN31 | MVP | Permite ao Administrador Financeiro parametrizar valores de diárias técnicas, categorias e períodos de vigência utilizados nos cálculos. |
-| **RF28** | Submeter solicitação de adiantamento operacional | <span class="mod-badge mod-2">Módulo 2 / OE2</span> | CAR-04 | Reunião 02, Reunião 05, TR-02 | RN03, RN09, RN26 | MVP | Permite solicitar antecipadamente recursos para despesas operacionais autorizadas vinculadas a contratos ativos. |
-| **RF29** | Deliberar solicitação de adiantamento operacional | <span class="mod-badge mod-2">Módulo 2 / OE2</span> | CAR-04 | Reunião 02, Reunião 05, TR-02 | RN27 | MVP | Permite ao Administrador Financeiro aprovar ou rejeitar adiantamentos, exigindo parecer formal na recusa. |
-| **RF30** | Consultar comparativo histórico de custos entre contratos | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | CAR-05 | Reunião 05 (Visão Executiva), TR-04 | RN28 | Evolutivo | Permite comparar custos consolidados de múltiplos contratos e suas variações absolutas e percentuais. |
-| **RF31** | Configurar alertas de execução orçamentária | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | CAR-06 | Reunião 05, TR-04 | RN29 | Evolutivo | Permite ao gestor definir limites percentuais de execução orçamentária e gerar alertas preventivos no painel e por e-mail. |
-| **RF32** | Deliberar apontamento de campo | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | CAR-02 | Reunião 03, Reunião 05, TR-01 | RN02, RN05, RN10, RN30 | MVP | Permite ao Gestor Operacional de Obras homologar ou rejeitar apontamentos de campo pendentes, exigindo parecer na rejeição e bloqueando edição após homologação. |
-| **RF33** | Gerenciar contratos de obras e clientes | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | CAR-05 | Reunião 01, Reunião 05, TR-04 | RN09, RN11 | MVP | Permite cadastrar, editar e consultar contratos de obras com clientes, vigência, valores e retenções, viabilizando o vínculo exigido em despesas. |
-| **RF34** | Gerenciar centros de custo e orçamentos de obra | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | CAR-06 | Reunião 01, Reunião 05, TR-04 | RN09, RN11, RN13, RN29 | MVP | Permite cadastrar centros de custo por contrato e definir tetos orçamentários por categoria de despesa, viabilizando o monitoramento de desvios orçamentários. |
-| **RF35** | Retificar apontamento de campo pendente | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | CAR-02 | Reunião 03, TR-01 | RN02 | MVP | Permite ao Técnico de Campo editar dados e anexos de apontamentos ainda pendentes de homologação dentro de até 5 dias úteis. |
-| **RF36** | Exportar dados consolidados em planilha CSV/XLSX | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | CAR-10 | Reunião 01, Reunião 05 | — | Evolutivo | Permite exportar dados consolidados de apontamentos técnicos e fechamentos em planilhas estruturadas nos formatos CSV e XLSX. |
-
-### Catálogo de Requisitos Não Funcionais
-
-Os requisitos não funcionais (RNFs) definem as condições de qualidade, desempenho, segurança e confiabilidade do **DUOC Finance**.
-
-A tabela abaixo apresenta os 20 RNFs e seus módulos. Os critérios mensuráveis e as classificações URPS+ e Sommerville estão disponíveis nas especificações completas.
-
-| Código | Requisito Não Funcional | Módulo / OE |
-| :---: | :--- | :---: |
-| [**RNF01**](modulo-1.md#requisitos-nao-funcionais) | Operar em modo offline para coleta de dados em canteiros sem conectividade | Módulo 1 / OE1 |
-| [**RNF02**](modulo-1.md#requisitos-nao-funcionais) | Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos | Módulo 1 / OE1 |
-| [**RNF03**](modulo-1.md#requisitos-nao-funcionais) | Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito | Módulo 1 / OE1 |
-| [**RNF04**](modulo-1.md#requisitos-nao-funcionais) | Garantir usabilidade e agilidade no preenchimento de apontamentos de campo | Módulo 1 / OE1 |
-| [**RNF05**](modulo-2.md#requisitos-nao-funcionais) | Processar rotina de fechamento financeiro em até 5,0 segundos | Módulo 2 / OE2 |
-| [**RNF06**](modulo-2.md#requisitos-nao-funcionais) | Garantir exatidão aritmética centesimal em cálculos monetários | Módulo 2 / OE2 |
-| [**RNF07**](modulo-2.md#requisitos-nao-funcionais) | Garantir robustez e segurança no processamento e armazenamento de comprovantes | Módulo 2 / OE2 |
-| [**RNF08**](modulo-2.md#requisitos-nao-funcionais) | Garantir rastreabilidade probatória e não-repúdio em operações de estorno | Módulo 2 / OE2 |
-| [**RNF09**](modulo-3.md#requisitos-nao-funcionais) | Carregar o painel analítico em tempo inferior a 3 segundos | Módulo 3 / OE3 |
-| [**RNF10**](modulo-3.md#requisitos-nao-funcionais) | Sanitizar e mascarar dados financeiros confidenciais em projeções analíticas | Módulo 3 / OE3 |
-| [**RNF11**](modulo-3.md#requisitos-nao-funcionais) | Garantir consistência transacional ACID na apropriação concorrente de custos | Módulo 3 / OE3 |
-| [**RNF12**](modulo-3.md#requisitos-nao-funcionais) | Assegurar responsividade do painel em resoluções de desktop e tablet | Módulo 3 / OE3 |
-| [**RNF13**](modulo-4.md#requisitos-nao-funcionais) | Expirar token de acesso temporário em no máximo 8 horas | Módulo 4 / OE4 |
-| [**RNF14**](modulo-4.md#requisitos-nao-funcionais) | Validar perfil de autorização em 100% das rotas de API com dados protegidos | Módulo 4 / OE4 |
-| [**RNF15**](modulo-4.md#requisitos-nao-funcionais) | Garantir consistência transacional e atomicidade na gravação de logs de auditoria | Módulo 4 / OE4 |
-| [**RNF16**](modulo-4.md#requisitos-nao-funcionais) | Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido | Módulo 4 / OE4 |
-| [**RNF17**](modulo-4.md#requisitos-nao-funcionais) | Realizar backup automático diário com restauração verificada | Módulo 4 / OE4 |
-| [**RNF18**](modulo-4.md#requisitos-nao-funcionais) | Garantir disponibilidade mínima mensal do sistema | Módulo 4 / OE4 |
-| [**RNF19**](modulo-1.md#requisitos-nao-funcionais) | Garantir acessibilidade digital nas interfaces do sistema | Módulo 1 / OE1 |
-| [**RNF20**](modulo-4.md#requisitos-nao-funcionais) | Validar integridade de payloads em todas as rotas de escrita da API | Módulo 4 / OE4 |
+<div id="req-no-results" class="req-no-results" style="display: none;">
+  <p><strong>Nenhum item encontrado</strong> para a busca e filtros aplicados.</p>
+  <p class="req-no-results-hint">Tente limpar os filtros ou buscar por outro termo ou código (ex: RF01, RN15, RNF03).</p>
+</div>
 
 
+<details class="req-card req-card-rf req-card-oe1" id="rf01" data-type="rf" data-rf="RF01" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf01 cadastrar colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-01 o administrador financeiro cadastra um novo colaborador no sistema informando dados pessoais, bancários validados e regime trabalhista, gerando credencial e link de ativação segura. rn01 rn03 rn22 rn23 rnf02 rnf03 rnf19" data-search-text="rf01 cadastrar colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-01 o administrador financeiro cadastra um novo colaborador no sistema informando dados pessoais, bancários validados e regime trabalhista, gerando credencial e link de ativação segura. rn01 rn03 rn22 rn23 rnf02 rnf03 rnf19">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF01 - Cadastrar colaborador</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
 
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
 
-### Catálogo Geral de Regras de Negócio (RN01 a RN31)
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro cadastra um novo colaborador no sistema informando dados pessoais, bancários validados e regime trabalhista, gerando credencial e link de ativação segura.</p>
+      </div>
+    </div>
 
-O catálogo relaciona as regras de negócio aos requisitos funcionais e às fontes de elicitação. A definição completa de cada regra está disponível no módulo correspondente.
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
 
-Os códigos das regras direcionam à seção de regras de negócio de cada módulo. Os requisitos funcionais relacionados podem ser consultados no [Catálogo de Requisitos Funcionais](#catalogo-de-requisitos-funcionais).
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) cadastra um novo profissional informando seus dados cadastrais, bancários (código de compensação COMPE de 3 dígitos, agência e conta corrente) e trabalhistas validados (RN01, RN03, RN22), e o sistema grava o registro com um identificador único. Se for concedido acesso ao sistema, é gerado e despachado um link seguro de primeiro acesso e ativação para o e-mail corporativo cadastrado (RF17), permitindo definir senha para autenticação subsequente (RF13). Se o CPF informado for inválido segundo o algoritmo oficial da Receita Federal (módulo 11) ou já constar na base de dados, o cadastro é recusado e nenhum registro novo é criado (RN01).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn01" class="req-tag req-tag-rn"># RN01 · Unicidade e Validação Cadastral por CPF ↗</a> <a href="#rn03" class="req-tag req-tag-rn"># RN03 · Validação Prévia de Dados Bancários e Chave Pix ↗</a> <a href="#rn22" class="req-tag req-tag-rn"># RN22 · Tipos de Contratação Válidos ↗</a> <a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-01</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-| Código | Regra de Negócio | Módulo / CAR | RFs Relacionados | Fonte de Elicitação / Origem |
-| :---: | :--- | :---: | :--- | :--- |
-| **RN01** | Unicidade e Validação Cadastral por CPF | <span class="mod-badge mod-1">Módulo 1 / CAR-01</span> | RF01 | Reunião 01, Reunião 04 |
-| **RN02** | Bloqueio Temporal e Imutabilidade de Apontamentos Homologados | <span class="mod-badge mod-1">Módulo 1 / CAR-02</span> | RF04, RF32, RF35 | Reunião 03, Reunião 05, TR-01 |
-| **RN03** | Validação Cadastral para Lançamentos Financeiros | <span class="mod-badge mod-1">Módulo 1 / CAR-01</span> | RF01, RF05, RF07, RF28 | Reunião 04 |
-| **RN04** | Revogação Automática de Acessos | <span class="mod-badge mod-1">Módulo 1 / CAR-01</span> | RF03 | Reunião 04 |
-| **RN05** | Homologação Prévia Mandatória para Fechamento Financeiro | <span class="mod-badge mod-2">Módulo 2 / CAR-03</span> | RF05, RF32 | Reunião 01, Reunião 05, TR-03 |
-| **RN06** | Obrigatoriedade de Comprovante Fiscal em Reembolsos | <span class="mod-badge mod-2">Módulo 2 / CAR-04</span> | RF07 | Reunião 02, Reunião 04, TR-02 |
-| **RN07** | Limite do Montante Reembolsável ao Documento Fiscal | <span class="mod-badge mod-2">Módulo 2 / CAR-04</span> | RF08 | Reunião 02, TR-02 |
-| **RN08** | Imutabilidade de Lotes Homologados e Exigência de Estorno Auditável | <span class="mod-badge mod-2">Módulo 2 / CAR-03</span> | RF06, RF21 | Reunião 05, Feedback FB-09 |
-| **RN09** | Vínculo Contratual Mandatório em Reembolsos e Adiantamentos | <span class="mod-badge mod-2">Módulo 2 / CAR-04</span> | RF07, RF09, RF28, RF33, RF34 | Reunião 02, Reunião 05, TR-02 |
-| **RN10** | Condição de Homologação para Apropriação Financeira | <span class="mod-badge mod-3">Módulo 3 / CAR-05</span> | RF09, RF20, RF32 | Reunião 01, Reunião 05, TR-04 |
-| **RN11** | Vínculo Contratual Mandatório na Apropriação de Custos | <span class="mod-badge mod-3">Módulo 3 / CAR-05</span> | RF09, RF33, RF34 | Reunião 01, Reunião 05, TR-04 |
-| **RN12** | Versionamento e Rastreabilidade Documental Integral de Custos | <span class="mod-badge mod-3">Módulo 3 / CAR-05</span> | RF10 | Reunião 05, TR-04 |
-| **RN13** | Cálculo Padronizado de Execução Orçamentária | <span class="mod-badge mod-3">Módulo 3 / CAR-06</span> | RF12, RF34 | Reunião 05, TR-04 |
-| **RN14** | Segregação de Visualização Salarial e Sigilo de Remunerações | <span class="mod-badge mod-3">Módulo 3 / CAR-06</span> | RF11 | Reunião 04, LGPD Art. 6º |
-| **RN15** | Autenticação Mandatória com Token Temporário Válido | <span class="mod-badge mod-4">Módulo 4 / CAR-07</span> | RF13, RF17, RF18 | Reunião 01, Reunião 05 |
-| **RN16** | Princípio do Menor Privilégio e Matriz Canônica RBAC | <span class="mod-badge mod-4">Módulo 4 / CAR-07</span> | RF13, RF14, RF19 | Reunião 04, Reunião 05, LGPD |
-| **RN17** | Registro Mandatório e Integridade de Eventos na Trilha de Auditoria | <span class="mod-badge mod-4">Módulo 4 / CAR-08</span> | RF06, RF15, RF21 | Reunião 05, Auditoria |
-| **RN18** | Imutabilidade Estrita da Trilha de Auditoria (*Append-Only*) | <span class="mod-badge mod-4">Módulo 4 / CAR-08</span> | RF15, RF16 | Reunião 05, Auditoria |
-| **RN19** | Política Corporativa de Retenção Quinquenal de Logs (CLT / LGPD) | <span class="mod-badge mod-4">Módulo 4 / CAR-08</span> | RF16 | Reunião 05, CLT Art. 11, LGPD Art. 16 |
-| **RN20** | Bloqueio Temporal Preventivo por Tentativas Falhas Consecutivas | <span class="mod-badge mod-4">Módulo 4 / CAR-07</span> | RF23 | Reunião 05, Diretrizes de Segurança |
-| **RN21** | Renovação Periódica Compulsória e Descarte de Senhas Anteriores | <span class="mod-badge mod-4">Módulo 4 / CAR-07</span> | RF24 | Reunião 05, Diretrizes de Segurança |
-| **RN22** | Enquadramento Trabalhista por Tipo de Contratação | <span class="mod-badge mod-1">Módulo 1 / CAR-01</span> | RF01, RF25 | Reunião 01, Reunião 04 |
-| **RN23** | Imutabilidade do Histórico de Alterações Cadastrais e Bancárias | <span class="mod-badge mod-1">Módulo 1 / CAR-01</span> | RF01, RF02, RF26 | Reunião 04, LGPD |
-| **RN24** | Validação de Evidências Fotográficas e Geolocalização de Campo | <span class="mod-badge mod-1">Módulo 1 / CAR-02</span> | RF22 | Reunião 03, Feedback FB-11 |
-| **RN25** | Vigência Parametrizada dos Valores de Diárias Técnicas | <span class="mod-badge mod-2">Módulo 2 / CAR-03</span> | RF05, RF27 | Reunião 05, TR-03 |
-| **RN26** | Elegibilidade e Vínculo Contratual de Adiantamentos Operacionais | <span class="mod-badge mod-2">Módulo 2 / CAR-04</span> | RF28 | Reunião 02, Reunião 05, TR-02 |
-| **RN27** | Notificação Compulsória de Pendências Financeiras | <span class="mod-badge mod-2">Módulo 2 / CAR-04</span> | RF08, RF29 | Reunião 02, Reunião 05 |
-| **RN28** | Apuração de Variações Absolutas e Relativas em Comparativos de Custo | <span class="mod-badge mod-3">Módulo 3 / CAR-05</span> | RF30 | Reunião 05 (Visão Executiva) |
-| **RN29** | Disparo de Alertas Preventivos de Extrapolação Orçamentária | <span class="mod-badge mod-3">Módulo 3 / CAR-06</span> | RF31, RF34 | Reunião 05, TR-04 |
-| **RN30** | Parecer Obrigatório na Rejeição e Bloqueio na Aprovação de Campo | <span class="mod-badge mod-1">Módulo 1 / CAR-02</span> | RF32 | Reunião 03, Reunião 05, Revisão de Pares |
-| **RN31** | Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo | <span class="mod-badge mod-2">Módulo 2 / CAR-03</span> | RF05, RF27 | Reunião 01, Reunião 05, Revisão de Pares |
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us01" class="req-tag req-tag-us"># US01 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M1-01</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn01" class="req-tag req-tag-rn"># RN01 · Unicidade e Validação Cadastral por CPF ↗</a> <a href="#rn03" class="req-tag req-tag-rn"># RN03 · Validação Prévia de Dados Bancários e Chave Pix ↗</a> <a href="#rn22" class="req-tag req-tag-rn"># RN22 · Tipos de Contratação Válidos ↗</a> <a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
 
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">4 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">2,40</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe1" id="rf02" data-type="rf" data-rf="RF02" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf02 atualizar cadastro de colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-02 o administrador financeiro atualiza informações cadastrais ou bancárias de um colaborador ativo, propagando as alterações síncronas para rotinas financeiras com versionamento imutável. rn23 rnf02 rnf03 rnf19" data-search-text="rf02 atualizar cadastro de colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-02 o administrador financeiro atualiza informações cadastrais ou bancárias de um colaborador ativo, propagando as alterações síncronas para rotinas financeiras com versionamento imutável. rn23 rnf02 rnf03 rnf19">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF02 - Atualizar cadastro de colaborador</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro atualiza informações cadastrais ou bancárias de um colaborador ativo, propagando as alterações síncronas para rotinas financeiras com versionamento imutável.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">As alterações nos dados cadastrais ou bancários de um colaborador ativo, submetidas pelo Administrador Financeiro (`ADMIN_FINANCEIRO`), propagam-se de forma síncrona na mesma transação atômica (em latência inferior a 500 ms) para as rotinas financeiras de fechamento e apropriação de custos, preservando a versão anterior da ficha no histórico imutável (RN23).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-02</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us02" class="req-tag req-tag-us"># US02 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M1-02</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,80</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe1" id="rf03" data-type="rf" data-rf="RF03" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf03 registrar movimentação funcional oe1 car-01 admin_financeiro mvp q1 ct-m1-03 o administrador financeiro registra afastamentos, férias e rescisões contratuais, disparando a revogação automática e compulsória de credenciais e sessões de acesso. rn04 rnf02 rnf03 rnf19" data-search-text="rf03 registrar movimentação funcional oe1 car-01 admin_financeiro mvp q1 ct-m1-03 o administrador financeiro registra afastamentos, férias e rescisões contratuais, disparando a revogação automática e compulsória de credenciais e sessões de acesso. rn04 rnf02 rnf03 rnf19">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF03 - Registrar movimentação funcional</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro registra afastamentos, férias e rescisões contratuais, disparando a revogação automática e compulsória de credenciais e sessões de acesso.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) registra afastamentos, férias e rescisões contratuais, atualizando a situação funcional do colaborador no sistema. Em caso de afastamento ou desligamento, o acesso do colaborador à aplicação web responsiva (Web App / PWA) é revogado compulsoriamente na mesma transação de persistência no banco (RN04).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn04" class="req-tag req-tag-rn"># RN04 · Revogação Automática de Credenciais em Afastamento ou Rescisão ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-03</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us03" class="req-tag req-tag-us"># US03 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M1-03</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn04" class="req-tag req-tag-rn"># RN04 · Revogação Automática de Credenciais em Afastamento ou Rescisão ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,00 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,50</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe1" id="rf04" data-type="rf" data-rf="RF04" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q2" data-role="TECNICO_CAMPO" data-text="rf04 submeter apontamento de campo oe1 car-02 tecnico_campo mvp q2 ct-m1-04 o técnico de campo registra e submete via web app/pwa as horas trabalhadas e o escopo técnico executado no canteiro de obras, vinculando evidências e fotos. rn02 rnf01 rnf04" data-search-text="rf04 submeter apontamento de campo oe1 car-02 tecnico_campo mvp q2 ct-m1-04 o técnico de campo registra e submete via web app/pwa as horas trabalhadas e o escopo técnico executado no canteiro de obras, vinculando evidências e fotos. rn02 rnf01 rnf04">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q2"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Planejado</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF04 - Submeter apontamento de campo</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q2">Q2 — Planejamento / Complexo</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># TECNICO_CAMPO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Técnico de Campo registra e submete via Web App/PWA as horas trabalhadas e o escopo técnico executado no canteiro de obras, vinculando evidências e fotos.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">Ao término da jornada em obra ou visita técnica, o Técnico de Campo (`TECNICO_CAMPO`) envia pela aplicação web responsiva (Web App / PWA) as horas trabalhadas e o escopo de serviços executado, juntamente com os anexos do apontamento (RF22). O registro é gravado com status inicial "Pendente de Homologação" e disponibilizado para análise do Gestor Operacional de Obras (`GESTOR_OBRAS`) responsável pelo contrato (RN02).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-04</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us04" class="req-tag req-tag-us"># US04 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M1-04</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q2">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q2">Q2 — Planejamento / Complexo</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">4 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">3,00 (3 — Alto)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,33</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,33</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe2" id="rf05" data-type="rf" data-rf="RF05" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q2" data-role="ADMIN_FINANCEIRO" data-text="rf05 solicitar prévia de fechamento oe2 car-03 admin_financeiro mvp q2 ct-m2-01 o administrador financeiro consolida uma prévia analítica da competência com a apuração automatizada de diárias técnicas e comissões para conferência supervisionada. rn25 rn31 rnf05 rnf06 rnf10" data-search-text="rf05 solicitar prévia de fechamento oe2 car-03 admin_financeiro mvp q2 ct-m2-01 o administrador financeiro consolida uma prévia analítica da competência com a apuração automatizada de diárias técnicas e comissões para conferência supervisionada. rn25 rn31 rnf05 rnf06 rnf10">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q2"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Planejado</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF05 - Solicitar prévia de fechamento</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q2">Q2 — Planejamento / Complexo</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro consolida uma prévia analítica da competência com a apuração automatizada de diárias técnicas e comissões para conferência supervisionada.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) gera um extrato preliminar consolidado para a competência mensal e contratos de obra selecionados, computando estritamente os apontamentos de campo previamente homologados pelo Gestor Operacional de Obras (RF32, RN05) e aplicando as fórmulas de diárias técnicas e comissões simplificadas parametrizadas (RN25, RN31) para conferência supervisionada antes do fechamento definitivo.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-01</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us05" class="req-tag req-tag-us"># US05 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M2-01</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q2">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q2">Q2 — Planejamento / Complexo</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">4 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">3,33 (3 — Alto)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,20</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,20</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe2" id="rf06" data-type="rf" data-rf="RF06" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf06 homologar fechamento financeiro oe2 car-03 admin_financeiro mvp q1 ct-m2-02 o administrador financeiro homologa definitivamente o lote de competência dos contratos selecionados, bloqueando apontamentos contra modificações e emitindo o extrato final. rn08 rn17 rnf05 rnf06 rnf10" data-search-text="rf06 homologar fechamento financeiro oe2 car-03 admin_financeiro mvp q1 ct-m2-02 o administrador financeiro homologa definitivamente o lote de competência dos contratos selecionados, bloqueando apontamentos contra modificações e emitindo o extrato final. rn08 rn17 rnf05 rnf06 rnf10">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF06 - Homologar fechamento financeiro</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro homologa definitivamente o lote de competência dos contratos selecionados, bloqueando apontamentos contra modificações e emitindo o extrato final.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`), após conferir o extrato preliminar consolidado (RF05), confirma formalmente a homologação do lote da competência mensal dos contratos selecionados. A confirmação encerra a competência, bloqueia compulsoriamente os apontamentos e despesas contra qualquer modificação direta (RN08), grava o carimbo de homologação com UTC e autor na trilha de auditoria (RN17) e emite o extrato financeiro definitivo para conciliação contábil; eventuais retificações posteriores exigem compulsoriamente o procedimento de estorno formal (RF21).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-02</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us06" class="req-tag req-tag-us"># US06 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M2-02</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">4 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,33 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,72</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,72</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe2" id="rf07" data-type="rf" data-rf="RF07" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO / GESTOR_OBRAS" data-text="rf07 submeter solicitação de reembolso oe2 car-04 tecnico_campo / gestor_obras mvp q1 ct-m2-03 o colaborador de campo solicita o reembolso de despesa operacional autorizada vinculada a um contrato ativo, anexando compulsoriamente comprovante fiscal digitalizado. rn06 rn09 rnf07" data-search-text="rf07 submeter solicitação de reembolso oe2 car-04 tecnico_campo / gestor_obras mvp q1 ct-m2-03 o colaborador de campo solicita o reembolso de despesa operacional autorizada vinculada a um contrato ativo, anexando compulsoriamente comprovante fiscal digitalizado. rn06 rn09 rnf07">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF07 - Submeter solicitação de reembolso</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># TECNICO_CAMPO / GESTOR_OBRAS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O colaborador de campo solicita o reembolso de despesa operacional autorizada vinculada a um contrato ativo, anexando compulsoriamente comprovante fiscal digitalizado.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Técnico de Campo (`TECNICO_CAMPO`) ou gestor solicita o reembolso de uma despesa operacional autorizada (hospedagem, combustível, alimentação de canteiro ou materiais emergenciais vinculados ao contrato ativo) informando valor monetário, categoria de despesa e contrato de obra, anexando compulsoriamente o comprovante fiscal digitalizado (RN06, RN09). A solicitação aceita é registrada com status "Pendente de Análise".</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn06" class="req-tag req-tag-rn"># RN06 · Janela Temporal para Prestação de Contas de Reembolso ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO / GESTOR_OBRAS</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-03</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us07" class="req-tag req-tag-us"># US07 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># TECNICO_CAMPO / GESTOR_OBRAS</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M2-03</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn06" class="req-tag req-tag-rn"># RN06 · Janela Temporal para Prestação de Contas de Reembolso ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">4 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,00 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">2,00</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe2" id="rf08" data-type="rf" data-rf="RF08" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf08 deliberar solicitação de reembolso oe2 car-04 admin_financeiro mvp q1 ct-m2-04 o administrador financeiro analisa reembolsos pendentes, deferindo ou indeferindo com parecer formal obrigatório em caso de recusa e limitação ao teto fiscal. rn07 rn27 rnf06" data-search-text="rf08 deliberar solicitação de reembolso oe2 car-04 admin_financeiro mvp q1 ct-m2-04 o administrador financeiro analisa reembolsos pendentes, deferindo ou indeferindo com parecer formal obrigatório em caso de recusa e limitação ao teto fiscal. rn07 rn27 rnf06">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF08 - Deliberar solicitação de reembolso</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro analisa reembolsos pendentes, deferindo ou indeferindo com parecer formal obrigatório em caso de recusa e limitação ao teto fiscal.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) analisa as solicitações pendentes de reembolso vinculadas a contratos ativos e delibera aprovando ou reprovando cada item, sendo o parecer formal obrigatório na reprovação. A decisão é registrada, o status do reembolso é atualizado, o valor aprovado é limitado ao montante do documento fiscal (RN07) e o solicitante é notificado via sistema (RN27).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn07" class="req-tag req-tag-rn"># RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa ↗</a> <a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-04</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us08" class="req-tag req-tag-us"># US08 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M2-04</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn07" class="req-tag req-tag-rn"># RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa ↗</a> <a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">4 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,00 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">2,00</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe3" id="rf09" data-type="rf" data-rf="RF09" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q2" data-role="ADMIN_FINANCEIRO" data-text="rf09 apropriar custos operacionais oe3 car-05 admin_financeiro mvp q2 ct-m3-01 o administrador financeiro aloca os valores de diárias e reembolsos homologados aos respectivos contratos de obra e centros de custo com consistência transacional acid. rn05 rn09 rn10 rn11 rnf10 rnf11" data-search-text="rf09 apropriar custos operacionais oe3 car-05 admin_financeiro mvp q2 ct-m3-01 o administrador financeiro aloca os valores de diárias e reembolsos homologados aos respectivos contratos de obra e centros de custo com consistência transacional acid. rn05 rn09 rn10 rn11 rnf10 rnf11">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q2"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Planejado</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF09 - Apropriar custos operacionais</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q2">Q2 — Planejamento / Complexo</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro aloca os valores de diárias e reembolsos homologados aos respectivos contratos de obra e centros de custo com consistência transacional ACID.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) dispara a apropriação de custos da competência mensal, e os valores de apontamentos e diárias homologados pelo Gestor Operacional de Obras (RF32, RN05), juntamente com os reembolsos aprovados pelo Administrador Financeiro (RF08) são alocados diretamente aos respectivos contratos ativos e centros de custo cadastrados (RF33, RF34), sem duplicar nem sobrepor os relatórios de folha CLT legados (RN09, RN10, RN11).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-01</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us09" class="req-tag req-tag-us"># US09 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M3-01</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q2">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q2">Q2 — Planejamento / Complexo</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">3,33 (3 — Alto)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">0,90</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,90</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe3" id="rf10" data-type="rf" data-rf="RF10" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf10 consultar rastreabilidade de custos oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-02 gestores e administradores consultam o detalhamento analítico da origem documental e aprobatória de cada lançamento de custo apropriado ao contrato. rn12 rnf10" data-search-text="rf10 consultar rastreabilidade de custos oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-02 gestores e administradores consultam o detalhamento analítico da origem documental e aprobatória de cada lançamento de custo apropriado ao contrato. rn12 rnf10">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF10 - Consultar rastreabilidade de custos</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> Gestores e administradores consultam o detalhamento analítico da origem documental e aprobatória de cada lançamento de custo apropriado ao contrato.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Gestor Operacional de Obras (`GESTOR_OBRAS`) ou o Administrador Financeiro (`ADMIN_FINANCEIRO`) consultam a rastreabilidade integral de qualquer custo apropriado a um contrato, visualizando o apontamento de origem, o colaborador executor, o carimbo UTC de homologação e a identificação do gestor responsável pela deliberação (RN12).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn12" class="req-tag req-tag-rn"># RN12 · Segregação de Despesas Administrativas e Operacionais ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-02</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us10" class="req-tag req-tag-us"># US10 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M3-02</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn12" class="req-tag req-tag-rn"># RN12 · Segregação de Despesas Administrativas e Operacionais ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,00 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,50</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe3" id="rf11" data-type="rf" data-rf="RF11" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA" data-text="rf11 filtrar indicadores de custos oe3 car-06 gestor_obras / admin_financeiro / admin_sistema mvp q1 ct-m3-03 o usuário combina filtros dinâmicos de período, obra, colaborador e categoria de despesa no painel analítico de custos, preservando o sigilo salarial da equipe. rn14 rnf09 rnf10 rnf12" data-search-text="rf11 filtrar indicadores de custos oe3 car-06 gestor_obras / admin_financeiro / admin_sistema mvp q1 ct-m3-03 o usuário combina filtros dinâmicos de período, obra, colaborador e categoria de despesa no painel analítico de custos, preservando o sigilo salarial da equipe. rn14 rnf09 rnf10 rnf12">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF11 - Filtrar indicadores de custos</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O usuário combina filtros dinâmicos de período, obra, colaborador e categoria de despesa no painel analítico de custos, preservando o sigilo salarial da equipe.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">No painel analítico de custos, usuários autorizados (`GESTOR_OBRAS`, `ADMIN_FINANCEIRO` e `ADMIN_SISTEMA`) combinam simultaneamente filtros de período, contrato de obra ativo, colaborador e centro de custo, recalculando dinamicamente os valores acumulados e gráficos com mascaramento automático de remunerações individuais para perfis não autorizados (RN14, RNF10).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn14" class="req-tag req-tag-rn"># RN14 · Sigilo e Não-Exposição de Remunerações Individuais em Painéis ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-03</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us11" class="req-tag req-tag-us"># US11 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M3-03</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn14" class="req-tag req-tag-rn"># RN14 · Sigilo e Não-Exposição de Remunerações Individuais em Painéis ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,00 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,50</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe3" id="rf12" data-type="rf" data-rf="RF12" data-oe="oe3" data-car="car-06" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 gestores acompanham em tempo real indicadores comparativos entre o orçamento previsto e os custos reais realizados por contrato e categoria de despesa. rn13 rnf09 rnf10 rnf12" data-search-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 gestores acompanham em tempo real indicadores comparativos entre o orçamento previsto e os custos reais realizados por contrato e categoria de despesa. rn13 rnf09 rnf10 rnf12">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF12 - Monitorar execução orçamentária</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-plan"><span class="req-status-dot"></span>Planejado (Release 2)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> Gestores acompanham em tempo real indicadores comparativos entre o orçamento previsto e os custos reais realizados por contrato e categoria de despesa.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">Na visão executiva de um contrato com metas orçamentárias definidas (RF40), o Gestor Operacional de Obras (`GESTOR_OBRAS`) e o Administrador Financeiro (`ADMIN_FINANCEIRO`) monitoram o orçamento total previsto, calculado pela soma dos tetos orçamentários das categorias de despesa, o custo realizado apropriado, o desvio financeiro e o percentual de execução orçamentária (RN13). O sistema permite consultar esses indicadores tanto de forma consolidada por contrato quanto individualmente por categoria, destacando visualmente as situações de extrapolação dos limites estabelecidos.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-04</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us12" class="req-tag req-tag-us"># US12 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M3-04</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q4">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q4">Q4 — Fora de Escopo</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">3,00 (3 — Alto)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">0,67</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,67</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe4" id="rf13" data-type="rf" data-rf="RF13" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="TODOS OS USUÁRIOS" data-text="rf13 efetuar login no sistema oe4 car-07 todos os usuários mvp q1 ct-m4-01 o usuário autentica-se na aplicação web responsiva fornecendo credenciais corporativas válidas, obtendo token de sessão temporário com seu perfil rbac associado. rn15 rnf13 rnf14" data-search-text="rf13 efetuar login no sistema oe4 car-07 todos os usuários mvp q1 ct-m4-01 o usuário autentica-se na aplicação web responsiva fornecendo credenciais corporativas válidas, obtendo token de sessão temporário com seu perfil rbac associado. rn15 rnf13 rnf14">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF13 - Efetuar login no sistema</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># TODOS OS USUÁRIOS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O usuário autentica-se na aplicação web responsiva fornecendo credenciais corporativas válidas, obtendo token de sessão temporário com seu perfil RBAC associado.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O usuário autentica-se na plataforma informando e-mail e senha corporativos válidos, recebendo token JWT temporário com perfil de acesso RBAC associado (RN15). Credenciais inválidas geram mensagem de erro genérica sem enumeração de contas.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn15" class="req-tag req-tag-rn"># RN15 · Autenticação por JWT com Sessão Temporal Limitada ↗</a>) e perfil canônico de acesso <code>TODOS OS USUÁRIOS</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-01</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us13" class="req-tag req-tag-us"># US13 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># TODOS OS USUÁRIOS</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M4-01</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn15" class="req-tag req-tag-rn"># RN15 · Autenticação por JWT com Sessão Temporal Limitada ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">4 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,00 (1 — Baixo)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">4,00</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>4,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe4" id="rf14" data-type="rf" data-rf="RF14" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="ADMIN_SISTEMA" data-text="rf14 gerenciar perfis de acesso oe4 car-07 admin_sistema mvp q1 ct-m4-02 o administrador do sistema atribui ou atualiza os papéis de acesso canônicos dos usuários, aplicando imediatamente as restrições e privilégios da matriz rbac. rn16 rnf14" data-search-text="rf14 gerenciar perfis de acesso oe4 car-07 admin_sistema mvp q1 ct-m4-02 o administrador do sistema atribui ou atualiza os papéis de acesso canônicos dos usuários, aplicando imediatamente as restrições e privilégios da matriz rbac. rn16 rnf14">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF14 - Gerenciar perfis de acesso</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_SISTEMA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador do Sistema atribui ou atualiza os papéis de acesso canônicos dos usuários, aplicando imediatamente as restrições e privilégios da matriz RBAC.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador do Sistema (`ADMIN_SISTEMA`) atribui a cada usuário um dos 4 papéis canônicos de acesso (`TECNICO_CAMPO`, `GESTOR_OBRAS`, `ADMIN_FINANCEIRO` ou `ADMIN_SISTEMA`), passando as permissões e restrições a vigorar na camada de autenticação/autorização em todas as telas e rotas de API da aplicação (RN16, RNF14).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn16" class="req-tag req-tag-rn"># RN16 · Princípio do Menor Privilégio e Segregação de Funções (SoD) ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-02</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us14" class="req-tag req-tag-us"># US14 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_SISTEMA</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M4-02</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn16" class="req-tag req-tag-rn"># RN16 · Princípio do Menor Privilégio e Segregação de Funções (SoD) ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,33 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,29</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,29</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe4" id="rf15" data-type="rf" data-rf="RF15" data-oe="oe4" data-car="car-08" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_SISTEMA / ADMIN_FINANCEIRO" data-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 perfis de auditoria consultam o histórico cronológico de operações sensíveis com filtros por data, operador, ação e módulo, exibindo estados anterior e posterior. rn17 rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 perfis de auditoria consultam o histórico cronológico de operações sensíveis com filtros por data, operador, ação e módulo, exibindo estados anterior e posterior. rn17 rn18 rn19 rnf15 rnf16 rnf17">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF15 - Consultar trilha de auditoria</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-plan"><span class="req-status-dot"></span>Planejado (Release 2)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_SISTEMA / ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> Perfis de auditoria consultam o histórico cronológico de operações sensíveis com filtros por data, operador, ação e módulo, exibindo estados anterior e posterior.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">Usuários com perfil de auditoria (`ADMIN_SISTEMA` ou `ADMIN_FINANCEIRO`) consultam a trilha de auditoria filtrando eventos por período, operador, tipo de operação, módulo afetado e faixa de valor financeiro; cada evento exibe autor, ação, estado anterior e posterior serializados e carimbo temporal UTC (RN17, RN18).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a> <a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA / ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf15" class="req-tag req-tag-rnf"># RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf"># RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf"># RNF17 · Realizar backup automático diário com restauração verificada ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-03</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-tag req-tag-car"># CAR-08 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us15" class="req-tag req-tag-us"># US15 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_SISTEMA / ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M4-03</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a> <a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf15" class="req-tag req-tag-rnf"># RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf"># RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf"># RNF17 · Realizar backup automático diário com restauração verificada ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q4">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q4">Q4 — Fora de Escopo</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">3,00 (3 — Alto)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">0,67</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,67</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe4" id="rf16" data-type="rf" data-rf="RF16" data-oe="oe4" data-car="car-08" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_SISTEMA" data-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 o administrador do sistema exporta dossiês probatórios de auditoria em formatos pdf/csv estruturados para atender a exigências legais e fiscais (artigo 11 da clt). rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 o administrador do sistema exporta dossiês probatórios de auditoria em formatos pdf/csv estruturados para atender a exigências legais e fiscais (artigo 11 da clt). rn18 rn19 rnf15 rnf16 rnf17">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF16 - Exportar relatório de auditoria</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-plan"><span class="req-status-dot"></span>Planejado (Release 2)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_SISTEMA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador do Sistema exporta dossiês probatórios de auditoria em formatos PDF/CSV estruturados para atender a exigências legais e fiscais (Artigo 11 da CLT).</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador do Sistema (`ADMIN_SISTEMA`) exporta relatórios de auditoria em formatos estruturados (PDF/CSV) contendo o histórico integral e imutável de operações auditadas, para fins de governança corporativa e instrução probatória defensiva em conformidade com o prazo prescricional trabalhista (Artigo 11 da CLT).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf15" class="req-tag req-tag-rnf"># RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf"># RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf"># RNF17 · Realizar backup automático diário com restauração verificada ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-04</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-tag req-tag-car"># CAR-08 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us16" class="req-tag req-tag-us"># US16 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_SISTEMA</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M4-04</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf15" class="req-tag req-tag-rnf"># RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf"># RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf"># RNF17 · Realizar backup automático diário com restauração verificada ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q4">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q4">Q4 — Fora de Escopo</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">3,00 (3 — Alto)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">0,33</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,33</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe4" id="rf17" data-type="rf" data-rf="RF17" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="TODOS OS USUÁRIOS" data-text="rf17 ativar acesso inicial e recuperar credenciais oe4 car-07 todos os usuários mvp q1 ct-m4-09 o colaborador ativa sua conta de primeiro acesso ou redefine credenciais esquecidas via link de uso único e temporário (30 minutos) encaminhado ao e-mail institucional. rn15 rnf14" data-search-text="rf17 ativar acesso inicial e recuperar credenciais oe4 car-07 todos os usuários mvp q1 ct-m4-09 o colaborador ativa sua conta de primeiro acesso ou redefine credenciais esquecidas via link de uso único e temporário (30 minutos) encaminhado ao e-mail institucional. rn15 rnf14">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF17 - Ativar acesso inicial e recuperar credenciais</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># TODOS OS USUÁRIOS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O colaborador ativa sua conta de primeiro acesso ou redefine credenciais esquecidas via link de uso único e temporário (30 minutos) encaminhado ao e-mail institucional.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O colaborador autorizado a acessar o sistema recebe, após seu cadastro (RF01), um link seguro de primeiro acesso enviado ao e-mail corporativo cadastrado, permitindo a ativação da conta e a definição da senha inicial. Para recuperação de credenciais esquecidas, o colaborador informa seu e-mail corporativo e recebe um link de redefinição de senha de uso único, válido por 30 minutos (RN15). Ambos os fluxos devem utilizar links de uso único e prazo de validade de 30 minutos, sem revelar a existência de contas cadastradas nas respostas públicas do sistema. Após definir a senha, o colaborador poderá autenticar-se normalmente (RF13).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn15" class="req-tag req-tag-rn"># RN15 · Autenticação por JWT com Sessão Temporal Limitada ↗</a>) e perfil canônico de acesso <code>TODOS OS USUÁRIOS</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-09</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us17" class="req-tag req-tag-us"># US17 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># TODOS OS USUÁRIOS</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M4-09</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn15" class="req-tag req-tag-rn"># RN15 · Autenticação por JWT com Sessão Temporal Limitada ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,80</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe4" id="rf18" data-type="rf" data-rf="RF18" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="TODOS OS USUÁRIOS" data-text="rf18 encerrar sessão manualmente oe4 car-07 todos os usuários mvp q1 ct-m4-10 o usuário autenticado encerra voluntariamente sua sessão de uso, provocando a invalidação imediata do token de autenticação no backend. rn15 rnf13" data-search-text="rf18 encerrar sessão manualmente oe4 car-07 todos os usuários mvp q1 ct-m4-10 o usuário autenticado encerra voluntariamente sua sessão de uso, provocando a invalidação imediata do token de autenticação no backend. rn15 rnf13">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF18 - Encerrar sessão manualmente</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># TODOS OS USUÁRIOS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O usuário autenticado encerra voluntariamente sua sessão de uso, provocando a invalidação imediata do token de autenticação no backend.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">Ao acionar o encerramento voluntário de sessão (*logout*), o token de autenticação ativo é compulsoriamente revogado e invalidado na hora no backend, redirecionando o usuário para a tela de login.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn15" class="req-tag req-tag-rn"># RN15 · Autenticação por JWT com Sessão Temporal Limitada ↗</a>) e perfil canônico de acesso <code>TODOS OS USUÁRIOS</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-10</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us18" class="req-tag req-tag-us"># US18 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># TODOS OS USUÁRIOS</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M4-10</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn15" class="req-tag req-tag-rn"># RN15 · Autenticação por JWT com Sessão Temporal Limitada ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,00 (1 — Baixo)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">3,00</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>3,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe1" id="rf19" data-type="rf" data-rf="RF19" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf19 consultar apontamentos registrados oe1 car-02 tecnico_campo mvp q1 ct-m1-09 o técnico de campo visualiza exclusivamente seus próprios apontamentos sob o princípio do menor privilégio, acompanhando status de homologação e pareceres. rn16 rn30 rnf04" data-search-text="rf19 consultar apontamentos registrados oe1 car-02 tecnico_campo mvp q1 ct-m1-09 o técnico de campo visualiza exclusivamente seus próprios apontamentos sob o princípio do menor privilégio, acompanhando status de homologação e pareceres. rn16 rn30 rnf04">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF19 - Consultar apontamentos registrados</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># TECNICO_CAMPO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Técnico de Campo visualiza exclusivamente seus próprios apontamentos sob o princípio do menor privilégio, acompanhando status de homologação e pareceres.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Técnico de Campo (`TECNICO_CAMPO`) consulta na aplicação web exclusivamente os próprios apontamentos sob o princípio do menor privilégio (RN16), visualizando data, contrato e status ("Pendente de Homologação", "Homologado" ou "Rejeitado"), com acesso ao histórico completo de pareceres de deliberação.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn16" class="req-tag req-tag-rn"># RN16 · Princípio do Menor Privilégio e Segregação de Funções (SoD) ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-09</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us19" class="req-tag req-tag-us"># US19 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M1-09</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn16" class="req-tag req-tag-rn"># RN16 · Princípio do Menor Privilégio e Segregação de Funções (SoD) ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">4 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">2,40</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe1" id="rf20" data-type="rf" data-rf="RF20" data-oe="oe1" data-car="car-09" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 o administrador financeiro importa registros de frequência biométrica homologados do sistema externo flit por competência, vinculando-os aos colaboradores. rn10 rnf02" data-search-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 o administrador financeiro importa registros de frequência biométrica homologados do sistema externo flit por competência, vinculando-os aos colaboradores. rn10 rnf02">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF20 - Importar presenças homologadas</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-plan"><span class="req-status-dot"></span>Planejado (Release 2)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-09" class="req-lumio-tag req-tag-car"># CAR-09 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro importa registros de frequência biométrica homologados do sistema externo FLIT por competência, vinculando-os aos colaboradores.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) seleciona a competência mensal e os contratos de obras e importa as presenças homologadas disponibilizadas pelo painel (*dashboard*) do sistema externo *FLIT*. Os registros importados são vinculados a cada colaborador e contrato na competência selecionada, viabilizando a apuração financeira de horas sem modificar os dados de origem no *FLIT* (RN10).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-10</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-09" class="req-tag req-tag-car"># CAR-09 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us20" class="req-tag req-tag-us"># US20 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M1-10</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q4">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q4">Q4 — Fora de Escopo</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">3,00 (3 — Alto)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">0,67</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,67</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe2" id="rf21" data-type="rf" data-rf="RF21" data-oe="oe2" data-car="car-03" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 o administrador financeiro reabre competência homologada mediante justificativa formal obrigatória de no mínimo 15 caracteres, mantendo histórico auditável. rn08 rn17 rnf08" data-search-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 o administrador financeiro reabre competência homologada mediante justificativa formal obrigatória de no mínimo 15 caracteres, mantendo histórico auditável. rn08 rn17 rnf08">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF21 - Estornar fechamento financeiro</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-plan"><span class="req-status-dot"></span>Planejado (Release 2)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro reabre competência homologada mediante justificativa formal obrigatória de no mínimo 15 caracteres, mantendo histórico auditável.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">Diante de divergência material em lote de competência já homologado, o Administrador Financeiro (`ADMIN_FINANCEIRO`) estorna o fechamento financeiro informando compulsoriamente justificativa formal com no mínimo 15 caracteres (RN08, RNF08). A competência é reaberta para retificação, o fechamento original permanece preservado no histórico imutável e o evento de estorno é gravado na trilha de auditoria com autor, justificativa e carimbo UTC (RN17). Após as correções, o Administrador Financeiro deve solicitar uma nova prévia de fechamento (RF05) e realizar uma nova homologação (RF06), sendo vedado considerar a competência novamente encerrada antes da conclusão desse processo.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf08" class="req-tag req-tag-rnf"># RNF08 · Garantir rastreabilidade probatória e não-repúdio em operações de estorno ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-09</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us21" class="req-tag req-tag-us"># US21 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M2-09</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf08" class="req-tag req-tag-rnf"># RNF08 · Garantir rastreabilidade probatória e não-repúdio em operações de estorno ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q4">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q4">Q4 — Fora de Escopo</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,67 (3 — Alto)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">0,75</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,75</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe1" id="rf22" data-type="rf" data-rf="RF22" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf22 anexar evidências e geolocalização ao apontamento oe1 car-02 tecnico_campo mvp q1 ct-m1-11 o técnico de campo anexa fotos, recibos e geolocalização do dispositivo ao formulário de apontamento para comprovação objetiva das atividades de campo. rn24 rnf04 rnf07" data-search-text="rf22 anexar evidências e geolocalização ao apontamento oe1 car-02 tecnico_campo mvp q1 ct-m1-11 o técnico de campo anexa fotos, recibos e geolocalização do dispositivo ao formulário de apontamento para comprovação objetiva das atividades de campo. rn24 rnf04 rnf07">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF22 - Anexar evidências e geolocalização ao apontamento</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># TECNICO_CAMPO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Técnico de Campo anexa fotos, recibos e geolocalização do dispositivo ao formulário de apontamento para comprovação objetiva das atividades de campo.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">Durante o preenchimento de um apontamento na aplicação web responsiva, o Técnico de Campo (`TECNICO_CAMPO`) anexa fotos ou comprovantes da atividade, e o sistema captura a geolocalização do dispositivo quando a permissão do navegador estiver concedida. Os arquivos e coordenadas são vinculados ao registro, a lista de anexos pode ser revisada e qualquer item pode ser removido antes da submissão; a ausência de sinal de GPS ou recusa de permissão não impede o envio das evidências (RN24).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn24" class="req-tag req-tag-rn"># RN24 · Captura de Geolocalização Não Bloqueante ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-11</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us22" class="req-tag req-tag-us"># US22 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M1-11</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn24" class="req-tag req-tag-rn"># RN24 · Captura de Geolocalização Não Bloqueante ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,33 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,29</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,29</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe4" id="rf23" data-type="rf" data-rf="RF23" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="ADMIN_SISTEMA" data-text="rf23 bloquear acesso após tentativas falhas consecutivas oe4 car-07 admin_sistema mvp q1 ct-m4-12 o sistema bloqueia preventivamente por 30 minutos a conta corporativa que acumular 5 tentativas de login com credenciais incorretas em até 15 minutos. rn20 rnf14" data-search-text="rf23 bloquear acesso após tentativas falhas consecutivas oe4 car-07 admin_sistema mvp q1 ct-m4-12 o sistema bloqueia preventivamente por 30 minutos a conta corporativa que acumular 5 tentativas de login com credenciais incorretas em até 15 minutos. rn20 rnf14">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF23 - Bloquear acesso após tentativas falhas consecutivas</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_SISTEMA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O sistema bloqueia preventivamente por 30 minutos a conta corporativa que acumular 5 tentativas de login com credenciais incorretas em até 15 minutos.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">Após 5 tentativas de login com credenciais inválidas em até 15 minutos, a conta fica bloqueada preventivamente por 30 minutos, com mensagem informativa padronizada que não revela se a divergência decorreu do e-mail ou da senha (RN20).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn20" class="req-tag req-tag-rn"># RN20 · Limite de Tentativas de Autenticação ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-12</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us23" class="req-tag req-tag-us"># US23 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_SISTEMA</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M4-12</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn20" class="req-tag req-tag-rn"># RN20 · Limite de Tentativas de Autenticação ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,80</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe4" id="rf24" data-type="rf" data-rf="RF24" data-oe="oe4" data-car="car-07" data-mvp="pós-mvp" data-quad="q3" data-role="ADMIN_SISTEMA" data-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 o sistema força a redefinição de senhas com mais de 90 dias de vigência, impedindo a reutilização das últimas 5 senhas adotadas. rn21 rnf14" data-search-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 o sistema força a redefinição de senhas com mais de 90 dias de vigência, impedindo a reutilização das últimas 5 senhas adotadas. rn21 rnf14">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q3"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Evolutivo</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF24 - Impor renovação periódica de senhas</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q3">Q3 — Baixa Prioridade / Evolutivo</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-plan"><span class="req-status-dot"></span>Planejado (Release 2)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_SISTEMA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O sistema força a redefinição de senhas com mais de 90 dias de vigência, impedindo a reutilização das últimas 5 senhas adotadas.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">Quando a senha atinge 90 dias de vigência desde a última alteração, o acesso só é liberado mediante definição de nova credencial, sendo vedada a repetição de qualquer uma das últimas 5 senhas cadastradas (RN21).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn21" class="req-tag req-tag-rn"># RN21 · Política de Expiração e Histórico de Senhas ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-13</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us24" class="req-tag req-tag-us"># US24 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_SISTEMA</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M4-13</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn21" class="req-tag req-tag-rn"># RN21 · Política de Expiração e Histórico de Senhas ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q3">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q3">Q3 — Baixa Prioridade / Evolutivo</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,00 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,00</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,00</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q3">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe1" id="rf25" data-type="rf" data-rf="RF25" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf25 cadastrar tipo de contratação do colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-12 o administrador financeiro define o enquadramento de contratação do profissional (diarista, clt ou prestador de serviço pj), balizando as regras de cálculo. rn22 rnf02" data-search-text="rf25 cadastrar tipo de contratação do colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-12 o administrador financeiro define o enquadramento de contratação do profissional (diarista, clt ou prestador de serviço pj), balizando as regras de cálculo. rn22 rnf02">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF25 - Cadastrar tipo de contratação do colaborador</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro define o enquadramento de contratação do profissional (Diarista, CLT ou Prestador de Serviço PJ), balizando as regras de cálculo.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">No cadastro ou atualização de colaborador, o Administrador Financeiro (`ADMIN_FINANCEIRO`) seleciona o enquadramento de contratação entre Diarista, CLT ou Prestador de Serviço, determinando as regras de apuração de diárias e custos aplicáveis (RN22).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn22" class="req-tag req-tag-rn"># RN22 · Tipos de Contratação Válidos ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-12</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us25" class="req-tag req-tag-us"># US25 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M1-12</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn22" class="req-tag req-tag-rn"># RN22 · Tipos de Contratação Válidos ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,80</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe1" id="rf26" data-type="rf" data-rf="RF26" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf26 consultar histórico de alterações cadastrais e bancárias oe1 car-01 admin_financeiro mvp q1 ct-m1-13 administrador e colaborador visualizam o histórico cronológico de versões da ficha cadastral e bancária, com autor da modificação e carimbo utc. rn23 rnf02" data-search-text="rf26 consultar histórico de alterações cadastrais e bancárias oe1 car-01 admin_financeiro mvp q1 ct-m1-13 administrador e colaborador visualizam o histórico cronológico de versões da ficha cadastral e bancária, com autor da modificação e carimbo utc. rn23 rnf02">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF26 - Consultar histórico de alterações cadastrais e bancárias</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> Administrador e colaborador visualizam o histórico cronológico de versões da ficha cadastral e bancária, com autor da modificação e carimbo UTC.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) e o próprio colaborador consultam o histórico da ficha cadastral, visualizando cada versão anterior dos dados pessoais e bancários com indicação do campo modificado, autor da alteração e carimbo temporal UTC (RN23).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-13</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us26" class="req-tag req-tag-us"># US26 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M1-13</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,33 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,29</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,29</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe2" id="rf27" data-type="rf" data-rf="RF27" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf27 configurar tabela de valores de diárias técnicas oe2 car-03 admin_financeiro mvp q1 ct-m2-10 o administrador financeiro parametriza categorias de diárias técnicas com seus valores monetários vigentes e períodos de aplicação para apuração automática. rn25 rn31 rnf06" data-search-text="rf27 configurar tabela de valores de diárias técnicas oe2 car-03 admin_financeiro mvp q1 ct-m2-10 o administrador financeiro parametriza categorias de diárias técnicas com seus valores monetários vigentes e períodos de aplicação para apuração automática. rn25 rn31 rnf06">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF27 - Configurar tabela de valores de diárias técnicas</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro parametriza categorias de diárias técnicas com seus valores monetários vigentes e períodos de aplicação para apuração automática.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) cadastra e atualiza as categorias de diária técnica com valor nominal e período de vigência, passando as rotinas financeiras de fechamento a adotar automaticamente o valor vigente na competência apurada (RN25, RN31).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-10</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us27" class="req-tag req-tag-us"># US27 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M2-10</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">4 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">2,40</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe2" id="rf28" data-type="rf" data-rf="RF28" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf28 submeter solicitação de adiantamento operacional oe2 car-04 tecnico_campo mvp q1 ct-m2-11 o técnico de campo registra pedido de liberação prévia de numerário operacional para despesas emergenciais de canteiro vinculadas a um contrato ativo. rn26 rnf07" data-search-text="rf28 submeter solicitação de adiantamento operacional oe2 car-04 tecnico_campo mvp q1 ct-m2-11 o técnico de campo registra pedido de liberação prévia de numerário operacional para despesas emergenciais de canteiro vinculadas a um contrato ativo. rn26 rnf07">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF28 - Submeter solicitação de adiantamento operacional</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># TECNICO_CAMPO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Técnico de Campo registra pedido de liberação prévia de numerário operacional para despesas emergenciais de canteiro vinculadas a um contrato ativo.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Técnico de Campo (`TECNICO_CAMPO`) solicita adiantamento de recursos para despesa operacional autorizada de um contrato ativo informando valor, categoria, contrato e justificativa formal de aplicação. O adiantamento é registrado com status "Pendente de Análise" e fica disponível para análise financeira (RN03, RN09, RN26).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn26" class="req-tag req-tag-rn"># RN26 · Elegibilidade do Adiantamento Operacional ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-11</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us28" class="req-tag req-tag-us"># US28 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M2-11</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn26" class="req-tag req-tag-rn"># RN26 · Elegibilidade do Adiantamento Operacional ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,00 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,50</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe2" id="rf29" data-type="rf" data-rf="RF29" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf29 deliberar solicitação de adiantamento operacional oe2 car-04 admin_financeiro mvp q1 ct-m2-12 o administrador financeiro analisa adiantamentos pendentes, aprovando a liberação dos recursos ou indeferindo com justificativa registrada e notificação ao autor. rn27 rnf06" data-search-text="rf29 deliberar solicitação de adiantamento operacional oe2 car-04 admin_financeiro mvp q1 ct-m2-12 o administrador financeiro analisa adiantamentos pendentes, aprovando a liberação dos recursos ou indeferindo com justificativa registrada e notificação ao autor. rn27 rnf06">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF29 - Deliberar solicitação de adiantamento operacional</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro analisa adiantamentos pendentes, aprovando a liberação dos recursos ou indeferindo com justificativa registrada e notificação ao autor.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) analisa os adiantamentos pendentes vinculados a contratos ativos e aprova ou reprova cada solicitação, com justificativa obrigatória na reprovação. O status da solicitação é atualizado, a deliberação é registrada e o solicitante é notificado via sistema (RN27).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-12</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us29" class="req-tag req-tag-us"># US29 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M2-12</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,00 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,50</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe3" id="rf30" data-type="rf" data-rf="RF30" data-oe="oe3" data-car="car-05" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 gestores comparam séries históricas de despesas e custos apropriados entre contratos de obras similares, subsidiando orçamentos e estimativas futuras. rn28 rnf09 rnf10 rnf12" data-search-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 gestores comparam séries históricas de despesas e custos apropriados entre contratos de obras similares, subsidiando orçamentos e estimativas futuras. rn28 rnf09 rnf10 rnf12">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF30 - Consultar comparativo histórico de custos entre contratos</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-plan"><span class="req-status-dot"></span>Planejado (Release 2)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> Gestores comparam séries históricas de despesas e custos apropriados entre contratos de obras similares, subsidiando orçamentos e estimativas futuras.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Gestor Operacional de Obras (`GESTOR_OBRAS`) ou o Administrador Financeiro (`ADMIN_FINANCEIRO`) selecionam dois ou mais contratos (ativos ou encerrados) e um período de comparação, e o sistema renderiza os custos apropriados de cada obra com as variações absolutas (em R$) e percentuais consolidadas no período (RN28).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn28" class="req-tag req-tag-rn"># RN28 · Comparativo Histórico de Custos ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-09</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us30" class="req-tag req-tag-us"># US30 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M3-09</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn28" class="req-tag req-tag-rn"># RN28 · Comparativo Histórico de Custos ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q4">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q4">Q4 — Fora de Escopo</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,67 (3 — Alto)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">0,75</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,75</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe3" id="rf31" data-type="rf" data-rf="RF31" data-oe="oe3" data-car="car-06" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS" data-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 o gestor operacional de obras parametriza limiares percentuais de consumo orçamentário que disparam avisos preventivos visuais e por e-mail contra desvios. rn29 rnf09 rnf10 rnf12" data-search-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 o gestor operacional de obras parametriza limiares percentuais de consumo orçamentário que disparam avisos preventivos visuais e por e-mail contra desvios. rn29 rnf09 rnf10 rnf12">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF31 - Configurar alertas de execução orçamentária</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-plan"><span class="req-status-dot"></span>Planejado (Release 2)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor Operacional de Obras parametriza limiares percentuais de consumo orçamentário que disparam avisos preventivos visuais e por e-mail contra desvios.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">Para contratos de obras com teto orçamentário configurado (RF40), o Gestor Operacional de Obras (`GESTOR_OBRAS`) parametriza os limiares percentuais de execução que disparam alertas preventivos (ex.: 80%, 90% ou 100% do orçamento); ao atingir ou superar o limiar definido, o sistema gera notificação em destaque no painel e despacha alerta por e-mail aos responsáveis (RN29).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn29" class="req-tag req-tag-rn"># RN29 · Disparo de Alertas Preventivos de Extrapolação Orçamentária ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-10</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us31" class="req-tag req-tag-us"># US31 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M3-10</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn29" class="req-tag req-tag-rn"># RN29 · Disparo de Alertas Preventivos de Extrapolação Orçamentária ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q4">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q4">Q4 — Fora de Escopo</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,67 (3 — Alto)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">0,75</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,75</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe1" id="rf32" data-type="rf" data-rf="RF32" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf32 deliberar apontamento de campo oe1 car-02 gestor_obras mvp q1 ct-m1-15 o gestor operacional de obras delibera sobre apontamentos pendentes da sua alçada, homologando para faturamento ou rejeitando com parecer mínimo de 15 caracteres. rn02 rn05 rn10 rn30 rnf04" data-search-text="rf32 deliberar apontamento de campo oe1 car-02 gestor_obras mvp q1 ct-m1-15 o gestor operacional de obras delibera sobre apontamentos pendentes da sua alçada, homologando para faturamento ou rejeitando com parecer mínimo de 15 caracteres. rn02 rn05 rn10 rn30 rnf04">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF32 - Deliberar apontamento de campo</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor Operacional de Obras delibera sobre apontamentos pendentes da sua alçada, homologando para faturamento ou rejeitando com parecer mínimo de 15 caracteres.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Gestor Operacional de Obras (`GESTOR_OBRAS`) analisa os apontamentos com status "Pendente de Homologação" vinculados aos contratos sob sua responsabilidade técnica e delibera aprovando ou rejeitando cada registro. A aprovação transiciona o status para "Homologado", bloqueia edições pelo autor (RN02) e disponibiliza as horas/diárias para apuração financeira (RN05, RN10). A rejeição exige compulsoriamente parecer formal justificado com no mínimo 15 caracteres (RN30), transiciona o status para "Rejeitado" e notifica o colaborador para ciência e retificação (RF35). Após a correção e o reenvio pelo colaborador, o apontamento retorna ao status "Pendente de Homologação" para nova análise, preservando o histórico de rejeições, justificativas e alterações.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-15</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us32" class="req-tag req-tag-us"># US32 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M1-15</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">4 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">2,40</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe3" id="rf33" data-type="rf" data-rf="RF33" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf33 cadastrar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-11 o gestor ou administrador cadastra novos contratos de obras, especificando cliente, prazos de vigência, valor global e gestor técnico responsável. rn09 rn11 rnf10 rnf11" data-search-text="rf33 cadastrar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-11 o gestor ou administrador cadastra novos contratos de obras, especificando cliente, prazos de vigência, valor global e gestor técnico responsável. rn09 rn11 rnf10 rnf11">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF33 - Cadastrar contrato de obra</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor ou Administrador cadastra novos contratos de obras, especificando cliente, prazos de vigência, valor global e gestor técnico responsável.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) ou o Gestor Operacional de Obras (`GESTOR_OBRAS`) cadastra contratos de obras vinculados a clientes, informando vigência, valor global, objeto contratual, retenções e alçadas de supervisão. Os contratos ativos cadastrados podem ser utilizados para vincular despesas, reembolsos e apropriações de custos, respeitando as regras de negócio RN09 e RN11.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-11</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us33" class="req-tag req-tag-us"># US33 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M3-11</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,80</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe3" id="rf34" data-type="rf" data-rf="RF34" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf34 cadastrar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-12 o gestor operacional cadastra centros de custos associados aos contratos ativos, habilitando o rateio direcionado de mão de obra e despesas operacionais. rn09 rn11 rnf09 rnf10" data-search-text="rf34 cadastrar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-12 o gestor operacional cadastra centros de custos associados aos contratos ativos, habilitando o rateio direcionado de mão de obra e despesas operacionais. rn09 rn11 rnf09 rnf10">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF34 - Cadastrar centro de custo de obra</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor Operacional cadastra centros de custos associados aos contratos ativos, habilitando o rateio direcionado de mão de obra e despesas operacionais.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Gestor Operacional de Obras (`GESTOR_OBRAS`) cadastra centros de custo vinculados a contratos de obras ativos, permitindo a classificação e a vinculação de despesas operacionais para acompanhamento financeiro (RN09, RN11).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-12</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us34" class="req-tag req-tag-us"># US34 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M3-12</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,80</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe1" id="rf35" data-type="rf" data-rf="RF35" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf35 retificar apontamento de campo oe1 car-02 tecnico_campo mvp q1 ct-m1-16 o técnico de campo retifica dados ou anexos de apontamento pendente (em até 5 dias úteis) ou corrige e reenvia registro rejeitado para nova homologação. rn02 rnf04 rnf07" data-search-text="rf35 retificar apontamento de campo oe1 car-02 tecnico_campo mvp q1 ct-m1-16 o técnico de campo retifica dados ou anexos de apontamento pendente (em até 5 dias úteis) ou corrige e reenvia registro rejeitado para nova homologação. rn02 rnf04 rnf07">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF35 - Retificar apontamento de campo</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># TECNICO_CAMPO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Técnico de Campo retifica dados ou anexos de apontamento pendente (em até 5 dias úteis) ou corrige e reenvia registro rejeitado para nova homologação.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Técnico de Campo (`TECNICO_CAMPO`) pode retificar horas, escopo ou anexos de um apontamento submetido enquanto seu status for "Pendente de Homologação", respeitando a janela de até 5 dias úteis contados da submissão inicial ou do último reenvio após rejeição (RN02). Caso o apontamento seja rejeitado pelo gestor (RF32), o técnico pode corrigir o registro e reenviá-lo para nova homologação, preservando seu identificador e o histórico de alterações e pareceres. Cada reenvio após rejeição altera o status para "Pendente de Homologação" e reinicia integralmente a janela de 5 dias úteis para retificação (RN02). Apontamentos homologados permanecem bloqueados contra alterações.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-16</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us35" class="req-tag req-tag-us"># US35 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M1-16</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,80</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe1" id="rf36" data-type="rf" data-rf="RF36" data-oe="oe1" data-car="car-10" data-mvp="pós-mvp" data-quad="q3" data-role="ADMIN_FINANCEIRO" data-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 o administrador financeiro exporta apontamentos, presenças e despesas consolidadas em planilhas abertas csv e xlsx para conciliação contábil legada.  rnf02" data-search-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 o administrador financeiro exporta apontamentos, presenças e despesas consolidadas em planilhas abertas csv e xlsx para conciliação contábil legada.  rnf02">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q3"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Evolutivo</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF36 - Exportar dados consolidados em planilha</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q3">Q3 — Baixa Prioridade / Evolutivo</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-plan"><span class="req-status-dot"></span>Planejado (Release 2)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-10" class="req-lumio-tag req-tag-car"># CAR-10 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro exporta apontamentos, presenças e despesas consolidadas em planilhas abertas CSV e XLSX para conciliação contábil legada.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) seleciona períodos, contratos e centros de custo e exporta os dados consolidados de apontamentos, presenças e apropriações em arquivos estruturados de planilha (formatos abertos CSV e XLSX) para conciliação contábil externa ou arquivamento.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<span class="req-tag-none">—</span>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-17</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-10" class="req-tag req-tag-car"># CAR-10 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us36" class="req-tag req-tag-us"># US36 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M1-17</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><span class="req-tag-none">—</span></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q3">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q3">Q3 — Baixa Prioridade / Evolutivo</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,20</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,20</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q3">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe3" id="rf37" data-type="rf" data-rf="RF37" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf37 atualizar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-13 o gestor ou administrador atualiza dados contratuais vigentes (aditivos de prazo, valor e responsáveis), mantendo a rastreabilidade histórica. rn09 rn11 rnf10 rnf11" data-search-text="rf37 atualizar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-13 o gestor ou administrador atualiza dados contratuais vigentes (aditivos de prazo, valor e responsáveis), mantendo a rastreabilidade histórica. rn09 rn11 rnf10 rnf11">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF37 - Atualizar contrato de obra</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor ou Administrador atualiza dados contratuais vigentes (aditivos de prazo, valor e responsáveis), mantendo a rastreabilidade histórica.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) ou o Gestor Operacional de Obras (`GESTOR_OBRAS`) atualiza os dados de um contrato de obra já cadastrado, incluindo vigência, valor global, objeto contratual, retenções e alçadas de supervisão, preservando sua identificação e os vínculos com os registros financeiros associados.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-13</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us33" class="req-tag req-tag-us"># US33 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M3-13</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,80</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe3" id="rf38" data-type="rf" data-rf="RF38" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf38 consultar contratos de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-14 usuários autorizados consultam a listagem e o detalhamento dos contratos de obras ativos, concluídos ou suspensos, com filtros por cliente e período.  rnf10" data-search-text="rf38 consultar contratos de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-14 usuários autorizados consultam a listagem e o detalhamento dos contratos de obras ativos, concluídos ou suspensos, com filtros por cliente e período.  rnf10">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF38 - Consultar contratos de obra</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> Usuários autorizados consultam a listagem e o detalhamento dos contratos de obras ativos, concluídos ou suspensos, com filtros por cliente e período.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) ou o Gestor Operacional de Obras (`GESTOR_OBRAS`) consulta os contratos de obras cadastrados, visualizando o cliente vinculado, vigência, valor global, objeto contratual, retenções e alçadas de supervisão, sem alterar os registros.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<span class="req-tag-none">—</span>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-14</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us33" class="req-tag req-tag-us"># US33 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M3-14</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><span class="req-tag-none">—</span></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,00 (1 — Baixo)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">3,00</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>3,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe3" id="rf39" data-type="rf" data-rf="RF39" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf39 atualizar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-15 o gestor operacional altera parâmetros e nomenclaturas de centros de custo existentes sem quebrar vínculos com lançamentos históricos apropriados. rn09 rn11 rnf09 rnf10" data-search-text="rf39 atualizar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-15 o gestor operacional altera parâmetros e nomenclaturas de centros de custo existentes sem quebrar vínculos com lançamentos históricos apropriados. rn09 rn11 rnf09 rnf10">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF39 - Atualizar centro de custo de obra</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor Operacional altera parâmetros e nomenclaturas de centros de custo existentes sem quebrar vínculos com lançamentos históricos apropriados.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Gestor Operacional de Obras (`GESTOR_OBRAS`) atualiza os dados de centros de custo previamente cadastrados, preservando seus vínculos com os contratos e as despesas operacionais associadas (RN09, RN11).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-15</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us34" class="req-tag req-tag-us"># US34 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M3-15</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">1,67 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,80</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="req-card req-card-rf req-card-oe3" id="rf40" data-type="rf" data-rf="RF40" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf40 definir tetos orçamentários de obra oe3 car-06 gestor_obras mvp q1 ct-m3-16 o gestor operacional estipula tetos monetários orçados por categoria de despesa, permitindo apuração do orçamento global previsto e acionamento de alertas. rn13 rn29 rnf09 rnf10" data-search-text="rf40 definir tetos orçamentários de obra oe3 car-06 gestor_obras mvp q1 ct-m3-16 o gestor operacional estipula tetos monetários orçados por categoria de despesa, permitindo apuração do orçamento global previsto e acionamento de alertas. rn13 rn29 rnf09 rnf10">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RF40 - Definir tetos orçamentários de obra</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          <span>Prioridade</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Status</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Objetivo Específico</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Características (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Responsável (Ator)</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="req-expanded-desc">
+      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor Operacional estipula tetos monetários orçados por categoria de despesa, permitindo apuração do orçamento global previsto e acionamento de alertas.</p>
+      </div>
+    </div>
+
+    <div class="req-tabs-nav" role="tablist">
+      <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
+      <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
+    </div>
+
+    <!-- ABA 1: Critérios de Aceitação com Checklist DoR / DoD (Lumio Style) -->
+    <div class="req-tab-pane active" data-pane="criterios">
+      <div class="req-checklist-container">
+        <div class="req-checklist-header">
+          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">4 de 4 Verificados</span>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
+            <p class="req-check-text">O Gestor Operacional de Obras (`GESTOR_OBRAS`) define tetos orçamentários por categoria de despesa para contratos de obras ativos. O sistema armazena os valores configurados e calcula automaticamente o orçamento total previsto do contrato pela soma dos tetos de suas categorias, disponibilizando esses valores para o monitoramento da execução orçamentária (RF12, RN13) e para a configuração de alertas preventivos (RF31, RN29).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a> <a href="#rn29" class="req-tag req-tag-rn"># RN29 · Disparo de Alertas Preventivos de Extrapolação Orçamentária ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+          </div>
+        </div>
+        <div class="req-checklist-item">
+          <div class="req-check-box">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="req-check-body">
+            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
+            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-16</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+    <div class="req-tab-pane" data-pane="rastreabilidade">
+      <div class="req-trace-grid">
+        <div class="req-trace-item">
+          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Característica de Produto (CAR)</span>
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">História de Usuário (Backlog)</span>
+          <a href="../mvp/backlog.md#us34" class="req-tag req-tag-us"># US34 ↗</a>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
+          <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
+        </div>
+        <div class="req-trace-item">
+          <span class="req-trace-title">Caso de Teste Associado</span>
+          <span class="req-tag req-tag-ct"># CT-M3-16</span>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
+          <div class="req-tags-wrap"><a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a> <a href="#rn29" class="req-tag req-tag-rn"># RN29 · Disparo de Alertas Preventivos de Extrapolação Orçamentária ↗</a></div>
+        </div>
+        <div class="req-trace-item req-trace-full">
+          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
+          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <div class="req-tab-pane" data-pane="priorizacao">
+      <div class="req-metrics-grid">
+        <div class="req-metric-card req-quad-card req-quad-q1">
+          <span class="metric-label">Quadrante na Matriz 4×4</span>
+          <span class="metric-val-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Valor de Negócio (VB)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço Consolidado (EC)</span>
+          <span class="metric-val">2,00 (2 — Moderado)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Índice de Prioridade (IP)</span>
+          <span class="metric-val">1,50</span>
+        </div>
+      </div>
+      <div class="req-metrics-footer">
+        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<div id="req-no-results" class="req-no-results" style="display:none;">
+  <div class="req-no-results-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+  <h3>Nenhum requisito encontrado para os filtros selecionados</h3>
+  <p>Tente ajustar os termos da pesquisa ou selecione o filtro "Todos (40)".</p>
+</div>
+
+---
+
+<a id="catalogo-regras-de-negocio"></a>
+<a id="catalogo-geral-de-regras-de-negocio-rn01-a-rn31"></a>
+## Catálogo Geral de Regras de Negócio (RN01 a RN31)
+
+As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integridade contábil, controles temporais e políticas de segurança da informação do ***DUOC Finance***. Cada card abaixo detalha a regra oficial e lista os **Requisitos Funcionais Executores** correspondentes em links bidirecionais navegáveis:
+
+<details class="req-card req-card-rn" id="rn01" data-type="rn" data-rn="RN01" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn01 unicidade e validação cadastral por cpf oe1 módulo 1 car-01 integridade cadastral os dados cadastrais de colaboradores utilizam o cpf como identificador unívoco no sistema, validando os dígitos verificadores pelo algoritmo oficial e impedindo registros duplicados. rf01 rf02 regra negocio dominio" data-search-text="rn01 unicidade e validação cadastral por cpf oe1 módulo 1 car-01 integridade cadastral os dados cadastrais de colaboradores utilizam o cpf como identificador unívoco no sistema, validando os dígitos verificadores pelo algoritmo oficial e impedindo registros duplicados. rf01 rf02 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Integridade Cadastral</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN01 — Unicidade e Validação Cadastral por CPF</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Integridade Cadastral</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a> <a href="#rf02" class="req-tag req-tag-rf"># RF02 · Atualizar cadastro de colaborador ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Os dados cadastrais de colaboradores utilizam o CPF como identificador unívoco no sistema, validando os dígitos verificadores pelo algoritmo oficial e impedindo registros duplicados.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn02" data-type="rn" data-rn="RN02" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-text="rn02 janela temporal para submissão e edição de apontamento oe1 módulo 1 car-02 controle de apontamentos o apontamento diário de campo (rvt) deve ser submetido até as 23h59 do dia subsequente à prestação do serviço; após submissão e homologação, a edição é bloqueada, permitindo retificação apenas após deliberação de recusa com justificativa obrigatória. rf04 rf19 rf32 rf35 regra negocio dominio" data-search-text="rn02 janela temporal para submissão e edição de apontamento oe1 módulo 1 car-02 controle de apontamentos o apontamento diário de campo (rvt) deve ser submetido até as 23h59 do dia subsequente à prestação do serviço; após submissão e homologação, a edição é bloqueada, permitindo retificação apenas após deliberação de recusa com justificativa obrigatória. rf04 rf19 rf32 rf35 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Controle de Apontamentos</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN02 — Janela Temporal para Submissão e Edição de Apontamento</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Controle de Apontamentos</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a> <a href="#rf19" class="req-tag req-tag-rf"># RF19 · Consultar apontamentos registrados ↗</a> <a href="#rf32" class="req-tag req-tag-rf"># RF32 · Deliberar apontamento de campo ↗</a> <a href="#rf35" class="req-tag req-tag-rf"># RF35 · Retificar apontamento de campo ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> O apontamento diário de campo (RVT) deve ser submetido até as 23h59 do dia subsequente à prestação do serviço; após submissão e homologação, a edição é bloqueada, permitindo retificação apenas após deliberação de recusa com justificativa obrigatória.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn03" data-type="rn" data-rn="RN03" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn03 validação prévia de dados bancários e chave pix oe1 módulo 1 car-01 validação financeira contas bancárias cadastradas devem passar por validação de formato de agência e conta conforme padrão febraban, além de verificação de sintaxe para chaves pix. rf01 regra negocio dominio" data-search-text="rn03 validação prévia de dados bancários e chave pix oe1 módulo 1 car-01 validação financeira contas bancárias cadastradas devem passar por validação de formato de agência e conta conforme padrão febraban, além de verificação de sintaxe para chaves pix. rf01 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Validação Financeira</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN03 — Validação Prévia de Dados Bancários e Chave Pix</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Validação Financeira</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Contas bancárias cadastradas devem passar por validação de formato de agência e conta conforme padrão Febraban, além de verificação de sintaxe para chaves Pix.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn04" data-type="rn" data-rn="RN04" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn04 revogação automática de credenciais em afastamento ou rescisão oe1 módulo 1 car-01 ciclo de vida & acesso o registro de rescisão ou afastamento funcional com status inativo revoga de forma imediata e compulsória todas as credenciais ativas e encerra as sessões abertas do colaborador. rf03 regra negocio dominio" data-search-text="rn04 revogação automática de credenciais em afastamento ou rescisão oe1 módulo 1 car-01 ciclo de vida & acesso o registro de rescisão ou afastamento funcional com status inativo revoga de forma imediata e compulsória todas as credenciais ativas e encerra as sessões abertas do colaborador. rf03 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Ciclo de Vida & Acesso</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN04 — Revogação Automática de Credenciais em Afastamento ou Rescisão</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Ciclo de Vida & Acesso</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf03" class="req-tag req-tag-rf"># RF03 · Registrar movimentação funcional ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> O registro de rescisão ou afastamento funcional com status inativo revoga de forma imediata e compulsória todas as credenciais ativas e encerra as sessões abertas do colaborador.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn05" data-type="rn" data-rn="RN05" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-text="rn05 pré-requisito de homologação de apontamentos para fechamento oe2 módulo 2 car-03 fluxo de aprovação a rotina de consolidação e homologação financeira processa exclusivamente apontamentos de campo que tenham sido formalmente homologados pelo gestor operacional de obras. rf05 rf06 regra negocio dominio" data-search-text="rn05 pré-requisito de homologação de apontamentos para fechamento oe2 módulo 2 car-03 fluxo de aprovação a rotina de consolidação e homologação financeira processa exclusivamente apontamentos de campo que tenham sido formalmente homologados pelo gestor operacional de obras. rf05 rf06 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Fluxo de Aprovação</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN05 — Pré-requisito de Homologação de Apontamentos para Fechamento</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Fluxo de Aprovação</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a> <a href="#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> A rotina de consolidação e homologação financeira processa exclusivamente apontamentos de campo que tenham sido formalmente homologados pelo Gestor Operacional de Obras.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn06" data-type="rn" data-rn="RN06" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn06 janela temporal para prestação de contas de reembolso oe2 módulo 2 car-04 controle temporal despesas operacionais elegíveis a reembolso devem ser submetidas em até 5 dias úteis após a realização do gasto, acompanhadas obrigatoriamente de comprovante fiscal. rf07 rf28 regra negocio dominio" data-search-text="rn06 janela temporal para prestação de contas de reembolso oe2 módulo 2 car-04 controle temporal despesas operacionais elegíveis a reembolso devem ser submetidas em até 5 dias úteis após a realização do gasto, acompanhadas obrigatoriamente de comprovante fiscal. rf07 rf28 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Controle Temporal</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN06 — Janela Temporal para Prestação de Contas de Reembolso</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Controle Temporal</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a> <a href="#rf28" class="req-tag req-tag-rf"># RF28 · Submeter solicitação de adiantamento operacional ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Despesas operacionais elegíveis a reembolso devem ser submetidas em até 5 dias úteis após a realização do gasto, acompanhadas obrigatoriamente de comprovante fiscal.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn07" data-type="rn" data-rn="RN07" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn07 bloqueio e justificativa obrigatória em recusa de despesa oe2 módulo 2 car-04 imutabilidade contábil a recusa de despesa pelo administrador financeiro exige parecer com no mínimo 20 caracteres; despesas homologadas não podem sofrer exclusão lógica. rf08 rf29 regra negocio dominio" data-search-text="rn07 bloqueio e justificativa obrigatória em recusa de despesa oe2 módulo 2 car-04 imutabilidade contábil a recusa de despesa pelo administrador financeiro exige parecer com no mínimo 20 caracteres; despesas homologadas não podem sofrer exclusão lógica. rf08 rf29 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Imutabilidade Contábil</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN07 — Bloqueio e Justificativa Obrigatória em Recusa de Despesa</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Imutabilidade Contábil</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf08" class="req-tag req-tag-rf"># RF08 · Deliberar solicitação de reembolso ↗</a> <a href="#rf29" class="req-tag req-tag-rf"># RF29 · Deliberar solicitação de adiantamento operacional ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> A recusa de despesa pelo Administrador Financeiro exige parecer com no mínimo 20 caracteres; despesas homologadas não podem sofrer exclusão lógica.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn08" data-type="rn" data-rn="RN08" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn08 comprovante fiscal obrigatório para homologação de reembolso oe2 módulo 2 car-04 comprovação fiscal nenhuma despesa ou prestação de contas de adiantamento pode ser homologada para pagamento sem ao menos um comprovante fiscal legível anexado e validado. rf07 rf08 rf28 rf29 regra negocio dominio" data-search-text="rn08 comprovante fiscal obrigatório para homologação de reembolso oe2 módulo 2 car-04 comprovação fiscal nenhuma despesa ou prestação de contas de adiantamento pode ser homologada para pagamento sem ao menos um comprovante fiscal legível anexado e validado. rf07 rf08 rf28 rf29 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Comprovação Fiscal</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN08 — Comprovante Fiscal Obrigatório para Homologação de Reembolso</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Comprovação Fiscal</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a> <a href="#rf08" class="req-tag req-tag-rf"># RF08 · Deliberar solicitação de reembolso ↗</a> <a href="#rf28" class="req-tag req-tag-rf"># RF28 · Submeter solicitação de adiantamento operacional ↗</a> <a href="#rf29" class="req-tag req-tag-rf"># RF29 · Deliberar solicitação de adiantamento operacional ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Nenhuma despesa ou prestação de contas de adiantamento pode ser homologada para pagamento sem ao menos um comprovante fiscal legível anexado e validado.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn09" data-type="rn" data-rn="RN09" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn09 rateio proporcional de custos indiretos por contrato oe3 módulo 3 car-05 apropriação & rateio custos de equipes que atuam simultaneamente em mais de um contrato ativo devem ser rateados proporcionalmente às horas trabalhadas registradas em cada obra. rf07 rf09 rf28 rf33 rf34 rf37 rf39 regra negocio dominio" data-search-text="rn09 rateio proporcional de custos indiretos por contrato oe3 módulo 3 car-05 apropriação & rateio custos de equipes que atuam simultaneamente em mais de um contrato ativo devem ser rateados proporcionalmente às horas trabalhadas registradas em cada obra. rf07 rf09 rf28 rf33 rf34 rf37 rf39 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Apropriação & Rateio</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN09 — Rateio Proporcional de Custos Indiretos por Contrato</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Apropriação & Rateio</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a> <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf28" class="req-tag req-tag-rf"># RF28 · Submeter solicitação de adiantamento operacional ↗</a> <a href="#rf33" class="req-tag req-tag-rf"># RF33 · Cadastrar contrato de obra ↗</a> <a href="#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a> <a href="#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a> <a href="#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Custos de equipes que atuam simultaneamente em mais de um contrato ativo devem ser rateados proporcionalmente às horas trabalhadas registradas em cada obra.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn10" data-type="rn" data-rn="RN10" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn10 garantia de consistência transacional no rateio de custos oe3 módulo 3 car-05 consistência transacional a gravação do rateio financeiro entre centros de custo deve ser atômica (acid); qualquer falha em uma das parcelas reverte a operação integralmente. rf09 rf37 regra negocio dominio" data-search-text="rn10 garantia de consistência transacional no rateio de custos oe3 módulo 3 car-05 consistência transacional a gravação do rateio financeiro entre centros de custo deve ser atômica (acid); qualquer falha em uma das parcelas reverte a operação integralmente. rf09 rf37 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Consistência Transacional</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN10 — Garantia de Consistência Transacional no Rateio de Custos</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Consistência Transacional</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> A gravação do rateio financeiro entre centros de custo deve ser atômica (ACID); qualquer falha em uma das parcelas reverte a operação integralmente.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn11" data-type="rn" data-rn="RN11" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn11 parametrização obrigatória de centros de custo por contrato oe3 módulo 3 car-05 parametrização orçamentária todo contrato cadastrado deve possuir ao menos um centro de custo vinculado antes de receber qualquer apropriação de despesa ou diária técnica. rf10 rf30 rf38 regra negocio dominio" data-search-text="rn11 parametrização obrigatória de centros de custo por contrato oe3 módulo 3 car-05 parametrização orçamentária todo contrato cadastrado deve possuir ao menos um centro de custo vinculado antes de receber qualquer apropriação de despesa ou diária técnica. rf10 rf30 rf38 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Parametrização Orçamentária</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN11 — Parametrização Obrigatória de Centros de Custo por Contrato</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Parametrização Orçamentária</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf10" class="req-tag req-tag-rf"># RF10 · Consultar rastreabilidade de custos ↗</a> <a href="#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a> <a href="#rf38" class="req-tag req-tag-rf"># RF38 · Consultar contratos de obra ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Todo contrato cadastrado deve possuir ao menos um centro de custo vinculado antes de receber qualquer apropriação de despesa ou diária técnica.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn12" data-type="rn" data-rn="RN12" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn12 segregação de despesas administrativas e operacionais oe3 módulo 3 car-05 segregação de despesas custos de deslocamento e hospedagem são alocados separadamente das despesas de materiais operacionais, viabilizando relatórios segregados por natureza de gasto. rf09 rf10 regra negocio dominio" data-search-text="rn12 segregação de despesas administrativas e operacionais oe3 módulo 3 car-05 segregação de despesas custos de deslocamento e hospedagem são alocados separadamente das despesas de materiais operacionais, viabilizando relatórios segregados por natureza de gasto. rf09 rf10 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Segregação de Despesas</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN12 — Segregação de Despesas Administrativas e Operacionais</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Segregação de Despesas</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf10" class="req-tag req-tag-rf"># RF10 · Consultar rastreabilidade de custos ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Custos de deslocamento e hospedagem são alocados separadamente das despesas de materiais operacionais, viabilizando relatórios segregados por natureza de gasto.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn13" data-type="rn" data-rn="RN13" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-text="rn13 bloqueio preventivo por extrapolação de teto orçamentário oe3 módulo 3 car-06 controle de teto orçamentário lançamentos de despesas operacionais que ultrapassem 100% do teto orçamentário parametrizado para o contrato demandam autorização formal com justificativa registrada. rf11 rf12 rf31 rf40 regra negocio dominio" data-search-text="rn13 bloqueio preventivo por extrapolação de teto orçamentário oe3 módulo 3 car-06 controle de teto orçamentário lançamentos de despesas operacionais que ultrapassem 100% do teto orçamentário parametrizado para o contrato demandam autorização formal com justificativa registrada. rf11 rf12 rf31 rf40 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Controle de Teto Orçamentário</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN13 — Bloqueio Preventivo por Extrapolação de Teto Orçamentário</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Controle de Teto Orçamentário</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a> <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a> <a href="#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a> <a href="#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Lançamentos de despesas operacionais que ultrapassem 100% do teto orçamentário parametrizado para o contrato demandam autorização formal com justificativa registrada.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn14" data-type="rn" data-rn="RN14" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-text="rn14 sigilo e não-exposição de remunerações individuais em painéis oe3 módulo 3 car-06 sigilo & privacidade salarial painéis analíticos acessíveis por gestores operacionais exibem montantes agregados de custos por contrato, ocultando remunerações e dados bancários individuais dos colaboradores. rf11 rf12 rf34 rf39 regra negocio dominio" data-search-text="rn14 sigilo e não-exposição de remunerações individuais em painéis oe3 módulo 3 car-06 sigilo & privacidade salarial painéis analíticos acessíveis por gestores operacionais exibem montantes agregados de custos por contrato, ocultando remunerações e dados bancários individuais dos colaboradores. rf11 rf12 rf34 rf39 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Sigilo & Privacidade Salarial</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN14 — Sigilo e Não-Exposição de Remunerações Individuais em Painéis</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Sigilo & Privacidade Salarial</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a> <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a> <a href="#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a> <a href="#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Painéis analíticos acessíveis por gestores operacionais exibem montantes agregados de custos por contrato, ocultando remunerações e dados bancários individuais dos colaboradores.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn15" data-type="rn" data-rn="RN15" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn15 autenticação por jwt com sessão temporal limitada oe4 módulo 4 car-07 segurança de autenticação tokens de autenticação jwt possuem validade máxima estrita de 8 horas, exigindo nova autenticação após expiração; links de ativação ou recuperação expiram em 30 minutos. rf13 rf17 rf18 regra negocio dominio" data-search-text="rn15 autenticação por jwt com sessão temporal limitada oe4 módulo 4 car-07 segurança de autenticação tokens de autenticação jwt possuem validade máxima estrita de 8 horas, exigindo nova autenticação após expiração; links de ativação ou recuperação expiram em 30 minutos. rf13 rf17 rf18 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Segurança de Autenticação</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN15 — Autenticação por JWT com Sessão Temporal Limitada</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Segurança de Autenticação</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a> <a href="#rf17" class="req-tag req-tag-rf"># RF17 · Ativar acesso inicial e recuperar credenciais ↗</a> <a href="#rf18" class="req-tag req-tag-rf"># RF18 · Encerrar sessão manualmente ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Tokens de autenticação JWT possuem validade máxima estrita de 8 horas, exigindo nova autenticação após expiração; links de ativação ou recuperação expiram em 30 minutos.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn16" data-type="rn" data-rn="RN16" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn16 princípio do menor privilégio e segregação de funções (sod) oe4 módulo 4 car-07 autorização rbac estrita cada perfil de usuário acessa estritamente os recursos indispensáveis à sua função; perfis operacionais de campo não possuem acesso a rotinas financeiras de homologação. rf14 regra negocio dominio" data-search-text="rn16 princípio do menor privilégio e segregação de funções (sod) oe4 módulo 4 car-07 autorização rbac estrita cada perfil de usuário acessa estritamente os recursos indispensáveis à sua função; perfis operacionais de campo não possuem acesso a rotinas financeiras de homologação. rf14 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Autorização RBAC Estrita</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN16 — Princípio do Menor Privilégio e Segregação de Funções (SoD)</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Autorização RBAC Estrita</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf14" class="req-tag req-tag-rf"># RF14 · Gerenciar perfis de acesso ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Cada perfil de usuário acessa estritamente os recursos indispensáveis à sua função; perfis operacionais de campo não possuem acesso a rotinas financeiras de homologação.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn17" data-type="rn" data-rn="RN17" data-oe="oe4" data-car="car-08" data-mvp="mvp" data-quad="q1" data-text="rn17 registro atômico de mutações em trilha de auditoria oe4 módulo 4 car-08 imutabilidade de trilha de auditoria toda mutação cadastral, financeira ou de aprovação gera registro síncrono e obrigatório em trilha de auditoria na mesma transação atômica do banco de dados. rf15 rf16 regra negocio dominio" data-search-text="rn17 registro atômico de mutações em trilha de auditoria oe4 módulo 4 car-08 imutabilidade de trilha de auditoria toda mutação cadastral, financeira ou de aprovação gera registro síncrono e obrigatório em trilha de auditoria na mesma transação atômica do banco de dados. rf15 rf16 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Imutabilidade de Trilha de Auditoria</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN17 — Registro Atômico de Mutações em Trilha de Auditoria</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Imutabilidade de Trilha de Auditoria</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf15" class="req-tag req-tag-rf"># RF15 · Consultar trilha de auditoria ↗</a> <a href="#rf16" class="req-tag req-tag-rf"># RF16 · Exportar relatório de auditoria ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Toda mutação cadastral, financeira ou de aprovação gera registro síncrono e obrigatório em trilha de auditoria na mesma transação atômica do banco de dados.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn18" data-type="rn" data-rn="RN18" data-oe="oe4" data-car="car-08" data-mvp="mvp" data-quad="q1" data-text="rn18 composição mínima obrigatória do registro de log de auditoria oe4 módulo 4 car-08 composição atômica de log utc cada log registra compulsoriamente: carimbo de data/hora em utc, identificador do usuário autor, endereço ip, entidade afetada, ação executada e snapshot de antes/depois dos dados. rf15 rf16 regra negocio dominio" data-search-text="rn18 composição mínima obrigatória do registro de log de auditoria oe4 módulo 4 car-08 composição atômica de log utc cada log registra compulsoriamente: carimbo de data/hora em utc, identificador do usuário autor, endereço ip, entidade afetada, ação executada e snapshot de antes/depois dos dados. rf15 rf16 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Composição Atômica de Log UTC</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN18 — Composição Mínima Obrigatória do Registro de Log de Auditoria</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Composição Atômica de Log UTC</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf15" class="req-tag req-tag-rf"># RF15 · Consultar trilha de auditoria ↗</a> <a href="#rf16" class="req-tag req-tag-rf"># RF16 · Exportar relatório de auditoria ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Cada log registra compulsoriamente: carimbo de data/hora em UTC, identificador do usuário autor, endereço IP, entidade afetada, ação executada e snapshot de antes/depois dos dados.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn19" data-type="rn" data-rn="RN19" data-oe="oe4" data-car="car-08" data-mvp="mvp" data-quad="q1" data-text="rn19 política de retenção quinquenal de logs oe4 módulo 4 car-08 retenção quinquenal clt/lgpd os registros da trilha de auditoria são mantidos de forma íntegra por no mínimo 5 anos fiscais (1.825 dias), assegurando conformidade defensiva com o artigo 11 da clt e artigo 16 da lgpd. rf15 rf16 regra negocio dominio" data-search-text="rn19 política de retenção quinquenal de logs oe4 módulo 4 car-08 retenção quinquenal clt/lgpd os registros da trilha de auditoria são mantidos de forma íntegra por no mínimo 5 anos fiscais (1.825 dias), assegurando conformidade defensiva com o artigo 11 da clt e artigo 16 da lgpd. rf15 rf16 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Retenção Quinquenal CLT/LGPD</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN19 — Política de Retenção Quinquenal de Logs</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Retenção Quinquenal CLT/LGPD</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf15" class="req-tag req-tag-rf"># RF15 · Consultar trilha de auditoria ↗</a> <a href="#rf16" class="req-tag req-tag-rf"># RF16 · Exportar relatório de auditoria ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Os registros da trilha de auditoria são mantidos de forma íntegra por no mínimo 5 anos fiscais (1.825 dias), assegurando conformidade defensiva com o Artigo 11 da CLT e Artigo 16 da LGPD.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn20" data-type="rn" data-rn="RN20" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn20 limite de tentativas de autenticação oe4 módulo 4 car-07 proteção anti-brute force o acúmulo de 5 tentativas consecutivas de login incorretas em uma janela de 15 minutos bloqueia temporariamente a conta corporativa por 30 minutos. rf23 regra negocio dominio" data-search-text="rn20 limite de tentativas de autenticação oe4 módulo 4 car-07 proteção anti-brute force o acúmulo de 5 tentativas consecutivas de login incorretas em uma janela de 15 minutos bloqueia temporariamente a conta corporativa por 30 minutos. rf23 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Proteção Anti-Brute Force</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN20 — Limite de Tentativas de Autenticação</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Proteção Anti-Brute Force</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf23" class="req-tag req-tag-rf"># RF23 · Bloquear acesso após tentativas falhas consecutivas ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> O acúmulo de 5 tentativas consecutivas de login incorretas em uma janela de 15 minutos bloqueia temporariamente a conta corporativa por 30 minutos.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn21" data-type="rn" data-rn="RN21" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn21 política de expiração e histórico de senhas oe4 módulo 4 car-07 política de senhas & histórico credenciais de acesso possuem validade máxima de 90 dias, exigindo redefinição mandatória e impedindo a reutilização de qualquer uma das últimas 5 senhas adotadas. rf24 regra negocio dominio" data-search-text="rn21 política de expiração e histórico de senhas oe4 módulo 4 car-07 política de senhas & histórico credenciais de acesso possuem validade máxima de 90 dias, exigindo redefinição mandatória e impedindo a reutilização de qualquer uma das últimas 5 senhas adotadas. rf24 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Política de Senhas & Histórico</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN21 — Política de Expiração e Histórico de Senhas</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Política de Senhas & Histórico</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf24" class="req-tag req-tag-rf"># RF24 · Impor renovação periódica de senhas ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Credenciais de acesso possuem validade máxima de 90 dias, exigindo redefinição mandatória e impedindo a reutilização de qualquer uma das últimas 5 senhas adotadas.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn22" data-type="rn" data-rn="RN22" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn22 tipos de contratação válidos oe1 módulo 1 car-01 enquadramento contratual o sistema restringe o vínculo de contratação às opções diarista, clt ou prestador de serviço (pj), aplicando regras específicas de apuração de diárias e rateio para cada categoria. rf01 rf25 regra negocio dominio" data-search-text="rn22 tipos de contratação válidos oe1 módulo 1 car-01 enquadramento contratual o sistema restringe o vínculo de contratação às opções diarista, clt ou prestador de serviço (pj), aplicando regras específicas de apuração de diárias e rateio para cada categoria. rf01 rf25 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Enquadramento Contratual</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN22 — Tipos de Contratação Válidos</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Enquadramento Contratual</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a> <a href="#rf25" class="req-tag req-tag-rf"># RF25 · Cadastrar tipo de contratação do colaborador ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> O sistema restringe o vínculo de contratação às opções Diarista, CLT ou Prestador de Serviço (PJ), aplicando regras específicas de apuração de diárias e rateio para cada categoria.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn23" data-type="rn" data-rn="RN23" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn23 versionamento obrigatório de dados cadastrais e bancários oe1 módulo 1 car-01 versionamento cadastral alterações em campos de dados pessoais, bancários ou funcionais geram novo snapshot na tabela histórica com carimbo temporal utc e identificador do autor, sem sobrescrever valores anteriores. rf02 rf26 regra negocio dominio" data-search-text="rn23 versionamento obrigatório de dados cadastrais e bancários oe1 módulo 1 car-01 versionamento cadastral alterações em campos de dados pessoais, bancários ou funcionais geram novo snapshot na tabela histórica com carimbo temporal utc e identificador do autor, sem sobrescrever valores anteriores. rf02 rf26 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Versionamento Cadastral</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN23 — Versionamento Obrigatório de Dados Cadastrais e Bancários</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Versionamento Cadastral</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf02" class="req-tag req-tag-rf"># RF02 · Atualizar cadastro de colaborador ↗</a> <a href="#rf26" class="req-tag req-tag-rf"># RF26 · Consultar histórico de alterações cadastrais e bancárias ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Alterações em campos de dados pessoais, bancários ou funcionais geram novo snapshot na tabela histórica com carimbo temporal UTC e identificador do autor, sem sobrescrever valores anteriores.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn24" data-type="rn" data-rn="RN24" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-text="rn24 captura de geolocalização não bloqueante oe1 módulo 1 car-02 geolocalização resiliente o sistema tenta capturar coordenadas geográficas no momento do anexo de evidências; caso a permissão seja negada ou o sinal gps indisponível, o anexo prossegue normalmente com a sinalização correspondente. rf04 rf22 regra negocio dominio" data-search-text="rn24 captura de geolocalização não bloqueante oe1 módulo 1 car-02 geolocalização resiliente o sistema tenta capturar coordenadas geográficas no momento do anexo de evidências; caso a permissão seja negada ou o sinal gps indisponível, o anexo prossegue normalmente com a sinalização correspondente. rf04 rf22 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Geolocalização Resiliente</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN24 — Captura de Geolocalização Não Bloqueante</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Geolocalização Resiliente</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a> <a href="#rf22" class="req-tag req-tag-rf"># RF22 · Anexar evidências e geolocalização ao apontamento ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> O sistema tenta capturar coordenadas geográficas no momento do anexo de evidências; caso a permissão seja negada ou o sinal GPS indisponível, o anexo prossegue normalmente com a sinalização correspondente.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn25" data-type="rn" data-rn="RN25" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-text="rn25 vigência dos valores de diárias técnicas oe2 módulo 2 car-03 tabela de diárias vigente o cálculo de prévia e fechamento utiliza estritamente os valores nominais de diárias técnicas vigentes na competência de realização da atividade de campo. rf05 rf27 regra negocio dominio" data-search-text="rn25 vigência dos valores de diárias técnicas oe2 módulo 2 car-03 tabela de diárias vigente o cálculo de prévia e fechamento utiliza estritamente os valores nominais de diárias técnicas vigentes na competência de realização da atividade de campo. rf05 rf27 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Tabela de Diárias Vigente</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN25 — Vigência dos Valores de Diárias Técnicas</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Tabela de Diárias Vigente</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a> <a href="#rf27" class="req-tag req-tag-rf"># RF27 · Configurar tabela de valores de diárias técnicas ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> O cálculo de prévia e fechamento utiliza estritamente os valores nominais de diárias técnicas vigentes na competência de realização da atividade de campo.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn26" data-type="rn" data-rn="RN26" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn26 elegibilidade do adiantamento operacional oe2 módulo 2 car-04 elegibilidade de adiantamento a solicitação de adiantamento operacional é restrita a colaboradores alocados em contratos ativos e demanda justificativa de aplicação dos recursos. rf28 regra negocio dominio" data-search-text="rn26 elegibilidade do adiantamento operacional oe2 módulo 2 car-04 elegibilidade de adiantamento a solicitação de adiantamento operacional é restrita a colaboradores alocados em contratos ativos e demanda justificativa de aplicação dos recursos. rf28 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Elegibilidade de Adiantamento</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN26 — Elegibilidade do Adiantamento Operacional</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Elegibilidade de Adiantamento</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf28" class="req-tag req-tag-rf"># RF28 · Submeter solicitação de adiantamento operacional ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> A solicitação de adiantamento operacional é restrita a colaboradores alocados em contratos ativos e demanda justificativa de aplicação dos recursos.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn27" data-type="rn" data-rn="RN27" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn27 notificação de pendências financeiras oe2 módulo 2 car-04 mensageria & notificação a decisão de homologação ou recusa em solicitações de reembolso e adiantamento dispara notificação automática de status para o colaborador solicitante. rf08 rf29 regra negocio dominio" data-search-text="rn27 notificação de pendências financeiras oe2 módulo 2 car-04 mensageria & notificação a decisão de homologação ou recusa em solicitações de reembolso e adiantamento dispara notificação automática de status para o colaborador solicitante. rf08 rf29 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Mensageria & Notificação</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN27 — Notificação de Pendências Financeiras</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Mensageria & Notificação</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf08" class="req-tag req-tag-rf"># RF08 · Deliberar solicitação de reembolso ↗</a> <a href="#rf29" class="req-tag req-tag-rf"># RF29 · Deliberar solicitação de adiantamento operacional ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> A decisão de homologação ou recusa em solicitações de reembolso e adiantamento dispara notificação automática de status para o colaborador solicitante.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn28" data-type="rn" data-rn="RN28" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn28 comparativo histórico de custos oe3 módulo 3 car-05 base histórica de custos análises comparativas de despesas históricas consolidam dados de contratos com ao menos um fechamento financeiro previamente homologado. rf30 regra negocio dominio" data-search-text="rn28 comparativo histórico de custos oe3 módulo 3 car-05 base histórica de custos análises comparativas de despesas históricas consolidam dados de contratos com ao menos um fechamento financeiro previamente homologado. rf30 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Base Histórica de Custos</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN28 — Comparativo Histórico de Custos</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Base Histórica de Custos</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Análises comparativas de despesas históricas consolidam dados de contratos com ao menos um fechamento financeiro previamente homologado.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn29" data-type="rn" data-rn="RN29" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-text="rn29 disparo de alertas preventivos de extrapolação orçamentária oe3 módulo 3 car-06 alertas preventivos de desvio quando o montante de custos apropriados a uma categoria atinge o limiar percentual parametrizado pelo gestor, o sistema emite avisos visuais no painel e alertas por e-mail. rf31 rf40 regra negocio dominio" data-search-text="rn29 disparo de alertas preventivos de extrapolação orçamentária oe3 módulo 3 car-06 alertas preventivos de desvio quando o montante de custos apropriados a uma categoria atinge o limiar percentual parametrizado pelo gestor, o sistema emite avisos visuais no painel e alertas por e-mail. rf31 rf40 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Alertas Preventivos de Desvio</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN29 — Disparo de Alertas Preventivos de Extrapolação Orçamentária</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Alertas Preventivos de Desvio</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a> <a href="#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> Quando o montante de custos apropriados a uma categoria atinge o limiar percentual parametrizado pelo gestor, o sistema emite avisos visuais no painel e alertas por e-mail.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn30" data-type="rn" data-rn="RN30" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-text="rn30 justificativa obrigatória e bloqueio na deliberação de apontamentos oe1 módulo 1 car-02 justificativa obrigatória & bloqueio o gestor operacional de obras deve registrar compulsoriamente parecer justificatório com no mínimo 15 caracteres ao rejeitar um apontamento de campo. a aprovação transiciona o status para 'homologado' e bloqueia compulsoriamente a edição do registro pelo colaborador (rn02), habilitando-o para as rotinas financeiras (rn05). rf19 rf32 rf35 regra negocio dominio" data-search-text="rn30 justificativa obrigatória e bloqueio na deliberação de apontamentos oe1 módulo 1 car-02 justificativa obrigatória & bloqueio o gestor operacional de obras deve registrar compulsoriamente parecer justificatório com no mínimo 15 caracteres ao rejeitar um apontamento de campo. a aprovação transiciona o status para 'homologado' e bloqueia compulsoriamente a edição do registro pelo colaborador (rn02), habilitando-o para as rotinas financeiras (rn05). rf19 rf32 rf35 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Justificativa Obrigatória & Bloqueio</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN30 — Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Justificativa Obrigatória & Bloqueio</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf19" class="req-tag req-tag-rf"># RF19 · Consultar apontamentos registrados ↗</a> <a href="#rf32" class="req-tag req-tag-rf"># RF32 · Deliberar apontamento de campo ↗</a> <a href="#rf35" class="req-tag req-tag-rf"># RF35 · Retificar apontamento de campo ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> O Gestor Operacional de Obras deve registrar compulsoriamente parecer justificatório com no mínimo 15 caracteres ao rejeitar um apontamento de campo. A aprovação transiciona o status para 'Homologado' e bloqueia compulsoriamente a edição do registro pelo colaborador (RN02), habilitando-o para as rotinas financeiras (RN05).</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rn" id="rn31" data-type="rn" data-rn="RN31" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-text="rn31 parametrização e fórmulas de diárias e comissões técnicas de campo oe2 módulo 2 car-03 fórmula paramétrica de remuneração a apuração de remuneração variável de campo combina a quantidade de diárias homologadas multiplicadas pelo valor vigente com os percentuais de comissão pactuados por contrato. rf05 rf27 regra negocio dominio" data-search-text="rn31 parametrização e fórmulas de diárias e comissões técnicas de campo oe2 módulo 2 car-03 fórmula paramétrica de remuneração a apuração de remuneração variável de campo combina a quantidade de diárias homologadas multiplicadas pelo valor vigente com os percentuais de comissão pactuados por contrato. rf05 rf27 regra negocio dominio">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rn">
+        <svg class="req-priority-flag req-rn-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Regra de Domínio</span>
+      </span>
+      <span class="req-pill req-pill-cat-rn">Fórmula Paramétrica de Remuneração</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RN31 — Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Módulo & OE</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          <span>Característica (CAR)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Categoria de Domínio</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-rn-cat">Fórmula Paramétrica de Remuneração</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Executores (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a> <a href="#rf27" class="req-tag req-tag-rf"># RF27 · Configurar tabela de valores de diárias técnicas ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enunciado Oficial da Regra -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> A apuração de remuneração variável de campo combina a quantidade de diárias homologadas multiplicadas pelo valor vigente com os percentuais de comissão pactuados por contrato.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+---
+
+<a id="catalogo-nao-funcionais"></a>
+<a id="catalogo-de-requisitos-nao-funcionais"></a>
+## Catálogo de Requisitos Não Funcionais (RNF01 a RNF20)
+
+Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de qualidade sistêmica e restrições de arquitetura do ***DUOC Finance***, classificados simultaneamente pelo modelo **URPS+** e pela taxonomia de **Sommerville**:
+
+<a id="rnfs-transversais"></a>
+!!! info "Pacote Transversal de Atributos de Qualidade (T)"
+    Os requisitos **RNF03** (Criptografia AES-256 / TLS 1.3), **RNF14** (Autorização RBAC em 100% dos endpoints), **RNF15** (Consistência e Atomicidade de Logs), **RNF16** (Retenção Quinquenal CLT Art. 11), **RNF17** (Rotina de Backup Diário), **RNF18** (Disponibilidade ≥ 99,5%), **RNF19** (Acessibilidade WCAG 2.1 AA) e **RNF20** (Validação de Schema em Escritas) compõem o **Pacote Transversal (T)** obrigatório, aplicando-se de forma pervasiva a todas as telas, rotinas e histórias de usuário do produto.
+
+<details class="req-card req-card-rnf" id="rnf01" data-type="rnf" data-rnf="RNF01" data-oe="oe1" data-mvp="pos-mvp" data-quad="q3" data-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Confiabilidade</span>
+      </span>
+      <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF01 — Operar em modo offline para coleta de dados em canteiros sem conectividade</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Confiabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Confiabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Módulo 1 / OE1</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a> <a href="#rf19" class="req-tag req-tag-rf"># RF19 · Consultar apontamentos registrados ↗</a> <a href="#rf22" class="req-tag req-tag-rf"># RF22 · Anexar evidências e geolocalização ao apontamento ↗</a> <a href="#rf32" class="req-tag req-tag-rf"># RF32 · Deliberar apontamento de campo ↗</a> <a href="#rf35" class="req-tag req-tag-rf"># RF35 · Retificar apontamento de campo ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> A aplicação web responsiva (Web App / PWA) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf02" data-type="rnf" data-rnf="RNF02" data-oe="oe1" data-mvp="mvp" data-quad="q1" data-text="rnf02 garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos urps+ desempenho produto — desempenho módulo 1 / oe1 o tempo de resposta para busca, paginação e renderização da ficha unificada de qualquer colaborador deve ser inferior ou igual a 2,0 segundos em 95% das requisições sob carga nominal (concorrência típica de até 50 usuários simultâneos autenticados a 10 req/s). rf01 rf02 rf03 rf20 rf25 rf26 rf36 requisito nao funcional atributo qualidade dod" data-search-text="rnf02 garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos urps+ desempenho produto — desempenho módulo 1 / oe1 o tempo de resposta para busca, paginação e renderização da ficha unificada de qualquer colaborador deve ser inferior ou igual a 2,0 segundos em 95% das requisições sob carga nominal (concorrência típica de até 50 usuários simultâneos autenticados a 10 req/s). rf01 rf02 rf03 rf20 rf25 rf26 rf36 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Desempenho</span>
+      </span>
+      <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF02 — Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Desempenho</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Desempenho</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Módulo 1 / OE1</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a> <a href="#rf02" class="req-tag req-tag-rf"># RF02 · Atualizar cadastro de colaborador ↗</a> <a href="#rf03" class="req-tag req-tag-rf"># RF03 · Registrar movimentação funcional ↗</a> <a href="#rf20" class="req-tag req-tag-rf"># RF20 · Importar presenças homologadas ↗</a> <a href="#rf25" class="req-tag req-tag-rf"># RF25 · Cadastrar tipo de contratação do colaborador ↗</a> <a href="#rf26" class="req-tag req-tag-rf"># RF26 · Consultar histórico de alterações cadastrais e bancárias ↗</a> <a href="#rf36" class="req-tag req-tag-rf"># RF36 · Exportar dados consolidados em planilha ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> O tempo de resposta para busca, paginação e renderização da ficha unificada de qualquer colaborador deve ser inferior ou igual a 2,0 segundos em 95% das requisições sob carga nominal (concorrência típica de até 50 usuários simultâneos autenticados a 10 req/s).</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf03" data-type="rnf" data-rnf="RNF03" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf03 proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito urps+ segurança (+) produto — segurança transversal (t) / oe1 100% dos dados pessoais e cadastrais confidenciais (cpf, dados de conta bancária, chave pix e remuneração) armazenados em banco devem utilizar criptografia aes-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo tls 1.3 (em conformidade com o princípio de segurança do art. 6º, vii da lgpd). rf01 rf02 rf03 rf13 rf23 requisito nao funcional atributo qualidade dod" data-search-text="rnf03 proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito urps+ segurança (+) produto — segurança transversal (t) / oe1 100% dos dados pessoais e cadastrais confidenciais (cpf, dados de conta bancária, chave pix e remuneração) armazenados em banco devem utilizar criptografia aes-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo tls 1.3 (em conformidade com o princípio de segurança do art. 6º, vii da lgpd). rf01 rf02 rf03 rf13 rf23 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Segurança (+)</span>
+      </span>
+      <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF03 — Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Segurança (+)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Segurança</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a> <a href="#rf02" class="req-tag req-tag-rf"># RF02 · Atualizar cadastro de colaborador ↗</a> <a href="#rf03" class="req-tag req-tag-rf"># RF03 · Registrar movimentação funcional ↗</a> <a href="#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a> <a href="#rf23" class="req-tag req-tag-rf"># RF23 · Bloquear acesso após tentativas falhas consecutivas ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> 100% dos dados pessoais e cadastrais confidenciais (CPF, dados de conta bancária, chave Pix e remuneração) armazenados em banco devem utilizar criptografia AES-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo TLS 1.3 (em conformidade com o princípio de segurança do Art. 6º, VII da LGPD).</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf04" data-type="rnf" data-rnf="RNF04" data-oe="oe1" data-mvp="mvp" data-quad="q1" data-text="rnf04 garantir usabilidade e agilidade no preenchimento de apontamentos de campo urps+ usabilidade produto — usabilidade módulo 1 / oe1 o preenchimento completo de um apontamento diário de campo deve ser concluído por usuários em primeiro uso, sem suporte externo ou treinamento prévio, em no máximo 5 passos/telas, com taxa de conclusão bem-sucedida ≥ 90% em teste de usabilidade. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf04 garantir usabilidade e agilidade no preenchimento de apontamentos de campo urps+ usabilidade produto — usabilidade módulo 1 / oe1 o preenchimento completo de um apontamento diário de campo deve ser concluído por usuários em primeiro uso, sem suporte externo ou treinamento prévio, em no máximo 5 passos/telas, com taxa de conclusão bem-sucedida ≥ 90% em teste de usabilidade. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Usabilidade</span>
+      </span>
+      <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF04 — Garantir usabilidade e agilidade no preenchimento de apontamentos de campo</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Usabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Usabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Módulo 1 / OE1</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a> <a href="#rf19" class="req-tag req-tag-rf"># RF19 · Consultar apontamentos registrados ↗</a> <a href="#rf22" class="req-tag req-tag-rf"># RF22 · Anexar evidências e geolocalização ao apontamento ↗</a> <a href="#rf32" class="req-tag req-tag-rf"># RF32 · Deliberar apontamento de campo ↗</a> <a href="#rf35" class="req-tag req-tag-rf"># RF35 · Retificar apontamento de campo ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> O preenchimento completo de um apontamento diário de campo deve ser concluído por usuários em primeiro uso, sem suporte externo ou treinamento prévio, em no máximo 5 passos/telas, com taxa de conclusão bem-sucedida ≥ 90% em teste de usabilidade.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf05" data-type="rnf" data-rnf="RNF05" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf05 processar rotina de fechamento financeiro em até 5,0 segundos urps+ desempenho produto — desempenho módulo 2 / oe2 o cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal. rf05 rf06 rf21 rf27 requisito nao funcional atributo qualidade dod" data-search-text="rnf05 processar rotina de fechamento financeiro em até 5,0 segundos urps+ desempenho produto — desempenho módulo 2 / oe2 o cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal. rf05 rf06 rf21 rf27 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Desempenho</span>
+      </span>
+      <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF05 — Processar rotina de fechamento financeiro em até 5,0 segundos</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Desempenho</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Desempenho</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Módulo 2 / OE2</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a> <a href="#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a> <a href="#rf21" class="req-tag req-tag-rf"># RF21 · Estornar fechamento financeiro ↗</a> <a href="#rf27" class="req-tag req-tag-rf"># RF27 · Configurar tabela de valores de diárias técnicas ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> O cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf06" data-type="rnf" data-rnf="RNF06" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf06 garantir exatidão aritmética centesimal em cálculos monetários urps+ confiabilidade produto — confiabilidade módulo 2 / oe2 todas as rotinas de cálculo de diárias, comissões, reembolsos e rateios devem operar com representação decimal exata (tipo decimal/numeric com no mínimo 4 casas de precisão interna e arredondamento padrão bancário para 2 casas), garantindo divergência zero em auditoria centesimal. rf05 rf06 rf07 rf08 rf21 rf27 rf28 rf29 requisito nao funcional atributo qualidade dod" data-search-text="rnf06 garantir exatidão aritmética centesimal em cálculos monetários urps+ confiabilidade produto — confiabilidade módulo 2 / oe2 todas as rotinas de cálculo de diárias, comissões, reembolsos e rateios devem operar com representação decimal exata (tipo decimal/numeric com no mínimo 4 casas de precisão interna e arredondamento padrão bancário para 2 casas), garantindo divergência zero em auditoria centesimal. rf05 rf06 rf07 rf08 rf21 rf27 rf28 rf29 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Confiabilidade</span>
+      </span>
+      <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF06 — Garantir exatidão aritmética centesimal em cálculos monetários</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Confiabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Confiabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Módulo 2 / OE2</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a> <a href="#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a> <a href="#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a> <a href="#rf08" class="req-tag req-tag-rf"># RF08 · Deliberar solicitação de reembolso ↗</a> <a href="#rf21" class="req-tag req-tag-rf"># RF21 · Estornar fechamento financeiro ↗</a> <a href="#rf27" class="req-tag req-tag-rf"># RF27 · Configurar tabela de valores de diárias técnicas ↗</a> <a href="#rf28" class="req-tag req-tag-rf"># RF28 · Submeter solicitação de adiantamento operacional ↗</a> <a href="#rf29" class="req-tag req-tag-rf"># RF29 · Deliberar solicitação de adiantamento operacional ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Todas as rotinas de cálculo de diárias, comissões, reembolsos e rateios devem operar com representação decimal exata (tipo Decimal/Numeric com no mínimo 4 casas de precisão interna e arredondamento padrão bancário para 2 casas), garantindo divergência zero em auditoria centesimal.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf07" data-type="rnf" data-rnf="RNF07" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf07 garantir robustez e segurança no processamento e armazenamento de comprovantes urps+ segurança / usabilidade produto — segurança módulo 2 / oe2 arquivos de comprovantes devem aceitar formatos pdf, jpeg e png com validação estrita de magic bytes no backend, tamanho máximo de 10 mb por arquivo e escaneamento preventivo contra ameaças, com compressão automática sem perda de legibilidade fiscal. rf04 rf07 rf08 rf22 rf28 rf29 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf07 garantir robustez e segurança no processamento e armazenamento de comprovantes urps+ segurança / usabilidade produto — segurança módulo 2 / oe2 arquivos de comprovantes devem aceitar formatos pdf, jpeg e png com validação estrita de magic bytes no backend, tamanho máximo de 10 mb por arquivo e escaneamento preventivo contra ameaças, com compressão automática sem perda de legibilidade fiscal. rf04 rf07 rf08 rf22 rf28 rf29 rf35 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Segurança / Usabilidade</span>
+      </span>
+      <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF07 — Garantir robustez e segurança no processamento e armazenamento de comprovantes</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Segurança / Usabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Segurança</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Módulo 2 / OE2</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a> <a href="#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a> <a href="#rf08" class="req-tag req-tag-rf"># RF08 · Deliberar solicitação de reembolso ↗</a> <a href="#rf22" class="req-tag req-tag-rf"># RF22 · Anexar evidências e geolocalização ao apontamento ↗</a> <a href="#rf28" class="req-tag req-tag-rf"># RF28 · Submeter solicitação de adiantamento operacional ↗</a> <a href="#rf29" class="req-tag req-tag-rf"># RF29 · Deliberar solicitação de adiantamento operacional ↗</a> <a href="#rf35" class="req-tag req-tag-rf"># RF35 · Retificar apontamento de campo ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Arquivos de comprovantes devem aceitar formatos PDF, JPEG e PNG com validação estrita de magic bytes no backend, tamanho máximo de 10 MB por arquivo e escaneamento preventivo contra ameaças, com compressão automática sem perda de legibilidade fiscal.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf08" data-type="rnf" data-rnf="RNF08" data-oe="oe2" data-mvp="pos-mvp" data-quad="q3" data-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf06 rf08 rf21 rf29 requisito nao funcional atributo qualidade dod" data-search-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf06 rf08 rf21 rf29 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Segurança (+)</span>
+      </span>
+      <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF08 — Garantir rastreabilidade probatória e não-repúdio em operações de estorno</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Segurança (+)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Segurança</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Módulo 2 / OE2</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a> <a href="#rf08" class="req-tag req-tag-rf"># RF08 · Deliberar solicitação de reembolso ↗</a> <a href="#rf21" class="req-tag req-tag-rf"># RF21 · Estornar fechamento financeiro ↗</a> <a href="#rf29" class="req-tag req-tag-rf"># RF29 · Deliberar solicitação de adiantamento operacional ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e IP de origem antes da confirmação da mutação.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf09" data-type="rnf" data-rnf="RNF09" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf09 garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos urps+ desempenho produto — desempenho módulo 3 / oe3 a aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos. rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf09 garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos urps+ desempenho produto — desempenho módulo 3 / oe3 a aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos. rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Desempenho</span>
+      </span>
+      <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF09 — Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Desempenho</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Desempenho</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Módulo 3 / OE3</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf10" class="req-tag req-tag-rf"># RF10 · Consultar rastreabilidade de custos ↗</a> <a href="#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a> <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a> <a href="#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a> <a href="#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a> <a href="#rf33" class="req-tag req-tag-rf"># RF33 · Cadastrar contrato de obra ↗</a> <a href="#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a> <a href="#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a> <a href="#rf38" class="req-tag req-tag-rf"># RF38 · Consultar contratos de obra ↗</a> <a href="#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a> <a href="#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> A aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf10" data-type="rnf" data-rnf="RNF10" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf10 garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais urps+ segurança / legal externo — legislativo (lgpd) módulo 3 / oe3 consultas analíticas executadas por perfis operacionais ou de gestão de obra não devem expor valores salariais individuais ou dados bancários de colaboradores, exibindo unicamente montantes agregados de mão de obra. rf05 rf06 rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf10 garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais urps+ segurança / legal externo — legislativo (lgpd) módulo 3 / oe3 consultas analíticas executadas por perfis operacionais ou de gestão de obra não devem expor valores salariais individuais ou dados bancários de colaboradores, exibindo unicamente montantes agregados de mão de obra. rf05 rf06 rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Segurança / Legal</span>
+      </span>
+      <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF10 — Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Segurança / Legal</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Externo — Legislativo (LGPD)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Módulo 3 / OE3</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a> <a href="#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a> <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf10" class="req-tag req-tag-rf"># RF10 · Consultar rastreabilidade de custos ↗</a> <a href="#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a> <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a> <a href="#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a> <a href="#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a> <a href="#rf33" class="req-tag req-tag-rf"># RF33 · Cadastrar contrato de obra ↗</a> <a href="#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a> <a href="#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a> <a href="#rf38" class="req-tag req-tag-rf"># RF38 · Consultar contratos de obra ↗</a> <a href="#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a> <a href="#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Consultas analíticas executadas por perfis operacionais ou de gestão de obra não devem expor valores salariais individuais ou dados bancários de colaboradores, exibindo unicamente montantes agregados de mão de obra.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf11" data-type="rnf" data-rnf="RNF11" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf11 garantir consistência transacional acid na apropriação concorrente de custos urps+ confiabilidade produto — confiabilidade módulo 3 / oe3 a rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento serializable/repeatable read no banco de dados postgresql, impedindo lançamentos duplicados ou rateios parciais em concorrência. rf09 rf10 rf30 rf33 rf37 rf38 requisito nao funcional atributo qualidade dod" data-search-text="rnf11 garantir consistência transacional acid na apropriação concorrente de custos urps+ confiabilidade produto — confiabilidade módulo 3 / oe3 a rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento serializable/repeatable read no banco de dados postgresql, impedindo lançamentos duplicados ou rateios parciais em concorrência. rf09 rf10 rf30 rf33 rf37 rf38 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Confiabilidade</span>
+      </span>
+      <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF11 — Garantir consistência transacional ACID na apropriação concorrente de custos</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Confiabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Confiabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Módulo 3 / OE3</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf10" class="req-tag req-tag-rf"># RF10 · Consultar rastreabilidade de custos ↗</a> <a href="#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a> <a href="#rf33" class="req-tag req-tag-rf"># RF33 · Cadastrar contrato de obra ↗</a> <a href="#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a> <a href="#rf38" class="req-tag req-tag-rf"># RF38 · Consultar contratos de obra ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> A rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento Serializable/Repeatable Read no banco de dados PostgreSQL, impedindo lançamentos duplicados ou rateios parciais em concorrência.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf12" data-type="rnf" data-rnf="RNF12" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf12 assegurar responsividade do painel em resoluções de desktop e tablet urps+ usabilidade produto — usabilidade módulo 3 / oe3 o painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops). rf11 rf12 rf30 rf31 rf34 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf12 assegurar responsividade do painel em resoluções de desktop e tablet urps+ usabilidade produto — usabilidade módulo 3 / oe3 o painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops). rf11 rf12 rf30 rf31 rf34 rf39 rf40 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Usabilidade</span>
+      </span>
+      <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF12 — Assegurar responsividade do painel em resoluções de desktop e tablet</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Usabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Usabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Módulo 3 / OE3</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a> <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a> <a href="#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a> <a href="#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a> <a href="#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a> <a href="#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a> <a href="#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> O painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops).</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf13" data-type="rnf" data-rnf="RNF13" data-oe="oe4" data-mvp="mvp" data-quad="q1" data-text="rnf13 expirar token de acesso temporário em no máximo 8 horas urps+ segurança (+) produto — segurança módulo 4 / oe4 tokens de autenticação jwt possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam http 401 unauthorized. rf13 rf17 rf18 rf23 requisito nao funcional atributo qualidade dod" data-search-text="rnf13 expirar token de acesso temporário em no máximo 8 horas urps+ segurança (+) produto — segurança módulo 4 / oe4 tokens de autenticação jwt possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam http 401 unauthorized. rf13 rf17 rf18 rf23 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Segurança (+)</span>
+      </span>
+      <span class="req-pill req-pill-scope">Módulo 4 / OE4</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF13 — Expirar token de acesso temporário em no máximo 8 horas</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Segurança (+)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Segurança</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Módulo 4 / OE4</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a> <a href="#rf17" class="req-tag req-tag-rf"># RF17 · Ativar acesso inicial e recuperar credenciais ↗</a> <a href="#rf18" class="req-tag req-tag-rf"># RF18 · Encerrar sessão manualmente ↗</a> <a href="#rf23" class="req-tag req-tag-rf"># RF23 · Bloquear acesso após tentativas falhas consecutivas ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Tokens de autenticação JWT possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam HTTP 401 Unauthorized.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf14" data-type="rnf" data-rnf="RNF14" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf14 validar perfil de autorização em 100% das rotas de api com dados protegidos urps+ segurança / legal externo — legislativo (lgpd) transversal (t) / oe4 100% dos endpoints de backend que manipulam dados corporativos passam por guard/filtro rbac que valida papel e competência do usuário, rejeitando tentativas não autorizadas com http 403 forbidden em menos de 15 ms. rf13 rf14 rf17 rf18 rf23 rf24 requisito nao funcional atributo qualidade dod" data-search-text="rnf14 validar perfil de autorização em 100% das rotas de api com dados protegidos urps+ segurança / legal externo — legislativo (lgpd) transversal (t) / oe4 100% dos endpoints de backend que manipulam dados corporativos passam por guard/filtro rbac que valida papel e competência do usuário, rejeitando tentativas não autorizadas com http 403 forbidden em menos de 15 ms. rf13 rf14 rf17 rf18 rf23 rf24 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Segurança / Legal</span>
+      </span>
+      <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF14 — Validar perfil de autorização em 100% das rotas de API com dados protegidos</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Segurança / Legal</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Externo — Legislativo (LGPD)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a> <a href="#rf14" class="req-tag req-tag-rf"># RF14 · Gerenciar perfis de acesso ↗</a> <a href="#rf17" class="req-tag req-tag-rf"># RF17 · Ativar acesso inicial e recuperar credenciais ↗</a> <a href="#rf18" class="req-tag req-tag-rf"># RF18 · Encerrar sessão manualmente ↗</a> <a href="#rf23" class="req-tag req-tag-rf"># RF23 · Bloquear acesso após tentativas falhas consecutivas ↗</a> <a href="#rf24" class="req-tag req-tag-rf"># RF24 · Impor renovação periódica de senhas ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> 100% dos endpoints de backend que manipulam dados corporativos passam por guard/filtro RBAC que valida papel e competência do usuário, rejeitando tentativas não autorizadas com HTTP 403 Forbidden em menos de 15 ms.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf15" data-type="rnf" data-rnf="RNF15" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf15 garantir consistência transacional e atomicidade na gravação de logs de auditoria urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 em 100% das mutações cadastrais e financeiras, o registro correspondente de auditoria é confirmado na mesma transação atômica acid do banco de dados, com perda zero e latência de persistência ≤ 50 ms. rf15 rf16 requisito nao funcional atributo qualidade dod" data-search-text="rnf15 garantir consistência transacional e atomicidade na gravação de logs de auditoria urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 em 100% das mutações cadastrais e financeiras, o registro correspondente de auditoria é confirmado na mesma transação atômica acid do banco de dados, com perda zero e latência de persistência ≤ 50 ms. rf15 rf16 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Confiabilidade</span>
+      </span>
+      <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF15 — Garantir consistência transacional e atomicidade na gravação de logs de auditoria</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Confiabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Confiabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf15" class="req-tag req-tag-rf"># RF15 · Consultar trilha de auditoria ↗</a> <a href="#rf16" class="req-tag req-tag-rf"># RF16 · Exportar relatório de auditoria ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Em 100% das mutações cadastrais e financeiras, o registro correspondente de auditoria é confirmado na mesma transação atômica ACID do banco de dados, com perda zero e latência de persistência ≤ 50 ms.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf16" data-type="rnf" data-rnf="RNF16" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf16 reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido urps+ confiabilidade / legal externo — legal (clt art. 11 / lgpd) transversal (t) / oe4 inexistência comprovada de rotinas ou permissões de exclusão de registros com tempo de retenção inferior a 5 anos fiscais (1.825 dias), garantindo substrato defensivo em conformidade com o artigo 11 da clt. rf15 rf16 requisito nao funcional atributo qualidade dod" data-search-text="rnf16 reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido urps+ confiabilidade / legal externo — legal (clt art. 11 / lgpd) transversal (t) / oe4 inexistência comprovada de rotinas ou permissões de exclusão de registros com tempo de retenção inferior a 5 anos fiscais (1.825 dias), garantindo substrato defensivo em conformidade com o artigo 11 da clt. rf15 rf16 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Confiabilidade / Legal</span>
+      </span>
+      <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF16 — Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Confiabilidade / Legal</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Externo — Legal (CLT Art. 11 / LGPD)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf15" class="req-tag req-tag-rf"># RF15 · Consultar trilha de auditoria ↗</a> <a href="#rf16" class="req-tag req-tag-rf"># RF16 · Exportar relatório de auditoria ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Inexistência comprovada de rotinas ou permissões de exclusão de registros com tempo de retenção inferior a 5 anos fiscais (1.825 dias), garantindo substrato defensivo em conformidade com o Artigo 11 da CLT.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf17" data-type="rnf" data-rnf="RNF17" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf17 realizar backup automático diário com restauração verificada urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 rotina automatizada de backup completo diário do banco de dados e arquivos de mídia, com retenção de 30 dias e testes automatizados periódicos de restauração em até 4 horas com perda máxima (rpo) de 24 horas. rf15 rf16 requisito nao funcional atributo qualidade dod" data-search-text="rnf17 realizar backup automático diário com restauração verificada urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 rotina automatizada de backup completo diário do banco de dados e arquivos de mídia, com retenção de 30 dias e testes automatizados periódicos de restauração em até 4 horas com perda máxima (rpo) de 24 horas. rf15 rf16 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Confiabilidade</span>
+      </span>
+      <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF17 — Realizar backup automático diário com restauração verificada</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Confiabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Confiabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf15" class="req-tag req-tag-rf"># RF15 · Consultar trilha de auditoria ↗</a> <a href="#rf16" class="req-tag req-tag-rf"># RF16 · Exportar relatório de auditoria ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Rotina automatizada de backup completo diário do banco de dados e arquivos de mídia, com retenção de 30 dias e testes automatizados periódicos de restauração em até 4 horas com perda máxima (RPO) de 24 horas.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf18" data-type="rnf" data-rnf="RNF18" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf18 garantir disponibilidade mínima mensal do sistema urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 disponibilidade mínima mensal de 99,5%, medida por monitoramento sintético contínuo, com avisos de janelas de manutenção com antecedência mínima de 48 horas e execução restrita à madrugada (22h às 06h). rf01 rf04 rf05 rf09 rf13 requisito nao funcional atributo qualidade dod" data-search-text="rnf18 garantir disponibilidade mínima mensal do sistema urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 disponibilidade mínima mensal de 99,5%, medida por monitoramento sintético contínuo, com avisos de janelas de manutenção com antecedência mínima de 48 horas e execução restrita à madrugada (22h às 06h). rf01 rf04 rf05 rf09 rf13 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Confiabilidade</span>
+      </span>
+      <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF18 — Garantir disponibilidade mínima mensal do sistema</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Confiabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Confiabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a> <a href="#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a> <a href="#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a> <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Disponibilidade mínima mensal de 99,5%, medida por monitoramento sintético contínuo, com avisos de janelas de manutenção com antecedência mínima de 48 horas e execução restrita à madrugada (22h às 06h).</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf19" data-type="rnf" data-rnf="RNF19" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf19 garantir acessibilidade digital nas interfaces do sistema urps+ usabilidade produto — usabilidade (wcag) transversal (t) / oe1 formulários e telas de apontamento e consulta devem atender aos critérios de conformidade wcag 2.1 nível aa, incluindo navegação integral por teclado, contraste mínimo de 4.5:1 e rotulagem acessível aria sem erros críticos. rf01 rf02 rf03 rf04 rf11 rf12 requisito nao funcional atributo qualidade dod" data-search-text="rnf19 garantir acessibilidade digital nas interfaces do sistema urps+ usabilidade produto — usabilidade (wcag) transversal (t) / oe1 formulários e telas de apontamento e consulta devem atender aos critérios de conformidade wcag 2.1 nível aa, incluindo navegação integral por teclado, contraste mínimo de 4.5:1 e rotulagem acessível aria sem erros críticos. rf01 rf02 rf03 rf04 rf11 rf12 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Usabilidade</span>
+      </span>
+      <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF19 — Garantir acessibilidade digital nas interfaces do sistema</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Usabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Usabilidade (WCAG)</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a> <a href="#rf02" class="req-tag req-tag-rf"># RF02 · Atualizar cadastro de colaborador ↗</a> <a href="#rf03" class="req-tag req-tag-rf"># RF03 · Registrar movimentação funcional ↗</a> <a href="#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a> <a href="#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a> <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Formulários e telas de apontamento e consulta devem atender aos critérios de conformidade WCAG 2.1 nível AA, incluindo navegação integral por teclado, contraste mínimo de 4.5:1 e rotulagem acessível ARIA sem erros críticos.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="req-card req-card-rnf" id="rnf20" data-type="rnf" data-rnf="RNF20" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf20 validar integridade de payloads em todas as rotas de escrita da api urps+ confiabilidade / segurança produto — confiabilidade transversal (t) / oe4 100% das requisições post/put/patch são submetidas a validação formal de schema e sanitização contra injection antes do processamento, respondendo http 400 bad request com detalhes estruturados em caso de inconsistência. rf01 rf04 rf07 rf09 rf13 rf14 requisito nao funcional atributo qualidade dod" data-search-text="rnf20 validar integridade de payloads em todas as rotas de escrita da api urps+ confiabilidade / segurança produto — confiabilidade transversal (t) / oe4 100% das requisições post/put/patch são submetidas a validação formal de schema e sanitização contra injection antes do processamento, respondendo http 400 bad request com detalhes estruturados em caso de inconsistência. rf01 rf04 rf07 rf09 rf13 rf14 requisito nao funcional atributo qualidade dod">
+  <summary class="req-card-summary">
+    <div class="req-summary-chips">
+      <span class="req-pill req-pill-priority req-pill-rnf">
+        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>URPS+ Confiabilidade / Segurança</span>
+      </span>
+      <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    </div>
+    <div class="req-title-row">
+      <h3 class="req-card-title">RNF20 — Validar integridade de payloads em todas as rotas de escrita da API</h3>
+      <span class="req-expand-icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </div>
+  </summary>
+
+  <div class="req-card-expansion">
+    <!-- Metadados no Padrão Lumio UI (com Ícones e Tags) -->
+    <div class="req-lumio-meta">
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Classificação URPS+</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-urps">URPS+ Confiabilidade / Segurança</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Taxonomia Sommerville</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-sommerville">Produto — Confiabilidade</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Escopo de Aplicação</span>
+        </span>
+        <div class="req-lumio-val">
+          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
+        </div>
+      </div>
+      <div class="req-lumio-row">
+        <span class="req-lumio-label">
+          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <span>RFs Cobertos (Bidirecional)</span>
+        </span>
+        <div class="req-lumio-val">
+          <a href="#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a> <a href="#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a> <a href="#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a> <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a> <a href="#rf14" class="req-tag req-tag-rf"># RF14 · Gerenciar perfis de acesso ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métrica Técnica -->
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> 100% das requisições POST/PUT/PATCH são submetidas a validação formal de schema e sanitização contra injection antes do processamento, respondendo HTTP 400 Bad Request com detalhes estruturados em caso de inconsistência.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+---
 
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 07/09/2026 | Criação e estruturação da página preliminar de requisitos de software (Unidade 2). | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
-| `2.0` | 22/09/2026 | Elaboração da especificação de requisitos por módulo: Módulo 1 / OE1 (Gustavo Bonifácio), Módulo 2 / OE2 (Eric Araújo), Módulo 3 / OE3 (Giovana Ferreira) e Módulo 4 / OE4 (Matheus Saraiva). | Gustavo Bonifácio, Eric Araújo, Giovana Ferreira, Matheus Saraiva | Matheus Ribeiro Szervinsk |
-| `2.1` | 22/09/2026 | Revisão geral e unificação técnica em documento único: ajuste de abstração de escopo em OE1 e OE2, eliminação de duplicidades, formatação dos critérios de aceitação em BDD e sequenciamento de regras de negócio (RN01 a RN19). | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
-| `2.2` | 22/09/2026 | Refinamento conceitual: reestruturação dos 16 RFs como ações do usuário com valor de negócio, migração de rotinas e cálculos para regras de negócio (RN), ajuste do RF07 (reembolso), substituição de alertas por admonitions Material (!!! note) e renderização dos diagramas em imagens de alta definição com suporte a zoom interativo (GLightbox). | Matheus Ribeiro Szervinsk | Lucas Zanetti |
-| `2.4` | 24/09/2026 | Vinculação com o artefato de Priorização e MVP (escala 1 a 4 associada ao MoSCoW) e rastreabilidade com a Ata da Reunião 05. | Matheus Ribeiro Szervinsk | Lucas Zanetti |
-| `2.5` | 28/09/2026 | Ajustes decorrentes da avaliação por pares (equipe Guerreiros do Backlog): nota sobre as classificações URPS+ e Sommerville (8.1), novos RF17 a RF21 e RNF17, refinamento de RNF01 e RNF04 e atualização das matrizes de rastreabilidade e casos de teste (ver [Feedback dos Requisitos](feedback.md)). | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |
-| `2.6` | 29/09/2026 | Atualização e alinhamento dos diagramas visuais (Pirâmide de Abstração, Mapeamento de Necessidades e Grafo de Interdependência) com a totalidade dos 21 RFs e 17 RNFs da especificação refinada. | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
-| `2.7` | 30/09/2026 | Inclusão do RF22 (Exportar relatório de presenças homologadas) na CAR-09 e caso de teste CT-M1-11; esclarecimento sobre os RNFs transversais na Pirâmide de Abstração; atualização da matriz-síntese de rastreabilidade. | Matheus Ribeiro Szervinsk | Lucas Zanetti |
-| `2.8` | 30/09/2026 | Conversão do Mapeamento de Necessidades do Cliente (8.2.2) em tabela analítica completa correlacionando dores (Ishikawa e Rich Picture) com 22 RFs e 17 RNFs; atualização dos diagramas de rastreabilidade (8.2.1 e 8.2.3) com a integralidade dos 22 Requisitos Funcionais. | Matheus Ribeiro Szervinsk | Eric Araújo |
-| `2.9` | 07/10/2026 | Adição de visualizadores interativos do Miro (iframes), links alternativos para arquivos vetoriais (SVG) e imagens em alta definição (JPG), e atualização completa das tabelas e diagramas de rastreabilidade. | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |
-| `2.10` | 22/09/2026 | Atomização dos requisitos funcionais: simplificação rigorosa dos títulos dos 16 RFs como ações únicas do usuário (Verbo + Objeto), remoção de detalhes operacionais de escopo e conjunções compostas conforme revisão de pares. | Matheus Ribeiro Szervinsk | Lucas Zanetti |
-| `2.11` | 28/09/2026 | Ajustes decorrentes da avaliação por pares (equipe Guerreiros do Backlog): nota sobre as classificações URPS+ e Sommerville (8.1), refinamento do RF04, novos RF17 a RF22 e RNF17, refinamento de RNF01 e RNF04, reescrita das RN06 e RN18 e atualização das matrizes de rastreabilidade e casos de teste (ver [Feedback dos Requisitos](feedback.md)). | Matheus Saraiva Camargo | Matheus Szervinsk |
-| `2.12` | 06/10/2026 | Expansão do Módulo 4 (OE4) com RF23 e RF24 (política de senha e bloqueio por tentativas falhas), RN20 e RN21, enriquecimento de filtros do RF15, e inclusão da seção de Requisitos Não Funcionais Transversais (RNF18 a RNF20: disponibilidade, acessibilidade e integridade de API). | Matheus Saraiva Camargo | Matheus Ribeiro |
-| `2.13` | 07/10/2026 | Expansão dos requisitos dos Módulos 1, 2 e 3 com RF25 a RF31 e RN22 a RN29; refinamento de RF11 e RF22; inclusão de novos casos de teste; atualização da matriz-síntese e criação do Catálogo Geral Consolidado de Requisitos (Seção 8.4). | Matheus Saraiva Camargo | Matheus Ribeiro |
-| `2.14` | 08/10/2026 | Atualização das referências cruzadas ao capítulo de Priorização e MVP (Seção 8.4) após a refatoração da Matriz 4×4 (Valor × Esforço); nenhum requisito foi alterado. | Eric Araújo | Matheus Ribeiro |
-| `3.0` | 08/10/2026 | Atendimento ao feedback docente da apresentação prévia da Unidade 2: remoção do BDD (*Dado-Quando-Então*) da especificação de requisitos, reescrita da seção 8.1 e conversão dos critérios de aceitação dos 31 RFs (OE1 a OE4) para texto corrido, verificável e orientado ao valor de negócio. | Paulo Nery | |
-| `3.1` | 11/10/2026 | Consolidação arquitetural e visual do Capítulo 8: reestruturação da especificação modular (8.3) em abas interativas (`pymdownx.tabbed`) em contêiner fluido; alinhamento da Matriz-Síntese (8.4) e Catálogo Geral (8.5) com o Template Oficial (v8); colorização temática por módulo em tabelas e cards; harmonização do sistema externo para *Shifton* e refinamento de links cruzados. | Matheus Ribeiro Szervinsk | Matheus Saraiva Camargo e Eric Araújo |
-| `3.2` | 12/10/2026 | Saneamento e ajustes decorrentes da revisão por pares: inclusão de RF32 (deliberação de campo), RF33 (gestão de contratos), RF34 (centros de custo e orçamentos), RF35 (retificação de apontamento) e RF36 (exportação CSV/XLSX); adição de RN30 e RN31 (fórmulas e parâmetros de diárias e comissões); explicitação de fontes de elicitação e regras de negócio no Catálogo de RFs e CTs; criação do Catálogo Geral de Regras de Negócio (RN01 a RN31) com rastreabilidade bidirecional; redistribuição modular dos RNFs universais (RNF18 a RNF20); eliminação de promessas de folha CLT legadas; e padronização para aplicação web responsiva (Web App / PWA). | Matheus Ribeiro Szervinsk | Eric Araújo e Matheus Saraiva Camargo |
-| `3.3` | 12/10/2026 | Aprimoramento da qualidade dos requisitos, desambiguação e conformidade jurídica (CLT e LGPD): unificação dos atores na Matriz Canônica de Papéis RBAC (4 perfis canônicos); definição operacional de termos ambíguos (dados válidos, tempo de propagação síncrono, carga nominal de 50 usuários a 10 req/s, limiares de alerta); desacoplamento de pré-fechamento e homologação no RF06; redefinição de RNF07 e RNF08 como atributos de qualidade de software (robustez de arquivos e não-repúdio); desambiguação entre regras de negócio (RN16, RN17, RN19) e requisitos não funcionais (RNF10, RNF14, RNF15, RNF16); reclassificação do RNF16 para Reliability / Legal (+); e inclusão de seção de conformidade jurídica fundamentando o Art. 11 da CLT (política corporativa defensiva), o Art. 16, I e II da LGPD (exceção ao direito de eliminação) e o Art. 5º, II da LGPD (distinção entre dados pessoais confidenciais e dados sensíveis). | Matheus Ribeiro Szervinsk | Eric Araújo e Matheus Saraiva Camargo |
-| `3.4` | 12/10/2026 | Atualização da imagens jpg e svg da pirâmide conforme novos requisitos e nomenclaturas; Ajuste do histórico de versão. | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |
-| `3.5` | 13/10/2026 | Remoção de cards de alerta de centralização operacional e rastreabilidade na pirâmide, integrando as justificativas diretamente à narrativa do texto e atualizando âncoras internas. | Matheus Ribeiro Szervinsk | Eric Araújo |
-| `3.6` | 13/10/2026 | Auditoria de integridade e qualidade metodológica: restauração do Mapeamento de Necessidades do Cliente (Ishikawa 4M e Tensões TR-01 a TR-04 do Rich Picture correlacionados aos 36 RFs e 20 RNFs) e do Grafo de Interdependência dos Requisitos; padronização estrita de RF24 para "Impor renovação periódica de senhas"; remoção de adjetivos subjetivos em RNF02 e RNF05 com métricas explícitas; e detalhamento da janela de manutenção programada no RNF18. | Matheus Ribeiro Szervinsk | Eric Araújo |
-| `3.7` | 29/10/2026 | Revisão de rastreabilidade conforme issue docente e Capítulo 1: correção dos códigos TR no Mapeamento de Necessidades (TR-03 para consolidação financeira e TR-04 para apropriação de custos) e das categorias às quatro do Ishikawa adaptado; remoção de TR-01 de itens de cadastro e inclusão de TR nas fontes de RF19, RF21, RF22 e RF30; remoção do RNF02 das CAR-09 e CAR-10 e inclusão do RNF07 na CAR-02; unificação da RN18 e alinhamento dos nomes de RN03 e RN04; sincronização das colunas de RNs entre catálogos e matrizes dos módulos; realocação da RN30 ao Módulo 1; inclusão do CT-M3-06 na CAR-06; nota sobre RNFs transversais. | Gustavo Bonifácio |  |
-| `3.8` | 02/11/2026 | Revisão cruzada com os Capítulos 2, 4 e 6 após feedback do professor: ferramenta de presença padronizada como FLIT (nome anteriormente registrado como Shifton) em RF20, CAR-09, matrizes e catálogos; nenhum requisito foi alterado | Gustavo Bonifácio |  |
+| `4.3` | 02/11/2026 | **Revisão Cruzada & FLIT:** ferramenta de presença padronizada como FLIT (anteriormente registrada como Shifton) em RF20, CAR-09, critérios DoR/DoD e catálogo; refinamento dos perfis dos atores RBAC e inclusão de nota de alinhamento sociotécnico de Maria Beatryz. | Gustavo Bonifácio e Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `4.2` | 02/11/2026 | **Padronização Expandida & Links Bidirecionais:** migração das Regras de Negócio (cards vermelhos) e Requisitos Não Funcionais (cards azuis) para a arquitetura expansível padronizada dos RFs; estabelecimento da linkagem bidirecional recíproca entre Características de Produto (CAR-01 a CAR-10) e Requisitos Funcionais; saneamento de rotas e âncoras relativas do MkDocs. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `4.1` | 30/10/2026 | **Desacoplamento e Interconexão Bidirecional Total:** separação da Pirâmide de Abstração e Matriz-Síntese no documento exclusivo `rastreabilidade.md`; remoção da seção preliminar de Casos de Uso do Catálogo; reestruturação completa das 31 Regras de Negócio e 20 Requisitos Não Funcionais em cards visuais interativos com links bidirecionais diretos para os Requisitos Funcionais executores; integração com deck de navegação rápida. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `4.0` | 29/10/2026 | Consolidação do Catálogo Unificado de Requisitos: centralização dos 40 RFs em Cards de Rastreabilidade Total interativos com links para OEs, CARs, USs, Matriz 4×4 e RNFs; introdução de barra de pesquisa instantânea e filtros rápidos por Módulo e MVP. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `3.8` | 29/10/2026 | Atendimento à issue #126: consolidação das especificações nos módulos, atualização da rastreabilidade e das referências do catálogo; alinhamento de RN02, RF32, RF35 e casos de teste para correção de apontamentos rejeitados. | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |
+| `3.7` | 28/10/2026 | Sincronização com a Priorização e o Backlog: confirmação da alocação no MVP de RF32 a RF35 e de RF36 no backlog evolutivo, refletida nas histórias US32 a US36. | Paulo Nery | Matheus Ribeiro Szervinsk |
+| `3.6` | 13/10/2026 | Auditoria de integridade e qualidade metodológica: restauração do Mapeamento de Necessidades do Cliente e Grafo de Interdependência; padronização estrita de RF24 e métricas de RNF02 e RNF05. | Matheus Ribeiro Szervinsk | Eric Araújo |
+| `3.0` | 08/10/2026 | Atendimento ao feedback docente: conversão dos critérios de aceitação para texto corrido verificável orientado a valor. | Paulo Nery | Matheus Ribeiro Szervinsk |
+| `1.0` | 07/09/2026 | Criação e estruturação da especificação inicial de requisitos de software (Unidade 2). | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |

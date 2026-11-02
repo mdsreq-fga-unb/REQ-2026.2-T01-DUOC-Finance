@@ -1,4 +1,4 @@
-# Capítulo 1: Cenário Atual e Diagnóstico do Problema
+# Cenário Atual e Diagnóstico do Problema
 
 ## Objetivo do Capítulo
 
@@ -72,7 +72,7 @@ A partir do diálogo inicial e das entrevistas semiestruturadas com a auxiliar a
 
 ### Análise do Rich Picture — Sistema DUOC Finance
 
-![Rich Picture do Sistema DUOC Finance](../../assets/images/Rich_picture_DUOC.png)
+![Rich Picture do Sistema DUOC Finance](../assets/images/Rich_picture_DUOC.png)
 
 !!! note "Revisão de fronteiras (v2)"
     A versão anterior deste diagrama misturava o cenário atual e a solução proposta dentro do mesmo bloco visual — notadamente selos "resolvido pelo novo sistema" embutidos no bloco "Problemas" e o bloco "Oportunidades" sem vínculo visual claro a nenhum dos dois lados. A versão atual separa as duas dimensões em zonas explicitamente delimitadas: **Situação Atual (AS-IS)**, com borda sólida azul, e **Solução Proposta (TO-BE)**, com borda tracejada verde — conforme legenda na base da imagem.
@@ -86,7 +86,7 @@ Ao redor desse núcleo, o diagrama posiciona os **atores externos e interfaces**
 - **Clientes** (residencial, comercial, infraestrutura), que enviam briefings e recebem aprovações/feedback;
 - **Órgãos reguladores** (prefeitura, licenças), que impõem restrições formais de conformidade;
 - **Consultores complementares** e **fornecedores de material** (MEP, elétrica, plumbing/HVAC, factorias, landscape), que alimentam o processo de compatibilização técnica;
-- Um bloco inferior de **sistemas envolvidos** (BIM/Revit/ArchiCAD, gestão de projetos via MS Project, comunicação via Slack/e-mail, ERPs/planilhas), que representa a infraestrutura tecnológica legada com a qual o novo sistema DP + Financeiro interopera. As integrações com FLIT, ERPs/planilhas, BIM e Slack estão formalizadas como [CAR-09](../capitulo-2/index.md#car-09) a [CAR-12](../capitulo-2/index.md#car-12), todas planejadas para a Fase 2 (pós-MVP); a gestão de projetos via MS Project não tem integração planejada nesta fase e permanece apenas como referência de infraestrutura legada observada.
+- Um bloco inferior de **sistemas envolvidos** (BIM/Revit/ArchiCAD, gestão de projetos via MS Project, comunicação via Slack/e-mail, ERPs/planilhas), que representa a infraestrutura tecnológica legada com a qual o novo sistema DP + Financeiro interopera. As integrações com FLIT, ERPs/planilhas, BIM e Slack estão formalizadas como [CAR-09](solucao-proposta.md#car-09) a [CAR-12](solucao-proposta.md#car-12), todas planejadas para a Fase 2 (pós-MVP); a gestão de projetos via MS Project não tem integração planejada nesta fase e permanece apenas como referência de infraestrutura legada observada.
 
 ### Fluxos de Informação e Transações Rotineiras
 
@@ -98,7 +98,7 @@ O bloco "**Problemas**", na zona da Situação Atual, nomeia os principais ponto
 
 ### Fronteira do Sistema DUOC Finance
 
-O escopo do novo sistema é delimitado na zona "**Solução Proposta (TO-BE)**", à direita do diagrama, com borda tracejada verde para diferenciá-la visualmente da zona "Situação Atual (AS-IS)": lançamento de apontamentos de campo (RVT), fluxo digital de despesas e reembolsos operacionais, cálculo parametrizado de diárias técnicas e comissões de obra (sem rotinas de folha de pagamento CLT, encargos fiscais ou gestão de benefícios/férias), apuração de custo direto de mão de obra por projeto/contrato, controle de acesso/perfis (RBAC), conformidade LGPD e as integrações externas com FLIT, ERPs/planilhas, BIM e Slack, todas planejadas para a Fase 2 pós-MVP (CAR-09 a CAR-12 — ver [2.6 Viabilidade da Proposta](../capitulo-2/index.md#26-viabilidade-da-proposta-analise-do-mvp)). O bloco "Oportunidades Estratégicas" também está posicionado nessa zona, pois representa benefícios habilitados pela solução, não características do estado atual. Tudo que estiver fora dessa lista (ex.: gestão de projetos via MS Project) permanece como sistema de apoio externo, na zona da Situação Atual, sem integração planejada nesta fase.
+O escopo do novo sistema é delimitado na zona "**Solução Proposta (TO-BE)**", à direita do diagrama, com borda tracejada verde para diferenciá-la visualmente da zona "Situação Atual (AS-IS)": lançamento de apontamentos de campo (RVT), fluxo digital de despesas e reembolsos operacionais, cálculo parametrizado de diárias técnicas e comissões de obra (sem rotinas de folha de pagamento CLT, encargos fiscais ou gestão de benefícios/férias), apuração de custo direto de mão de obra por projeto/contrato, controle de acesso/perfis (RBAC), conformidade LGPD e as integrações externas com FLIT, ERPs/planilhas, BIM e Slack, todas planejadas para a Fase 2 pós-MVP (CAR-09 a CAR-12 — ver [2.6 Viabilidade da Proposta](solucao-proposta.md#26-viabilidade-da-proposta-analise-do-mvp)). O bloco "Oportunidades Estratégicas" também está posicionado nessa zona, pois representa benefícios habilitados pela solução, não características do estado atual. Tudo que estiver fora dessa lista (ex.: gestão de projetos via MS Project) permanece como sistema de apoio externo, na zona da Situação Atual, sem integração planejada nesta fase.
 
 ### Estrutura Detalhada das Transações
 
@@ -122,7 +122,7 @@ O escopo do novo sistema é delimitado na zona "**Solução Proposta (TO-BE)**",
 
 ### Diagrama de Causa e Efeito (Ishikawa)
 
-![Diagrama de Ishikawa](../../assets/images/diagrama_ishikawa_duoc.png)
+![Diagrama de Ishikawa](../assets/images/diagrama_ishikawa_duoc.png)
 
 ### Análise das Causas-Raiz
 

@@ -30,12 +30,12 @@ Eric Araújo apresentou presencialmente à cliente Maria Beatryz o protótipo de
 
 | Tela do protótipo | Característica relacionada | Requisitos relacionados | Resultado da avaliação |
 | :--- | :---: | :--- | :---: |
-| **Colaboradores** | [CAR-01](../visao-produto/capitulo-2/index.md#car-01) | RF01, RF02, RF03, RF25, RF26 | Aprovada sem alterações |
-| **Visão Geral** | [CAR-06](../visao-produto/capitulo-2/index.md#car-06) | RF11 | Aprovada sem alterações |
-| **Análise de Custos** | [CAR-05](../visao-produto/capitulo-2/index.md#car-05) e [CAR-06](../visao-produto/capitulo-2/index.md#car-06) | RF10, RF11 | Aprovada sem alterações |
-| **Perfis e Permissões** | [CAR-07](../visao-produto/capitulo-2/index.md#car-07) | RF14 | Aprovada sem alterações |
+| **Colaboradores** | [CAR-01](../../visao-produto/solucao-proposta.md#car-01) | RF01, RF02, RF03, RF25, RF26 | Aprovada sem alterações |
+| **Visão Geral** | [CAR-06](../../visao-produto/solucao-proposta.md#car-06) | RF11 | Aprovada sem alterações |
+| **Análise de Custos** | [CAR-05](../../visao-produto/solucao-proposta.md#car-05) e [CAR-06](../../visao-produto/solucao-proposta.md#car-06) | RF10, RF11 | Aprovada sem alterações |
+| **Perfis e Permissões** | [CAR-07](../../visao-produto/solucao-proposta.md#car-07) | RF14 | Aprovada sem alterações |
 
-Os requisitos citados estão especificados no [Capítulo 8 — Especificação de Requisitos](../requisitos/index.md).
+Os requisitos citados estão especificados no [Capítulo 8 — Especificação de Requisitos](../../requisitos/index.md).
 
 ---
 
@@ -52,9 +52,9 @@ Os requisitos citados estão especificados no [Capítulo 8 — Especificação d
 * **Registro:** Sessão presencial, não gravada. Esta ata foi elaborada em 28/10/2026 com base no relato do condutor da sessão (Eric Araújo); por isso, não há minutagem.
 * **Protótipo avaliado:** [DUOC Finance — protótipo de alta fidelidade no Figma](https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39)
 * **Artefatos Relacionados:**
-    * [Capítulo 4 — Execução do Design do Usuário no Incremento 1](../estrategias-esw/index.md#execucao-do-design-do-usuario-no-incremento-1)
-    * [Capítulo 6 — Cronograma e Planejamento de Entregas](../cronograma/index.md)
-    * [Capítulo 7 — Processo de Validação Sociotécnica e Homologação com a Cliente](../interacao-cliente/index.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente)
+    * [Capítulo 4 — Execução do Design do Usuário no Incremento 1](../../metodologia/estrategias-esw.md#execucao-do-design-do-usuario-no-incremento-1)
+    * [Capítulo 6 — Cronograma e Planejamento de Entregas](../../metodologia/cronograma.md)
+    * [Capítulo 7 — Processo de Validação Sociotécnica e Homologação com a Cliente](../../metodologia/interacao-cliente.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente)
 
 ---
 
@@ -63,7 +63,7 @@ Os requisitos citados estão especificados no [Capítulo 8 — Especificação d
 | Ação Determinada | Responsável | Objetivo / Descrição | Prazo | Status |
 | :--- | :--- | :--- | :---: | :---: |
 | **Construir o frontend navegável** | Equipe Cascata Ágil | Transpor as telas aprovadas para o frontend com dados mockados, conforme a orientação da [Reunião 04](reuniao-04.md) de que a prototipação no RAD corresponde ao frontend funcional. | A definir | Pendente |
-| **Validar no frontend com a cliente** | Eric Araújo | Conduzir a sessão de validação no frontend navegável, condição do [DoR](../dor-dod/index.md#definition-of-ready-dor) para iniciar a lógica e a persistência. | A definir | Pendente |
+| **Validar no frontend com a cliente** | Eric Araújo | Conduzir a sessão de validação no frontend navegável, condição do [DoR](../../mvp/dor-dod.md#definition-of-ready-dor) para iniciar a lógica e a persistência. | A definir | Pendente |
 | **Obter ciência da cliente sobre esta ata** | Eric Araújo | Enviar esta ata à cliente para confirmação por escrito, já que a sessão não foi gravada. | A definir | Pendente |
 
 ---

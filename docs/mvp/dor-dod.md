@@ -1,4 +1,4 @@
-# Capítulo 9: Definition of Ready (DoR) e Definition of Done (DoD)
+# Critérios de Aceitação: Definition of Ready (DoR) e Definition of Done (DoD)
 
 Este capítulo formaliza os acordos de trabalho da equipe **Cascata Ágil** para selecionar itens aptos à construção e verificar quando um incremento do **DUOC Finance** está concluído. Os critérios consideram o contexto sociotécnico da DUOC, a participação da cliente parceira **Maria Beatryz** e o processo **RAD UI-First**, constituindo o artefato transversal de Governança e Qualidade da **Unidade 2** em atendimento à Seção 9 do Template Oficial da disciplina (**Definition of Ready — DoR** e **Definition of Done — DoD**).
 
@@ -30,15 +30,15 @@ O checklist foi aplicado documentalmente à história **US04 — Submeter Aponta
 
 | Verificação | Estado | Evidência localizada ou pendência |
 | :--- | :--- | :--- |
-| **Problema e escopo claros** | Documentado | O [backlog](../backlog/index.md) descreve a US04 e o escopo controlado do apontamento de campo; o [cronograma](../cronograma/index.md) associa o Incremento 1 à gestão cadastral e ao RVT. |
-| **Sem ambiguidades impeditivas** | Parcial | A descrição e as regras do fluxo constam na US04 do [backlog](../backlog/index.md); falta evidência vinculada ao item de que dúvidas e decisões impeditivas foram confirmadas com a cliente. |
-| **Tamanho adequado ao incremento** | Documentado | A US04 está priorizada no MVP com escopo controlado e consta como fatiada para o MVP na avaliação INVEST do [backlog](../backlog/index.md). |
-| **História canônica e INVEST** | Documentado | A US04 está no formato “Como [papel], quero [ação], para [benefício]” e aparece como 100% INVEST no [backlog](../backlog/index.md). |
-| **Critérios de aceitação objetivos** | Documentado | A US04 lista CA01 a CA03 no [backlog](../backlog/index.md). Este registro confirma que os critérios estão especificados, não que foram executados ou aceitos. |
-| **Regras de negócio explícitas** | Parcial | O [backlog](../backlog/index.md) descreve status inicial, retificação em até cinco dias úteis e validação de horas; falta evidência vinculada ao item de confirmação das regras com a cliente. |
-| **Qualidade, dados e dependências** | Parcial | A US04 relaciona RF04 e requisitos não funcionais no [backlog](../backlog/index.md); não foi localizada evidência do contrato de dados preliminar associado ao item. |
-| **Base visual preparada** | Parcial | O [cronograma](../cronograma/index.md) registra o estabelecimento de designs de tela de RVT e cadastros no Frontend; não foi localizado neste registro um link para o Figma ou para o preview navegável associado ao item. |
-| **Validação sociotécnica concluída** | Pendente | O [cronograma](../cronograma/index.md) registra a janela prevista de validação em 02/10/2026 e informa que não há comprovação do aceite nas [Atas 01 a 05](../atas/index.md). |
+| **Problema e escopo claros** | Documentado | O [backlog](../mvp/backlog.md) descreve a US04 e o escopo controlado do apontamento de campo; o [cronograma](../metodologia/cronograma.md) associa o Incremento 1 à gestão cadastral e ao RVT. |
+| **Sem ambiguidades impeditivas** | Parcial | A descrição e as regras do fluxo constam na US04 do [backlog](../mvp/backlog.md); falta evidência vinculada ao item de que dúvidas e decisões impeditivas foram confirmadas com a cliente. |
+| **Tamanho adequado ao incremento** | Documentado | A US04 está priorizada no MVP com escopo controlado e consta como fatiada para o MVP na avaliação INVEST do [backlog](../mvp/backlog.md). |
+| **História canônica e INVEST** | Documentado | A US04 está no formato “Como [papel], quero [ação], para [benefício]” e aparece como 100% INVEST no [backlog](../mvp/backlog.md). |
+| **Critérios de aceitação objetivos** | Documentado | A US04 lista CA01 a CA03 no [backlog](../mvp/backlog.md). Este registro confirma que os critérios estão especificados, não que foram executados ou aceitos. |
+| **Regras de negócio explícitas** | Parcial | O [backlog](../mvp/backlog.md) descreve status inicial, retificação em até cinco dias úteis e validação de horas; falta evidência vinculada ao item de confirmação das regras com a cliente. |
+| **Qualidade, dados e dependências** | Parcial | A US04 relaciona RF04 e requisitos não funcionais no [backlog](../mvp/backlog.md); não foi localizada evidência do contrato de dados preliminar associado ao item. |
+| **Base visual preparada** | Parcial | O [cronograma](../metodologia/cronograma.md) registra o estabelecimento de designs de tela de RVT e cadastros no Frontend; não foi localizado neste registro um link para o Figma ou para o preview navegável associado ao item. |
+| **Validação sociotécnica concluída** | Pendente | O [cronograma](../metodologia/cronograma.md) registra a janela prevista de validação em 02/10/2026 e informa que não há comprovação do aceite nas [Atas 01 a 05](../governanca/atas/index.md). |
 
 **Decisão registrada:** **a prontidão da US04 não está comprovada; não liberar como Pronto (DoR) com as evidências atualmente localizadas**. Para este registro, a história fica em **Refinamento** até que sejam vinculados a ela o aceite ou as ressalvas da interface e as demais evidências pendentes, especialmente o contrato de dados preliminar e o link do protótipo. Esta é uma avaliação documental, não uma confirmação do estado histórico no GitHub Projects, e deve ser atualizada caso novas evidências sejam registradas.
 
@@ -95,7 +95,7 @@ Para cada item concluído, a Issue ou PR deve permitir localizar:
 
 Os portões se aplicam a cada história/incremento, não apenas aos marcos acadêmicos. No ciclo **UI-First**, primeiro se planeja e refina a história, estabelece-se a interface com base no Figma e prototipa-se no Frontend com mocks; a validação pela cliente satisfaz a etapa visual do DoR. Só então se constrói a lógica e a persistência. Em seguida, o incremento passa por verificação, demonstração/homologação e refinamento do ciclo seguinte.
 
-O acordo complementa as fases e a adaptação do processo **RAD** descritas no [Capítulo 4 — Estratégias de Engenharia de Software](../estrategias-esw/index.md#adaptacao-do-processo-rad-ao-contexto-da-duoc) e o ciclo UI-First, o fluxo `Backlog do Produto → Refinamento → Pronto (DoR) → Em Desenvolvimento → Em Verificação → Em Validação → Concluído (DoD)` e o planejamento por incrementos descritos no [Capítulo 6 — Cronograma](../cronograma/index.md#racional-metodologico-do-cronograma). Os critérios de requisitos, regras de negócio e métricas de qualidade devem ser rastreados à [especificação do Capítulo 8](../requisitos/index.md), e a interação de validação/homologação segue o [processo com a cliente no Capítulo 7](../interacao-cliente/index.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente).
+O acordo complementa as fases e a adaptação do processo **RAD** descritas no [Capítulo 4 — Estratégias de Engenharia de Software](../metodologia/estrategias-esw.md#adaptacao-do-processo-rad-ao-contexto-da-duoc) e o ciclo UI-First, o fluxo `Backlog do Produto → Refinamento → Pronto (DoR) → Em Desenvolvimento → Em Verificação → Em Validação → Concluído (DoD)` e o planejamento por incrementos descritos no [Capítulo 6 — Cronograma](../metodologia/cronograma.md#racional-metodologico-do-cronograma). Os critérios de requisitos, regras de negócio e métricas de qualidade devem ser rastreados à [especificação do Capítulo 8](../requisitos/index.md), e a interação de validação/homologação segue o [processo com a cliente no Capítulo 7](../metodologia/interacao-cliente.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente).
 
 Na **Unidade 2 / Incremento 1**, o marco de 15/10/2026 associa telas homologadas pela cliente, DoR, DER e backlog INVEST. O marco acadêmico é um ponto de controle; não substitui o avanço contínuo dos ciclos RAD nem dispensa o DoD de cada incremento.
 

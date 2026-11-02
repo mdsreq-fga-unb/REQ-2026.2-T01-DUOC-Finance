@@ -74,7 +74,7 @@ A reunião estabeleceu o direcionamento do escopo inicial para o desenvolvimento
 ## 5. Gravação e Links
 
 * **Gravação:** não publicada no portal.
-* **Artefatos relacionados:** [Capítulo 1 — Cenário Atual](../visao-produto/capitulo-1/index.md) e [Capítulo 2 — Solução Proposta](../visao-produto/capitulo-2/index.md).
+* **Artefatos relacionados:** [Capítulo 1 — Cenário Atual](../../visao-produto/cenario-atual.md) e [Capítulo 2 — Solução Proposta](../../visao-produto/solucao-proposta.md).
 
 ---
 

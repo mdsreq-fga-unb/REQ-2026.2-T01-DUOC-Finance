@@ -81,7 +81,7 @@ A equipe avaliou a nota 7 obtida na Unidade 1 como resultado positivo e mapeou o
 ## 6. Gravação e Links
 
 * **Registro:** transcrição automática da sessão (sem gravação publicada no portal).
-* **Artefatos relacionados:** [Capítulo 6 — Cronograma](../cronograma/index.md), [Capítulo 8 — Requisitos](../requisitos/index.md) e [Entrega 2 (Ponto de Controle 2)](../entregas/entrega-2.md).
+* **Artefatos relacionados:** [Cronograma](../../metodologia/cronograma.md), [Requisitos](../../requisitos/index.md) e [Entrega 2 (Ponto de Controle 2)](../../entregas/entrega-2.md).
 
 ---
 

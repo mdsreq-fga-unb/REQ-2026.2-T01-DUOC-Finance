@@ -1,4 +1,4 @@
-# Capítulo 4: Estratégias de Engenharia de Software
+# Estratégias de Engenharia de Software
 
 ## Objetivo do Capítulo
 
@@ -27,10 +27,10 @@ A partir das informações sobre o cenário atual da DUOC Arquitetura e Engenhar
 
 #### Adaptação do Processo RAD ao Contexto da DUOC
 
-Para atender à necessidade de integração sistêmica e consistência técnica, o processo RAD será estruturado nas seguintes fases, integrando as definições arquiteturais da equipe (Next.js no frontend, FastAPI no backend e PostgreSQL gerenciado via Supabase):
+Para atender à necessidade de integração sistêmica e consistência técnica, o processo RAD será estruturado nas seguintes fases, integrando as definições arquiteturais da equipe (React SPA/Vite no frontend, NestJS no backend e PostgreSQL gerenciado via Supabase):
 
 1.  **Modelagem de Negócio e Planejamento de Requisitos:** Levantamento inicial com a cliente (Maria Beatryz) para estabelecer a taxonomia de dados (o que é uma obra, o que é RVT, quais são as verbas da folha). O foco inicial é estabelecer o *schema* do banco de dados (PostgreSQL/Supabase) para garantir a integridade das informações desde o primeiro dia.
-2.  **Design do Usuário (Prototipagem e Dados):** Sessões conjuntas e frequentes com os usuários finais. Esta fase ocorre em duas frentes: visual (usabilidade das telas no Next.js para os operários/engenheiros) e funcional/matemática (prototipagem das APIs em FastAPI para validar os algoritmos de cálculo de folha e comissões antes da integração visual).
+2.  **Design do Usuário (Prototipagem e Dados):** Sessões conjuntas e frequentes com os usuários finais. Esta fase ocorre em duas frentes: visual (usabilidade das telas no React SPA para os operários/engenheiros) e funcional/matemática (prototipagem dos serviços no NestJS para validar os algoritmos de cálculo de diárias e comissões antes da integração visual).
 3.  **Construção Iterativa:** Implementação das funcionalidades em fatias. Em vez de entregar o backend inteiro e depois o frontend, a equipe foca em entregar fluxos completos (ex: de ponta a ponta, salvar um registro de RVT no banco e visualizar no relatório).
 4.  **Cutover e Refinamento:** Liberação do módulo funcional para uso e homologação da cliente, iterando com base nos resultados práticos de cálculo.
 
@@ -41,12 +41,12 @@ O primeiro ciclo de Design do Usuário do DUOC Finance foi executado sobre um pr
 | Etapa do ciclo | O que aconteceu | Evidência |
 | :--- | :--- | :--- |
 | **Fluxos prototipados** | Telas de Colaboradores, Visão Geral, Análise de Custos e Perfis e Permissões, entre outras, em protótipo de alta fidelidade. | [Protótipo no Figma](https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39) |
-| **Quem prototipou** | Eric Araújo (Product Owner), após a configuração dos acessos da equipe ao Figma em 25/09/2026. | [Ata 05](../atas/reuniao-05.md#6-acoes-futuras-action-items) |
-| **Quem avaliou e quando** | Maria Beatryz, cliente parceira, em sessão presencial conduzida por Eric Araújo em 02/10/2026. | [Ata 06](../atas/reuniao-06.md) |
-| **Mudanças resultantes** | Nenhuma: a cliente aprovou as telas, os campos e os fluxos sem solicitar ajustes. | [Ata 06, decisão D1](../atas/reuniao-06.md#4-decisoes-tomadas) |
-| **Próximo passo** | Transpor as telas aprovadas para o frontend navegável com dados mockados e repetir a validação com a cliente no frontend, condição do DoR para iniciar a lógica e a persistência. | [Ata 06, ações futuras](../atas/reuniao-06.md#6-acoes-futuras-action-items) e [DoR](../dor-dod/index.md#definition-of-ready-dor) |
+| **Quem prototipou** | Eric Araújo (Product Owner), após a configuração dos acessos da equipe ao Figma em 25/09/2026. | [Ata 05](../governanca/atas/reuniao-05.md#6-acoes-futuras-action-items) |
+| **Quem avaliou e quando** | Maria Beatryz, cliente parceira, em sessão presencial conduzida por Eric Araújo em 02/10/2026. | [Ata 06](../governanca/atas/reuniao-06.md) |
+| **Mudanças resultantes** | Nenhuma: a cliente aprovou as telas, os campos e os fluxos sem solicitar ajustes. | [Ata 06, decisão D1](../governanca/atas/reuniao-06.md#4-decisoes-tomadas) |
+| **Próximo passo** | Transpor as telas aprovadas para o frontend navegável com dados mockados e repetir a validação com a cliente no frontend, condição do DoR para iniciar a lógica e a persistência. | [Ata 06, ações futuras](../governanca/atas/reuniao-06.md#6-acoes-futuras-action-items) e [DoR](../mvp/dor-dod.md#definition-of-ready-dor) |
 
-**Desvio em relação ao processo planejado:** o [Processo de Validação Sociotécnica](../interacao-cliente/index.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente) prevê sessões por Google Meet em que a cliente navega no frontend. Como o frontend navegável ainda não estava pronto, o primeiro ciclo foi feito presencialmente sobre o protótipo no Figma e não foi gravado. Por isso, as telas aprovadas ainda não cumprem o DoR: falta a validação no frontend, que é o próximo passo do ciclo.
+**Desvio em relação ao processo planejado:** o [Processo de Validação Sociotécnica](../metodologia/interacao-cliente.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente) prevê sessões por Google Meet em que a cliente navega no frontend. Como o frontend navegável ainda não estava pronto, o primeiro ciclo foi feito presencialmente sobre o protótipo no Figma e não foi gravado. Por isso, as telas aprovadas ainda não cumprem o DoR: falta a validação no frontend, que é o próximo passo do ciclo.
 
 ---
 
@@ -61,7 +61,7 @@ O quadro a seguir apresenta uma comparação analítica entre o processo **RAD**
 | **Natureza do Produto Ideal** | Sistemas de informação e gestão (como o DUOC Finance) com escopo que pode ser particionado (decomponível) em módulos de interface bem definidos e regras de banco de dados claras. | Sistemas com lógicas de negócio altamente complexas, voláteis ou desconhecidas, onde o maior risco reside na arquitetura de software em constante mutação. |
 | **Envolvimento do Usuário** | Exige participação intensa e colaborativa durante a modelagem e o design de interfaces (JAD - *Joint Application Design*), focando em validar o fluxo operacional e relatórios. | Exige um cliente "on-site" em tempo integral, participando da escrita de testes de aceitação e guiando o direcionamento em níveis micro de desenvolvimento. |
 | **Validação Funcional e Técnica** | A validação ocorre pela homologação das regras de dados e experimentação funcional dos protótipos em ciclos curtos de revisão. | A validação é centrada em Testes Automatizados (TDD), Desenvolvimento Orientado a Comportamento (BDD) e revisões contínuas de código (*Pair Programming*). |
-| **Arquitetura de Software** | Estabelece um alicerce arquitetural (Modelo de Dados/Supabase e base de APIs em FastAPI) cedo no processo, evoluindo a interface de forma rápida sobre essa fundação. | Considera que a arquitetura ideal "emerge" organicamente durante o desenvolvimento contínuo (Design Simples e Refatoração Constante). |
+| **Arquitetura de Software** | Estabelece um alicerce arquitetural (Modelo de Dados/Supabase e base de APIs em NestJS) cedo no processo, evoluindo a interface de forma rápida sobre essa fundação. | Considera que a arquitetura ideal "emerge" organicamente durante o desenvolvimento contínuo (Design Simples e Refatoração Constante). |
 
 ---
 
@@ -71,8 +71,8 @@ O quadro a seguir apresenta uma comparação analítica entre o processo **RAD**
 Com base nas características intrínsecas do produto DUOC Finance, na decomposição do escopo e no perfil dos usuários, o **RAD (Rapid Application Development)** foi selecionado como o processo de desenvolvimento ideal pelas seguintes razões:
 
 1.  **Natureza Decomponível do Produto:** O DUOC Finance não é uma plataforma experimental de algoritmo obscuro, mas um sistema de gestão financeira e de departamento pessoal com um fluxo linear e claro (Lançamento de Ponto/RVT -> Apuração de Regras -> Fechamento de Folha/Comissões -> Relatórios). O RAD se adequa em projetos dessa natureza, pois permite particionar esses módulos verticais claramente. A equipe pode, por exemplo, prototipar e validar exaustivamente a interface de lançamento de RVT para os operários da obra, enquanto consolida, em paralelo, a modelagem de dados do motor de cálculos.
-2.  **Alta Disponibilidade e Perfil dos Usuários:** O RAD exige e pressupõe um envolvimento intenso e direto do usuário final. A realidade do projeto da DUOC atende plenamente a este requisito, contando com a alta disponibilidade da representante da empresa (Maria Beatryz) para sessões frequentes de validação e refinamento de design. A interação constante elimina a necessidade de documentos prescritivos longos, reduzindo ambiguidades antes da construção das APIs no FastAPI ou telas no Next.js.
-3.  **Prototipagem em Duas Vias (Usabilidade e Regras de Negócio):** O gargalo administrativo da DUOC envolve não apenas a experiência do usuário de campo ao lançar horas no sistema, mas, crucialmente, a validade dos cálculos por trás da interface. No RAD, a "prototipagem" será aplicada de forma abrangente: a equipe validará a usabilidade fluida no cliente web (Next.js) para garantir adesão, e criará testes práticos no motor de cálculo (FastAPI backend) para homologar a aderência matemática da apropriação de custos da obra e das regras de folha com a cliente.
+2.  **Alta Disponibilidade e Perfil dos Usuários:** O RAD exige e pressupõe um envolvimento intenso e direto do usuário final. A realidade do projeto da DUOC atende plenamente a este requisito, contando com a alta disponibilidade da representante da empresa (Maria Beatryz) para sessões frequentes de validação e refinamento de design. A interação constante elimina a necessidade de documentos prescritivos longos, reduzindo ambiguidades antes da construção das APIs no NestJS ou telas no React SPA.
+3.  **Prototipagem em Duas Vias (Usabilidade e Regras de Negócio):** O gargalo administrativo da DUOC envolve não apenas a experiência do usuário de campo ao lançar horas no sistema, mas, crucialmente, a validade dos cálculos por trás da interface. No RAD, a "prototipagem" será aplicada de forma abrangente: a equipe validará a usabilidade fluida no cliente web (React SPA) para garantir adesão, e criará testes práticos no motor de cálculo (NestJS backend) para homologar a aderência matemática da apropriação de custos da obra e das regras de diárias e comissões com a cliente.
 4.  **Evolução sobre Arquitetura Consistente:** Embora a solução exija evolução contínua, uma ferramenta financeira exige forte integridade relacional. Diferente do XP, que encoraja uma arquitetura estritamente emergente e evolutiva de baixo para cima, o RAD permite à equipe estabelecer antecipadamente a espinha dorsal dos dados (utilizando banco relacional PostgreSQL no Supabase) para suportar a LGPD e regras financeiras com firmeza, enquanto utiliza ciclos rápidos para adaptar interfaces e fluxos de trabalho gerenciais.
 
 ---
@@ -83,6 +83,7 @@ Com base nas características intrínsecas do produto DUOC Finance, na decomposi
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 05/09/2026 | Definição da abordagem, ciclo de vida, comparativo e justificativa | Eric Araújo | Matheus Ribeiro Szervinsk |
 | `1.1` | 07/09/2026 | Padronização metodológica, alinhamento institucional e histórico | Eric Araújo | Matheus Ribeiro Szervinsk |
+| `1.2` | 02/11/2026 | Harmonização da stack tecnológica com o Capítulo 2 (React SPA/Vite, NestJS e PostgreSQL/Supabase), saneamento de termos legados e alinhamento às decisões de arquitetura | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `2.0` | 15/09/2026 | Unificação integral dos artefatos 4.1 a 4.3 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `2.1` | 20/09/2026 | Refatoração profunda para aderência ao Processo RAD, eliminação de nomenclaturas ágeis de gestão e alinhamento de stack tecnológica | Eric Araújo | |
 | `2.2` | 28/10/2026 | Inclusão da execução do Design do Usuário no Incremento 1: fluxos prototipados no Figma, responsável, avaliação pela cliente em 02/10/2026 (Ata 06), resultado, próximo passo e desvio em relação ao processo planejado. | Paulo Nery | — |
