@@ -17,10 +17,10 @@ Para assegurar o rigor analítico, a testabilidade e a rastreabilidade exigidos 
 
 | Módulo | Objetivo Específico | Características Cobertas (CAR) | Requisitos Funcionais (Ação do Usuário) | Requisitos Não Funcionais | Casos de Teste |
 | :---: | :--- | :---: | :---: | :---: | :---: |
-| <span class="mod-badge mod-1">Módulo 1</span> | [**OE1 — Padronização e Unificação de Dados**](#oe1-padronizacao-e-unificacao-de-dados) | CAR-01, CAR-02, CAR-09, CAR-10 | RF01 a RF04, RF19, RF20, RF22, RF25, RF26, RF32, RF35 e RF36 | RNF01 a RNF04, RNF19 | CT-M1-01 a CT-M1-17 |
-| <span class="mod-badge mod-2">Módulo 2</span> | [**OE2 — Eficiência Administrativo-Financeira**](#oe2-eficiencia-administrativo-financeira) | CAR-03, CAR-04 | RF05 a RF08, RF21, RF27, RF28 e RF29 | RNF05 a RNF08 | CT-M2-01 a CT-M2-12 |
-| <span class="mod-badge mod-3">Módulo 3</span> | [**OE3 — Inteligência de Custos por Contrato**](#oe3-inteligencia-de-custos-por-contrato) | CAR-05, CAR-06 | RF09 a RF12, RF30, RF31, RF33 e RF34 | RNF09 a RNF12 | CT-M3-01 a CT-M3-12 |
-| <span class="mod-badge mod-4">Módulo 4</span> | [**OE4 — Governança, Segurança e Rastreabilidade**](#oe4-governanca-seguranca-e-rastreabilidade) | CAR-07, CAR-08 | RF13 a RF18, RF23 e RF24 | RNF13 a RNF18, RNF20 | CT-M4-01 a CT-M4-15 |
+| <span class="mod-badge mod-1">Módulo 1</span> | [**OE1 — Padronização e Unificação de Dados**](modulo-1.md) | CAR-01, CAR-02, CAR-09, CAR-10 | RF01 a RF04, RF19, RF20, RF22, RF25, RF26, RF32, RF35 e RF36 | RNF01 a RNF04, RNF19 | CT-M1-01 a CT-M1-17 |
+| <span class="mod-badge mod-2">Módulo 2</span> | [**OE2 — Eficiência Administrativo-Financeira**](modulo-2.md) | CAR-03, CAR-04 | RF05 a RF08, RF21, RF27, RF28 e RF29 | RNF05 a RNF08 | CT-M2-01 a CT-M2-12 |
+| <span class="mod-badge mod-3">Módulo 3</span> | [**OE3 — Inteligência de Custos por Contrato**](modulo-3.md) | CAR-05, CAR-06 | RF09 a RF12, RF30, RF31, RF33, RF34 e RF37 a RF40 | RNF09 a RNF12 | CT-M3-01 a CT-M3-16 |
+| <span class="mod-badge mod-4">Módulo 4</span> | [**OE4 — Governança, Segurança e Rastreabilidade**](modulo-4.md) | CAR-07, CAR-08 | RF13 a RF18, RF23 e RF24 | RNF13 a RNF18, RNF20 | CT-M4-01 a CT-M4-15 |
 
 ### Atores do Sistema e Matriz Canônica de Papéis (RBAC)
 
@@ -29,7 +29,7 @@ Para sanar ambiguidades de papéis decorrentes da multiplicidade de funções op
 | Papel Sistêmico (RBAC) | Código no Sistema | Descrição Operacional das Atribuições | Mapeamento com Stakeholders da DUOC |
 | :--- | :---: | :--- | :--- |
 | **Técnico de Campo / Diarista** | `TECNICO_CAMPO` | Preenche e retifica apontamentos de produção e horas de campo (RVT) via aplicação web responsiva (RF04, RF35), anexa fotos e evidências da atividade (RF22), consulta exclusivamente os próprios registros (RF19) e submete solicitações de reembolso e adiantamento operacional (RF07, RF28). | Operários, diaristas, técnicos residentes, arquitetos em visita técnica e estagiários. |
-| **Gestor Operacional de Obras** | `GESTOR_OBRAS` | Cadastra e gerencia contratos de obras e clientes (RF33), parametriza centros de custo e tetos orçamentários por obra (RF34), e delibera apontamentos de campo de sua alçada com homologação ou rejeição justificada (RF32). | Engenheiros de obra, coordenadores técnicos, encarregados de canteiro e sócios em função técnica. |
+| **Gestor Operacional de Obras** | `GESTOR_OBRAS` | Cadastra, atualiza e consulta contratos de obras (RF33, RF37, RF38), cadastra e atualiza centros de custo (RF34, RF39), define tetos orçamentários por obra (RF40) e delibera apontamentos de campo de sua alçada com homologação ou rejeição justificada (RF32). | Mapeamento a confirmar com a equipe e a cliente. |
 | **Administrador Financeiro** | `ADMIN_FINANCEIRO` | Gerencia o cadastro de colaboradores (RF01, RF02, RF03, RF25, RF26), configura a tabela vigente de diárias (RF27), emite prévias (RF05), homologa fechamentos mensais (RF06), delibera despesas e reembolsos (RF08, RF29), dispara apropriações de custos (RF09) e exporta dados consolidados (RF36). | **Auxiliar-Administradora (Maria Beatryz)**, que na estrutura corporativa enxuta da DUOC centraliza rotinas de DP/RH, contas a pagar e finanças. |
 | **Administrador do Sistema** | `ADMIN_SISTEMA` | Gerencia perfis e atribuição de papéis de usuários (RF14), monitora a segurança global da plataforma, expiração de senhas e bloqueios por tentativas falhas (RF23, RF24), e audita eventos probatórios (RF15, RF16). | Sócios-diretores e equipe técnica responsável pela sustentação de TI e governança da segurança da informação. |
 
@@ -77,13 +77,14 @@ O diagrama abaixo apresenta o desdobramento hierárquico *top-down* da solução
 </a>
 </p>
 
+> **Nota de atualização (22/10/2026):** As representações gráficas de rastreabilidade ainda refletem a estrutura anterior à decomposição dos RF33 e RF34. Os requisitos RF37 a RF40 já estão documentados nas tabelas e matrizes de rastreabilidade atualizadas. A atualização das imagens e do diagrama original no Miro permanece pendente.
 **Rastreabilidade dos Requisitos Não Funcionais na Pirâmide de Abstração:** O grafo estrutural da Pirâmide de Abstração acima formaliza a descendência vertical estrita do escopo observável e das ações do usuário (**Objetivo Geral ➔ Objetivos Específicos ➔ Características ➔ Requisitos Funcionais**). Os **Requisitos Não Funcionais (RNFs)**, por constituírem atributos de qualidade sistêmica e restrições arquiteturais (*cross-cutting concerns*), não figuram como folhas exclusivas de uma única funcionalidade, mas qualificam as características e o produto como um todo (por exemplo, segurança e integridade no RNF03 e RNF14, usabilidade no RNF04 e RNF19, e confiabilidade no RNF06 e RNF18). A amarração individualizada e auditável de cada um dos 20 RNFs às CARs e às metas de negócio é detalhada na [Especificação Modular dos Requisitos](#especificacao-modular-dos-requisitos) e na [Matriz-Síntese Geral de Rastreabilidade](#matriz-sintese-geral-de-rastreabilidade).
 
 ---
 
 ### Mapeamento de Necessidades do Cliente (Dores do Ishikawa e Rich Picture ➔ Requisitos)
 
-A rastreabilidade horizontal do **DUOC Finance** conecta diretamente as causas-raiz identificadas no [Diagrama de Causa e Efeito (Ishikawa)](../visao-produto/capitulo-1/index.md#diagrama-de-causa-e-efeito-ishikawa) (estruturado nas 4 categorias adaptadas: *Métodos*, *Medição*, *Tecnologia* e *Pessoas*) e as tensões operacionais do [Rich Picture](../visao-produto/capitulo-1/index.md#rich-picture-fluxo-sociotecnico) (TR-01 a TR-04) às respostas arquiteturais e funcionais da solução, cobrindo a totalidade dos **36 Requisitos Funcionais** e **20 Requisitos Não Funcionais** projetados para mitigar as dores operacionais da organização parceira.
+A rastreabilidade horizontal do **DUOC Finance** conecta diretamente as causas-raiz identificadas no [Diagrama de Causa e Efeito (Ishikawa)](../visao-produto/capitulo-1/index.md#diagrama-de-causa-e-efeito-ishikawa) (estruturado nas 4 categorias adaptadas: *Métodos*, *Medição*, *Tecnologia* e *Pessoas*) e as tensões operacionais do [Rich Picture](../visao-produto/capitulo-1/index.md#rich-picture-fluxo-sociotecnico) (TR-01 a TR-04) às respostas arquiteturais e funcionais da solução, cobrindo o catálogo atual de **40 Requisitos Funcionais** e **20 Requisitos Não Funcionais** projetados para mitigar as dores operacionais da organização parceira.
 
 <div class="cronograma-diagram-box" markdown="1">
 
@@ -121,7 +122,7 @@ O grafo visual abaixo explicita a **rede de relacionamentos, dependências e fac
 
 ## Especificação Modular dos Requisitos
 
-Esta seção consolida a especificação detalhada dos requisitos do ***DUOC Finance***, decomposta em **quatro módulos de negócio** que respondem diretamente aos Objetivos Específicos (OE1 a OE4) e suas Características de Produto (CAR), distribuindo os atributos de qualidade e requisitos técnicos diretamente nos módulos operacionais correspondentes.
+Os requisitos estão divididos em quatro módulos, cada um com sua própria página. Nelas estão as definições completas dos requisitos funcionais, regras de negócio, requisitos não funcionais e casos de teste.
 
 Para cada módulo são apresentados:
 
@@ -428,12 +429,21 @@ Utilize as abas interativas abaixo para alternar entre os módulos e consultar a
 
 ---
 
+
 <a id="matriz-sintese-geral-de-rastreabilidade"></a>
+
 ## Matriz-Síntese Geral de Rastreabilidade
 
-A matriz a seguir consolida a **rastreabilidade bidirecional global** entre os Objetivos Específicos (OE), as Características do Produto (CAR), seus respectivos Valores de Negócio (VN), os Requisitos Funcionais (RF), os Requisitos Não Funcionais (RNF) e a suíte executável de Casos de Teste (CT) do sistema.
+Esta matriz relaciona os objetivos específicos (OE), as características do produto (CAR), os valores de negócio (VN), os requisitos funcionais (RF), os requisitos não funcionais (RNF) e os casos de teste (CT) do DUOC Finance.
 
-Esta estruturação atende plenamente ao modelo oficial da **Seção 8.3 do Template (REQ - 2026.1 - v8 OFICIAL)**, correlacionando a **contribuição principal**, a **contribuição secundária** e o valor entregue ao negócio da **DUOC Arquitetura e Engenharia**:
+Ela permite identificar quais requisitos atendem a cada característica e quais testes verificam seu funcionamento. As definições completas estão disponíveis nas páginas dos módulos:
+
+- [Módulo 1 — Padronização e Unificação de Dados](modulo-1.md)
+- [Módulo 2 — Eficiência Administrativo-Financeira](modulo-2.md)
+- [Módulo 3 — Inteligência de Custos por Contrato](modulo-3.md)
+- [Módulo 4 — Governança, Segurança e Rastreabilidade](modulo-4.md)
+
+Os códigos dos RFs na tabela são links para suas definições oficiais. Os casos de teste estão detalhados nas matrizes de rastreabilidade de cada módulo.
 
 | Contribuição Principal (OE) | Contribuição Secundária (OE) | Característica do Produto (CAR) | Valor de Negócio (VN) | Requisitos Funcionais (RF) | Requisitos Não Funcionais (RNF) | Casos de Teste (CT) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -672,9 +682,12 @@ Utilize as abas abaixo para consultar o detalhamento metodológico e a síntese 
 
 ## Catálogo Geral Consolidado de Requisitos
 
-Esta seção consolida os requisitos funcionais e não funcionais do **DUOC Finance** em uma visão única, permitindo a consulta rápida de sua identificação, vínculo estratégico, alocação modular e participação preliminar no MVP. Esta seção atende diretamente ao escopo consolidado das seções **8.1 (Lista de Requisitos Funcionais)** e **8.2 (Lista de Requisitos Não Funcionais)** preconizadas pelo Template Oficial da disciplina.
+Este catálogo reúne os requisitos do **DUOC Finance** e permite localizar suas especificações completas. Cada requisito funcional possui uma definição oficial na página do módulo correspondente.
 
-A indicação de MVP apresentada neste catálogo representa o recorte atual do produto e deverá permanecer sincronizada com a priorização formal apresentada no [Priorização de Requisitos e Definição do MVP](priorizacao.md), em especial a Matriz 4 × 4 (Valor de Negócio × Esforço Técnico) e a Fundamentação Matemática das Coordenadas Cartesianas (Seção 10.4).
+As relações entre requisitos funcionais, regras de negócio, fontes de elicitação e casos de teste estão documentadas nas páginas de cada módulo e em suas matrizes de rastreabilidade.
+
+A avaliação do valor de negócio, do esforço técnico e a definição do escopo do MVP estão disponíveis em [Priorização de Requisitos e Definição do MVP](priorizacao.md). A linha de corte original contempla RF01 a RF31; os requisitos RF32 a RF40 possuem tratamento complementar, com avaliações históricas ou pendentes de revisão, conforme detalhado na [seção de requisitos complementares](priorizacao.md#requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte).
+
 
 ### Catálogo de Requisitos Funcionais
 
@@ -719,34 +732,43 @@ A indicação de MVP apresentada neste catálogo representa o recorte atual do p
 
 ### Catálogo de Requisitos Não Funcionais
 
-| Código | Requisito | Módulo / OE | URPS+ | Sommerville | Critério Mensurável | Alocação no MVP |
-| :---: | :--- | :---: | :--- | :--- | :--- | :---: |
-| **RNF01** | Operar em modo offline para coleta de dados em canteiros sem conectividade | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | Reliability | Requisito do Produto — Confiabilidade | Armazenar localmente pelo menos 100 apontamentos e sincronizar em até 30 s após o restabelecimento da conexão. | Evolutivo |
-| **RNF02** | Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | Performance | Requisito do Produto — Desempenho | Busca e renderização da ficha em até 2,0 s em 95% das requisições sob carga nominal (50 usuários a 10 req/s). | MVP |
-| **RNF03** | Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | Security (+) | Requisito do Produto — Segurança | Dados pessoais e bancários confidenciais protegidos com AES-256 e comunicações realizadas com TLS 1.3 (LGPD Art. 6º, VII). | MVP |
-| **RNF04** | Garantir usabilidade e agilidade no preenchimento de apontamentos | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | Usability | Requisito do Produto — Usabilidade | Apontamento concluído em até 5 passos/telas e taxa de sucesso ≥ 90% em teste de usabilidade em primeiro uso. | MVP |
-| **RNF05** | Processar rotina de fechamento financeiro em até 5,0 segundos | <span class="mod-badge mod-2">Módulo 2 / OE2</span> | Performance | Requisito do Produto — Eficiência/Desempenho | Processar até 500 apontamentos em no máximo 5,0 s em 95 de 100 execuções. | MVP |
-| **RNF06** | Garantir exatidão aritmética centesimal em cálculos monetários | <span class="mod-badge mod-2">Módulo 2 / OE2</span> | Reliability | Requisito do Produto — Confiabilidade/Acurácia | Discrepância monetária de exatamente R$ 0,00 em comparação ao gabarito contábil. | MVP |
-| **RNF07** | Garantir robustez e segurança no processamento e armazenamento de comprovantes | <span class="mod-badge mod-2">Módulo 2 / OE2</span> | Security (+) / Reliability | Requisito do Produto — Confiabilidade e Robustez | Validação de cabeçalhos binários (magic numbers), bloqueio de uploads > 5 MB em < 500 ms com HTTP 400 estruturado e persistência segura em PDF, PNG e JPEG. | MVP |
-| **RNF08** | Garantir rastreabilidade probatória e não-repúdio em operações de estorno | <span class="mod-badge mod-2">Módulo 2 / OE2</span> | Security (+) / Reliability | Requisito do Produto — Segurança da Informação e Auditoria | Coleta obrigatória de metadados de não-repúdio (IP, UTC, autor, JSON do estado financeiro anterior) e abortamento de estorno sem justificativa mínima de 15 caracteres. | MVP |
-| **RNF09** | Carregar painel analítico em tempo inferior a 3 segundos | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | Performance | Requisito do Produto — Eficiência/Desempenho | Renderização completa em até 3,0 s para base de até 10.000 lançamentos e 100 contratos. | MVP |
-| **RNF10** | Sanitizar e mascarar dados financeiros confidenciais em projeções analíticas | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | Security (+) | Requisito do Produto — Segurança da Informação | Mascaramento de taxas horárias e remunerações nominais para perfis não financeiros em consultas analíticas, com sobrecarga ≤ 10 ms. | MVP |
-| **RNF11** | Garantir consistência transacional ACID na apropriação de custos | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | Reliability | Requisito do Produto — Confiabilidade/Dependabilidade | Nenhuma duplicidade ou divergência em 100 testes de operações concorrentes. | MVP |
-| **RNF12** | Assegurar responsividade do painel em desktop e tablet | <span class="mod-badge mod-3">Módulo 3 / OE3</span> | Usability | Requisito do Produto — Usabilidade | Elementos essenciais devem permanecer utilizáveis em 1024×768 e 768×1024 sem rolagem horizontal. | MVP |
-| **RNF13** | Expirar token de acesso temporário em no máximo 8 horas | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | Security (+) | Requisito do Produto — Confiabilidade/Segurança | Tokens com mais de 8 horas devem ser rejeitados com HTTP 401 em 100% dos testes. | MVP |
-| **RNF14** | Validar perfil de autorização em 100% das rotas de API com dados protegidos | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | Security (+) / Legal | Requisito Externo — Legislativo/Regulamentar (LGPD Art. 6º) | 100% dos endpoints sensíveis protegidos por guards RBAC e acesso indevido retornando HTTP 403 em ≤ 15 ms. | MVP |
-| **RNF15** | Garantir consistência transacional e atomicidade na gravação de logs de auditoria | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | Reliability | Requisito do Produto — Confiabilidade/Dependabilidade | Toda escrita em dados protegidos com registro de auditoria na mesma transação atômica ACID, com perda zero e latência ≤ 50 ms. | MVP |
-| **RNF16** | Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | Reliability / Legal (+) | Requisito Externo — Requisito Legal / Regulatório (Conformidade CLT / LGPD) | Travas de banco e restrições de privilégios impedindo a exclusão física de registros antes de 1.825 dias (CLT Art. 11 / LGPD Art. 16). | MVP |
-| **RNF17** | Realizar backup automático diário com restauração verificada | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | Reliability | Requisito do Produto — Confiabilidade/Dependabilidade | Backup diário, retenção mínima de 30 dias, restauração em até 4 h e perda máxima de 24 h. | MVP |
-| **RNF18** | Garantir disponibilidade mínima mensal do sistema | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | Reliability | Requisito do Produto — Confiabilidade | Disponibilidade mínima mensal de 99,5%, com manutenção programada comunicada com no mínimo 48h de antecedência em janela fora do horário comercial (22h às 06h UTC). | MVP |
-| **RNF19** | Garantir acessibilidade digital nas interfaces | <span class="mod-badge mod-1">Módulo 1 / OE1</span> | Usability | Requisito do Produto — Usabilidade | Navegação por teclado, rótulos ARIA e contraste mínimo 4.5:1, conforme WCAG 2.1 AA. | MVP |
-| **RNF20** | Validar integridade de payloads nas rotas de escrita da API | <span class="mod-badge mod-4">Módulo 4 / OE4</span> | Reliability / Security (+) | Requisito do Produto — Confiabilidade | 100% das requisições POST, PUT e PATCH validadas por schema; payload inválido retorna HTTP 400. | MVP |
+Os requisitos não funcionais (RNFs) definem as condições de qualidade, desempenho, segurança e confiabilidade do **DUOC Finance**.
+
+A tabela abaixo apresenta os 20 RNFs e seus módulos. Os critérios mensuráveis e as classificações URPS+ e Sommerville estão disponíveis nas especificações completas.
+
+| Código | Requisito Não Funcional | Módulo / OE |
+| :---: | :--- | :---: |
+| [**RNF01**](modulo-1.md#requisitos-nao-funcionais) | Operar em modo offline para coleta de dados em canteiros sem conectividade | Módulo 1 / OE1 |
+| [**RNF02**](modulo-1.md#requisitos-nao-funcionais) | Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos | Módulo 1 / OE1 |
+| [**RNF03**](modulo-1.md#requisitos-nao-funcionais) | Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito | Módulo 1 / OE1 |
+| [**RNF04**](modulo-1.md#requisitos-nao-funcionais) | Garantir usabilidade e agilidade no preenchimento de apontamentos de campo | Módulo 1 / OE1 |
+| [**RNF05**](modulo-2.md#requisitos-nao-funcionais) | Processar rotina de fechamento financeiro em até 5,0 segundos | Módulo 2 / OE2 |
+| [**RNF06**](modulo-2.md#requisitos-nao-funcionais) | Garantir exatidão aritmética centesimal em cálculos monetários | Módulo 2 / OE2 |
+| [**RNF07**](modulo-2.md#requisitos-nao-funcionais) | Garantir robustez e segurança no processamento e armazenamento de comprovantes | Módulo 2 / OE2 |
+| [**RNF08**](modulo-2.md#requisitos-nao-funcionais) | Garantir rastreabilidade probatória e não-repúdio em operações de estorno | Módulo 2 / OE2 |
+| [**RNF09**](modulo-3.md#requisitos-nao-funcionais) | Carregar o painel analítico em tempo inferior a 3 segundos | Módulo 3 / OE3 |
+| [**RNF10**](modulo-3.md#requisitos-nao-funcionais) | Sanitizar e mascarar dados financeiros confidenciais em projeções analíticas | Módulo 3 / OE3 |
+| [**RNF11**](modulo-3.md#requisitos-nao-funcionais) | Garantir consistência transacional ACID na apropriação concorrente de custos | Módulo 3 / OE3 |
+| [**RNF12**](modulo-3.md#requisitos-nao-funcionais) | Assegurar responsividade do painel em resoluções de desktop e tablet | Módulo 3 / OE3 |
+| [**RNF13**](modulo-4.md#requisitos-nao-funcionais) | Expirar token de acesso temporário em no máximo 8 horas | Módulo 4 / OE4 |
+| [**RNF14**](modulo-4.md#requisitos-nao-funcionais) | Validar perfil de autorização em 100% das rotas de API com dados protegidos | Módulo 4 / OE4 |
+| [**RNF15**](modulo-4.md#requisitos-nao-funcionais) | Garantir consistência transacional e atomicidade na gravação de logs de auditoria | Módulo 4 / OE4 |
+| [**RNF16**](modulo-4.md#requisitos-nao-funcionais) | Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido | Módulo 4 / OE4 |
+| [**RNF17**](modulo-4.md#requisitos-nao-funcionais) | Realizar backup automático diário com restauração verificada | Módulo 4 / OE4 |
+| [**RNF18**](modulo-4.md#requisitos-nao-funcionais) | Garantir disponibilidade mínima mensal do sistema | Módulo 4 / OE4 |
+| [**RNF19**](modulo-1.md#requisitos-nao-funcionais) | Garantir acessibilidade digital nas interfaces do sistema | Módulo 1 / OE1 |
+| [**RNF20**](modulo-4.md#requisitos-nao-funcionais) | Validar integridade de payloads em todas as rotas de escrita da API | Módulo 4 / OE4 |
+
+
+
 
 ### Catálogo Geral de Regras de Negócio (RN01 a RN31)
 
-A tabela a seguir estabelece a **rastreabilidade bidirecional completa** entre as Regras de Negócio (RN01 a RN31), os Módulos/Características do sistema, os Requisitos Funcionais que as implementam ou são por elas condicionados, e as Fontes de Elicitação originais:
+O catálogo relaciona as regras de negócio aos requisitos funcionais e às fontes de elicitação. A definição completa de cada regra está disponível no módulo correspondente.
 
-| Código | Regra de Negócio | Módulo / CAR | Requisitos Funcionais Relacionados | Fonte de Elicitação / Origem |
+Os códigos das regras direcionam à seção de regras de negócio de cada módulo. Os requisitos funcionais relacionados podem ser consultados no [Catálogo de Requisitos Funcionais](#catalogo-de-requisitos-funcionais).
+
+| Código | Regra de Negócio | Módulo / CAR | RFs Relacionados | Fonte de Elicitação / Origem |
 | :---: | :--- | :---: | :--- | :--- |
 | **RN01** | Unicidade e Validação Cadastral por CPF | <span class="mod-badge mod-1">Módulo 1 / CAR-01</span> | RF01 | Reunião 01, Reunião 04 |
 | **RN02** | Bloqueio Temporal e Imutabilidade de Apontamentos Homologados | <span class="mod-badge mod-1">Módulo 1 / CAR-02</span> | RF04, RF32, RF35 | Reunião 03, Reunião 05, TR-01 |
@@ -780,7 +802,6 @@ A tabela a seguir estabelece a **rastreabilidade bidirecional completa** entre a
 | **RN30** | Parecer Obrigatório na Rejeição e Bloqueio na Aprovação de Campo | <span class="mod-badge mod-1">Módulo 1 / CAR-02</span> | RF32 | Reunião 03, Reunião 05, Revisão de Pares |
 | **RN31** | Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo | <span class="mod-badge mod-2">Módulo 2 / CAR-03</span> | RF05, RF27 | Reunião 01, Reunião 05, Revisão de Pares |
 
----
 
 ## Histórico de Versão
 

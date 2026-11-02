@@ -113,7 +113,7 @@ Os papéis citados nas histórias são os **quatro papéis sistêmicos canônico
 | **US25**<sup>†</sup> | <span class="mod-badge mod-1">EP01 · OE1</span> | Como **Administrador Financeiro**, quero classificar o colaborador como Diarista, CLT ou Prestador de Serviço, para que o sistema aplique as regras administrativas e financeiras do vínculo correto. | RF25 | RNF02 + **T** | **MVP** |
 | **US26**<sup>†</sup> | <span class="mod-badge mod-1">EP01 · OE1</span> | Como **Administrador Financeiro**, quero consultar o histórico de alterações cadastrais e bancárias de um colaborador, com autor e data de cada mudança, para que divergências administrativas possam ser rastreadas e esclarecidas. | RF26 | RNF02 + **T** | **MVP** |
 | **US04** | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **Técnico de Campo**, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de WhatsApp. | RF04 | RNF01 *(evolutivo)*, RNF04 + **T** | **MVP** |
-| **US19** | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **Técnico de Campo**, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e possa retificá-los antes do fechamento. | RF19 | RNF04 + **T** | **MVP** |
+| **US19** | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **Técnico de Campo**, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e identifique quais registros ainda posso retificar antes do fechamento. | RF19 | RNF04 + **T** | **MVP** |
 | **US22**<sup>†</sup> | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **Técnico de Campo**, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no RVT. | RF22 | RNF04, RNF07 + **T** | **MVP** |
 | **US32**<sup>†</sup> | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **Gestor Operacional de Obras**, quero homologar ou rejeitar os apontamentos de campo pendentes dos contratos sob minha responsabilidade, com parecer obrigatório na rejeição, para que apenas horas validadas sigam para o fechamento financeiro e o autor seja informado da decisão. | RF32 | **T** | **MVP** |
 | **US35**<sup>†</sup> | <span class="mod-badge mod-1">EP02 · OE1</span> | Como **Técnico de Campo**, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão. | RF35 | RNF04, RNF07 + **T** | **MVP** |
@@ -231,9 +231,9 @@ O quadrante de cada história é obtido pelo cruzamento do **VB** com a **classe
 
 ### Tabela Consolidada de Priorização
 
-A ordem sugerida posiciona primeiro as histórias do MVP e, dentro de cada grupo, ordena por **IP decrescente**. Em caso de empate, prevalece o maior **VB** e, depois, o menor código.
+A ordem sugerida posiciona primeiro as histórias do MVP e, dentro de cada grupo, ordena por **IP decrescente**. Em caso de empate, prevalece o maior **VB** e, depois, o menor código. A coluna **ES** reproduz as horas e a nota da [Tabela Consolidada das Avaliações](../requisitos/priorizacao.md#tabela-consolidada-das-avaliacoes), única fonte de estimativa do projeto; os cartões das histórias adotam os mesmos valores.
 
-| Ordem | US | RF | História de Usuário (resumo) | Épico | VB | ES | CX | LC | EC (classe) | IP | Quadrante | Prioridade Sugerida | Linha de Corte |
+| Ordem | US | RF | História de Usuário (resumo) | Épico | VB | ES (h / nota) | CX | LC | EC (classe) | IP | Quadrante | Prioridade Sugerida | Linha de Corte |
 | :---: | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- | :---: |
 | 1 | **US13** | RF13 | Efetuar login no sistema | <span class="mod-badge mod-4">EP08</span> | **4** | 1 | 1 | 1 | 1,00 (1) | **4,00** | **Q1** | Alta — implementar no MVP | **MVP** |
 | 2 | **US18** | RF18 | Encerrar sessão manualmente | <span class="mod-badge mod-4">EP08</span> | **3** | 1 | 1 | 1 | 1,00 (1) | **3,00** | **Q1** | Alta — implementar no MVP | **MVP** |
@@ -284,6 +284,24 @@ As três histórias de **alto valor e alto esforço** permanecem no MVP com a es
 | **US05** — Solicitar prévia de fechamento | 3,33 | 1,20 | **Escopo concentrado:** regras contratuais ativas e valores vigentes de diárias (**US27**), sem encargos e provisões da folha CLT mantidos em sistemas contábeis externos. |
 | **US09** — Apropriar custos operacionais | 3,33 | 0,90 | **Apropriação direta:** lotes homologados vinculados ao contrato ativo; comparativos históricos (**US30**) e alertas (**US31**) ficam para a evolução do produto. |
 
+### Dependências para o Planejamento da Construção
+
+O Índice de Prioridade ordena as histórias pelo retorno de negócio; a sequência de construção nos ciclos RAD também respeita as pré-condições funcionais entre elas. A tabela a seguir explicita essas pré-condições e confirma que **nenhuma história do MVP depende de item ausente do backlog ou postergado**:
+
+| História habilitadora | O que fornece | Histórias que dependem dela |
+| :---: | :--- | :--- |
+| **US13**, **US14** | Autenticação e papéis RBAC (RN15, RN16) | Todas as histórias com acesso restrito |
+| **US01**, **US25** | Colaborador ativo, com dados bancários e tipo de contratação (RN03, RN22) | US04, US05, US07, US28 |
+| **US33** | Contratos de obra ativos (RN09, RN11) | US04, US07, US09, US28, US34 |
+| **US34** | Centros de custo e tetos orçamentários (RN09, RN13) | US09, US11 (e, no pós-MVP, US12 e US31) |
+| **US04** → **US35** | Apontamento enviado e, se necessário, retificado enquanto pendente (RN02) | US32 |
+| **US32** | Apontamentos homologados pelo gestor (RN05, RN10) | US05, US09 |
+| **US27** | Valor vigente das diárias técnicas (RN25, RN31) | US05 |
+| **US05** | Prévia conferida da competência | US06 |
+| **US07**, **US28** | Solicitações pendentes de análise | US08, US29 |
+
+Com a inclusão de **US32 a US35**, o fluxo selecionado — cadastro, contrato, apontamento, retificação, homologação, prévia, fechamento e apropriação — fica integralmente coberto por histórias do MVP.
+
 ### Composição do MVP e do Backlog Evolutivo
 
 A linha de corte segue a regra formalizada no Capítulo 8: histórias com **VB 3 ou 4** (quadrantes Q1 e Q2) compõem o MVP, e histórias com **VB 1 ou 2** (quadrantes Q3 e Q4) compõem o backlog evolutivo.
@@ -292,9 +310,9 @@ A linha de corte segue a regra formalizada no Capítulo 8: histórias com **VB 3
 flowchart LR
     subgraph QUAD["Distribuição das 31 Histórias Pontuadas por Quadrante"]
         direction TB
-        Q1["<b>Q1 — Alto valor × Baixo esforço</b><br>20 US<br>US01, US02, US03, US06, US07, US08, US10, US11, US13, US14,<br>US17, US18, US19, US22, US23, US25, US26, US27, US28, US29"]
+        Q1["<b>Q1 — Alto valor × Baixo esforço</b><br>24 US<br>US01, US02, US03, US06, US07, US08, US10, US11, US13, US14, US17, US18,<br>US19, US22, US23, US25, US26, US27, US28, US29, US32, US33, US34, US35"]
         Q2["<b>Q2 — Alto valor × Alto esforço</b><br>3 US<br>US04, US05, US09"]
-        Q3["<b>Q3 — Baixo valor × Baixo esforço</b><br>1 US<br>US24"]
+        Q3["<b>Q3 — Baixo valor × Baixo esforço</b><br>2 US<br>US24, US36"]
         Q4["<b>Q4 — Baixo valor × Alto esforço</b><br>7 US<br>US12, US15, US16, US20, US21, US30, US31"]
         Q1 ~~~ Q2
         Q2 ~~~ Q3
@@ -369,7 +387,7 @@ Conforme preconizado por **Ron Jeffries (2001)**, uma História de Usuário atin
 2. **Conversation (Conversa):** O registro do diálogo contínuo de refinamento entre a equipe de desenvolvimento e a cliente parceira (**Maria Beatryz**), alinhando regras de negócio, dados e premissas operacionais.
 3. **Confirmation (Confirmação):** Os critérios objetivos de aceitação redigidos em formato de lista estruturada de regras de negócio e validações observáveis, determinando de forma clara e inatacável as condições para homologação e aceite da história.
 
-Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**, aptas a inaugurar os ciclos de construção do modelo RAD:
+Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**, aptas a inaugurar os ciclos de construção do modelo RAD, além das histórias que as habilitam tecnicamente (US33). As estimativas de cada cartão reproduzem a [Tabela Consolidada das Avaliações](../requisitos/priorizacao.md#tabela-consolidada-das-avaliacoes):
 
 === "US13 — Efetuar Login (IP: 4,00 | Topo Geral)"
 
@@ -377,7 +395,7 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
 
     #### Cartão (Card)
     - **ID:** `US13` | **Épico:** `EP08 · CAR-07` | **Origem:** `RF13` (RN15, RN16)
-    - **Estimativa:** ES: 1h (1) • CX: 1 • LC: 1 • EC: 1,00 • VB: 4 • **IP: 4,00 (Rank 1)**
+    - **Estimativa:** ES: 2h (1) • CX: 1 • LC: 1 • EC: 1,00 • VB: 4 • **IP: 4,00 (Rank 1)**
     - **História:** *Como **usuário da plataforma**, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil.*
 
     #### Conversa (Conversation)
@@ -415,7 +433,7 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
 
     #### Cartão (Card)
     - **ID:** `US01` | **Épico:** `EP01 · CAR-01` | **Origem:** `RF01` (RN01, RN03, RN22, RN23)
-    - **Estimativa:** ES: 4h (2) • CX: 2 • LC: 1 • EC: 1,67 • VB: 4 • **IP: 2,40 (Rank 3)**
+    - **Estimativa:** ES: 6h (2) • CX: 2 • LC: 1 • EC: 1,67 • VB: 4 • **IP: 2,40 (Rank 3)**
     - **História:** *Como **Administrador Financeiro**, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por CPF que sustente os apontamentos e os pagamentos de diárias.*
 
     #### Conversa (Conversation)
@@ -454,16 +472,36 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
 
     #### Cartão (Card)
     - **ID:** `US27` | **Épico:** `EP04 · CAR-03` | **Origem:** `RF27` (RN25, RN31, TR-03)
-    - **Estimativa:** ES: 4h (2) • CX: 2 • LC: 1 • EC: 1,67 • VB: 4 • **IP: 2,40 (Rank 5)**
+    - **Estimativa:** ES: 6h (2) • CX: 2 • LC: 1 • EC: 1,67 • VB: 4 • **IP: 2,40 (Rank 5)**
     - **História:** *Como **Administrador Financeiro**, quero cadastrar as categorias de diária técnica com valor e período de vigência, para que prévias e fechamentos usem sempre o valor vigente da competência.*
 
     #### Conversa (Conversation)
-    - **Alinhamento Sociotécnico:** Maria Beatryz confirmou na Reunião 05 que a DUOC possui categorias distintas de diárias conforme o porte da obra e a senioridade técnica. A parametrização temporal garante que alterações de tabela não distorçam competências passadas.
+    - **Alinhamento Sociotécnico:** A história formaliza a parametrização de categorias e vigências de diárias, de modo que alterações de tabela não distorçam competências passadas. Essa definição foi registrada pela equipe;
 
     #### Confirmação (Critérios de Aceitação Objetivos)
     - **CA01 — Parametrização com Vigência:** O sistema deve permitir o cadastro de categorias de diária técnica com nome, valor nominal monetário em reais e data de início de vigência (RN25).
     - **CA02 — Imutabilidade Histórica:** Alterações na tabela de diárias não podem afetar retroativamente apurações de competências anteriores à data de vigência configurada (RN31).
     - **CA03 — Aplicação no Motor de Fechamento:** A rotina de fechamento financeiro deve aplicar compulsoriamente a tarifa correspondente à categoria e à vigência do contrato da obra (TR-03).
+
+    </div>
+
+=== "US32 — Deliberar Apontamento de Campo (IP: 2,40 | Topo de Homologação)"
+
+    <div class="module-spec-pane" markdown="1">
+
+    #### Cartão (Card)
+    - **ID:** `US32` | **Épico:** `EP02 · CAR-02` | **Origem:** `RF32` (RN02, RN05, RN10, RN30, TR-01)
+    - **Estimativa:** ES: 6h (2) • CX: 2 • LC: 1 • EC: 1,67 • VB: 4 • **IP: 2,40 (Rank 6)**
+    - **História:** *Como **Gestor Operacional de Obras**, quero homologar ou rejeitar, com parecer justificado, os apontamentos pendentes dos contratos sob minha responsabilidade, para que somente horas conferidas sigam para o fechamento financeiro e a apropriação de custos.*
+
+    #### Conversa (Conversation)
+    - **Origem e Alinhamento:** Incorporada na revisão por pares de 12/10/2026 (fontes: Reunião 03, Reunião 05 e TR-01), esta história liga o envio do apontamento (US04) ao consumo financeiro: a prévia de fechamento (US05) e a apropriação de custos (US09) computam exclusivamente registros homologados (RN05, RN10). A deliberação cabe ao gestor responsável pelo contrato, e o parecer da rejeição orienta a correção pelo técnico. Por ser posterior à Reunião 05, a priorização permanece sujeita à ratificação da cliente.
+
+    #### Confirmação (Critérios de Aceitação Objetivos)
+    - **CA01 — Fila Restrita à Alçada:** O gestor visualiza e delibera somente os apontamentos com status *"Pendente de Homologação"* vinculados aos contratos sob sua responsabilidade (RN16).
+    - **CA02 — Homologação e Bloqueio:** A aprovação transiciona o status para *"Homologado"*, bloqueia a edição pelo autor (RN02) e disponibiliza as horas e diárias para a prévia de fechamento e a apropriação (RN05, RN10).
+    - **CA03 — Rejeição Justificada:** A rejeição sem parecer de no mínimo 15 caracteres é bloqueada; com parecer válido, o status passa a *"Rejeitado"* e o técnico é notificado (RN30).
+    - **CA04 — Registro em Auditoria:** Cada deliberação grava autor, decisão, parecer e carimbo temporal UTC na trilha de auditoria (RN17).
 
     </div>
 
@@ -473,7 +511,7 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
 
     #### Cartão (Card)
     - **ID:** `US07` | **Épico:** `EP05 · CAR-04` | **Origem:** `RF07` (RN03, RN06, RN09, TR-02)
-    - **Estimativa:** ES: 4h (2) • CX: 2 • LC: 2 • EC: 2,00 • VB: 4 • **IP: 2,00 (Rank 6)**
+    - **Estimativa:** ES: 6h (2) • CX: 2 • LC: 2 • EC: 2,00 • VB: 4 • **IP: 2,00 (Rank 7)**
     - **História:** *Como **Técnico de Campo ou Gestor Operacional de Obras**, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas.*
 
     #### Conversa (Conversation)
@@ -486,21 +524,40 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
 
     </div>
 
+=== "US33 — Gerenciar Contratos de Obras (IP: 1,80 | Pré-requisito Contratual)"
+
+    <div class="module-spec-pane" markdown="1">
+
+    #### Cartão (Card)
+    - **ID:** `US33` | **Épico:** `EP06 · CAR-05` | **Origem:** `RF33` (RN09, RN11, TR-04)
+    - **Estimativa:** ES: 8h (2) • CX: 2 • LC: 1 • EC: 1,67 • VB: 3 • **IP: 1,80 (Rank 13)**
+    - **História:** *Como **Administrador Financeiro ou Gestor Operacional de Obras**, quero cadastrar e manter os contratos de obras com cliente, vigência, valor global, retenções e responsável pela supervisão, para que apontamentos, reembolsos, adiantamentos e custos sejam sempre vinculados a um contrato ativo.*
+
+    #### Conversa (Conversation)
+    - **Origem e Alinhamento:** Incorporada na revisão por pares de 12/10/2026 (fontes: Reunião 01, Reunião 05 e TR-04). O contrato ativo é o elo exigido pelo vínculo contratual obrigatório (RN09, RN11) de apontamentos (US04), reembolsos (US07), adiantamentos (US28) e apropriações (US09). Por isso, embora ocupe a 13ª posição por IP, a história é pré-requisito técnico dessas entregas e deve ser construída antes delas (ver [Dependências para o Planejamento da Construção](#dependencias-para-o-planejamento-da-construcao)). Priorização sujeita à ratificação da cliente.
+
+    #### Confirmação (Critérios de Aceitação Objetivos)
+    - **CA01 — Cadastro Completo:** O contrato é gravado com cliente, objeto contratual, vigência (início e término), valor global, retenções contratuais e gestor responsável pela supervisão; a ausência de campo obrigatório bloqueia o cadastro.
+    - **CA02 — Disponibilidade Condicionada à Vigência:** Somente contratos ativos, dentro da vigência cadastrada, ficam disponíveis para seleção em apontamentos, reembolsos, adiantamentos e apropriações (RN09, RN11).
+    - **CA03 — Edição Rastreável:** Alterações em contratos geram registro na trilha de auditoria com autor, valores anterior e posterior e carimbo temporal UTC (RN17).
+
+    </div>
+
 === "US04 — Submeter Apontamento de Campo (IP: 1,33 | Escopo Controlado Q2)"
 
     <div class="module-spec-pane" markdown="1">
 
     #### Cartão (Card)
     - **ID:** `US04` | **Épico:** `EP02 · CAR-02` | **Origem:** `RF04` (RN02, RN04, RN24, TR-01)
-    - **Estimativa:** ES: 8h (3) • CX: 3 • LC: 3 • EC: 3,00 • VB: 4 • **IP: 1,33 (Rank 18 | Q2)**
+    - **Estimativa:** ES: 16h (3) • CX: 3 • LC: 3 • EC: 3,00 • VB: 4 • **IP: 1,33 (Rank 22 | Q2)**
     - **História:** *Como **Técnico de Campo**, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de WhatsApp.*
 
     #### Conversa (Conversation)
-    - **Alinhamento Sociotécnico:** Item central da operação em obra. Por ser um item de alto valor e alto esforço (Q2), seu escopo no MVP foi estrategicamente controlado: foco na coleta web responsiva com status "Pendente de Homologação", validação de horas e envio de evidências (RF22); a operação offline completa (RNF01) foi postergada para a fase evolutiva.
+    - **Alinhamento Sociotécnico:** Item central da operação em obra. Por ser um item de alto valor e alto esforço (Q2), seu escopo no MVP foi estrategicamente controlado: foco na coleta web responsiva com status "Pendente de Homologação", validação de horas e envio de evidências (US22), deixando a retificação para a US35 e a homologação para a US32; a operação offline completa (RNF01) foi postergada para a fase evolutiva.
 
     #### Confirmação (Critérios de Aceitação Objetivos)
     - **CA01 — Registro com Status Pendente:** Ao submeter horas e escopo de produção, o sistema deve gravar o registro com status inicial *"Pendente de Homologação"* e disponibilizá-lo ao Gestor de Obras (RF32).
-    - **CA02 — Janela de Retificação:** O autor do apontamento deve poder retificar dados de horas e escopo em até 5 dias úteis a partir do envio, desde que o registro permaneça com status pendente (RN02, RF35).
+    - **CA02 — Janela de Retificação:** O autor pode retificar dados de horas, escopo e anexos enquanto o apontamento estiver pendente, dentro da janela definida na RN02. Apontamentos rejeitados permitem correção e reenvio mesmo após o prazo anterior; cada reenvio retorna o registro para "Pendente de Homologação" e reinicia a janela de 5 dias úteis, preservando o identificador e o histórico. A homologação bloqueia a edição pelo autor (RF32, RF35).
     - **CA03 — Validação de Horas Diárias:** O sistema deve validar a consistência das horas lançadas, alertando sobre jornadas superiores a 12 horas diárias no mesmo contrato.
 
     </div>
@@ -511,7 +568,7 @@ Abaixo são detalhadas as histórias de **maior prioridade do topo do backlog**,
 
     #### Cartão (Card)
     - **ID:** `US06` | **Épico:** `EP04 · CAR-03` | **Origem:** `RF06` (RN08, RN17, TR-03)
-    - **Estimativa:** ES: 6h (2) • CX: 3 • LC: 2 • EC: 2,33 • VB: 4 • **IP: 1,71 (Rank 12)**
+    - **Estimativa:** ES: 6h (2) • CX: 3 • LC: 2 • EC: 2,33 • VB: 4 • **IP: 1,71 (Rank 16)**
     - **História:** *Como **Administrador Financeiro**, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança.*
 
     #### Conversa (Conversation)
@@ -532,15 +589,17 @@ Para auditar o alinhamento com as diretrizes metodológicas de **Bill Wake (2003
 
 | US | Título / Ação | Independent (I) | Negotiable (N) | Valuable (V) | Estimable (E) | Small (S) | Testable (T) | Conformidade Global |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **US13** | Efetuar login no sistema | :white_check_mark: Independente de regras de negócio | :white_check_mark: Fluxo de tela e UX ajustáveis no DoR | :white_check_mark: Garante segurança e acesso RBAC | :white_check_mark: ES: 1h, CX: 1, LC: 1 | :white_check_mark: Cabe em 1 ciclo RAD | :white_check_mark: Teste com mock e JWT | **100% INVEST** |
+| **US13** | Efetuar login no sistema | :white_check_mark: Independente de regras de negócio | :white_check_mark: Fluxo de tela e UX ajustáveis no DoR | :white_check_mark: Garante segurança e acesso RBAC | :white_check_mark: ES: 2h, CX: 1, LC: 1 | :white_check_mark: Cabe em 1 ciclo RAD | :white_check_mark: Teste com mock e JWT | **100% INVEST** |
 | **US18** | Encerrar sessão manualmente | :white_check_mark: Independente | :white_check_mark: Interface de menu negociável | :white_check_mark: Mitiga riscos em dispositivos compartilhados | :white_check_mark: ES: 1h, CX: 1, LC: 1 | :white_check_mark: Executável em < 1 dia | :white_check_mark: Invalidação observável | **100% INVEST** |
-| **US01** | Cadastrar colaborador | :white_check_mark: Base para outros módulos | :white_check_mark: Campos opcionais ajustáveis | :white_check_mark: Unicidade por CPF e base unificada | :white_check_mark: ES: 4h, CX: 2, LC: 1 | :white_check_mark: Cabe em 1 incremento | :white_check_mark: Algoritmo módulo 11 | **100% INVEST** |
+| **US01** | Cadastrar colaborador | :white_check_mark: Base para outros módulos | :white_check_mark: Campos opcionais ajustáveis | :white_check_mark: Unicidade por CPF e base unificada | :white_check_mark: ES: 6h, CX: 2, LC: 1 | :white_check_mark: Cabe em 1 incremento | :white_check_mark: Algoritmo módulo 11 | **100% INVEST** |
 | **US19** | Consultar apontamentos registrados | :white_check_mark: Consome API de apontamentos | :white_check_mark: Paginação e filtros negociáveis | :white_check_mark: Transparência e menor privilégio | :white_check_mark: ES: 4h, CX: 2, LC: 1 | :white_check_mark: Componente enxuto | :white_check_mark: Verificação por ID | **100% INVEST** |
-| **US27** | Configurar diárias técnicas | :white_check_mark: Tabela independente | :white_check_mark: Formato de grid negociável | :white_check_mark: Alimenta o motor de fechamento | :white_check_mark: ES: 4h, CX: 2, LC: 1 | :white_check_mark: CRUD direto | :white_check_mark: Validação de vigência | **100% INVEST** |
-| **US07** | Submeter reembolso operacional | :white_check_mark: Independente da homologação | :white_check_mark: Interface de upload negociável | :white_check_mark: Erradica perda de recibos físicos | :white_check_mark: ES: 4h, CX: 2, LC: 2 | :white_check_mark: Fluxo autônomo | :white_check_mark: Validação de PDF/tamanho | **100% INVEST** |
-| **US08** | Deliberar reembolso operacional | :white_check_mark: Depende de US07 mas desacoplada | :white_check_mark: Exibição de parecer negociável | :white_check_mark: Governança em contas a pagar | :white_check_mark: ES: 4h, CX: 2, LC: 2 | :white_check_mark: Tela de deliberação | :white_check_mark: Status aprovado/recusado | **100% INVEST** |
+| **US27** | Configurar diárias técnicas | :white_check_mark: Tabela independente | :white_check_mark: Formato de grid negociável | :white_check_mark: Alimenta o motor de fechamento | :white_check_mark: ES: 6h, CX: 2, LC: 1 | :white_check_mark: CRUD direto | :white_check_mark: Validação de vigência | **100% INVEST** |
+| **US07** | Submeter reembolso operacional | :white_check_mark: Independente da homologação | :white_check_mark: Interface de upload negociável | :white_check_mark: Erradica perda de recibos físicos | :white_check_mark: ES: 6h, CX: 2, LC: 2 | :white_check_mark: Fluxo autônomo | :white_check_mark: Validação de PDF/tamanho | **100% INVEST** |
+| **US32** | Deliberar apontamento de campo | :white_check_mark: Opera sobre apontamentos da US04, sem acoplamento de tela | :white_check_mark: Layout da fila de pendências negociável | :white_check_mark: Libera somente horas conferidas ao fechamento | :white_check_mark: ES: 6h, CX: 2, LC: 1 | :white_check_mark: Fluxo único de aprovação/rejeição | :white_check_mark: Transição de status e parecer ≥ 15 caracteres | **100% INVEST** |
+| **US08** | Deliberar reembolso operacional | :white_check_mark: Depende de US07 mas desacoplada | :white_check_mark: Exibição de parecer negociável | :white_check_mark: Governança em contas a pagar | :white_check_mark: ES: 6h, CX: 2, LC: 2 | :white_check_mark: Tela de deliberação | :white_check_mark: Status aprovado/recusado | **100% INVEST** |
+| **US33** | Gerenciar contratos de obras | :white_check_mark: CRUD sem dependência de outras histórias | :white_check_mark: Campos complementares negociáveis | :white_check_mark: Habilita o vínculo contratual obrigatório | :white_check_mark: ES: 8h, CX: 2, LC: 1 | :white_check_mark: CRUD direto | :white_check_mark: Bloqueio de contrato fora da vigência | **100% INVEST** |
 | **US06** | Homologar fechamento financeiro | :white_check_mark: Opera sobre prévia existente | :white_check_mark: Layout de extrato negociável | :white_check_mark: Blindagem contábil de lotes | :white_check_mark: ES: 6h, CX: 3, LC: 2 | :white_check_mark: Transação atômica | :white_check_mark: Trava contra edição | **100% INVEST** |
-| **US04** | Submeter apontamento de campo | :white_check_mark: Desacoplada do offline (Q2) | :white_check_mark: Layout responsivo refinado no DoR | :white_check_mark: Coleta direta de produção | :white_check_mark: ES: 8h, CX: 3, LC: 3 | :white_check_mark: Fatiada no MVP | :white_check_mark: Gravação com status pendente | **100% INVEST** |
+| **US04** | Submeter apontamento de campo | :white_check_mark: Desacoplada do offline (Q2) | :white_check_mark: Layout responsivo refinado no DoR | :white_check_mark: Coleta direta de produção | :white_check_mark: ES: 16h, CX: 3, LC: 3 | :white_check_mark: Fatiada no MVP | :white_check_mark: Gravação com status pendente | **100% INVEST** |
 
 ---
 
