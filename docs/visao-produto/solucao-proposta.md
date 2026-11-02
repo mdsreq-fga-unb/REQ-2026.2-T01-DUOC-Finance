@@ -30,7 +30,7 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 
 Os **Objetivos Específicos (OE1 a OE4)** decompõem o Objetivo Geral do produto em frentes operacionais e táticas. Cada card abaixo conta com visualização estruturada em abas alternáveis, consolidando visão geral, características associadas e rastreabilidade direta aos **Requisitos Funcionais Executores**:
 
-<a id="oe1-padronizar-e-unificar-os-dados"></a>
+<a id="oe1"></a>
 <a id="oe1-padronizacao-e-unificacao-de-dados-operacionais"></a>
 <details class="req-card oe-card oe-card-oe1" id="oe1-padronizar-e-unificar-os-dados" data-oe="OE1">
   <summary class="req-card-summary">
@@ -97,25 +97,24 @@ Os **Objetivos Específicos (OE1 a OE4)** decompõem o Objetivo Geral do produto
       <div class="oe-rel-group">
         <span class="oe-rel-group-title">12 Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
         <div class="oe-rel-cluster">
-          <a href="../requisitos/#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a>
-          <a href="../requisitos/#rf02" class="req-tag req-tag-rf"># RF02 · Atualizar cadastro de colaborador ↗</a>
-          <a href="../requisitos/#rf03" class="req-tag req-tag-rf"># RF03 · Registrar movimentação funcional ↗</a>
-          <a href="../requisitos/#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a>
-          <a href="../requisitos/#rf19" class="req-tag req-tag-rf"># RF19 · Consultar apontamentos registrados ↗</a>
-          <a href="../requisitos/#rf20" class="req-tag req-tag-rf"># RF20 · Importar presenças homologadas ↗</a>
-          <a href="../requisitos/#rf22" class="req-tag req-tag-rf"># RF22 · Anexar evidências e geolocalização ao apontamento ↗</a>
-          <a href="../requisitos/#rf25" class="req-tag req-tag-rf"># RF25 · Cadastrar tipo de contratação do colaborador ↗</a>
-          <a href="../requisitos/#rf26" class="req-tag req-tag-rf"># RF26 · Consultar histórico de alterações cadastrais e bancárias ↗</a>
-          <a href="../requisitos/#rf32" class="req-tag req-tag-rf"># RF32 · Deliberar apontamento de campo ↗</a>
-          <a href="../requisitos/#rf35" class="req-tag req-tag-rf"># RF35 · Retificar apontamento de campo ↗</a>
-          <a href="../requisitos/#rf36" class="req-tag req-tag-rf"># RF36 · Exportar dados consolidados em planilha ↗</a>
+          <a href="../../requisitos/#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a>
+          <a href="../../requisitos/#rf02" class="req-tag req-tag-rf"># RF02 · Atualizar cadastro de colaborador ↗</a>
+          <a href="../../requisitos/#rf03" class="req-tag req-tag-rf"># RF03 · Registrar movimentação funcional ↗</a>
+          <a href="../../requisitos/#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a>
+          <a href="../../requisitos/#rf19" class="req-tag req-tag-rf"># RF19 · Consultar apontamentos registrados ↗</a>
+          <a href="../../requisitos/#rf20" class="req-tag req-tag-rf"># RF20 · Importar presenças homologadas ↗</a>
+          <a href="../../requisitos/#rf22" class="req-tag req-tag-rf"># RF22 · Anexar evidências e geolocalização ao apontamento ↗</a>
+          <a href="../../requisitos/#rf25" class="req-tag req-tag-rf"># RF25 · Cadastrar tipo de contratação do colaborador ↗</a>
+          <a href="../../requisitos/#rf26" class="req-tag req-tag-rf"># RF26 · Consultar histórico de alterações cadastrais e bancárias ↗</a>
+          <a href="../../requisitos/#rf32" class="req-tag req-tag-rf"># RF32 · Deliberar apontamento de campo ↗</a>
+          <a href="../../requisitos/#rf35" class="req-tag req-tag-rf"># RF35 · Retificar apontamento de campo ↗</a>
+          <a href="../../requisitos/#rf36" class="req-tag req-tag-rf"># RF36 · Exportar dados consolidados em planilha ↗</a>
         </div>
       </div>
     </div>
   </div>
 </details>
 
-<a id="oe2-aumentar-a-eficiencia-administrativo-financeira"></a>
 <a id="oe2"></a>
 <details class="req-card oe-card oe-card-oe2" id="oe2-aumentar-a-eficiencia-administrativo-financeira" data-oe="OE2">
   <summary class="req-card-summary">
@@ -173,21 +172,20 @@ Os **Objetivos Específicos (OE1 a OE4)** decompõem o Objetivo Geral do produto
       <div class="oe-rel-group">
         <span class="oe-rel-group-title">8 Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
         <div class="oe-rel-cluster">
-          <a href="../requisitos/#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a>
-          <a href="../requisitos/#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a>
-          <a href="../requisitos/#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a>
-          <a href="../requisitos/#rf08" class="req-tag req-tag-rf"># RF08 · Deliberar solicitação de reembolso ↗</a>
-          <a href="../requisitos/#rf21" class="req-tag req-tag-rf"># RF21 · Estornar fechamento financeiro ↗</a>
-          <a href="../requisitos/#rf27" class="req-tag req-tag-rf"># RF27 · Configurar tabela de valores de diárias técnicas ↗</a>
-          <a href="../requisitos/#rf28" class="req-tag req-tag-rf"># RF28 · Submeter solicitação de adiantamento operacional ↗</a>
-          <a href="../requisitos/#rf29" class="req-tag req-tag-rf"># RF29 · Deliberar solicitação de adiantamento operacional ↗</a>
+          <a href="../../requisitos/#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a>
+          <a href="../../requisitos/#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a>
+          <a href="../../requisitos/#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a>
+          <a href="../../requisitos/#rf08" class="req-tag req-tag-rf"># RF08 · Deliberar solicitação de reembolso ↗</a>
+          <a href="../../requisitos/#rf21" class="req-tag req-tag-rf"># RF21 · Estornar fechamento financeiro ↗</a>
+          <a href="../../requisitos/#rf27" class="req-tag req-tag-rf"># RF27 · Configurar tabela de valores de diárias técnicas ↗</a>
+          <a href="../../requisitos/#rf28" class="req-tag req-tag-rf"># RF28 · Submeter solicitação de adiantamento operacional ↗</a>
+          <a href="../../requisitos/#rf29" class="req-tag req-tag-rf"># RF29 · Deliberar solicitação de adiantamento operacional ↗</a>
         </div>
       </div>
     </div>
   </div>
 </details>
 
-<a id="oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato"></a>
 <a id="oe3"></a>
 <details class="req-card oe-card oe-card-oe3" id="oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" data-oe="OE3">
   <summary class="req-card-summary">
@@ -244,25 +242,24 @@ Os **Objetivos Específicos (OE1 a OE4)** decompõem o Objetivo Geral do produto
       <div class="oe-rel-group">
         <span class="oe-rel-group-title">12 Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
         <div class="oe-rel-cluster">
-          <a href="../requisitos/#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a>
-          <a href="../requisitos/#rf10" class="req-tag req-tag-rf"># RF10 · Consultar rastreabilidade de custos ↗</a>
-          <a href="../requisitos/#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a>
-          <a href="../requisitos/#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a>
-          <a href="../requisitos/#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a>
-          <a href="../requisitos/#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a>
-          <a href="../requisitos/#rf33" class="req-tag req-tag-rf"># RF33 · Cadastrar contrato de obra ↗</a>
-          <a href="../requisitos/#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a>
-          <a href="../requisitos/#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a>
-          <a href="../requisitos/#rf38" class="req-tag req-tag-rf"># RF38 · Consultar contratos de obra ↗</a>
-          <a href="../requisitos/#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a>
-          <a href="../requisitos/#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
+          <a href="../../requisitos/#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a>
+          <a href="../../requisitos/#rf10" class="req-tag req-tag-rf"># RF10 · Consultar rastreabilidade de custos ↗</a>
+          <a href="../../requisitos/#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a>
+          <a href="../../requisitos/#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a>
+          <a href="../../requisitos/#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a>
+          <a href="../../requisitos/#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a>
+          <a href="../../requisitos/#rf33" class="req-tag req-tag-rf"># RF33 · Cadastrar contrato de obra ↗</a>
+          <a href="../../requisitos/#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a>
+          <a href="../../requisitos/#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a>
+          <a href="../../requisitos/#rf38" class="req-tag req-tag-rf"># RF38 · Consultar contratos de obra ↗</a>
+          <a href="../../requisitos/#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a>
+          <a href="../../requisitos/#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
         </div>
       </div>
     </div>
   </div>
 </details>
 
-<a id="oe4-garantir-seguranca-e-governanca-de-dados"></a>
 <a id="oe4"></a>
 <details class="req-card oe-card oe-card-oe4" id="oe4-garantir-seguranca-e-governanca-de-dados" data-oe="OE4">
   <summary class="req-card-summary">
@@ -319,14 +316,14 @@ Os **Objetivos Específicos (OE1 a OE4)** decompõem o Objetivo Geral do produto
       <div class="oe-rel-group">
         <span class="oe-rel-group-title">8 Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
         <div class="oe-rel-cluster">
-          <a href="../requisitos/#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a>
-          <a href="../requisitos/#rf14" class="req-tag req-tag-rf"># RF14 · Gerenciar perfis de acesso ↗</a>
-          <a href="../requisitos/#rf15" class="req-tag req-tag-rf"># RF15 · Consultar trilha de auditoria ↗</a>
-          <a href="../requisitos/#rf16" class="req-tag req-tag-rf"># RF16 · Exportar relatório de auditoria ↗</a>
-          <a href="../requisitos/#rf17" class="req-tag req-tag-rf"># RF17 · Ativar acesso inicial e recuperar credenciais ↗</a>
-          <a href="../requisitos/#rf18" class="req-tag req-tag-rf"># RF18 · Encerrar sessão manualmente ↗</a>
-          <a href="../requisitos/#rf23" class="req-tag req-tag-rf"># RF23 · Bloquear acesso após tentativas falhas consecutivas ↗</a>
-          <a href="../requisitos/#rf24" class="req-tag req-tag-rf"># RF24 · Impor renovação periódica de senhas ↗</a>
+          <a href="../../requisitos/#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a>
+          <a href="../../requisitos/#rf14" class="req-tag req-tag-rf"># RF14 · Gerenciar perfis de acesso ↗</a>
+          <a href="../../requisitos/#rf15" class="req-tag req-tag-rf"># RF15 · Consultar trilha de auditoria ↗</a>
+          <a href="../../requisitos/#rf16" class="req-tag req-tag-rf"># RF16 · Exportar relatório de auditoria ↗</a>
+          <a href="../../requisitos/#rf17" class="req-tag req-tag-rf"># RF17 · Ativar acesso inicial e recuperar credenciais ↗</a>
+          <a href="../../requisitos/#rf18" class="req-tag req-tag-rf"># RF18 · Encerrar sessão manualmente ↗</a>
+          <a href="../../requisitos/#rf23" class="req-tag req-tag-rf"># RF23 · Bloquear acesso após tentativas falhas consecutivas ↗</a>
+          <a href="../../requisitos/#rf24" class="req-tag req-tag-rf"># RF24 · Impor renovação periódica de senhas ↗</a>
         </div>
       </div>
     </div>
@@ -359,7 +356,6 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
 
 ### Módulo de Padronização e Unificação de Dados (Suporte a OE1)
 
-<a id="car-01"></a>
 <details class="req-card car-card car-card-oe1" id="car-01" data-car="CAR-01">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
@@ -411,17 +407,16 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
         <span class="req-checklist-title">Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
       </div>
       <div class="car-rfs-cluster">
-        <a href="../requisitos/#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a>
-        <a href="../requisitos/#rf02" class="req-tag req-tag-rf"># RF02 · Atualizar cadastro de colaborador ↗</a>
-        <a href="../requisitos/#rf03" class="req-tag req-tag-rf"># RF03 · Registrar movimentação funcional ↗</a>
-        <a href="../requisitos/#rf25" class="req-tag req-tag-rf"># RF25 · Cadastrar tipo de contratação do colaborador ↗</a>
-        <a href="../requisitos/#rf26" class="req-tag req-tag-rf"># RF26 · Consultar histórico de alterações cadastrais e bancárias ↗</a>
+        <a href="../../requisitos/#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a>
+        <a href="../../requisitos/#rf02" class="req-tag req-tag-rf"># RF02 · Atualizar cadastro de colaborador ↗</a>
+        <a href="../../requisitos/#rf03" class="req-tag req-tag-rf"># RF03 · Registrar movimentação funcional ↗</a>
+        <a href="../../requisitos/#rf25" class="req-tag req-tag-rf"># RF25 · Cadastrar tipo de contratação do colaborador ↗</a>
+        <a href="../../requisitos/#rf26" class="req-tag req-tag-rf"># RF26 · Consultar histórico de alterações cadastrais e bancárias ↗</a>
       </div>
     </div>
   </div>
 </details>
 
-<a id="car-02"></a>
 <details class="req-card car-card car-card-oe1" id="car-02" data-car="CAR-02">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
@@ -473,11 +468,11 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
         <span class="req-checklist-title">Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
       </div>
       <div class="car-rfs-cluster">
-        <a href="../requisitos/#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a>
-        <a href="../requisitos/#rf19" class="req-tag req-tag-rf"># RF19 · Consultar apontamentos registrados ↗</a>
-        <a href="../requisitos/#rf22" class="req-tag req-tag-rf"># RF22 · Anexar evidências e geolocalização ao apontamento ↗</a>
-        <a href="../requisitos/#rf32" class="req-tag req-tag-rf"># RF32 · Deliberar apontamento de campo ↗</a>
-        <a href="../requisitos/#rf35" class="req-tag req-tag-rf"># RF35 · Retificar apontamento de campo ↗</a>
+        <a href="../../requisitos/#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a>
+        <a href="../../requisitos/#rf19" class="req-tag req-tag-rf"># RF19 · Consultar apontamentos registrados ↗</a>
+        <a href="../../requisitos/#rf22" class="req-tag req-tag-rf"># RF22 · Anexar evidências e geolocalização ao apontamento ↗</a>
+        <a href="../../requisitos/#rf32" class="req-tag req-tag-rf"># RF32 · Deliberar apontamento de campo ↗</a>
+        <a href="../../requisitos/#rf35" class="req-tag req-tag-rf"># RF35 · Retificar apontamento de campo ↗</a>
       </div>
     </div>
   </div>
@@ -485,7 +480,6 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
 
 ### Módulo de Eficiência Administrativo-Financeira (Suporte a OE2)
 
-<a id="car-03"></a>
 <details class="req-card car-card car-card-oe2" id="car-03" data-car="CAR-03">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
@@ -537,10 +531,10 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
         <span class="req-checklist-title">Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
       </div>
       <div class="car-rfs-cluster">
-        <a href="../requisitos/#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a>
-        <a href="../requisitos/#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a>
-        <a href="../requisitos/#rf21" class="req-tag req-tag-rf"># RF21 · Estornar fechamento financeiro ↗</a>
-        <a href="../requisitos/#rf27" class="req-tag req-tag-rf"># RF27 · Configurar tabela de valores de diárias técnicas ↗</a>
+        <a href="../../requisitos/#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a>
+        <a href="../../requisitos/#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a>
+        <a href="../../requisitos/#rf21" class="req-tag req-tag-rf"># RF21 · Estornar fechamento financeiro ↗</a>
+        <a href="../../requisitos/#rf27" class="req-tag req-tag-rf"># RF27 · Configurar tabela de valores de diárias técnicas ↗</a>
       </div>
     </div>
 
@@ -549,13 +543,12 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
         <span class="req-checklist-title">Nota de Escopo</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text">A característica contempla também o estorno formal de fechamentos já homologados, mediante justificativa auditável, como único caminho para retificar lotes fechados (ver RF21 e RN08 no <a href="../requisitos/#rf21">Capítulo 8</a>).</p>
+        <p class="req-desc-text">A característica contempla também o estorno formal de fechamentos já homologados, mediante justificativa auditável, como único caminho para retificar lotes fechados (ver RF21 e RN08 no <a href="../../requisitos/#rf21">Capítulo 8</a>).</p>
       </div>
     </div>
   </div>
 </details>
 
-<a id="car-04"></a>
 <details class="req-card car-card car-card-oe2" id="car-04" data-car="CAR-04">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
@@ -607,10 +600,10 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
         <span class="req-checklist-title">Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
       </div>
       <div class="car-rfs-cluster">
-        <a href="../requisitos/#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a>
-        <a href="../requisitos/#rf08" class="req-tag req-tag-rf"># RF08 · Deliberar solicitação de reembolso ↗</a>
-        <a href="../requisitos/#rf28" class="req-tag req-tag-rf"># RF28 · Submeter solicitação de adiantamento operacional ↗</a>
-        <a href="../requisitos/#rf29" class="req-tag req-tag-rf"># RF29 · Deliberar solicitação de adiantamento operacional ↗</a>
+        <a href="../../requisitos/#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a>
+        <a href="../../requisitos/#rf08" class="req-tag req-tag-rf"># RF08 · Deliberar solicitação de reembolso ↗</a>
+        <a href="../../requisitos/#rf28" class="req-tag req-tag-rf"># RF28 · Submeter solicitação de adiantamento operacional ↗</a>
+        <a href="../../requisitos/#rf29" class="req-tag req-tag-rf"># RF29 · Deliberar solicitação de adiantamento operacional ↗</a>
       </div>
     </div>
   </div>
@@ -618,7 +611,6 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
 
 ### Módulo de Inteligência de Custos por Contrato (Suporte a OE3)
 
-<a id="car-05"></a>
 <details class="req-card car-card car-card-oe3" id="car-05" data-car="CAR-05">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
@@ -670,18 +662,17 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
         <span class="req-checklist-title">Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
       </div>
       <div class="car-rfs-cluster">
-        <a href="../requisitos/#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a>
-        <a href="../requisitos/#rf10" class="req-tag req-tag-rf"># RF10 · Consultar rastreabilidade de custos ↗</a>
-        <a href="../requisitos/#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a>
-        <a href="../requisitos/#rf33" class="req-tag req-tag-rf"># RF33 · Cadastrar contrato de obra ↗</a>
-        <a href="../requisitos/#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a>
-        <a href="../requisitos/#rf38" class="req-tag req-tag-rf"># RF38 · Consultar contratos de obra ↗</a>
+        <a href="../../requisitos/#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a>
+        <a href="../../requisitos/#rf10" class="req-tag req-tag-rf"># RF10 · Consultar rastreabilidade de custos ↗</a>
+        <a href="../../requisitos/#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a>
+        <a href="../../requisitos/#rf33" class="req-tag req-tag-rf"># RF33 · Cadastrar contrato de obra ↗</a>
+        <a href="../../requisitos/#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a>
+        <a href="../../requisitos/#rf38" class="req-tag req-tag-rf"># RF38 · Consultar contratos de obra ↗</a>
       </div>
     </div>
   </div>
 </details>
 
-<a id="car-06"></a>
 <details class="req-card car-card car-card-oe3" id="car-06" data-car="CAR-06">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
@@ -733,12 +724,12 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
         <span class="req-checklist-title">Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
       </div>
       <div class="car-rfs-cluster">
-        <a href="../requisitos/#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a>
-        <a href="../requisitos/#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a>
-        <a href="../requisitos/#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a>
-        <a href="../requisitos/#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a>
-        <a href="../requisitos/#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a>
-        <a href="../requisitos/#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
+        <a href="../../requisitos/#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a>
+        <a href="../../requisitos/#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a>
+        <a href="../../requisitos/#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a>
+        <a href="../../requisitos/#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a>
+        <a href="../../requisitos/#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a>
+        <a href="../../requisitos/#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
       </div>
     </div>
   </div>
@@ -746,7 +737,6 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
 
 ### Módulo de Governança, Segurança e Rastreabilidade (Suporte a OE4)
 
-<a id="car-07"></a>
 <details class="req-card car-card car-card-oe4" id="car-07" data-car="CAR-07">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
@@ -798,18 +788,17 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
         <span class="req-checklist-title">Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
       </div>
       <div class="car-rfs-cluster">
-        <a href="../requisitos/#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a>
-        <a href="../requisitos/#rf14" class="req-tag req-tag-rf"># RF14 · Gerenciar perfis de acesso ↗</a>
-        <a href="../requisitos/#rf17" class="req-tag req-tag-rf"># RF17 · Ativar acesso inicial e recuperar credenciais ↗</a>
-        <a href="../requisitos/#rf18" class="req-tag req-tag-rf"># RF18 · Encerrar sessão manualmente ↗</a>
-        <a href="../requisitos/#rf23" class="req-tag req-tag-rf"># RF23 · Bloquear acesso após tentativas falhas consecutivas ↗</a>
-        <a href="../requisitos/#rf24" class="req-tag req-tag-rf"># RF24 · Impor renovação periódica de senhas ↗</a>
+        <a href="../../requisitos/#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a>
+        <a href="../../requisitos/#rf14" class="req-tag req-tag-rf"># RF14 · Gerenciar perfis de acesso ↗</a>
+        <a href="../../requisitos/#rf17" class="req-tag req-tag-rf"># RF17 · Ativar acesso inicial e recuperar credenciais ↗</a>
+        <a href="../../requisitos/#rf18" class="req-tag req-tag-rf"># RF18 · Encerrar sessão manualmente ↗</a>
+        <a href="../../requisitos/#rf23" class="req-tag req-tag-rf"># RF23 · Bloquear acesso após tentativas falhas consecutivas ↗</a>
+        <a href="../../requisitos/#rf24" class="req-tag req-tag-rf"># RF24 · Impor renovação periódica de senhas ↗</a>
       </div>
     </div>
   </div>
 </details>
 
-<a id="car-08"></a>
 <details class="req-card car-card car-card-oe4" id="car-08" data-car="CAR-08">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
@@ -861,8 +850,8 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
         <span class="req-checklist-title">Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
       </div>
       <div class="car-rfs-cluster">
-        <a href="../requisitos/#rf15" class="req-tag req-tag-rf"># RF15 · Consultar trilha de auditoria ↗</a>
-        <a href="../requisitos/#rf16" class="req-tag req-tag-rf"># RF16 · Exportar relatório de auditoria ↗</a>
+        <a href="../../requisitos/#rf15" class="req-tag req-tag-rf"># RF15 · Consultar trilha de auditoria ↗</a>
+        <a href="../../requisitos/#rf16" class="req-tag req-tag-rf"># RF16 · Exportar relatório de auditoria ↗</a>
       </div>
     </div>
   </div>
@@ -870,7 +859,6 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
 
 ### Módulo de Integrações Externas (Suporte a OE1)
 
-<a id="car-09"></a>
 <details class="req-card car-card car-card-oe1" id="car-09" data-car="CAR-09">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
@@ -922,7 +910,7 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
         <span class="req-checklist-title">Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
       </div>
       <div class="car-rfs-cluster">
-        <a href="../requisitos/#rf20" class="req-tag req-tag-rf"># RF20 · Importar presenças homologadas ↗</a>
+        <a href="../../requisitos/#rf20" class="req-tag req-tag-rf"># RF20 · Importar presenças homologadas ↗</a>
       </div>
     </div>
 
@@ -937,7 +925,6 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
   </div>
 </details>
 
-<a id="car-10"></a>
 <details class="req-card car-card car-card-oe1" id="car-10" data-car="CAR-10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
@@ -989,7 +976,7 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
         <span class="req-checklist-title">Requisitos Funcionais Executores (Catálogo de Requisitos)</span>
       </div>
       <div class="car-rfs-cluster">
-        <a href="../requisitos/#rf36" class="req-tag req-tag-rf"># RF36 · Exportar dados consolidados em planilha ↗</a>
+        <a href="../../requisitos/#rf36" class="req-tag req-tag-rf"># RF36 · Exportar dados consolidados em planilha ↗</a>
       </div>
     </div>
 
@@ -1004,7 +991,6 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
   </div>
 </details>
 
-<a id="car-11"></a>
 <details class="req-card car-card car-card-oe1" id="car-11" data-car="CAR-11">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
@@ -1062,7 +1048,6 @@ Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI
   </div>
 </details>
 
-<a id="car-12"></a>
 <details class="req-card car-card car-card-oe1" id="car-12" data-car="CAR-12">
   <summary class="req-card-summary">
     <div class="req-summary-chips">

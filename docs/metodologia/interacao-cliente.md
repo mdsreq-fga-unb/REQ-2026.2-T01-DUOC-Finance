@@ -156,13 +156,13 @@ Nesta seção são detalhados os canais oficiais de comunicação, a frequência
       <td><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39" target="_blank" rel="noopener noreferrer">Protótipo de alta fidelidade no Figma</a> (Incremento 1)</td>
       <td>Conduzida por Eric Araújo; avaliada por Maria Beatryz, presencialmente</td>
       <td>Aprovado sem alterações; validação no frontend navegável pendente para o DoR</td>
-      <td><a href="../governanca/atas/reuniao-06/">Ata 06</a></td>
+      <td><a href="../../governanca/atas/reuniao-06/">Ata 06</a></td>
     </tr>
   </tbody>
 </table>
 
 <p>
-  A primeira sessão foi realizada sobre o protótipo no Figma, e não no frontend, porque o frontend navegável ainda não estava pronto. O ciclo completo e o desvio em relação à dinâmica acima estão descritos na <a href="../metodologia/estrategias-esw.md/#execucao-do-design-do-usuario-no-incremento-1">Execução do Design do Usuário no Incremento 1</a> (Capítulo 4).
+  A primeira sessão foi realizada sobre o protótipo no Figma, e não no frontend, porque o frontend navegável ainda não estava pronto. O ciclo completo e o desvio em relação à dinâmica acima estão descritos na [Execução do Design do Usuário no Incremento 1](estrategias-esw.md#execucao-do-design-do-usuario-no-incremento-1) (Capítulo 4).
 </p>
 
 </div>

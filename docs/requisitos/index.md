@@ -18,10 +18,10 @@ Todos os elementos estão interligados por **vínculos bidirecionais navegáveis
     <span class="nav-btn-badge">20</span>
     <span class="nav-btn-text">Requisitos Não Funcionais</span>
   </a>
-  <a href="rastreabilidade.md" class="catalog-nav-btn catalog-nav-btn-ext">
+  <a href="rastreabilidade/" class="catalog-nav-btn catalog-nav-btn-ext">
     <span class="nav-btn-text">Pirâmide & Rastreabilidade Miro ↗</span>
   </a>
-  <a href="priorizacao.md" class="catalog-nav-btn catalog-nav-btn-ext">
+  <a href="priorizacao/" class="catalog-nav-btn catalog-nav-btn-ext">
     <span class="nav-btn-text">Matriz 4 × 4 de Priorização ↗</span>
   </a>
 </div>
@@ -49,7 +49,7 @@ O ecossistema operacional do ***DUOC Finance*** é estruturado em torno de **qua
 <a id="catalogo-geral-consolidado"></a>
 ## Catálogo Geral de Requisitos Funcionais (Cards Interativos)
 
-Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicamente entre os **91 Itens Estruturantes** do catálogo (**40 Requisitos Funcionais**, **31 Regras de Negócio** e **20 Requisitos Não Funcionais**). Cada card consolida a especificação oficial, critérios de aceitação DoR/DoD e rastreabilidade direta com os **elementos estruturantes do projeto** como <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OEs ↗</a>, <a href="../visao-produto/solucao-proposta.md#23-caracteristicas-do-produto-car" class="req-tag req-tag-car"># CARs ↗</a>, <a href="../mvp/backlog.md" class="req-tag req-tag-us"># USs ↗</a>, <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix"># Matriz 4 × 4 ↗</a>, <a href="governanca-conformidade.md" class="req-tag req-tag-law"># Governança & CLT/LGPD ↗</a>, <a href="#catalogo-regras-de-negocio" class="req-tag req-tag-rn"># RNs ↗</a> e <a href="#catalogo-nao-funcionais" class="req-tag req-tag-rnf"># RNFs ↗</a>.
+Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicamente entre os **91 Itens Estruturantes** do catálogo (**40 Requisitos Funcionais**, **31 Regras de Negócio** e **20 Requisitos Não Funcionais**). Cada card consolida a especificação oficial, critérios de aceitação DoR/DoD e rastreabilidade direta com os **elementos estruturantes do projeto** como <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OEs ↗</a>, <a href="../visao-produto/solucao-proposta/#23-caracteristicas-do-produto-car" class="req-tag req-tag-car"># CARs ↗</a>, <a href="../mvp/backlog/" class="req-tag req-tag-us"># USs ↗</a>, <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix"># Matriz 4 × 4 ↗</a>, <a href="governanca-conformidade/" class="req-tag req-tag-law"># Governança & CLT/LGPD ↗</a>, <a href="#catalogo-regras-de-negocio" class="req-tag req-tag-rn"># RNs ↗</a> e <a href="#catalogo-nao-funcionais" class="req-tag req-tag-rnf"># RNFs ↗</a>.
 
 <div class="req-toolbar">
   <div class="req-search-row">
@@ -159,7 +159,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -168,7 +168,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -246,15 +246,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us01" class="req-tag req-tag-us"># US01 ↗</a>
+          <a href="../mvp/backlog/#us01" class="req-tag req-tag-us"># US01 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -297,7 +297,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -345,7 +345,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -354,7 +354,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -432,15 +432,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us02" class="req-tag req-tag-us"># US02 ↗</a>
+          <a href="../mvp/backlog/#us02" class="req-tag req-tag-us"># US02 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -483,7 +483,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -531,7 +531,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -540,7 +540,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -618,15 +618,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us03" class="req-tag req-tag-us"># US03 ↗</a>
+          <a href="../mvp/backlog/#us03" class="req-tag req-tag-us"># US03 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -669,7 +669,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -717,7 +717,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -726,7 +726,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -804,15 +804,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us04" class="req-tag req-tag-us"># US04 ↗</a>
+          <a href="../mvp/backlog/#us04" class="req-tag req-tag-us"># US04 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -855,7 +855,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,33</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -903,7 +903,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -912,7 +912,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -990,15 +990,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us05" class="req-tag req-tag-us"># US05 ↗</a>
+          <a href="../mvp/backlog/#us05" class="req-tag req-tag-us"># US05 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -1041,7 +1041,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,20</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -1089,7 +1089,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -1098,7 +1098,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -1176,15 +1176,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us06" class="req-tag req-tag-us"># US06 ↗</a>
+          <a href="../mvp/backlog/#us06" class="req-tag req-tag-us"># US06 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -1227,7 +1227,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,72</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -1275,7 +1275,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -1284,7 +1284,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -1362,15 +1362,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us07" class="req-tag req-tag-us"># US07 ↗</a>
+          <a href="../mvp/backlog/#us07" class="req-tag req-tag-us"># US07 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -1413,7 +1413,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -1461,7 +1461,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -1470,7 +1470,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -1548,15 +1548,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us08" class="req-tag req-tag-us"># US08 ↗</a>
+          <a href="../mvp/backlog/#us08" class="req-tag req-tag-us"># US08 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -1599,7 +1599,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -1647,7 +1647,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -1656,7 +1656,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -1734,15 +1734,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us09" class="req-tag req-tag-us"># US09 ↗</a>
+          <a href="../mvp/backlog/#us09" class="req-tag req-tag-us"># US09 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -1785,7 +1785,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,90</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -1833,7 +1833,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -1842,7 +1842,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -1920,15 +1920,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us10" class="req-tag req-tag-us"># US10 ↗</a>
+          <a href="../mvp/backlog/#us10" class="req-tag req-tag-us"># US10 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -1971,7 +1971,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -2019,7 +2019,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -2028,7 +2028,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -2106,15 +2106,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us11" class="req-tag req-tag-us"># US11 ↗</a>
+          <a href="../mvp/backlog/#us11" class="req-tag req-tag-us"># US11 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -2157,7 +2157,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -2205,7 +2205,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -2214,7 +2214,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -2292,15 +2292,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us12" class="req-tag req-tag-us"># US12 ↗</a>
+          <a href="../mvp/backlog/#us12" class="req-tag req-tag-us"># US12 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -2343,7 +2343,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,67</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -2391,7 +2391,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -2400,7 +2400,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -2478,15 +2478,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us13" class="req-tag req-tag-us"># US13 ↗</a>
+          <a href="../mvp/backlog/#us13" class="req-tag req-tag-us"># US13 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -2529,7 +2529,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>4,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -2577,7 +2577,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -2586,7 +2586,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -2664,15 +2664,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us14" class="req-tag req-tag-us"># US14 ↗</a>
+          <a href="../mvp/backlog/#us14" class="req-tag req-tag-us"># US14 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -2715,7 +2715,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,29</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -2763,7 +2763,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -2772,7 +2772,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -2850,15 +2850,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-tag req-tag-car"># CAR-08 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-08" class="req-tag req-tag-car"># CAR-08 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us15" class="req-tag req-tag-us"># US15 ↗</a>
+          <a href="../mvp/backlog/#us15" class="req-tag req-tag-us"># US15 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -2901,7 +2901,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,67</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -2949,7 +2949,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -2958,7 +2958,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -3036,15 +3036,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-tag req-tag-car"># CAR-08 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-08" class="req-tag req-tag-car"># CAR-08 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us16" class="req-tag req-tag-us"># US16 ↗</a>
+          <a href="../mvp/backlog/#us16" class="req-tag req-tag-us"># US16 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -3087,7 +3087,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,33</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -3135,7 +3135,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -3144,7 +3144,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -3222,15 +3222,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us17" class="req-tag req-tag-us"># US17 ↗</a>
+          <a href="../mvp/backlog/#us17" class="req-tag req-tag-us"># US17 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -3273,7 +3273,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -3321,7 +3321,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -3330,7 +3330,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -3408,15 +3408,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us18" class="req-tag req-tag-us"># US18 ↗</a>
+          <a href="../mvp/backlog/#us18" class="req-tag req-tag-us"># US18 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -3459,7 +3459,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>3,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -3507,7 +3507,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -3516,7 +3516,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -3594,15 +3594,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us19" class="req-tag req-tag-us"># US19 ↗</a>
+          <a href="../mvp/backlog/#us19" class="req-tag req-tag-us"># US19 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -3645,7 +3645,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -3693,7 +3693,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -3702,7 +3702,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-09" class="req-lumio-tag req-tag-car"># CAR-09 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-09" class="req-lumio-tag req-tag-car"># CAR-09 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -3780,15 +3780,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-09" class="req-tag req-tag-car"># CAR-09 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-09" class="req-tag req-tag-car"># CAR-09 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us20" class="req-tag req-tag-us"># US20 ↗</a>
+          <a href="../mvp/backlog/#us20" class="req-tag req-tag-us"># US20 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -3831,7 +3831,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,67</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -3879,7 +3879,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -3888,7 +3888,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -3966,15 +3966,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us21" class="req-tag req-tag-us"># US21 ↗</a>
+          <a href="../mvp/backlog/#us21" class="req-tag req-tag-us"># US21 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -4017,7 +4017,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,75</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -4065,7 +4065,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -4074,7 +4074,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -4152,15 +4152,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us22" class="req-tag req-tag-us"># US22 ↗</a>
+          <a href="../mvp/backlog/#us22" class="req-tag req-tag-us"># US22 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -4203,7 +4203,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,29</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -4251,7 +4251,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -4260,7 +4260,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -4338,15 +4338,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us23" class="req-tag req-tag-us"># US23 ↗</a>
+          <a href="../mvp/backlog/#us23" class="req-tag req-tag-us"># US23 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -4389,7 +4389,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -4437,7 +4437,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -4446,7 +4446,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -4524,15 +4524,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us24" class="req-tag req-tag-us"># US24 ↗</a>
+          <a href="../mvp/backlog/#us24" class="req-tag req-tag-us"># US24 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -4575,7 +4575,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,00</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q3">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q3">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -4623,7 +4623,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -4632,7 +4632,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -4710,15 +4710,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us25" class="req-tag req-tag-us"># US25 ↗</a>
+          <a href="../mvp/backlog/#us25" class="req-tag req-tag-us"># US25 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -4761,7 +4761,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -4809,7 +4809,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -4818,7 +4818,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -4896,15 +4896,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us26" class="req-tag req-tag-us"># US26 ↗</a>
+          <a href="../mvp/backlog/#us26" class="req-tag req-tag-us"># US26 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -4947,7 +4947,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,29</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -4995,7 +4995,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -5004,7 +5004,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -5082,15 +5082,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us27" class="req-tag req-tag-us"># US27 ↗</a>
+          <a href="../mvp/backlog/#us27" class="req-tag req-tag-us"># US27 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -5133,7 +5133,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -5181,7 +5181,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -5190,7 +5190,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -5268,15 +5268,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us28" class="req-tag req-tag-us"># US28 ↗</a>
+          <a href="../mvp/backlog/#us28" class="req-tag req-tag-us"># US28 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -5319,7 +5319,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -5367,7 +5367,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -5376,7 +5376,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -5454,15 +5454,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us29" class="req-tag req-tag-us"># US29 ↗</a>
+          <a href="../mvp/backlog/#us29" class="req-tag req-tag-us"># US29 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -5505,7 +5505,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -5553,7 +5553,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -5562,7 +5562,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -5640,15 +5640,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us30" class="req-tag req-tag-us"># US30 ↗</a>
+          <a href="../mvp/backlog/#us30" class="req-tag req-tag-us"># US30 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -5691,7 +5691,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,75</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -5739,7 +5739,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -5748,7 +5748,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -5826,15 +5826,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us31" class="req-tag req-tag-us"># US31 ↗</a>
+          <a href="../mvp/backlog/#us31" class="req-tag req-tag-us"># US31 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -5877,7 +5877,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,75</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -5925,7 +5925,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -5934,7 +5934,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -6012,15 +6012,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us32" class="req-tag req-tag-us"># US32 ↗</a>
+          <a href="../mvp/backlog/#us32" class="req-tag req-tag-us"># US32 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -6063,7 +6063,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -6111,7 +6111,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -6120,7 +6120,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -6198,15 +6198,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us33" class="req-tag req-tag-us"># US33 ↗</a>
+          <a href="../mvp/backlog/#us33" class="req-tag req-tag-us"># US33 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -6249,7 +6249,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -6297,7 +6297,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -6306,7 +6306,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -6384,15 +6384,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us34" class="req-tag req-tag-us"># US34 ↗</a>
+          <a href="../mvp/backlog/#us34" class="req-tag req-tag-us"># US34 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -6435,7 +6435,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -6483,7 +6483,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -6492,7 +6492,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -6570,15 +6570,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us35" class="req-tag req-tag-us"># US35 ↗</a>
+          <a href="../mvp/backlog/#us35" class="req-tag req-tag-us"># US35 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -6621,7 +6621,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -6669,7 +6669,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -6678,7 +6678,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-10" class="req-lumio-tag req-tag-car"># CAR-10 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-10" class="req-lumio-tag req-tag-car"># CAR-10 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -6756,15 +6756,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-10" class="req-tag req-tag-car"># CAR-10 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-10" class="req-tag req-tag-car"># CAR-10 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us36" class="req-tag req-tag-us"># US36 ↗</a>
+          <a href="../mvp/backlog/#us36" class="req-tag req-tag-us"># US36 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -6807,7 +6807,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,20</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q3">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q3">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -6855,7 +6855,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -6864,7 +6864,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -6942,15 +6942,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us33" class="req-tag req-tag-us"># US33 ↗</a>
+          <a href="../mvp/backlog/#us33" class="req-tag req-tag-us"># US33 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -6993,7 +6993,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -7041,7 +7041,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7050,7 +7050,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7128,15 +7128,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us33" class="req-tag req-tag-us"># US33 ↗</a>
+          <a href="../mvp/backlog/#us33" class="req-tag req-tag-us"># US33 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -7179,7 +7179,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>3,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -7227,7 +7227,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7236,7 +7236,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7314,15 +7314,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us34" class="req-tag req-tag-us"># US34 ↗</a>
+          <a href="../mvp/backlog/#us34" class="req-tag req-tag-us"># US34 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -7365,7 +7365,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -7413,7 +7413,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Objetivo Específico</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7422,7 +7422,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Características (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7500,15 +7500,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-trace-grid">
         <div class="req-trace-item">
           <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog.md#us34" class="req-tag req-tag-us"># US34 ↗</a>
+          <a href="../mvp/backlog/#us34" class="req-tag req-tag-us"># US34 ↗</a>
         </div>
         <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
@@ -7551,7 +7551,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-metrics-footer">
         <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
-        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
 
@@ -7598,7 +7598,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7607,7 +7607,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7668,7 +7668,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7677,7 +7677,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7738,7 +7738,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7747,7 +7747,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7808,7 +7808,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7817,7 +7817,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7878,7 +7878,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7887,7 +7887,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7948,7 +7948,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7957,7 +7957,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8018,7 +8018,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8027,7 +8027,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8088,7 +8088,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8097,7 +8097,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8158,7 +8158,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8167,7 +8167,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8228,7 +8228,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8237,7 +8237,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8298,7 +8298,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8307,7 +8307,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8368,7 +8368,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8377,7 +8377,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8438,7 +8438,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8447,7 +8447,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8508,7 +8508,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8517,7 +8517,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8578,7 +8578,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8587,7 +8587,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8648,7 +8648,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8657,7 +8657,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8718,7 +8718,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8727,7 +8727,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8788,7 +8788,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8797,7 +8797,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8858,7 +8858,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8867,7 +8867,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8928,7 +8928,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8937,7 +8937,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8998,7 +8998,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Módulo 4 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9007,7 +9007,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9068,7 +9068,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9077,7 +9077,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9138,7 +9138,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9147,7 +9147,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9208,7 +9208,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9217,7 +9217,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9278,7 +9278,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9287,7 +9287,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9348,7 +9348,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9357,7 +9357,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9418,7 +9418,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9427,7 +9427,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9488,7 +9488,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9497,7 +9497,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9558,7 +9558,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Módulo 3 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9567,7 +9567,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9628,7 +9628,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Módulo 1 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9637,7 +9637,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9698,7 +9698,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Módulo & OE</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Módulo 2 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9707,7 +9707,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>Característica (CAR)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta.md#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
         </div>
       </div>
       <div class="req-lumio-row">
