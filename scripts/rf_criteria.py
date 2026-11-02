@@ -85,9 +85,9 @@ RF_CRITERIA = {   'RF01': 'O Administrador Financeiro (`ADMIN_FINANCEIRO`) cadas
             'sob o princípio do menor privilégio (RN16), visualizando data, contrato e status ("Pendente de '
             'Homologação", "Homologado" ou "Rejeitado"), com acesso ao histórico completo de pareceres de deliberação.',
     'RF20': 'O Administrador Financeiro (`ADMIN_FINANCEIRO`) seleciona a competência mensal e os contratos de obras e '
-            'importa as presenças homologadas disponibilizadas pelo painel (*dashboard*) do sistema externo *Shifton*. '
+            'importa as presenças homologadas disponibilizadas pelo painel (*dashboard*) do sistema externo *FLIT*. '
             'Os registros importados são vinculados a cada colaborador e contrato na competência selecionada, '
-            'viabilizando a apuração financeira de horas sem modificar os dados de origem no *Shifton* (RN10).',
+            'viabilizando a apuração financeira de horas sem modificar os dados de origem no *FLIT* (RN10).',
     'RF21': 'Diante de divergência material em lote de competência já homologado, o Administrador Financeiro '
             '(`ADMIN_FINANCEIRO`) estorna o fechamento financeiro informando compulsoriamente justificativa formal com '
             'no mínimo 15 caracteres (RN08, RNF08). A competência é reaberta para retificação, o fechamento original '

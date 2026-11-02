@@ -68,13 +68,13 @@ Ressalta-se que números de CPF, informações de domicílio bancário e valores
 
 ---
 
-## 5. Alinhamento de Escopo Arquitetural: Ponto Biométrico e Sistema Shifton
+## 5. Alinhamento de Escopo Arquitetural: Ponto Biométrico e Sistema FLIT
 
-Conforme deliberado na Reunião Técnica de Alinhamento com a diretoria da DUOC (Ata de Reunião 02, Característica <a href="../visao-produto/solucao-proposta.md/#car-09" class="req-tag req-tag-car"># CAR-09 ↗</a>):
+Conforme deliberado na Reunião Técnica de Alinhamento com a diretoria da DUOC (Ata de Reunião 02, Característica <a href="../visao-produto/solucao-proposta.md#car-09" class="req-tag req-tag-car"># CAR-09 ↗</a>):
 
-1.  **Fronteira de Responsabilidade de Ponto:** O registro formal de frequência e marcação de ponto eletrônico biométrico dos colaboradores é executado de forma independente pelo software externo parceiro *Shifton*.
+1.  **Fronteira de Responsabilidade de Ponto:** O registro formal de frequência e marcação de ponto eletrônico biométrico dos colaboradores é executado de forma independente pelo software externo parceiro *FLIT*.
 2.  **Escopo do DUOC Finance em Campo:** O módulo móvel do DUOC Finance destina-se estritamente à coleta de **apontamentos técnicos de produção por contrato de obra** e ao preenchimento de **Relatórios de Viagem Técnica (RVT)** pelos eletricistas e técnicos de campo (<a href="index.md#rf04" class="req-tag req-tag-rf"># RF04 ↗</a>, <a href="index.md#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>).
-3.  **Interface de Integração de Presenças:** O DUOC Finance apenas importa e referencia as presenças consolidadas geradas no painel do *Shifton* (<a href="index.md#rf20" class="req-tag req-tag-rf"># RF20 ↗</a>, <a href="index.md#rn10" class="req-tag req-tag-rn"># RN10 ↗</a>), consumindo contagens numéricas homologadas para fins de apuração de diárias, sem qualquer contato com o repositório biométrico original.
+3.  **Interface de Integração de Presenças:** O DUOC Finance apenas importa e referencia as presenças consolidadas geradas no painel do *FLIT* (<a href="index.md#rf20" class="req-tag req-tag-rf"># RF20 ↗</a>, <a href="index.md#rn10" class="req-tag req-tag-rn"># RN10 ↗</a>), consumindo contagens numéricas homologadas para fins de apuração de diárias, sem qualquer contato com o repositório biométrico original.
 
 ---
 
@@ -132,4 +132,4 @@ A tabela a seguir consolida a correlação entre as exigências legais e os requ
 
 | Versão | Data | Descrição da Modificação | Autor | Revisor |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 02/11/2026 | Consolidação da documentação de Governança e Conformidade Legal: fundamentação da retenção quinquenal com fulcro no Art. 11 da CLT, harmonização com o Art. 16 da LGPD, delimitação dogmática de dados pessoais e fronteira técnica com Shifton. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `1.0` | 02/11/2026 | Consolidação da documentação de Governança e Conformidade Legal: fundamentação da retenção quinquenal com fulcro no Art. 11 da CLT, harmonização com o Art. 16 da LGPD, delimitação dogmática de dados pessoais e fronteira técnica com FLIT. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

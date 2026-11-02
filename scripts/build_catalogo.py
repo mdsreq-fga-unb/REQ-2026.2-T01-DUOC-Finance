@@ -210,7 +210,7 @@ RF_META = {
         "rns": ["RN10"],
         "rnfs": ["RNF02"],
         "ct": "CT-M1-10",
-        "acao": "O Administrador Financeiro importa registros de frequência biométrica homologados do sistema externo Shifton por competência, vinculando-os aos colaboradores."
+        "acao": "O Administrador Financeiro importa registros de frequência biométrica homologados do sistema externo FLIT por competência, vinculando-os aos colaboradores."
     },
     "RF21": {
         "nome": "Estornar fechamento financeiro",
@@ -1010,10 +1010,14 @@ lines.append('O ecossistema operacional do ***DUOC Finance*** é estruturado em 
 lines.append('')
 lines.append('| Papel (Ator) | Código RBAC | Escopo Operacional e Responsabilidades Funcionais | Perfil Organizacional na DUOC |')
 lines.append('| :--- | :---: | :--- | :--- |')
-lines.append('| **Técnico de Campo** | `TECNICO_CAMPO` | Realiza apontamentos diários de horas e serviços em canteiro (RF04), anexa evidências fotográficas e geolocalização (RF22), submete reembolsos de despesas operacionais (RF07) e visualiza extratos de diárias e prévias apuradas (RF21, RF35). | Eletricistas, encarregados de instalação e montadores que atuam diretamente nos canteiros de obra. |')
-lines.append('| **Gestor de Obras** | `GESTOR_OBRAS` | Homologa ou rejeita apontamentos de campo de sua equipe (RF19, RF32), cadastra novos contratos de obra e equipes (RF30), parametriza centros de custo (RF38), define tetos orçamentários (RF40) e acompanha painéis de custos em tempo real (RF11, RF12, RF31, RF34, RF39). | Engenheiros residentes, coordenadores de contratos e diretores de engenharia. |')
-lines.append('| **Administrador Financeiro** | `ADMIN_FINANCEIRO` | Mantém o cadastro unificado de colaboradores e dados bancários (RF01, RF02, RF03, RF25, RF26), configura a tabela vigente de diárias (RF27), emite prévias (RF05), homologa fechamentos mensais (RF06), delibera despesas e reembolsos (RF08, RF29), dispara apropriações de custos (RF09) e exporta dados consolidados (RF36). | Auxiliar-Administradora (Maria Beatryz), que centraliza Departamento Pessoal, Contas a Pagar e Finanças. |')
-lines.append('| **Administrador do Sistema** | `ADMIN_SISTEMA` | Gerencia perfis e atribuição de papéis de usuários (RF14), monitora a segurança da plataforma, expiração de senhas e bloqueios por tentativas falhas (RF23, RF24), e audita eventos probatórios (RF15, RF16). | Sócios-diretores e equipe técnica responsável pela sustentação de TI e governança da segurança da informação. |')
+lines.append('| **Técnico de Campo / Diarista** | `TECNICO_CAMPO` | Preenche e retifica apontamentos de produção e horas de campo (RVT) via aplicação web responsiva (RF04, RF35), anexa fotos e evidências da atividade (RF22), consulta exclusivamente os próprios registros (RF19) e submete solicitações de reembolso e adiantamento operacional (RF07, RF28). | Operários, diaristas, técnicos residentes, arquitetos em visita técnica e estagiários. |')
+lines.append('| **Gestor Operacional de Obras** | `GESTOR_OBRAS` | Cadastra, atualiza e consulta contratos de obras (RF33, RF37, RF38), cadastra e atualiza centros de custo (RF34, RF39), define tetos orçamentários por obra (RF40) e delibera apontamentos de campo de sua alçada com homologação ou rejeição justificada (RF32). | Engenheiros residentes, coordenadores de contratos e diretores de engenharia. |')
+lines.append('| **Administrador Financeiro** | `ADMIN_FINANCEIRO` | Gerencia o cadastro de colaboradores (RF01, RF02, RF03, RF25, RF26), configura a tabela vigente de diárias (RF27), emite prévias (RF05), homologa fechamentos mensais (RF06), delibera despesas e reembolsos (RF08, RF29), dispara apropriações de custos (RF09) e exporta dados consolidados (RF36). | **Auxiliar-Administradora (Maria Beatryz)**, que na estrutura corporativa enxuta da DUOC centraliza rotinas de DP/RH, contas a pagar e finanças. |')
+lines.append('| **Administrador do Sistema** | `ADMIN_SISTEMA` | Gerencia perfis e atribuição de papéis de usuários (RF14), monitora a segurança global da plataforma, expiração de senhas e bloqueios por tentativas falhas (RF23, RF24), e audita eventos probatórios (RF15, RF16). | Sócios-diretores e equipe técnica responsável pela sustentação de TI e governança da segurança da informação. |')
+lines.append('')
+lines.append('**Alinhamento Sociotécnico e Centralização Operacional:** Na estrutura organizacional enxuta da DUOC Arquitetura e Engenharia, a colaboradora parceira Maria Beatryz (Auxiliar-Administradora) concentra na rotina real tanto as atribuições de Recursos Humanos/Departamento Pessoal quanto de Contas a Pagar e Finanças. Por essa razão, a especificação técnica do *DUOC Finance* unifica essas operações sob o papel sistêmico de **Administrador Financeiro**, garantindo aderência rigorosa à realidade da empresa e eliminando referências fragmentadas a cargos inexistentes na organização parceira.')
+lines.append('')
+lines.append('---')
 lines.append('')
 lines.append('---')
 lines.append('')
@@ -1575,6 +1579,7 @@ lines.append('## Histórico de Versão')
 lines.append('')
 lines.append('| Versão | Data | Descrição | Autor(es) | Revisor(es) |')
 lines.append('| :---: | :---: | :--- | :--- | :--- |')
+lines.append('| `4.3` | 02/11/2026 | **Revisão Cruzada & FLIT:** ferramenta de presença padronizada como FLIT (anteriormente registrada como Shifton) em RF20, CAR-09, critérios DoR/DoD e catálogo; refinamento dos perfis dos atores RBAC e inclusão de nota de alinhamento sociotécnico de Maria Beatryz. | Gustavo Bonifácio e Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |')
 lines.append('| `4.2` | 02/11/2026 | **Padronização Expandida & Links Bidirecionais:** migração das Regras de Negócio (cards vermelhos) e Requisitos Não Funcionais (cards azuis) para a arquitetura expansível padronizada dos RFs; estabelecimento da linkagem bidirecional recíproca entre Características de Produto (CAR-01 a CAR-10) e Requisitos Funcionais; saneamento de rotas e âncoras relativas do MkDocs. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |')
 lines.append('| `4.1` | 30/10/2026 | **Desacoplamento e Interconexão Bidirecional Total:** separação da Pirâmide de Abstração e Matriz-Síntese no documento exclusivo `rastreabilidade.md`; remoção da seção preliminar de Casos de Uso do Catálogo; reestruturação completa das 31 Regras de Negócio e 20 Requisitos Não Funcionais em cards visuais interativos com links bidirecionais diretos para os Requisitos Funcionais executores; integração com deck de navegação rápida. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |')
 lines.append('| `4.0` | 29/10/2026 | Consolidação do Catálogo Unificado de Requisitos: centralização dos 40 RFs em Cards de Rastreabilidade Total interativos com links para OEs, CARs, USs, Matriz 4×4 e RNFs; introdução de barra de pesquisa instantânea e filtros rápidos por Módulo e MVP. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |')
