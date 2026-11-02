@@ -348,22 +348,9 @@
   }
 }
 
-/* ============================================================
-   SEÇÕES SEPARADAS NA NAVBAR: ATAS DE REUNIÕES E ENTREGAS
-   Destaque visual na barra lateral esquerda com divisores dourados
-   ============================================================ */
-
-/* Separador dourado acima de Atas de Reuniões (desacoplada dos capítulos) */
-.md-nav--primary > .md-nav__list > .md-nav__item:nth-last-child(2) {
-  border-top: 2px solid rgba(218, 165, 32, 0.35);
-  margin-top: 1.5rem;
-  padding-top: 0.75rem;
-}
-
 /* Destaque dourado nos títulos das seções especiais na navbar */
 .md-nav--primary > .md-nav__list > .md-nav__item:nth-last-child(2) > .md-nav__link,
 .md-nav--primary > .md-nav__list > .md-nav__item:last-child > .md-nav__link {
-  color: var(--duoc-gold) !important;
   font-weight: 700;
   letter-spacing: 0.03em;
 }

@@ -70,6 +70,7 @@ extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js
   - assets/javascripts/mermaid-init.js
   - assets/javascripts/requisitos-filter.js
+  - assets/javascripts/piramide-interativa.js
 
 
 nav:

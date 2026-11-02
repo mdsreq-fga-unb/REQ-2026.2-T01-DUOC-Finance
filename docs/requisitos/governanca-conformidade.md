@@ -82,29 +82,19 @@ Conforme deliberado na Reunião Técnica de Alinhamento com a diretoria da DUOC 
 
 A governança corporativa e a segurança jurídica do *DUOC Finance* operam sustentadas por dois pilares arquiteturais inegociáveis:
 
+<a id="atores-do-sistema-e-matriz-canonica-de-papeis-rbac"></a>
 ### 6.1 Matriz Canônica de Papéis (RBAC)
 
-O acesso aos dados sensíveis é governado pelo **Princípio do Menor Privilégio** (<a href="../#rn16" class="req-tag req-tag-rn"># RN16 ↗</a>, <a href="../#rnf14" class="req-tag req-tag-rnf"># RNF14 ↗</a>), operando sob quatro papéis canônicos de autorização:
+O ecossistema operacional do ***DUOC Finance*** é estruturado em torno do **Princípio do Menor Privilégio** (<a href="../#rn16" class="req-tag req-tag-rn"># RN16 ↗</a>, <a href="../#rnf14" class="req-tag req-tag-rnf"># RNF14 ↗</a>), operando sob **quatro papéis canônicos de autorização (RBAC)**:
 
-```
-+---------------------------------------------------------------------------------+
-|                       MATRIZ CANONICA DE AUTORIZACAO RBAC                       |
-+-------------------+-------------------------------------------------------------+
-| Papel             | Escopo de Acesso aos Dados Pessoais e Financeiros           |
-+-------------------+-------------------------------------------------------------+
-| TECNICO_CAMPO     | Acesso estrito aos proprios apontamentos, reembolsos        |
-|                   | solicitados e extratos individuais de diarias.              |
-+-------------------+-------------------------------------------------------------+
-| GESTOR_OBRAS      | Deliberacao de apontamentos de equipes vinculadas a sua     |
-|                   | alçada; orcamentos e custos agregados de suas obras.        |
-+-------------------+-------------------------------------------------------------+
-| ADMIN_FINANCEIRO  | Gestao cadastral unificada, dados bancarios, homologacao    |
-|                   | de fechamentos, tabelas de diarias e auditoria financeira.  |
-+-------------------+-------------------------------------------------------------+
-| ADMIN_SISTEMA     | Administracao de perfis, auditoria integral, politicas de   |
-|                   | senhas e sustentacao de infraestrutura criptografica.       |
-+-------------------+-------------------------------------------------------------+
-```
+| Papel (Ator) | Código RBAC | Escopo Operacional e Responsabilidades Funcionais | Perfil Organizacional na DUOC |
+| :--- | :---: | :--- | :--- |
+| **Técnico de Campo / Diarista** | `TECNICO_CAMPO` | Preenche e retifica apontamentos de produção e horas de campo (RVT) via aplicação web responsiva (RF04, RF35), anexa fotos e evidências da atividade (RF22), consulta exclusivamente os próprios registros (RF19) e submete solicitações de reembolso e adiantamento operacional (RF07, RF28). | Operários, diaristas, técnicos residentes, arquitetos em visita técnica e estagiários. |
+| **Gestor Operacional de Obras** | `GESTOR_OBRAS` | Cadastra, atualiza e consulta contratos de obras (RF33, RF37, RF38), cadastra e atualiza centros de custo (RF34, RF39), define tetos orçamentários por obra (RF40) e delibera apontamentos de campo de sua alçada com homologação ou rejeição justificada (RF32). | Engenheiros residentes, coordenadores de contratos e diretores de engenharia. |
+| **Administrador Financeiro** | `ADMIN_FINANCEIRO` | Gerencia o cadastro de colaboradores (RF01, RF02, RF03, RF25, RF26), configura a tabela vigente de diárias (RF27), emite prévias (RF05), homologa fechamentos mensais (RF06), delibera despesas e reembolsos (RF08, RF29), dispara apropriações de custos (RF09) e exporta dados consolidados (RF36). | **Auxiliar-Administradora (Maria Beatryz)**, que na estrutura corporativa enxuta da DUOC centraliza rotinas de DP/RH, contas a pagar e finanças. |
+| **Administrador do Sistema** | `ADMIN_SISTEMA` | Gerencia perfis e atribuição de papéis de usuários (RF14), monitora a segurança global da plataforma, expiração de senhas e bloqueios por tentativas falhas (RF23, RF24), e audita eventos probatórios (RF15, RF16). | Sócios-diretores e equipe técnica responsável pela sustentação de TI e governança da segurança da informação. |
+
+**Alinhamento Sociotécnico e Centralização Operacional:** Na estrutura organizacional enxuta da DUOC Arquitetura e Engenharia, a colaboradora parceira Maria Beatryz (Auxiliar-Administradora) concentra na rotina real tanto as atribuições de Recursos Humanos/Departamento Pessoal quanto de Contas a Pagar e Finanças. Por essa razão, a especificação técnica do *DUOC Finance* unifica essas operações sob o papel sistêmico de **Administrador Financeiro**, garantindo aderência rigorosa à realidade da empresa e eliminando referências fragmentadas a cargos inexistentes na organização parceira.
 
 ### 6.2 Trilha de Auditoria Imutável (*Append-Only*)
 
@@ -133,3 +123,4 @@ A tabela a seguir consolida a correlação entre as exigências legais e os requ
 | Versão | Data | Descrição da Modificação | Autor | Revisor |
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 02/11/2026 | Consolidação da documentação de Governança e Conformidade Legal: fundamentação da retenção quinquenal com fulcro no Art. 11 da CLT, harmonização com o Art. 16 da LGPD, delimitação dogmática de dados pessoais e fronteira técnica com FLIT. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `1.1` | 02/11/2026 | Acolhimento da Matriz Canônica de Papéis (RBAC) e alinhamento sociotécnico de Maria Beatryz na Seção 6.1, desacoplando a definição estrutural do catálogo geral. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
