@@ -108,10 +108,10 @@ Como próximos passos, Eric Araújo disponibilizará o manual de marca da empres
 
 * **Registro:** Gravação interna e transcrição automática da reunião via Google Meet arquivadas para fins de governança e rastreabilidade da equipe.
 * **Artefatos Relacionados:**
-    * [Capítulo 8 — Especificação de Requisitos de Software](../requisitos/index.md)
-    * [Capítulo 8 — Priorização de Requisitos e MVP](../requisitos/priorizacao.md)
-    * [Capítulo 6 — Cronograma e Planejamento de Entregas](../cronograma/index.md)
-    * [Capítulo 7 — Processo de Validação Sociotécnica e Governança](../interacao-cliente/index.md)
+    * [Capítulo 8 — Especificação de Requisitos de Software](../../requisitos/index.md)
+    * [Capítulo 8 — Priorização de Requisitos e MVP](../../requisitos/priorizacao.md)
+    * [Capítulo 6 — Cronograma e Planejamento de Entregas](../../metodologia/cronograma.md)
+    * [Capítulo 7 — Processo de Validação Sociotécnica e Governança](../../metodologia/interacao-cliente.md)
 
 ---
 

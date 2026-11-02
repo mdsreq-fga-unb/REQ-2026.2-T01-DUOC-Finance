@@ -1,6 +1,6 @@
 # Painel Geral de Atas e Pautas de Reuniões
 
-Em conformidade com o modelo de governança e os ritos de comunicação formalizados no [7.2 Comunicação](../interacao-cliente/index.md#72-comunicacao) (notadamente a diretriz de **Registro de Atas e Decisões**), esta seção constitui o repositório oficial das atas de reunião, pautas prévias, deliberações de escopo e listas de ações imediatas (*Action Items*) acordadas entre a equipe **Cascata Ágil** e a cliente parceira **Maria Beatryz Vieira de Sousa**, bem como alinhamentos internos de engenharia da equipe.
+Em conformidade com o modelo de governança e os ritos de comunicação formalizados no [7.2 Comunicação](../../metodologia/interacao-cliente.md#72-comunicacao) (notadamente a diretriz de **Registro de Atas e Decisões**), esta seção constitui o repositório oficial das atas de reunião, pautas prévias, deliberações de escopo e listas de ações imediatas (*Action Items*) acordadas entre a equipe **Cascata Ágil** e a cliente parceira **Maria Beatryz Vieira de Sousa**, bem como alinhamentos internos de engenharia da equipe.
 
 ---
 

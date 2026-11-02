@@ -1,4 +1,4 @@
-# Capítulo 12 — Referências Bibliográficas
+# Referências Bibliográficas e Normas
 
 ## Normas e Padrões de Referência
 

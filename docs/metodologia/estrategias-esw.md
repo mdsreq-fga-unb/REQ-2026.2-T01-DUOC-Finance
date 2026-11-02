@@ -1,4 +1,4 @@
-# Capítulo 4: Estratégias de Engenharia de Software
+# Estratégias de Engenharia de Software
 
 ## Objetivo do Capítulo
 
@@ -41,12 +41,12 @@ O primeiro ciclo de Design do Usuário do DUOC Finance foi executado sobre um pr
 | Etapa do ciclo | O que aconteceu | Evidência |
 | :--- | :--- | :--- |
 | **Fluxos prototipados** | Telas de Colaboradores, Visão Geral, Análise de Custos e Perfis e Permissões, entre outras, em protótipo de alta fidelidade. | [Protótipo no Figma](https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39) |
-| **Quem prototipou** | Eric Araújo (Product Owner), após a configuração dos acessos da equipe ao Figma em 25/09/2026. | [Ata 05](../atas/reuniao-05.md#6-acoes-futuras-action-items) |
-| **Quem avaliou e quando** | Maria Beatryz, cliente parceira, em sessão presencial conduzida por Eric Araújo em 02/10/2026. | [Ata 06](../atas/reuniao-06.md) |
-| **Mudanças resultantes** | Nenhuma: a cliente aprovou as telas, os campos e os fluxos sem solicitar ajustes. | [Ata 06, decisão D1](../atas/reuniao-06.md#4-decisoes-tomadas) |
-| **Próximo passo** | Transpor as telas aprovadas para o frontend navegável com dados mockados e repetir a validação com a cliente no frontend, condição do DoR para iniciar a lógica e a persistência. | [Ata 06, ações futuras](../atas/reuniao-06.md#6-acoes-futuras-action-items) e [DoR](../dor-dod/index.md#definition-of-ready-dor) |
+| **Quem prototipou** | Eric Araújo (Product Owner), após a configuração dos acessos da equipe ao Figma em 25/09/2026. | [Ata 05](../governanca/atas/reuniao-05.md#6-acoes-futuras-action-items) |
+| **Quem avaliou e quando** | Maria Beatryz, cliente parceira, em sessão presencial conduzida por Eric Araújo em 02/10/2026. | [Ata 06](../governanca/atas/reuniao-06.md) |
+| **Mudanças resultantes** | Nenhuma: a cliente aprovou as telas, os campos e os fluxos sem solicitar ajustes. | [Ata 06, decisão D1](../governanca/atas/reuniao-06.md#4-decisoes-tomadas) |
+| **Próximo passo** | Transpor as telas aprovadas para o frontend navegável com dados mockados e repetir a validação com a cliente no frontend, condição do DoR para iniciar a lógica e a persistência. | [Ata 06, ações futuras](../governanca/atas/reuniao-06.md#6-acoes-futuras-action-items) e [DoR](../mvp/dor-dod.md#definition-of-ready-dor) |
 
-**Desvio em relação ao processo planejado:** o [Processo de Validação Sociotécnica](../interacao-cliente/index.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente) prevê sessões por Google Meet em que a cliente navega no frontend. Como o frontend navegável ainda não estava pronto, o primeiro ciclo foi feito presencialmente sobre o protótipo no Figma e não foi gravado. Por isso, as telas aprovadas ainda não cumprem o DoR: falta a validação no frontend, que é o próximo passo do ciclo.
+**Desvio em relação ao processo planejado:** o [Processo de Validação Sociotécnica](../metodologia/interacao-cliente.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente) prevê sessões por Google Meet em que a cliente navega no frontend. Como o frontend navegável ainda não estava pronto, o primeiro ciclo foi feito presencialmente sobre o protótipo no Figma e não foi gravado. Por isso, as telas aprovadas ainda não cumprem o DoR: falta a validação no frontend, que é o próximo passo do ciclo.
 
 ---
 
