@@ -47,7 +47,7 @@ A documentação do ***DUOC Finance*** está organizada em eixos temáticos inte
     *   [Interação com o Cliente](metodologia/interacao-cliente.md): Ritos de validação, alçadas e canais formais com a cliente parceira.
 *   **Requisitos de Software (Núcleo do Escopo):**
     *   [Catálogo Integrado de Requisitos](requisitos/index.md): Centralização oficial dos 40 Requisitos Funcionais (RF), 31 Regras de Negócio (RN) e 20 Requisitos Não Funcionais (RNF) com busca instantânea e filtros.
-    *   [Priorização & Matriz 4×4](requisitos/priorizacao.md): Metodologia quantitativa Valor × Esforço e delimitação analítica do MVP.
+    *   [Priorização & Escopo do Produto](requisitos/priorizacao.md): Metodologia quantitativa Valor × Esforço, métricas analíticas e delimitação do MVP.
     *   [Rastreabilidade & Matrizes](requisitos/rastreabilidade.md): Pirâmide de Abstração, diagramas visuais e matriz-síntese de rastreabilidade.
     *   [Conformidade Jurídica & Governança](requisitos/governanca-conformidade.md): Fundamentação do Art. 11 da CLT, Arts. 16 e 18 da LGPD, modelo RBAC e trilha imutável.
     *   [Avaliação por Pares & Feedback](requisitos/feedback.md): Registros de inspeções e melhorias incorporadas.

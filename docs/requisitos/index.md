@@ -38,7 +38,7 @@ Todos os elementos estão interligados por **vínculos bidirecionais navegáveis
 <a id="catalogo-geral-consolidado"></a>
 ## Catálogo Geral de Requisitos Funcionais (Cards Interativos)
 
-Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicamente entre os **91 Itens Estruturantes** do catálogo (**40 Requisitos Funcionais**, **31 Regras de Negócio** e **20 Requisitos Não Funcionais**). Cada card consolida a especificação oficial, critérios de aceitação DoR/DoD e rastreabilidade direta com os **elementos estruturantes do projeto** como <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OEs ↗</a>, <a href="../visao-produto/solucao-proposta/#23-caracteristicas-do-produto-car" class="req-tag req-tag-car"># CARs ↗</a>, <a href="../mvp/backlog/" class="req-tag req-tag-us"># USs ↗</a>, <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix"># Matriz 4 × 4 ↗</a>, <a href="governanca-conformidade/#61-matriz-canonica-de-papeis-rbac" class="req-tag req-tag-role"># Papéis RBAC ↗</a>, <a href="governanca-conformidade/" class="req-tag req-tag-law"># Governança & CLT/LGPD ↗</a>, <a href="#catalogo-regras-de-negocio" class="req-tag req-tag-rn"># RNs ↗</a> e <a href="#catalogo-nao-funcionais" class="req-tag req-tag-rnf"># RNFs ↗</a>.
+Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicamente entre os **91 Itens Estruturantes** do catálogo (**40 Requisitos Funcionais**, **31 Regras de Negócio** e **20 Requisitos Não Funcionais**). Cada card consolida a especificação oficial, critérios de aceitação DoR/DoD e rastreabilidade direta com os **elementos estruturantes do projeto** como <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OEs ↗</a>, <a href="../visao-produto/solucao-proposta/#23-caracteristicas-do-produto-car" class="req-tag req-tag-car"># CARs ↗</a>, <a href="../mvp/backlog/" class="req-tag req-tag-us"># USs ↗</a>, <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix"># Matriz 4 × 4 ↗</a>, <a href="governanca-conformidade/" class="req-tag req-tag-law"># Governança & CLT/LGPD ↗</a>, <a href="#catalogo-regras-de-negocio" class="req-tag req-tag-rn"># RNs ↗</a> e <a href="#catalogo-nao-funcionais" class="req-tag req-tag-rnf"># RNFs ↗</a>.
 
 <div class="req-toolbar">
   <div class="req-search-row">
@@ -107,7 +107,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 </div>
 
 
-<details class="req-card req-card-rf req-card-oe1" id="rf01" data-type="rf" data-rf="RF01" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf01 cadastrar colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-01 o administrador financeiro cadastra um novo colaborador no sistema informando dados pessoais, bancários validados e regime trabalhista, gerando credencial e link de ativação segura. rn01 rn03 rn22 rn23 rnf02 rnf03 rnf19" data-search-text="rf01 cadastrar colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-01 o administrador financeiro cadastra um novo colaborador no sistema informando dados pessoais, bancários validados e regime trabalhista, gerando credencial e link de ativação segura. rn01 rn03 rn22 rn23 rnf02 rnf03 rnf19">
+<details class="req-card req-card-rf req-card-oe1" id="rf01" data-type="rf" data-rf="RF01" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf01 cadastrar colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-01 us01 como **administrador financeiro**, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por cpf que sustente os apontamentos e os pagamentos de diárias. rn01 rn03 rn22 rn23 rnf02 rnf03 rnf19" data-search-text="rf01 cadastrar colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-01 us01 como **administrador financeiro**, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por cpf que sustente os apontamentos e os pagamentos de diárias. rn01 rn03 rn22 rn23 rnf02 rnf03 rnf19">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -172,9 +172,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US01)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro cadastra um novo colaborador no sistema informando dados pessoais, bancários validados e regime trabalhista, gerando credencial e link de ativação segura.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por CPF que sustente os apontamentos e os pagamentos de diárias.</p>
       </div>
     </div>
 
@@ -264,7 +266,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -276,8 +278,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">4 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -285,7 +299,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -293,7 +307,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf02" data-type="rf" data-rf="RF02" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf02 atualizar cadastro de colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-02 o administrador financeiro atualiza informações cadastrais ou bancárias de um colaborador ativo, propagando as alterações síncronas para rotinas financeiras com versionamento imutável. rn23 rnf02 rnf03 rnf19" data-search-text="rf02 atualizar cadastro de colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-02 o administrador financeiro atualiza informações cadastrais ou bancárias de um colaborador ativo, propagando as alterações síncronas para rotinas financeiras com versionamento imutável. rn23 rnf02 rnf03 rnf19">
+<details class="req-card req-card-rf req-card-oe1" id="rf02" data-type="rf" data-rf="RF02" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf02 atualizar cadastro de colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-02 us02 como **administrador financeiro**, quero atualizar os dados cadastrais e bancários de um colaborador ativo, para que todos os módulos passem a usar imediatamente as informações corretas, sem perder a versão anterior da ficha. rn23 rnf02 rnf03 rnf19" data-search-text="rf02 atualizar cadastro de colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-02 us02 como **administrador financeiro**, quero atualizar os dados cadastrais e bancários de um colaborador ativo, para que todos os módulos passem a usar imediatamente as informações corretas, sem perder a versão anterior da ficha. rn23 rnf02 rnf03 rnf19">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -358,9 +372,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US02)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro atualiza informações cadastrais ou bancárias de um colaborador ativo, propagando as alterações síncronas para rotinas financeiras com versionamento imutável.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero atualizar os dados cadastrais e bancários de um colaborador ativo, para que todos os módulos passem a usar imediatamente as informações corretas, sem perder a versão anterior da ficha.</p>
       </div>
     </div>
 
@@ -450,7 +466,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -462,8 +478,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -471,7 +499,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -479,7 +507,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf03" data-type="rf" data-rf="RF03" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf03 registrar movimentação funcional oe1 car-01 admin_financeiro mvp q1 ct-m1-03 o administrador financeiro registra afastamentos, férias e rescisões contratuais, disparando a revogação automática e compulsória de credenciais e sessões de acesso. rn04 rnf02 rnf03 rnf19" data-search-text="rf03 registrar movimentação funcional oe1 car-01 admin_financeiro mvp q1 ct-m1-03 o administrador financeiro registra afastamentos, férias e rescisões contratuais, disparando a revogação automática e compulsória de credenciais e sessões de acesso. rn04 rnf02 rnf03 rnf19">
+<details class="req-card req-card-rf req-card-oe1" id="rf03" data-type="rf" data-rf="RF03" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf03 registrar movimentação funcional oe1 car-01 admin_financeiro mvp q1 ct-m1-03 us03 como **administrador financeiro**, quero registrar afastamentos, férias e desligamentos de um colaborador, para que sua situação funcional fique atualizada e o acesso de campo seja revogado, evitando pagamentos indevidos. rn04 rnf02 rnf03 rnf19" data-search-text="rf03 registrar movimentação funcional oe1 car-01 admin_financeiro mvp q1 ct-m1-03 us03 como **administrador financeiro**, quero registrar afastamentos, férias e desligamentos de um colaborador, para que sua situação funcional fique atualizada e o acesso de campo seja revogado, evitando pagamentos indevidos. rn04 rnf02 rnf03 rnf19">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -544,9 +572,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US03)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro registra afastamentos, férias e rescisões contratuais, disparando a revogação automática e compulsória de credenciais e sessões de acesso.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero registrar afastamentos, férias e desligamentos de um colaborador, para que sua situação funcional fique atualizada e o acesso de campo seja revogado, evitando pagamentos indevidos.</p>
       </div>
     </div>
 
@@ -636,7 +666,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -648,8 +678,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,00 (2 — Moderado)</span>
+          <span class="metric-val">2,00 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -657,7 +699,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -665,7 +707,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf04" data-type="rf" data-rf="RF04" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q2" data-role="TECNICO_CAMPO" data-text="rf04 submeter apontamento de campo oe1 car-02 tecnico_campo mvp q2 ct-m1-04 o técnico de campo registra e submete via web app/pwa as horas trabalhadas e o escopo técnico executado no canteiro de obras, vinculando evidências e fotos. rn02 rnf01 rnf04" data-search-text="rf04 submeter apontamento de campo oe1 car-02 tecnico_campo mvp q2 ct-m1-04 o técnico de campo registra e submete via web app/pwa as horas trabalhadas e o escopo técnico executado no canteiro de obras, vinculando evidências e fotos. rn02 rnf01 rnf04">
+<details class="req-card req-card-rf req-card-oe1" id="rf04" data-type="rf" data-rf="RF04" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q2" data-role="TECNICO_CAMPO" data-text="rf04 submeter apontamento de campo oe1 car-02 tecnico_campo mvp q2 ct-m1-04 us04 como **técnico de campo**, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de whatsapp. rn02 rnf01 rnf04" data-search-text="rf04 submeter apontamento de campo oe1 car-02 tecnico_campo mvp q2 ct-m1-04 us04 como **técnico de campo**, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de whatsapp. rn02 rnf01 rnf04">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q2"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Planejado</span></span>
@@ -730,9 +772,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US04)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Técnico de Campo registra e submete via Web App/PWA as horas trabalhadas e o escopo técnico executado no canteiro de obras, vinculando evidências e fotos.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de WhatsApp.</p>
       </div>
     </div>
 
@@ -822,7 +866,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q2">
@@ -834,8 +878,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">4 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">16h (3)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">3,00 (3 — Alto)</span>
+          <span class="metric-val">3,00 (3)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -843,7 +899,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,33</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,33</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -851,7 +907,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf05" data-type="rf" data-rf="RF05" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q2" data-role="ADMIN_FINANCEIRO" data-text="rf05 solicitar prévia de fechamento oe2 car-03 admin_financeiro mvp q2 ct-m2-01 o administrador financeiro consolida uma prévia analítica da competência com a apuração automatizada de diárias técnicas e comissões para conferência supervisionada. rn25 rn31 rnf05 rnf06 rnf10" data-search-text="rf05 solicitar prévia de fechamento oe2 car-03 admin_financeiro mvp q2 ct-m2-01 o administrador financeiro consolida uma prévia analítica da competência com a apuração automatizada de diárias técnicas e comissões para conferência supervisionada. rn25 rn31 rnf05 rnf06 rnf10">
+<details class="req-card req-card-rf req-card-oe2" id="rf05" data-type="rf" data-rf="RF05" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q2" data-role="ADMIN_FINANCEIRO" data-text="rf05 solicitar prévia de fechamento oe2 car-03 admin_financeiro mvp q2 ct-m2-01 us05 como **administrador financeiro**, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente. rn25 rn31 rnf05 rnf06 rnf10" data-search-text="rf05 solicitar prévia de fechamento oe2 car-03 admin_financeiro mvp q2 ct-m2-01 us05 como **administrador financeiro**, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente. rn25 rn31 rnf05 rnf06 rnf10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q2"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Planejado</span></span>
@@ -916,9 +972,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US05)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro consolida uma prévia analítica da competência com a apuração automatizada de diárias técnicas e comissões para conferência supervisionada.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente.</p>
       </div>
     </div>
 
@@ -1008,7 +1066,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q2">
@@ -1020,8 +1078,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">4 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">4 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">16h (3)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">3,33 (3 — Alto)</span>
+          <span class="metric-val">3,33 (3)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -1029,7 +1099,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,20</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,20</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -1037,7 +1107,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf06" data-type="rf" data-rf="RF06" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf06 homologar fechamento financeiro oe2 car-03 admin_financeiro mvp q1 ct-m2-02 o administrador financeiro homologa definitivamente o lote de competência dos contratos selecionados, bloqueando apontamentos contra modificações e emitindo o extrato final. rn08 rn17 rnf05 rnf06 rnf10" data-search-text="rf06 homologar fechamento financeiro oe2 car-03 admin_financeiro mvp q1 ct-m2-02 o administrador financeiro homologa definitivamente o lote de competência dos contratos selecionados, bloqueando apontamentos contra modificações e emitindo o extrato final. rn08 rn17 rnf05 rnf06 rnf10">
+<details class="req-card req-card-rf req-card-oe2" id="rf06" data-type="rf" data-rf="RF06" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf06 homologar fechamento financeiro oe2 car-03 admin_financeiro mvp q1 ct-m2-02 us06 como **administrador financeiro**, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança. rn08 rn17 rnf05 rnf06 rnf10" data-search-text="rf06 homologar fechamento financeiro oe2 car-03 admin_financeiro mvp q1 ct-m2-02 us06 como **administrador financeiro**, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança. rn08 rn17 rnf05 rnf06 rnf10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -1102,9 +1172,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US06)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro homologa definitivamente o lote de competência dos contratos selecionados, bloqueando apontamentos contra modificações e emitindo o extrato final.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança.</p>
       </div>
     </div>
 
@@ -1194,7 +1266,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -1206,16 +1278,28 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">4 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,33 (2 — Moderado)</span>
+          <span class="metric-val">2,33 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
-          <span class="metric-val">1,72</span>
+          <span class="metric-val">1,71</span>
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,72</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,71</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -1223,7 +1307,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf07" data-type="rf" data-rf="RF07" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO / GESTOR_OBRAS" data-text="rf07 submeter solicitação de reembolso oe2 car-04 tecnico_campo / gestor_obras mvp q1 ct-m2-03 o colaborador de campo solicita o reembolso de despesa operacional autorizada vinculada a um contrato ativo, anexando compulsoriamente comprovante fiscal digitalizado. rn06 rn09 rnf07" data-search-text="rf07 submeter solicitação de reembolso oe2 car-04 tecnico_campo / gestor_obras mvp q1 ct-m2-03 o colaborador de campo solicita o reembolso de despesa operacional autorizada vinculada a um contrato ativo, anexando compulsoriamente comprovante fiscal digitalizado. rn06 rn09 rnf07">
+<details class="req-card req-card-rf req-card-oe2" id="rf07" data-type="rf" data-rf="RF07" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO / GESTOR_OBRAS" data-text="rf07 submeter solicitação de reembolso oe2 car-04 tecnico_campo / gestor_obras mvp q1 ct-m2-03 us07 como **técnico de campo ou gestor operacional de obras**, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas. rn06 rn09 rnf07" data-search-text="rf07 submeter solicitação de reembolso oe2 car-04 tecnico_campo / gestor_obras mvp q1 ct-m2-03 us07 como **técnico de campo ou gestor operacional de obras**, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas. rn06 rn09 rnf07">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -1288,9 +1372,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US07)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O colaborador de campo solicita o reembolso de despesa operacional autorizada vinculada a um contrato ativo, anexando compulsoriamente comprovante fiscal digitalizado.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo ou Gestor Operacional de Obras</strong>, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas.</p>
       </div>
     </div>
 
@@ -1380,7 +1466,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -1392,8 +1478,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">4 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,00 (2 — Moderado)</span>
+          <span class="metric-val">2,00 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -1401,7 +1499,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>2,00</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -1409,7 +1507,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf08" data-type="rf" data-rf="RF08" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf08 deliberar solicitação de reembolso oe2 car-04 admin_financeiro mvp q1 ct-m2-04 o administrador financeiro analisa reembolsos pendentes, deferindo ou indeferindo com parecer formal obrigatório em caso de recusa e limitação ao teto fiscal. rn07 rn27 rnf06" data-search-text="rf08 deliberar solicitação de reembolso oe2 car-04 admin_financeiro mvp q1 ct-m2-04 o administrador financeiro analisa reembolsos pendentes, deferindo ou indeferindo com parecer formal obrigatório em caso de recusa e limitação ao teto fiscal. rn07 rn27 rnf06">
+<details class="req-card req-card-rf req-card-oe2" id="rf08" data-type="rf" data-rf="RF08" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf08 deliberar solicitação de reembolso oe2 car-04 admin_financeiro mvp q1 ct-m2-04 us08 como **administrador financeiro**, quero aprovar ou reprovar as solicitações de reembolso com parecer obrigatório na reprovação, para que apenas despesas comprovadas sejam repassadas e o solicitante seja informado da decisão. rn07 rn27 rnf06" data-search-text="rf08 deliberar solicitação de reembolso oe2 car-04 admin_financeiro mvp q1 ct-m2-04 us08 como **administrador financeiro**, quero aprovar ou reprovar as solicitações de reembolso com parecer obrigatório na reprovação, para que apenas despesas comprovadas sejam repassadas e o solicitante seja informado da decisão. rn07 rn27 rnf06">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -1474,9 +1572,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US08)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro analisa reembolsos pendentes, deferindo ou indeferindo com parecer formal obrigatório em caso de recusa e limitação ao teto fiscal.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero aprovar ou reprovar as solicitações de reembolso com parecer obrigatório na reprovação, para que apenas despesas comprovadas sejam repassadas e o solicitante seja informado da decisão.</p>
       </div>
     </div>
 
@@ -1566,7 +1666,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -1578,8 +1678,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">4 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,00 (2 — Moderado)</span>
+          <span class="metric-val">2,00 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -1587,7 +1699,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>2,00</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -1595,7 +1707,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf09" data-type="rf" data-rf="RF09" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q2" data-role="ADMIN_FINANCEIRO" data-text="rf09 apropriar custos operacionais oe3 car-05 admin_financeiro mvp q2 ct-m3-01 o administrador financeiro aloca os valores de diárias e reembolsos homologados aos respectivos contratos de obra e centros de custo com consistência transacional acid. rn05 rn09 rn10 rn11 rnf10 rnf11" data-search-text="rf09 apropriar custos operacionais oe3 car-05 admin_financeiro mvp q2 ct-m3-01 o administrador financeiro aloca os valores de diárias e reembolsos homologados aos respectivos contratos de obra e centros de custo com consistência transacional acid. rn05 rn09 rn10 rn11 rnf10 rnf11">
+<details class="req-card req-card-rf req-card-oe3" id="rf09" data-type="rf" data-rf="RF09" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q2" data-role="ADMIN_FINANCEIRO" data-text="rf09 apropriar custos operacionais oe3 car-05 admin_financeiro mvp q2 ct-m3-01 us09 como **administrador financeiro**, quero disparar a apropriação dos custos homologados da competência aos respectivos contratos, para que eu conheça o custo real de cada obra sem duplicidade com a folha clt. rn05 rn09 rn10 rn11 rnf10 rnf11" data-search-text="rf09 apropriar custos operacionais oe3 car-05 admin_financeiro mvp q2 ct-m3-01 us09 como **administrador financeiro**, quero disparar a apropriação dos custos homologados da competência aos respectivos contratos, para que eu conheça o custo real de cada obra sem duplicidade com a folha clt. rn05 rn09 rn10 rn11 rnf10 rnf11">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q2"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Planejado</span></span>
@@ -1660,9 +1772,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US09)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro aloca os valores de diárias e reembolsos homologados aos respectivos contratos de obra e centros de custo com consistência transacional ACID.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero disparar a apropriação dos custos homologados da competência aos respectivos contratos, para que eu conheça o custo real de cada obra sem duplicidade com a folha CLT.</p>
       </div>
     </div>
 
@@ -1752,7 +1866,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q2">
@@ -1764,8 +1878,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">4 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">16h (3)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">3,33 (3 — Alto)</span>
+          <span class="metric-val">3,33 (3)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -1773,7 +1899,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,90</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>0,90</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -1781,7 +1907,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf10" data-type="rf" data-rf="RF10" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf10 consultar rastreabilidade de custos oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-02 gestores e administradores consultam o detalhamento analítico da origem documental e aprobatória de cada lançamento de custo apropriado ao contrato. rn12 rnf10" data-search-text="rf10 consultar rastreabilidade de custos oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-02 gestores e administradores consultam o detalhamento analítico da origem documental e aprobatória de cada lançamento de custo apropriado ao contrato. rn12 rnf10">
+<details class="req-card req-card-rf req-card-oe3" id="rf10" data-type="rf" data-rf="RF10" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf10 consultar rastreabilidade de custos oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-02 us10 como **gestor operacional de obras ou administrador financeiro**, quero visualizar a origem completa de cada custo apropriado, para que eu possa justificar e auditar qualquer linha de despesa do contrato. rn12 rnf10" data-search-text="rf10 consultar rastreabilidade de custos oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-02 us10 como **gestor operacional de obras ou administrador financeiro**, quero visualizar a origem completa de cada custo apropriado, para que eu possa justificar e auditar qualquer linha de despesa do contrato. rn12 rnf10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -1846,9 +1972,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US10)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> Gestores e administradores consultam o detalhamento analítico da origem documental e aprobatória de cada lançamento de custo apropriado ao contrato.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero visualizar a origem completa de cada custo apropriado, para que eu possa justificar e auditar qualquer linha de despesa do contrato.</p>
       </div>
     </div>
 
@@ -1938,7 +2066,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -1950,8 +2078,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,00 (2 — Moderado)</span>
+          <span class="metric-val">2,00 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -1959,7 +2099,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -1967,7 +2107,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf11" data-type="rf" data-rf="RF11" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA" data-text="rf11 filtrar indicadores de custos oe3 car-06 gestor_obras / admin_financeiro / admin_sistema mvp q1 ct-m3-03 o usuário combina filtros dinâmicos de período, obra, colaborador e categoria de despesa no painel analítico de custos, preservando o sigilo salarial da equipe. rn14 rnf09 rnf10 rnf12" data-search-text="rf11 filtrar indicadores de custos oe3 car-06 gestor_obras / admin_financeiro / admin_sistema mvp q1 ct-m3-03 o usuário combina filtros dinâmicos de período, obra, colaborador e categoria de despesa no painel analítico de custos, preservando o sigilo salarial da equipe. rn14 rnf09 rnf10 rnf12">
+<details class="req-card req-card-rf req-card-oe3" id="rf11" data-type="rf" data-rf="RF11" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA" data-text="rf11 filtrar indicadores de custos oe3 car-06 gestor_obras / admin_financeiro / admin_sistema mvp q1 ct-m3-03 us11 como **gestor operacional de obras, administrador financeiro ou administrador do sistema**, quero combinar filtros de período, contrato, colaborador e centro de custo no painel de custos, para que eu analise os custos diretos de cada obra no fechamento. rn14 rnf09 rnf10 rnf12" data-search-text="rf11 filtrar indicadores de custos oe3 car-06 gestor_obras / admin_financeiro / admin_sistema mvp q1 ct-m3-03 us11 como **gestor operacional de obras, administrador financeiro ou administrador do sistema**, quero combinar filtros de período, contrato, colaborador e centro de custo no painel de custos, para que eu analise os custos diretos de cada obra no fechamento. rn14 rnf09 rnf10 rnf12">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -2032,9 +2172,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US11)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O usuário combina filtros dinâmicos de período, obra, colaborador e categoria de despesa no painel analítico de custos, preservando o sigilo salarial da equipe.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras, Administrador Financeiro ou Administrador do Sistema</strong>, quero combinar filtros de período, contrato, colaborador e centro de custo no painel de custos, para que eu analise os custos diretos de cada obra no fechamento.</p>
       </div>
     </div>
 
@@ -2124,7 +2266,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -2136,8 +2278,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,00 (2 — Moderado)</span>
+          <span class="metric-val">2,00 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -2145,7 +2299,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -2153,7 +2307,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf12" data-type="rf" data-rf="RF12" data-oe="oe3" data-car="car-06" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 gestores acompanham em tempo real indicadores comparativos entre o orçamento previsto e os custos reais realizados por contrato e categoria de despesa. rn13 rnf09 rnf10 rnf12" data-search-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 gestores acompanham em tempo real indicadores comparativos entre o orçamento previsto e os custos reais realizados por contrato e categoria de despesa. rn13 rnf09 rnf10 rnf12">
+<details class="req-card req-card-rf req-card-oe3" id="rf12" data-type="rf" data-rf="RF12" data-oe="oe3" data-car="car-06" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 us12 como **gestor operacional de obras ou administrador financeiro**, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir. rn13 rnf09 rnf10 rnf12" data-search-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 us12 como **gestor operacional de obras ou administrador financeiro**, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir. rn13 rnf09 rnf10 rnf12">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -2218,9 +2372,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US12)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> Gestores acompanham em tempo real indicadores comparativos entre o orçamento previsto e os custos reais realizados por contrato e categoria de despesa.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir.</p>
       </div>
     </div>
 
@@ -2310,7 +2466,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q4">
@@ -2322,8 +2478,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">2 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">12h (3)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">3,00 (3 — Alto)</span>
+          <span class="metric-val">3,00 (3)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -2331,7 +2499,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,67</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>0,67</strong>). Destinação: <strong>Pós-MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -2339,7 +2507,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf13" data-type="rf" data-rf="RF13" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="TODOS OS USUÁRIOS" data-text="rf13 efetuar login no sistema oe4 car-07 todos os usuários mvp q1 ct-m4-01 o usuário autentica-se na aplicação web responsiva fornecendo credenciais corporativas válidas, obtendo token de sessão temporário com seu perfil rbac associado. rn15 rnf13 rnf14" data-search-text="rf13 efetuar login no sistema oe4 car-07 todos os usuários mvp q1 ct-m4-01 o usuário autentica-se na aplicação web responsiva fornecendo credenciais corporativas válidas, obtendo token de sessão temporário com seu perfil rbac associado. rn15 rnf13 rnf14">
+<details class="req-card req-card-rf req-card-oe4" id="rf13" data-type="rf" data-rf="RF13" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="TODOS OS USUÁRIOS" data-text="rf13 efetuar login no sistema oe4 car-07 todos os usuários mvp q1 ct-m4-01 us13 como **usuário da plataforma**, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil. rn15 rnf13 rnf14" data-search-text="rf13 efetuar login no sistema oe4 car-07 todos os usuários mvp q1 ct-m4-01 us13 como **usuário da plataforma**, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil. rn15 rnf13 rnf14">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -2404,9 +2572,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US13)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O usuário autentica-se na aplicação web responsiva fornecendo credenciais corporativas válidas, obtendo token de sessão temporário com seu perfil RBAC associado.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>usuário da plataforma</strong>, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil.</p>
       </div>
     </div>
 
@@ -2496,7 +2666,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -2508,8 +2678,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">4 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">2h (1)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,00 (1 — Baixo)</span>
+          <span class="metric-val">1,00 (1)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -2517,7 +2699,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>4,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>4,00</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -2525,7 +2707,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf14" data-type="rf" data-rf="RF14" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="ADMIN_SISTEMA" data-text="rf14 gerenciar perfis de acesso oe4 car-07 admin_sistema mvp q1 ct-m4-02 o administrador do sistema atribui ou atualiza os papéis de acesso canônicos dos usuários, aplicando imediatamente as restrições e privilégios da matriz rbac. rn16 rnf14" data-search-text="rf14 gerenciar perfis de acesso oe4 car-07 admin_sistema mvp q1 ct-m4-02 o administrador do sistema atribui ou atualiza os papéis de acesso canônicos dos usuários, aplicando imediatamente as restrições e privilégios da matriz rbac. rn16 rnf14">
+<details class="req-card req-card-rf req-card-oe4" id="rf14" data-type="rf" data-rf="RF14" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="ADMIN_SISTEMA" data-text="rf14 gerenciar perfis de acesso oe4 car-07 admin_sistema mvp q1 ct-m4-02 us14 como **administrador do sistema**, quero atribuir a cada usuário um papel de acesso, para que campo, gestão e financeiro visualizem apenas os dados da sua alçada (princípio do menor privilégio). rn16 rnf14" data-search-text="rf14 gerenciar perfis de acesso oe4 car-07 admin_sistema mvp q1 ct-m4-02 us14 como **administrador do sistema**, quero atribuir a cada usuário um papel de acesso, para que campo, gestão e financeiro visualizem apenas os dados da sua alçada (princípio do menor privilégio). rn16 rnf14">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -2590,9 +2772,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US14)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador do Sistema atribui ou atualiza os papéis de acesso canônicos dos usuários, aplicando imediatamente as restrições e privilégios da matriz RBAC.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema</strong>, quero atribuir a cada usuário um papel de acesso, para que campo, gestão e financeiro visualizem apenas os dados da sua alçada (princípio do menor privilégio).</p>
       </div>
     </div>
 
@@ -2682,7 +2866,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -2694,8 +2878,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,33 (2 — Moderado)</span>
+          <span class="metric-val">2,33 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -2703,7 +2899,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,29</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,29</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -2711,7 +2907,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf15" data-type="rf" data-rf="RF15" data-oe="oe4" data-car="car-08" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_SISTEMA / ADMIN_FINANCEIRO" data-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 perfis de auditoria consultam o histórico cronológico de operações sensíveis com filtros por data, operador, ação e módulo, exibindo estados anterior e posterior. rn17 rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 perfis de auditoria consultam o histórico cronológico de operações sensíveis com filtros por data, operador, ação e módulo, exibindo estados anterior e posterior. rn17 rn18 rn19 rnf15 rnf16 rnf17">
+<details class="req-card req-card-rf req-card-oe4" id="rf15" data-type="rf" data-rf="RF15" data-oe="oe4" data-car="car-08" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_SISTEMA / ADMIN_FINANCEIRO" data-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 us15 como **administrador do sistema ou administrador financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. rn17 rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 us15 como **administrador do sistema ou administrador financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. rn17 rn18 rn19 rnf15 rnf16 rnf17">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -2776,9 +2972,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US15)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> Perfis de auditoria consultam o histórico cronológico de operações sensíveis com filtros por data, operador, ação e módulo, exibindo estados anterior e posterior.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema ou Administrador Financeiro</strong>, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando.</p>
       </div>
     </div>
 
@@ -2868,7 +3066,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q4">
@@ -2880,8 +3078,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">2 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">10h (3)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">3,00 (3 — Alto)</span>
+          <span class="metric-val">3,00 (3)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -2889,7 +3099,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,67</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>0,67</strong>). Destinação: <strong>Pós-MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -2897,7 +3107,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf16" data-type="rf" data-rf="RF16" data-oe="oe4" data-car="car-08" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_SISTEMA" data-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 o administrador do sistema exporta dossiês probatórios de auditoria em formatos pdf/csv estruturados para atender a exigências legais e fiscais (artigo 11 da clt). rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 o administrador do sistema exporta dossiês probatórios de auditoria em formatos pdf/csv estruturados para atender a exigências legais e fiscais (artigo 11 da clt). rn18 rn19 rnf15 rnf16 rnf17">
+<details class="req-card req-card-rf req-card-oe4" id="rf16" data-type="rf" data-rf="RF16" data-oe="oe4" data-car="car-08" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_SISTEMA" data-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 us16 como **administrador do sistema**, quero exportar um dossiê em pdf/csv com o histórico imutável das operações auditadas, para que a duoc comprove conformidade legal e trabalhista (clt art. 11). rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 us16 como **administrador do sistema**, quero exportar um dossiê em pdf/csv com o histórico imutável das operações auditadas, para que a duoc comprove conformidade legal e trabalhista (clt art. 11). rn18 rn19 rnf15 rnf16 rnf17">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -2962,9 +3172,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US16)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador do Sistema exporta dossiês probatórios de auditoria em formatos PDF/CSV estruturados para atender a exigências legais e fiscais (Artigo 11 da CLT).</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema</strong>, quero exportar um dossiê em PDF/CSV com o histórico imutável das operações auditadas, para que a DUOC comprove conformidade legal e trabalhista (CLT Art. 11).</p>
       </div>
     </div>
 
@@ -3054,7 +3266,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q4">
@@ -3066,8 +3278,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">1 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">12h (3)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">3,00 (3 — Alto)</span>
+          <span class="metric-val">3,00 (3)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -3075,7 +3299,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,33</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>0,33</strong>). Destinação: <strong>Pós-MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -3083,7 +3307,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf17" data-type="rf" data-rf="RF17" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="TODOS OS USUÁRIOS" data-text="rf17 ativar acesso inicial e recuperar credenciais oe4 car-07 todos os usuários mvp q1 ct-m4-09 o colaborador ativa sua conta de primeiro acesso ou redefine credenciais esquecidas via link de uso único e temporário (30 minutos) encaminhado ao e-mail institucional. rn15 rnf14" data-search-text="rf17 ativar acesso inicial e recuperar credenciais oe4 car-07 todos os usuários mvp q1 ct-m4-09 o colaborador ativa sua conta de primeiro acesso ou redefine credenciais esquecidas via link de uso único e temporário (30 minutos) encaminhado ao e-mail institucional. rn15 rnf14">
+<details class="req-card req-card-rf req-card-oe4" id="rf17" data-type="rf" data-rf="RF17" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="TODOS OS USUÁRIOS" data-text="rf17 ativar acesso inicial e recuperar credenciais oe4 car-07 todos os usuários mvp q1 ct-m4-09 us17 como **colaborador que esqueceu a senha**, quero receber no e-mail corporativo um link de redefinição de uso único, para que eu recupere o acesso sem depender de *reset* manual pela gestão. rn15 rnf14" data-search-text="rf17 ativar acesso inicial e recuperar credenciais oe4 car-07 todos os usuários mvp q1 ct-m4-09 us17 como **colaborador que esqueceu a senha**, quero receber no e-mail corporativo um link de redefinição de uso único, para que eu recupere o acesso sem depender de *reset* manual pela gestão. rn15 rnf14">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -3148,9 +3372,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US17)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O colaborador ativa sua conta de primeiro acesso ou redefine credenciais esquecidas via link de uso único e temporário (30 minutos) encaminhado ao e-mail institucional.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>colaborador que esqueceu a senha</strong>, quero receber no e-mail corporativo um link de redefinição de uso único, para que eu recupere o acesso sem depender de *reset* manual pela gestão.</p>
       </div>
     </div>
 
@@ -3240,7 +3466,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -3252,8 +3478,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">4h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -3261,7 +3499,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -3269,7 +3507,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf18" data-type="rf" data-rf="RF18" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="TODOS OS USUÁRIOS" data-text="rf18 encerrar sessão manualmente oe4 car-07 todos os usuários mvp q1 ct-m4-10 o usuário autenticado encerra voluntariamente sua sessão de uso, provocando a invalidação imediata do token de autenticação no backend. rn15 rnf13" data-search-text="rf18 encerrar sessão manualmente oe4 car-07 todos os usuários mvp q1 ct-m4-10 o usuário autenticado encerra voluntariamente sua sessão de uso, provocando a invalidação imediata do token de autenticação no backend. rn15 rnf13">
+<details class="req-card req-card-rf req-card-oe4" id="rf18" data-type="rf" data-rf="RF18" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="TODOS OS USUÁRIOS" data-text="rf18 encerrar sessão manualmente oe4 car-07 todos os usuários mvp q1 ct-m4-10 us18 como **usuário autenticado**, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado. rn15 rnf13" data-search-text="rf18 encerrar sessão manualmente oe4 car-07 todos os usuários mvp q1 ct-m4-10 us18 como **usuário autenticado**, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado. rn15 rnf13">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -3334,9 +3572,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US18)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O usuário autenticado encerra voluntariamente sua sessão de uso, provocando a invalidação imediata do token de autenticação no backend.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>usuário autenticado</strong>, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado.</p>
       </div>
     </div>
 
@@ -3426,7 +3666,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -3438,8 +3678,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">1h (1)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,00 (1 — Baixo)</span>
+          <span class="metric-val">1,00 (1)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -3447,7 +3699,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>3,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>3,00</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -3455,7 +3707,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf19" data-type="rf" data-rf="RF19" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf19 consultar apontamentos registrados oe1 car-02 tecnico_campo mvp q1 ct-m1-09 o técnico de campo visualiza exclusivamente seus próprios apontamentos sob o princípio do menor privilégio, acompanhando status de homologação e pareceres. rn16 rn30 rnf04" data-search-text="rf19 consultar apontamentos registrados oe1 car-02 tecnico_campo mvp q1 ct-m1-09 o técnico de campo visualiza exclusivamente seus próprios apontamentos sob o princípio do menor privilégio, acompanhando status de homologação e pareceres. rn16 rn30 rnf04">
+<details class="req-card req-card-rf req-card-oe1" id="rf19" data-type="rf" data-rf="RF19" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf19 consultar apontamentos registrados oe1 car-02 tecnico_campo mvp q1 ct-m1-09 us19 como **técnico de campo**, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e identifique quais registros ainda posso retificar antes do fechamento. rn16 rn30 rnf04" data-search-text="rf19 consultar apontamentos registrados oe1 car-02 tecnico_campo mvp q1 ct-m1-09 us19 como **técnico de campo**, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e identifique quais registros ainda posso retificar antes do fechamento. rn16 rn30 rnf04">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -3520,9 +3772,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US19)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Técnico de Campo visualiza exclusivamente seus próprios apontamentos sob o princípio do menor privilégio, acompanhando status de homologação e pareceres.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e identifique quais registros ainda posso retificar antes do fechamento.</p>
       </div>
     </div>
 
@@ -3612,7 +3866,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -3624,8 +3878,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">4 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">4h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -3633,7 +3899,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -3641,7 +3907,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf20" data-type="rf" data-rf="RF20" data-oe="oe1" data-car="car-09" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 o administrador financeiro importa registros de frequência biométrica homologados do sistema externo flit por competência, vinculando-os aos colaboradores. rn10 rnf02" data-search-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 o administrador financeiro importa registros de frequência biométrica homologados do sistema externo flit por competência, vinculando-os aos colaboradores. rn10 rnf02">
+<details class="req-card req-card-rf req-card-oe1" id="rf20" data-type="rf" data-rf="RF20" data-oe="oe1" data-car="car-09" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 us20 como **administrador financeiro**, quero importar as presenças homologadas do *flit* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação. rn10 rnf02" data-search-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 us20 como **administrador financeiro**, quero importar as presenças homologadas do *flit* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação. rn10 rnf02">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -3706,9 +3972,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US20)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro importa registros de frequência biométrica homologados do sistema externo FLIT por competência, vinculando-os aos colaboradores.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero importar as presenças homologadas do *FLIT* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação.</p>
       </div>
     </div>
 
@@ -3798,7 +4066,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q4">
@@ -3810,8 +4078,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">2 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">12h (3)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">3,00 (3 — Alto)</span>
+          <span class="metric-val">3,00 (3)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -3819,7 +4099,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,67</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>0,67</strong>). Destinação: <strong>Pós-MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -3827,7 +4107,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf21" data-type="rf" data-rf="RF21" data-oe="oe2" data-car="car-03" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 o administrador financeiro reabre competência homologada mediante justificativa formal obrigatória de no mínimo 15 caracteres, mantendo histórico auditável. rn08 rn17 rnf08" data-search-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 o administrador financeiro reabre competência homologada mediante justificativa formal obrigatória de no mínimo 15 caracteres, mantendo histórico auditável. rn08 rn17 rnf08">
+<details class="req-card req-card-rf req-card-oe2" id="rf21" data-type="rf" data-rf="RF21" data-oe="oe2" data-car="car-03" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 us21 como **administrador financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original. rn08 rn17 rnf08" data-search-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 us21 como **administrador financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original. rn08 rn17 rnf08">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -3892,9 +4172,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US21)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro reabre competência homologada mediante justificativa formal obrigatória de no mínimo 15 caracteres, mantendo histórico auditável.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original.</p>
       </div>
     </div>
 
@@ -3984,7 +4266,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q4">
@@ -3996,8 +4278,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">2 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">10h (3)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,67 (3 — Alto)</span>
+          <span class="metric-val">2,67 (3)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -4005,7 +4299,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,75</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>0,75</strong>). Destinação: <strong>Pós-MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -4013,7 +4307,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf22" data-type="rf" data-rf="RF22" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf22 anexar evidências e geolocalização ao apontamento oe1 car-02 tecnico_campo mvp q1 ct-m1-11 o técnico de campo anexa fotos, recibos e geolocalização do dispositivo ao formulário de apontamento para comprovação objetiva das atividades de campo. rn24 rnf04 rnf07" data-search-text="rf22 anexar evidências e geolocalização ao apontamento oe1 car-02 tecnico_campo mvp q1 ct-m1-11 o técnico de campo anexa fotos, recibos e geolocalização do dispositivo ao formulário de apontamento para comprovação objetiva das atividades de campo. rn24 rnf04 rnf07">
+<details class="req-card req-card-rf req-card-oe1" id="rf22" data-type="rf" data-rf="RF22" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf22 anexar evidências e geolocalização ao apontamento oe1 car-02 tecnico_campo mvp q1 ct-m1-11 us22 como **técnico de campo**, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no rvt. rn24 rnf04 rnf07" data-search-text="rf22 anexar evidências e geolocalização ao apontamento oe1 car-02 tecnico_campo mvp q1 ct-m1-11 us22 como **técnico de campo**, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no rvt. rn24 rnf04 rnf07">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -4078,9 +4372,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US22)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Técnico de Campo anexa fotos, recibos e geolocalização do dispositivo ao formulário de apontamento para comprovação objetiva das atividades de campo.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no RVT.</p>
       </div>
     </div>
 
@@ -4170,7 +4466,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -4182,8 +4478,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">8h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,33 (2 — Moderado)</span>
+          <span class="metric-val">2,33 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -4191,7 +4499,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,29</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,29</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -4199,7 +4507,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf23" data-type="rf" data-rf="RF23" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="ADMIN_SISTEMA" data-text="rf23 bloquear acesso após tentativas falhas consecutivas oe4 car-07 admin_sistema mvp q1 ct-m4-12 o sistema bloqueia preventivamente por 30 minutos a conta corporativa que acumular 5 tentativas de login com credenciais incorretas em até 15 minutos. rn20 rnf14" data-search-text="rf23 bloquear acesso após tentativas falhas consecutivas oe4 car-07 admin_sistema mvp q1 ct-m4-12 o sistema bloqueia preventivamente por 30 minutos a conta corporativa que acumular 5 tentativas de login com credenciais incorretas em até 15 minutos. rn20 rnf14">
+<details class="req-card req-card-rf req-card-oe4" id="rf23" data-type="rf" data-rf="RF23" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="ADMIN_SISTEMA" data-text="rf23 bloquear acesso após tentativas falhas consecutivas oe4 car-07 admin_sistema mvp q1 ct-m4-12 us23 como **administrador do sistema**, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta. rn20 rnf14" data-search-text="rf23 bloquear acesso após tentativas falhas consecutivas oe4 car-07 admin_sistema mvp q1 ct-m4-12 us23 como **administrador do sistema**, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta. rn20 rnf14">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -4264,9 +4572,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US23)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O sistema bloqueia preventivamente por 30 minutos a conta corporativa que acumular 5 tentativas de login com credenciais incorretas em até 15 minutos.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema</strong>, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta.</p>
       </div>
     </div>
 
@@ -4356,7 +4666,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -4368,8 +4678,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -4377,7 +4699,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -4385,7 +4707,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf24" data-type="rf" data-rf="RF24" data-oe="oe4" data-car="car-07" data-mvp="pós-mvp" data-quad="q3" data-role="ADMIN_SISTEMA" data-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 o sistema força a redefinição de senhas com mais de 90 dias de vigência, impedindo a reutilização das últimas 5 senhas adotadas. rn21 rnf14" data-search-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 o sistema força a redefinição de senhas com mais de 90 dias de vigência, impedindo a reutilização das últimas 5 senhas adotadas. rn21 rnf14">
+<details class="req-card req-card-rf req-card-oe4" id="rf24" data-type="rf" data-rf="RF24" data-oe="oe4" data-car="car-07" data-mvp="pós-mvp" data-quad="q3" data-role="ADMIN_SISTEMA" data-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 us24 como **administrador do sistema**, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema. rn21 rnf14" data-search-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 us24 como **administrador do sistema**, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema. rn21 rnf14">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q3"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Evolutivo</span></span>
@@ -4450,9 +4772,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US24)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O sistema força a redefinição de senhas com mais de 90 dias de vigência, impedindo a reutilização das últimas 5 senhas adotadas.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema</strong>, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema.</p>
       </div>
     </div>
 
@@ -4542,7 +4866,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q3">
@@ -4554,8 +4878,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">2 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,00 (2 — Moderado)</span>
+          <span class="metric-val">2,00 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -4563,7 +4899,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,00</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,00</strong>). Destinação: <strong>Pós-MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q3">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -4571,7 +4907,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf25" data-type="rf" data-rf="RF25" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf25 cadastrar tipo de contratação do colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-12 o administrador financeiro define o enquadramento de contratação do profissional (diarista, clt ou prestador de serviço pj), balizando as regras de cálculo. rn22 rnf02" data-search-text="rf25 cadastrar tipo de contratação do colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-12 o administrador financeiro define o enquadramento de contratação do profissional (diarista, clt ou prestador de serviço pj), balizando as regras de cálculo. rn22 rnf02">
+<details class="req-card req-card-rf req-card-oe1" id="rf25" data-type="rf" data-rf="RF25" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf25 cadastrar tipo de contratação do colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-12 us25 como **administrador financeiro**, quero classificar o colaborador como diarista, clt ou prestador de serviço, para que o sistema aplique as regras administrativas e financeiras do vínculo correto. rn22 rnf02" data-search-text="rf25 cadastrar tipo de contratação do colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-12 us25 como **administrador financeiro**, quero classificar o colaborador como diarista, clt ou prestador de serviço, para que o sistema aplique as regras administrativas e financeiras do vínculo correto. rn22 rnf02">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -4636,9 +4972,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US25)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro define o enquadramento de contratação do profissional (Diarista, CLT ou Prestador de Serviço PJ), balizando as regras de cálculo.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero classificar o colaborador como Diarista, CLT ou Prestador de Serviço, para que o sistema aplique as regras administrativas e financeiras do vínculo correto.</p>
       </div>
     </div>
 
@@ -4728,7 +5066,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -4740,8 +5078,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">4h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -4749,7 +5099,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -4757,7 +5107,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf26" data-type="rf" data-rf="RF26" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf26 consultar histórico de alterações cadastrais e bancárias oe1 car-01 admin_financeiro mvp q1 ct-m1-13 administrador e colaborador visualizam o histórico cronológico de versões da ficha cadastral e bancária, com autor da modificação e carimbo utc. rn23 rnf02" data-search-text="rf26 consultar histórico de alterações cadastrais e bancárias oe1 car-01 admin_financeiro mvp q1 ct-m1-13 administrador e colaborador visualizam o histórico cronológico de versões da ficha cadastral e bancária, com autor da modificação e carimbo utc. rn23 rnf02">
+<details class="req-card req-card-rf req-card-oe1" id="rf26" data-type="rf" data-rf="RF26" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf26 consultar histórico de alterações cadastrais e bancárias oe1 car-01 admin_financeiro mvp q1 ct-m1-13 us26 como **administrador financeiro**, quero consultar o histórico de alterações cadastrais e bancárias de um colaborador, com autor e data de cada mudança, para que divergências administrativas possam ser rastreadas e esclarecidas. rn23 rnf02" data-search-text="rf26 consultar histórico de alterações cadastrais e bancárias oe1 car-01 admin_financeiro mvp q1 ct-m1-13 us26 como **administrador financeiro**, quero consultar o histórico de alterações cadastrais e bancárias de um colaborador, com autor e data de cada mudança, para que divergências administrativas possam ser rastreadas e esclarecidas. rn23 rnf02">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -4822,9 +5172,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US26)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> Administrador e colaborador visualizam o histórico cronológico de versões da ficha cadastral e bancária, com autor da modificação e carimbo UTC.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero consultar o histórico de alterações cadastrais e bancárias de um colaborador, com autor e data de cada mudança, para que divergências administrativas possam ser rastreadas e esclarecidas.</p>
       </div>
     </div>
 
@@ -4914,7 +5266,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -4926,8 +5278,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">8h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,33 (2 — Moderado)</span>
+          <span class="metric-val">2,33 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -4935,7 +5299,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,29</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,29</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -4943,7 +5307,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf27" data-type="rf" data-rf="RF27" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf27 configurar tabela de valores de diárias técnicas oe2 car-03 admin_financeiro mvp q1 ct-m2-10 o administrador financeiro parametriza categorias de diárias técnicas com seus valores monetários vigentes e períodos de aplicação para apuração automática. rn25 rn31 rnf06" data-search-text="rf27 configurar tabela de valores de diárias técnicas oe2 car-03 admin_financeiro mvp q1 ct-m2-10 o administrador financeiro parametriza categorias de diárias técnicas com seus valores monetários vigentes e períodos de aplicação para apuração automática. rn25 rn31 rnf06">
+<details class="req-card req-card-rf req-card-oe2" id="rf27" data-type="rf" data-rf="RF27" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf27 configurar tabela de valores de diárias técnicas oe2 car-03 admin_financeiro mvp q1 ct-m2-10 us27 como **administrador financeiro**, quero cadastrar as categorias de diária técnica com valor e período de vigência, para que prévias e fechamentos usem sempre o valor vigente da competência. rn25 rn31 rnf06" data-search-text="rf27 configurar tabela de valores de diárias técnicas oe2 car-03 admin_financeiro mvp q1 ct-m2-10 us27 como **administrador financeiro**, quero cadastrar as categorias de diária técnica com valor e período de vigência, para que prévias e fechamentos usem sempre o valor vigente da competência. rn25 rn31 rnf06">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -5008,9 +5372,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US27)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro parametriza categorias de diárias técnicas com seus valores monetários vigentes e períodos de aplicação para apuração automática.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero cadastrar as categorias de diária técnica com valor e período de vigência, para que prévias e fechamentos usem sempre o valor vigente da competência.</p>
       </div>
     </div>
 
@@ -5100,7 +5466,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -5112,8 +5478,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">4 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -5121,7 +5499,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -5129,7 +5507,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf28" data-type="rf" data-rf="RF28" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf28 submeter solicitação de adiantamento operacional oe2 car-04 tecnico_campo mvp q1 ct-m2-11 o técnico de campo registra pedido de liberação prévia de numerário operacional para despesas emergenciais de canteiro vinculadas a um contrato ativo. rn26 rnf07" data-search-text="rf28 submeter solicitação de adiantamento operacional oe2 car-04 tecnico_campo mvp q1 ct-m2-11 o técnico de campo registra pedido de liberação prévia de numerário operacional para despesas emergenciais de canteiro vinculadas a um contrato ativo. rn26 rnf07">
+<details class="req-card req-card-rf req-card-oe2" id="rf28" data-type="rf" data-rf="RF28" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf28 submeter solicitação de adiantamento operacional oe2 car-04 tecnico_campo mvp q1 ct-m2-11 us28 como **técnico de campo**, quero solicitar um adiantamento para uma despesa operacional de um contrato ativo, para que eu disponha dos recursos antes de executar a atividade. rn26 rnf07" data-search-text="rf28 submeter solicitação de adiantamento operacional oe2 car-04 tecnico_campo mvp q1 ct-m2-11 us28 como **técnico de campo**, quero solicitar um adiantamento para uma despesa operacional de um contrato ativo, para que eu disponha dos recursos antes de executar a atividade. rn26 rnf07">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -5194,9 +5572,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US28)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Técnico de Campo registra pedido de liberação prévia de numerário operacional para despesas emergenciais de canteiro vinculadas a um contrato ativo.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero solicitar um adiantamento para uma despesa operacional de um contrato ativo, para que eu disponha dos recursos antes de executar a atividade.</p>
       </div>
     </div>
 
@@ -5286,7 +5666,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -5298,8 +5678,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,00 (2 — Moderado)</span>
+          <span class="metric-val">2,00 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -5307,7 +5699,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -5315,7 +5707,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf29" data-type="rf" data-rf="RF29" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf29 deliberar solicitação de adiantamento operacional oe2 car-04 admin_financeiro mvp q1 ct-m2-12 o administrador financeiro analisa adiantamentos pendentes, aprovando a liberação dos recursos ou indeferindo com justificativa registrada e notificação ao autor. rn27 rnf06" data-search-text="rf29 deliberar solicitação de adiantamento operacional oe2 car-04 admin_financeiro mvp q1 ct-m2-12 o administrador financeiro analisa adiantamentos pendentes, aprovando a liberação dos recursos ou indeferindo com justificativa registrada e notificação ao autor. rn27 rnf06">
+<details class="req-card req-card-rf req-card-oe2" id="rf29" data-type="rf" data-rf="RF29" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf29 deliberar solicitação de adiantamento operacional oe2 car-04 admin_financeiro mvp q1 ct-m2-12 us29 como **administrador financeiro**, quero aprovar ou reprovar os adiantamentos pendentes de análise, para que a liberação de recursos seja formal, rastreável e comunicada ao solicitante. rn27 rnf06" data-search-text="rf29 deliberar solicitação de adiantamento operacional oe2 car-04 admin_financeiro mvp q1 ct-m2-12 us29 como **administrador financeiro**, quero aprovar ou reprovar os adiantamentos pendentes de análise, para que a liberação de recursos seja formal, rastreável e comunicada ao solicitante. rn27 rnf06">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -5380,9 +5772,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US29)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro analisa adiantamentos pendentes, aprovando a liberação dos recursos ou indeferindo com justificativa registrada e notificação ao autor.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero aprovar ou reprovar os adiantamentos pendentes de análise, para que a liberação de recursos seja formal, rastreável e comunicada ao solicitante.</p>
       </div>
     </div>
 
@@ -5472,7 +5866,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -5484,8 +5878,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">8h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,00 (2 — Moderado)</span>
+          <span class="metric-val">2,00 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -5493,7 +5899,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -5501,7 +5907,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf30" data-type="rf" data-rf="RF30" data-oe="oe3" data-car="car-05" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 gestores comparam séries históricas de despesas e custos apropriados entre contratos de obras similares, subsidiando orçamentos e estimativas futuras. rn28 rnf09 rnf10 rnf12" data-search-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 gestores comparam séries históricas de despesas e custos apropriados entre contratos de obras similares, subsidiando orçamentos e estimativas futuras. rn28 rnf09 rnf10 rnf12">
+<details class="req-card req-card-rf req-card-oe3" id="rf30" data-type="rf" data-rf="RF30" data-oe="oe3" data-car="car-05" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 us30 como **gestor operacional de obras ou administrador financeiro**, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras. rn28 rnf09 rnf10 rnf12" data-search-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 us30 como **gestor operacional de obras ou administrador financeiro**, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras. rn28 rnf09 rnf10 rnf12">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -5566,9 +5972,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US30)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> Gestores comparam séries históricas de despesas e custos apropriados entre contratos de obras similares, subsidiando orçamentos e estimativas futuras.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras.</p>
       </div>
     </div>
 
@@ -5658,7 +6066,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q4">
@@ -5670,8 +6078,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">2 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">10h (3)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,67 (3 — Alto)</span>
+          <span class="metric-val">2,67 (3)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -5679,7 +6099,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,75</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>0,75</strong>). Destinação: <strong>Pós-MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -5687,7 +6107,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf31" data-type="rf" data-rf="RF31" data-oe="oe3" data-car="car-06" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS" data-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 o gestor operacional de obras parametriza limiares percentuais de consumo orçamentário que disparam avisos preventivos visuais e por e-mail contra desvios. rn29 rnf09 rnf10 rnf12" data-search-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 o gestor operacional de obras parametriza limiares percentuais de consumo orçamentário que disparam avisos preventivos visuais e por e-mail contra desvios. rn29 rnf09 rnf10 rnf12">
+<details class="req-card req-card-rf req-card-oe3" id="rf31" data-type="rf" data-rf="RF31" data-oe="oe3" data-car="car-06" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS" data-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 us31 como **gestor operacional de obras**, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado. rn29 rnf09 rnf10 rnf12" data-search-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 us31 como **gestor operacional de obras**, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado. rn29 rnf09 rnf10 rnf12">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -5752,9 +6172,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US31)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor Operacional de Obras parametriza limiares percentuais de consumo orçamentário que disparam avisos preventivos visuais e por e-mail contra desvios.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado.</p>
       </div>
     </div>
 
@@ -5844,7 +6266,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q4">
@@ -5856,8 +6278,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">2 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">3 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">10h (3)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,67 (3 — Alto)</span>
+          <span class="metric-val">2,67 (3)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -5865,7 +6299,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>0,75</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>0,75</strong>). Destinação: <strong>Pós-MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q4">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -5873,7 +6307,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf32" data-type="rf" data-rf="RF32" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf32 deliberar apontamento de campo oe1 car-02 gestor_obras mvp q1 ct-m1-15 o gestor operacional de obras delibera sobre apontamentos pendentes da sua alçada, homologando para faturamento ou rejeitando com parecer mínimo de 15 caracteres. rn02 rn05 rn10 rn30 rnf04" data-search-text="rf32 deliberar apontamento de campo oe1 car-02 gestor_obras mvp q1 ct-m1-15 o gestor operacional de obras delibera sobre apontamentos pendentes da sua alçada, homologando para faturamento ou rejeitando com parecer mínimo de 15 caracteres. rn02 rn05 rn10 rn30 rnf04">
+<details class="req-card req-card-rf req-card-oe1" id="rf32" data-type="rf" data-rf="RF32" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf32 deliberar apontamento de campo oe1 car-02 gestor_obras mvp q1 ct-m1-15 us32 como **gestor operacional de obras**, quero homologar ou rejeitar os apontamentos de campo pendentes dos contratos sob minha responsabilidade, com parecer obrigatório na rejeição, para que apenas horas validadas sigam para o fechamento financeiro e o autor seja informado da decisão. rn02 rn05 rn10 rn30 rnf04" data-search-text="rf32 deliberar apontamento de campo oe1 car-02 gestor_obras mvp q1 ct-m1-15 us32 como **gestor operacional de obras**, quero homologar ou rejeitar os apontamentos de campo pendentes dos contratos sob minha responsabilidade, com parecer obrigatório na rejeição, para que apenas horas validadas sigam para o fechamento financeiro e o autor seja informado da decisão. rn02 rn05 rn10 rn30 rnf04">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -5938,9 +6372,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US32)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor Operacional de Obras delibera sobre apontamentos pendentes da sua alçada, homologando para faturamento ou rejeitando com parecer mínimo de 15 caracteres.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero homologar ou rejeitar os apontamentos de campo pendentes dos contratos sob minha responsabilidade, com parecer obrigatório na rejeição, para que apenas horas validadas sigam para o fechamento financeiro e o autor seja informado da decisão.</p>
       </div>
     </div>
 
@@ -6030,7 +6466,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -6042,8 +6478,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">4 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -6051,7 +6499,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -6059,7 +6507,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf33" data-type="rf" data-rf="RF33" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf33 cadastrar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-11 o gestor ou administrador cadastra novos contratos de obras, especificando cliente, prazos de vigência, valor global e gestor técnico responsável. rn09 rn11 rnf10 rnf11" data-search-text="rf33 cadastrar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-11 o gestor ou administrador cadastra novos contratos de obras, especificando cliente, prazos de vigência, valor global e gestor técnico responsável. rn09 rn11 rnf10 rnf11">
+<details class="req-card req-card-rf req-card-oe3" id="rf33" data-type="rf" data-rf="RF33" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf33 cadastrar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-11 us33 como **administrador financeiro ou gestor operacional de obras**, quero cadastrar, editar e consultar contratos de obras com vigência, valor global e retenções, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido. rn09 rn11 rnf10 rnf11" data-search-text="rf33 cadastrar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-11 us33 como **administrador financeiro ou gestor operacional de obras**, quero cadastrar, editar e consultar contratos de obras com vigência, valor global e retenções, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido. rn09 rn11 rnf10 rnf11">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -6124,9 +6572,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US33)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor ou Administrador cadastra novos contratos de obras, especificando cliente, prazos de vigência, valor global e gestor técnico responsável.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro ou Gestor Operacional de Obras</strong>, quero cadastrar, editar e consultar contratos de obras com vigência, valor global e retenções, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido.</p>
       </div>
     </div>
 
@@ -6216,7 +6666,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -6228,8 +6678,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">8h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -6237,7 +6699,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -6245,7 +6707,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf34" data-type="rf" data-rf="RF34" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf34 cadastrar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-12 o gestor operacional cadastra centros de custos associados aos contratos ativos, habilitando o rateio direcionado de mão de obra e despesas operacionais. rn09 rn11 rnf09 rnf10" data-search-text="rf34 cadastrar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-12 o gestor operacional cadastra centros de custos associados aos contratos ativos, habilitando o rateio direcionado de mão de obra e despesas operacionais. rn09 rn11 rnf09 rnf10">
+<details class="req-card req-card-rf req-card-oe3" id="rf34" data-type="rf" data-rf="RF34" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf34 cadastrar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-12 us34 como **gestor operacional de obras**, quero cadastrar centros de custo e definir tetos orçamentários por categoria de despesa em cada contrato, para que o painel calcule a execução orçamentária e os desvios. rn09 rn11 rnf09 rnf10" data-search-text="rf34 cadastrar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-12 us34 como **gestor operacional de obras**, quero cadastrar centros de custo e definir tetos orçamentários por categoria de despesa em cada contrato, para que o painel calcule a execução orçamentária e os desvios. rn09 rn11 rnf09 rnf10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -6310,9 +6772,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US34)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor Operacional cadastra centros de custos associados aos contratos ativos, habilitando o rateio direcionado de mão de obra e despesas operacionais.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero cadastrar centros de custo e definir tetos orçamentários por categoria de despesa em cada contrato, para que o painel calcule a execução orçamentária e os desvios.</p>
       </div>
     </div>
 
@@ -6402,7 +6866,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -6414,8 +6878,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">8h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -6423,7 +6899,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -6431,7 +6907,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf35" data-type="rf" data-rf="RF35" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf35 retificar apontamento de campo oe1 car-02 tecnico_campo mvp q1 ct-m1-16 o técnico de campo retifica dados ou anexos de apontamento pendente (em até 5 dias úteis) ou corrige e reenvia registro rejeitado para nova homologação. rn02 rnf04 rnf07" data-search-text="rf35 retificar apontamento de campo oe1 car-02 tecnico_campo mvp q1 ct-m1-16 o técnico de campo retifica dados ou anexos de apontamento pendente (em até 5 dias úteis) ou corrige e reenvia registro rejeitado para nova homologação. rn02 rnf04 rnf07">
+<details class="req-card req-card-rf req-card-oe1" id="rf35" data-type="rf" data-rf="RF35" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf35 retificar apontamento de campo oe1 car-02 tecnico_campo mvp q1 ct-m1-16 us35 como **técnico de campo**, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão. rn02 rnf04 rnf07" data-search-text="rf35 retificar apontamento de campo oe1 car-02 tecnico_campo mvp q1 ct-m1-16 us35 como **técnico de campo**, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão. rn02 rnf04 rnf07">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -6496,9 +6972,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US35)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Técnico de Campo retifica dados ou anexos de apontamento pendente (em até 5 dias úteis) ou corrige e reenvia registro rejeitado para nova homologação.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão.</p>
       </div>
     </div>
 
@@ -6588,7 +7066,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -6600,8 +7078,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">4h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -6609,7 +7099,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -6617,7 +7107,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf36" data-type="rf" data-rf="RF36" data-oe="oe1" data-car="car-10" data-mvp="pós-mvp" data-quad="q3" data-role="ADMIN_FINANCEIRO" data-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 o administrador financeiro exporta apontamentos, presenças e despesas consolidadas em planilhas abertas csv e xlsx para conciliação contábil legada.  rnf02" data-search-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 o administrador financeiro exporta apontamentos, presenças e despesas consolidadas em planilhas abertas csv e xlsx para conciliação contábil legada.  rnf02">
+<details class="req-card req-card-rf req-card-oe1" id="rf36" data-type="rf" data-rf="RF36" data-oe="oe1" data-car="car-10" data-mvp="pós-mvp" data-quad="q3" data-role="ADMIN_FINANCEIRO" data-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 us36 como **administrador financeiro**, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas csv e xlsx, para que eu faça a conciliação contábil externa sem redigitação.  rnf02" data-search-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 us36 como **administrador financeiro**, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas csv e xlsx, para que eu faça a conciliação contábil externa sem redigitação.  rnf02">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q3"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Evolutivo</span></span>
@@ -6682,9 +7172,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US36)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Administrador Financeiro exporta apontamentos, presenças e despesas consolidadas em planilhas abertas CSV e XLSX para conciliação contábil legada.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas CSV e XLSX, para que eu faça a conciliação contábil externa sem redigitação.</p>
       </div>
     </div>
 
@@ -6774,7 +7266,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q3">
@@ -6786,8 +7278,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">2 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -6795,7 +7299,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,20</strong>). Enquadramento: <strong>Pós-MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,20</strong>). Destinação: <strong>Pós-MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q3">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -6803,7 +7307,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf37" data-type="rf" data-rf="RF37" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf37 atualizar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-13 o gestor ou administrador atualiza dados contratuais vigentes (aditivos de prazo, valor e responsáveis), mantendo a rastreabilidade histórica. rn09 rn11 rnf10 rnf11" data-search-text="rf37 atualizar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-13 o gestor ou administrador atualiza dados contratuais vigentes (aditivos de prazo, valor e responsáveis), mantendo a rastreabilidade histórica. rn09 rn11 rnf10 rnf11">
+<details class="req-card req-card-rf req-card-oe3" id="rf37" data-type="rf" data-rf="RF37" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf37 atualizar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-13 us33 como **gestor operacional de obras ou administrador financeiro**, quero atualizar aditivos, prazos e valores de contratos de obras vigentes, para que as apropriações reflitam as repactuações contratuais. rn09 rn11 rnf10 rnf11" data-search-text="rf37 atualizar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-13 us33 como **gestor operacional de obras ou administrador financeiro**, quero atualizar aditivos, prazos e valores de contratos de obras vigentes, para que as apropriações reflitam as repactuações contratuais. rn09 rn11 rnf10 rnf11">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -6868,9 +7372,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US33)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor ou Administrador atualiza dados contratuais vigentes (aditivos de prazo, valor e responsáveis), mantendo a rastreabilidade histórica.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero atualizar aditivos, prazos e valores de contratos de obras vigentes, para que as apropriações reflitam as repactuações contratuais.</p>
       </div>
     </div>
 
@@ -6960,7 +7466,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -6972,8 +7478,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -6981,7 +7499,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -6989,7 +7507,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf38" data-type="rf" data-rf="RF38" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf38 consultar contratos de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-14 usuários autorizados consultam a listagem e o detalhamento dos contratos de obras ativos, concluídos ou suspensos, com filtros por cliente e período.  rnf10" data-search-text="rf38 consultar contratos de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-14 usuários autorizados consultam a listagem e o detalhamento dos contratos de obras ativos, concluídos ou suspensos, com filtros por cliente e período.  rnf10">
+<details class="req-card req-card-rf req-card-oe3" id="rf38" data-type="rf" data-rf="RF38" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf38 consultar contratos de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-14 us33 como **gestor operacional de obras ou administrador financeiro**, quero consultar a relação e o detalhamento de contratos ativos e concluídos, para que eu visualize rapidamente as condições pactuadas de cada obra.  rnf10" data-search-text="rf38 consultar contratos de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-14 us33 como **gestor operacional de obras ou administrador financeiro**, quero consultar a relação e o detalhamento de contratos ativos e concluídos, para que eu visualize rapidamente as condições pactuadas de cada obra.  rnf10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -7054,9 +7572,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US33)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> Usuários autorizados consultam a listagem e o detalhamento dos contratos de obras ativos, concluídos ou suspensos, com filtros por cliente e período.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero consultar a relação e o detalhamento de contratos ativos e concluídos, para que eu visualize rapidamente as condições pactuadas de cada obra.</p>
       </div>
     </div>
 
@@ -7146,7 +7666,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -7158,8 +7678,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">2h (1)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,00 (1 — Baixo)</span>
+          <span class="metric-val">1,00 (1)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -7167,7 +7699,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>3,00</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>3,00</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -7175,7 +7707,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf39" data-type="rf" data-rf="RF39" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf39 atualizar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-15 o gestor operacional altera parâmetros e nomenclaturas de centros de custo existentes sem quebrar vínculos com lançamentos históricos apropriados. rn09 rn11 rnf09 rnf10" data-search-text="rf39 atualizar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-15 o gestor operacional altera parâmetros e nomenclaturas de centros de custo existentes sem quebrar vínculos com lançamentos históricos apropriados. rn09 rn11 rnf09 rnf10">
+<details class="req-card req-card-rf req-card-oe3" id="rf39" data-type="rf" data-rf="RF39" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf39 atualizar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-15 us34 como **gestor operacional de obras**, quero atualizar nomenclaturas e parâmetros de centros de custo ativos, para que a estrutura de custos permaneça alinhada à evolução do canteiro sem quebrar vínculos históricos. rn09 rn11 rnf09 rnf10" data-search-text="rf39 atualizar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-15 us34 como **gestor operacional de obras**, quero atualizar nomenclaturas e parâmetros de centros de custo ativos, para que a estrutura de custos permaneça alinhada à evolução do canteiro sem quebrar vínculos históricos. rn09 rn11 rnf09 rnf10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -7240,9 +7772,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US34)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor Operacional altera parâmetros e nomenclaturas de centros de custo existentes sem quebrar vínculos com lançamentos históricos apropriados.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero atualizar nomenclaturas e parâmetros de centros de custo ativos, para que a estrutura de custos permaneça alinhada à evolução do canteiro sem quebrar vínculos históricos.</p>
       </div>
     </div>
 
@@ -7332,7 +7866,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -7344,8 +7878,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">1 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">1,67 (2 — Moderado)</span>
+          <span class="metric-val">1,67 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -7353,7 +7899,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -7361,7 +7907,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf40" data-type="rf" data-rf="RF40" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf40 definir tetos orçamentários de obra oe3 car-06 gestor_obras mvp q1 ct-m3-16 o gestor operacional estipula tetos monetários orçados por categoria de despesa, permitindo apuração do orçamento global previsto e acionamento de alertas. rn13 rn29 rnf09 rnf10" data-search-text="rf40 definir tetos orçamentários de obra oe3 car-06 gestor_obras mvp q1 ct-m3-16 o gestor operacional estipula tetos monetários orçados por categoria de despesa, permitindo apuração do orçamento global previsto e acionamento de alertas. rn13 rn29 rnf09 rnf10">
+<details class="req-card req-card-rf req-card-oe3" id="rf40" data-type="rf" data-rf="RF40" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf40 definir tetos orçamentários de obra oe3 car-06 gestor_obras mvp q1 ct-m3-16 us34 como **gestor operacional de obras**, quero estipular tetos monetários orçados por categoria de despesa em cada contrato, para que o sistema monitore limites e acione alertas preventivos de estouro orçamentário. rn13 rn29 rnf09 rnf10" data-search-text="rf40 definir tetos orçamentários de obra oe3 car-06 gestor_obras mvp q1 ct-m3-16 us34 como **gestor operacional de obras**, quero estipular tetos monetários orçados por categoria de despesa em cada contrato, para que o sistema monitore limites e acione alertas preventivos de estouro orçamentário. rn13 rn29 rnf09 rnf10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -7426,9 +7972,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-expanded-desc">
-      <span class="req-checklist-title">Ação Observável do Usuário</span>
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">História de Usuário (US34)</span>
+      </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Ação do Usuário:</strong> O Gestor Operacional estipula tetos monetários orçados por categoria de despesa, permitindo apuração do orçamento global previsto e acionamento de alertas.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero estipular tetos monetários orçados por categoria de despesa em cada contrato, para que o sistema monitore limites e acione alertas preventivos de estouro orçamentário.</p>
       </div>
     </div>
 
@@ -7518,7 +8066,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
     </div>
 
-    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->
+    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->
     <div class="req-tab-pane" data-pane="priorizacao">
       <div class="req-metrics-grid">
         <div class="req-metric-card req-quad-card req-quad-q1">
@@ -7530,8 +8078,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="metric-val">3 <small>/ 4</small></span>
         </div>
         <div class="req-metric-card">
+          <span class="metric-label">Complexidade Técnica (CX)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Esforço de Implementação (ES)</span>
+          <span class="metric-val">6h (2)</span>
+        </div>
+        <div class="req-metric-card">
+          <span class="metric-label">Lacuna de Capacidade (LC)</span>
+          <span class="metric-val">2 <small>/ 4</small></span>
+        </div>
+        <div class="req-metric-card">
           <span class="metric-label">Esforço Consolidado (EC)</span>
-          <span class="metric-val">2,00 (2 — Moderado)</span>
+          <span class="metric-val">2,00 (2)</span>
         </div>
         <div class="req-metric-card">
           <span class="metric-label">Índice de Prioridade (IP)</span>
@@ -7539,7 +8099,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Enquadramento: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,50</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
