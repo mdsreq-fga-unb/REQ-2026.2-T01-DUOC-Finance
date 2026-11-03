@@ -1,4 +1,4 @@
-# Capítulo 1: Cenário Atual e Diagnóstico do Problema
+# Cenário Atual e Diagnóstico do Problema
 
 ## Objetivo do Capítulo
 
@@ -72,7 +72,7 @@ A partir do diálogo inicial e das entrevistas semiestruturadas com a auxiliar a
 
 ### Análise do Rich Picture — Sistema DUOC Finance
 
-![Rich Picture do Sistema DUOC Finance](../../assets/images/Rich_picture_DUOC.png)
+![Rich Picture do Sistema DUOC Finance](../assets/images/Rich_picture_DUOC.png)
 
 !!! note "Revisão de fronteiras (v2)"
     A versão anterior deste diagrama misturava o cenário atual e a solução proposta dentro do mesmo bloco visual — notadamente selos "resolvido pelo novo sistema" embutidos no bloco "Problemas" e o bloco "Oportunidades" sem vínculo visual claro a nenhum dos dois lados. A versão atual separa as duas dimensões em zonas explicitamente delimitadas: **Situação Atual (AS-IS)**, com borda sólida azul, e **Solução Proposta (TO-BE)**, com borda tracejada verde — conforme legenda na base da imagem.
@@ -86,7 +86,7 @@ Ao redor desse núcleo, o diagrama posiciona os **atores externos e interfaces**
 - **Clientes** (residencial, comercial, infraestrutura), que enviam briefings e recebem aprovações/feedback;
 - **Órgãos reguladores** (prefeitura, licenças), que impõem restrições formais de conformidade;
 - **Consultores complementares** e **fornecedores de material** (MEP, elétrica, plumbing/HVAC, factorias, landscape), que alimentam o processo de compatibilização técnica;
-- Um bloco inferior de **sistemas envolvidos** (BIM/Revit/ArchiCAD, gestão de projetos via MS Project, comunicação via Slack/e-mail, ERPs/planilhas), que representa a infraestrutura tecnológica legada com a qual o novo sistema DP + Financeiro interopera. As integrações com Shifton, ERPs/planilhas, BIM e Slack estão formalizadas como [CAR-09](../capitulo-2/index.md#car-09) a [CAR-12](../capitulo-2/index.md#car-12); a gestão de projetos via MS Project não tem integração planejada nesta fase e permanece apenas como referência de infraestrutura legada observada.
+- Um bloco inferior de **sistemas envolvidos** (BIM/Revit/ArchiCAD, gestão de projetos via MS Project, comunicação via Slack/e-mail, ERPs/planilhas), que representa a infraestrutura tecnológica legada com a qual o novo sistema DP + Financeiro interopera. As integrações com FLIT, ERPs/planilhas, BIM e Slack estão formalizadas como [CAR-09](solucao-proposta.md#car-09) a [CAR-12](solucao-proposta.md#car-12), todas planejadas para a Fase 2 (pós-MVP); a gestão de projetos via MS Project não tem integração planejada nesta fase e permanece apenas como referência de infraestrutura legada observada.
 
 ### Fluxos de Informação e Transações Rotineiras
 
@@ -98,7 +98,7 @@ O bloco "**Problemas**", na zona da Situação Atual, nomeia os principais ponto
 
 ### Fronteira do Sistema DUOC Finance
 
-O escopo do novo sistema é delimitado na zona "**Solução Proposta (TO-BE)**", à direita do diagrama, com borda tracejada verde para diferenciá-la visualmente da zona "Situação Atual (AS-IS)": lançamento de apontamentos de campo (RVT), fluxo digital de despesas e reembolsos operacionais, cálculo parametrizado de diárias técnicas e comissões de obra (sem rotinas de folha de pagamento CLT, encargos fiscais ou gestão de benefícios/férias), apuração de custo direto de mão de obra por projeto/contrato, controle de acesso/perfis (RBAC), conformidade LGPD e as integrações externas com Shifton, ERPs/planilhas, BIM e Slack (CAR-09 a CAR-12 — ver [2.6 Viabilidade da Proposta](../capitulo-2/index.md#26-viabilidade-da-proposta-analise-do-mvp)). O bloco "Oportunidades Estratégicas" também está posicionado nessa zona, pois representa benefícios habilitados pela solução, não características do estado atual. Tudo que estiver fora dessa lista (ex.: gestão de projetos via MS Project) permanece como sistema de apoio externo, na zona da Situação Atual, sem integração planejada nesta fase.
+O escopo do novo sistema é delimitado na zona "**Solução Proposta (TO-BE)**", à direita do diagrama, com borda tracejada verde para diferenciá-la visualmente da zona "Situação Atual (AS-IS)": lançamento de apontamentos de campo (RVT), fluxo digital de despesas e reembolsos operacionais, cálculo parametrizado de diárias técnicas e comissões de obra (sem rotinas de folha de pagamento CLT, encargos fiscais ou gestão de benefícios/férias), apuração de custo direto de mão de obra por projeto/contrato, controle de acesso/perfis (RBAC), conformidade LGPD e as integrações externas com FLIT, ERPs/planilhas, BIM e Slack, todas planejadas para a Fase 2 pós-MVP (CAR-09 a CAR-12 — ver [2.6 Viabilidade da Proposta](solucao-proposta.md#26-viabilidade-da-proposta-analise-do-mvp)). O bloco "Oportunidades Estratégicas" também está posicionado nessa zona, pois representa benefícios habilitados pela solução, não características do estado atual. Tudo que estiver fora dessa lista (ex.: gestão de projetos via MS Project) permanece como sistema de apoio externo, na zona da Situação Atual, sem integração planejada nesta fase.
 
 ### Estrutura Detalhada das Transações
 
@@ -122,7 +122,7 @@ O escopo do novo sistema é delimitado na zona "**Solução Proposta (TO-BE)**",
 
 ### Diagrama de Causa e Efeito (Ishikawa)
 
-![Diagrama de Ishikawa](../../assets/images/diagrama_ishikawa_duoc.png)
+![Diagrama de Ishikawa](../assets/images/diagrama_ishikawa_duoc.png)
 
 ### Análise das Causas-Raiz
 
@@ -154,14 +154,14 @@ Os dados disponíveis não são consolidados em indicadores de custo de mão de 
 | **Métodos** | Registros e validações sem fluxo padronizado | Retrabalho, atrasos e divergências no fechamento |
 | **Tecnologia** | Ferramentas desconectadas e sem base integrada | Perda de histórico, baixa rastreabilidade e risco de acesso indevido |
 | **Pessoas** | Diferentes níveis de letramento digital e sobrecarga da liderança | Registros incompletos e dependência de conhecimento concentrado |
-| **Medição** | Ausência de indicadores consolidados por contrato | Opacidade sobre custos, margens e desvios financeiros |
+| **Medição** | Ausência de indicadores consolidados por contrato | Opacidade sobre custos apropriados e desvios orçamentários |
 
 ---
 
 <a id="15-desafios-do-projeto"></a>
 ## Desafios do Projeto
 
-O principal desafio do DUOC Finance é integrar o registro de horas operacionais (RVT) ao processamento financeiro de folha de pagamento e comissões. Essa integração precisa funcionar em uma equipe com diferentes níveis de letramento tecnológico, que inclui engenheiros especialistas, arquitetos, encarregados, estagiários, assistentes pessoais e operários de obra.
+O principal desafio do DUOC Finance é integrar o registro de horas operacionais (RVT) ao fechamento financeiro de diárias técnicas e comissões de obra, sem substituir a folha de pagamento CLT. Essa integração precisa funcionar em uma equipe com diferentes níveis de letramento tecnológico, que inclui engenheiros especialistas, arquitetos, encarregados, estagiários, assistentes pessoais e operários de obra.
 
 !!! warning "Limitação metodológica"
     A caracterização desses perfis de campo (engenheiros, arquitetos, encarregados, estagiários, operários) baseia-se no relato indireto da ponto focal administrativa da DUOC, não em entrevista ou observação direta com esses profissionais. As barreiras de adoção descritas na seção seguinte devem ser lidas como hipótese a confirmar em campo, não como diagnóstico validado por múltiplas fontes.
@@ -174,7 +174,7 @@ A mudança também pode ser percebida como fiscalização, principalmente quando
 
 ### Contenção de Escopo do MVP
 
-O escopo deve permanecer restrito ao Departamento Pessoal e ao Financeiro durante o semestre letivo. O produto mínimo viável deve concentrar-se no cadastro de usuários e papéis, registro e aprovação do RVT, consolidação das horas e apoio ao processamento de folha, comissões e relatórios financeiros essenciais.
+O escopo deve permanecer restrito ao Departamento Pessoal e ao Financeiro durante o semestre letivo. O produto mínimo viável deve concentrar-se no cadastro de usuários e papéis, registro e aprovação do RVT, consolidação das horas e apoio ao fechamento de diárias técnicas, comissões de obra e relatórios financeiros essenciais.
 
 Ficam fora desta entrega os módulos de gestão de engenharia e de obras, como cronogramas de Gantt, orçamentos SINAPI, controle de materiais, acompanhamento técnico detalhado e funcionalidades de um ERP de construção. Essa restrição protege o prazo, reduz a complexidade de implantação e permite validar o fluxo financeiro central antes de considerar futuras expansões.
 
@@ -187,7 +187,7 @@ A tabela a seguir apresenta as partes interessadas internas e externas, seu inte
 
 | Stakeholder / Papel | Interesse no Projeto | Grau de Influência | Nível de Acesso Esperado |
 | :--- | :--- | :---: | :--- |
-| Sócios / Gestão da DUOC | Acompanhar a rentabilidade dos contratos, aprovar regras financeiras e tomar decisões estratégicas com dados confiáveis. | Alto | Administrador da organização; visão gerencial de usuários, RVT, folha, comissões e relatórios. |
+| Sócios / Gestão da DUOC | Acompanhar a rentabilidade dos contratos, aprovar regras financeiras e tomar decisões estratégicas com dados confiáveis. | Alto | Administrador da organização; visão gerencial de usuários, RVT, diárias, comissões e relatórios. |
 | Arquitetos | Registrar horas e atividades vinculadas aos contratos, acompanhar aprovações e reduzir retrabalho administrativo. | Médio | Colaborador técnico; lançamento e consulta dos próprios registros e acompanhamento de aprovações. |
 | Engenheiros Especialistas | Registrar RVT por projeto e centro de custo, validar informações técnicas e apoiar a apuração de custos de mão de obra. | Alto | Colaborador técnico com permissão de validação dos registros de suas equipes ou projetos. |
 | Estagiários | Informar horas e atividades realizadas com orientação do responsável e manter seus registros atualizados. | Baixo | Colaborador; lançamento e consulta dos próprios registros, sem acesso a dados salariais. |
@@ -216,7 +216,7 @@ A caracterização dos segmentos de usuários que interagem com o ecossistema do
 | **Definição do Papel** | Sócios administradores e equipe de apoio administrativo-financeiro da DUOC que utilizam a plataforma para consolidação de dados e tomada de decisão estratégica. |
 | **Perfil Humano e Letramento Tecnológico** | Apresentam foco em governança corporativa, análise de indicadores de negócios e cumprimento de metas gerenciais. Possuem letramento tecnológico corporativo avançado (uso frequente de planilhas eletrônicas, relatórios financeiros e sistemas de gestão), porém sem conhecimento técnico em desenvolvimento de software ou engenharia de campo. |
 | **Ambiente de Uso e Hardware** | Uso prioritário em escritórios corporativos estáveis e estruturados. Interação por meio de computadores de mesa (Desktop) ou Laptops de alto desempenho, com suporte a monitores amplos de alta resolução, teclado físico estendido, mouse dedicado e conexões de rede confiáveis. |
-| **Tarefas Predominantes** | 1. Análise profunda e consolidação de faturamento por projeto corporativo.<br>2. Conciliação de despesas operacionais e acompanhamento das horas de deslocamento e trabalho técnico (RVT).<br>3. Homologação e auditoria das folhas de pagamento geradas pelo sistema.<br>4. Configuração de taxas, comissões de projetos e gestão de acessos e permissões (RBAC). |
+| **Tarefas Predominantes** | 1. Análise profunda e consolidação de faturamento por projeto corporativo.<br>2. Conciliação de despesas operacionais e acompanhamento das horas de deslocamento e trabalho técnico (RVT).<br>3. Homologação e auditoria dos fechamentos de diárias e comissões gerados pelo sistema.<br>4. Configuração de taxas, comissões de projetos e gestão de acessos e permissões (RBAC). |
 | **Requisitos de Interação e Usabilidade (IHC)** | Alta densidade de informação gráfica e tabular na interface. Necessidade de suporte robusto a atalhos de navegação via teclado, mecanismos de busca rápida com filtros multicritério e função prioritária de exportação de relatórios estruturados para os formatos Microsoft Excel e PDF. |
 
 ---
@@ -243,3 +243,5 @@ A caracterização dos segmentos de usuários que interagem com o ecossistema do
 | `2.1` | 19/09/2026 | Reconciliação pós-merge com `develop`: correção do papel de Maria Beatryz (1.1); notas de limitação metodológica sobre caracterização de perfis (1.2, 1.5, 1.7); Rich Picture v2 com fronteiras AS-IS/TO-BE e lastro a CAR-09/CAR-12 (1.3); adaptação do modelo 6M para 4M no Ishikawa (1.4); correção de terminologia financeira ("margem líquida" → "custo apropriado") | Paulo Nery | |
 | `2.2` | 20/09/2026 | Atualização do Rich Picture (1.3) para novo arquivo de imagem `Rich_picture_DUOC.png`; habilitação de ampliação (zoom) de imagens em toda a documentação via plugin `mkdocs-glightbox`, registrada como regra de estilo no `CONTRIBUTING.md` | Paulo Nery | |
 | `2.3` | 12/10/2026 | Saneamento de escopo pós-revisão por pares: remoção de menções residuais a folha CLT, férias e benefícios, alinhando a fronteira do sistema a diárias técnicas, comissões de obra e prestação de contas operacionais (TR-03). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `2.4` | 29/10/2026 | Alinhamento ao Capítulo 2 e ao Capítulo 8 conforme issue docente: integrações CAR-09 a CAR-12 explicitadas como Fase 2 (pós-MVP); remoção de menções residuais a processamento de folha; ajuste de terminologia financeira na síntese do Ishikawa. | Gustavo Bonifácio |  |
+| `2.5` | 02/11/2026 | Revisão cruzada com os Capítulos 2, 4 e 6 após feedback do professor: ferramenta de presença padronizada como FLIT (nome anteriormente registrado como Shifton); perfil do Administrador Financeiro e visão gerencial dos sócios sem referência a folha de pagamento | Gustavo Bonifácio |  |

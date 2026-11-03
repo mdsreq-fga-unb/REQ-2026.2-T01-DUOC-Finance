@@ -19,6 +19,8 @@ theme:
         icon: material/brightness-7
         name: Alternar para modo escuro
   features:
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.path
     - navigation.top
     - search.suggest
@@ -67,35 +69,44 @@ markdown_extensions:
 extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js
   - assets/javascripts/mermaid-init.js
+  - assets/javascripts/requisitos-filter.js
+  - assets/javascripts/piramide-interativa.js
 
 
 nav:
-  - Home: index.md
-  - 'Capítulo 1 - Cenário Atual': visao-produto/capitulo-1/index.md
-  - 'Capítulo 2 - Solução Proposta': visao-produto/capitulo-2/index.md
-  - 'Capítulo 3 - Intervenção Social': intervencao-social/index.md
-  - 'Capítulo 4 - Estratégias de ESW': estrategias-esw/index.md
-  - 'Capítulo 5 - Engenharia de Requisitos': engenharia-requisitos/index.md
-  - 'Capítulo 6 - Cronograma': cronograma/index.md
-  - 'Capítulo 7 - Interação com Cliente': interacao-cliente/index.md
-  - 'Capítulo 8 - Requisitos':
-      - 'Especificação de Requisitos': requisitos/index.md
-      - 'Priorização e MVP': requisitos/priorizacao.md
-      - 'Feedback da Avaliação em Pares': requisitos/feedback.md
-  - 'Capítulo 9 - DoR e DoD': dor-dod/index.md
-  - 'Capítulo 10 - Backlog': backlog/index.md
-  - 'Capítulo 11 - Lições Aprendidas': licoes-aprendidas/index.md
-  - 'Capítulo 12 - Referências': referencias/index.md
-  - 'Atas de Reuniões':
-    - 'Painel Geral de Atas': atas/index.md
-    - 'Reunião 01 (05/09) — Elicitação e MVP': atas/reuniao-01.md
-    - 'Reunião 02 (07/09) — Alinhamento Metodológico': atas/reuniao-02.md
-    - 'Reunião 03 (07/09) — Apresentação da Unidade 1': atas/reuniao-03.md
-    - 'Reunião 04 (17/09) — Planejamento da Unidade 2': atas/reuniao-04.md
-    - 'Reunião 05 (24/09) — Priorização e Valor de Negócio': atas/reuniao-05.md
-  - 'Entregas do Projeto':
-    - 'Painel Geral de Entregas': entregas/index.md
-    - 'Entrega 1 (Ponto de Controle 1)': entregas/entrega-1.md
-    - 'Entrega 2 (Ponto de Controle 2)': entregas/entrega-2.md
-    - 'Entrega 3 (Ponto de Controle 3)': entregas/entrega-3.md
-    - 'Entrega 4 (Ponto de Controle 4)': entregas/entrega-4.md
+  - 'Início': index.md
+  - 'Visão do Produto':
+      - 'Cenário Atual & Diagnóstico': visao-produto/cenario-atual.md
+      - 'Solução Proposta, OEs & CARs': visao-produto/solucao-proposta.md
+      - 'Intervenção Social & Cultural': visao-produto/intervencao-social.md
+  - 'Metodologia':
+      - 'Estratégias de Engenharia': metodologia/estrategias-esw.md
+      - 'Processo de Requisitos': metodologia/engenharia-requisitos.md
+      - 'Cronograma & Planejamento': metodologia/cronograma.md
+      - 'Interação com o Cliente': metodologia/interacao-cliente.md
+  - 'Requisitos':
+      - 'Catálogo Integrado de Requisitos': requisitos/index.md
+      - 'Priorização & Matriz 4×4': requisitos/priorizacao.md
+      - 'Rastreabilidade & Matrizes': requisitos/rastreabilidade.md
+      - 'Conformidade Jurídica & Governança': requisitos/governanca-conformidade.md
+      - 'Avaliação por Pares & Feedback': requisitos/feedback.md
+  - 'MVP':
+      - 'Backlog do Produto & Linha de Corte': mvp/backlog.md
+      - 'Critérios de Aceitação (DoR & DoD)': mvp/dor-dod.md
+  - 'Entregas':
+      - 'Painel Geral de Entregas': entregas/index.md
+      - 'Entrega 1 (Ponto de Controle 1)': entregas/entrega-1.md
+      - 'Entrega 2 (Ponto de Controle 2)': entregas/entrega-2.md
+      - 'Entrega 3 (Ponto de Controle 3)': entregas/entrega-3.md
+      - 'Entrega 4 (Ponto de Controle 4)': entregas/entrega-4.md
+  - 'Governança':
+      - 'Atas de Reuniões':
+          - 'Painel Geral de Atas': governanca/atas/index.md
+          - 'Reunião 01 (05/09) — Elicitação e MVP': governanca/atas/reuniao-01.md
+          - 'Reunião 02 (07/09) — Alinhamento Metodológico': governanca/atas/reuniao-02.md
+          - 'Reunião 03 (07/09) — Apresentação da Unidade 1': governanca/atas/reuniao-03.md
+          - 'Reunião 04 (17/09) — Planejamento da Unidade 2': governanca/atas/reuniao-04.md
+          - 'Reunião 05 (24/09) — Priorização e Valor de Negócio': governanca/atas/reuniao-05.md
+          - 'Reunião 06 (02/10) — Validação do Protótipo no Figma': governanca/atas/reuniao-06.md
+      - 'Lições Aprendidas': governanca/licoes-aprendidas.md
+      - 'Referências Bibliográficas': governanca/referencias.md

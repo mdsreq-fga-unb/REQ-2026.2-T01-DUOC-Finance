@@ -83,7 +83,7 @@ A equipe consolidou o diagnóstico sociotécnico da DUOC, marcado pela fragmenta
 ## 5. Gravação e Links
 
 * **Gravação:** não publicada no portal.
-* **Artefatos relacionados:** [Capítulo 3 — Intervenção Social](../intervencao-social/index.md), [Capítulo 4 — Estratégias de ESW](../estrategias-esw/index.md) e [Capítulo 7 — Interação com Cliente](../interacao-cliente/index.md).
+* **Artefatos relacionados:** [Capítulo 3 — Intervenção Social](../../visao-produto/intervencao-social.md), [Capítulo 4 — Estratégias de ESW](../../metodologia/estrategias-esw.md) e [Capítulo 7 — Interação com Cliente](../../metodologia/interacao-cliente.md).
 
 ---
 
@@ -98,4 +98,4 @@ A equipe consolidou o diagnóstico sociotécnico da DUOC, marcado pela fragmenta
 | **Prototipagem de média fidelidade do faturamento no Figma** | Paulo Nery | 14/09 | A iniciar |
 
 !!! note "Alteração na composição da equipe"
-    O integrante Gabriel, responsável por parte das ações acima, deixou a equipe após esta reunião. Os registros foram mantidos para preservar a fidelidade histórica da ata; a composição vigente da equipe está em [7.1 Composição da Equipe](../interacao-cliente/index.md#71-composicao-da-equipe).
+    O integrante Gabriel, responsável por parte das ações acima, deixou a equipe após esta reunião. Os registros foram mantidos para preservar a fidelidade histórica da ata; a composição vigente da equipe está em [7.1 Composição da Equipe](../../metodologia/interacao-cliente.md#71-composicao-da-equipe).

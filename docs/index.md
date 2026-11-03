@@ -34,20 +34,31 @@ A solução de software foi concebida a partir de um diagnóstico de dores reais
 
 ## Estrutura de Navegação da Documentação
 
-Para facilitar a auditoria e leitura dos artefatos pelo corpo docente e pelas partes interessadas, a documentação está organizada de forma modular de acordo com as seguintes seções estruturadas:
+A documentação do ***DUOC Finance*** está organizada em eixos temáticos integrados, facilitando a consulta contínua, a rastreabilidade bidirecional e a auditoria técnica:
 
-*   **Capítulo 1 - Cenário Atual:** Diagnóstico das dores operacionais, identificação institucional, diagramas analíticos (Rich Picture e Ishikawa), mapeamento de stakeholders e análise de perfis de usabilidade.
-*   **Capítulo 2 - Solução Proposta:** Visão do produto, objetivos de negócio, tabela de características (CARs), justificativa de tecnologias e arquitetura, pesquisa de concorrentes, viabilidade e benefícios esperados.
-*   **Capítulo 3 - Intervenção Social:** Análise sociotécnica das transformações corporativas planejadas e contingenciamento de efeitos colaterais comportamentais no ambiente de trabalho.
-*   **Capítulo 4 - Estratégias de ESW:** Decisões metodológicas de processo de software, ciclo de vida iterativo e incremental e quadro comparativo de processos.
-*   **Capítulo 5 - Engenharia de Requisitos:** Práticas e técnicas adotadas nas seis atividades de ER e mapeamento cronológico integrado às 4 fases do processo RAD.
-*   **Capítulo 6 - Cronograma:** Planejamento temporal preliminar e divisão dos marcos de entregas da disciplina.
-*   **Capítulo 7 - Interação com Cliente:** Atribuição de papéis da equipe de engenharia, planos e canais de comunicação interna/externa e ritos de validação sociotécnica.
-*   **Capítulo 8 - Requisitos de Software:** Especificação de requisitos funcionais (RF) e não funcionais (RNF) sob o modelo FURPS+ *(a ser entregue na Unidade 2)*.
-*   **Capítulo 9 - DoR e DoD:** Acordos de trabalho para definição de pronto para desenvolvimento e pronto para entrega *(a ser entregue na Unidade 2)*.
-*   **Capítulo 10 - Backlog do Produto:** Backlog geral de histórias de usuário e priorização de MVP via MoSCoW *(a ser entregue na Unidade 2)*.
-*   **Capítulo 11 - Lições Aprendidas:** Retrospectivas consolidadas de processo e aprendizados práticos adquiridos pela equipe ao fim de cada ciclo avaliativo.
-*   **Capítulo 12 - Referências:** Base teórica e bibliografia de suporte técnico e metodológico sob as normas da ABNT e IEEE.
+*   **Visão do Produto:**
+    *   [Cenário Atual & Diagnóstico](visao-produto/cenario-atual.md): Mapeamento sociotécnico, dores operacionais, Rich Picture, Ishikawa e personas.
+    *   [Solução Proposta, OEs & CARs](visao-produto/solucao-proposta.md): Visão de produto, Objetivos Específicos (OE1 a OE4) e Características (CAR-01 a CAR-12).
+    *   [Intervenção Social & Cultural](visao-produto/intervencao-social.md): Análise de impacto organizacional e contingenciamento comportamental.
+*   **Metodologia & Processo:**
+    *   [Estratégias de Engenharia](metodologia/estrategias-esw.md): Escolhas de processo de software, ciclo de vida iterativo e incremental e quadro comparativo.
+    *   [Processo de Requisitos](metodologia/engenharia-requisitos.md): Práticas nas seis atividades de ER alinhadas às 4 fases do modelo RAD UI-First.
+    *   [Cronograma & Planejamento](metodologia/cronograma.md): Planejamento temporal, linha de eventos e marcos avaliativos.
+    *   [Interação com o Cliente](metodologia/interacao-cliente.md): Ritos de validação, alçadas e canais formais com a cliente parceira.
+*   **Requisitos de Software (Núcleo do Escopo):**
+    *   [Catálogo Integrado de Requisitos](requisitos/index.md): Centralização oficial dos 40 Requisitos Funcionais (RF), 31 Regras de Negócio (RN) e 20 Requisitos Não Funcionais (RNF) com busca instantânea e filtros.
+    *   [Priorização & Matriz 4×4](requisitos/priorizacao.md): Metodologia quantitativa Valor × Esforço e delimitação analítica do MVP.
+    *   [Rastreabilidade & Matrizes](requisitos/rastreabilidade.md): Pirâmide de Abstração, diagramas visuais e matriz-síntese de rastreabilidade.
+    *   [Conformidade Jurídica & Governança](requisitos/governanca-conformidade.md): Fundamentação do Art. 11 da CLT, Arts. 16 e 18 da LGPD, modelo RBAC e trilha imutável.
+    *   [Avaliação por Pares & Feedback](requisitos/feedback.md): Registros de inspeções e melhorias incorporadas.
+*   **Planejamento da Entrega & MVP:**
+    *   [Critérios de Aceitação (DoR & DoD)](mvp/dor-dod.md): Acordos de trabalho para definição de pronto para desenvolvimento e pronto para entrega.
+    *   [Backlog do Produto & Linha de Corte](mvp/backlog.md): Decomposição em Épicos, Histórias de Usuário e alocação das entregas.
+*   **Histórico & Governança:**
+    *   [Painel Geral de Atas](governanca/atas/index.md): Registro das reuniões formais de alinhamento e validação.
+    *   [Painel Geral de Entregas](entregas/index.md): Acompanhamento dos Pontos de Controle (PC1 a PC4).
+    *   [Lições Aprendidas](governanca/licoes-aprendidas.md): Retrospectivas consolidadas e planos de melhoria contínua.
+    *   [Referências Bibliográficas](governanca/referencias.md): Normas ABNT e IEEE e bibliografia acadêmica.
 
 ---
 

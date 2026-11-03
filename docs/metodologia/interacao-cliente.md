@@ -1,4 +1,4 @@
-# Capítulo 7: Interação entre Equipe e Cliente
+# Interação entre Equipe e Cliente
 
 ## Objetivo do Capítulo
 
@@ -13,7 +13,7 @@ A governança sociotécnica do projeto apoia-se em:
 *   **Processo de Validação:** Definição do fluxo regulatório com base inicial no Figma, estabelecimento ágil dos designs via Frontend (UI-First) e posterior implementação da lógica de backend e persistência, culminando na homologação de incrementos (UAT).
 
 !!! note "Painel Geral de Atas de Reuniões"
-    O registro histórico completo de atas, pautas prévias e listas de ações (*Action Items*) foi centralizado no **[Painel Geral de Atas de Reuniões](../atas/index.md)**.
+    O registro histórico completo de atas, pautas prévias e listas de ações (*Action Items*) foi centralizado no **[Painel Geral de Atas de Reuniões](../governanca/atas/index.md)**.
 
 ---
 
@@ -55,7 +55,7 @@ Nesta seção são detalhados os canais oficiais de comunicação, a frequência
 ### Dinâmica das Reuniões de Alinhamento com o Cliente
 
 1. **Preparação Prévia da Pauta:** Toda reunião com a cliente parceira conta com pauta objetiva enviada com antecedência mínima de 24 horas via WhatsApp.
-2. **Registro de Atas e Decisões:** As deliberações e novos acordos de requisitos tomados durante as reuniões são formalmente transcritos em atas detalhadas com pautas, discussões e listas de ações imediatas (*Action Items*), centralizadas no repositório dedicado de [Atas de Reuniões](../atas/index.md) e vinculadas às respectivas Issues do GitHub.
+2. **Registro de Atas e Decisões:** As deliberações e novos acordos de requisitos tomados durante as reuniões são formalmente transcritos em atas detalhadas com pautas, discussões e listas de ações imediatas (*Action Items*), centralizadas no repositório dedicado de [Atas de Reuniões](../governanca/atas/index.md) e vinculadas às respectivas Issues do GitHub.
 3. **Respeito à Disponibilidade do Cliente:** Os horários de reunião são combinados com antecedência, priorizando a rotina executiva da gestora para assegurar encontros focados e altamente produtivos.
 
 ---
@@ -144,6 +144,27 @@ Nesta seção são detalhados os canais oficiais de comunicação, a frequência
   <li>Havendo divergência de regras, o ciclo entra na janela dedicada de correções; caso contrário, a funcionalidade é homologada para release.</li>
 </ul>
 
+<h4>5. Sessões de Validação Realizadas</h4>
+
+<table>
+  <thead>
+    <tr><th>Data</th><th>Artefato avaliado</th><th>Condução e avaliação</th><th>Resultado</th><th>Registro</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>02/10/2026</td>
+      <td><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39" target="_blank" rel="noopener noreferrer">Protótipo de alta fidelidade no Figma</a> (Incremento 1)</td>
+      <td>Conduzida por Eric Araújo; avaliada por Maria Beatryz, presencialmente</td>
+      <td>Aprovado sem alterações; validação no frontend navegável pendente para o DoR</td>
+      <td><a href="../../governanca/atas/reuniao-06/">Ata 06</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  A primeira sessão foi realizada sobre o protótipo no Figma, e não no frontend, porque o frontend navegável ainda não estava pronto. O ciclo completo e o desvio em relação à dinâmica acima estão descritos na [Execução do Design do Usuário no Incremento 1](estrategias-esw.md#execucao-do-design-do-usuario-no-incremento-1) (Capítulo 4).
+</p>
+
 </div>
 <div class="split-layout-right">
 
@@ -177,3 +198,4 @@ flowchart TD
 | `1.1` | 07/09/2026 | Detalhamento dos ritos sociotécnicos e matriz de canais de comunicação | Eric Araújo, Gustavo | Matheus Ribeiro Szervinsk |
 | `2.0` | 15/09/2026 | Unificação integral dos artefatos 7.1 a 7.3 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `2.1` | 21/09/2026 | Refinamento metodológico do fluxo de validação (UI-First): base conceitual no Figma, estabelecimento ágil dos designs via Frontend com mocks e implementação posterior da lógica de backend e persistência após validação do DoR | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `2.2` | 28/10/2026 | Inclusão das sessões de validação realizadas: validação presencial do protótipo do Incremento 1 no Figma em 02/10/2026, com link para o protótipo, a Ata 06 e o ciclo descrito no Capítulo 4. | Paulo Nery | — |

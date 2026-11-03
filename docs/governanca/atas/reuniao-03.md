@@ -72,8 +72,8 @@ A equipe apresentou o **DUOC Finance** como resposta aos gargalos operacionais d
 
 ## 5. Gravação e Links
 
-* **Gravação:** vídeo oficial da apresentação disponível na página da [Entrega 1 (Ponto de Controle 1)](../entregas/entrega-1.md) ([link direto no YouTube](https://youtu.be/OZ9LhKuI364)).
-* **Artefatos relacionados:** [Capítulo 4 — Estratégias de ESW](../estrategias-esw/index.md), [Capítulo 5 — Engenharia de Requisitos](../engenharia-requisitos/index.md) e [Capítulo 7 — Interação com Cliente](../interacao-cliente/index.md).
+* **Gravação:** vídeo oficial da apresentação disponível na página da [Entrega 1 (Ponto de Controle 1)](../../entregas/entrega-1.md) ([link direto no YouTube](https://youtu.be/OZ9LhKuI364)).
+* **Artefatos relacionados:** [Capítulo 4 — Estratégias de ESW](../../metodologia/estrategias-esw.md), [Capítulo 5 — Engenharia de Requisitos](../../metodologia/engenharia-requisitos.md) e [Capítulo 7 — Interação com Cliente](../../metodologia/interacao-cliente.md).
 
 ---
 

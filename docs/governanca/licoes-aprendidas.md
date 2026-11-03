@@ -1,4 +1,4 @@
-# Capítulo 11 — Lições Aprendidas
+# Lições Aprendidas e Retrospectivas
 
 ## Registro Corporativo de Retrospectivas e Melhoria Contínua
 

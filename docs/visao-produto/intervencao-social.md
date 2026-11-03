@@ -1,4 +1,4 @@
-# Capítulo 3: Intervenção Social
+# Intervenção Social e Cultural
 
 ## Objetivo do Capítulo
 
