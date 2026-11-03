@@ -1,0 +1,2448 @@
+<!DOCTYPE html><html lang="pt" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação de Requisitos de Software — DUOC Arquitetura e Engenharia">
+      
+      
+        <meta name="author" content="Equipe Cascata Ágil">
+      
+      
+      
+        <link rel="prev" href="../rastreabilidade/">
+      
+      
+        <link rel="next" href="../feedback/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Conformidade Jurídica &amp; Governança - Cascata Ágil</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conformidade-juridica-privacidade-e-governanca-legal-clt-e-lgpd" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Cascata Ágil" class="md-header__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cascata Ágil
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conformidade Jurídica &amp; Governança
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Alternar para modo claro" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Alternar para modo escuro" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../visao-produto/cenario-atual/" class="md-tabs__link">
+          
+  
+  
+  Visão do Produto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../metodologia/estrategias-esw/" class="md-tabs__link">
+          
+  
+  
+  Metodologia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Requisitos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mvp/backlog/" class="md-tabs__link">
+          
+  
+  
+  MVP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../entregas/" class="md-tabs__link">
+          
+  
+  
+  Entregas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../governanca/atas/" class="md-tabs__link">
+          
+  
+  
+  Governança
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cascata Ágil" class="md-nav__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Cascata Ágil
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão do Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Visão do Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao-produto/cenario-atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cenário Atual &amp; Diagnóstico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao-produto/solucao-proposta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solução Proposta, OEs &amp; CARs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao-produto/intervencao-social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intervenção Social &amp; Cultural
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metodologia
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Metodologia
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/estrategias-esw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estratégias de Engenharia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/engenharia-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processo de Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cronograma &amp; Planejamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/interacao-cliente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interação com o Cliente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Requisitos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo Integrado de Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../priorizacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Priorização &amp; Matriz 4×4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rastreabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rastreabilidade &amp; Matrizes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conformidade Jurídica &amp; Governança
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conformidade Jurídica &amp; Governança
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-contexto-e-enquadramento-regulatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Contexto e Enquadramento Regulatório
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-prazo-prescricional-trabalhista-art-11-da-clt-e-retencao-quinquenal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Prazo Prescricional Trabalhista (Art. 11 da CLT) e Retenção Quinquenal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Prazo Prescricional Trabalhista (Art. 11 da CLT) e Retenção Quinquenal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-fundamentacao-dogmatica-e-diretriz-corporativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Fundamentação Dogmática e Diretriz Corporativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-requisitos-vinculados-e-controles-tecnicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Requisitos Vinculados e Controles Técnicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-direito-de-eliminacao-art-18-vi-da-lgpd-vs-prerrogativa-de-retencao-legal-art-16-da-lgpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Direito de Eliminação (Art. 18, VI da LGPD) vs. Prerrogativa de Retenção Legal (Art. 16 da LGPD)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Direito de Eliminação (Art. 18, VI da LGPD) vs. Prerrogativa de Retenção Legal (Art. 16 da LGPD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-conflito-aparente-e-supremacia-da-guarda-probatoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Conflito Aparente e Supremacia da Guarda Probatória
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-protocolo-de-resposta-a-solicitacoes-de-titulares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Protocolo de Resposta a Solicitações de Titulares
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-natureza-juridica-dos-dados-pessoais-art-5o-ii-da-lgpd-e-sigilo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Natureza Jurídica dos Dados Pessoais (Art. 5º, II da LGPD) e Sigilo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Natureza Jurídica dos Dados Pessoais (Art. 5º, II da LGPD) e Sigilo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-classificacao-taxonomica-dos-ativos-de-informacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Classificação Taxonômica dos Ativos de Informação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-distincao-entre-dados-comuns-e-dados-sensiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Distinção entre Dados Comuns e Dados Sensíveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-alinhamento-de-escopo-arquitetural-ponto-biometrico-e-sistema-flit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Alinhamento de Escopo Arquitetural: Ponto Biométrico e Sistema FLIT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-controle-de-acesso-baseado-em-papeis-rbac-e-trilha-de-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Controle de Acesso Baseado em Papéis (RBAC) e Trilha de Auditoria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Controle de Acesso Baseado em Papéis (RBAC) e Trilha de Auditoria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-matriz-canonica-de-papeis-rbac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Matriz Canônica de Papéis (RBAC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-trilha-de-auditoria-imutavel-append-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Trilha de Auditoria Imutável (Append-Only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-matriz-de-rastreabilidade-normativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Matriz de Rastreabilidade Normativa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação por Pares &amp; Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MVP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MVP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mvp/backlog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backlog do Produto &amp; Linha de Corte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mvp/dor-dod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Critérios de Aceitação (DoR &amp; DoD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entregas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entregas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painel Geral de Entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 1 (Ponto de Controle 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 2 (Ponto de Controle 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 3 (Ponto de Controle 3)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 4 (Ponto de Controle 4)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governança
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Governança
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atas de Reuniões
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atas de Reuniões
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painel Geral de Atas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/reuniao-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 01 (05/09) — Elicitação e MVP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/reuniao-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 02 (07/09) — Alinhamento Metodológico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/reuniao-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 03 (07/09) — Apresentação da Unidade 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/reuniao-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 04 (17/09) — Planejamento da Unidade 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/reuniao-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 05 (24/09) — Priorização e Valor de Negócio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/reuniao-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 06 (02/10) — Validação do Protótipo no Figma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/licoes-aprendidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lições Aprendidas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/referencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referências Bibliográficas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-contexto-e-enquadramento-regulatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Contexto e Enquadramento Regulatório
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-prazo-prescricional-trabalhista-art-11-da-clt-e-retencao-quinquenal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Prazo Prescricional Trabalhista (Art. 11 da CLT) e Retenção Quinquenal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Prazo Prescricional Trabalhista (Art. 11 da CLT) e Retenção Quinquenal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-fundamentacao-dogmatica-e-diretriz-corporativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Fundamentação Dogmática e Diretriz Corporativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-requisitos-vinculados-e-controles-tecnicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Requisitos Vinculados e Controles Técnicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-direito-de-eliminacao-art-18-vi-da-lgpd-vs-prerrogativa-de-retencao-legal-art-16-da-lgpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Direito de Eliminação (Art. 18, VI da LGPD) vs. Prerrogativa de Retenção Legal (Art. 16 da LGPD)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Direito de Eliminação (Art. 18, VI da LGPD) vs. Prerrogativa de Retenção Legal (Art. 16 da LGPD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-conflito-aparente-e-supremacia-da-guarda-probatoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Conflito Aparente e Supremacia da Guarda Probatória
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-protocolo-de-resposta-a-solicitacoes-de-titulares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Protocolo de Resposta a Solicitações de Titulares
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-natureza-juridica-dos-dados-pessoais-art-5o-ii-da-lgpd-e-sigilo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Natureza Jurídica dos Dados Pessoais (Art. 5º, II da LGPD) e Sigilo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Natureza Jurídica dos Dados Pessoais (Art. 5º, II da LGPD) e Sigilo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-classificacao-taxonomica-dos-ativos-de-informacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Classificação Taxonômica dos Ativos de Informação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-distincao-entre-dados-comuns-e-dados-sensiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Distinção entre Dados Comuns e Dados Sensíveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-alinhamento-de-escopo-arquitetural-ponto-biometrico-e-sistema-flit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Alinhamento de Escopo Arquitetural: Ponto Biométrico e Sistema FLIT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-controle-de-acesso-baseado-em-papeis-rbac-e-trilha-de-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Controle de Acesso Baseado em Papéis (RBAC) e Trilha de Auditoria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Controle de Acesso Baseado em Papéis (RBAC) e Trilha de Auditoria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-matriz-canonica-de-papeis-rbac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Matriz Canônica de Papéis (RBAC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-trilha-de-auditoria-imutavel-append-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Trilha de Auditoria Imutável (Append-Only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-matriz-de-rastreabilidade-normativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Matriz de Rastreabilidade Normativa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegação">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Início
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Requisitos
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="conformidade-juridica-privacidade-e-governanca-legal-clt-e-lgpd">Conformidade Jurídica, Privacidade e Governança Legal (CLT e LGPD)<a class="headerlink" href="#conformidade-juridica-privacidade-e-governanca-legal-clt-e-lgpd" title="Permanent link">¶</a></h1>
+<p>Esta seção consolida as diretrizes normativas, os fundamentos jurídicos e os controles técnicos de segurança da informação adotados pelo <strong><em>DUOC Finance</em></strong>. O documento estabelece as bases legais e regulatórias que norteiam as <a href="../#catalogo-geral-de-regras-de-negocio-rn01-a-rn31">Regras de Negócio</a> e os <a href="../#catalogo-de-requisitos-nao-funcionais-rnf01-a-rnf20">Requisitos Não Funcionais</a> da plataforma, assegurando rastreabilidade probatória, proteção de dados e governança corporativa contínua.</p>
+<hr>
+<h2 id="1-contexto-e-enquadramento-regulatorio">1. Contexto e Enquadramento Regulatório<a class="headerlink" href="#1-contexto-e-enquadramento-regulatorio" title="Permanent link">¶</a></h2>
+<p>O ecossistema operacional do <strong><em>DUOC Finance</em></strong> processa informações cadastrais de colaboradores técnicos, apontamentos diários de produção em canteiros de obra (Relatórios de Viagem Técnica — RVT), apurações de diárias, solicitações de reembolso de despesas de campo e alocações de custos por contrato de engenharia.</p>
+<p>Por operar na intersecção entre a <strong>Consolidação das Leis do Trabalho (CLT)</strong> e a <strong>Lei Geral de Proteção de Dados Pessoais (LGPD — Lei nº 13.709/2018)</strong>, o sistema adota diretrizes arquiteturais estritas para harmonizar a proteção dos direitos fundamentais de privacidade com o resguardo patrimonial e a segurança jurídica da organização.</p>
+<hr>
+<h2 id="2-prazo-prescricional-trabalhista-art-11-da-clt-e-retencao-quinquenal">2. Prazo Prescricional Trabalhista (Art. 11 da CLT) e Retenção Quinquenal<a class="headerlink" href="#2-prazo-prescricional-trabalhista-art-11-da-clt-e-retencao-quinquenal" title="Permanent link">¶</a></h2>
+<h3 id="21-fundamentacao-dogmatica-e-diretriz-corporativa">2.1 Fundamentação Dogmática e Diretriz Corporativa<a class="headerlink" href="#21-fundamentacao-dogmatica-e-diretriz-corporativa" title="Permanent link">¶</a></h3>
+<p>O <strong>Artigo 11 da Consolidação das Leis do Trabalho (CLT)</strong> estabelece que a pretensão quanto a créditos resultantes das relações de trabalho prescreve em:</p>
+<ul>
+<li><strong>Cinco anos</strong> para os trabalhadores urbanos e rurais, até o limite de <strong>dois anos</strong> após a extinção do contrato de trabalho.</li>
+</ul>
+<p>Embora o Artigo 11 da CLT discipline a prescrição do direito material de ação do trabalhador e não imponha formalmente obrigação expressa de retenção sistêmica de arquivos digitais, a <strong>DUOC adota a retenção imutável de 5 anos (1.825 dias) como política corporativa compulsória de governança defensiva e conformidade preventiva</strong>.</p>
+<p>Essa retenção garante a integridade e a disponibilidade imediata de um acervo probatório robusto e auditável para instrução técnica e defesa jurídica em eventuais demandas trabalhistas, fiscalizações fazendárias ou auditorias contábeis.</p>
+<h3 id="22-requisitos-vinculados-e-controles-tecnicos">2.2 Requisitos Vinculados e Controles Técnicos<a class="headerlink" href="#22-requisitos-vinculados-e-controles-tecnicos" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="../#rn19" class="req-tag req-tag-rn"># RN19 · Política Corporativa de Retenção Quinquenal de Logs ↗</a>: Veda compulsoriamente rotinas de expurgo ou expiração física ou lógica de eventos de auditoria operacional e financeira com tempo de retenção inferior a 1.825 dias.</li>
+<li><a href="../#rnf16" class="req-tag req-tag-rnf"># RNF16 · Preservar trilha de auditoria por no mínimo 5 anos ↗</a>: Estabelece o requisito de confiabilidade e guarda do histórico integral de alterações.</li>
+<li><a href="../#rf16" class="req-tag req-tag-rf"># RF16 · Exportar trilha probatória de auditoria (PDF/CSV) ↗</a>: Disponibiliza mecanismo de extração em lote dos registros probatórios para instrução processual com assinatura digital e carimbo temporal.</li>
+</ul>
+<hr>
+<h2 id="3-direito-de-eliminacao-art-18-vi-da-lgpd-vs-prerrogativa-de-retencao-legal-art-16-da-lgpd">3. Direito de Eliminação (Art. 18, VI da LGPD) vs. Prerrogativa de Retenção Legal (Art. 16 da LGPD)<a class="headerlink" href="#3-direito-de-eliminacao-art-18-vi-da-lgpd-vs-prerrogativa-de-retencao-legal-art-16-da-lgpd" title="Permanent link">¶</a></h2>
+<h3 id="31-conflito-aparente-e-supremacia-da-guarda-probatoria">3.1 Conflito Aparente e Supremacia da Guarda Probatória<a class="headerlink" href="#31-conflito-aparente-e-supremacia-da-guarda-probatoria" title="Permanent link">¶</a></h3>
+<p>O direito conferido ao titular de dados de requerer a anonimização, bloqueio ou eliminação de seus dados pessoais (previsto no <strong>Artigo 18, inciso VI da LGPD</strong>) não possui caráter absoluto nem irrestrito.</p>
+<p>Em conformidade estrita com o <strong>Artigo 16 da LGPD</strong>, a retenção dos registros operacionais, contratos de trabalho, relatórios de serviços executados, comprovantes fiscais e logs de auditoria durante o prazo de 5 anos é legitimada e expressamente respaldada pelas seguintes hipóteses de conservação autorizada:</p>
+<ol>
+<li><strong>Artigo 16, inciso I (Cumprimento de Obrigação Legal ou Regulatória):</strong> Guarda de documentos fiscais, tributários e societários exigidos pelos órgãos de fiscalização federal e previdenciária.</li>
+<li><strong>Artigo 16, inciso II (Exercício Regular de Direitos em Processo Judicial, Administrativo ou Arbitral):</strong> Manutenção do acervo probatório do empregador/contratante para comprovação de jornadas, pagamentos efetuados, despesas ressarcidas e ordens de serviço executadas durante todo o período de risco prescricional trabalhista e cível.</li>
+</ol>
+<h3 id="32-protocolo-de-resposta-a-solicitacoes-de-titulares">3.2 Protocolo de Resposta a Solicitações de Titulares<a class="headerlink" href="#32-protocolo-de-resposta-a-solicitacoes-de-titulares" title="Permanent link">¶</a></h3>
+<p>Eventuais solicitações submetidas por colaboradores ativos ou desligados pleiteando o expurgo de registros de apontamentos (RVT), deliberações de reembolso ou logs de acesso serão respondidas formalmente com o indeferimento fundamentado no <strong>Artigo 16, incisos I e II da LGPD</strong>, informando a manutenção sob custódia segura até o término definitivo do prazo prescricional aplicável.</p>
+<hr>
+<h2 id="4-natureza-juridica-dos-dados-pessoais-art-5o-ii-da-lgpd-e-sigilo">4. Natureza Jurídica dos Dados Pessoais (Art. 5º, II da LGPD) e Sigilo<a class="headerlink" href="#4-natureza-juridica-dos-dados-pessoais-art-5o-ii-da-lgpd-e-sigilo" title="Permanent link">¶</a></h2>
+<h3 id="41-classificacao-taxonomica-dos-ativos-de-informacao">4.1 Classificação Taxonômica dos Ativos de Informação<a class="headerlink" href="#41-classificacao-taxonomica-dos-ativos-de-informacao" title="Permanent link">¶</a></h3>
+<p>Em estrita aderência à taxonomia estabelecida pela LGPD em seu <strong>Artigo 5º</strong>, o <strong><em>DUOC Finance</em></strong> define expressamente a natureza dos dados tratados:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tipo de Dado</th>
+<th style="text-align: left;">Exemplos no DUOC Finance</th>
+<th style="text-align: center;">Classificação LGPD</th>
+<th style="text-align: left;">Tratamento de Segurança Aplicado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificação Cadastral</strong></td>
+<td style="text-align: left;">Nome completo, CPF, RG, número de telefone e e-mail corporativo</td>
+<td style="text-align: center;"><strong>Dado Pessoal Comum</strong> (Art. 5º, I)</td>
+<td style="text-align: left;">Acesso restrito via RBAC (<code>ADMIN_FINANCEIRO</code>), validação de CPF por módulo 11 (RN01), criptografia em repouso AES-256 e trânsito TLS 1.3 (RNF03).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dados Bancários e Financeiros</strong></td>
+<td style="text-align: left;">Código COMPE bancário de 3 dígitos, agência, conta corrente e chave Pix</td>
+<td style="text-align: center;"><strong>Dado Pessoal Comum sujeito a Sigilo Qualificado</strong></td>
+<td style="text-align: left;">Segregação estrita na camada de banco de dados, restrição de visualização em relatórios operacionais públicos e auditoria atômica de visualizações (RN22, RNF03, RNF10).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Remunerações e Diárias</strong></td>
+<td style="text-align: left;">Tabela de valores vigentes de diárias técnicas, apurações mensais e reembolsos</td>
+<td style="text-align: center;"><strong>Informação Financeira / Segredo de Negócio</strong></td>
+<td style="text-align: left;">Visualização individualizada apenas pelo próprio titular (<code>TECNICO_CAMPO</code>) e pelo setor financeiro (<code>ADMIN_FINANCEIRO</code>), proibindo consulta horizontal por pares (RN16, RNF10).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dados Biométricos</strong></td>
+<td style="text-align: left;">Impressão digital, biometria facial</td>
+<td style="text-align: center;"><strong>Dado Pessoal Sensível</strong> (Art. 5º, II)</td>
+<td style="text-align: left;"><strong>Fora de Escopo do DUOC Finance.</strong> O DUOC Finance não coleta, não transita e não armazena biometria em nenhum módulo ou banco de dados.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-distincao-entre-dados-comuns-e-dados-sensiveis">4.2 Distinção entre Dados Comuns e Dados Sensíveis<a class="headerlink" href="#42-distincao-entre-dados-comuns-e-dados-sensiveis" title="Permanent link">¶</a></h3>
+<p>Ressalta-se que números de CPF, informações de domicílio bancário e valores de diárias configuram <strong>dados pessoais comuns sujeitos a dever estrito de segurança e sigilo (Art. 6º, VII da LGPD)</strong>, e <strong>não constituem "dados pessoais sensíveis"</strong> sob a ótica da lei (que é restrita a dados biométricos, de saúde, genéticos, origem racial ou convicção religiosa).</p>
+<hr>
+<h2 id="5-alinhamento-de-escopo-arquitetural-ponto-biometrico-e-sistema-flit">5. Alinhamento de Escopo Arquitetural: Ponto Biométrico e Sistema FLIT<a class="headerlink" href="#5-alinhamento-de-escopo-arquitetural-ponto-biometrico-e-sistema-flit" title="Permanent link">¶</a></h2>
+<p>Conforme deliberado na Reunião Técnica de Alinhamento com a diretoria da DUOC (Ata de Reunião 02, Característica <a href="../../visao-produto/solucao-proposta/#car-09" class="req-tag req-tag-car"># CAR-09 ↗</a>):</p>
+<ol>
+<li><strong>Fronteira de Responsabilidade de Ponto:</strong> O registro formal de frequência e marcação de ponto eletrônico biométrico dos colaboradores é executado de forma independente pelo software externo parceiro <em>FLIT</em>.</li>
+<li><strong>Escopo do DUOC Finance em Campo:</strong> O módulo móvel do DUOC Finance destina-se estritamente à coleta de <strong>apontamentos técnicos de produção por contrato de obra</strong> e ao preenchimento de <strong>Relatórios de Viagem Técnica (RVT)</strong> pelos eletricistas e técnicos de campo (<a href="../#rf04" class="req-tag req-tag-rf"># RF04 ↗</a>, <a href="../../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>).</li>
+<li><strong>Interface de Integração de Presenças:</strong> O DUOC Finance apenas importa e referencia as presenças consolidadas geradas no painel do <em>FLIT</em> (<a href="../#rf20" class="req-tag req-tag-rf"># RF20 ↗</a>, <a href="../#rn10" class="req-tag req-tag-rn"># RN10 ↗</a>), consumindo contagens numéricas homologadas para fins de apuração de diárias, sem qualquer contato com o repositório biométrico original.</li>
+</ol>
+<hr>
+<h2 id="6-controle-de-acesso-baseado-em-papeis-rbac-e-trilha-de-auditoria">6. Controle de Acesso Baseado em Papéis (RBAC) e Trilha de Auditoria<a class="headerlink" href="#6-controle-de-acesso-baseado-em-papeis-rbac-e-trilha-de-auditoria" title="Permanent link">¶</a></h2>
+<p>A governança corporativa e a segurança jurídica do <em>DUOC Finance</em> operam sustentadas por dois pilares arquiteturais inegociáveis:</p>
+<p><a id="atores-do-sistema-e-matriz-canonica-de-papeis-rbac"></a></p>
+<h3 id="61-matriz-canonica-de-papeis-rbac">6.1 Matriz Canônica de Papéis (RBAC)<a class="headerlink" href="#61-matriz-canonica-de-papeis-rbac" title="Permanent link">¶</a></h3>
+<p>O ecossistema operacional do <strong><em>DUOC Finance</em></strong> é estruturado em torno do <strong>Princípio do Menor Privilégio</strong> (<a href="../#rn16" class="req-tag req-tag-rn"># RN16 ↗</a>, <a href="../#rnf14" class="req-tag req-tag-rnf"># RNF14 ↗</a>), operando sob <strong>quatro papéis canônicos de autorização (RBAC)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Papel (Ator)</th>
+<th style="text-align: center;">Código RBAC</th>
+<th style="text-align: left;">Escopo Operacional e Responsabilidades Funcionais</th>
+<th style="text-align: left;">Perfil Organizacional na DUOC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Técnico de Campo / Diarista</strong></td>
+<td style="text-align: center;"><code>TECNICO_CAMPO</code></td>
+<td style="text-align: left;">Preenche e retifica apontamentos de produção e horas de campo (RVT) via aplicação web responsiva (RF04, RF35), anexa fotos e evidências da atividade (RF22), consulta exclusivamente os próprios registros (RF19) e submete solicitações de reembolso e adiantamento operacional (RF07, RF28).</td>
+<td style="text-align: left;">Operários, diaristas, técnicos residentes, arquitetos em visita técnica e estagiários.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gestor Operacional de Obras</strong></td>
+<td style="text-align: center;"><code>GESTOR_OBRAS</code></td>
+<td style="text-align: left;">Cadastra, atualiza e consulta contratos de obras (RF33, RF37, RF38), cadastra e atualiza centros de custo (RF34, RF39), define tetos orçamentários por obra (RF40) e delibera apontamentos de campo de sua alçada com homologação ou rejeição justificada (RF32).</td>
+<td style="text-align: left;">Engenheiros residentes, coordenadores de contratos e diretores de engenharia.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Administrador Financeiro</strong></td>
+<td style="text-align: center;"><code>ADMIN_FINANCEIRO</code></td>
+<td style="text-align: left;">Gerencia o cadastro de colaboradores (RF01, RF02, RF03, RF25, RF26), configura a tabela vigente de diárias (RF27), emite prévias (RF05), homologa fechamentos mensais (RF06), delibera despesas e reembolsos (RF08, RF29), dispara apropriações de custos (RF09) e exporta dados consolidados (RF36).</td>
+<td style="text-align: left;"><strong>Auxiliar-Administradora (Maria Beatryz)</strong>, que na estrutura corporativa enxuta da DUOC centraliza rotinas de DP/RH, contas a pagar e finanças.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Administrador do Sistema</strong></td>
+<td style="text-align: center;"><code>ADMIN_SISTEMA</code></td>
+<td style="text-align: left;">Gerencia perfis e atribuição de papéis de usuários (RF14), monitora a segurança global da plataforma, expiração de senhas e bloqueios por tentativas falhas (RF23, RF24), e audita eventos probatórios (RF15, RF16).</td>
+<td style="text-align: left;">Sócios-diretores e equipe técnica responsável pela sustentação de TI e governança da segurança da informação.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Alinhamento Sociotécnico e Centralização Operacional:</strong> Na estrutura organizacional enxuta da DUOC Arquitetura e Engenharia, a colaboradora parceira Maria Beatryz (Auxiliar-Administradora) concentra na rotina real tanto as atribuições de Recursos Humanos/Departamento Pessoal quanto de Contas a Pagar e Finanças. Por essa razão, a especificação técnica do <em>DUOC Finance</em> unifica essas operações sob o papel sistêmico de <strong>Administrador Financeiro</strong>, garantindo aderência rigorosa à realidade da empresa e eliminando referências fragmentadas a cargos inexistentes na organização parceira.</p>
+<h3 id="62-trilha-de-auditoria-imutavel-append-only">6.2 Trilha de Auditoria Imutável (<em>Append-Only</em>)<a class="headerlink" href="#62-trilha-de-auditoria-imutavel-append-only" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Persistência Atômica:</strong> Cada inserção, modificação ou exclusão de dados operacionais gera de forma síncrona um evento de auditoria com carimbo temporal UTC, IP de origem, identidade do operador e estados anterior e posterior serializados (<a href="../#rn17" class="req-tag req-tag-rn"># RN17 ↗</a>, <a href="../#rnf15" class="req-tag req-tag-rnf"># RNF15 ↗</a>).</li>
+<li><strong>Imutabilidade Estrita (<em>Append-Only</em>):</strong> A tabela de auditoria opera sob regime exclusivo de inserção, sendo vedada qualquer operação de alteração ou exclusão física ou lógica por qualquer perfil, inclusive administradores do sistema (<a href="../#rn18" class="req-tag req-tag-rn"># RN18 ↗</a>).</li>
+</ul>
+<hr>
+<h2 id="7-matriz-de-rastreabilidade-normativa">7. Matriz de Rastreabilidade Normativa<a class="headerlink" href="#7-matriz-de-rastreabilidade-normativa" title="Permanent link">¶</a></h2>
+<p>A tabela a seguir consolida a correlação entre as exigências legais e os requisitos de software implementados no <strong><em>DUOC Finance</em></strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dispositivo Legal / Diretriz</th>
+<th style="text-align: left;">Tema de Governança</th>
+<th style="text-align: center;">Requisitos Funcionais</th>
+<th style="text-align: center;">Regras de Negócio</th>
+<th style="text-align: center;">Requisitos Não Funcionais</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CLT — Artigo 11</strong></td>
+<td style="text-align: left;">Prescrição quinquenal de créditos e instrução defensiva</td>
+<td style="text-align: center;"><a href="../#rf15" class="req-tag req-tag-rf"># RF15 ↗</a>, <a href="../#rf16" class="req-tag req-tag-rf"># RF16 ↗</a></td>
+<td style="text-align: center;"><a href="../#rn19" class="req-tag req-tag-rn"># RN19 ↗</a></td>
+<td style="text-align: center;"><a href="../#rnf16" class="req-tag req-tag-rnf"># RNF16 ↗</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LGPD — Artigo 16, I e II</strong></td>
+<td style="text-align: left;">Conservação legal de dados operacionais e defesa judicial</td>
+<td style="text-align: center;"><a href="../#rf06" class="req-tag req-tag-rf"># RF06 ↗</a>, <a href="../#rf16" class="req-tag req-tag-rf"># RF16 ↗</a></td>
+<td style="text-align: center;"><a href="../#rn18" class="req-tag req-tag-rn"># RN18 ↗</a>, <a href="../#rn19" class="req-tag req-tag-rn"># RN19 ↗</a></td>
+<td style="text-align: center;"><a href="../#rnf16" class="req-tag req-tag-rnf"># RNF16 ↗</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LGPD — Artigo 18, VI</strong></td>
+<td style="text-align: left;">Limitação ao direito de eliminação perante dever legal</td>
+<td style="text-align: center;"><a href="../#rf02" class="req-tag req-tag-rf"># RF02 ↗</a>, <a href="../#rf03" class="req-tag req-tag-rf"># RF03 ↗</a></td>
+<td style="text-align: center;"><a href="../#rn04" class="req-tag req-tag-rn"># RN04 ↗</a>, <a href="../#rn23" class="req-tag req-tag-rn"># RN23 ↗</a></td>
+<td style="text-align: center;"><a href="../#rnf16" class="req-tag req-tag-rnf"># RNF16 ↗</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LGPD — Artigo 5º, II e Art. 6º, VII</strong></td>
+<td style="text-align: left;">Classificação de dados pessoais comuns e dever de segurança</td>
+<td style="text-align: center;"><a href="../#rf01" class="req-tag req-tag-rf"># RF01 ↗</a>, <a href="../#rf25" class="req-tag req-tag-rf"># RF25 ↗</a></td>
+<td style="text-align: center;"><a href="../#rn01" class="req-tag req-tag-rn"># RN01 ↗</a>, <a href="../#rn22" class="req-tag req-tag-rn"># RN22 ↗</a></td>
+<td style="text-align: center;"><a href="../#rnf03" class="req-tag req-tag-rnf"># RNF03 ↗</a>, <a href="../#rnf10" class="req-tag req-tag-rnf"># RNF10 ↗</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Princípio do Menor Privilégio</strong></td>
+<td style="text-align: left;">Controle de acesso e segregação de funções</td>
+<td style="text-align: center;"><a href="../#rf13" class="req-tag req-tag-rf"># RF13 ↗</a>, <a href="../#rf14" class="req-tag req-tag-rf"># RF14 ↗</a></td>
+<td style="text-align: center;"><a href="../#rn15" class="req-tag req-tag-rn"># RN15 ↗</a>, <a href="../#rn16" class="req-tag req-tag-rn"># RN16 ↗</a></td>
+<td style="text-align: center;"><a href="../#rnf13" class="req-tag req-tag-rnf"># RNF13 ↗</a>, <a href="../#rnf14" class="req-tag req-tag-rnf"># RNF14 ↗</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Auditoria e Não Repúdio</strong></td>
+<td style="text-align: left;">Trilha probatória imutável e carimbo UTC</td>
+<td style="text-align: center;"><a href="../#rf15" class="req-tag req-tag-rf"># RF15 ↗</a>, <a href="../#rf16" class="req-tag req-tag-rf"># RF16 ↗</a></td>
+<td style="text-align: center;"><a href="../#rn17" class="req-tag req-tag-rn"># RN17 ↗</a>, <a href="../#rn18" class="req-tag req-tag-rn"># RN18 ↗</a></td>
+<td style="text-align: center;"><a href="../#rnf15" class="req-tag req-tag-rnf"># RNF15 ↗</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-historico-de-versao">8. Histórico de Versão<a class="headerlink" href="#8-historico-de-versao" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: left;">Descrição da Modificação</th>
+<th style="text-align: left;">Autor</th>
+<th style="text-align: left;">Revisor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>1.0</code></td>
+<td style="text-align: center;">02/11/2026</td>
+<td style="text-align: left;">Consolidação da documentação de Governança e Conformidade Legal: fundamentação da retenção quinquenal com fulcro no Art. 11 da CLT, harmonização com o Art. 16 da LGPD, delimitação dogmática de dados pessoais e fronteira técnica com FLIT.</td>
+<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+<td style="text-align: left;">Equipe Cascata Ágil</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>1.1</code></td>
+<td style="text-align: center;">02/11/2026</td>
+<td style="text-align: left;">Acolhimento da Matriz Canônica de Papéis (RBAC) e alinhamento sociotécnico de Maria Beatryz na Seção 6.1, desacoplando a definição estrutural do catálogo geral.</td>
+<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+<td style="text-align: left;">Equipe Cascata Ágil</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+        <script src="../../assets/javascripts/mermaid-init.js"></script>
+      
+        <script src="../../assets/javascripts/requisitos-filter.js"></script>
+      
+        <script src="../../assets/javascripts/piramide-interativa.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
