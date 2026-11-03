@@ -414,6 +414,491 @@ RF_META = {
     }
 }
 
+
+
+RF_EXTRA_DATA = {
+    "RF01": {
+        "us": "US01",
+        "us_text": "Como **Administrador Financeiro**, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por CPF que sustente os apontamentos e os pagamentos de diárias.",
+        "vb": "4",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "2,40",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF02": {
+        "us": "US02",
+        "us_text": "Como **Administrador Financeiro**, quero atualizar os dados cadastrais e bancários de um colaborador ativo, para que todos os módulos passem a usar imediatamente as informações corretas, sem perder a versão anterior da ficha.",
+        "vb": "3",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "1,80",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF03": {
+        "us": "US03",
+        "us_text": "Como **Administrador Financeiro**, quero registrar afastamentos, férias e desligamentos de um colaborador, para que sua situação funcional fique atualizada e o acesso de campo seja revogado, evitando pagamentos indevidos.",
+        "vb": "3",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "2",
+        "ec": "2,00 (2)",
+        "ip": "1,50",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF04": {
+        "us": "US04",
+        "us_text": "Como **Técnico de Campo**, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de WhatsApp.",
+        "vb": "4",
+        "es": "16h (3)",
+        "cx": "3",
+        "lc": "3",
+        "ec": "3,00 (3)",
+        "ip": "1,33",
+        "quad": "Q2",
+        "mvp": "MVP"
+    },
+    "RF05": {
+        "us": "US05",
+        "us_text": "Como **Administrador Financeiro**, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente.",
+        "vb": "4",
+        "es": "16h (3)",
+        "cx": "4",
+        "lc": "3",
+        "ec": "3,33 (3)",
+        "ip": "1,20",
+        "quad": "Q2",
+        "mvp": "MVP"
+    },
+    "RF06": {
+        "us": "US06",
+        "us_text": "Como **Administrador Financeiro**, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança.",
+        "vb": "4",
+        "es": "6h (2)",
+        "cx": "3",
+        "lc": "2",
+        "ec": "2,33 (2)",
+        "ip": "1,71",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF07": {
+        "us": "US07",
+        "us_text": "Como **Técnico de Campo ou Gestor Operacional de Obras**, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas.",
+        "vb": "4",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "2",
+        "ec": "2,00 (2)",
+        "ip": "2,00",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF08": {
+        "us": "US08",
+        "us_text": "Como **Administrador Financeiro**, quero aprovar ou reprovar as solicitações de reembolso com parecer obrigatório na reprovação, para que apenas despesas comprovadas sejam repassadas e o solicitante seja informado da decisão.",
+        "vb": "4",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "2",
+        "ec": "2,00 (2)",
+        "ip": "2,00",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF09": {
+        "us": "US09",
+        "us_text": "Como **Administrador Financeiro**, quero disparar a apropriação dos custos homologados da competência aos respectivos contratos, para que eu conheça o custo real de cada obra sem duplicidade com a folha CLT.",
+        "vb": "3",
+        "es": "16h (3)",
+        "cx": "4",
+        "lc": "3",
+        "ec": "3,33 (3)",
+        "ip": "0,90",
+        "quad": "Q2",
+        "mvp": "MVP"
+    },
+    "RF10": {
+        "us": "US10",
+        "us_text": "Como **Gestor Operacional de Obras ou Administrador Financeiro**, quero visualizar a origem completa de cada custo apropriado, para que eu possa justificar e auditar qualquer linha de despesa do contrato.",
+        "vb": "3",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "2",
+        "ec": "2,00 (2)",
+        "ip": "1,50",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF11": {
+        "us": "US11",
+        "us_text": "Como **Gestor Operacional de Obras, Administrador Financeiro ou Administrador do Sistema**, quero combinar filtros de período, contrato, colaborador e centro de custo no painel de custos, para que eu analise os custos diretos de cada obra no fechamento.",
+        "vb": "3",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "2",
+        "ec": "2,00 (2)",
+        "ip": "1,50",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF12": {
+        "us": "US12",
+        "us_text": "Como **Gestor Operacional de Obras ou Administrador Financeiro**, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir.",
+        "vb": "2",
+        "es": "12h (3)",
+        "cx": "3",
+        "lc": "3",
+        "ec": "3,00 (3)",
+        "ip": "0,67",
+        "quad": "Q4",
+        "mvp": "Pós-MVP"
+    },
+    "RF13": {
+        "us": "US13",
+        "us_text": "Como **usuário da plataforma**, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil.",
+        "vb": "4",
+        "es": "2h (1)",
+        "cx": "1",
+        "lc": "1",
+        "ec": "1,00 (1)",
+        "ip": "4,00",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF14": {
+        "us": "US14",
+        "us_text": "Como **Administrador do Sistema**, quero atribuir a cada usuário um papel de acesso, para que campo, gestão e financeiro visualizem apenas os dados da sua alçada (princípio do menor privilégio).",
+        "vb": "3",
+        "es": "6h (2)",
+        "cx": "3",
+        "lc": "2",
+        "ec": "2,33 (2)",
+        "ip": "1,29",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF15": {
+        "us": "US15",
+        "us_text": "Como **Administrador do Sistema ou Administrador Financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando.",
+        "vb": "2",
+        "es": "10h (3)",
+        "cx": "3",
+        "lc": "3",
+        "ec": "3,00 (3)",
+        "ip": "0,67",
+        "quad": "Q4",
+        "mvp": "Pós-MVP"
+    },
+    "RF16": {
+        "us": "US16",
+        "us_text": "Como **Administrador do Sistema**, quero exportar um dossiê em PDF/CSV com o histórico imutável das operações auditadas, para que a DUOC comprove conformidade legal e trabalhista (CLT Art. 11).",
+        "vb": "1",
+        "es": "12h (3)",
+        "cx": "3",
+        "lc": "3",
+        "ec": "3,00 (3)",
+        "ip": "0,33",
+        "quad": "Q4",
+        "mvp": "Pós-MVP"
+    },
+    "RF17": {
+        "us": "US17",
+        "us_text": "Como **colaborador que esqueceu a senha**, quero receber no e-mail corporativo um link de redefinição de uso único, para que eu recupere o acesso sem depender de *reset* manual pela gestão.",
+        "vb": "3",
+        "es": "4h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "1,80",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF18": {
+        "us": "US18",
+        "us_text": "Como **usuário autenticado**, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado.",
+        "vb": "3",
+        "es": "1h (1)",
+        "cx": "1",
+        "lc": "1",
+        "ec": "1,00 (1)",
+        "ip": "3,00",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF19": {
+        "us": "US19",
+        "us_text": "Como **Técnico de Campo**, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e identifique quais registros ainda posso retificar antes do fechamento.",
+        "vb": "4",
+        "es": "4h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "2,40",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF20": {
+        "us": "US20",
+        "us_text": "Como **Administrador Financeiro**, quero importar as presenças homologadas do *FLIT* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação.",
+        "vb": "2",
+        "es": "12h (3)",
+        "cx": "3",
+        "lc": "3",
+        "ec": "3,00 (3)",
+        "ip": "0,67",
+        "quad": "Q4",
+        "mvp": "Pós-MVP"
+    },
+    "RF21": {
+        "us": "US21",
+        "us_text": "Como **Administrador Financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original.",
+        "vb": "2",
+        "es": "10h (3)",
+        "cx": "3",
+        "lc": "2",
+        "ec": "2,67 (3)",
+        "ip": "0,75",
+        "quad": "Q4",
+        "mvp": "Pós-MVP"
+    },
+    "RF22": {
+        "us": "US22",
+        "us_text": "Como **Técnico de Campo**, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no RVT.",
+        "vb": "3",
+        "es": "8h (2)",
+        "cx": "3",
+        "lc": "2",
+        "ec": "2,33 (2)",
+        "ip": "1,29",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF23": {
+        "us": "US23",
+        "us_text": "Como **Administrador do Sistema**, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta.",
+        "vb": "3",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "1,80",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF24": {
+        "us": "US24",
+        "us_text": "Como **Administrador do Sistema**, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema.",
+        "vb": "2",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "2",
+        "ec": "2,00 (2)",
+        "ip": "1,00",
+        "quad": "Q3",
+        "mvp": "Pós-MVP"
+    },
+    "RF25": {
+        "us": "US25",
+        "us_text": "Como **Administrador Financeiro**, quero classificar o colaborador como Diarista, CLT ou Prestador de Serviço, para que o sistema aplique as regras administrativas e financeiras do vínculo correto.",
+        "vb": "3",
+        "es": "4h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "1,80",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF26": {
+        "us": "US26",
+        "us_text": "Como **Administrador Financeiro**, quero consultar o histórico de alterações cadastrais e bancárias de um colaborador, com autor e data de cada mudança, para que divergências administrativas possam ser rastreadas e esclarecidas.",
+        "vb": "3",
+        "es": "8h (2)",
+        "cx": "3",
+        "lc": "2",
+        "ec": "2,33 (2)",
+        "ip": "1,29",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF27": {
+        "us": "US27",
+        "us_text": "Como **Administrador Financeiro**, quero cadastrar as categorias de diária técnica com valor e período de vigência, para que prévias e fechamentos usem sempre o valor vigente da competência.",
+        "vb": "4",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "2,40",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF28": {
+        "us": "US28",
+        "us_text": "Como **Técnico de Campo**, quero solicitar um adiantamento para uma despesa operacional de um contrato ativo, para que eu disponha dos recursos antes de executar a atividade.",
+        "vb": "3",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "2",
+        "ec": "2,00 (2)",
+        "ip": "1,50",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF29": {
+        "us": "US29",
+        "us_text": "Como **Administrador Financeiro**, quero aprovar ou reprovar os adiantamentos pendentes de análise, para que a liberação de recursos seja formal, rastreável e comunicada ao solicitante.",
+        "vb": "3",
+        "es": "8h (2)",
+        "cx": "2",
+        "lc": "2",
+        "ec": "2,00 (2)",
+        "ip": "1,50",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF30": {
+        "us": "US30",
+        "us_text": "Como **Gestor Operacional de Obras ou Administrador Financeiro**, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras.",
+        "vb": "2",
+        "es": "10h (3)",
+        "cx": "3",
+        "lc": "2",
+        "ec": "2,67 (3)",
+        "ip": "0,75",
+        "quad": "Q4",
+        "mvp": "Pós-MVP"
+    },
+    "RF31": {
+        "us": "US31",
+        "us_text": "Como **Gestor Operacional de Obras**, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado.",
+        "vb": "2",
+        "es": "10h (3)",
+        "cx": "3",
+        "lc": "2",
+        "ec": "2,67 (3)",
+        "ip": "0,75",
+        "quad": "Q4",
+        "mvp": "Pós-MVP"
+    },
+    "RF32": {
+        "us": "US32",
+        "us_text": "Como **Gestor Operacional de Obras**, quero homologar ou rejeitar os apontamentos de campo pendentes dos contratos sob minha responsabilidade, com parecer obrigatório na rejeição, para que apenas horas validadas sigam para o fechamento financeiro e o autor seja informado da decisão.",
+        "vb": "4",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "2,40",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF33": {
+        "us": "US33",
+        "us_text": "Como **Administrador Financeiro ou Gestor Operacional de Obras**, quero cadastrar, editar e consultar contratos de obras com vigência, valor global e retenções, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido.",
+        "vb": "3",
+        "es": "8h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "1,80",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF34": {
+        "us": "US34",
+        "us_text": "Como **Gestor Operacional de Obras**, quero cadastrar centros de custo e definir tetos orçamentários por categoria de despesa em cada contrato, para que o painel calcule a execução orçamentária e os desvios.",
+        "vb": "3",
+        "es": "8h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "1,80",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF35": {
+        "us": "US35",
+        "us_text": "Como **Técnico de Campo**, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão.",
+        "vb": "3",
+        "es": "4h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "1,80",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF36": {
+        "us": "US36",
+        "us_text": "Como **Administrador Financeiro**, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas CSV e XLSX, para que eu faça a conciliação contábil externa sem redigitação.",
+        "vb": "2",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "1,20",
+        "quad": "Q3",
+        "mvp": "Pós-MVP"
+    },
+    "RF37": {
+        "us": "US33",
+        "us_text": "Como **Gestor Operacional de Obras ou Administrador Financeiro**, quero atualizar aditivos, prazos e valores de contratos de obras vigentes, para que as apropriações reflitam as repactuações contratuais.",
+        "vb": "3",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "1,80",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF38": {
+        "us": "US33",
+        "us_text": "Como **Gestor Operacional de Obras ou Administrador Financeiro**, quero consultar a relação e o detalhamento de contratos ativos e concluídos, para que eu visualize rapidamente as condições pactuadas de cada obra.",
+        "vb": "3",
+        "es": "2h (1)",
+        "cx": "1",
+        "lc": "1",
+        "ec": "1,00 (1)",
+        "ip": "3,00",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF39": {
+        "us": "US34",
+        "us_text": "Como **Gestor Operacional de Obras**, quero atualizar nomenclaturas e parâmetros de centros de custo ativos, para que a estrutura de custos permaneça alinhada à evolução do canteiro sem quebrar vínculos históricos.",
+        "vb": "3",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "1",
+        "ec": "1,67 (2)",
+        "ip": "1,80",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+    "RF40": {
+        "us": "US34",
+        "us_text": "Como **Gestor Operacional de Obras**, quero estipular tetos monetários orçados por categoria de despesa em cada contrato, para que o sistema monitore limites e acione alertas preventivos de estouro orçamentário.",
+        "vb": "3",
+        "es": "6h (2)",
+        "cx": "2",
+        "lc": "2",
+        "ec": "2,00 (2)",
+        "ip": "1,50",
+        "quad": "Q1",
+        "mvp": "MVP"
+    },
+}
+
 # 2. Regras de Negócio (RN01 a RN31)
 RNS_DATA = [
     {
@@ -993,31 +1478,18 @@ lines.append('  <a href="#catalogo-nao-funcionais" class="catalog-nav-btn">')
 lines.append('    <span class="nav-btn-badge">20</span>')
 lines.append('    <span class="nav-btn-text">Requisitos Não Funcionais</span>')
 lines.append('  </a>')
-lines.append('  <a href="rastreabilidade.md" class="catalog-nav-btn catalog-nav-btn-ext">')
-lines.append('    <span class="nav-btn-text">Pirâmide & Rastreabilidade Miro ↗</span>')
+lines.append('  <a href="rastreabilidade/" class="catalog-nav-btn catalog-nav-btn-ext">')
+lines.append('    <span class="nav-btn-text">Pirâmide & Rastreabilidade ↗</span>')
 lines.append('  </a>')
-lines.append('  <a href="priorizacao.md" class="catalog-nav-btn catalog-nav-btn-ext">')
+lines.append('  <a href="priorizacao/" class="catalog-nav-btn catalog-nav-btn-ext">')
 lines.append('    <span class="nav-btn-text">Matriz 4 × 4 de Priorização ↗</span>')
+lines.append('  </a>')
+lines.append('  <a href="governanca-conformidade/#61-matriz-canonica-de-papeis-rbac" class="catalog-nav-btn catalog-nav-btn-ext">')
+lines.append('    <span class="nav-btn-text">Atores & Papéis RBAC ↗</span>')
 lines.append('  </a>')
 lines.append('</div>')
 lines.append('')
-
-# Atores Canônicos
 lines.append('<a id="atores-do-sistema-e-matriz-canonica-de-papeis-rbac"></a>')
-lines.append('### Atores Canônicos do Sistema')
-lines.append('')
-lines.append('O ecossistema operacional do ***DUOC Finance*** é estruturado em torno de **quatro papéis de autorização (RBAC)**:')
-lines.append('')
-lines.append('| Papel (Ator) | Código RBAC | Escopo Operacional e Responsabilidades Funcionais | Perfil Organizacional na DUOC |')
-lines.append('| :--- | :---: | :--- | :--- |')
-lines.append('| **Técnico de Campo / Diarista** | `TECNICO_CAMPO` | Preenche e retifica apontamentos de produção e horas de campo (RVT) via aplicação web responsiva (RF04, RF35), anexa fotos e evidências da atividade (RF22), consulta exclusivamente os próprios registros (RF19) e submete solicitações de reembolso e adiantamento operacional (RF07, RF28). | Operários, diaristas, técnicos residentes, arquitetos em visita técnica e estagiários. |')
-lines.append('| **Gestor Operacional de Obras** | `GESTOR_OBRAS` | Cadastra, atualiza e consulta contratos de obras (RF33, RF37, RF38), cadastra e atualiza centros de custo (RF34, RF39), define tetos orçamentários por obra (RF40) e delibera apontamentos de campo de sua alçada com homologação ou rejeição justificada (RF32). | Engenheiros residentes, coordenadores de contratos e diretores de engenharia. |')
-lines.append('| **Administrador Financeiro** | `ADMIN_FINANCEIRO` | Gerencia o cadastro de colaboradores (RF01, RF02, RF03, RF25, RF26), configura a tabela vigente de diárias (RF27), emite prévias (RF05), homologa fechamentos mensais (RF06), delibera despesas e reembolsos (RF08, RF29), dispara apropriações de custos (RF09) e exporta dados consolidados (RF36). | **Auxiliar-Administradora (Maria Beatryz)**, que na estrutura corporativa enxuta da DUOC centraliza rotinas de DP/RH, contas a pagar e finanças. |')
-lines.append('| **Administrador do Sistema** | `ADMIN_SISTEMA` | Gerencia perfis e atribuição de papéis de usuários (RF14), monitora a segurança global da plataforma, expiração de senhas e bloqueios por tentativas falhas (RF23, RF24), e audita eventos probatórios (RF15, RF16). | Sócios-diretores e equipe técnica responsável pela sustentação de TI e governança da segurança da informação. |')
-lines.append('')
-lines.append('**Alinhamento Sociotécnico e Centralização Operacional:** Na estrutura organizacional enxuta da DUOC Arquitetura e Engenharia, a colaboradora parceira Maria Beatryz (Auxiliar-Administradora) concentra na rotina real tanto as atribuições de Recursos Humanos/Departamento Pessoal quanto de Contas a Pagar e Finanças. Por essa razão, a especificação técnica do *DUOC Finance* unifica essas operações sob o papel sistêmico de **Administrador Financeiro**, garantindo aderência rigorosa à realidade da empresa e eliminando referências fragmentadas a cargos inexistentes na organização parceira.')
-lines.append('')
-lines.append('---')
 lines.append('')
 lines.append('---')
 lines.append('')
@@ -1028,7 +1500,7 @@ lines.append('<a id="especificacao-modular-dos-requisitos"></a>')
 lines.append('<a id="catalogo-geral-consolidado"></a>')
 lines.append('## Catálogo Geral de Requisitos Funcionais (Cards Interativos)')
 lines.append('')
-lines.append('Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicamente entre os **91 Itens Estruturantes** do catálogo (**40 Requisitos Funcionais**, **31 Regras de Negócio** e **20 Requisitos Não Funcionais**). Cada card consolida a especificação oficial, critérios de aceitação DoR/DoD e rastreabilidade direta com os **elementos estruturantes do projeto** como <a href="../visao-produto/solucao-proposta.md#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OEs ↗</a>, <a href="../visao-produto/solucao-proposta.md#23-caracteristicas-do-produto-car" class="req-tag req-tag-car"># CARs ↗</a>, <a href="../mvp/backlog.md" class="req-tag req-tag-us"># USs ↗</a>, <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix"># Matriz 4 × 4 ↗</a>, <a href="governanca-conformidade.md" class="req-tag req-tag-law"># Governança & CLT/LGPD ↗</a>, <a href="#catalogo-regras-de-negocio" class="req-tag req-tag-rn"># RNs ↗</a> e <a href="#catalogo-nao-funcionais" class="req-tag req-tag-rnf"># RNFs ↗</a>.')
+lines.append('Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicamente entre os **91 Itens Estruturantes** do catálogo (**40 Requisitos Funcionais**, **31 Regras de Negócio** e **20 Requisitos Não Funcionais**). Cada card consolida a especificação oficial, critérios de aceitação DoR/DoD e rastreabilidade direta com os **elementos estruturantes do projeto** como <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OEs ↗</a>, <a href="../visao-produto/solucao-proposta/#23-caracteristicas-do-produto-car" class="req-tag req-tag-car"># CARs ↗</a>, <a href="../mvp/backlog/" class="req-tag req-tag-us"># USs ↗</a>, <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix"># Matriz 4 × 4 ↗</a>, <a href="governanca-conformidade/" class="req-tag req-tag-law"># Governança & CLT/LGPD ↗</a>, <a href="#catalogo-regras-de-negocio" class="req-tag req-tag-rn"># RNs ↗</a> e <a href="#catalogo-nao-funcionais" class="req-tag req-tag-rnf"># RNFs ↗</a>.')
 lines.append('')
 
 # HTML Toolbar com Barra de Busca e Gaveta Esticável de 4 Abas de Filtros
@@ -1141,9 +1613,14 @@ for i in range(1, 41):
         "OE3": "Transparência de Custos por Contrato de Obra",
         "OE4": "Segurança, Governança e Conformidade Legal"
     }.get(meta["oe"], "")
-    
-    search_terms = f"{rf_code} {meta['nome']} {meta['oe']} {meta['car']} {meta['role']} {meta['mvp']} {meta['quad']} {meta['ct']} {meta['acao']} {' '.join(meta['rns'])} {' '.join(meta['rnfs'])}".lower()
-    
+
+    extra = RF_EXTRA_DATA.get(rf_code, {})
+    us_code = extra.get("us", meta.get("us", ""))
+    us_text = extra.get("us_text", "")
+    us_text_formatted = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', us_text)
+
+    search_terms = f"{rf_code} {meta['nome']} {meta['oe']} {meta['car']} {meta['role']} {meta['mvp']} {meta['quad']} {meta['ct']} {us_code} {us_text} {' '.join(meta['rns'])} {' '.join(meta['rnfs'])}".lower()
+
     oe_anchor_map = {
         "OE1": "oe1-padronizar-e-unificar-os-dados",
         "OE2": "oe2-aumentar-a-eficiencia-administrativo-financeira",
@@ -1152,13 +1629,13 @@ for i in range(1, 41):
     }
     oe_anchor = oe_anchor_map.get(meta["oe"], "oe1-padronizar-e-unificar-os-dados")
     car_anchor = meta["car"].lower()
-    
+
     # Regras de Negócio tags ricas
     if meta["rns"]:
         rn_tags_html = " ".join([f'<a href="#{rn.lower()}" class="req-tag req-tag-rn"># {rn} · {RN_NAMES.get(rn, "")} ↗</a>' for rn in meta["rns"]])
     else:
         rn_tags_html = '<span class="req-tag-none">—</span>'
-        
+
     # RNFs tags ricas
     if meta["rnfs"]:
         rnf_tags_list = [f'<a href="#{rnf.lower()}" class="req-tag req-tag-rnf"># {rnf} · {RNF_NAMES.get(rnf, "")} ↗</a>' for rnf in meta["rnfs"]]
@@ -1208,7 +1685,7 @@ for i in range(1, 41):
     lines.append('          <span>Objetivo Específico</span>')
     lines.append('        </span>')
     lines.append('        <div class="req-lumio-val">')
-    lines.append(f'          <a href="../visao-produto/solucao-proposta.md#{oe_anchor}" class="req-lumio-tag req-tag-oe"># {meta["oe"]} · {oe_name} ↗</a>')
+    lines.append(f'          <a href="../visao-produto/solucao-proposta/#{oe_anchor}" class="req-lumio-tag req-tag-oe"># {meta["oe"]} · {oe_name} ↗</a>')
     lines.append('        </div>')
     lines.append('      </div>')
     lines.append('      <div class="req-lumio-row">')
@@ -1217,7 +1694,7 @@ for i in range(1, 41):
     lines.append('          <span>Características (CAR)</span>')
     lines.append('        </span>')
     lines.append('        <div class="req-lumio-val">')
-    lines.append(f'          <a href="../visao-produto/solucao-proposta.md#{car_anchor}" class="req-lumio-tag req-tag-car"># {meta["car"]} ↗</a>')
+    lines.append(f'          <a href="../visao-produto/solucao-proposta/#{car_anchor}" class="req-lumio-tag req-tag-car"># {meta["car"]} ↗</a>')
     lines.append('        </div>')
     lines.append('      </div>')
     lines.append('      <div class="req-lumio-row">')
@@ -1232,9 +1709,11 @@ for i in range(1, 41):
     lines.append('    </div>')
     lines.append('')
     lines.append('    <div class="req-expanded-desc">')
-    lines.append('      <span class="req-checklist-title">Ação Observável do Usuário</span>')
-    lines.append('      <div class="req-desc-box">')
-    lines.append(f'        <p class="req-desc-text"><strong>Ação do Usuário:</strong> {meta["acao"]}</p>')
+    lines.append('      <div class="req-checklist-header">')
+    lines.append(f'        <span class="req-checklist-title">História de Usuário ({us_code})</span>')
+    lines.append('      </div>')
+    lines.append('      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">')
+    lines.append(f'        <p class="req-desc-text"><strong>História de Usuário:</strong> {us_text_formatted}</p>')
     lines.append('      </div>')
     lines.append('    </div>')
     lines.append('')
@@ -1295,15 +1774,15 @@ for i in range(1, 41):
     lines.append('      <div class="req-trace-grid">')
     lines.append('        <div class="req-trace-item">')
     lines.append('          <span class="req-trace-title">Objetivo Estratégico (OE)</span>')
-    lines.append(f'          <a href="../visao-produto/solucao-proposta.md#{oe_anchor}" class="req-tag req-tag-oe"># {meta["oe"]} · {oe_name} ↗</a>')
+    lines.append(f'          <a href="../visao-produto/solucao-proposta/#{oe_anchor}" class="req-tag req-tag-oe"># {meta["oe"]} · {oe_name} ↗</a>')
     lines.append('        </div>')
     lines.append('        <div class="req-trace-item">')
     lines.append('          <span class="req-trace-title">Característica de Produto (CAR)</span>')
-    lines.append(f'          <a href="../visao-produto/solucao-proposta.md#{car_anchor}" class="req-tag req-tag-car"># {meta["car"]} ↗</a>')
+    lines.append(f'          <a href="../visao-produto/solucao-proposta/#{car_anchor}" class="req-tag req-tag-car"># {meta["car"]} ↗</a>')
     lines.append('        </div>')
     lines.append('        <div class="req-trace-item">')
     lines.append('          <span class="req-trace-title">História de Usuário (Backlog)</span>')
-    lines.append(f'          <a href="../mvp/backlog.md#{meta["us"].lower()}" class="req-tag req-tag-us"># {meta["us"]} ↗</a>')
+    lines.append(f'          <a href="../mvp/backlog/#{meta["us"].lower()}" class="req-tag req-tag-us"># {meta["us"]} ↗</a>')
     lines.append('        </div>')
     lines.append('        <div class="req-trace-item">')
     lines.append('          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>')
@@ -1324,29 +1803,51 @@ for i in range(1, 41):
     lines.append('      </div>')
     lines.append('    </div>')
     lines.append('')
-    lines.append('    <!-- ABA 3: Priorização & Score 4x4 com Quadrante Colorido -->')
+    extra = RF_EXTRA_DATA.get(rf_code, {})
+    m_vb = extra.get("vb", meta.get("vb", "3"))
+    m_es = extra.get("es", "6h (2)")
+    m_cx = extra.get("cx", "2")
+    m_lc = extra.get("lc", "1")
+    m_ec = extra.get("ec", meta.get("ec", "1,67 (2)"))
+    m_ip = extra.get("ip", meta.get("ip", "1,80"))
+    m_quad = extra.get("quad", meta.get("quad", "Q1"))
+    m_mvp = extra.get("mvp", meta.get("mvp", "MVP"))
+
+    lines.append('    <!-- ABA 3: Priorização, Métricas e Linha de Corte 4x4 -->')
     lines.append('    <div class="req-tab-pane" data-pane="priorizacao">')
     lines.append('      <div class="req-metrics-grid">')
-    lines.append('        <div class="req-metric-card req-quad-card req-quad-' + meta["quad"].lower() + '">')
+    lines.append('        <div class="req-metric-card req-quad-card req-quad-' + m_quad.lower() + '">')
     lines.append('          <span class="metric-label">Quadrante na Matriz 4×4</span>')
     lines.append(f'          <span class="metric-val-quad {quad_class}">{quad_label}</span>')
     lines.append('        </div>')
     lines.append('        <div class="req-metric-card">')
     lines.append('          <span class="metric-label">Valor de Negócio (VB)</span>')
-    lines.append(f'          <span class="metric-val">{meta["vb"]} <small>/ 4</small></span>')
+    lines.append(f'          <span class="metric-val">{m_vb} <small>/ 4</small></span>')
+    lines.append('        </div>')
+    lines.append('        <div class="req-metric-card">')
+    lines.append('          <span class="metric-label">Complexidade Técnica (CX)</span>')
+    lines.append(f'          <span class="metric-val">{m_cx} <small>/ 4</small></span>')
+    lines.append('        </div>')
+    lines.append('        <div class="req-metric-card">')
+    lines.append('          <span class="metric-label">Esforço de Implementação (ES)</span>')
+    lines.append(f'          <span class="metric-val">{m_es}</span>')
+    lines.append('        </div>')
+    lines.append('        <div class="req-metric-card">')
+    lines.append('          <span class="metric-label">Lacuna de Capacidade (LC)</span>')
+    lines.append(f'          <span class="metric-val">{m_lc} <small>/ 4</small></span>')
     lines.append('        </div>')
     lines.append('        <div class="req-metric-card">')
     lines.append('          <span class="metric-label">Esforço Consolidado (EC)</span>')
-    lines.append(f'          <span class="metric-val">{meta["ec"]}</span>')
+    lines.append(f'          <span class="metric-val">{m_ec}</span>')
     lines.append('        </div>')
     lines.append('        <div class="req-metric-card">')
     lines.append('          <span class="metric-label">Índice de Prioridade (IP)</span>')
-    lines.append(f'          <span class="metric-val">{meta["ip"]}</span>')
+    lines.append(f'          <span class="metric-val">{m_ip}</span>')
     lines.append('        </div>')
     lines.append('      </div>')
     lines.append('      <div class="req-metrics-footer">')
-    lines.append(f'        <span>Cálculo formal ponderado: <code>IP = VB / EC</code> (Score: <strong>{meta["ip"]}</strong>). Enquadramento: <strong>{meta["mvp"]}</strong>.</span>')
-    lines.append(f'        <a href="priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-{meta["quad"].lower()}">Ver Posição no Mapa da Matriz 4×4 ↗</a>')
+    lines.append(f'        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>{m_ip}</strong>). Destinação: <strong>{m_mvp}</strong>.</span>')
+    lines.append(f'        <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-{m_quad.lower()}">Ver Posição no Mapa da Matriz 4×4 ↗</a>')
     lines.append('      </div>')
     lines.append('    </div>')
     lines.append('')
@@ -1408,7 +1909,7 @@ for rn in RNS_DATA:
     lines.append('          <span>Módulo & OE</span>')
     lines.append('        </span>')
     lines.append('        <div class="req-lumio-val">')
-    lines.append(f'          <a href="../visao-produto/solucao-proposta.md#{oe_anchor}" class="req-lumio-tag req-tag-oe"># {rn["oe"]} · {rn["modulo"]} ↗</a>')
+    lines.append(f'          <a href="../visao-produto/solucao-proposta/#{oe_anchor}" class="req-lumio-tag req-tag-oe"># {rn["oe"]} · {rn["modulo"]} ↗</a>')
     lines.append('        </div>')
     lines.append('      </div>')
     lines.append('      <div class="req-lumio-row">')
@@ -1417,7 +1918,7 @@ for rn in RNS_DATA:
     lines.append('          <span>Característica (CAR)</span>')
     lines.append('        </span>')
     lines.append('        <div class="req-lumio-val">')
-    lines.append(f'          <a href="../visao-produto/solucao-proposta.md#{car_anchor}" class="req-lumio-tag req-tag-car"># {rn["car"]} ↗</a>')
+    lines.append(f'          <a href="../visao-produto/solucao-proposta/#{car_anchor}" class="req-lumio-tag req-tag-car"># {rn["car"]} ↗</a>')
     lines.append('        </div>')
     lines.append('      </div>')
     lines.append('      <div class="req-lumio-row">')
