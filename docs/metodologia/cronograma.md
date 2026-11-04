@@ -700,7 +700,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             <span class="event-date-badge done"><span class="ev-d">02</span><span class="ev-m">OUT</span></span>
             <div class="event-info">
               <div class="event-name">Reunião 06: Validação do Protótipo no Figma com Maria Beatryz (Incremento 1)</div>
-              <div class="event-desc">Sessão presencial conduzida por Eric Araújo sobre o protótipo de alta fidelidade no Figma (Colaboradores, Visão Geral, Análise de Custos e Perfis e Permissões). Telas aprovadas sem alterações; a validação no frontend navegável segue como próximo passo antes do DoR. <a href="../../governanca/atas/reuniao-06/">Ver Ata 06</a> • <a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39" target="_blank" rel="noopener noreferrer">Abrir protótipo no Figma</a>.</div>
+              <div class="event-desc">Sessão presencial conduzida por Eric Araújo sobre o protótipo de alta fidelidade no Figma (Colaboradores, Visão Geral, Análise de Custos e Perfis e Permissões). Telas aprovadas sem alterações; a validação no frontend navegável segue como próximo passo antes do DoR. <a href="../../governanca/atas/reuniao-06/">Ver Ata 06</a> • <a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3&t=CHCrS3jVWsoutYCM-1" target="_blank" rel="noopener noreferrer">Abrir protótipo no Figma</a>.</div>
             </div>
           </div>
           <span class="status-pill concluido">Realizada</span>

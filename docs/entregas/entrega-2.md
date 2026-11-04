@@ -55,8 +55,8 @@ A equipe **Cascata Ágil** desenvolveu integralmente o conjunto de artefatos sol
 | **Capítulo 8** | Feedback da Avaliação em Pares | Deliberação dos 18 apontamentos da equipe Guerreiros do Backlog (2 ciclos) e matriz rastreável "Antes vs. Depois" dos requisitos. | [Acessar Feedback](../requisitos/feedback.md) |
 | **Capítulo 9** | Definition of Ready (DoR) | Checklist operacional de entrada (escopo, INVEST, critérios verificáveis, RNFs, base visual e validação sociotécnica) e perguntas de refinamento. | [Acessar DoR](../mvp/dor-dod.md#definition-of-ready-dor) |
 | **Capítulo 9** | Definition of Done (DoD) | Checklist operacional de conclusão (incremento funcional, testes, RNFs, Docs as Code, homologação) e registro mínimo de evidências. | [Acessar DoD](../mvp/dor-dod.md#definition-of-done-dod) |
-| **Capítulo 10** | Backlog Geral | Hierarquia de 4 Temas (OE1 a OE4), 10 Épicos (CARs) e 36 Histórias de Usuário derivadas 1:1 dos RFs, com vínculo aos RNFs específicos e transversais. | [Acessar Backlog Geral](../mvp/backlog.md#backlog-geral) |
-| **Capítulo 10** | Priorização do Backlog e MVP | Indicadores de valor, complexidade e esforço, quadrantes Q1 a Q4, prioridade sugerida e composição do MVP e do backlog evolutivo. | [Acessar Priorização](../mvp/backlog.md#priorizacao-do-backlog-e-linha-de-corte-do-mvp) |
+| **Capítulo 10** | Backlog Geral | Hierarquia de 4 Temas (OE1 a OE4), 10 Épicos (CARs) e Histórias de Usuário integradas 1:1 aos RFs nos cards interativos do catálogo. | [Acessar Catálogo](../requisitos/index.md) |
+| **Capítulo 10** | Priorização do Backlog e MVP | Indicadores de valor, complexidade e esforço, quadrantes Q1 a Q4, prioridade sugerida e composição do MVP e do backlog evolutivo. | [Acessar Priorização](../requisitos/priorizacao.md) |
 | **Atas** | Reuniões da Unidade 2 | **Reunião 04** (Retrospectiva da U1 e Planejamento da U2) e **Reunião 05** (Priorização, Matriz 4 × 4 e Alinhamento do MVP). | [Acessar Atas](../governanca/atas/index.md) |
 | **Capítulo 11** | Lições Aprendidas (Unidade 2) | Pontos fortes, gargalos e lições práticas da Unidade 2, com ações de melhoria, responsáveis, prazos e critérios de avaliação. | [Acessar Lições](../governanca/licoes-aprendidas.md#marco-avaliativo-2-unidade-2-elicitacao-aprofundada-furps-e-gestao-de-backlog) |
 
@@ -126,8 +126,8 @@ A tabela a seguir consolida o checklist de conformidade dos artefatos da Entrega
 | **06** | Revisão por pares dos requisitos com deliberação registrada | :white_check_mark: Atendido | [Feedback da Avaliação em Pares](../requisitos/feedback.md) |
 | **07** | Definition of Ready (DoR) com critérios operacionais | :white_check_mark: Atendido | [Definition of Ready (DoR)](../mvp/dor-dod.md#definition-of-ready-dor) |
 | **08** | Definition of Done (DoD) com critérios operacionais | :white_check_mark: Atendido | [Definition of Done (DoD)](../mvp/dor-dod.md#definition-of-done-dod) |
-| **09** | Backlog Geral detalhado em Temas, Épicos e Histórias de Usuário | :white_check_mark: Atendido | [Backlog Geral](../mvp/backlog.md#backlog-geral) |
-| **10** | Priorização do backlog por valor de negócio e complexidade | :white_check_mark: Atendido | [Matriz 4 × 4](../requisitos/priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico) e [Priorização e MVP](../mvp/backlog.md#priorizacao-do-backlog-e-linha-de-corte-do-mvp) |
+| **09** | Backlog Geral detalhado em Temas, Épicos e Histórias de Usuário | :white_check_mark: Atendido | [Catálogo Integrado de Requisitos](../requisitos/index.md) |
+| **10** | Priorização do backlog por valor de negócio e complexidade | :white_check_mark: Atendido | [Matriz 4 × 4 e Priorização do MVP](../requisitos/priorizacao.md#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico) |
 | **11** | Definição do MVP com justificativa dos itens postergados | :white_check_mark: Atendido | [Definição do MVP](../requisitos/priorizacao.md#definicao-dos-requisitos-funcionais-do-mvp) |
 | **12** | Validação do escopo priorizado com a cliente registrada em ata | :white_check_mark: Atendido | [Validação do MVP](../requisitos/priorizacao.md#evidencia-e-registro-da-validacao-do-mvp-com-o-cliente) e [Ata da Reunião 05](../governanca/atas/reuniao-05.md) |
 | **13** | Incorporação das correções do feedback docente da Unidade 1 | :white_check_mark: Atendido | [Ata da Reunião 04](../governanca/atas/reuniao-04.md) |

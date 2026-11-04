@@ -1,6 +1,6 @@
-# Priorização de Requisitos e Definição do MVP
+# Priorização e Escopo do Produto (Linha de Corte do MVP)
 
-Este documento consolida o **modelo metodológico integrado de priorização** do sistema ***DUOC Finance***, articulando os **Requisitos Funcionais (RF)** e **Requisitos Não Funcionais (RNF)** sob duas perspectivas analíticas complementares:
+Este documento consolida o **modelo metodológico integrado de priorização e delimitação do escopo de produto** do sistema ***DUOC Finance***, articulando os **Requisitos Funcionais (RF)** e **Requisitos Não Funcionais (RNF)** sob duas perspectivas analíticas complementares:
 
 <div class="catalog-nav-deck">
   <a href="../" class="catalog-nav-btn">
@@ -34,7 +34,7 @@ Este documento consolida o **modelo metodológico integrado de priorização** d
 
 Os resultados convergem diretamente na [**Matriz 4 × 4 (Valor × Esforço)**](#matriz-4-x-4), fornecendo o embasamento analítico para delimitar a linha de corte do **Produto Mínimo Viável (MVP)**, o tratamento dos requisitos de alto valor e alto esforço, a vinculação dos atributos de qualidade (RNFs) e a evolução contínua do produto, atendendo à Seção 10.2 do Template Oficial da disciplina.
 
-A delimitação do escopo do MVP articula os **40 Requisitos Funcionais (RF01 a RF40)** do catálogo de requisitos e as histórias mapeadas no [Backlog do Produto](../mvp/backlog.md): o **MVP consolida 27 requisitos funcionais** (os 23 do núcleo inicial mais RF32, RF33, RF34 e RF35) e **9 requisitos no backlog evolutivo pós-MVP** (os 8 do núcleo inicial mais o RF36), totalizando as 36 histórias de usuário do backlog (27 no MVP e 9 pós-MVP). Os requisitos resultantes da decomposição atômica de contratos e centros de custo (RF37 a RF40) aguardam estimativas isoladas para os refinamentos dos ciclos de construção.
+A delimitação do escopo do MVP articula os **40 Requisitos Funcionais (RF01 a RF40)** do catálogo de requisitos e as histórias mapeadas no [Catálogo Integrado de Requisitos](index.md): o **MVP consolida 27 requisitos funcionais** (os 23 do núcleo inicial mais RF32, RF33, RF34 e RF35) e **9 requisitos no backlog evolutivo pós-MVP** (os 8 do núcleo inicial mais o RF36), totalizando as 36 histórias de usuário do backlog (27 no MVP e 9 pós-MVP). Os requisitos resultantes da decomposição atômica de contratos e centros de custo (RF37 a RF40) aguardam estimativas isoladas para os refinamentos dos ciclos de construção.
 
 ---
 
@@ -202,8 +202,8 @@ Navegue pelas abas abaixo para consultar as escalas e a regra de conversão:
 <a id="revisao-e-calibracao-do-esforco-tecnico-frente-a-matriz-4-4"></a>
 ## Calibração e Distribuição do Esforço Técnico
 
-!!! info "Consulta Individualizada das Notas por Requisito"
-    Para preservar a fluidez metodológica desta seção, as pontuações atômicas de cada requisito (Valor, Horas, Complexidade e Lacuna) encontram-se documentadas diretamente nos **[Cards Interativos do Catálogo Geral de Requisitos](index.md)** — equipados com busca rápida e filtros dinâmicos — e na tabela analítica do **[Backlog do Produto](../mvp/backlog.md#backlog-geral)**.
+!!! info "Consulta Individualizada das Notas por Requisito e Unificação de Escopo"
+    Em consonância com a reformulação de **Priorização & Escopo do Produto**, as pontuações e métricas atômicas de cada requisito (**VB** — Valor de Negócio, **CX** — Complexidade Técnica, **ES** — Esforço de Implementação em horas/nota, **LC** — Lacuna de Capacidade, **EC** — Esforço Consolidado e **IP** — Índice de Prioridade) foram integradas diretamente aos **[Cards Interativos do Catálogo Geral de Requisitos](index.md)** (Aba *"Priorização & Score 4×4"*), unificando também as respectivas **Histórias de Usuário (US)**, critérios de aceitação e rastreabilidade tática em um único local. A ordenação e especificações de cada história de usuário encontram-se unificadas nos cards do **[Catálogo Integrado de Requisitos](index.md)**.
 
 A revisão do esforço técnico verificou a coerência analítica entre as três dimensões técnicas e as colunas ocupadas na Matriz 4 × 4:
 
@@ -377,12 +377,58 @@ Navegue pelas abas abaixo para consultar o racional de engenharia aplicado a cad
 <a id="tratamento-dos-requisitos-de-alto-valor-e-alto-esforco"></a>
 <a id="lista-consolidada-dos-requisitos-funcionais-do-mvp"></a>
 <a id="requisitos-funcionais-postergados-backlog-pos-mvp"></a>
+<a id="102-priorizacao-do-backlog-e-mvp"></a>
+<a id="priorizacao-do-backlog-e-linha-de-corte-do-mvp"></a>
+<a id="linha-de-corte-do-mvp"></a>
 <a id="requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte"></a>
-## Proposta de Definição dos Requisitos Funcionais do MVP
+## Proposta de Definição dos Requisitos Funcionais do MVP e Linha de Corte
 
 A delimitação do Produto Mínimo Viável (MVP) assegura a entrega de uma jornada operacional completa e segura para a DUOC, contemplando cadastro, apontamentos de campo, fechamento de diárias, prestação de contas, apropriação direta de custos e controle de acesso.
 
 A linha de corte oficial consolida **27 Requisitos Funcionais no MVP (75,0%)** e **9 Requisitos Funcionais no backlog evolutivo pós-MVP (25,0%)**, cobrindo com exatidão as 36 histórias de usuário do produto (US01 a US36).
+
+### Indicadores e Fórmulas de Cálculo do Template Oficial
+
+Para assegurar total transparência e padronização com a Seção 10.2 do Template Oficial da disciplina, a priorização e ordenação das entregas utiliza o cálculo composto entre o **Valor de Negócio (VB)** e as três dimensões analíticas do **Esforço Técnico**:
+
+| Indicador | Sigla | Escala | Descrição e Origem Metodológica |
+| :--- | :---: | :---: | :--- |
+| **Valor de Negócio** | **VB** | 1 a 4 | Atribuído com a cliente parceira Maria Beatryz na [Reunião 05](../governanca/atas/reuniao-05.md), segundo a [Rubrica de Julgamento de Negócio](#rubrica-de-julgamento-do-valor-de-negocio) (D1 a D4). |
+| **Complexidade Técnica** | **CX** | 1 a 4 | Avaliação estrutural de arquitetura, acoplamento e regras de negócio conforme a [Escala de Complexidade](#complexidade-tecnica). |
+| **Esforço de Implementação** | **ES** | 1 a 4 | Nota derivada das horas estimadas de codificação conforme a [Escala de Esforço de Implementação](#esforco-de-implementacao-tempo-em-horas). |
+| **Lacuna de Capacidade** | **LC** | 1 a 4 | Avaliação de domínio técnico e familiaridade da equipe com a stack (React SPA, Vite, NestJS, Supabase/PostgreSQL) conforme a [Escala de Lacuna](#lacuna-de-capacidade-da-equipe). |
+| **Esforço Consolidado** | **EC** | 1,00 a 4,00 | Média aritmética de ES, CX e LC, convertida na classe de 1 a 4 segundo a [Regra de Conversão](#formula-de-consolidacao-e-regra-de-conversao). |
+| **Índice de Prioridade** | **IP** | 0,25 a 4,00 | Razão direta entre o Valor de Negócio (VB) e o Esforço Consolidado (EC), determinando a ordem prioritária de implementação. |
+
+<div style="background-color: var(--md-code-bg-color); border-left: 3px solid var(--duoc-gold, #DAA520); border-radius: 4px; padding: 10px 16px; margin: 16px auto; text-align: center; font-size: 0.94rem; max-width: 900px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+  <span style="font-weight: 700; color: var(--duoc-gold, #DAA520);">EC</span>
+  <span style="margin: 0 8px; font-weight: bold; font-size: 14px;">=</span>
+  <span style="display: inline-block; vertical-align: middle; text-align: center;">
+    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 8px 3px 8px; font-weight: 600;">
+      ES + CX + LC
+    </span>
+    <span style="display: block; padding-top: 3px; font-weight: 700; font-size: 1.1em;">
+      3
+    </span>
+  </span>
+  <span style="margin: 0 28px;"></span>
+  <span style="font-weight: 700; color: var(--duoc-gold, #DAA520);">IP</span>
+  <span style="margin: 0 8px; font-weight: bold; font-size: 14px;">=</span>
+  <span style="display: inline-block; vertical-align: middle; text-align: center;">
+    <span style="display: block; border-bottom: 1.5px solid currentColor; padding: 0 8px 3px 8px; font-weight: 600;">
+      VB
+    </span>
+    <span style="display: block; padding-top: 3px; font-weight: 700; font-size: 1.1em;">
+      EC
+    </span>
+  </span>
+</div>
+
+Quanto **maior o IP**, maior o retorno operacional de negócio por unidade de esforço despendido. Os quadrantes de destinação cruzam o **VB** com a **classe do EC** (classes 1 e 2: EC < 2,50; classes 3 e 4: EC ≥ 2,50):
+* **Q1 (VB ≥ 3 e EC < 2,50):** Alto valor e esforço baixo/moderado ➔ **Alta Prioridade (MVP)**.
+* **Q2 (VB ≥ 3 e EC ≥ 2,50):** Alto valor e esforço alto ➔ **Planejado com escopo controlado (MVP)**.
+* **Q3 (VB ≤ 2 e EC < 2,50):** Valor moderado/baixo e esforço baixo/moderado ➔ **Evolutivo (Pós-MVP)**.
+* **Q4 (VB ≤ 2 e EC ≥ 2,50):** Valor moderado/baixo e esforço alto ➔ **Não Priorizar no ciclo inicial (Pós-MVP)**.
 
 ### Tratamento dos Requisitos de Alto Valor e Alto Esforço
 
@@ -404,7 +450,7 @@ A linha de corte oficial consolida **27 Requisitos Funcionais no MVP (75,0%)** e
     * **Módulo 3 (OE3):** 5 RFs (RF09, RF10, RF11, RF33, RF34)
     * **Módulo 4 (OE4):** 5 RFs (RF13, RF14, RF17, RF18, RF23)
     
-    Consulte as especificações detalhadas no [Backlog do Produto](../mvp/backlog.md#priorizacao-do-backlog-e-linha-de-corte-do-mvp).
+    Consulte as histórias e critérios nos cards do [Catálogo Integrado de Requisitos](index.md).
 
 -   :material-clock-fast: **Backlog Evolutivo Pós-MVP (9 RFs — 25%)**
 
@@ -414,7 +460,7 @@ A linha de corte oficial consolida **27 Requisitos Funcionais no MVP (75,0%)** e
     * **Módulo 3 (OE3):** RF12, RF30, RF31 (Análise orçamentária e histórico)
     * **Módulo 4 (OE4):** RF15, RF16 (Auditoria analítica) e RF24 (Expiração periódica de senhas)
     
-    Consulte o cronograma e prioridades no [Backlog Geral](../mvp/backlog.md#backlog-geral).
+    Consulte os requisitos pós-MVP no [Catálogo Integrado de Requisitos](index.md).
 
 </div>
 
@@ -506,11 +552,11 @@ A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra uma sessão in
 
 | Tópico Deliberado | Decisão Técnica Interna | Status Perante a Cliente | Evidência Rastreável |
 | :--- | :--- | :--- | :--- |
-| **Linha de corte do MVP** | Escopo consolidado em 27 RFs aprovado internamente. | **Pendente de validação** | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) e [Backlog do Produto](../mvp/backlog.md#priorizacao-do-backlog-e-linha-de-corte-do-mvp). |
+| **Linha de corte do MVP** | Escopo consolidado em 27 RFs aprovado internamente. | **Pendente de validação** | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) e [Linha de Corte do MVP](#linha-de-corte-do-mvp). |
 | **Inclusão de indicadores (RF11)** | Incluir a filtragem de custos por obra no escopo prioritário do MVP. | **Pendente de validação** | [Ata 05, Decisão D1](../governanca/atas/reuniao-05.md#decisao-d1-rf11) e [Especificação do RF11](index.md#rf11). |
-| **Tratamento do estorno (RF21)** | Retirar o estorno automático do MVP e manter tratamento operacional assistido. | **Pendente de validação** | [Ata 05, Decisão D2](../governanca/atas/reuniao-05.md#decisao-d2-rf21) e [Backlog Geral](../mvp/backlog.md#backlog-geral). |
+| **Tratamento do estorno (RF21)** | Retirar o estorno automático do MVP e manter tratamento operacional assistido. | **Pendente de validação** | [Ata 05, Decisão D2](../governanca/atas/reuniao-05.md#decisao-d2-rf21) e [Especificação do RF21](index.md#rf21). |
 | **Postergação do modo offline (RNF01)** | Classificar a operação offline completa como evolutiva. | **Pendente de validação** | [Ata 05, Decisão D4](../governanca/atas/reuniao-05.md#decisao-d4-rnf01) e [Classificação dos RNFs](#tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp). |
-| **Exportação de auditoria (RF16)** | Manter relatórios avançados de auditoria fora do escopo inicial do MVP. | **Pendente de validação** | [Ata 05, Decisão D3](../governanca/atas/reuniao-05.md#decisao-d3-rf16) e [Backlog Geral](../mvp/backlog.md#backlog-geral). |
+| **Exportação de auditoria (RF16)** | Manter relatórios avançados de auditoria fora do escopo inicial do MVP. | **Pendente de validação** | [Ata 05, Decisão D3](../governanca/atas/reuniao-05.md#decisao-d3-rf16) e [Especificação do RF16](index.md#rf16). |
 | **Segurança e infraestrutura** | Registrar como mandatórios no MVP os requisitos de login, RBAC e integridade. | **Pendente de validação** | [Ata 05, Decisão D6](../governanca/atas/reuniao-05.md#decisao-d6-seguranca-infraestrutura) e [Classificação dos RNFs](#tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp). |
 
 ---
@@ -542,3 +588,4 @@ A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra uma sessão in
 | `3.5` | 29/10/2026 | Simplificação das tabelas de MVP, pós-MVP e RNFs; atualização das referências às especificações e registro das estimativas pendentes de revisão. | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |
 | `3.6` | 02/11/2026 | Harmonização da linha de corte do MVP (27 RFs no MVP / 75% e 9 no Pós-MVP / 25%) em sincronia com as 36 US do Backlog do Produto e explicitação dos RF37 a RF40 como desdobramentos atômicos. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `3.7` | 02/11/2026 | Reformulação metodológica centrada no processo avaliativo: reestruturação em abas interativas (Valor de Negócio, Esforço Técnico, Quadrantes e RNFs), remoção da tabela de resultados de 40 RFs em prol do catálogo interativo e eliminação de fórmulas matemáticas complexas de coordenadas cartesianas. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `3.8` | 03/11/2026 | Unificação de Priorização e Escopo do Produto: formalização explícita das métricas e siglas de cálculo (VB, CX, ES, LC, EC, IP) na linha de corte do MVP; integração das notas individuais e Histórias de Usuário diretamente nos cards interativos do Catálogo de Requisitos; atualização da navegação estrutural. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

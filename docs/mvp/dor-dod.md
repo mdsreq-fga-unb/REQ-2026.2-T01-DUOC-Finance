@@ -30,13 +30,13 @@ O checklist foi aplicado documentalmente à história **US04 — Submeter Aponta
 
 | Verificação | Estado | Evidência localizada ou pendência |
 | :--- | :--- | :--- |
-| **Problema e escopo claros** | Documentado | O [backlog](../mvp/backlog.md) descreve a US04 e o escopo controlado do apontamento de campo; o [cronograma](../metodologia/cronograma.md) associa o Incremento 1 à gestão cadastral e ao RVT. |
-| **Sem ambiguidades impeditivas** | Parcial | A descrição e as regras do fluxo constam na US04 do [backlog](../mvp/backlog.md); falta evidência vinculada ao item de que dúvidas e decisões impeditivas foram confirmadas com a cliente. |
-| **Tamanho adequado ao incremento** | Documentado | A US04 está priorizada no MVP com escopo controlado e consta como fatiada para o MVP na avaliação INVEST do [backlog](../mvp/backlog.md). |
-| **História canônica e INVEST** | Documentado | A US04 está no formato “Como [papel], quero [ação], para [benefício]” e aparece como 100% INVEST no [backlog](../mvp/backlog.md). |
-| **Critérios de aceitação objetivos** | Documentado | A US04 lista CA01 a CA03 no [backlog](../mvp/backlog.md). Este registro confirma que os critérios estão especificados, não que foram executados ou aceitos. |
-| **Regras de negócio explícitas** | Parcial | O [backlog](../mvp/backlog.md) descreve status inicial, retificação em até cinco dias úteis e validação de horas; falta evidência vinculada ao item de confirmação das regras com a cliente. |
-| **Qualidade, dados e dependências** | Parcial | A US04 relaciona RF04 e requisitos não funcionais no [backlog](../mvp/backlog.md); não foi localizada evidência do contrato de dados preliminar associado ao item. |
+| **Problema e escopo claros** | Documentado | O [Catálogo de Requisitos (RF04)](../requisitos/index.md#rf04) descreve a história US04 e o escopo controlado do apontamento de campo; o [cronograma](../metodologia/cronograma.md) associa o Incremento 1 à gestão cadastral e ao RVT. |
+| **Sem ambiguidades impeditivas** | Parcial | A descrição e as regras do fluxo constam no card do [RF04](../requisitos/index.md#rf04); falta evidência vinculada ao item de que dúvidas e decisões impeditivas foram confirmadas com a cliente. |
+| **Tamanho adequado ao incremento** | Documentado | A US04 está priorizada no MVP com escopo controlado na [Priorização](../requisitos/priorizacao.md#linha-de-corte-do-mvp) e nos cards do catálogo. |
+| **História canônica e INVEST** | Documentado | A US04 está no formato “Como [papel], quero [ação], para [benefício]” e aparece especificada no card do [RF04](../requisitos/index.md#rf04). |
+| **Critérios de aceitação objetivos** | Documentado | O card do [RF04](../requisitos/index.md#rf04) lista os critérios de aceitação objetivos. Este registro confirma que os critérios estão especificados, não que foram executados ou aceitos. |
+| **Regras de negócio explícitas** | Parcial | O [Catálogo de Requisitos](../requisitos/index.md#rf04) descreve status inicial, retificação e regras vinculadas; falta evidência vinculada ao item de confirmação das regras com a cliente. |
+| **Qualidade, dados e dependências** | Parcial | A US04 relaciona RF04 e requisitos não funcionais no [Catálogo](../requisitos/index.md#rf04); não foi localizada evidência do contrato de dados preliminar associado ao item. |
 | **Base visual preparada** | Parcial | O [cronograma](../metodologia/cronograma.md) registra o estabelecimento de designs de tela de RVT e cadastros no Frontend; não foi localizado neste registro um link para o Figma ou para o preview navegável associado ao item. |
 | **Validação sociotécnica concluída** | Pendente | O [cronograma](../metodologia/cronograma.md) registra a janela prevista de validação em 02/10/2026 e informa que não há comprovação do aceite nas [Atas 01 a 05](../governanca/atas/index.md). |
 
