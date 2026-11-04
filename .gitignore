@@ -13,8 +13,8 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
+/lib/
+/lib64/
 parts/
 sdist/
 var/
@@ -37,6 +37,15 @@ site/
 .DS_Store
 Thumbs.db
 
+# Node.js
+node_modules/
+# Prisma Client gerado por "prisma generate"
+backend/src/generated/
+coverage/
+*.tsbuildinfo
+
 # Logs e variáveis de ambiente
 *.log
 .env
+.env.*
+!.env.example
