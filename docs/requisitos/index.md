@@ -38,7 +38,7 @@ Todos os elementos estão interligados por **vínculos bidirecionais navegáveis
 <a id="catalogo-geral-consolidado"></a>
 ## Catálogo Geral de Requisitos Funcionais (Cards Interativos)
 
-Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicamente entre os **91 Itens Estruturantes** do catálogo (**40 Requisitos Funcionais**, **31 Regras de Negócio** e **20 Requisitos Não Funcionais**). Cada card consolida a especificação oficial, critérios de aceitação DoR/DoD e rastreabilidade direta com os **elementos estruturantes do projeto** como <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OEs ↗</a>, <a href="../visao-produto/solucao-proposta/#23-caracteristicas-do-produto-car" class="req-tag req-tag-car"># CARs ↗</a>, <a href="../mvp/backlog/" class="req-tag req-tag-us"># USs ↗</a>, <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix"># Matriz 4 × 4 ↗</a>, <a href="governanca-conformidade/" class="req-tag req-tag-law"># Governança & CLT/LGPD ↗</a>, <a href="#catalogo-regras-de-negocio" class="req-tag req-tag-rn"># RNs ↗</a> e <a href="#catalogo-nao-funcionais" class="req-tag req-tag-rnf"># RNFs ↗</a>.
+Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicamente entre os **91 Itens Estruturantes** do catálogo (**40 Requisitos Funcionais**, **31 Regras de Negócio** e **20 Requisitos Não Funcionais**). Cada card consolida a especificação oficial, critérios de aceitação DoR/DoD e rastreabilidade direta com os **elementos estruturantes do projeto** como <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OEs ↗</a>, <a href="../visao-produto/solucao-proposta/#23-caracteristicas-do-produto-car" class="req-tag req-tag-car"># CARs ↗</a>, <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix"># Matriz 4 × 4 ↗</a>, <a href="governanca-conformidade/" class="req-tag req-tag-law"># Governança & CLT/LGPD ↗</a>, <a href="#catalogo-regras-de-negocio" class="req-tag req-tag-rn"># RNs ↗</a> e <a href="#catalogo-nao-funcionais" class="req-tag req-tag-rnf"># RNFs ↗</a>.
 
 <div class="req-toolbar">
   <div class="req-search-row">
@@ -92,7 +92,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-toolbar-footer">
     <div class="req-count-wrapper">
       <span class="req-count-label">Itens Exibidos:</span>
-      <span id="req-count-badge" class="req-count-badge">91 de 91</span>
+      <span id="req-count-badge" class="req-count-badge">40 RFs, 31 RNs e 20 RNFs</span>
     </div>
     <div class="req-actions-wrapper">
       <button type="button" id="req-expand-all" class="req-action-btn" title="Expandir todos os cards visíveis"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg> Expandir Todos</button>
@@ -111,6 +111,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF01 - Cadastrar colaborador</h3>
@@ -123,16 +124,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -175,7 +166,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US01)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por CPF que sustente os apontamentos e os pagamentos de diárias.</p>
       </div>
     </div>
@@ -191,7 +182,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -220,15 +211,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-01</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -244,16 +226,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us01" class="req-tag req-tag-us"># US01 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M1-01</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -311,6 +285,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF02 - Atualizar cadastro de colaborador</h3>
@@ -323,16 +298,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -375,7 +340,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US02)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero atualizar os dados cadastrais e bancários de um colaborador ativo, para que todos os módulos passem a usar imediatamente as informações corretas, sem perder a versão anterior da ficha.</p>
       </div>
     </div>
@@ -391,7 +356,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -420,15 +385,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-02</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -444,16 +400,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us02" class="req-tag req-tag-us"># US02 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M1-02</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -511,6 +459,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF03 - Registrar movimentação funcional</h3>
@@ -523,16 +472,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -575,7 +514,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US03)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero registrar afastamentos, férias e desligamentos de um colaborador, para que sua situação funcional fique atualizada e o acesso de campo seja revogado, evitando pagamentos indevidos.</p>
       </div>
     </div>
@@ -591,7 +530,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -620,15 +559,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-03</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -644,16 +574,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us03" class="req-tag req-tag-us"># US03 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M1-03</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -711,6 +633,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q2"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Planejado</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF04 - Submeter apontamento de campo</h3>
@@ -723,16 +646,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q2">Q2 — Planejamento / Complexo</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -775,7 +688,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US04)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de WhatsApp.</p>
       </div>
     </div>
@@ -791,7 +704,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -820,15 +733,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-04</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -844,16 +748,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us04" class="req-tag req-tag-us"># US04 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M1-04</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -911,6 +807,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q2"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Planejado</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF05 - Solicitar prévia de fechamento</h3>
@@ -923,16 +820,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q2">Q2 — Planejamento / Complexo</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -975,7 +862,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US05)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente.</p>
       </div>
     </div>
@@ -991,7 +878,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -1020,15 +907,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-01</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -1044,16 +922,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us05" class="req-tag req-tag-us"># US05 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M2-01</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -1111,6 +981,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF06 - Homologar fechamento financeiro</h3>
@@ -1123,16 +994,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -1175,7 +1036,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US06)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança.</p>
       </div>
     </div>
@@ -1191,7 +1052,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -1220,15 +1081,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-02</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -1244,16 +1096,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us06" class="req-tag req-tag-us"># US06 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M2-02</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -1311,6 +1155,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF07 - Submeter solicitação de reembolso</h3>
@@ -1323,16 +1168,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -1375,7 +1210,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US07)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo ou Gestor Operacional de Obras</strong>, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas.</p>
       </div>
     </div>
@@ -1391,7 +1226,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -1420,15 +1255,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-03</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -1444,16 +1270,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us07" class="req-tag req-tag-us"># US07 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># TECNICO_CAMPO / GESTOR_OBRAS</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M2-03</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -1511,6 +1329,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF08 - Deliberar solicitação de reembolso</h3>
@@ -1523,16 +1342,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -1575,7 +1384,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US08)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero aprovar ou reprovar as solicitações de reembolso com parecer obrigatório na reprovação, para que apenas despesas comprovadas sejam repassadas e o solicitante seja informado da decisão.</p>
       </div>
     </div>
@@ -1591,7 +1400,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -1620,15 +1429,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-04</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -1644,16 +1444,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us08" class="req-tag req-tag-us"># US08 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M2-04</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -1711,6 +1503,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q2"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Planejado</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF09 - Apropriar custos operacionais</h3>
@@ -1723,16 +1516,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q2">Q2 — Planejamento / Complexo</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -1775,7 +1558,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US09)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero disparar a apropriação dos custos homologados da competência aos respectivos contratos, para que eu conheça o custo real de cada obra sem duplicidade com a folha CLT.</p>
       </div>
     </div>
@@ -1791,7 +1574,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -1820,15 +1603,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-01</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -1844,16 +1618,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us09" class="req-tag req-tag-us"># US09 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M3-01</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -1911,6 +1677,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF10 - Consultar rastreabilidade de custos</h3>
@@ -1923,16 +1690,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -1975,7 +1732,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US10)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero visualizar a origem completa de cada custo apropriado, para que eu possa justificar e auditar qualquer linha de despesa do contrato.</p>
       </div>
     </div>
@@ -1991,7 +1748,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -2020,15 +1777,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-02</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -2044,16 +1792,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us10" class="req-tag req-tag-us"># US10 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M3-02</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -2111,6 +1851,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF11 - Filtrar indicadores de custos</h3>
@@ -2123,16 +1864,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -2175,7 +1906,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US11)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras, Administrador Financeiro ou Administrador do Sistema</strong>, quero combinar filtros de período, contrato, colaborador e centro de custo no painel de custos, para que eu analise os custos diretos de cada obra no fechamento.</p>
       </div>
     </div>
@@ -2191,7 +1922,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -2220,15 +1951,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-03</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -2244,16 +1966,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us11" class="req-tag req-tag-us"># US11 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M3-03</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -2311,6 +2025,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+      <span class="req-pill req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF12 - Monitorar execução orçamentária</h3>
@@ -2323,16 +2038,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -2375,7 +2080,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US12)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir.</p>
       </div>
     </div>
@@ -2391,7 +2096,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -2420,15 +2125,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-04</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -2444,16 +2140,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us12" class="req-tag req-tag-us"># US12 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M3-04</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -2511,6 +2199,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF13 - Efetuar login no sistema</h3>
@@ -2523,16 +2212,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -2575,7 +2254,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US13)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>usuário da plataforma</strong>, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil.</p>
       </div>
     </div>
@@ -2591,7 +2270,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -2620,15 +2299,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-01</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -2644,16 +2314,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us13" class="req-tag req-tag-us"># US13 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># TODOS OS USUÁRIOS</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M4-01</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -2711,6 +2373,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF14 - Gerenciar perfis de acesso</h3>
@@ -2723,16 +2386,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -2775,7 +2428,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US14)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema</strong>, quero atribuir a cada usuário um papel de acesso, para que campo, gestão e financeiro visualizem apenas os dados da sua alçada (princípio do menor privilégio).</p>
       </div>
     </div>
@@ -2791,7 +2444,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -2820,15 +2473,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-02</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -2844,16 +2488,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us14" class="req-tag req-tag-us"># US14 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_SISTEMA</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M4-02</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -2911,6 +2547,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+      <span class="req-pill req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF15 - Consultar trilha de auditoria</h3>
@@ -2923,16 +2560,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -2975,7 +2602,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US15)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema ou Administrador Financeiro</strong>, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando.</p>
       </div>
     </div>
@@ -2991,7 +2618,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -3020,15 +2647,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf15" class="req-tag req-tag-rnf"># RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf"># RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf"># RNF17 · Realizar backup automático diário com restauração verificada ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-03</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -3044,16 +2662,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-08" class="req-tag req-tag-car"># CAR-08 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us15" class="req-tag req-tag-us"># US15 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_SISTEMA / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M4-03</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -3111,6 +2721,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+      <span class="req-pill req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF16 - Exportar relatório de auditoria</h3>
@@ -3123,16 +2734,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -3175,7 +2776,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US16)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema</strong>, quero exportar um dossiê em PDF/CSV com o histórico imutável das operações auditadas, para que a DUOC comprove conformidade legal e trabalhista (CLT Art. 11).</p>
       </div>
     </div>
@@ -3191,7 +2792,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -3220,15 +2821,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf15" class="req-tag req-tag-rnf"># RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf"># RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf"># RNF17 · Realizar backup automático diário com restauração verificada ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-04</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -3244,16 +2836,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-08" class="req-tag req-tag-car"># CAR-08 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us16" class="req-tag req-tag-us"># US16 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_SISTEMA</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M4-04</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -3311,6 +2895,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF17 - Ativar acesso inicial e recuperar credenciais</h3>
@@ -3323,16 +2908,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -3375,7 +2950,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US17)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>colaborador que esqueceu a senha</strong>, quero receber no e-mail corporativo um link de redefinição de uso único, para que eu recupere o acesso sem depender de *reset* manual pela gestão.</p>
       </div>
     </div>
@@ -3391,7 +2966,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -3420,15 +2995,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-09</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -3444,16 +3010,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us17" class="req-tag req-tag-us"># US17 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># TODOS OS USUÁRIOS</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M4-09</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -3511,6 +3069,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF18 - Encerrar sessão manualmente</h3>
@@ -3523,16 +3082,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -3575,7 +3124,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US18)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>usuário autenticado</strong>, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado.</p>
       </div>
     </div>
@@ -3591,7 +3140,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -3620,15 +3169,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-10</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -3644,16 +3184,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us18" class="req-tag req-tag-us"># US18 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># TODOS OS USUÁRIOS</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M4-10</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -3711,6 +3243,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF19 - Consultar apontamentos registrados</h3>
@@ -3723,16 +3256,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -3775,7 +3298,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US19)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e identifique quais registros ainda posso retificar antes do fechamento.</p>
       </div>
     </div>
@@ -3791,7 +3314,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -3820,15 +3343,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-09</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -3844,16 +3358,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us19" class="req-tag req-tag-us"># US19 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M1-09</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -3911,6 +3417,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+      <span class="req-pill req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF20 - Importar presenças homologadas</h3>
@@ -3923,16 +3430,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -3975,7 +3472,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US20)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero importar as presenças homologadas do *FLIT* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação.</p>
       </div>
     </div>
@@ -3991,7 +3488,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -4020,15 +3517,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-10</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -4044,16 +3532,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-09" class="req-tag req-tag-car"># CAR-09 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us20" class="req-tag req-tag-us"># US20 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M1-10</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -4111,6 +3591,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+      <span class="req-pill req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF21 - Estornar fechamento financeiro</h3>
@@ -4123,16 +3604,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -4175,7 +3646,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US21)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original.</p>
       </div>
     </div>
@@ -4191,7 +3662,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -4220,15 +3691,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf08" class="req-tag req-tag-rnf"># RNF08 · Garantir rastreabilidade probatória e não-repúdio em operações de estorno ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-09</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -4244,16 +3706,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us21" class="req-tag req-tag-us"># US21 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M2-09</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -4311,6 +3765,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF22 - Anexar evidências e geolocalização ao apontamento</h3>
@@ -4323,16 +3778,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -4375,7 +3820,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US22)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no RVT.</p>
       </div>
     </div>
@@ -4391,7 +3836,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -4420,15 +3865,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-11</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -4444,16 +3880,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us22" class="req-tag req-tag-us"># US22 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M1-11</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -4511,6 +3939,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF23 - Bloquear acesso após tentativas falhas consecutivas</h3>
@@ -4523,16 +3952,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -4575,7 +3994,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US23)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema</strong>, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta.</p>
       </div>
     </div>
@@ -4591,7 +4010,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -4620,15 +4039,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-12</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -4644,16 +4054,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us23" class="req-tag req-tag-us"># US23 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_SISTEMA</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M4-12</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -4711,6 +4113,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q3"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Evolutivo</span></span>
+      <span class="req-pill req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF24 - Impor renovação periódica de senhas</h3>
@@ -4723,16 +4126,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q3">Q3 — Baixa Prioridade / Evolutivo</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -4775,7 +4168,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US24)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema</strong>, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema.</p>
       </div>
     </div>
@@ -4791,7 +4184,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -4820,15 +4213,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M4-13</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -4844,16 +4228,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us24" class="req-tag req-tag-us"># US24 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_SISTEMA</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M4-13</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -4911,6 +4287,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF25 - Cadastrar tipo de contratação do colaborador</h3>
@@ -4923,16 +4300,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -4975,7 +4342,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US25)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero classificar o colaborador como Diarista, CLT ou Prestador de Serviço, para que o sistema aplique as regras administrativas e financeiras do vínculo correto.</p>
       </div>
     </div>
@@ -4991,7 +4358,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -5020,15 +4387,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-12</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -5044,16 +4402,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us25" class="req-tag req-tag-us"># US25 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M1-12</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -5111,6 +4461,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF26 - Consultar histórico de alterações cadastrais e bancárias</h3>
@@ -5123,16 +4474,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -5175,7 +4516,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US26)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero consultar o histórico de alterações cadastrais e bancárias de um colaborador, com autor e data de cada mudança, para que divergências administrativas possam ser rastreadas e esclarecidas.</p>
       </div>
     </div>
@@ -5191,7 +4532,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -5220,15 +4561,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-13</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -5244,16 +4576,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us26" class="req-tag req-tag-us"># US26 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M1-13</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -5311,6 +4635,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF27 - Configurar tabela de valores de diárias técnicas</h3>
@@ -5323,16 +4648,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -5375,7 +4690,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US27)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero cadastrar as categorias de diária técnica com valor e período de vigência, para que prévias e fechamentos usem sempre o valor vigente da competência.</p>
       </div>
     </div>
@@ -5391,7 +4706,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -5420,15 +4735,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-10</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -5444,16 +4750,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us27" class="req-tag req-tag-us"># US27 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M2-10</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -5511,6 +4809,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF28 - Submeter solicitação de adiantamento operacional</h3>
@@ -5523,16 +4822,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -5575,7 +4864,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US28)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero solicitar um adiantamento para uma despesa operacional de um contrato ativo, para que eu disponha dos recursos antes de executar a atividade.</p>
       </div>
     </div>
@@ -5591,7 +4880,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -5620,15 +4909,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-11</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -5644,16 +4924,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us28" class="req-tag req-tag-us"># US28 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M2-11</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -5711,6 +4983,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF29 - Deliberar solicitação de adiantamento operacional</h3>
@@ -5723,16 +4996,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -5775,7 +5038,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US29)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero aprovar ou reprovar os adiantamentos pendentes de análise, para que a liberação de recursos seja formal, rastreável e comunicada ao solicitante.</p>
       </div>
     </div>
@@ -5791,7 +5054,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -5820,15 +5083,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M2-12</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -5844,16 +5098,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us29" class="req-tag req-tag-us"># US29 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M2-12</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -5911,6 +5157,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+      <span class="req-pill req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF30 - Consultar comparativo histórico de custos entre contratos</h3>
@@ -5923,16 +5170,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -5975,7 +5212,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US30)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras.</p>
       </div>
     </div>
@@ -5991,7 +5228,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -6020,15 +5257,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-09</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -6044,16 +5272,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us30" class="req-tag req-tag-us"># US30 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M3-09</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -6111,6 +5331,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
+      <span class="req-pill req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF31 - Configurar alertas de execução orçamentária</h3>
@@ -6123,16 +5344,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q4">Q4 — Fora de Escopo</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -6175,7 +5386,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US31)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado.</p>
       </div>
     </div>
@@ -6191,7 +5402,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -6220,15 +5431,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-10</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -6244,16 +5446,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us31" class="req-tag req-tag-us"># US31 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M3-10</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -6311,6 +5505,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF32 - Deliberar apontamento de campo</h3>
@@ -6323,16 +5518,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -6375,7 +5560,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US32)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero homologar ou rejeitar os apontamentos de campo pendentes dos contratos sob minha responsabilidade, com parecer obrigatório na rejeição, para que apenas horas validadas sigam para o fechamento financeiro e o autor seja informado da decisão.</p>
       </div>
     </div>
@@ -6391,7 +5576,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -6420,15 +5605,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-15</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -6444,16 +5620,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us32" class="req-tag req-tag-us"># US32 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M1-15</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -6511,6 +5679,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF33 - Cadastrar contrato de obra</h3>
@@ -6523,16 +5692,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -6575,7 +5734,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US33)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro ou Gestor Operacional de Obras</strong>, quero cadastrar, editar e consultar contratos de obras com vigência, valor global e retenções, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido.</p>
       </div>
     </div>
@@ -6591,7 +5750,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -6620,15 +5779,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-11</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -6644,16 +5794,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us33" class="req-tag req-tag-us"># US33 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M3-11</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -6711,6 +5853,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF34 - Cadastrar centro de custo de obra</h3>
@@ -6723,16 +5866,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -6775,7 +5908,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US34)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero cadastrar centros de custo e definir tetos orçamentários por categoria de despesa em cada contrato, para que o painel calcule a execução orçamentária e os desvios.</p>
       </div>
     </div>
@@ -6791,7 +5924,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -6820,15 +5953,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-12</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -6844,16 +5968,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us34" class="req-tag req-tag-us"># US34 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M3-12</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -6911,6 +6027,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF35 - Retificar apontamento de campo</h3>
@@ -6923,16 +6040,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -6975,7 +6082,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US35)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão.</p>
       </div>
     </div>
@@ -6991,7 +6098,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -7020,15 +6127,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-16</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -7044,16 +6142,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us35" class="req-tag req-tag-us"># US35 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M1-16</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -7111,6 +6201,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q3"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Evolutivo</span></span>
+      <span class="req-pill req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF36 - Exportar dados consolidados em planilha</h3>
@@ -7123,16 +6214,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q3">Q3 — Baixa Prioridade / Evolutivo</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-posmvp">Backlog Evolutivo (Pós-MVP)</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -7175,7 +6256,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US36)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas CSV e XLSX, para que eu faça a conciliação contábil externa sem redigitação.</p>
       </div>
     </div>
@@ -7191,7 +6272,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -7220,15 +6301,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M1-17</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -7244,16 +6316,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-10" class="req-tag req-tag-car"># CAR-10 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us36" class="req-tag req-tag-us"># US36 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M1-17</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -7311,6 +6375,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF37 - Atualizar contrato de obra</h3>
@@ -7323,16 +6388,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -7375,7 +6430,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US33)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero atualizar aditivos, prazos e valores de contratos de obras vigentes, para que as apropriações reflitam as repactuações contratuais.</p>
       </div>
     </div>
@@ -7391,7 +6446,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -7420,15 +6475,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-13</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -7444,16 +6490,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us33" class="req-tag req-tag-us"># US33 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M3-13</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -7511,6 +6549,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF38 - Consultar contratos de obra</h3>
@@ -7523,16 +6562,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -7575,7 +6604,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US33)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero consultar a relação e o detalhamento de contratos ativos e concluídos, para que eu visualize rapidamente as condições pactuadas de cada obra.</p>
       </div>
     </div>
@@ -7591,7 +6620,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -7620,15 +6649,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-14</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -7644,16 +6664,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us33" class="req-tag req-tag-us"># US33 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M3-14</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -7711,6 +6723,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF39 - Atualizar centro de custo de obra</h3>
@@ -7723,16 +6736,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -7775,7 +6778,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US34)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero atualizar nomenclaturas e parâmetros de centros de custo ativos, para que a estrutura de custos permaneça alinhada à evolução do canteiro sem quebrar vínculos históricos.</p>
       </div>
     </div>
@@ -7791,7 +6794,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -7820,15 +6823,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-15</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -7844,16 +6838,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us34" class="req-tag req-tag-us"># US34 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M3-15</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -7911,6 +6897,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
+      <span class="req-pill req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF40 - Definir tetos orçamentários de obra</h3>
@@ -7923,16 +6910,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-          <span>Prioridade</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-quad req-quad-q1">Q1 — Candidatos ao MVP (Alta Prioridade)</span>
-          <span class="req-lumio-tag req-tag-mvp req-pill-mvp">Candidato ao MVP</span>
-        </div>
-      </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
@@ -7975,7 +6952,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US34)</span>
       </div>
-      <div class="req-desc-box">
+      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero estipular tetos monetários orçados por categoria de despesa em cada contrato, para que o sistema monitore limites e acione alertas preventivos de estouro orçamentário.</p>
       </div>
     </div>
@@ -7991,7 +6968,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">4 de 4 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Verificados</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box">
@@ -8020,15 +6997,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
-        <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div class="req-check-body">
-            <span class="req-check-tag">Homologação de QA & Rastreabilidade de Teste</span>
-            <p class="req-check-text">Cenário de teste formalmente coberto e homologado pelo Caso de Teste <span class="req-tag req-tag-ct"># CT-M3-16</span>.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -8044,16 +7012,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
         </div>
         <div class="req-trace-item">
-          <span class="req-trace-title">História de Usuário (Backlog)</span>
-          <a href="../mvp/backlog/#us34" class="req-tag req-tag-us"># US34 ↗</a>
-        </div>
-        <div class="req-trace-item">
           <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
           <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Caso de Teste Associado</span>
-          <span class="req-tag req-tag-ct"># CT-M3-16</span>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
@@ -8161,15 +7121,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Integridade Cadastral</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -8227,15 +7178,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Controle de Apontamentos</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8301,15 +7243,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Validação Financeira</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -8367,15 +7300,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Ciclo de Vida & Acesso</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8441,15 +7365,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Fluxo de Aprovação</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -8507,15 +7422,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Controle Temporal</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8581,15 +7487,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Imutabilidade Contábil</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -8647,15 +7544,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Comprovação Fiscal</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8721,15 +7609,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Apropriação & Rateio</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -8787,15 +7666,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Consistência Transacional</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -8861,15 +7731,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Parametrização Orçamentária</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -8927,15 +7788,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Segregação de Despesas</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9001,15 +7853,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Controle de Teto Orçamentário</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -9067,15 +7910,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Sigilo & Privacidade Salarial</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9141,15 +7975,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Segurança de Autenticação</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -9207,15 +8032,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Autorização RBAC Estrita</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9281,15 +8097,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Imutabilidade de Trilha de Auditoria</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -9347,15 +8154,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Composição Atômica de Log UTC</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9421,15 +8219,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Retenção Quinquenal CLT/LGPD</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -9487,15 +8276,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Proteção Anti-Brute Force</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9561,15 +8341,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Política de Senhas & Histórico</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -9627,15 +8398,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Enquadramento Contratual</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9701,15 +8463,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Versionamento Cadastral</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -9767,15 +8520,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Geolocalização Resiliente</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9841,15 +8585,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Tabela de Diárias Vigente</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -9907,15 +8642,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Elegibilidade de Adiantamento</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -9981,15 +8707,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Mensageria & Notificação</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -10047,15 +8764,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Base Histórica de Custos</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -10121,15 +8829,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Alertas Preventivos de Desvio</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -10187,15 +8886,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         </span>
         <div class="req-lumio-val">
           <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Justificativa Obrigatória & Bloqueio</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -10261,15 +8951,6 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>Categoria de Domínio</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-rn-cat">Fórmula Paramétrica de Remuneração</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Executores (Bidirecional)</span>
         </span>
@@ -10306,10 +8987,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf01" data-type="rnf" data-rnf="RNF01" data-oe="oe1" data-mvp="pos-mvp" data-quad="q3" data-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Confiabilidade</span>
-      </span>
       <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
     </div>
     <div class="req-title-row">
@@ -10343,15 +9020,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Módulo 1 / OE1</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -10376,10 +9044,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf02" data-type="rnf" data-rnf="RNF02" data-oe="oe1" data-mvp="mvp" data-quad="q1" data-text="rnf02 garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos urps+ desempenho produto — desempenho módulo 1 / oe1 o tempo de resposta para busca, paginação e renderização da ficha unificada de qualquer colaborador deve ser inferior ou igual a 2,0 segundos em 95% das requisições sob carga nominal (concorrência típica de até 50 usuários simultâneos autenticados a 10 req/s). rf01 rf02 rf03 rf20 rf25 rf26 rf36 requisito nao funcional atributo qualidade dod" data-search-text="rnf02 garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos urps+ desempenho produto — desempenho módulo 1 / oe1 o tempo de resposta para busca, paginação e renderização da ficha unificada de qualquer colaborador deve ser inferior ou igual a 2,0 segundos em 95% das requisições sob carga nominal (concorrência típica de até 50 usuários simultâneos autenticados a 10 req/s). rf01 rf02 rf03 rf20 rf25 rf26 rf36 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Desempenho</span>
-      </span>
       <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
     </div>
     <div class="req-title-row">
@@ -10413,15 +9077,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Módulo 1 / OE1</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -10446,10 +9101,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf03" data-type="rnf" data-rnf="RNF03" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf03 proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito urps+ segurança (+) produto — segurança transversal (t) / oe1 100% dos dados pessoais e cadastrais confidenciais (cpf, dados de conta bancária, chave pix e remuneração) armazenados em banco devem utilizar criptografia aes-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo tls 1.3 (em conformidade com o princípio de segurança do art. 6º, vii da lgpd). rf01 rf02 rf03 rf13 rf23 requisito nao funcional atributo qualidade dod" data-search-text="rnf03 proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito urps+ segurança (+) produto — segurança transversal (t) / oe1 100% dos dados pessoais e cadastrais confidenciais (cpf, dados de conta bancária, chave pix e remuneração) armazenados em banco devem utilizar criptografia aes-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo tls 1.3 (em conformidade com o princípio de segurança do art. 6º, vii da lgpd). rf01 rf02 rf03 rf13 rf23 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Segurança (+)</span>
-      </span>
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
     </div>
     <div class="req-title-row">
@@ -10483,15 +9134,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -10516,10 +9158,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf04" data-type="rnf" data-rnf="RNF04" data-oe="oe1" data-mvp="mvp" data-quad="q1" data-text="rnf04 garantir usabilidade e agilidade no preenchimento de apontamentos de campo urps+ usabilidade produto — usabilidade módulo 1 / oe1 o preenchimento completo de um apontamento diário de campo deve ser concluído por usuários em primeiro uso, sem suporte externo ou treinamento prévio, em no máximo 5 passos/telas, com taxa de conclusão bem-sucedida ≥ 90% em teste de usabilidade. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf04 garantir usabilidade e agilidade no preenchimento de apontamentos de campo urps+ usabilidade produto — usabilidade módulo 1 / oe1 o preenchimento completo de um apontamento diário de campo deve ser concluído por usuários em primeiro uso, sem suporte externo ou treinamento prévio, em no máximo 5 passos/telas, com taxa de conclusão bem-sucedida ≥ 90% em teste de usabilidade. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Usabilidade</span>
-      </span>
       <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
     </div>
     <div class="req-title-row">
@@ -10553,15 +9191,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Módulo 1 / OE1</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -10586,10 +9215,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf05" data-type="rnf" data-rnf="RNF05" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf05 processar rotina de fechamento financeiro em até 5,0 segundos urps+ desempenho produto — desempenho módulo 2 / oe2 o cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal. rf05 rf06 rf21 rf27 requisito nao funcional atributo qualidade dod" data-search-text="rnf05 processar rotina de fechamento financeiro em até 5,0 segundos urps+ desempenho produto — desempenho módulo 2 / oe2 o cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal. rf05 rf06 rf21 rf27 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Desempenho</span>
-      </span>
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
     </div>
     <div class="req-title-row">
@@ -10623,15 +9248,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Módulo 2 / OE2</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -10656,10 +9272,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf06" data-type="rnf" data-rnf="RNF06" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf06 garantir exatidão aritmética centesimal em cálculos monetários urps+ confiabilidade produto — confiabilidade módulo 2 / oe2 todas as rotinas de cálculo de diárias, comissões, reembolsos e rateios devem operar com representação decimal exata (tipo decimal/numeric com no mínimo 4 casas de precisão interna e arredondamento padrão bancário para 2 casas), garantindo divergência zero em auditoria centesimal. rf05 rf06 rf07 rf08 rf21 rf27 rf28 rf29 requisito nao funcional atributo qualidade dod" data-search-text="rnf06 garantir exatidão aritmética centesimal em cálculos monetários urps+ confiabilidade produto — confiabilidade módulo 2 / oe2 todas as rotinas de cálculo de diárias, comissões, reembolsos e rateios devem operar com representação decimal exata (tipo decimal/numeric com no mínimo 4 casas de precisão interna e arredondamento padrão bancário para 2 casas), garantindo divergência zero em auditoria centesimal. rf05 rf06 rf07 rf08 rf21 rf27 rf28 rf29 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Confiabilidade</span>
-      </span>
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
     </div>
     <div class="req-title-row">
@@ -10693,15 +9305,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Módulo 2 / OE2</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -10726,10 +9329,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf07" data-type="rnf" data-rnf="RNF07" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf07 garantir robustez e segurança no processamento e armazenamento de comprovantes urps+ segurança / usabilidade produto — segurança módulo 2 / oe2 arquivos de comprovantes devem aceitar formatos pdf, jpeg e png com validação estrita de magic bytes no backend, tamanho máximo de 10 mb por arquivo e escaneamento preventivo contra ameaças, com compressão automática sem perda de legibilidade fiscal. rf04 rf07 rf08 rf22 rf28 rf29 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf07 garantir robustez e segurança no processamento e armazenamento de comprovantes urps+ segurança / usabilidade produto — segurança módulo 2 / oe2 arquivos de comprovantes devem aceitar formatos pdf, jpeg e png com validação estrita de magic bytes no backend, tamanho máximo de 10 mb por arquivo e escaneamento preventivo contra ameaças, com compressão automática sem perda de legibilidade fiscal. rf04 rf07 rf08 rf22 rf28 rf29 rf35 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Segurança / Usabilidade</span>
-      </span>
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
     </div>
     <div class="req-title-row">
@@ -10763,15 +9362,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Módulo 2 / OE2</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -10796,10 +9386,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf08" data-type="rnf" data-rnf="RNF08" data-oe="oe2" data-mvp="pos-mvp" data-quad="q3" data-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf06 rf08 rf21 rf29 requisito nao funcional atributo qualidade dod" data-search-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf06 rf08 rf21 rf29 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Segurança (+)</span>
-      </span>
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
     </div>
     <div class="req-title-row">
@@ -10833,15 +9419,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Módulo 2 / OE2</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -10866,10 +9443,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf09" data-type="rnf" data-rnf="RNF09" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf09 garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos urps+ desempenho produto — desempenho módulo 3 / oe3 a aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos. rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf09 garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos urps+ desempenho produto — desempenho módulo 3 / oe3 a aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos. rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Desempenho</span>
-      </span>
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
     </div>
     <div class="req-title-row">
@@ -10903,15 +9476,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Módulo 3 / OE3</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -10936,10 +9500,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf10" data-type="rnf" data-rnf="RNF10" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf10 garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais urps+ segurança / legal externo — legislativo (lgpd) módulo 3 / oe3 consultas analíticas executadas por perfis operacionais ou de gestão de obra não devem expor valores salariais individuais ou dados bancários de colaboradores, exibindo unicamente montantes agregados de mão de obra. rf05 rf06 rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf10 garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais urps+ segurança / legal externo — legislativo (lgpd) módulo 3 / oe3 consultas analíticas executadas por perfis operacionais ou de gestão de obra não devem expor valores salariais individuais ou dados bancários de colaboradores, exibindo unicamente montantes agregados de mão de obra. rf05 rf06 rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Segurança / Legal</span>
-      </span>
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
     </div>
     <div class="req-title-row">
@@ -10973,15 +9533,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Módulo 3 / OE3</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -11006,10 +9557,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf11" data-type="rnf" data-rnf="RNF11" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf11 garantir consistência transacional acid na apropriação concorrente de custos urps+ confiabilidade produto — confiabilidade módulo 3 / oe3 a rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento serializable/repeatable read no banco de dados postgresql, impedindo lançamentos duplicados ou rateios parciais em concorrência. rf09 rf10 rf30 rf33 rf37 rf38 requisito nao funcional atributo qualidade dod" data-search-text="rnf11 garantir consistência transacional acid na apropriação concorrente de custos urps+ confiabilidade produto — confiabilidade módulo 3 / oe3 a rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento serializable/repeatable read no banco de dados postgresql, impedindo lançamentos duplicados ou rateios parciais em concorrência. rf09 rf10 rf30 rf33 rf37 rf38 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Confiabilidade</span>
-      </span>
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
     </div>
     <div class="req-title-row">
@@ -11043,15 +9590,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Módulo 3 / OE3</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -11076,10 +9614,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf12" data-type="rnf" data-rnf="RNF12" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf12 assegurar responsividade do painel em resoluções de desktop e tablet urps+ usabilidade produto — usabilidade módulo 3 / oe3 o painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops). rf11 rf12 rf30 rf31 rf34 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf12 assegurar responsividade do painel em resoluções de desktop e tablet urps+ usabilidade produto — usabilidade módulo 3 / oe3 o painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops). rf11 rf12 rf30 rf31 rf34 rf39 rf40 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Usabilidade</span>
-      </span>
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
     </div>
     <div class="req-title-row">
@@ -11113,15 +9647,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Módulo 3 / OE3</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -11146,10 +9671,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf13" data-type="rnf" data-rnf="RNF13" data-oe="oe4" data-mvp="mvp" data-quad="q1" data-text="rnf13 expirar token de acesso temporário em no máximo 8 horas urps+ segurança (+) produto — segurança módulo 4 / oe4 tokens de autenticação jwt possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam http 401 unauthorized. rf13 rf17 rf18 rf23 requisito nao funcional atributo qualidade dod" data-search-text="rnf13 expirar token de acesso temporário em no máximo 8 horas urps+ segurança (+) produto — segurança módulo 4 / oe4 tokens de autenticação jwt possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam http 401 unauthorized. rf13 rf17 rf18 rf23 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Segurança (+)</span>
-      </span>
       <span class="req-pill req-pill-scope">Módulo 4 / OE4</span>
     </div>
     <div class="req-title-row">
@@ -11183,15 +9704,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Módulo 4 / OE4</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -11216,10 +9728,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf14" data-type="rnf" data-rnf="RNF14" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf14 validar perfil de autorização em 100% das rotas de api com dados protegidos urps+ segurança / legal externo — legislativo (lgpd) transversal (t) / oe4 100% dos endpoints de backend que manipulam dados corporativos passam por guard/filtro rbac que valida papel e competência do usuário, rejeitando tentativas não autorizadas com http 403 forbidden em menos de 15 ms. rf13 rf14 rf17 rf18 rf23 rf24 requisito nao funcional atributo qualidade dod" data-search-text="rnf14 validar perfil de autorização em 100% das rotas de api com dados protegidos urps+ segurança / legal externo — legislativo (lgpd) transversal (t) / oe4 100% dos endpoints de backend que manipulam dados corporativos passam por guard/filtro rbac que valida papel e competência do usuário, rejeitando tentativas não autorizadas com http 403 forbidden em menos de 15 ms. rf13 rf14 rf17 rf18 rf23 rf24 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Segurança / Legal</span>
-      </span>
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
     </div>
     <div class="req-title-row">
@@ -11253,15 +9761,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -11286,10 +9785,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf15" data-type="rnf" data-rnf="RNF15" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf15 garantir consistência transacional e atomicidade na gravação de logs de auditoria urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 em 100% das mutações cadastrais e financeiras, o registro correspondente de auditoria é confirmado na mesma transação atômica acid do banco de dados, com perda zero e latência de persistência ≤ 50 ms. rf15 rf16 requisito nao funcional atributo qualidade dod" data-search-text="rnf15 garantir consistência transacional e atomicidade na gravação de logs de auditoria urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 em 100% das mutações cadastrais e financeiras, o registro correspondente de auditoria é confirmado na mesma transação atômica acid do banco de dados, com perda zero e latência de persistência ≤ 50 ms. rf15 rf16 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Confiabilidade</span>
-      </span>
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
     </div>
     <div class="req-title-row">
@@ -11323,15 +9818,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -11356,10 +9842,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf16" data-type="rnf" data-rnf="RNF16" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf16 reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido urps+ confiabilidade / legal externo — legal (clt art. 11 / lgpd) transversal (t) / oe4 inexistência comprovada de rotinas ou permissões de exclusão de registros com tempo de retenção inferior a 5 anos fiscais (1.825 dias), garantindo substrato defensivo em conformidade com o artigo 11 da clt. rf15 rf16 requisito nao funcional atributo qualidade dod" data-search-text="rnf16 reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido urps+ confiabilidade / legal externo — legal (clt art. 11 / lgpd) transversal (t) / oe4 inexistência comprovada de rotinas ou permissões de exclusão de registros com tempo de retenção inferior a 5 anos fiscais (1.825 dias), garantindo substrato defensivo em conformidade com o artigo 11 da clt. rf15 rf16 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Confiabilidade / Legal</span>
-      </span>
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
     </div>
     <div class="req-title-row">
@@ -11393,15 +9875,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -11426,10 +9899,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf17" data-type="rnf" data-rnf="RNF17" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf17 realizar backup automático diário com restauração verificada urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 rotina automatizada de backup completo diário do banco de dados e arquivos de mídia, com retenção de 30 dias e testes automatizados periódicos de restauração em até 4 horas com perda máxima (rpo) de 24 horas. rf15 rf16 requisito nao funcional atributo qualidade dod" data-search-text="rnf17 realizar backup automático diário com restauração verificada urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 rotina automatizada de backup completo diário do banco de dados e arquivos de mídia, com retenção de 30 dias e testes automatizados periódicos de restauração em até 4 horas com perda máxima (rpo) de 24 horas. rf15 rf16 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Confiabilidade</span>
-      </span>
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
     </div>
     <div class="req-title-row">
@@ -11463,15 +9932,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -11496,10 +9956,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf18" data-type="rnf" data-rnf="RNF18" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf18 garantir disponibilidade mínima mensal do sistema urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 disponibilidade mínima mensal de 99,5%, medida por monitoramento sintético contínuo, com avisos de janelas de manutenção com antecedência mínima de 48 horas e execução restrita à madrugada (22h às 06h). rf01 rf04 rf05 rf09 rf13 requisito nao funcional atributo qualidade dod" data-search-text="rnf18 garantir disponibilidade mínima mensal do sistema urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 disponibilidade mínima mensal de 99,5%, medida por monitoramento sintético contínuo, com avisos de janelas de manutenção com antecedência mínima de 48 horas e execução restrita à madrugada (22h às 06h). rf01 rf04 rf05 rf09 rf13 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Confiabilidade</span>
-      </span>
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
     </div>
     <div class="req-title-row">
@@ -11533,15 +9989,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -11566,10 +10013,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf19" data-type="rnf" data-rnf="RNF19" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf19 garantir acessibilidade digital nas interfaces do sistema urps+ usabilidade produto — usabilidade (wcag) transversal (t) / oe1 formulários e telas de apontamento e consulta devem atender aos critérios de conformidade wcag 2.1 nível aa, incluindo navegação integral por teclado, contraste mínimo de 4.5:1 e rotulagem acessível aria sem erros críticos. rf01 rf02 rf03 rf04 rf11 rf12 requisito nao funcional atributo qualidade dod" data-search-text="rnf19 garantir acessibilidade digital nas interfaces do sistema urps+ usabilidade produto — usabilidade (wcag) transversal (t) / oe1 formulários e telas de apontamento e consulta devem atender aos critérios de conformidade wcag 2.1 nível aa, incluindo navegação integral por teclado, contraste mínimo de 4.5:1 e rotulagem acessível aria sem erros críticos. rf01 rf02 rf03 rf04 rf11 rf12 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Usabilidade</span>
-      </span>
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
     </div>
     <div class="req-title-row">
@@ -11603,15 +10046,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-lumio-row">
         <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
           <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
@@ -11636,10 +10070,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 <details class="req-card req-card-rnf" id="rnf20" data-type="rnf" data-rnf="RNF20" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf20 validar integridade de payloads em todas as rotas de escrita da api urps+ confiabilidade / segurança produto — confiabilidade transversal (t) / oe4 100% das requisições post/put/patch são submetidas a validação formal de schema e sanitização contra injection antes do processamento, respondendo http 400 bad request com detalhes estruturados em caso de inconsistência. rf01 rf04 rf07 rf09 rf13 rf14 requisito nao funcional atributo qualidade dod" data-search-text="rnf20 validar integridade de payloads em todas as rotas de escrita da api urps+ confiabilidade / segurança produto — confiabilidade transversal (t) / oe4 100% das requisições post/put/patch são submetidas a validação formal de schema e sanitização contra injection antes do processamento, respondendo http 400 bad request com detalhes estruturados em caso de inconsistência. rf01 rf04 rf07 rf09 rf13 rf14 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
-      <span class="req-pill req-pill-priority req-pill-rnf">
-        <svg class="req-priority-flag req-rnf-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-        <span>URPS+ Confiabilidade / Segurança</span>
-      </span>
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
     </div>
     <div class="req-title-row">
@@ -11669,15 +10099,6 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         </span>
         <div class="req-lumio-val">
           <span class="req-lumio-tag req-tag-sommerville">Produto — Confiabilidade</span>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>Escopo de Aplicação</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-scope">Pacote Transversal (T) — Aplicação Compulsória em 100% dos Endpoints e Telas</span>
         </div>
       </div>
       <div class="req-lumio-row">

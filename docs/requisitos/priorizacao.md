@@ -34,7 +34,7 @@ Este documento consolida o **modelo metodológico integrado de priorização e d
 
 Os resultados convergem diretamente na [**Matriz 4 × 4 (Valor × Esforço)**](#matriz-4-x-4), fornecendo o embasamento analítico para delimitar a linha de corte do **Produto Mínimo Viável (MVP)**, o tratamento dos requisitos de alto valor e alto esforço, a vinculação dos atributos de qualidade (RNFs) e a evolução contínua do produto, atendendo à Seção 10.2 do Template Oficial da disciplina.
 
-A delimitação do escopo do MVP articula os **40 Requisitos Funcionais (RF01 a RF40)** do catálogo de requisitos e as histórias mapeadas no [Backlog do Produto](../mvp/backlog.md): o **MVP consolida 27 requisitos funcionais** (os 23 do núcleo inicial mais RF32, RF33, RF34 e RF35) e **9 requisitos no backlog evolutivo pós-MVP** (os 8 do núcleo inicial mais o RF36), totalizando as 36 histórias de usuário do backlog (27 no MVP e 9 pós-MVP). Os requisitos resultantes da decomposição atômica de contratos e centros de custo (RF37 a RF40) aguardam estimativas isoladas para os refinamentos dos ciclos de construção.
+A delimitação do escopo do MVP articula os **40 Requisitos Funcionais (RF01 a RF40)** do catálogo de requisitos e as histórias mapeadas no [Catálogo Integrado de Requisitos](index.md): o **MVP consolida 27 requisitos funcionais** (os 23 do núcleo inicial mais RF32, RF33, RF34 e RF35) e **9 requisitos no backlog evolutivo pós-MVP** (os 8 do núcleo inicial mais o RF36), totalizando as 36 histórias de usuário do backlog (27 no MVP e 9 pós-MVP). Os requisitos resultantes da decomposição atômica de contratos e centros de custo (RF37 a RF40) aguardam estimativas isoladas para os refinamentos dos ciclos de construção.
 
 ---
 
@@ -203,7 +203,7 @@ Navegue pelas abas abaixo para consultar as escalas e a regra de conversão:
 ## Calibração e Distribuição do Esforço Técnico
 
 !!! info "Consulta Individualizada das Notas por Requisito e Unificação de Escopo"
-    Em consonância com a reformulação de **Priorização & Escopo do Produto**, as pontuações e métricas atômicas de cada requisito (**VB** — Valor de Negócio, **CX** — Complexidade Técnica, **ES** — Esforço de Implementação em horas/nota, **LC** — Lacuna de Capacidade, **EC** — Esforço Consolidado e **IP** — Índice de Prioridade) foram integradas diretamente aos **[Cards Interativos do Catálogo Geral de Requisitos](index.md)** (Aba *"Priorização & Score 4×4"*), unificando também as respectivas **Histórias de Usuário (US)**, critérios de aceitação e rastreabilidade tática em um único local. A ordenação canônica completa encontra-se refletida na tabela analítica do **[Backlog do Produto](../mvp/backlog.md#backlog-geral)**.
+    Em consonância com a reformulação de **Priorização & Escopo do Produto**, as pontuações e métricas atômicas de cada requisito (**VB** — Valor de Negócio, **CX** — Complexidade Técnica, **ES** — Esforço de Implementação em horas/nota, **LC** — Lacuna de Capacidade, **EC** — Esforço Consolidado e **IP** — Índice de Prioridade) foram integradas diretamente aos **[Cards Interativos do Catálogo Geral de Requisitos](index.md)** (Aba *"Priorização & Score 4×4"*), unificando também as respectivas **Histórias de Usuário (US)**, critérios de aceitação e rastreabilidade tática em um único local. A ordenação e especificações de cada história de usuário encontram-se unificadas nos cards do **[Catálogo Integrado de Requisitos](index.md)**.
 
 A revisão do esforço técnico verificou a coerência analítica entre as três dimensões técnicas e as colunas ocupadas na Matriz 4 × 4:
 
@@ -379,6 +379,7 @@ Navegue pelas abas abaixo para consultar o racional de engenharia aplicado a cad
 <a id="requisitos-funcionais-postergados-backlog-pos-mvp"></a>
 <a id="102-priorizacao-do-backlog-e-mvp"></a>
 <a id="priorizacao-do-backlog-e-linha-de-corte-do-mvp"></a>
+<a id="linha-de-corte-do-mvp"></a>
 <a id="requisitos-complementares-rf32-a-rf36-fora-da-linha-de-corte"></a>
 ## Proposta de Definição dos Requisitos Funcionais do MVP e Linha de Corte
 
@@ -449,7 +450,7 @@ Quanto **maior o IP**, maior o retorno operacional de negócio por unidade de es
     * **Módulo 3 (OE3):** 5 RFs (RF09, RF10, RF11, RF33, RF34)
     * **Módulo 4 (OE4):** 5 RFs (RF13, RF14, RF17, RF18, RF23)
     
-    Consulte as especificações detalhadas no [Backlog do Produto](../mvp/backlog.md#priorizacao-do-backlog-e-linha-de-corte-do-mvp).
+    Consulte as histórias e critérios nos cards do [Catálogo Integrado de Requisitos](index.md).
 
 -   :material-clock-fast: **Backlog Evolutivo Pós-MVP (9 RFs — 25%)**
 
@@ -459,7 +460,7 @@ Quanto **maior o IP**, maior o retorno operacional de negócio por unidade de es
     * **Módulo 3 (OE3):** RF12, RF30, RF31 (Análise orçamentária e histórico)
     * **Módulo 4 (OE4):** RF15, RF16 (Auditoria analítica) e RF24 (Expiração periódica de senhas)
     
-    Consulte o cronograma e prioridades no [Backlog Geral](../mvp/backlog.md#backlog-geral).
+    Consulte os requisitos pós-MVP no [Catálogo Integrado de Requisitos](index.md).
 
 </div>
 
@@ -551,11 +552,11 @@ A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra uma sessão in
 
 | Tópico Deliberado | Decisão Técnica Interna | Status Perante a Cliente | Evidência Rastreável |
 | :--- | :--- | :--- | :--- |
-| **Linha de corte do MVP** | Escopo consolidado em 27 RFs aprovado internamente. | **Pendente de validação** | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) e [Backlog do Produto](../mvp/backlog.md#priorizacao-do-backlog-e-linha-de-corte-do-mvp). |
+| **Linha de corte do MVP** | Escopo consolidado em 27 RFs aprovado internamente. | **Pendente de validação** | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) e [Linha de Corte do MVP](#linha-de-corte-do-mvp). |
 | **Inclusão de indicadores (RF11)** | Incluir a filtragem de custos por obra no escopo prioritário do MVP. | **Pendente de validação** | [Ata 05, Decisão D1](../governanca/atas/reuniao-05.md#decisao-d1-rf11) e [Especificação do RF11](index.md#rf11). |
-| **Tratamento do estorno (RF21)** | Retirar o estorno automático do MVP e manter tratamento operacional assistido. | **Pendente de validação** | [Ata 05, Decisão D2](../governanca/atas/reuniao-05.md#decisao-d2-rf21) e [Backlog Geral](../mvp/backlog.md#backlog-geral). |
+| **Tratamento do estorno (RF21)** | Retirar o estorno automático do MVP e manter tratamento operacional assistido. | **Pendente de validação** | [Ata 05, Decisão D2](../governanca/atas/reuniao-05.md#decisao-d2-rf21) e [Especificação do RF21](index.md#rf21). |
 | **Postergação do modo offline (RNF01)** | Classificar a operação offline completa como evolutiva. | **Pendente de validação** | [Ata 05, Decisão D4](../governanca/atas/reuniao-05.md#decisao-d4-rnf01) e [Classificação dos RNFs](#tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp). |
-| **Exportação de auditoria (RF16)** | Manter relatórios avançados de auditoria fora do escopo inicial do MVP. | **Pendente de validação** | [Ata 05, Decisão D3](../governanca/atas/reuniao-05.md#decisao-d3-rf16) e [Backlog Geral](../mvp/backlog.md#backlog-geral). |
+| **Exportação de auditoria (RF16)** | Manter relatórios avançados de auditoria fora do escopo inicial do MVP. | **Pendente de validação** | [Ata 05, Decisão D3](../governanca/atas/reuniao-05.md#decisao-d3-rf16) e [Especificação do RF16](index.md#rf16). |
 | **Segurança e infraestrutura** | Registrar como mandatórios no MVP os requisitos de login, RBAC e integridade. | **Pendente de validação** | [Ata 05, Decisão D6](../governanca/atas/reuniao-05.md#decisao-d6-seguranca-infraestrutura) e [Classificação dos RNFs](#tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp). |
 
 ---

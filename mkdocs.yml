@@ -84,14 +84,14 @@ nav:
       - 'Processo de Requisitos': metodologia/engenharia-requisitos.md
       - 'Cronograma & Planejamento': metodologia/cronograma.md
       - 'Interação com o Cliente': metodologia/interacao-cliente.md
-  - 'Escopo':
+  - 'Requisitos':
       - 'Catálogo Integrado de Requisitos': requisitos/index.md
-      - 'Priorização & Escopo do Produto': requisitos/priorizacao.md
       - 'Rastreabilidade & Matrizes': requisitos/rastreabilidade.md
       - 'Conformidade Jurídica & Governança': requisitos/governanca-conformidade.md
-      - 'Avaliação por Pares & Feedback': requisitos/feedback.md
-      - 'Backlog do Produto & Linha de Corte': mvp/backlog.md
+  - 'Escopo do MVP':
+      - 'Priorização & Escopo do Produto': requisitos/priorizacao.md
       - 'Critérios de Aceitação (DoR & DoD)': mvp/dor-dod.md
+      - 'Avaliação por Pares & Feedback': requisitos/feedback.md
   - 'Entregas':
       - 'Painel Geral de Entregas': entregas/index.md
       - 'Entrega 1 (Ponto de Controle 1)': entregas/entrega-1.md
