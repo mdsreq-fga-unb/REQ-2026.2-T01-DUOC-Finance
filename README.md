@@ -52,7 +52,11 @@ O **DUOC Finance** é uma solução digital desenvolvida para a empresa **DUOC A
 │   ├── workflows/
 │   │   └── deploy.yml           # Pipeline de build e deploy no GitHub Pages
 │   └── PULL_REQUEST_TEMPLATE.md # Template padronizado de Pull Requests
+├── backend/                     # API REST em NestJS (TypeScript) + Prisma ORM + Dockerfile de desenvolvimento
+├── frontend/                    # SPA em React + Vite + Tailwind CSS (TypeScript) + Dockerfile de desenvolvimento
 ├── docs/                        # Código-fonte da documentação (Markdown e assets)
+├── docker-compose.yml           # Orquestração local: frontend, backend e PostgreSQL
+├── .env.example                 # Variáveis de ambiente de desenvolvimento (copiar para .env)
 ├── mkdocs.yml                   # Arquivo de configuração do MkDocs Material
 ├── requirements.txt             # Dependências Python para MkDocs
 ├── CONTRIBUTING.md              # Guia completo de contribuição, Git e Commits
@@ -92,6 +96,63 @@ O **DUOC Finance** é uma solução digital desenvolvida para a empresa **DUOC A
    mkdocs serve
    ```
    Acesse a documentação no navegador através do endereço: `http://127.0.0.1:8000/`.
+
+---
+
+## 🐳 Como Executar a Aplicação (Docker)
+
+O ambiente de desenvolvimento sobe **frontend**, **backend** e **banco de dados** com um único comando, sem precisar instalar Node.js ou PostgreSQL na máquina.
+
+### Pré-requisitos
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (ou Docker Engine + Docker Compose v2)
+- No Windows com WSL 2: ativar a integração da distro em *Docker Desktop → Settings → Resources → WSL Integration*
+
+### Passo a Passo
+
+1. **Crie o arquivo de variáveis de ambiente** (opcional, os valores padrão já funcionam):
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Suba todos os serviços:**
+   ```bash
+   docker compose up --build
+   ```
+
+3. **Acesse:**
+
+   | Serviço | Endereço |
+   | :--- | :--- |
+   | Frontend (React + Vite) | `http://localhost:5173` |
+   | Backend (NestJS) | `http://localhost:3000/api` |
+   | Health check (API + banco) | `http://localhost:3000/api/health` |
+   | PostgreSQL | `localhost:5432` (usuário `duoc`, senha `duoc`, banco `duoc_finance`) |
+
+Alterações salvas em `frontend/` e `backend/` são recarregadas automaticamente, sem rebuild.
+
+### Comandos Úteis
+
+| Ação | Comando |
+| :--- | :--- |
+| Subir em segundo plano | `docker compose up --build -d` |
+| Parar os serviços | `docker compose down` (ou `Ctrl+C` se estiver em primeiro plano) |
+| Ver logs de todos os serviços | `docker compose logs -f` |
+| Ver logs de um serviço | `docker compose logs -f backend` (ou `frontend`, `db`) |
+| Ver status dos contêineres | `docker compose ps` |
+| Abrir o terminal do banco | `docker compose exec db psql -U duoc -d duoc_finance` |
+| Apagar também os dados do banco | `docker compose down -v` |
+
+> **Adicionou ou atualizou uma dependência (`package.json`)?** Rode `docker compose up --build -V` para recriar o `node_modules` dos contêineres.
+
+### Banco de Dados com Prisma
+
+As tabelas são definidas em [`backend/prisma/schema.prisma`](./backend/prisma/schema.prisma). As migrations pendentes são aplicadas automaticamente ao subir o backend.
+
+| Ação | Comando |
+| :--- | :--- |
+| Criar uma migration após alterar o schema | `docker compose exec backend npx prisma migrate dev --name <descricao>` |
+| Regenerar o Prisma Client | `docker compose exec backend npx prisma generate` |
+| Ver o status das migrations | `docker compose exec backend npx prisma migrate status` |
 
 ---
 
