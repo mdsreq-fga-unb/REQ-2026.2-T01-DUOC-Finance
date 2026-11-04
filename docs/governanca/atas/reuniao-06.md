@@ -50,7 +50,7 @@ Os requisitos citados estão especificados no [Capítulo 8 — Especificação d
 ## 5. Gravação e Links
 
 * **Registro:** Sessão presencial, não gravada. Esta ata foi elaborada em 28/10/2026 com base no relato do condutor da sessão (Eric Araújo); por isso, não há minutagem.
-* **Protótipo avaliado:** [DUOC Finance — protótipo de alta fidelidade no Figma](https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39)
+* **Protótipo avaliado:** [DUOC Finance — protótipo de alta fidelidade no Figma](https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3&t=CHCrS3jVWsoutYCM-1)
 * **Artefatos Relacionados:**
     * [Capítulo 4 — Execução do Design do Usuário no Incremento 1](../../metodologia/estrategias-esw.md#execucao-do-design-do-usuario-no-incremento-1)
     * [Capítulo 6 — Cronograma e Planejamento de Entregas](../../metodologia/cronograma.md)

@@ -40,7 +40,7 @@ O primeiro ciclo de Design do Usuário do DUOC Finance foi executado sobre um pr
 
 | Etapa do ciclo | O que aconteceu | Evidência |
 | :--- | :--- | :--- |
-| **Fluxos prototipados** | Telas de Colaboradores, Visão Geral, Análise de Custos e Perfis e Permissões, entre outras, em protótipo de alta fidelidade. | [Protótipo no Figma](https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39) |
+| **Fluxos prototipados** | Telas de Colaboradores, Visão Geral, Análise de Custos e Perfis e Permissões, entre outras, em protótipo de alta fidelidade. | [Protótipo no Figma](https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3&t=CHCrS3jVWsoutYCM-1) |
 | **Quem prototipou** | Eric Araújo (Product Owner), após a configuração dos acessos da equipe ao Figma em 25/09/2026. | [Ata 05](../governanca/atas/reuniao-05.md#6-acoes-futuras-action-items) |
 | **Quem avaliou e quando** | Maria Beatryz, cliente parceira, em sessão presencial conduzida por Eric Araújo em 02/10/2026. | [Ata 06](../governanca/atas/reuniao-06.md) |
 | **Mudanças resultantes** | Nenhuma: a cliente aprovou as telas, os campos e os fluxos sem solicitar ajustes. | [Ata 06, decisão D1](../governanca/atas/reuniao-06.md#4-decisoes-tomadas) |

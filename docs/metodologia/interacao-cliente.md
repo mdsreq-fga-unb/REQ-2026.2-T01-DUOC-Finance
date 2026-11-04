@@ -153,7 +153,7 @@ Nesta seção são detalhados os canais oficiais de comunicação, a frequência
   <tbody>
     <tr>
       <td>02/10/2026</td>
-      <td><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-39" target="_blank" rel="noopener noreferrer">Protótipo de alta fidelidade no Figma</a> (Incremento 1)</td>
+      <td><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3&t=CHCrS3jVWsoutYCM-1" target="_blank" rel="noopener noreferrer">Protótipo de alta fidelidade no Figma</a> (Incremento 1)</td>
       <td>Conduzida por Eric Araújo; avaliada por Maria Beatryz, presencialmente</td>
       <td>Aprovado sem alterações; validação no frontend navegável pendente para o DoR</td>
       <td><a href="../../governanca/atas/reuniao-06/">Ata 06</a></td>
