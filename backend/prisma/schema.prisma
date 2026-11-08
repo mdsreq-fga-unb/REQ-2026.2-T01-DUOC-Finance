@@ -1,0 +1,14 @@
+// Schema do banco de dados do DUOC Finance
+// Documentação: https://pris.ly/d/prisma-schema
+//
+// Depois de alterar este arquivo, gere uma migration com:
+//   docker compose exec backend npx prisma migrate dev --name <descricao>
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
