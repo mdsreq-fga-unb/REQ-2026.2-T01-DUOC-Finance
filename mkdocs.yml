@@ -82,7 +82,8 @@ nav:
   - 'Metodologia':
       - 'Estratégias de Engenharia': metodologia/estrategias-esw.md
       - 'Processo de Requisitos': metodologia/engenharia-requisitos.md
-      - 'Cronograma & Planejamento': metodologia/cronograma.md
+      - 'Planejamento': metodologia/planejamento.md
+      - 'Cronograma': metodologia/cronograma.md
       - 'Interação com o Cliente': metodologia/interacao-cliente.md
   - 'Requisitos':
       - 'Catálogo Integrado de Requisitos': requisitos/index.md
