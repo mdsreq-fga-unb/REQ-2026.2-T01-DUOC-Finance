@@ -66,8 +66,8 @@ Utilize a **barra de pesquisa interativa** abaixo para informar o código ou nom
 <div id="duoc-interactive-pyramid"></div>
 
 <p align="center" style="margin-top: 10px;">
-  <a href="../assets/images/requisitos/piramide_abstracao.jpg" target="_blank" rel="noopener noreferrer" class="md-button">Ver Versão Estática em JPG ↗</a> &nbsp;
-  <a href="../assets/images/piramide_abstracao_vetorizada.svg" target="_blank" rel="noopener noreferrer" download="piramide_abstracao_vetorizada.svg" class="md-button">Baixar Vetor SVG ↗</a>
+  <a href="../../assets/images/requisitos/piramide_abstracao.jpg" target="_blank" rel="noopener noreferrer" class="md-button">Ver Versão Estática em JPG ↗</a> &nbsp;
+  <a href="../../assets/images/piramide_abstracao_vetorizada.svg" target="_blank" rel="noopener noreferrer" download="piramide_abstracao_vetorizada.svg" class="md-button">Baixar Vetor SVG ↗</a>
 </p>
 
 ---

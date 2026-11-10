@@ -97,6 +97,9 @@
       const q = searchQuery.toLowerCase().trim();
       const terms = q.split(/\s+/).filter(Boolean);
       let visibleCount = 0;
+      let countRf = 0;
+      let countRn = 0;
+      let countRnf = 0;
 
       reqCards.forEach((card) => {
         const text = (card.getAttribute("data-text") || card.getAttribute("data-search-text") || card.textContent).toLowerCase();
@@ -114,6 +117,10 @@
         if (matchesSearch && matchesType && matchesOe && matchesMvp && matchesQuad) {
           card.classList.remove("req-card-hidden");
           visibleCount++;
+          if (type === "rf") countRf++;
+          else if (type === "rn") countRn++;
+          else if (type === "rnf") countRnf++;
+
           if (terms.length > 0 && q.length >= 2) {
             card.open = true;
           }
@@ -123,7 +130,7 @@
       });
 
       if (countBadge) {
-        countBadge.textContent = `${visibleCount} de ${reqCards.length}`;
+        countBadge.textContent = `${countRf} RFs, ${countRn} RNs e ${countRnf} RNFs`;
       }
 
       if (noResults) {
