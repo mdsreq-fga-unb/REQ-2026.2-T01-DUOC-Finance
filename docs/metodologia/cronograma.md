@@ -659,7 +659,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             <span class="event-date-badge milestone done"><span class="ev-d">13</span><span class="ev-m">OUT</span></span>
             <div class="event-info">
               <div class="event-name">Ponto de Controle 2: Publicação e Primeiro Dia de Apresentações</div>
-              <div class="event-desc">Publicação no GitHub Pages até as 08h de 13/10 e apresentações em 13 e 15/10 concluídas. Entrega: especificação URPS+ do catálogo vigente (40 RFs e 31 RNFs), backlog INVEST, priorização pela Matriz 4×4 e critérios DoR/DoD. <a href="../../entregas/entrega-2/">Acessar Entrega 2</a>.</div>
+              <div class="event-desc">Publicação no GitHub Pages até as 08h de 13/10 e apresentações em 13 e 15/10 concluídas. Entrega: especificação URPS+ do catálogo vigente (40 RFs e 20 RNFs), backlog INVEST, priorização pela Matriz 4×4 e critérios DoR/DoD. <a href="../../entregas/entrega-2/">Acessar Entrega 2</a>.</div>
             </div>
           </div>
           <span class="status-pill concluido">Concluído / Entregue</span>
@@ -1311,7 +1311,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
         <div>
           <div class="week-section-title">Atividades Executadas e Técnicas de ER</div>
           <ul>
-            <li>Consolidação da documentação do ciclo no MkDocs e revisão final do catálogo de requisitos (40 RFs e 31 RNFs);</li>
+            <li>Consolidação da documentação do ciclo no MkDocs e revisão final do catálogo de requisitos (40 RFs e 20 RNFs);</li>
             <li>Gravação do vídeo do PC2 (12/10);</li>
             <li><strong>PC2: publicação no GitHub Pages até 13/10/2026 às 08h</strong>, com apresentações em 13 e 15/10.</li>
           </ul>
@@ -1321,7 +1321,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           <ul>
             <li>Documento oficial da Entrega 2 publicado (<a href="../../entregas/entrega-2/">Ver Entrega 2</a>);</li>
             <li>Vídeo do Ponto de Controle 2;</li>
-            <li>Catálogo URPS+ atualizado (40 RFs e 31 RNFs), backlog INVEST e critérios DoR/DoD indexados.</li>
+            <li>Catálogo URPS+ atualizado (40 RFs e 20 RNFs), backlog INVEST e critérios DoR/DoD indexados.</li>
           </ul>
         </div>
       </div>
@@ -1354,7 +1354,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
         <div>
           <div class="week-section-title">Atividades Planejadas e Técnicas de ER</div>
           <ul>
-            <li><strong>Plan do Incremento 1:</strong> atualização dos requisitos do incremento (<a href="../../visao-produto/solucao-proposta/#car-01">CAR-01</a>, <a href="../../visao-produto/solucao-proposta/#car-02">CAR-02</a> e <a href="../../visao-produto/solucao-proposta/#car-07">CAR-07</a>) sobre o catálogo vigente de 40 RFs e 31 RNFs;</li>
+            <li><strong>Plan do Incremento 1:</strong> atualização dos requisitos do incremento (<a href="../../visao-produto/solucao-proposta/#car-01">CAR-01</a>, <a href="../../visao-produto/solucao-proposta/#car-02">CAR-02</a> e <a href="../../visao-produto/solucao-proposta/#car-07">CAR-07</a>) sobre o catálogo vigente de 40 RFs e 20 RNFs;</li>
             <li>Retrospectiva do ciclo anterior e incorporação do feedback docente;</li>
             <li>Desenvolvimento Frontend das páginas de cadastro / login e do Módulo móvel de registro de viagens (RVT);</li>
             <li>Modelagem Conceitual de Dados (DER / Supabase) cobrindo colaboradores CLT, diaristas, contratos de obras e despesas de campo;</li>
@@ -1631,4 +1631,4 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
 | `2.3` | 28/10/2026 | Registro da validação presencial do protótipo do Incremento 1 no Figma em 02/10/2026 (Ata 06) no calendário, no feed de eventos e no detalhamento semanal, substituindo as marcações de realização não comprovada. | Paulo Nery | — |
 | `2.3` | 28/10/2026 | Atualização do quantitativo do catálogo vigente de requisitos para 36 RFs e 20 RNFs, em sincronia com o Capítulo 8. | Paulo Nery | — |
 | `2.4` | 02/11/2026 | Alinhamento do encerramento da Unidade 2 e Semana 07 (concluídos); substituição de termos legados (auditor.ia por FLIT, Next.js por React/NestJS, MoSCoW por Matriz 4x4) e atualização da especificação vigente para 40 RFs. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `3.0` | 10/11/2026 | Refatoração integral do capítulo em duas seções (Planejamento e Cronograma): movimentação do racional metodológico, folgas, governança e fontes para o Planejamento; atualização do catálogo para 40 RFs e 31 RNFs e inclusão do método de atualização de requisitos no RAD com diagrama; remoção dos vínculos com as Unidades do plano de ensino e das tabelas de marcos avaliativos; marcação dos marcos já ocorridos (base 09/11/2026) como concluídos; replanejamento das Semanas 01 a 13 conforme a realidade executada (Incremento 1 estendido até a Semana 10; Incrementos 2 e 3 condensados; Cutover na Semana 13). | Eric Araújo | — |
+| `3.0` | 10/11/2026 | Refatoração integral do capítulo em duas seções (Planejamento e Cronograma): movimentação do racional metodológico, folgas, governança e fontes para o Planejamento; atualização do catálogo para 40 RFs e 20 RNFs e inclusão do método de atualização de requisitos no RAD com diagrama; remoção dos vínculos com as Unidades do plano de ensino e das tabelas de marcos avaliativos; marcação dos marcos já ocorridos (base 09/11/2026) como concluídos; replanejamento das Semanas 01 a 13 conforme a realidade executada (Incremento 1 estendido até a Semana 10; Incrementos 2 e 3 condensados; Cutover na Semana 13). | Eric Araújo | — |
