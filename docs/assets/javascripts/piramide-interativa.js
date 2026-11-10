@@ -102,55 +102,55 @@
 
   const RFS_DATA = [
     // CAR-01 (OE1)
-    { id: "RF01", car: "CAR-01", oe: "OE1", title: "Cadastrar colaborador", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN01", "RN03", "RN22", "RN23"], rnfs: ["RNF02", "RNF03", "RNF19"], ct: "CT-M1-01" },
-    { id: "RF02", car: "CAR-01", oe: "OE1", title: "Atualizar cadastro de colaborador", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN23"], rnfs: ["RNF02", "RNF03", "RNF19"], ct: "CT-M1-02" },
+    { id: "RF01", car: "CAR-01", oe: "OE1", title: "Cadastrar colaborador", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN01", "RN03", "RN22", "RN23"], rnfs: ["RNF02", "RNF03", "RNF18", "RNF19", "RNF20"], ct: "CT-M1-01" },
+    { id: "RF02", car: "CAR-01", oe: "OE1", title: "Atualizar cadastro de colaborador", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN01", "RN23"], rnfs: ["RNF02", "RNF03", "RNF19"], ct: "CT-M1-02" },
     { id: "RF03", car: "CAR-01", oe: "OE1", title: "Registrar movimentação funcional", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN04"], rnfs: ["RNF02", "RNF03", "RNF19"], ct: "CT-M1-03" },
     { id: "RF25", car: "CAR-01", oe: "OE1", title: "Cadastrar tipo de contratação do colaborador", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN22"], rnfs: ["RNF02"], ct: "CT-M1-12" },
     { id: "RF26", car: "CAR-01", oe: "OE1", title: "Consultar histórico de alterações cadastrais e bancárias", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN23"], rnfs: ["RNF02"], ct: "CT-M1-13" },
     // CAR-02 (OE1)
-    { id: "RF04", car: "CAR-02", oe: "OE1", title: "Submeter apontamento de campo", prio: "Planejado", prioClass: "med", quad: "Q2", scope: "MVP", rns: ["RN02"], rnfs: ["RNF01", "RNF04"], ct: "CT-M1-04" },
-    { id: "RF19", car: "CAR-02", oe: "OE1", title: "Consultar apontamentos registrados", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN16", "RN30"], rnfs: ["RNF04"], ct: "CT-M1-09" },
-    { id: "RF22", car: "CAR-02", oe: "OE1", title: "Anexar evidências e geolocalização ao apontamento", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN24"], rnfs: ["RNF04", "RNF07"], ct: "CT-M1-11" },
-    { id: "RF32", car: "CAR-02", oe: "OE1", title: "Deliberar apontamento de campo", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN02", "RN05", "RN10", "RN30"], rnfs: ["RNF04"], ct: "CT-M1-15" },
-    { id: "RF35", car: "CAR-02", oe: "OE1", title: "Retificar apontamento de campo", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN02"], rnfs: ["RNF04", "RNF07"], ct: "CT-M1-16" },
+    { id: "RF04", car: "CAR-02", oe: "OE1", title: "Submeter apontamento de campo", prio: "Planejado", prioClass: "med", quad: "Q2", scope: "MVP", rns: ["RN02"], rnfs: ["RNF01", "RNF04", "RNF07", "RNF18", "RNF19", "RNF20"], ct: "CT-M1-04" },
+    { id: "RF19", car: "CAR-02", oe: "OE1", title: "Consultar apontamentos registrados", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN16", "RN30"], rnfs: ["RNF01", "RNF04"], ct: "CT-M1-09" },
+    { id: "RF22", car: "CAR-02", oe: "OE1", title: "Anexar evidências e geolocalização ao apontamento", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN24"], rnfs: ["RNF01", "RNF04", "RNF07"], ct: "CT-M1-11" },
+    { id: "RF32", car: "CAR-02", oe: "OE1", title: "Deliberar apontamento de campo", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN02", "RN05", "RN30"], rnfs: ["RNF04"], ct: "CT-M1-15" },
+    { id: "RF35", car: "CAR-02", oe: "OE1", title: "Retificar apontamento de campo", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN02", "RN30"], rnfs: ["RNF01", "RNF04", "RNF07"], ct: "CT-M1-16" },
     // CAR-09 (OE1)
-    { id: "RF20", car: "CAR-09", oe: "OE1", title: "Importar presenças homologadas", prio: "Fora do MVP", prioClass: "out", quad: "Q4", scope: "Pós-MVP", rns: ["RN10"], rnfs: ["RNF02"], ct: "CT-M1-10" },
+    { id: "RF20", car: "CAR-09", oe: "OE1", title: "Importar presenças homologadas", prio: "Fora do MVP", prioClass: "out", quad: "Q4", scope: "Pós-MVP", rns: [], rnfs: ["RNF02"], ct: "CT-M1-10" },
     // CAR-10 (OE1)
     { id: "RF36", car: "CAR-10", oe: "OE1", title: "Exportar dados consolidados em planilha", prio: "Evolutivo", prioClass: "low", quad: "Q3", scope: "Pós-MVP", rns: [], rnfs: ["RNF02"], ct: "CT-M1-17" },
     // CAR-03 (OE2)
-    { id: "RF05", car: "CAR-03", oe: "OE2", title: "Solicitar prévia de fechamento", prio: "Planejado", prioClass: "med", quad: "Q2", scope: "MVP", rns: ["RN25", "RN31"], rnfs: ["RNF05", "RNF06", "RNF10"], ct: "CT-M2-01" },
-    { id: "RF06", car: "CAR-03", oe: "OE2", title: "Homologar fechamento financeiro", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN08", "RN17"], rnfs: ["RNF05", "RNF06", "RNF10"], ct: "CT-M2-02" },
-    { id: "RF21", car: "CAR-03", oe: "OE2", title: "Estornar fechamento financeiro", prio: "Fora do MVP", prioClass: "out", quad: "Q4", scope: "Pós-MVP", rns: ["RN08", "RN17"], rnfs: ["RNF08"], ct: "CT-M2-09" },
+    { id: "RF05", car: "CAR-03", oe: "OE2", title: "Solicitar prévia de fechamento", prio: "Planejado", prioClass: "med", quad: "Q2", scope: "MVP", rns: ["RN05", "RN25", "RN31"], rnfs: ["RNF05", "RNF06", "RNF10", "RNF18"], ct: "CT-M2-01" },
+    { id: "RF06", car: "CAR-03", oe: "OE2", title: "Homologar fechamento financeiro", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN05", "RN08", "RN17"], rnfs: ["RNF05", "RNF06", "RNF10"], ct: "CT-M2-02" },
+    { id: "RF21", car: "CAR-03", oe: "OE2", title: "Estornar fechamento financeiro", prio: "Fora do MVP", prioClass: "out", quad: "Q4", scope: "Pós-MVP", rns: ["RN17"], rnfs: ["RNF05", "RNF06", "RNF08"], ct: "CT-M2-09" },
     { id: "RF27", car: "CAR-03", oe: "OE2", title: "Configurar tabela de valores de diárias técnicas", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN25", "RN31"], rnfs: ["RNF06"], ct: "CT-M2-10" },
     // CAR-04 (OE2)
-    { id: "RF07", car: "CAR-04", oe: "OE2", title: "Submeter solicitação de reembolso", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN06", "RN09"], rnfs: ["RNF07"], ct: "CT-M2-03" },
-    { id: "RF08", car: "CAR-04", oe: "OE2", title: "Deliberar solicitação de reembolso", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN07", "RN27"], rnfs: ["RNF06"], ct: "CT-M2-04" },
-    { id: "RF28", car: "CAR-04", oe: "OE2", title: "Submeter solicitação de adiantamento operacional", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN26"], rnfs: ["RNF07"], ct: "CT-M2-11" },
-    { id: "RF29", car: "CAR-04", oe: "OE2", title: "Deliberar solicitação de adiantamento operacional", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN27"], rnfs: ["RNF06"], ct: "CT-M2-12" },
+    { id: "RF07", car: "CAR-04", oe: "OE2", title: "Submeter solicitação de reembolso", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN06", "RN08", "RN09"], rnfs: ["RNF06", "RNF07", "RNF20"], ct: "CT-M2-03" },
+    { id: "RF08", car: "CAR-04", oe: "OE2", title: "Deliberar solicitação de reembolso", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN07", "RN08", "RN27"], rnfs: ["RNF06", "RNF07"], ct: "CT-M2-04" },
+    { id: "RF28", car: "CAR-04", oe: "OE2", title: "Submeter solicitação de adiantamento operacional", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN09", "RN26"], rnfs: ["RNF06", "RNF07"], ct: "CT-M2-11" },
+    { id: "RF29", car: "CAR-04", oe: "OE2", title: "Deliberar solicitação de adiantamento operacional", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN07", "RN27"], rnfs: ["RNF06", "RNF07"], ct: "CT-M2-12" },
     // CAR-05 (OE3)
-    { id: "RF09", car: "CAR-05", oe: "OE3", title: "Apropriar custos operacionais", prio: "Planejado", prioClass: "med", quad: "Q2", scope: "MVP", rns: ["RN05", "RN09", "RN10", "RN11"], rnfs: ["RNF10", "RNF11"], ct: "CT-M3-01" },
-    { id: "RF10", car: "CAR-05", oe: "OE3", title: "Consultar rastreabilidade de custos", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN12"], rnfs: ["RNF10"], ct: "CT-M3-02" },
+    { id: "RF09", car: "CAR-05", oe: "OE3", title: "Apropriar custos operacionais", prio: "Planejado", prioClass: "med", quad: "Q2", scope: "MVP", rns: ["RN05", "RN09", "RN10", "RN11", "RN12"], rnfs: ["RNF10", "RNF11", "RNF18", "RNF20"], ct: "CT-M3-01" },
+    { id: "RF10", car: "CAR-05", oe: "OE3", title: "Consultar rastreabilidade de custos", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN12"], rnfs: ["RNF09", "RNF10"], ct: "CT-M3-02" },
     { id: "RF30", car: "CAR-05", oe: "OE3", title: "Consultar comparativo histórico de custos entre contratos", prio: "Fora do MVP", prioClass: "out", quad: "Q4", scope: "Pós-MVP", rns: ["RN28"], rnfs: ["RNF09", "RNF10", "RNF12"], ct: "CT-M3-09" },
     { id: "RF33", car: "CAR-05", oe: "OE3", title: "Cadastrar contrato de obra", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN09", "RN11"], rnfs: ["RNF10", "RNF11"], ct: "CT-M3-11" },
     { id: "RF37", car: "CAR-05", oe: "OE3", title: "Atualizar contrato de obra", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN09", "RN11"], rnfs: ["RNF10", "RNF11"], ct: "CT-M3-13" },
-    { id: "RF38", car: "CAR-05", oe: "OE3", title: "Consultar contratos de obra", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: [], rnfs: ["RNF10"], ct: "CT-M3-14" },
+    { id: "RF38", car: "CAR-05", oe: "OE3", title: "Consultar contratos de obra", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: [], rnfs: ["RNF09", "RNF10"], ct: "CT-M3-14" },
     // CAR-06 (OE3)
-    { id: "RF11", car: "CAR-06", oe: "OE3", title: "Filtrar indicadores de custos", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN14"], rnfs: ["RNF09", "RNF10", "RNF12"], ct: "CT-M3-03" },
-    { id: "RF12", car: "CAR-06", oe: "OE3", title: "Monitorar execução orçamentária", prio: "Fora do MVP", prioClass: "out", quad: "Q4", scope: "Pós-MVP", rns: ["RN13"], rnfs: ["RNF09", "RNF10", "RNF12"], ct: "CT-M3-04" },
+    { id: "RF11", car: "CAR-06", oe: "OE3", title: "Filtrar indicadores de custos", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN14"], rnfs: ["RNF09", "RNF10", "RNF12", "RNF19"], ct: "CT-M3-03" },
+    { id: "RF12", car: "CAR-06", oe: "OE3", title: "Monitorar execução orçamentária", prio: "Fora do MVP", prioClass: "out", quad: "Q4", scope: "Pós-MVP", rns: ["RN13", "RN14"], rnfs: ["RNF09", "RNF10", "RNF12", "RNF19"], ct: "CT-M3-04" },
     { id: "RF31", car: "CAR-06", oe: "OE3", title: "Configurar alertas de execução orçamentária", prio: "Fora do MVP", prioClass: "out", quad: "Q4", scope: "Pós-MVP", rns: ["RN29"], rnfs: ["RNF09", "RNF10", "RNF12"], ct: "CT-M3-10" },
     { id: "RF34", car: "CAR-06", oe: "OE3", title: "Cadastrar centro de custo de obra", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN09", "RN11"], rnfs: ["RNF09", "RNF10"], ct: "CT-M3-12" },
     { id: "RF39", car: "CAR-06", oe: "OE3", title: "Atualizar centro de custo de obra", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN09", "RN11"], rnfs: ["RNF09", "RNF10"], ct: "CT-M3-15" },
     { id: "RF40", car: "CAR-06", oe: "OE3", title: "Definir tetos orçamentários de obra", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN13", "RN29"], rnfs: ["RNF09", "RNF10"], ct: "CT-M3-16" },
     // CAR-07 (OE4)
-    { id: "RF13", car: "CAR-07", oe: "OE4", title: "Efetuar login no sistema", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN15"], rnfs: ["RNF13", "RNF14"], ct: "CT-M4-01" },
-    { id: "RF14", car: "CAR-07", oe: "OE4", title: "Gerenciar perfis de acesso", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN16"], rnfs: ["RNF14"], ct: "CT-M4-02" },
+    { id: "RF13", car: "CAR-07", oe: "OE4", title: "Efetuar login no sistema", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN15"], rnfs: ["RNF03", "RNF13", "RNF14", "RNF18", "RNF20"], ct: "CT-M4-01" },
+    { id: "RF14", car: "CAR-07", oe: "OE4", title: "Gerenciar perfis de acesso", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN16"], rnfs: ["RNF14", "RNF20"], ct: "CT-M4-02" },
     { id: "RF17", car: "CAR-07", oe: "OE4", title: "Ativar acesso inicial e recuperar credenciais", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN15"], rnfs: ["RNF14"], ct: "CT-M4-09" },
-    { id: "RF18", car: "CAR-07", oe: "OE4", title: "Encerrar sessão manualmente", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN15"], rnfs: ["RNF13"], ct: "CT-M4-10" },
+    { id: "RF18", car: "CAR-07", oe: "OE4", title: "Encerrar sessão manualmente", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN15"], rnfs: ["RNF13", "RNF14"], ct: "CT-M4-10" },
     { id: "RF23", car: "CAR-07", oe: "OE4", title: "Bloquear acesso após tentativas falhas consecutivas", prio: "Alta Prioridade", prioClass: "high", quad: "Q1", scope: "MVP", rns: ["RN20"], rnfs: ["RNF14"], ct: "CT-M4-12" },
     { id: "RF24", car: "CAR-07", oe: "OE4", title: "Impor renovação periódica de senhas", prio: "Evolutivo", prioClass: "low", quad: "Q3", scope: "Pós-MVP", rns: ["RN21"], rnfs: ["RNF14"], ct: "CT-M4-13" },
     // CAR-08 (OE4)
     { id: "RF15", car: "CAR-08", oe: "OE4", title: "Consultar trilha de auditoria", prio: "Fora do MVP", prioClass: "out", quad: "Q4", scope: "Pós-MVP", rns: ["RN17", "RN18", "RN19"], rnfs: ["RNF15", "RNF16", "RNF17"], ct: "CT-M4-03" },
-    { id: "RF16", car: "CAR-08", oe: "OE4", title: "Exportar relatório de auditoria", prio: "Fora do MVP", prioClass: "out", quad: "Q4", scope: "Pós-MVP", rns: ["RN18", "RN19"], rnfs: ["RNF15", "RNF16", "RNF17"], ct: "CT-M4-04" }
+    { id: "RF16", car: "CAR-08", oe: "OE4", title: "Exportar relatório de auditoria", prio: "Fora do MVP", prioClass: "out", quad: "Q4", scope: "Pós-MVP", rns: ["RN17", "RN18", "RN19"], rnfs: ["RNF15", "RNF16", "RNF17"], ct: "CT-M4-04" }
   ];
 
   function normalizeText(str) {

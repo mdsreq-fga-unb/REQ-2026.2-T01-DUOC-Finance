@@ -13,7 +13,7 @@ Este documento consolida o **modelo metodológico integrado de priorização e d
   <a href="../governanca-conformidade/#61-matriz-canonica-de-papeis-rbac" class="catalog-nav-btn catalog-nav-btn-ext">
     <span class="nav-btn-text">Atores & Papéis RBAC ↗</span>
   </a>
-  <a href="../../mvp/backlog/#priorizacao-do-backlog-e-linha-de-corte-do-mvp" class="catalog-nav-btn catalog-nav-btn-ext">
+  <a href="#linha-de-corte-do-mvp" class="catalog-nav-btn catalog-nav-btn-ext">
     <span class="nav-btn-text">Backlog & Linha de Corte ↗</span>
   </a>
 </div>
@@ -34,7 +34,7 @@ Este documento consolida o **modelo metodológico integrado de priorização e d
 
 Os resultados convergem diretamente na [**Matriz 4 × 4 (Valor × Esforço)**](#matriz-4-x-4), fornecendo o embasamento analítico para delimitar a linha de corte do **Produto Mínimo Viável (MVP)**, o tratamento dos requisitos de alto valor e alto esforço, a vinculação dos atributos de qualidade (RNFs) e a evolução contínua do produto, atendendo à Seção 10.2 do Template Oficial da disciplina.
 
-A delimitação do escopo do MVP articula os **40 Requisitos Funcionais (RF01 a RF40)** do catálogo de requisitos e as histórias mapeadas no [Catálogo Integrado de Requisitos](index.md): o **MVP consolida 27 requisitos funcionais** (os 23 do núcleo inicial mais RF32, RF33, RF34 e RF35) e **9 requisitos no backlog evolutivo pós-MVP** (os 8 do núcleo inicial mais o RF36), totalizando as 36 histórias de usuário do backlog (27 no MVP e 9 pós-MVP). Os requisitos resultantes da decomposição atômica de contratos e centros de custo (RF37 a RF40) aguardam estimativas isoladas para os refinamentos dos ciclos de construção.
+A delimitação do escopo do MVP articula os **40 Requisitos Funcionais (RF01 a RF40)** do catálogo de requisitos e as histórias mapeadas no [Catálogo Integrado de Requisitos](index.md): o **MVP consolida 31 requisitos funcionais** (os 23 do núcleo inicial, mais RF32, RF33, RF34 e RF35 e os quatro requisitos decompostos RF37, RF38, RF39 e RF40) e **9 requisitos no backlog evolutivo pós-MVP** (os 8 do núcleo inicial mais o RF36), totalizando as **40 histórias de usuário** do backlog (US01 a US40, 31 no MVP e 9 pós-MVP), em correspondência 1:1 com os RFs (US*nn* ↔ RF*nn*). Os requisitos resultantes da decomposição atômica de contratos e centros de custo (RF37 a RF40) possuem histórias e estimativas próprias, detalhadas em [Requisitos Decompostos e Mapeamento das Histórias](#requisitos-decompostos-e-mapeamento-das-historias).
 
 ---
 
@@ -92,12 +92,12 @@ Navegue pelas abas abaixo para consultar as diretrizes metodológicas do julgame
 
     ```mermaid
     flowchart LR
-        subgraph NIVEIS["Distribuição dos 36 RFs do Backlog por Valor de Negócio"]
+        subgraph NIVEIS["Distribuição dos 40 RFs do Backlog por Valor de Negócio"]
             direction TB
-            V4["<b>VALOR 4 — Muito alto (Crítico)</b><br>10 RFs (27,8%) · RF01, RF04, RF05, RF06, RF07, RF08, RF13, RF19, RF27, RF32"]
-            V3["<b>VALOR 3 — Alto (Importante)</b><br>17 RFs (47,2%) · RF02, RF03, RF09, RF10, RF11, RF14, RF17, RF18, RF22, RF23, RF25, RF26, RF28, RF29, RF33, RF34, RF35"]
-            V2["<b>VALOR 2 — Moderado (Desejável)</b><br>8 RFs (22,2%) · RF12, RF15, RF20, RF21, RF24, RF30, RF31, RF36"]
-            V1["<b>VALOR 1 — Baixo (Postergável)</b><br>1 RF (2,8%) · RF16"]
+            V4["<b>VALOR 4 — Muito alto (Crítico)</b><br>10 RFs (25,0%) · RF01, RF04, RF05, RF06, RF07, RF08, RF13, RF19, RF27, RF32"]
+            V3["<b>VALOR 3 — Alto (Importante)</b><br>21 RFs (52,5%) · RF02, RF03, RF09, RF10, RF11, RF14, RF17, RF18, RF22, RF23, RF25, RF26, RF28, RF29, RF33, RF34, RF35, RF37, RF38, RF39, RF40"]
+            V2["<b>VALOR 2 — Moderado (Desejável)</b><br>8 RFs (20,0%) · RF12, RF15, RF20, RF21, RF24, RF30, RF31, RF36"]
+            V1["<b>VALOR 1 — Baixo (Postergável)</b><br>1 RF (2,5%) · RF16"]
             V4 ~~~ V3
             V3 ~~~ V2
             V2 ~~~ V1
@@ -105,8 +105,8 @@ Navegue pelas abas abaixo para consultar as diretrizes metodológicas do julgame
 
         subgraph DEST["Linha de Corte e Destinação"]
             direction TB
-            MVP["<b>PRODUTO MÍNIMO VIÁVEL (MVP)</b><br>27 RFs selecionados (75,0% do Backlog)<br>Núcleo operacional completo para a DUOC"]
-            POST["<b>BACKLOG DE EVOLUÇÃO PÓS-MVP</b><br>9 RFs postergados (25,0% do Backlog)<br>Ciclos posteriores e capacidade residual"]
+            MVP["<b>PRODUTO MÍNIMO VIÁVEL (MVP)</b><br>31 RFs selecionados (77,5% do Backlog)<br>Núcleo operacional completo para a DUOC"]
+            POST["<b>BACKLOG DE EVOLUÇÃO PÓS-MVP</b><br>9 RFs postergados (22,5% do Backlog)<br>Ciclos posteriores e capacidade residual"]
             MVP ~~~ POST
         end
 
@@ -213,8 +213,8 @@ A revisão do esforço técnico verificou a coerência analítica entre as três
 
 | Esforço Consolidado | Coluna na Matriz | Total de RFs | Requisitos Alocados |
 | :---: | :---: | :---: | :--- |
-| **1 — Baixo** | 1ª Coluna | 2 | [RF13](index.md#rf13), [RF18](index.md#rf18) |
-| **2 — Moderado** | 2ª Coluna | 24 | [RF01](index.md#rf01), [RF02](index.md#rf02), [RF03](index.md#rf03), [RF06](index.md#rf06), [RF07](index.md#rf07), [RF08](index.md#rf08), [RF10](index.md#rf10), [RF11](index.md#rf11), [RF14](index.md#rf14), [RF17](index.md#rf17), [RF19](index.md#rf19), [RF22](index.md#rf22), [RF23](index.md#rf23), [RF24](index.md#rf24), [RF25](index.md#rf25), [RF26](index.md#rf26), [RF27](index.md#rf27), [RF28](index.md#rf28), [RF29](index.md#rf29), [RF32](index.md#rf32), [RF33](index.md#rf33), [RF34](index.md#rf34), [RF35](index.md#rf35), [RF36](index.md#rf36) |
+| **1 — Baixo** | 1ª Coluna | 3 | [RF13](index.md#rf13), [RF18](index.md#rf18), [RF38](index.md#rf38) |
+| **2 — Moderado** | 2ª Coluna | 27 | [RF01](index.md#rf01), [RF02](index.md#rf02), [RF03](index.md#rf03), [RF06](index.md#rf06), [RF07](index.md#rf07), [RF08](index.md#rf08), [RF10](index.md#rf10), [RF11](index.md#rf11), [RF14](index.md#rf14), [RF17](index.md#rf17), [RF19](index.md#rf19), [RF22](index.md#rf22), [RF23](index.md#rf23), [RF24](index.md#rf24), [RF25](index.md#rf25), [RF26](index.md#rf26), [RF27](index.md#rf27), [RF28](index.md#rf28), [RF29](index.md#rf29), [RF32](index.md#rf32), [RF33](index.md#rf33), [RF34](index.md#rf34), [RF35](index.md#rf35), [RF36](index.md#rf36), [RF37](index.md#rf37), [RF39](index.md#rf39), [RF40](index.md#rf40) |
 | **3 — Alto** | 3ª Coluna | 10 | [RF04](index.md#rf04), [RF05](index.md#rf05), [RF09](index.md#rf09), [RF12](index.md#rf12), [RF15](index.md#rf15), [RF16](index.md#rf16), [RF20](index.md#rf20), [RF21](index.md#rf21), [RF30](index.md#rf30), [RF31](index.md#rf31) |
 | **4 — Muito alto** | 4ª Coluna | 0 | *Coluna vazia: os requisitos de maior complexidade foram tratados preventivamente por decomposição e redução de escopo.* |
 
@@ -288,23 +288,27 @@ quadrantChart
     "RF04": [0.555, 0.875]
     "RF05": [0.695, 0.875]
 
-    "RF18": [0.125, 0.625]
+    "RF18": [0.125, 0.665]
+    "RF38": [0.125, 0.590]
 
-    "RF02": [0.285, 0.700]
-    "RF03": [0.345, 0.700]
-    "RF10": [0.405, 0.700]
-    "RF11": [0.465, 0.700]
-    "RF14": [0.285, 0.650]
-    "RF17": [0.345, 0.650]
-    "RF22": [0.405, 0.650]
-    "RF23": [0.465, 0.650]
-    "RF25": [0.285, 0.600]
-    "RF26": [0.345, 0.600]
-    "RF28": [0.405, 0.600]
-    "RF29": [0.465, 0.600]
-    "RF33": [0.285, 0.550]
-    "RF34": [0.345, 0.550]
-    "RF35": [0.405, 0.550]
+    "RF02": [0.285, 0.720]
+    "RF03": [0.345, 0.720]
+    "RF10": [0.405, 0.720]
+    "RF11": [0.465, 0.720]
+    "RF14": [0.285, 0.675]
+    "RF17": [0.345, 0.675]
+    "RF22": [0.405, 0.675]
+    "RF23": [0.465, 0.675]
+    "RF25": [0.285, 0.630]
+    "RF26": [0.345, 0.630]
+    "RF28": [0.405, 0.630]
+    "RF29": [0.465, 0.630]
+    "RF33": [0.285, 0.585]
+    "RF34": [0.345, 0.585]
+    "RF35": [0.405, 0.585]
+    "RF37": [0.465, 0.585]
+    "RF39": [0.285, 0.540]
+    "RF40": [0.345, 0.540]
 
     "RF09": [0.625, 0.625]
 
@@ -328,7 +332,7 @@ quadrantChart
 | Valor de Negócio ↓ / Esforço Técnico → | 1 — Baixo | 2 — Moderado | 3 — Alto | 4 — Muito alto |
 | :---: | :--- | :--- | :--- | :---: |
 | **4 — Muito alto** | [**RF13**](index.md#rf13) *(Efetuar login)*<br><br><small><strong>Prioridade máxima</strong></small> | [**RF01**](index.md#rf01) *(Cadastrar colaborador)*<br>[**RF06**](index.md#rf06) *(Homologar fechamento)*<br>[**RF07**](index.md#rf07) *(Submeter reembolso)*<br>[**RF08**](index.md#rf08) *(Deliberar reembolso)*<br>[**RF19**](index.md#rf19) *(Consultar apontamentos)*<br>[**RF27**](index.md#rf27) *(Configurar diárias técnicas)*<br>[**RF32**](index.md#rf32) *(Deliberar apontamento)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | [**RF04**](index.md#rf04) *(Submeter apontamento)*<br>[**RF05**](index.md#rf05) *(Solicitar prévia fechamento)*<br><br><small><strong>Avaliar viabilidade / Decompor para MVP</strong></small> | —<br><br><small><strong>Planejar ou decompor</strong></small> |
-| **3 — Alto** | [**RF18**](index.md#rf18) *(Encerrar sessão)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | [**RF02**](index.md#rf02) *(Atualizar cadastro)*<br>[**RF03**](index.md#rf03) *(Registrar movimentação)*<br>[**RF10**](index.md#rf10) *(Rastreabilidade de custos)*<br>[**RF11**](index.md#rf11) *(Filtrar indicadores)*<br>[**RF14**](index.md#rf14) *(Gerenciar perfis RBAC)*<br>[**RF17**](index.md#rf17) *(Ativar acesso e recuperar)*<br>[**RF22**](index.md#rf22) *(Anexar evidências/GPS)*<br>[**RF23**](index.md#rf23) *(Bloquear tentativas falhas)*<br>[**RF25**](index.md#rf25) *(Cadastrar tipo contratação)*<br>[**RF26**](index.md#rf26) *(Consultar histórico cadastral)*<br>[**RF28**](index.md#rf28) *(Submeter adiantamento)*<br>[**RF29**](index.md#rf29) *(Deliberar adiantamento)*<br>[**RF33**](index.md#rf33) *(Cadastrar contrato)*<br>[**RF34**](index.md#rf34) *(Cadastrar centro de custo)*<br>[**RF35**](index.md#rf35) *(Retificar apontamento)*<br><br><small><strong>Candidatos ao MVP</strong></small> | [**RF09**](index.md#rf09) *(Apropriar custos)*<br><br><small><strong>Avaliar contexto / Reduzir escopo para MVP</strong></small> | —<br><br><small><strong>Entrega futura</strong></small> |
+| **3 — Alto** | [**RF18**](index.md#rf18) *(Encerrar sessão)*<br>[**RF38**](index.md#rf38) *(Consultar contratos)*<br><br><small><strong>Forte candidato ao MVP</strong></small> | [**RF02**](index.md#rf02) *(Atualizar cadastro)*<br>[**RF03**](index.md#rf03) *(Registrar movimentação)*<br>[**RF10**](index.md#rf10) *(Rastreabilidade de custos)*<br>[**RF11**](index.md#rf11) *(Filtrar indicadores)*<br>[**RF14**](index.md#rf14) *(Gerenciar perfis RBAC)*<br>[**RF17**](index.md#rf17) *(Ativar acesso e recuperar)*<br>[**RF22**](index.md#rf22) *(Anexar evidências/GPS)*<br>[**RF23**](index.md#rf23) *(Bloquear tentativas falhas)*<br>[**RF25**](index.md#rf25) *(Cadastrar tipo contratação)*<br>[**RF26**](index.md#rf26) *(Consultar histórico cadastral)*<br>[**RF28**](index.md#rf28) *(Submeter adiantamento)*<br>[**RF29**](index.md#rf29) *(Deliberar adiantamento)*<br>[**RF33**](index.md#rf33) *(Cadastrar contrato)*<br>[**RF34**](index.md#rf34) *(Cadastrar centro de custo)*<br>[**RF35**](index.md#rf35) *(Retificar apontamento)*<br>[**RF37**](index.md#rf37) *(Atualizar contrato)*<br>[**RF39**](index.md#rf39) *(Atualizar centro de custo)*<br>[**RF40**](index.md#rf40) *(Definir tetos orçamentários)*<br><br><small><strong>Candidatos ao MVP</strong></small> | [**RF09**](index.md#rf09) *(Apropriar custos)*<br><br><small><strong>Avaliar contexto / Reduzir escopo para MVP</strong></small> | —<br><br><small><strong>Entrega futura</strong></small> |
 | **2 — Moderado** | —<br><br><small><strong>Avaliar oportunidade</strong></small> | [**RF24**](index.md#rf24) *(Impor renovação de senhas)*<br>[**RF36**](index.md#rf36) *(Exportar dados em planilha)*<br><br><small><strong>Entrega futura / Residual</strong></small> | [**RF12**](index.md#rf12) *(Monitorar execução orçamentária)*<br>[**RF15**](index.md#rf15) *(Consultar trilha de auditoria)*<br>[**RF20**](index.md#rf20) *(Importar presenças FLIT)*<br>[**RF21**](index.md#rf21) *(Estornar fechamento)*<br>[**RF30**](index.md#rf30) *(Comparativo histórico de custos)*<br>[**RF31**](index.md#rf31) *(Alertas de execução orçamentária)*<br><br><small><strong>Entrega futura</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> |
 | **1 — Baixo** | —<br><br><small><strong>Avaliar oportunidade</strong></small> | —<br><br><small><strong>Baixa prioridade</strong></small> | [**RF16**](index.md#rf16) *(Exportar relatório de auditoria)*<br><br><small><strong>Não priorizar agora</strong></small> | —<br><br><small><strong>Não priorizar agora</strong></small> |
 
@@ -343,7 +347,7 @@ Navegue pelas abas abaixo para consultar o racional de engenharia aplicado a cad
     * **Controle de Acesso e Sessão:** [RF13](index.md#rf13) (Login) e [RF18](index.md#rf18) (Logout manual) garantem proteção básica com baixíssimo esforço.
     * **Cadastros e Gestão de Pessoal:** [RF01](index.md#rf01), [RF02](index.md#rf02), [RF03](index.md#rf03), [RF25](index.md#rf25) e [RF26](index.md#rf26) centralizam os dados da equipe técnica.
     * **Operação de Campo e Fechamento:** [RF19](index.md#rf19), [RF22](index.md#rf22), [RF32](index.md#rf32), [RF35](index.md#rf35), [RF06](index.md#rf06), [RF07](index.md#rf07), [RF08](index.md#rf08), [RF27](index.md#rf27), [RF28](index.md#rf28) e [RF29](index.md#rf29) viabilizam a apuração e prestação de contas. O **RF32** é pré-condição crítica (sem homologação do gestor, o apontamento não vai para fechamento).
-    * **Custos e Governança:** [RF10](index.md#rf10), [RF11](index.md#rf11), [RF14](index.md#rf14), [RF17](index.md#rf17), [RF23](index.md#rf23), [RF33](index.md#rf33) e [RF34](index.md#rf34) conferem visibilidade e segurança.
+    * **Custos e Governança:** [RF10](index.md#rf10), [RF11](index.md#rf11), [RF14](index.md#rf14), [RF17](index.md#rf17), [RF23](index.md#rf23), [RF33](index.md#rf33), [RF34](index.md#rf34), [RF37](index.md#rf37), [RF38](index.md#rf38), [RF39](index.md#rf39) e [RF40](index.md#rf40) conferem visibilidade e segurança. Os RF37 a RF40 decorrem da decomposição de RF33 e RF34 e mantêm o valor 3 dos requisitos de origem.
 
 === "Q2 — Alto Valor & Alto Esforço (Estratégia de Escopo)"
 
@@ -385,7 +389,7 @@ Navegue pelas abas abaixo para consultar o racional de engenharia aplicado a cad
 
 A delimitação do Produto Mínimo Viável (MVP) assegura a entrega de uma jornada operacional completa e segura para a DUOC, contemplando cadastro, apontamentos de campo, fechamento de diárias, prestação de contas, apropriação direta de custos e controle de acesso.
 
-A linha de corte oficial consolida **27 Requisitos Funcionais no MVP (75,0%)** e **9 Requisitos Funcionais no backlog evolutivo pós-MVP (25,0%)**, cobrindo com exatidão as 36 histórias de usuário do produto (US01 a US36).
+A linha de corte oficial consolida **31 Requisitos Funcionais no MVP (77,5%)** e **9 Requisitos Funcionais no backlog evolutivo pós-MVP (22,5%)**, cobrindo com exatidão as 40 histórias de usuário do produto (US01 a US40, uma por RF).
 
 ### Indicadores e Fórmulas de Cálculo do Template Oficial
 
@@ -442,17 +446,17 @@ Quanto **maior o IP**, maior o retorno operacional de negócio por unidade de es
 
 <div class="grid cards" markdown>
 
--   :material-check-decagram: **Escopo do MVP (27 RFs — 75%)**
+-   :material-check-decagram: **Escopo do MVP (31 RFs — 77,5%)**
 
     ---
     * **Módulo 1 (OE1):** 10 RFs (RF01, RF02, RF03, RF04, RF19, RF22, RF25, RF26, RF32, RF35)
     * **Módulo 2 (OE2):** 7 RFs (RF05, RF06, RF07, RF08, RF27, RF28, RF29)
-    * **Módulo 3 (OE3):** 5 RFs (RF09, RF10, RF11, RF33, RF34)
+    * **Módulo 3 (OE3):** 9 RFs (RF09, RF10, RF11, RF33, RF34, RF37, RF38, RF39, RF40)
     * **Módulo 4 (OE4):** 5 RFs (RF13, RF14, RF17, RF18, RF23)
     
     Consulte as histórias e critérios nos cards do [Catálogo Integrado de Requisitos](index.md).
 
--   :material-clock-fast: **Backlog Evolutivo Pós-MVP (9 RFs — 25%)**
+-   :material-clock-fast: **Backlog Evolutivo Pós-MVP (9 RFs — 22,5%)**
 
     ---
     * **Módulo 1 (OE1):** RF20 (FLIT) e RF36 (Planilhas)
@@ -464,12 +468,33 @@ Quanto **maior o IP**, maior o retorno operacional de negócio por unidade de es
 
 </div>
 
-### Requisitos de Granularidade Decompostos (RF37 a RF40)
+<a id="requisitos-de-granularidade-decompostos-rf37-a-rf40"></a>
+<a id="requisitos-decompostos-e-mapeamento-das-historias"></a>
+### Requisitos Decompostos e Mapeamento das Histórias (RF37 a RF40)
 
-Para solucionar o apontamento de granularidade da revisão docente (Issue #126), os requisitos RF33 e RF34 foram desdobrados para isolar ações atômicas de atualização, consulta e tetos orçamentários:
+Para solucionar o apontamento de granularidade da revisão docente (Issue #126), os requisitos RF33 e RF34 foram desdobrados para isolar ações atômicas de atualização, consulta e tetos orçamentários. Cada requisito decomposto é um item independente do backlog, com critério de aceitação, caso de teste e **história de usuário próprios** (US37 a US40), mantendo a correspondência 1:1 US*nn* ↔ RF*nn*. As histórias US33 e US34 passaram a cobrir **apenas o cadastro**, sem sobreposição com as histórias derivadas.
 
-| RF | Requisito Funcional | Módulo / OE | CAR | Ação Decomposta | Observação |
-| :---: | :--- | :---: | :---: | :--- | :--- |
+Os decompostos herdam o **valor de negócio 3** dos requisitos de origem e foram estimados individualmente, recaindo no Q1 e, portanto, no MVP:
+
+| RF | História | Escopo da História | Origem | VB | ES | CX | LC | EC | IP | Quadrante | Destinação |
+| :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **[RF33](index.md#rf33)** | US33 | Cadastrar contrato de obra (cliente, vigência, valor global, objeto, retenções e alçadas) | — | 3 | 8 h (2) | 2 | 1 | 1,67 (2) | 1,80 | Q1 | MVP |
+| **[RF37](index.md#rf37)** | US37 | Atualizar aditivos, prazos e valores de contrato vigente | RF33 | 3 | 6 h (2) | 2 | 1 | 1,67 (2) | 1,80 | Q1 | MVP |
+| **[RF38](index.md#rf38)** | US38 | Consultar a relação e o detalhamento de contratos ativos e concluídos | RF33 | 3 | 2 h (1) | 1 | 1 | 1,00 (1) | 3,00 | Q1 | MVP |
+| **[RF34](index.md#rf34)** | US34 | Cadastrar centro de custo vinculado a contrato ativo | — | 3 | 8 h (2) | 2 | 1 | 1,67 (2) | 1,80 | Q1 | MVP |
+| **[RF39](index.md#rf39)** | US39 | Atualizar nomenclaturas e parâmetros de centro de custo ativo | RF34 | 3 | 6 h (2) | 2 | 1 | 1,67 (2) | 1,80 | Q1 | MVP |
+| **[RF40](index.md#rf40)** | US40 | Definir tetos orçamentários por categoria de despesa em cada contrato | RF34 | 3 | 6 h (2) | 2 | 2 | 2,00 (2) | 1,50 | Q1 | MVP |
+
+**Esforço consolidado após a decomposição:** as estimativas de 8 h de RF33 e RF34, registradas antes da decomposição para o gerenciamento completo de contratos e de centros de custo, foram **ratificadas como estimativas restritas ao cadastro**. As ações desdobradas foram estimadas à parte e somam-se a elas, sem dupla contagem:
+
+| Capacidade | Requisitos e Histórias | Esforço Antes da Decomposição | Esforço Após a Decomposição |
+| :--- | :--- | :---: | :---: |
+| **Contratos de obra** (CAR-05) | RF33/US33 (8 h) + RF37/US37 (6 h) + RF38/US38 (2 h) | 8 h | **16 h** |
+| **Centros de custo e tetos** (CAR-06) | RF34/US34 (8 h) + RF39/US39 (6 h) + RF40/US40 (6 h) | 8 h | **20 h** |
+
+O acréscimo de 20 h decorre do detalhamento de responsabilidades que estavam subdimensionadas na estimativa agregada original (edição, consulta e parametrização orçamentária). As notas individuais permanecem nos cards do [Catálogo Integrado de Requisitos](index.md).
+
+---: | :--- | :---: | :---: | :--- | :--- |
 | **[RF37](index.md#rf37)** | Atualizar contrato de obra | Módulo 3 (OE3) | CAR-05 | Atualização de vigência, objeto e valores de contrato | Decomposição atômica de edição do RF33 (RN09, RN11). |
 | **[RF38](index.md#rf38)** | Consultar contratos de obra | Módulo 3 (OE3) | CAR-05 | Consulta operacional e financeira da listagem de contratos | Decomposição atômica de consulta do RF33 (RNF10). |
 | **[RF39](index.md#rf39)** | Atualizar centro de custo de obra | Módulo 3 (OE3) | CAR-06 | Atualização de parâmetros de centro de custo | Decomposição atômica de edição do RF34 (RN09, RN11). |
@@ -491,20 +516,20 @@ Navegue pelas abas abaixo para consultar o enquadramento dos RNFs:
 
     | RNF | Requisitos Funcionais Vinculados | Classificação no MVP | Justificativa da Decisão Técnica |
     | :---: | :--- | :--- | :--- |
-    | **[RNF01](index.md#rnf01)** | [RF04](index.md#rf04) | **Evolutivo** | O funcionamento offline completo foi postergado para reduzir a complexidade da primeira versão. |
-    | **[RNF02](index.md#rnf02)** | [RF01](index.md#rf01), [RF02](index.md#rf02), [RF03](index.md#rf03), [RF25](index.md#rf25), [RF26](index.md#rf26) | **Associado ao MVP** | Desempenho necessário às operações cadastrais selecionadas. |
+    | **[RNF01](index.md#rnf01)** | [RF04](index.md#rf04), [RF19](index.md#rf19), [RF22](index.md#rf22), [RF35](index.md#rf35) | **Evolutivo** | O funcionamento offline completo foi postergado para reduzir a complexidade da primeira versão. |
+    | **[RNF02](index.md#rnf02)** | [RF01](index.md#rf01), [RF02](index.md#rf02), [RF03](index.md#rf03), [RF20](index.md#rf20), [RF25](index.md#rf25), [RF26](index.md#rf26), [RF36](index.md#rf36) | **Associado ao MVP** | Desempenho necessário às operações cadastrais selecionadas; para RF20 e RF36, aplica-se com a entrega pós-MVP. |
     | **[RNF03](index.md#rnf03)** | Transversal | **Obrigatório para o MVP** | Proteção dos dados pessoais, cadastrais e financeiros (AES-256 e TLS 1.3). |
-    | **[RNF04](index.md#rnf04)** | [RF04](index.md#rf04), [RF19](index.md#rf19), [RF22](index.md#rf22) | **Associado ao MVP** | Usabilidade da coleta e consulta de apontamentos de campo. |
-    | **[RNF05](index.md#rnf05)** | [RF05](index.md#rf05), [RF06](index.md#rf06) | **Associado ao MVP** | Desempenho da prévia e da homologação financeira. |
-    | **[RNF06](index.md#rnf06)** | [RF05](index.md#rf05), [RF06](index.md#rf06), [RF08](index.md#rf08), [RF27](index.md#rf27), [RF29](index.md#rf29) | **Associado ao MVP** | Precisão dos cálculos e valores financeiros (tolerância zero a desvios). |
-    | **[RNF07](index.md#rnf07)** | [RF07](index.md#rf07), [RF22](index.md#rf22) | **Associado ao MVP** | Integridade e segurança dos comprovantes fiscais e anexos (MIME magic numbers). |
+    | **[RNF04](index.md#rnf04)** | [RF04](index.md#rf04), [RF19](index.md#rf19), [RF22](index.md#rf22), [RF32](index.md#rf32), [RF35](index.md#rf35) | **Associado ao MVP** | Usabilidade da coleta, consulta, deliberação e retificação de apontamentos de campo. |
+    | **[RNF05](index.md#rnf05)** | [RF05](index.md#rf05), [RF06](index.md#rf06), [RF21](index.md#rf21) | **Associado ao MVP** | Desempenho da prévia e da homologação financeira; para RF21, aplica-se ao reprocessamento após estorno, no pós-MVP. |
+    | **[RNF06](index.md#rnf06)** | [RF05](index.md#rf05), [RF06](index.md#rf06), [RF07](index.md#rf07), [RF08](index.md#rf08), [RF21](index.md#rf21), [RF27](index.md#rf27), [RF28](index.md#rf28), [RF29](index.md#rf29) | **Associado ao MVP** | Precisão dos cálculos e valores financeiros (tolerância zero a desvios). |
+    | **[RNF07](index.md#rnf07)** | [RF04](index.md#rf04), [RF07](index.md#rf07), [RF08](index.md#rf08), [RF22](index.md#rf22), [RF28](index.md#rf28), [RF29](index.md#rf29), [RF35](index.md#rf35) | **Associado ao MVP** | Integridade e segurança dos comprovantes fiscais e anexos (MIME magic numbers). |
     | **[RNF08](index.md#rnf08)** | [RF21](index.md#rf21) | **Evolutivo** | Acompanha o estorno financeiro, postergado para o pós-MVP. |
-    | **[RNF09](index.md#rnf09)** | [RF11](index.md#rf11), [RF12](index.md#rf12), [RF30](index.md#rf30), [RF31](index.md#rf31) | **Associado ao MVP** | No MVP, aplica-se ao desempenho das consultas do RF11. |
-    | **[RNF10](index.md#rnf10)** | [RF05](index.md#rf05), [RF06](index.md#rf06), [RF09](index.md#rf09), [RF10](index.md#rf10), [RF11](index.md#rf11) | **Obrigatório para o MVP** | Proteção de informações remuneratórias e sigilo financeiro. |
-    | **[RNF11](index.md#rnf11)** | [RF09](index.md#rf09) | **Associado ao MVP** | Integridade transacional ACID da apropriação de custos. |
+    | **[RNF09](index.md#rnf09)** | [RF10](index.md#rf10), [RF11](index.md#rf11), [RF12](index.md#rf12), [RF30](index.md#rf30), [RF31](index.md#rf31), [RF34](index.md#rf34), [RF38](index.md#rf38), [RF39](index.md#rf39), [RF40](index.md#rf40) | **Associado ao MVP** | No MVP, aplica-se ao desempenho das consultas de custos e contratos (RF10, RF11 e RF38) e da manutenção de centros de custo e tetos orçamentários (RF34, RF39 e RF40); RF12, RF30 e RF31 seguem no pós-MVP. |
+    | **[RNF10](index.md#rnf10)** | [RF05](index.md#rf05), [RF06](index.md#rf06), [RF09](index.md#rf09), [RF10](index.md#rf10), [RF11](index.md#rf11), [RF12](index.md#rf12), [RF30](index.md#rf30), [RF31](index.md#rf31), [RF33](index.md#rf33), [RF34](index.md#rf34), [RF37](index.md#rf37), [RF38](index.md#rf38), [RF39](index.md#rf39), [RF40](index.md#rf40) | **Obrigatório para o MVP** | Proteção de informações remuneratórias e sigilo financeiro, inclusive nos dados de contratos, centros de custo e tetos orçamentários. |
+    | **[RNF11](index.md#rnf11)** | [RF09](index.md#rf09), [RF33](index.md#rf33), [RF37](index.md#rf37) | **Associado ao MVP** | Integridade transacional ACID da apropriação de custos e do cadastro e atualização de contratos. |
     | **[RNF12](index.md#rnf12)** | [RF11](index.md#rf11), [RF12](index.md#rf12), [RF30](index.md#rf30), [RF31](index.md#rf31) | **Associado ao MVP** | No MVP, assegura a usabilidade do painel disponibilizado pelo RF11. |
-    | **[RNF13](index.md#rnf13)** | [RF13](index.md#rf13) | **Obrigatório para o MVP** | Controle da validade das sessões autenticadas (JWT com expiração). |
-    | **[RNF14](index.md#rnf14)** | [RF13](index.md#rf13), [RF14](index.md#rf14) e rotas protegidas | **Obrigatório para o MVP** | Aplicação estrita das permissões RBAC aos dados protegidos. |
+    | **[RNF13](index.md#rnf13)** | [RF13](index.md#rf13), [RF18](index.md#rf18) | **Obrigatório para o MVP** | Controle da validade das sessões autenticadas (JWT com expiração). |
+    | **[RNF14](index.md#rnf14)** | [RF13](index.md#rf13), [RF14](index.md#rf14), [RF17](index.md#rf17), [RF18](index.md#rf18), [RF23](index.md#rf23), [RF24](index.md#rf24) e rotas protegidas | **Obrigatório para o MVP** | Aplicação estrita das permissões RBAC aos dados protegidos. |
     | **[RNF15](index.md#rnf15)** | Operações de escrita | **Obrigatório para o MVP** | Integridade da gravação atômica dos eventos de auditoria. |
     | **[RNF16](index.md#rnf16)** | Transversal | **Obrigatório para o MVP** | Preservação dos registros probatórios por 5 anos (Art. 11 da CLT). |
     | **[RNF17](index.md#rnf17)** | Transversal | **Obrigatório para o MVP** | Backup diário automatizado com restauração verificada. |
@@ -552,7 +577,7 @@ A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra uma sessão in
 
 | Tópico Deliberado | Decisão Técnica Interna | Status Perante a Cliente | Evidência Rastreável |
 | :--- | :--- | :--- | :--- |
-| **Linha de corte do MVP** | Escopo consolidado em 27 RFs aprovado internamente. | **Pendente de validação** | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) e [Linha de Corte do MVP](#linha-de-corte-do-mvp). |
+| **Linha de corte do MVP** | Escopo aprovado internamente com ressalvas na Reunião 05 e consolidado posteriormente em 31 RFs (inclusão de RF32 a RF35 e dos decompostos RF37 a RF40). | **Pendente de validação** | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) e [Linha de Corte do MVP](#linha-de-corte-do-mvp). |
 | **Inclusão de indicadores (RF11)** | Incluir a filtragem de custos por obra no escopo prioritário do MVP. | **Pendente de validação** | [Ata 05, Decisão D1](../governanca/atas/reuniao-05.md#decisao-d1-rf11) e [Especificação do RF11](index.md#rf11). |
 | **Tratamento do estorno (RF21)** | Retirar o estorno automático do MVP e manter tratamento operacional assistido. | **Pendente de validação** | [Ata 05, Decisão D2](../governanca/atas/reuniao-05.md#decisao-d2-rf21) e [Especificação do RF21](index.md#rf21). |
 | **Postergação do modo offline (RNF01)** | Classificar a operação offline completa como evolutiva. | **Pendente de validação** | [Ata 05, Decisão D4](../governanca/atas/reuniao-05.md#decisao-d4-rnf01) e [Classificação dos RNFs](#tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp). |
@@ -589,3 +614,5 @@ A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra uma sessão in
 | `3.6` | 02/11/2026 | Harmonização da linha de corte do MVP (27 RFs no MVP / 75% e 9 no Pós-MVP / 25%) em sincronia com as 36 US do Backlog do Produto e explicitação dos RF37 a RF40 como desdobramentos atômicos. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `3.7` | 02/11/2026 | Reformulação metodológica centrada no processo avaliativo: reestruturação em abas interativas (Valor de Negócio, Esforço Técnico, Quadrantes e RNFs), remoção da tabela de resultados de 40 RFs em prol do catálogo interativo e eliminação de fórmulas matemáticas complexas de coordenadas cartesianas. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `3.8` | 03/11/2026 | Unificação de Priorização e Escopo do Produto: formalização explícita das métricas e siglas de cálculo (VB, CX, ES, LC, EC, IP) na linha de corte do MVP; integração das notas individuais e Histórias de Usuário diretamente nos cards interativos do Catálogo de Requisitos; atualização da navegação estrutural. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `3.9` | 10/11/2026 | Consolidação dos requisitos decompostos: inclusão de RF37 a RF40 na linha de corte (31 RFs no MVP / 77,5% e 9 no pós-MVP / 22,5%, 40 histórias US01 a US40); criação das histórias próprias US37 a US40 e restrição de US33 e US34 ao cadastro; ratificação das 8 h de RF33 e RF34 como estimativas restritas ao cadastro, com explicitação do esforço consolidado de contratos (16 h) e centros de custo (20 h); atualização da distribuição por valor, da calibração do esforço, da Matriz 4×4 e da distribuição modular. | Paulo Nery | — |
+| `3.10` | 10/11/2026 | Alinhamento da coluna de RFs vinculados da classificação dos RNFs com os cards do catálogo: inclusão de RF20 e RF36 (RNF02), RF32 e RF35 (RNF04), RF28 e RF35 (RNF07), RF34, RF39 e RF40 (RNF09), RF12, RF30, RF31, RF33, RF34 e RF37 a RF40 (RNF10), RF33 e RF37 (RNF11), RF18 (RNF13) e RF17, RF23 e RF24 (RNF14); inclusão de RF19, RF22 e RF35 (RNF01), RF21 (RNF05), RF07, RF21 e RF28 (RNF06), RF04, RF08 e RF29 (RNF07) e RF10 e RF38 (RNF09), após a reconciliação dos vínculos bidirecionais do catálogo; classificações dos RNFs mantidas; correção do atalho "Backlog & Linha de Corte", que apontava para a página de backlog removida. | Paulo Nery | — |
