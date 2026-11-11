@@ -37,8 +37,8 @@ Este documento consolida a **rastreabilidade vertical e horizontal** dos requisi
 -   :material-format-list-checks: **Requisitos Funcionais (RF)**
 
     ---
-    **40 Requisitos Funcionais**  
-    Rastreabilidade vertical bidirecional com regras e casos de teste.
+    **40 Requisitos Funcionais** (31 MVP; 9 pós-MVP)  
+    [Linha de corte e relação RF ↔ US](priorizacao.md#linha-de-corte-do-mvp).
 
 -   :material-shield-check-outline: **Requisitos Não Funcionais (RNF)**
 
@@ -138,3 +138,4 @@ Navegue pelas abas abaixo para consultar as correlações completas da solução
 | :---: | :---: | :--- | :--- | :--- |
 | `4.1` | 30/10/2026 | Desacoplamento da Pirâmide de Abstração e Matriz-Síntese em documento próprio de Rastreabilidade. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `4.2` | 02/11/2026 | Implementação da Pirâmide de Abstração Interativa nativa (com busca em tempo real, pintura de conexões RF → CAR → OE → OG, zoom automático e paleta de cores dos cards do catálogo), remoção do embed externo do Miro e organização da Matriz-Síntese em abas por Módulo/OE. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `4.3` | 11/11/2026 | Conferência da cobertura RF37–RF40 em CAR-05 e CAR-06, já completa nas duas visões; explicitação das 31 inclusões no MVP e 9 no pós-MVP, com referência à fonte de escopo. | Gustavo Bonifácio | — |
