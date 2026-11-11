@@ -77,8 +77,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-filter-tab-pane" data-filter-pane="mvp">
         <button class="req-filter-pill active" data-filter-type="mvp" data-filter="all">Todo o Escopo (91)</button>
-        <button class="req-filter-pill" data-filter-type="mvp" data-filter="mvp">Escopo MVP (88)</button>
-        <button class="req-filter-pill" data-filter-type="mvp" data-filter="pos-mvp">Evolutivo Pós-MVP (3)</button>
+        <button class="req-filter-pill" data-filter-type="mvp" data-filter="mvp">Escopo MVP (80 itens)</button>
+        <button class="req-filter-pill" data-filter-type="mvp" data-filter="pos-mvp">Evolutivo Pós-MVP (11 itens)</button>
       </div>
       <div class="req-filter-tab-pane" data-filter-pane="prioridade">
         <button class="req-filter-pill active" data-filter-type="quad" data-filter="all">Todas as Prioridades (91)</button>
@@ -2021,7 +2021,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf12" data-type="rf" data-rf="RF12" data-oe="oe3" data-car="car-06" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 us12 como **gestor operacional de obras ou administrador financeiro**, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir. rn13 rnf09 rnf10 rnf12" data-search-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 us12 como **gestor operacional de obras ou administrador financeiro**, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir. rn13 rnf09 rnf10 rnf12">
+<details class="req-card req-card-rf req-card-oe3" id="rf12" data-type="rf" data-rf="RF12" data-oe="oe3" data-car="car-06" data-mvp="pos-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 us12 como **gestor operacional de obras ou administrador financeiro**, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir. rn13 rnf09 rnf10 rnf12" data-search-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 us12 como **gestor operacional de obras ou administrador financeiro**, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir. rn13 rnf09 rnf10 rnf12">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -2543,7 +2543,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf15" data-type="rf" data-rf="RF15" data-oe="oe4" data-car="car-08" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_SISTEMA / ADMIN_FINANCEIRO" data-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 us15 como **administrador do sistema ou administrador financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. rn17 rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 us15 como **administrador do sistema ou administrador financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. rn17 rn18 rn19 rnf15 rnf16 rnf17">
+<details class="req-card req-card-rf req-card-oe4" id="rf15" data-type="rf" data-rf="RF15" data-oe="oe4" data-car="car-08" data-mvp="pos-mvp" data-quad="q4" data-role="ADMIN_SISTEMA / ADMIN_FINANCEIRO" data-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 us15 como **administrador do sistema ou administrador financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. rn17 rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 us15 como **administrador do sistema ou administrador financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. rn17 rn18 rn19 rnf15 rnf16 rnf17">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -2717,7 +2717,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf16" data-type="rf" data-rf="RF16" data-oe="oe4" data-car="car-08" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_SISTEMA" data-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 us16 como **administrador do sistema**, quero exportar um dossiê em pdf/csv com o histórico imutável das operações auditadas, para que a duoc comprove conformidade legal e trabalhista (clt art. 11). rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 us16 como **administrador do sistema**, quero exportar um dossiê em pdf/csv com o histórico imutável das operações auditadas, para que a duoc comprove conformidade legal e trabalhista (clt art. 11). rn18 rn19 rnf15 rnf16 rnf17">
+<details class="req-card req-card-rf req-card-oe4" id="rf16" data-type="rf" data-rf="RF16" data-oe="oe4" data-car="car-08" data-mvp="pos-mvp" data-quad="q4" data-role="ADMIN_SISTEMA" data-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 us16 como **administrador do sistema**, quero exportar um dossiê em pdf/csv com o histórico imutável das operações auditadas, para que a duoc comprove conformidade legal e trabalhista (clt art. 11). rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 us16 como **administrador do sistema**, quero exportar um dossiê em pdf/csv com o histórico imutável das operações auditadas, para que a duoc comprove conformidade legal e trabalhista (clt art. 11). rn18 rn19 rnf15 rnf16 rnf17">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -3413,7 +3413,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf20" data-type="rf" data-rf="RF20" data-oe="oe1" data-car="car-09" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 us20 como **administrador financeiro**, quero importar as presenças homologadas do *flit* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação. rn10 rnf02" data-search-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 us20 como **administrador financeiro**, quero importar as presenças homologadas do *flit* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação. rn10 rnf02">
+<details class="req-card req-card-rf req-card-oe1" id="rf20" data-type="rf" data-rf="RF20" data-oe="oe1" data-car="car-09" data-mvp="pos-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 us20 como **administrador financeiro**, quero importar as presenças homologadas do *flit* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação. rn10 rnf02" data-search-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 us20 como **administrador financeiro**, quero importar as presenças homologadas do *flit* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação. rn10 rnf02">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -3587,7 +3587,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf21" data-type="rf" data-rf="RF21" data-oe="oe2" data-car="car-03" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 us21 como **administrador financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original. rn08 rn17 rnf08" data-search-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 us21 como **administrador financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original. rn08 rn17 rnf08">
+<details class="req-card req-card-rf req-card-oe2" id="rf21" data-type="rf" data-rf="RF21" data-oe="oe2" data-car="car-03" data-mvp="pos-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 us21 como **administrador financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original. rn08 rn17 rnf08" data-search-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 us21 como **administrador financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original. rn08 rn17 rnf08">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -4109,7 +4109,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf24" data-type="rf" data-rf="RF24" data-oe="oe4" data-car="car-07" data-mvp="pós-mvp" data-quad="q3" data-role="ADMIN_SISTEMA" data-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 us24 como **administrador do sistema**, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema. rn21 rnf14" data-search-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 us24 como **administrador do sistema**, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema. rn21 rnf14">
+<details class="req-card req-card-rf req-card-oe4" id="rf24" data-type="rf" data-rf="RF24" data-oe="oe4" data-car="car-07" data-mvp="pos-mvp" data-quad="q3" data-role="ADMIN_SISTEMA" data-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 us24 como **administrador do sistema**, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema. rn21 rnf14" data-search-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 us24 como **administrador do sistema**, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema. rn21 rnf14">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q3"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Evolutivo</span></span>
@@ -5153,7 +5153,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf30" data-type="rf" data-rf="RF30" data-oe="oe3" data-car="car-05" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 us30 como **gestor operacional de obras ou administrador financeiro**, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras. rn28 rnf09 rnf10 rnf12" data-search-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 us30 como **gestor operacional de obras ou administrador financeiro**, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras. rn28 rnf09 rnf10 rnf12">
+<details class="req-card req-card-rf req-card-oe3" id="rf30" data-type="rf" data-rf="RF30" data-oe="oe3" data-car="car-05" data-mvp="pos-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 us30 como **gestor operacional de obras ou administrador financeiro**, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras. rn28 rnf09 rnf10 rnf12" data-search-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 us30 como **gestor operacional de obras ou administrador financeiro**, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras. rn28 rnf09 rnf10 rnf12">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -5327,7 +5327,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf31" data-type="rf" data-rf="RF31" data-oe="oe3" data-car="car-06" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS" data-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 us31 como **gestor operacional de obras**, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado. rn29 rnf09 rnf10 rnf12" data-search-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 us31 como **gestor operacional de obras**, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado. rn29 rnf09 rnf10 rnf12">
+<details class="req-card req-card-rf req-card-oe3" id="rf31" data-type="rf" data-rf="RF31" data-oe="oe3" data-car="car-06" data-mvp="pos-mvp" data-quad="q4" data-role="GESTOR_OBRAS" data-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 us31 como **gestor operacional de obras**, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado. rn29 rnf09 rnf10 rnf12" data-search-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 us31 como **gestor operacional de obras**, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado. rn29 rnf09 rnf10 rnf12">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -5732,7 +5732,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 
     <div class="req-expanded-desc">
       <div class="req-checklist-header">
-        <span class="req-checklist-title">História de Usuário (US33)</span>
+        <span class="req-checklist-title">Recorte da <a href="priorizacao/#mapeamento-us-rf">US33 · ver mapeamento RF↔US</a></span>
       </div>
       <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro ou Gestor Operacional de Obras</strong>, quero cadastrar, editar e consultar contratos de obras com vigência, valor global e retenções, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido.</p>
@@ -5906,7 +5906,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 
     <div class="req-expanded-desc">
       <div class="req-checklist-header">
-        <span class="req-checklist-title">História de Usuário (US34)</span>
+        <span class="req-checklist-title">Recorte da <a href="priorizacao/#mapeamento-us-rf">US34 · ver mapeamento RF↔US</a></span>
       </div>
       <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero cadastrar centros de custo e definir tetos orçamentários por categoria de despesa em cada contrato, para que o painel calcule a execução orçamentária e os desvios.</p>
@@ -6197,7 +6197,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf36" data-type="rf" data-rf="RF36" data-oe="oe1" data-car="car-10" data-mvp="pós-mvp" data-quad="q3" data-role="ADMIN_FINANCEIRO" data-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 us36 como **administrador financeiro**, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas csv e xlsx, para que eu faça a conciliação contábil externa sem redigitação.  rnf02" data-search-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 us36 como **administrador financeiro**, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas csv e xlsx, para que eu faça a conciliação contábil externa sem redigitação.  rnf02">
+<details class="req-card req-card-rf req-card-oe1" id="rf36" data-type="rf" data-rf="RF36" data-oe="oe1" data-car="car-10" data-mvp="pos-mvp" data-quad="q3" data-role="ADMIN_FINANCEIRO" data-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 us36 como **administrador financeiro**, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas csv e xlsx, para que eu faça a conciliação contábil externa sem redigitação.  rnf02" data-search-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 us36 como **administrador financeiro**, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas csv e xlsx, para que eu faça a conciliação contábil externa sem redigitação.  rnf02">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q3"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Evolutivo</span></span>
@@ -6428,7 +6428,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 
     <div class="req-expanded-desc">
       <div class="req-checklist-header">
-        <span class="req-checklist-title">História de Usuário (US33)</span>
+        <span class="req-checklist-title">Recorte da <a href="priorizacao/#mapeamento-us-rf">US33 · ver mapeamento RF↔US</a></span>
       </div>
       <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero atualizar aditivos, prazos e valores de contratos de obras vigentes, para que as apropriações reflitam as repactuações contratuais.</p>
@@ -6602,7 +6602,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 
     <div class="req-expanded-desc">
       <div class="req-checklist-header">
-        <span class="req-checklist-title">História de Usuário (US33)</span>
+        <span class="req-checklist-title">Recorte da <a href="priorizacao/#mapeamento-us-rf">US33 · ver mapeamento RF↔US</a></span>
       </div>
       <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero consultar a relação e o detalhamento de contratos ativos e concluídos, para que eu visualize rapidamente as condições pactuadas de cada obra.</p>
@@ -6776,7 +6776,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 
     <div class="req-expanded-desc">
       <div class="req-checklist-header">
-        <span class="req-checklist-title">História de Usuário (US34)</span>
+        <span class="req-checklist-title">Recorte da <a href="priorizacao/#mapeamento-us-rf">US34 · ver mapeamento RF↔US</a></span>
       </div>
       <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero atualizar nomenclaturas e parâmetros de centros de custo ativos, para que a estrutura de custos permaneça alinhada à evolução do canteiro sem quebrar vínculos históricos.</p>
@@ -6950,7 +6950,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 
     <div class="req-expanded-desc">
       <div class="req-checklist-header">
-        <span class="req-checklist-title">História de Usuário (US34)</span>
+        <span class="req-checklist-title">Recorte da <a href="priorizacao/#mapeamento-us-rf">US34 · ver mapeamento RF↔US</a></span>
       </div>
       <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero estipular tetos monetários orçados por categoria de despesa em cada contrato, para que o sistema monitore limites e acione alertas preventivos de estouro orçamentário.</p>
@@ -10130,6 +10130,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
+| `4.4` | 11/11/2026 | Correção das contagens dos filtros (80 itens no MVP, 11 pós-MVP); padronização do atributo de escopo dos 9 RFs evolutivos e links do mapeamento 1:N US33/US34 nos cards RF33, RF34 e RF37–RF40. | Gustavo Bonifácio | — |
 | `4.3` | 02/11/2026 | **Revisão Cruzada & FLIT:** ferramenta de presença padronizada como FLIT (anteriormente registrada como Shifton) em RF20, CAR-09, critérios DoR/DoD e catálogo; refinamento dos perfis dos atores RBAC e inclusão de nota de alinhamento sociotécnico de Maria Beatryz. | Gustavo Bonifácio e Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `4.2` | 02/11/2026 | **Padronização Expandida & Links Bidirecionais:** migração das Regras de Negócio (cards vermelhos) e Requisitos Não Funcionais (cards azuis) para a arquitetura expansível padronizada dos RFs; estabelecimento da linkagem bidirecional recíproca entre Características de Produto (CAR-01 a CAR-10) e Requisitos Funcionais; saneamento de rotas e âncoras relativas do MkDocs. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `4.1` | 30/10/2026 | **Desacoplamento e Interconexão Bidirecional Total:** separação da Pirâmide de Abstração e Matriz-Síntese no documento exclusivo `rastreabilidade.md`; remoção da seção preliminar de Casos de Uso do Catálogo; reestruturação completa das 31 Regras de Negócio e 20 Requisitos Não Funcionais em cards visuais interativos com links bidirecionais diretos para os Requisitos Funcionais executores; integração com deck de navegação rápida. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
