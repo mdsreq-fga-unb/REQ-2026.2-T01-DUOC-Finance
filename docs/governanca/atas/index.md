@@ -25,7 +25,7 @@ Todas as atas seguem a mesma estrutura, de modo a garantir a rastreabilidade aud
 | **Reunião 02** | 07/09/2026 | Alinhamento Metodológico e ESW (interna) | Equipe Cascata Ágil | Diagnóstico sociotécnico, integração com Shifton, modelo RBAC, Framework RAD, TypeScript/Supabase e Git Flow | [Acessar Ata](reuniao-02.md) |
 | **Reunião 03** | 07/09/2026 | Apresentação da Unidade 1 — Ponto de Controle 1 (interna, gravada) | Equipe Cascata Ágil | Apresentação da baseline homologada: contexto, metodologia RAD, arquitetura, processo de ER, intervenção social, governança e RNFs (URPS+) | [Acessar Ata](reuniao-03.md) |
 | **Reunião 04** | 17/09/2026 | Retrospectiva da Unidade 1 e Planejamento da Unidade 2 (interna) | Equipe Cascata Ágil | Distribuição das correções da Unidade 1, ajuste do cronograma ao RAD, divisão das características para os requisitos, prazos (22/09, 24/09 e 29/09) e validação com a cliente | [Acessar Ata](reuniao-04.md) |
-| **Reunião 05** | 24/09/2026 | Priorização de Requisitos, Matriz 4x4 e Alinhamento do MVP (interna) | Equipe Cascata Ágil | Revisão dos 21 RFs e RNFs, MoSCoW e matriz 4x4, inclusão do RF11, rebaixamento do RF21, exclusão do RF16, postergação do RNF01, aprovação do MVP com ressalvas e Vercel (`finance.doc.br`) | [Acessar Ata](reuniao-05.md) |
+| **Reunião 05** | 24/09/2026 | Priorização de Requisitos, Matriz 4x4 e Alinhamento do MVP (com a cliente) | Equipe Cascata Ágil e Maria Beatryz | Validação da priorização e aprovação do MVP com ressalvas; inclusão do RF11, rebaixamento do RF21, exclusão do RF16, postergação do RNF01 e definição do subdomínio na Vercel (`finance.doc.br`) | [Acessar Ata](reuniao-05.md) |
 | **Reunião 06** | 02/10/2026 | Validação do Protótipo no Figma — Design do Usuário do Incremento 1 (com a cliente, presencial) | Eric Araújo e Maria Beatryz | Telas de Colaboradores, Visão Geral, Análise de Custos e Perfis e Permissões aprovadas sem alterações; frontend navegável como próximo passo | [Acessar Ata](reuniao-06.md) |
 
 ---
@@ -57,7 +57,7 @@ Todas as atas seguem a mesma estrutura, de modo a garantir a rastreabilidade aud
 -   :material-format-list-numbered: **[Reunião 05 — Priorização de Requisitos, Matriz 4x4 e MVP (24/09/2026)](reuniao-05.md)**
 
     ---
-    Sessão de alinhamento interno da equipe para verificação dos 21 RFs e RNFs. Aplicação do MoSCoW e matriz 4x4 (7 requisitos essenciais), inclusão do RF11 (indicadores de custos), rebaixamento do RF21 (estorno), exclusão do RF16, postergação do RNF01 (modo offline), aprovação do MVP com ressalvas e definição do subdomínio na Vercel (`finance.doc.br`).
+    Sessão com a equipe e a cliente para verificação dos 21 RFs e RNFs. Aplicação do MoSCoW e matriz 4x4 (7 requisitos essenciais), validação da priorização pela cliente, inclusão do RF11 (indicadores de custos), rebaixamento do RF21 (estorno), exclusão do RF16, postergação do RNF01 (modo offline), aprovação do MVP com ressalvas e definição do subdomínio na Vercel (`finance.doc.br`).
 
 -   :material-palette-outline: **[Reunião 06 — Validação do Protótipo no Figma (02/10/2026)](reuniao-06.md)**
 
