@@ -83,12 +83,12 @@ O cronograma do DUOC Finance é um **artefato vivo** sujeito a refinamento cont�
 
 - **Calendário acadêmico:** Plano de Ensino assinado de Requisitos de Software (REQ), turma 01, semestre 2026.2, versão de 10/08/2026, especialmente seções 3, 9.1 e 11. Eventuais atualizações posteriores publicadas pelo professor prevalecem sobre o calendário aqui reproduzido.
 - **Registro de acontecimentos efetivos:** [Atas de Reunião](../governanca/atas/index.md). Reuniões internas não são descritas como validações com a cliente. Compromissos previstos sem ata/evidência permanecem classificados como planejados ou pendentes de confirmação.
-- **Escopo atual de requisitos:** [Capítulo 8 — Especificação](../requisitos/index.md) (**40 RFs e 20 RNFs**) e [Capítulo 8 — Priorização e MVP](../requisitos/priorizacao.md). Quantitativos históricos de atas não são reescritos retroativamente.
+- **Escopo atual de requisitos:** [Capítulo 8 — Especificação](../requisitos/index.md) (**40 RFs e 20 RNFs**) e [Capítulo 8 — Priorização e MVP](../requisitos/priorizacao.md#linha-de-corte-do-mvp), que mantém a correspondência atual entre RFs e histórias de usuário. Quantitativos históricos de atas não são reescritos retroativamente.
 - **Marco de referência desta revisão:** 09/11/2026; marcos fixados antes dessa data foram marcados como concluídos. Status futuros e entregas efetivamente concluídas devem ser conferidos no [GitHub Projects](https://github.com/orgs/mdsreq-fga-unb/projects/119/) antes da publicação.
 
 ### Método de Atualização dos Requisitos no RAD
 
-O catálogo de requisitos (40 RFs e 20 RNFs) não é um artefato congelado: seguindo o modelo **RAD**, ele evolui junto com os incrementos, em três pontos de revisão por ciclo, cada um ancorado em uma fase do RAD:
+O [catálogo de requisitos](../requisitos/index.md) não é um artefato congelado: seguindo o modelo **RAD**, ele evolui junto com os incrementos, em três pontos de revisão por ciclo, cada um ancorado em uma fase do RAD:
 
 1. **Início do incremento: fase de Planejamento (*Plan*).** A equipe revisita o catálogo URPS+ e o backlog, confirma quais requisitos entram no incremento (por meio da priorização pela Matriz 4×4) e registra as inclusões, alterações e exclusões. O resultado é o *baseline* de requisitos do incremento, que alimenta o DoR.
 2. **Após cada ciclo de validação: fase de *User Design*.** A cada sessão de validação sociotécnica com a cliente (ou validação assíncrona, quando acionada a folga de indisponibilidade), os requisitos afetados são revisados e validados. Novos requisitos, ajustes de regra e rejeições registrados em ata retornam ao catálogo e ao backlog antes de seguir para a construção.
@@ -102,3 +102,4 @@ Toda alteração é registrada no GitHub Projects e na ata correspondente, e o c
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 10/11/2026 | Criação do capítulo a partir da separação do antigo "Cronograma e Planejamento de Entregas": racional metodológico, folgas técnicas, governança e fontes; atualização do catálogo para 40 RFs e 20 RNFs e inclusão do método de atualização de requisitos no RAD com diagrama. | Eric Araújo | — |
+| `1.1` | 11/11/2026 | Revisão da referência à linha de corte canônica e eliminação da repetição de quantitativos na seção metodológica, preservando a natureza histórica dos marcos. | Gustavo Bonifácio | — |
