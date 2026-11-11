@@ -393,7 +393,7 @@ Para assegurar total transparência e padronização com a Seção 10.2 do Templ
 
 | Indicador | Sigla | Escala | Descrição e Origem Metodológica |
 | :--- | :---: | :---: | :--- |
-| **Valor de Negócio** | **VB** | 1 a 4 | Atribuído com a cliente parceira Maria Beatryz na [Reunião 05](../governanca/atas/reuniao-05.md), segundo a [Rubrica de Julgamento de Negócio](#rubrica-de-julgamento-do-valor-de-negocio) (D1 a D4). |
+| **Valor de Negócio** | **VB** | 1 a 4 | Validado com a cliente na [Reunião 05](../governanca/atas/reuniao-05.md), segundo a [Rubrica de Julgamento de Negócio](#rubrica-de-julgamento-do-valor-de-negocio) (D1 a D4); esforço técnico estimado pela equipe. |
 | **Complexidade Técnica** | **CX** | 1 a 4 | Avaliação estrutural de arquitetura, acoplamento e regras de negócio conforme a [Escala de Complexidade](#complexidade-tecnica). |
 | **Esforço de Implementação** | **ES** | 1 a 4 | Nota derivada das horas estimadas de codificação conforme a [Escala de Esforço de Implementação](#esforco-de-implementacao-tempo-em-horas). |
 | **Lacuna de Capacidade** | **LC** | 1 a 4 | Avaliação de domínio técnico e familiaridade da equipe com a stack (React SPA, Vite, NestJS, Supabase/PostgreSQL) conforme a [Escala de Lacuna](#lacuna-de-capacidade-da-equipe). |
@@ -546,18 +546,18 @@ Navegue pelas abas abaixo para consultar o enquadramento dos RNFs:
 <a id="8-12-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
 <a id="107-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
 <a id="evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
-## Registro da Priorização Interna e Deliberações da Equipe
+## Registro da Priorização e Validação com a Cliente
 
-A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra uma sessão interna da equipe realizada em 24/09/2026 para revisar requisitos, calibrar a Matriz 4 × 4 e propor o escopo do MVP:
+A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra a sessão com a equipe e a cliente realizada em 24/09/2026. A cliente validou a priorização apresentada e aprovou com ressalvas o escopo do MVP. A composição atual da linha de corte, consolidada posteriormente em 27 RFs, também foi aprovada pela cliente, conforme confirmação da equipe; 
 
-| Tópico Deliberado | Decisão Técnica Interna | Status Perante a Cliente | Evidência Rastreável |
+| Tópico Deliberado | Decisão / Escopo Registrado | Status Perante a Cliente | Evidência Rastreável |
 | :--- | :--- | :--- | :--- |
-| **Linha de corte do MVP** | Escopo consolidado em 27 RFs aprovado internamente. | **Pendente de validação** | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) e [Linha de Corte do MVP](#linha-de-corte-do-mvp). |
-| **Inclusão de indicadores (RF11)** | Incluir a filtragem de custos por obra no escopo prioritário do MVP. | **Pendente de validação** | [Ata 05, Decisão D1](../governanca/atas/reuniao-05.md#decisao-d1-rf11) e [Especificação do RF11](index.md#rf11). |
-| **Tratamento do estorno (RF21)** | Retirar o estorno automático do MVP e manter tratamento operacional assistido. | **Pendente de validação** | [Ata 05, Decisão D2](../governanca/atas/reuniao-05.md#decisao-d2-rf21) e [Especificação do RF21](index.md#rf21). |
-| **Postergação do modo offline (RNF01)** | Classificar a operação offline completa como evolutiva. | **Pendente de validação** | [Ata 05, Decisão D4](../governanca/atas/reuniao-05.md#decisao-d4-rnf01) e [Classificação dos RNFs](#tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp). |
-| **Exportação de auditoria (RF16)** | Manter relatórios avançados de auditoria fora do escopo inicial do MVP. | **Pendente de validação** | [Ata 05, Decisão D3](../governanca/atas/reuniao-05.md#decisao-d3-rf16) e [Especificação do RF16](index.md#rf16). |
-| **Segurança e infraestrutura** | Registrar como mandatórios no MVP os requisitos de login, RBAC e integridade. | **Pendente de validação** | [Ata 05, Decisão D6](../governanca/atas/reuniao-05.md#decisao-d6-seguranca-infraestrutura) e [Classificação dos RNFs](#tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp). |
+| **Linha de corte do MVP** | Priorização apresentada na Reunião 05; a composição atual foi consolidada posteriormente em 27 RFs. | **Validada com a cliente**; aprovação posterior da composição atual confirmada pela equipe. | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) e [Linha de Corte do MVP](#linha-de-corte-do-mvp). |
+| **Inclusão de indicadores (RF11)** | Incluir a filtragem de custos por obra no escopo prioritário do MVP. | **Validada com a cliente na Reunião 05** | [Ata 05, Decisão D1](../governanca/atas/reuniao-05.md#decisao-d1-rf11) e [Especificação do RF11](index.md#rf11). |
+| **Tratamento do estorno (RF21)** | Retirar o estorno automático do MVP e manter tratamento operacional assistido. | **Validado com a cliente na Reunião 05** | [Ata 05, Decisão D2](../governanca/atas/reuniao-05.md#decisao-d2-rf21) e [Especificação do RF21](index.md#rf21). |
+| **Postergação do modo offline (RNF01)** | Classificar a operação offline completa como evolutiva. | **Validada com a cliente na Reunião 05** | [Ata 05, Decisão D4](../governanca/atas/reuniao-05.md#decisao-d4-rnf01) e [Classificação dos RNFs](#tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp). |
+| **Exportação de auditoria (RF16)** | Manter relatórios avançados de auditoria fora do escopo inicial do MVP. | **Validada com a cliente na Reunião 05** | [Ata 05, Decisão D3](../governanca/atas/reuniao-05.md#decisao-d3-rf16) e [Especificação do RF16](index.md#rf16). |
+| **Segurança e infraestrutura** | Registrar como mandatórios no MVP os requisitos de login, RBAC e integridade. | **Incluídas na validação do MVP na Reunião 05** | [Ata 05, Decisão D6](../governanca/atas/reuniao-05.md#decisao-d6-seguranca-infraestrutura) e [Classificação dos RNFs](#tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp). |
 
 ---
 
@@ -589,3 +589,4 @@ A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra uma sessão in
 | `3.6` | 02/11/2026 | Harmonização da linha de corte do MVP (27 RFs no MVP / 75% e 9 no Pós-MVP / 25%) em sincronia com as 36 US do Backlog do Produto e explicitação dos RF37 a RF40 como desdobramentos atômicos. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `3.7` | 02/11/2026 | Reformulação metodológica centrada no processo avaliativo: reestruturação em abas interativas (Valor de Negócio, Esforço Técnico, Quadrantes e RNFs), remoção da tabela de resultados de 40 RFs em prol do catálogo interativo e eliminação de fórmulas matemáticas complexas de coordenadas cartesianas. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `3.8` | 03/11/2026 | Unificação de Priorização e Escopo do Produto: formalização explícita das métricas e siglas de cálculo (VB, CX, ES, LC, EC, IP) na linha de corte do MVP; integração das notas individuais e Histórias de Usuário diretamente nos cards interativos do Catálogo de Requisitos; atualização da navegação estrutural. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `3.9` | 11/11/2026 | Correção do registro de validação: confirmação da participação da cliente na Reunião 05 e de sua validação da priorização; distinção entre o escopo então apresentado e a composição atual do MVP. | Giovana Ferreira | — |
