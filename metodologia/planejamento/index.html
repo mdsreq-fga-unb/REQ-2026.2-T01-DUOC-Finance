@@ -1,0 +1,2146 @@
+<!DOCTYPE html><html lang="pt" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação de Requisitos de Software — DUOC Arquitetura e Engenharia">
+      
+      
+        <meta name="author" content="Equipe Cascata Ágil">
+      
+      
+      
+        <link rel="prev" href="../engenharia-requisitos/">
+      
+      
+        <link rel="next" href="../cronograma/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Planejamento - Cascata Ágil</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#planejamento" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Cascata Ágil" class="md-header__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cascata Ágil
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Planejamento
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Alternar para modo claro" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Alternar para modo escuro" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../visao-produto/cenario-atual/" class="md-tabs__link">
+          
+  
+  
+  Visão do Produto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../estrategias-esw/" class="md-tabs__link">
+          
+  
+  
+  Metodologia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../requisitos/" class="md-tabs__link">
+          
+  
+  
+  Requisitos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../requisitos/priorizacao/" class="md-tabs__link">
+          
+  
+  
+  Escopo do MVP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../entregas/" class="md-tabs__link">
+          
+  
+  
+  Entregas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../governanca/atas/" class="md-tabs__link">
+          
+  
+  
+  Governança
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cascata Ágil" class="md-nav__button md-logo" aria-label="Cascata Ágil" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Cascata Ágil
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão do Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Visão do Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao-produto/cenario-atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cenário Atual &amp; Diagnóstico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao-produto/solucao-proposta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solução Proposta, OEs &amp; CARs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao-produto/intervencao-social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intervenção Social &amp; Cultural
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metodologia
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Metodologia
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estrategias-esw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estratégias de Engenharia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engenharia-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processo de Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planejamento
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planejamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#racional-metodologico-do-cronograma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Racional Metodológico do Cronograma
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Racional Metodológico do Cronograma">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#desacoplamento-entre-periodo-academico-e-ciclos-do-rad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desacoplamento entre Período Acadêmico e Ciclos do RAD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-1-macrovisao-do-desacoplamento-entre-marcos-academicos-e-ciclos-do-rad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama 1: Macrovisão do Desacoplamento entre Marcos Acadêmicos e Ciclos do RAD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-2-microvisao-do-ciclo-ui-first-e-portoes-de-qualidade-dor-e-dod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama 2: Microvisão do Ciclo UI-First e Portões de Qualidade (DoR e DoD)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestao-de-folgas-tecnicas-e-riscos-operacionais-buffers-explicitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestão de Folgas Técnicas e Riscos Operacionais (Buffers Explícitos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dinamica-de-atualizacao-e-governanca-do-cronograma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dinâmica de Atualização e Governança do Cronograma
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontes-e-criterios-de-atualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fontes e Critérios de Atualização
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fontes e Critérios de Atualização">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-de-atualizacao-dos-requisitos-no-rad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Método de Atualização dos Requisitos no RAD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cronograma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interacao-cliente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interação com o Cliente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Requisitos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo Integrado de Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/rastreabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rastreabilidade &amp; Matrizes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/governanca-conformidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conformidade Jurídica &amp; Governança
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Escopo do MVP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Escopo do MVP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/priorizacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Priorização &amp; Escopo do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mvp/dor-dod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Critérios de Aceitação (DoR &amp; DoD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação por Pares &amp; Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entregas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entregas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painel Geral de Entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 1 (Ponto de Controle 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 2 (Ponto de Controle 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 3 (Ponto de Controle 3)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entrega-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrega 4 (Ponto de Controle 4)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governança
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Governança
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atas de Reuniões
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atas de Reuniões
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painel Geral de Atas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/reuniao-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 01 (05/09) — Elicitação e MVP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/reuniao-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 02 (07/09) — Alinhamento Metodológico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/reuniao-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 03 (07/09) — Apresentação da Unidade 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/reuniao-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 04 (17/09) — Planejamento da Unidade 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/reuniao-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 05 (24/09) — Priorização e Valor de Negócio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/reuniao-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 06 (02/10) — Validação do Protótipo no Figma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/licoes-aprendidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lições Aprendidas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/referencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referências Bibliográficas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#racional-metodologico-do-cronograma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Racional Metodológico do Cronograma
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Racional Metodológico do Cronograma">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#desacoplamento-entre-periodo-academico-e-ciclos-do-rad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desacoplamento entre Período Acadêmico e Ciclos do RAD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-1-macrovisao-do-desacoplamento-entre-marcos-academicos-e-ciclos-do-rad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama 1: Macrovisão do Desacoplamento entre Marcos Acadêmicos e Ciclos do RAD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-2-microvisao-do-ciclo-ui-first-e-portoes-de-qualidade-dor-e-dod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama 2: Microvisão do Ciclo UI-First e Portões de Qualidade (DoR e DoD)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestao-de-folgas-tecnicas-e-riscos-operacionais-buffers-explicitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestão de Folgas Técnicas e Riscos Operacionais (Buffers Explícitos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dinamica-de-atualizacao-e-governanca-do-cronograma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dinâmica de Atualização e Governança do Cronograma
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontes-e-criterios-de-atualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fontes e Critérios de Atualização
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fontes e Critérios de Atualização">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-de-atualizacao-dos-requisitos-no-rad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Método de Atualização dos Requisitos no RAD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegação">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Início
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../estrategias-esw/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Metodologia
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="planejamento">Planejamento<a class="headerlink" href="#planejamento" title="Permanent link">¶</a></h1>
+<p>Este capítulo reúne o racional metodológico, as folgas técnicas, a governança e as fontes de atualização do planejamento do <strong>DUOC Finance</strong>. A execução semana a semana e o calendário estão no capítulo <a href="../cronograma/">Cronograma</a>.</p>
+<hr>
+<h2 id="racional-metodologico-do-cronograma">Racional Metodológico do Cronograma<a class="headerlink" href="#racional-metodologico-do-cronograma" title="Permanent link">¶</a></h2>
+<h3 id="desacoplamento-entre-periodo-academico-e-ciclos-do-rad">Desacoplamento entre Período Acadêmico e Ciclos do RAD<a class="headerlink" href="#desacoplamento-entre-periodo-academico-e-ciclos-do-rad" title="Permanent link">¶</a></h3>
+<p>Na Engenharia de Requisitos moderna e no modelo <strong>RAD (Rapid Application Development)</strong>, as funcionalidades e regras de negócio do sistema não são impostas prematuramente em cascata, mas emergem e refinam-se através de ciclos iterativos de elicitação, modelagem conceitual, prototipação participativa, construção rápida e validação sociotécnica contínua.</p>
+<p>As quatro Unidades letivas da disciplina de Engenharia de Requisitos (Unidades 1, 2, 3 e 4) atuam como <strong>marcos avaliativos externos e restrições de calendário (Pontos de Controle PC1 a PC4)</strong>. O produto DUOC Finance é desenvolvido em <strong>Ciclos RAD Contínuos e Incrementos de Produto</strong>, nos quais cada incremento passa por:</p>
+<div class="admonition info">
+<p class="admonition-title">Datas oficiais dos Pontos de Controle — Plano de Ensino REQ 2026.2, Turma 01</p>
+<p>O Plano de Ensino assinado (seção 11, versão de 10/08/2026) apresenta <strong>PC1 em 08 e 10/09; PC2 em 13 e 15/10; PC3 em 17 e 19/11; e PC4 em 01 e 03/12</strong>. Conforme a seção 9.1 do Plano, o conteúdo no GitHub Pages precisa estar finalizado <strong>até o início da aula (08h) do primeiro dia de apresentações</strong>: respectivamente, <strong>08/09, 13/10, 17/11 e 01/12/2026</strong>. O segundo dia é continuação das apresentações, <strong>não uma extensão do prazo de publicação</strong>. O calendário pode ser alterado por comunicação posterior do docente; até confirmação de eventual retificação, este capítulo segue o Plano de Ensino assinado.</p>
+<p><strong>Datas das unidades acadêmicas não se confundem com os ciclos RAD:</strong> as atividades acadêmicas da Unidade 4 prosseguem até 10/12, embora o corte de entrega do PC4 seja 01/12. Acompanhamento de tarefas, implementação e validações com a cliente mantêm seu próprio calendário e devem ter o estado de execução confirmado no <a href="https://github.com/orgs/mdsreq-fga-unb/projects/119/">GitHub Projects</a> e nas atas.</p>
+</div>
+<ol>
+<li><strong>Planejamento do Incremento:</strong> Delimitação de escopo, seleção de Histórias de Usuário e alinhamento de restrições;</li>
+<li><strong>Design do Usuário e Prototipagem Evolutiva no Frontend (UI-First):</strong> Estabelecimento da identidade visual, tokens e wireframes estruturais essenciais no Figma como guia; construção e estabelecimento dos designs de telas, formulários e componentes diretamente no Frontend (React SPA / Tailwind CSS) operando com dados mockados; e sessões síncronas de validação sociotécnica invertida com Maria Beatryz para homologação de IHC e atendimento formal ao DoR antes de qualquer esforço de infraestrutura de backend ou banco de dados;</li>
+<li><strong>Construção Rápida da Lógica e Persistência:</strong> Uma vez estabilizados e validados os designs de interface no Frontend, implementação da <strong>lógica de negócio por trás</strong> (algoritmos do motor financeiro, regras de apuração de diárias, validações contratuais, DDL/migrations no Supabase/PostgreSQL e endpoints de API), acoplando a interface validada aos serviços definitivos com cobertura de testes unitários;</li>
+<li><strong>Verificação e Demonstração:</strong> Deploy contínuo em ambiente de <em>Staging</em> na Vercel, inspeções estáticas (Fagan) e demonstrações funcionais com a cliente;</li>
+<li><strong>Refinamento do Incremento Seguinte:</strong> Coleta estruturada de feedbacks, identificação de atritos de IHC e repriorização contínua do backlog;</li>
+<li><strong>Estabilização e Cutover ao Final:</strong> <em>Code Freeze</em>, suíte de testes de regressão, Testes de Aceitação de Usuário (UAT) executados com antecedência, <strong>janela dedicada para correção de defeitos pós-UAT</strong>, assinatura do Termo de Aceite Formal, transição operacional com publicação do Manual do Usuário e capacitação.</li>
+</ol>
+<h3 id="diagrama-1-macrovisao-do-desacoplamento-entre-marcos-academicos-e-ciclos-do-rad">Diagrama 1: Macrovisão do Desacoplamento entre Marcos Acadêmicos e Ciclos do RAD<a class="headerlink" href="#diagrama-1-macrovisao-do-desacoplamento-entre-marcos-academicos-e-ciclos-do-rad" title="Permanent link">¶</a></h3>
+<p>O diagrama a seguir sintetiza visualmente o desacoplamento: as quatro Unidades acadêmicas e seus Pontos de Controle (PC1 a PC4) atuam na camada superior como marcos avaliativos externos fixos. O desenvolvimento do DUOC Finance transcorre na camada inferior em Ciclos RAD e Incrementos autônomos de engenharia de software:</p>
+<div class="cronograma-diagram-box">
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/images/cronograma/diagrama_macrovisao_rad_light.png#only-light" data-title="Diagrama 1: Macrovisão do Desacoplamento entre Marcos Acadêmicos e Ciclos do RAD" data-desc-position="bottom"><img alt="Diagrama 1: Macrovisão do Desacoplamento entre Marcos Acadêmicos e Ciclos do RAD" class="img-light-mode" src="../../assets/images/cronograma/diagrama_macrovisao_rad_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/images/cronograma/diagrama_macrovisao_rad_dark.png#only-dark" data-title="Diagrama 1: Macrovisão do Desacoplamento entre Marcos Acadêmicos e Ciclos do RAD" data-desc-position="bottom"><img alt="Diagrama 1: Macrovisão do Desacoplamento entre Marcos Acadêmicos e Ciclos do RAD" class="img-dark-mode" src="../../assets/images/cronograma/diagrama_macrovisao_rad_dark.png#only-dark"></a></p>
+<div class="cronograma-diagram-caption">
+  <span><strong>Figura 1:</strong> Macrovisão do Desacoplamento entre Marcos Acadêmicos e Ciclos RAD (Clique na imagem para ampliar em tela cheia).</span>
+</div>
+</div>
+<h3 id="diagrama-2-microvisao-do-ciclo-ui-first-e-portoes-de-qualidade-dor-e-dod">Diagrama 2: Microvisão do Ciclo UI-First e Portões de Qualidade (DoR e DoD)<a class="headerlink" href="#diagrama-2-microvisao-do-ciclo-ui-first-e-portoes-de-qualidade-dor-e-dod" title="Permanent link">¶</a></h3>
+<p>O diagrama a seguir detalha a dinâmica interna de cada Incremento RAD: o design de interface é estabelecido com base no Figma e prototipado diretamente no Frontend com dados mockados; uma vez validado sociotecnicamente pela cliente e atendido o portão DoR, constrói-se a lógica de negócio por trás e a persistência:</p>
+<div class="cronograma-diagram-box">
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/images/cronograma/diagrama_microvisao_dor_dod_light.png#only-light" data-title="Diagrama 2: Microvisão do Ciclo UI-First e Portões de Qualidade (DoR e DoD)" data-desc-position="bottom"><img alt="Diagrama 2: Microvisão do Ciclo UI-First e Portões de Qualidade (DoR e DoD)" class="img-light-mode" src="../../assets/images/cronograma/diagrama_microvisao_dor_dod_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/images/cronograma/diagrama_microvisao_dor_dod_dark.png#only-dark" data-title="Diagrama 2: Microvisão do Ciclo UI-First e Portões de Qualidade (DoR e DoD)" data-desc-position="bottom"><img alt="Diagrama 2: Microvisão do Ciclo UI-First e Portões de Qualidade (DoR e DoD)" class="img-dark-mode" src="../../assets/images/cronograma/diagrama_microvisao_dor_dod_dark.png#only-dark"></a></p>
+<div class="cronograma-diagram-caption">
+  <span><strong>Figura 2:</strong> Ciclo de Prototipagem UI-First e Portões DoR / DoD (Clique na imagem para ampliar em tela cheia).</span>
+</div>
+</div>
+<hr>
+<h2 id="gestao-de-folgas-tecnicas-e-riscos-operacionais-buffers-explicitos">Gestão de Folgas Técnicas e Riscos Operacionais (Buffers Explícitos)<a class="headerlink" href="#gestao-de-folgas-tecnicas-e-riscos-operacionais-buffers-explicitos" title="Permanent link">¶</a></h2>
+<p>Para mitigar incertezas inerentes à engenharia de software e garantir estabilidade nas entregas acadêmicas e operacionais, o cronograma incorpora quatro categorias de folga (<em>buffers</em> de contingência). Após o replanejamento de 10/11/2026, as folgas foram reajustadas à realidade do Incremento 1, que se estendeu até a Semana 10:</p>
+<ol>
+<li><strong>Folga para Mudanças de Requisitos e Regras Financeiras Complexas:</strong> A apuração de diárias de campo, adiantamentos e fechamento de obras envolve regras matemáticas sensíveis. A construção do motor financeiro (CAR-03) ocupa a Semana 12 (20 a 24/11) e conta com uma folga técnica de <strong>1 dia útil (24/11)</strong> para validação de discrepâncias aritméticas em relação às planilhas originais da DUOC. A folga original de 3 dias úteis foi absorvida pelo atraso do Incremento 1 e este é o principal risco do cronograma vigente.</li>
+<li><strong>Folga para Indisponibilidade da Cliente:</strong> A rotina de gestão de obras da cliente parceira pode impor imprevistos de agenda. A equipe instituiu um protocolo de contingência: caso uma sessão síncrona não possa ocorrer na data prevista, disponibiliza-se um vídeo navegável explicativo (Loom) e o link da aplicação web em ambiente de preview/staging (com telas e mocks) para validação assíncrona em até 48 horas, além de janela alternativa de reagendamento síncrono, sempre que a data do marco permitir.</li>
+<li><strong>Janela Dedicada de Correção de Defeitos pós-UAT (Buffer de 3 Dias):</strong> A sessão formal de Testes de Aceitação de Usuário (UAT) com Maria Beatryz está prevista para <strong>27/11/2026</strong> (a confirmar). Entre o UAT e o Termo de Aceite Formal (30/11), mantém-se uma janela de <strong>três dias corridos (28, 29 e 30/11)</strong> para saneamento de divergências, correção de bugs de interface ou ajustes de fórmulas, garantindo que o aceite formal não seja assinado sobre software com defeitos pendentes.</li>
+<li><strong>Margem de Contingência Pré-Banca Final:</strong> O ensaio da apresentação (<em>dry-run</em>), a consolidação final dos artefatos no MkDocs e a gravação do vídeo institucional concentram-se em <strong>30/11</strong>, véspera do Ponto de Controle 4 (publicação até 01/12/2026, às 08h). A margem original de dois dias foi reduzida; qualquer atraso no aceite impacta diretamente esta janela.</li>
+</ol>
+<hr>
+<h2 id="dinamica-de-atualizacao-e-governanca-do-cronograma">Dinâmica de Atualização e Governança do Cronograma<a class="headerlink" href="#dinamica-de-atualizacao-e-governanca-do-cronograma" title="Permanent link">¶</a></h2>
+<p>O cronograma do DUOC Finance é um <strong>artefato vivo</strong> sujeito a refinamento contínuo. Sua governança respeita as seguintes diretrizes:</p>
+<ol>
+<li><strong>Sincronização com o GitHub Projects:</strong> O progresso diário de tarefas é monitorado no quadro kanban do GitHub Projects (<a href="https://github.com/orgs/mdsreq-fga-unb/projects/119/">Acessar Projeto #119</a>), servindo de fonte de verdade para a atualização deste capítulo.</li>
+<li><strong>Revisões de Marco Avaliativo:</strong> Ao final de cada Ponto de Controle, o cronograma é revisado para registrar desvios e propostas de recalibração. <strong>A revisão do planejamento não autoriza alterar retroativamente o material do GitHub Pages após o prazo oficial de avaliação</strong>, sob risco de atraso conforme a seção 9.1 do Plano de Ensino; correções posteriores devem ser identificadas como revisões subsequentes.</li>
+<li><strong>Gestão de Riscos Operacionais e Acionamento de Folgas:</strong> Caso ocorram impedimentos técnicos em regras financeiras ou reagendamentos com a cliente, o Product Owner aciona os buffers de contingência pactuados neste capítulo e no <a href="../interacao-cliente/#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente">Capítulo 7.3 — Processo de Validação</a>.</li>
+<li><strong>Replanejamento pela Realidade Executada:</strong> Marcos fixados no tempo e já ocorridos são marcados como concluídos; atividades atrasadas são reposicionadas nos incrementos seguintes, preservando os marcos externos (PC1 a PC4). O replanejamento de 10/11/2026 (versão 3.0) registra o atraso do Incremento 1 e condensa os Incrementos 2 e 3.</li>
+</ol>
+<hr>
+<h2 id="fontes-e-criterios-de-atualizacao">Fontes e Critérios de Atualização<a class="headerlink" href="#fontes-e-criterios-de-atualizacao" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Calendário acadêmico:</strong> Plano de Ensino assinado de Requisitos de Software (REQ), turma 01, semestre 2026.2, versão de 10/08/2026, especialmente seções 3, 9.1 e 11. Eventuais atualizações posteriores publicadas pelo professor prevalecem sobre o calendário aqui reproduzido.</li>
+<li><strong>Registro de acontecimentos efetivos:</strong> <a href="../../governanca/atas/">Atas de Reunião</a>. Reuniões internas não são descritas como validações com a cliente. Compromissos previstos sem ata/evidência permanecem classificados como planejados ou pendentes de confirmação.</li>
+<li><strong>Escopo atual de requisitos:</strong> <a href="../../requisitos/">Capítulo 8 — Especificação</a> (<strong>40 RFs e 20 RNFs</strong>) e <a href="../../requisitos/priorizacao/">Capítulo 8 — Priorização e MVP</a>. Quantitativos históricos de atas não são reescritos retroativamente.</li>
+<li><strong>Marco de referência desta revisão:</strong> 09/11/2026; marcos fixados antes dessa data foram marcados como concluídos. Status futuros e entregas efetivamente concluídas devem ser conferidos no <a href="https://github.com/orgs/mdsreq-fga-unb/projects/119/">GitHub Projects</a> antes da publicação.</li>
+</ul>
+<h3 id="metodo-de-atualizacao-dos-requisitos-no-rad">Método de Atualização dos Requisitos no RAD<a class="headerlink" href="#metodo-de-atualizacao-dos-requisitos-no-rad" title="Permanent link">¶</a></h3>
+<p>O catálogo de requisitos (40 RFs e 20 RNFs) não é um artefato congelado: seguindo o modelo <strong>RAD</strong>, ele evolui junto com os incrementos, em três pontos de revisão por ciclo, cada um ancorado em uma fase do RAD:</p>
+<ol>
+<li><strong>Início do incremento: fase de Planejamento (<em>Plan</em>).</strong> A equipe revisita o catálogo URPS+ e o backlog, confirma quais requisitos entram no incremento (por meio da priorização pela Matriz 4×4) e registra as inclusões, alterações e exclusões. O resultado é o <em>baseline</em> de requisitos do incremento, que alimenta o DoR.</li>
+<li><strong>Após cada ciclo de validação: fase de <em>User Design</em>.</strong> A cada sessão de validação sociotécnica com a cliente (ou validação assíncrona, quando acionada a folga de indisponibilidade), os requisitos afetados são revisados e validados. Novos requisitos, ajustes de regra e rejeições registrados em ata retornam ao catálogo e ao backlog antes de seguir para a construção.</li>
+<li><strong>Após a construção e o Cutover: revisão final.</strong> Depois da construção e dos testes de aceitação (UAT), o catálogo é reconciliado com o que foi efetivamente construído, aceito e adiado para o backlog evolutivo, e a matriz de rastreabilidade é atualizada. É a última revisão do ciclo de vida do projeto.</li>
+</ol>
+<p>Toda alteração é registrada no GitHub Projects e na ata correspondente, e o capítulo de requisitos informa a versão e os totais vigentes.</p>
+<h2 id="historico-de-versao">Histórico de Versão<a class="headerlink" href="#historico-de-versao" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: left;">Descrição</th>
+<th style="text-align: left;">Autor(es)</th>
+<th style="text-align: left;">Revisor(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>1.0</code></td>
+<td style="text-align: center;">10/11/2026</td>
+<td style="text-align: left;">Criação do capítulo a partir da separação do antigo "Cronograma e Planejamento de Entregas": racional metodológico, folgas técnicas, governança e fontes; atualização do catálogo para 40 RFs e 20 RNFs e inclusão do método de atualização de requisitos no RAD com diagrama.</td>
+<td style="text-align: left;">Eric Araújo</td>
+<td style="text-align: left;">—</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+        <script src="../../assets/javascripts/mermaid-init.js"></script>
+      
+        <script src="../../assets/javascripts/requisitos-filter.js"></script>
+      
+        <script src="../../assets/javascripts/piramide-interativa.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
