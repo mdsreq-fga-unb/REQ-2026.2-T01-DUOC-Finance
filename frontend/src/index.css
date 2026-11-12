@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+/* palheta de cores da aplicacao */
+@theme {
+  /* 1. Vermelhos Institucionais (Ação Primária) */
+  --color-primary: #a5162b; /* Vermelho principal */
+  --color-primary-dark: #971828; /* Vermelho clássico / hover */
+  --color-primary-light: #ffeef0; /* Tom suave / fundo de badges e alertas */
+
+  /* 2. Dourado DUOC (Acento Secundário e Destaques) */
+  --color-gold: #daa520; /* Dourado oficial */
+  --color-gold-hover: #b8860b; /* Dourado escuro / hover */
+  --color-gold-light: #fef9c3; /* Dourado suave para fundos de destaque */
+
+  /* 3. Superfícies e Fundos (Neutros Claros) */
+  --color-canvas: #f8f7f7; /* Cor de fundo principal da tela */
+  --color-surface: #ffffff; /* Fundo branco de cards, modais e containers */
+  --color-surface-subtle: #f3f1f1; /* Fundo secundário (sidebar, headers, tabelas) */
+  --color-border: #ded9d9; /* Linhas divisórias e contornos de inputs/cards */
+
+  /* 4. Textos e Tipografia */
+  --color-dark: #242328; /* Preto corporativo (títulos e textos principais) */
+  --color-muted: #6b7280; /* Cinza médio (subtítulos, descrições e placeholders) */
+}
+
+/* Define o fundo padrão e a cor padrão do texto na página */
+body {
+    background-color: var(--color-canvas);
+    color: var(--color-dark);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
