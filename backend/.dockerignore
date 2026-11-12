@@ -1,0 +1,9 @@
+node_modules
+dist
+coverage
+*.tsbuildinfo
+.env
+.env.*
+Dockerfile
+.dockerignore
+src/generated

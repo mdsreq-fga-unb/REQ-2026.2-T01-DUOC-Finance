@@ -1,0 +1,64 @@
+name: duoc-finance
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-duoc}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-duoc}
+      POSTGRES_DB: ${POSTGRES_DB:-duoc_finance}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - duoc-network
+
+  backend:
+    build: ./backend
+    # Aplica as migrations pendentes do Prisma antes de iniciar a API
+    command: sh -c "npx prisma migrate deploy && npm run start:dev"
+    environment:
+      PORT: 3000
+      DATABASE_URL: postgresql://${POSTGRES_USER:-duoc}:${POSTGRES_PASSWORD:-duoc}@db:5432/${POSTGRES_DB:-duoc_finance}
+      # Polling no watch do TypeScript: Docker Desktop (Windows/macOS) não propaga eventos de arquivo
+      TSC_WATCHFILE: DynamicPriorityPolling
+      TSC_WATCHDIRECTORY: DynamicPriorityPolling
+      # O aviso de atualização sugere a versão 8 (release candidate); a equipe usa a 7.x estável
+      PRISMA_HIDE_UPDATE_MESSAGE: "true"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - duoc-network
+
+  frontend:
+    build: ./frontend
+    environment:
+      API_PROXY_TARGET: http://backend:3000
+      VITE_USE_POLLING: "true"
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - duoc-network
+
+volumes:
+  pgdata:
+
+networks:
+  duoc-network:
