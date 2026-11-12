@@ -2,11 +2,15 @@ import { Routes, Route } from "react-router-dom";
 import AppLayout from "../components/layout/AppLayout";
 import DashboardPage from "../pages/DashboardPage";
 import ColaboradoresPage from "../pages/ColaboradoresPage";
+import LoginPage from "../pages/LoginPage";
 
 export default function AppRoutes() {
     return (
         <Routes>
-            {/* ROTA PAI: Carrega o AppLayout... */}
+            {/* Rota pública: Login isolado sem Sidebar/Header */}
+            <Route path="/login" element={<LoginPage />} />
+
+            {/* Rota pai: Carrega o AppLayout (Sidebar + Header + Outlet) */}
             <Route path="/" element={<AppLayout />}>
                 
                 {/* ROTA PADRÃO (index) para dashboard */}

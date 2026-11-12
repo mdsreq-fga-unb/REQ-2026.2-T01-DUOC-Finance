@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import type { NavItem } from "../../types/navigation";
 import Button from "../ui/Button";
 
@@ -29,6 +29,12 @@ const menuItems: NavItem[] = [
 ];
 
 export default function Sidebar() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate("/login");
+  }
+
   return (
     <aside className="w-64 h-screen bg-surface border-r border-border flex flex-col shrink-0 shadow-2xs">
       {/* 1. Cabeçalho / Logotipo */}
@@ -97,6 +103,7 @@ export default function Sidebar() {
           size="sm"
           className="p-2 text-muted hover:text-primary hover:bg-primary-light/60"
           title="Sair do sistema"
+          onClick={handleLogout}
         >
           <LogOut className="w-4 h-4" />
         </Button>
