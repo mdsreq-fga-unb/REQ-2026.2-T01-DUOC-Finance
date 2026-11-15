@@ -659,7 +659,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             <span class="event-date-badge milestone done"><span class="ev-d">13</span><span class="ev-m">OUT</span></span>
             <div class="event-info">
               <div class="event-name">Ponto de Controle 2: Publicação e Primeiro Dia de Apresentações</div>
-              <div class="event-desc">Publicação no GitHub Pages até as 08h de 13/10 e apresentações em 13 e 15/10 concluídas. Entrega: especificação URPS+ do catálogo da época (36 RFs e 20 RNFs), backlog INVEST, priorização pela Matriz 4×4 e critérios DoR/DoD. O [escopo atual](../../requisitos/priorizacao/#linha-de-corte-do-mvp) contempla a decomposição posterior. <a href="../../entregas/entrega-2/">Acessar Entrega 2</a>.</div>
+              <div class="event-desc">Publicação no GitHub Pages até as 08h de 13/10 e apresentações em 13 e 15/10 concluídas. Entrega: especificação URPS+ do catálogo da época (36 RFs e 20 RNFs), backlog INVEST, priorização pela Matriz 4×4 e critérios DoR/DoD. O <a href="../../requisitos/priorizacao/#linha-de-corte-do-mvp">escopo atual</a> contempla a decomposição posterior. <a href="../../entregas/entrega-2/">Acessar Entrega 2</a>.</div>
             </div>
           </div>
           <span class="status-pill concluido">Concluído / Entregue</span>
