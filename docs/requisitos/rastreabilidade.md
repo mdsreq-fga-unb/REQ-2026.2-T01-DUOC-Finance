@@ -37,8 +37,7 @@ Este documento consolida a **rastreabilidade vertical e horizontal** dos requisi
 -   :material-format-list-checks: **Requisitos Funcionais (RF)**
 
     ---
-    **40 Requisitos Funcionais** (31 no MVP; 9 no pós-MVP)  
-    [Linha de corte e mapeamento 1:1 entre 40 RFs e 40 USs](priorizacao.md#linha-de-corte-do-mvp).
+    **40 Requisitos Funcionais** (31 no MVP; 9 no pós-MVP) — [Linha de corte e mapeamento 1:1 entre 40 RFs e 40 USs](priorizacao.md#linha-de-corte-do-mvp).
 
 -   :material-shield-check-outline: **Requisitos Não Funcionais (RNF)**
 
@@ -49,8 +48,7 @@ Este documento consolida a **rastreabilidade vertical e horizontal** dos requisi
 -   :material-test-tube: **Casos de Teste (CT)**
 
     ---
-    **40 identificadores de Casos de Teste referenciados**  
-    Relações entre requisitos e códigos CT-M1 a CT-M4 apresentadas na Matriz-Síntese.
+    **40 identificadores de Casos de Teste referenciados** — Relações entre requisitos e códigos CT-M1 a CT-M4 apresentadas na Matriz-Síntese.
 
 </div>
 
