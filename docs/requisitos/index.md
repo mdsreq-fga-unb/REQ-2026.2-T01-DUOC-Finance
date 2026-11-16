@@ -1459,7 +1459,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
-            <p class="req-check-text">O Técnico de Campo (`TECNICO_CAMPO`) ou gestor solicita o reembolso de uma despesa operacional autorizada (hospedagem, combustível, alimentação de canteiro ou materiais emergenciais vinculados ao contrato ativo) informando valor monetário, categoria de despesa e contrato de obra, anexando compulsoriamente o comprovante fiscal digitalizado (RN06, RN09). A solicitação aceita é registrada com status "Pendente de Análise".</p>
+            <p class="req-check-text">O Técnico de Campo (`TECNICO_CAMPO`) ou o Gestor de Obras (`GESTOR_OBRAS`) pode solicitar o reembolso de uma despesa operacional autorizada vinculada a um contrato ativo, informando valor, categoria e contrato da obra, e anexando o comprovante fiscal digitalizado (RN06, RN09). O arquivo deve estar em formato PDF, JPEG ou PNG e ter tamanho máximo de 10 MB. A solicitação aceita é registrada com status "Pendente de Análise".</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -4411,7 +4411,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
-            <p class="req-check-text">Diante de divergência material em lote de competência já homologado, o Administrador Financeiro (`ADMIN_FINANCEIRO`) estorna o fechamento financeiro informando compulsoriamente justificativa formal com no mínimo 20 caracteres (RNF08). A competência é reaberta para retificação, o fechamento original permanece preservado no histórico imutável e o evento de estorno é gravado na trilha de auditoria com autor, justificativa e carimbo UTC (RN17). Após as correções, o Administrador Financeiro deve solicitar uma nova prévia de fechamento (RF05) e realizar uma nova homologação (RF06), sendo vedado considerar a competência novamente encerrada antes da conclusão desse processo.</p>
+            <p class="req-check-text">Diante de divergência material em lote de competência já homologado, o Administrador Financeiro (`ADMIN_FINANCEIRO`) estorna o fechamento financeiro informando justificativa formal com no mínimo 15 caracteres. A competência é reaberta para retificação, o fechamento original permanece preservado no histórico imutável e o evento de estorno é gravado na trilha de auditoria com autor, justificativa e carimbo UTC (RN17). Após as correções, o Administrador Financeiro deve solicitar uma nova prévia de fechamento (RF05) e realizar nova homologação (RF06), não considerando a competência encerrada antes da conclusão desse processo.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -4621,7 +4621,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
-            <p class="req-check-text">Durante o preenchimento de um apontamento na aplicação web responsiva, o Técnico de Campo (`TECNICO_CAMPO`) anexa fotos ou comprovantes da atividade, e o sistema captura a geolocalização do dispositivo quando a permissão do navegador estiver concedida. Os arquivos e coordenadas são vinculados ao registro, a lista de anexos pode ser revisada e qualquer item pode ser removido antes da submissão; a ausência de sinal de GPS ou recusa de permissão não impede o envio das evidências (RN24).</p>
+            <p class="req-check-text">Durante o preenchimento de um apontamento na aplicação web responsiva, o Técnico de Campo (`TECNICO_CAMPO`) pode anexar fotos ou comprovantes da atividade em formato PDF, JPEG ou PNG, com tamanho máximo de 10 MB por arquivo. O sistema captura a geolocalização quando a permissão do navegador estiver concedida. Os arquivos e as coordenadas são vinculados ao registro; a lista de anexos pode ser revisada e qualquer item removido antes da submissão. A ausência de sinal de GPS ou a recusa de permissão não impede o envio das evidências (RN24).</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -6721,7 +6721,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
-            <p class="req-check-text">O Gestor Operacional de Obras (`GESTOR_OBRAS`) analisa os apontamentos com status "Pendente de Homologação" vinculados aos contratos sob sua responsabilidade técnica e delibera aprovando ou rejeitando cada registro. A aprovação transiciona o status para "Homologado", bloqueia edições pelo autor (RN02) e disponibiliza as horas/diárias para apuração financeira (RN05). A rejeição exige compulsoriamente parecer formal justificado com no mínimo 15 caracteres (RN30), transiciona o status para "Rejeitado" e notifica o colaborador para ciência e retificação (RF35). Após a correção e o reenvio pelo colaborador, o apontamento retorna ao status "Pendente de Homologação" para nova análise, preservando o histórico de rejeições, justificativas e alterações.</p>
+            <p class="req-check-text">O Gestor Operacional de Obras (`GESTOR_OBRAS`) analisa os apontamentos com status "Pendente de Homologação" vinculados aos contratos sob sua responsabilidade técnica e delibera aprovando ou rejeitando cada registro. A aprovação altera o status para "Homologado", bloqueia a edição pelo autor (RN02) e disponibiliza as horas e diárias para apuração financeira (RN05). A rejeição exige parecer formal justificado com no mínimo 15 caracteres (RN30), altera o status para "Rejeitado" e notifica o colaborador. A data e hora dessa notificação iniciam o prazo de cinco dias úteis para retificação e reenvio definido na RN02. Após o reenvio, o apontamento retorna a "Pendente de Homologação" para nova análise, preservando o histórico de rejeições, justificativas e alterações.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -7290,7 +7290,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span>Status</span>
         </span>
         <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-status req-status-dev"><span class="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
+          <span class="req-lumio-tag req-tag-status req-status-dev"><span c<p class="req-check-text">lass="req-status-dot"></span>Em Desenvolvimento (Sprint Backlog)</span>
         </div>
       </div>
       <div class="req-lumio-row">
@@ -7327,7 +7327,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         <span class="req-checklist-title">História de Usuário (US35)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text">Como <strong>Técnico de Campo</strong>, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão.</p>
+        <p class="req-desc-text">Como <strong>Técnico de Campo</strong>, quero retificar um apontamento pendente ou rejeitado dentro do prazo aplicável, para corrigir os dados e reenviá-lo para homologação.</p>
       </div>
     </div>
 
@@ -7351,14 +7351,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
-            <p class="req-check-text">O Técnico de Campo (`TECNICO_CAMPO`) pode retificar horas, escopo ou anexos de um apontamento submetido enquanto seu status for "Pendente de Homologação", respeitando a janela de até 5 dias úteis contados da submissão inicial ou do último reenvio após rejeição (RN02). Caso o apontamento seja rejeitado pelo gestor (RF32), o técnico pode corrigir o registro e reenviá-lo para nova homologação, preservando seu identificador e o histórico de alterações e pareceres. Cada reenvio após rejeição altera o status para "Pendente de Homologação" e reinicia integralmente a janela de 5 dias úteis para retificação (RN02). Apontamentos homologados permanecem bloqueados contra alterações.</p>
+            <p class="req-check-text">O Técnico de Campo (`TECNICO_CAMPO`) pode retificar horas, escopo ou anexos de um apontamento Pendente de Homologação até cinco dias úteis após a submissão mais recente. Se o gestor rejeitar o apontamento, o técnico pode corrigi-lo e reenviá-lo em até cinco dias úteis após a notificação da rejeição, mesmo que o prazo anterior tenha terminado. Cada reenvio altera o status para "Pendente de Homologação" e inicia nova janela de cinco dias úteis. O sistema preserva o identificador e o histórico de alterações e pareceres. Apontamentos Homologados não podem ser retificados</p>
           </div>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
+            Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -8658,7 +8658,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
         <span class="req-checklist-title">Enunciado Oficial e Condicionantes de Negócio</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Regra de Negócio:</strong> O apontamento diário de campo (RVT) deve ser submetido até as 23h59 do dia subsequente à prestação do serviço; após submissão e homologação, a edição é bloqueada, permitindo retificação apenas após deliberação de recusa com justificativa obrigatória.</p>
+        <p class="req-desc-text"><strong>Regra de Negócio:</strong> O apontamento de campo deve ser submetido até as 23h59 do dia subsequente à prestação do serviço. Enquanto estiver Pendente de Homologação, o técnico pode retificá-lo até cinco dias úteis após a submissão mais recente. Se o gestor rejeitar o apontamento, inicia-se novo prazo de cinco dias úteis a partir da notificação da rejeição, mesmo que o prazo anterior tenha terminado. Cada reenvio inicia nova janela de cinco dias úteis. Apontamentos Homologados não podem ser retificados.</p>
       </div>
     </div>
   </div>
@@ -10801,7 +10801,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf req-card-oe2" id="rnf07" data-type="rnf" data-rnf="RNF07" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf07 garantir robustez e segurança no processamento e armazenamento de comprovantes urps+ segurança / usabilidade produto — segurança módulo 2 / oe2 arquivos de comprovantes devem aceitar formatos pdf, jpeg e png com validação estrita de magic bytes no backend, tamanho máximo de 10 mb por arquivo e escaneamento preventivo contra ameaças, com compressão automática sem perda de legibilidade fiscal. rf04 rf07 rf08 rf22 rf28 rf29 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf07 garantir robustez e segurança no processamento e armazenamento de comprovantes urps+ segurança / usabilidade produto — segurança módulo 2 / oe2 arquivos de comprovantes devem aceitar formatos pdf, jpeg e png com validação estrita de magic bytes no backend, tamanho máximo de 10 mb por arquivo e escaneamento preventivo contra ameaças, com compressão automática sem perda de legibilidade fiscal. rf04 rf07 rf08 rf22 rf28 rf29 rf35 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe2" id="rnf07" data-type="rnf" data-rnf="RNF07" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf07 garantir robustez e segurança no processamento e armazenamento de comprovantes urps+ segurança / usabilidade produto — segurança módulo 2 / oe2 arquivos recebidos por rf07 e rf22 têm o formato real validado por magic bytes no backend e passam por varredura contra ameaças antes do armazenamento; arquivos incompatíveis ou ameaçadores são rejeitados; a compressão automática preserva a legibilidade fiscal. rf04 rf07 rf08 rf22 rf28 rf29 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf07 garantir robustez e segurança no processamento e armazenamento de comprovantes urps+ segurança / usabilidade produto — segurança módulo 2 / oe2 arquivos recebidos por rf07 e rf22 têm o formato real validado por magic bytes no backend e passam por varredura contra ameaças antes do armazenamento; arquivos incompatíveis ou ameaçadores são rejeitados; a compressão automática preserva a legibilidade fiscal. rf04 rf07 rf08 rf22 rf28 rf29 rf35 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
@@ -10852,13 +10852,13 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Arquivos de comprovantes devem aceitar formatos PDF, JPEG e PNG com validação estrita de magic bytes no backend, tamanho máximo de 10 MB por arquivo e escaneamento preventivo contra ameaças, com compressão automática sem perda de legibilidade fiscal.</p>
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Para os arquivos recebidos por RF07 e RF22, o backend valida o formato real por magic bytes e realiza varredura contra ameaças antes do armazenamento. Arquivos incompatíveis ou identificados como ameaçadores são rejeitados. A compressão automática deve preservar a legibilidade fiscal dos comprovantes.</p>
       </div>
     </div>
   </div>
 </details>
 
-<details class="req-card req-card-rnf req-card-oe2" id="rnf08" data-type="rnf" data-rnf="RNF08" data-oe="oe2" data-mvp="pos-mvp" data-quad="q3" data-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf21 requisito nao funcional atributo qualidade dod" data-search-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf21 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe2" id="rnf08" data-type="rnf" data-rnf="RNF08" data-oe="oe2" data-mvp="pos-mvp" data-quad="q3" data-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 cada estorno de fechamento gera, na mesma transação, registro imutável de auditoria com identificador do usuário, ip de origem, carimbo temporal utc e dados anteriores e posteriores à alteração; se o registro de auditoria falhar, o estorno não é confirmado. rf21 requisito nao funcional atributo qualidade dod" data-search-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 cada estorno de fechamento gera, na mesma transação, registro imutável de auditoria com identificador do usuário, ip de origem, carimbo temporal utc e dados anteriores e posteriores à alteração; se o registro de auditoria falhar, o estorno não é confirmado. rf21 requisito nao funcional atributo qualidade dod">
 
   <summary class="req-card-summary">
     <div class="req-summary-chips">
@@ -10910,7 +10910,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e IP de origem antes da confirmação da mutação.</p>
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> Cada estorno de fechamento deve gerar, na mesma transação da operação, um registro imutável de auditoria com identificador do usuário, IP de origem, carimbo temporal UTC e dados anteriores e posteriores à alteração. Se o registro de auditoria falhar, o estorno não deve ser confirmado.</p>
       </div>
     </div>
   </div>
@@ -11205,7 +11205,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf req-card-transversal" id="rnf14" data-type="rnf" data-rnf="RNF14" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf14 validar perfil de autorização em 100% das rotas de api com dados protegidos urps+ segurança / legal externo — legislativo (lgpd) transversal (t) / oe4 100% dos endpoints de backend que manipulam dados corporativos passam por guard/filtro rbac que valida papel e competência do usuário, rejeitando tentativas não autorizadas com http 403 forbidden em menos de 15 ms. rf13 rf14 rf17 rf18 rf23 rf24 requisito nao funcional atributo qualidade dod" data-search-text="rnf14 validar perfil de autorização em 100% das rotas de api com dados protegidos urps+ segurança / legal externo — legislativo (lgpd) transversal (t) / oe4 100% dos endpoints de backend que manipulam dados corporativos passam por guard/filtro rbac que valida papel e competência do usuário, rejeitando tentativas não autorizadas com http 403 forbidden em menos de 15 ms. rf13 rf14 rf17 rf18 rf23 rf24 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-transversal" id="rnf14" data-type="rnf" data-rnf="RNF14" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf14 validar perfil de autorização em 100% das rotas de api com dados protegidos urps+ segurança / legal externo — legislativo (lgpd) transversal (t) / oe4 100% dos endpoints de backend que manipulam dados corporativos devem aplicar guard/filtro rbac; em teste controlado sob carga nominal do rnf02, com até 50 usuários simultâneos autenticados a 10 req/s, o tempo entre o início da verificação pelo guard e a decisão de autorização deve ser inferior a 15 ms em pelo menos 95% das verificações, medido somente no servidor e excluindo rede e cliente; tentativas não autorizadas recebem http 403 forbidden. rf13 rf14 rf17 rf18 rf23 rf24 requisito nao funcional atributo qualidade dod" data-search-text="rnf14 validar perfil de autorização em 100% das rotas de api com dados protegidos urps+ segurança / legal externo — legislativo (lgpd) transversal (t) / oe4 100% dos endpoints de backend que manipulam dados corporativos devem aplicar guard/filtro rbac; em teste controlado sob carga nominal do rnf02, com até 50 usuários simultâneos autenticados a 10 req/s, o tempo entre o início da verificação pelo guard e a decisão de autorização deve ser inferior a 15 ms em pelo menos 95% das verificações, medido somente no servidor e excluindo rede e cliente; tentativas não autorizadas recebem http 403 forbidden. rf13 rf14 rf17 rf18 rf23 rf24 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
@@ -11256,7 +11256,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Critério Mensurável Objetivo e Métrica de Aceitação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Métrica Técnica:</strong> 100% dos endpoints de backend que manipulam dados corporativos passam por guard/filtro RBAC que valida papel e competência do usuário, rejeitando tentativas não autorizadas com HTTP 403 Forbidden em menos de 15 ms.</p>
+        <p class="req-desc-text"><strong>Métrica Técnica:</strong> 100% dos endpoints de backend que manipulam dados corporativos devem aplicar o guard/filtro RBAC. Em teste controlado sob a carga nominal do RNF02 - até 50 usuários autenticados simultâneos e 10 requisições por segundo - o tempo entre o início da verificação pelo guard e a decisão de autorização deve ser inferior a 15 ms em pelo menos 95% das verificações. Essa medição considera apenas o processamento no servidor, sem o tempo de rede ou do cliente. Tentativas não autorizadas devem receber HTTP 403 Forbidden.</p>
       </div>
     </div>
   </div>
@@ -11610,6 +11610,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
+| `4.6` | 16/11/2026 | **Correções das issues #126 e #127:** alinhamento de RN02, RF32, RF35 e US35 sobre retificação de apontamentos pendentes ou rejeitados; definição do mínimo de 15 caracteres para a justificativa de estorno no RF21; separação das regras de formato e tamanho dos anexos (RF07 e RF22) dos critérios técnicos de segurança (RNF07); refinamento da métrica do RNF14 e manutenção do RNF08 restrito à auditabilidade dos estornos. | Matheus Saraiva Camargo | Equipe Cascata Ágil |
 | `4.5` | 10/11/2026 | **Reconciliação bidirecional dos vínculos:** sincronização dos RNs e RNFs de cada RF (DoR, DoD, aba de rastreabilidade e termos de busca) com os campos "RFs Executores" das RNs e "RFs Cobertos" dos RNFs, mantendo apenas vínculos sustentados pelo enunciado de cada regra; inclusões: RN01 em RF02, RN05 em RF05, RF06 e RF32 (reverso), RN07 em RF29, RN08 em RF07 e RF08, RN12 em RF09, RN14 em RF12, RN17 em RF16 e RN30 em RF35, além de RNF01, RNF03, RNF05 a RNF07, RNF09, RNF14 e RNF18 a RNF20 nos RFs correspondentes; remoções: RN10 de RF20 e RF32 (regra de ACID no rateio) e RN08 de RF21 (regra de comprovante fiscal), além dos vínculos reversos sem sustentação nos cards de RN e RNF; correção das citações nos critérios de RF06, RF20, RF21 (justificativa mínima de 20 caracteres, conforme RNF08), RF28 e RF32. | Paulo Nery | — |
 | `4.4` | 10/11/2026 | **Histórias dos requisitos decompostos:** criação das histórias próprias US37 a US40 para RF37 a RF40 (correspondência 1:1 US*nn* ↔ RF*nn*, 40 histórias); restrição dos enunciados de US33 e US34 ao cadastro, eliminando a sobreposição com atualização, consulta e tetos orçamentários; ratificação das 8 h de RF33 e RF34 como estimativa restrita ao cadastro; correção do filtro "Evolutivo Pós-MVP" (atributo `data-mvp` sem acento nos 9 RFs pós-MVP) e dos contadores do filtro (80 itens no MVP e 11 pós-MVP). | Paulo Nery | — |
 | `4.3` | 02/11/2026 | **Revisão Cruzada & FLIT:** ferramenta de presença padronizada como FLIT (anteriormente registrada como Shifton) em RF20, CAR-09, critérios DoR/DoD e catálogo; refinamento dos perfis dos atores RBAC e inclusão de nota de alinhamento sociotécnico de Maria Beatryz. | Gustavo Bonifácio e Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
