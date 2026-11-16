@@ -3,29 +3,38 @@ import { Test } from '@nestjs/testing';
 import request from 'supertest';
 import { AuthController } from './auth.controller.js';
 import { AuthService } from './auth.service.js';
+import { gerarRefreshToken } from './refresh-token.util.js';
 
-describe('POST /api/auth/login | HTTP', () => {
+describe('AuthController | HTTP', () => {
   let app: INestApplication;
   const login = vi.fn();
+  const renovar = vi.fn();
+  const logout = vi.fn();
 
   beforeAll(async () => {
     const modulo = await Test.createTestingModule({
       controllers: [AuthController],
-      providers: [{ provide: AuthService, useValue: { login } }],
+      providers: [{ provide: AuthService, useValue: { login, renovar, logout } }],
     }).compile();
     app = modulo.createNestApplication();
     app.setGlobalPrefix('api');
     await app.init();
   });
 
-  beforeEach(() => login.mockReset());
+  beforeEach(() => {
+    login.mockReset();
+    renovar.mockReset();
+    logout.mockReset();
+  });
   afterAll(async () => app.close());
 
   it('retorna 200 e token no login válido', async () => {
     login.mockResolvedValue({
       accessToken: 'token-assinado',
+      refreshToken: gerarRefreshToken(),
       tokenType: 'Bearer',
       expiresIn: 900,
+      refreshExpiresIn: 604800,
       usuario: { id: 'usuario-1', email: 'admin@duoc.com.br', papel: 'ADMIN_FINANCEIRO' },
     });
     await request(app.getHttpServer())
@@ -35,6 +44,7 @@ describe('POST /api/auth/login | HTTP', () => {
       .expect((res) => {
         expect(res.body.accessToken).toBe('token-assinado');
         expect(res.body.usuario.papel).toBe('ADMIN_FINANCEIRO');
+        expect(res.body.refreshToken).toHaveLength(43);
       });
     expect(login).toHaveBeenCalledWith('admin@duoc.com.br', 'SenhaForteDeTeste!2026');
   });
@@ -48,7 +58,7 @@ describe('POST /api/auth/login | HTTP', () => {
   });
 
   it('retorna 401 quando as credenciais não conferem', async () => {
-    // Simula uma exceção HTTP emitida pelo serviço ao atender a requisição.
+    // Reproduz o mock corrigido e validado na etapa 2.
     login.mockImplementationOnce(() => {
       throw new UnauthorizedException('Credenciais inválidas.');
     });
@@ -57,11 +67,42 @@ describe('POST /api/auth/login | HTTP', () => {
       .send({ email: 'admin@duoc.com.br', senha: 'SenhaErrada!123' })
       .expect(401)
       .expect((res) => {
-        expect(res.body).toMatchObject({
-          statusCode: 401,
-          message: 'Credenciais inválidas.',
-        });
+        expect(res.body).toMatchObject({ statusCode: 401, message: 'Credenciais inválidas.' });
       });
     expect(login).toHaveBeenCalledTimes(1);
+  });
+
+  it('renova tokens por HTTP 200', async () => {
+    const token = gerarRefreshToken();
+    renovar.mockResolvedValue({ accessToken: 'novo', refreshToken: gerarRefreshToken() });
+    await request(app.getHttpServer())
+      .post('/api/auth/refresh')
+      .send({ refreshToken: token })
+      .expect(200)
+      .expect((res) => expect(res.body.accessToken).toBe('novo'));
+    expect(renovar).toHaveBeenCalledWith(token);
+  });
+
+  it('encerra a sessão por HTTP 204', async () => {
+    const token = gerarRefreshToken();
+    logout.mockResolvedValue(undefined);
+    await request(app.getHttpServer())
+      .post('/api/auth/logout')
+      .send({ refreshToken: token })
+      .expect(204);
+    expect(logout).toHaveBeenCalledWith(token);
+  });
+
+  it('rejeita token malformado sem chamar serviço', async () => {
+    await request(app.getHttpServer())
+      .post('/api/auth/refresh')
+      .send({ refreshToken: 'curto' })
+      .expect(400);
+    await request(app.getHttpServer())
+      .post('/api/auth/logout')
+      .send({})
+      .expect(400);
+    expect(renovar).not.toHaveBeenCalled();
+    expect(logout).not.toHaveBeenCalled();
   });
 });

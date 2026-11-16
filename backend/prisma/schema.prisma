@@ -116,6 +116,7 @@ model Sessao {
   criadaEm   DateTime  @default(now()) @map("criada_em")
   expiraEm   DateTime  @map("expira_em")
   revogadaEm DateTime? @map("revogada_em")
+  refreshTokenHash String? @unique @map("refresh_token_hash") @db.VarChar(64)
 
   usuario Usuario @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
 
