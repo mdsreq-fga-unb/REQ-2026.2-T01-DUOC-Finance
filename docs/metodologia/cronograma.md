@@ -57,7 +57,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
           <div class="tooltip-body">
             <p><strong>Período:</strong> 01/09 a 30/09</p>
             <p><strong>Marcos:</strong> Ponto de Controle 1 Entregue (08/09)</p>
-            <p><strong>Reuniões:</strong> Reunião 01 com a cliente (05/09) • Reuniões internas 02 e 03 (07/09) • Reunião 04 interna (17/09) • Reunião 05 interna (24/09)</p>
+            <p><strong>Reuniões:</strong> Reunião 01 com a cliente (05/09) • Reuniões internas 02 e 03 (07/09) • Reunião 04 interna (17/09) • Reunião 05 com a cliente (24/09)</p>
           </div>
           <div class="tooltip-hint">Clique para alternar para Setembro</div>
         </div>
@@ -474,8 +474,8 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
           <div class="month-event-left">
             <span class="event-date-badge done"><span class="ev-d">24</span><span class="ev-m">SET</span></span>
             <div class="event-info">
-              <div class="event-name">Reunião 05 Interna: Priorização por Matriz 4×4 e Alinhamento do MVP</div>
-              <div class="event-desc">Revisão e priorização de requisitos com a Matriz 4×4 (Valor × Esforço). Inclusão de RF11 (indicadores de custo), rebaixamento de RF21 (estorno financeiro), exclusão de RF16 e postergação de RNF01 (modo offline). Aprovação interna do MVP com ressalvas e definição do subdomínio finance.doc.br na Vercel; o aceite direto da cliente não foi registrado nessa reunião. [Ver Ata 05](../governanca/atas/reuniao-05.md).</div>
+              <div class="event-name">Reunião 05 com a cliente: Priorização por Matriz 4×4 e Alinhamento do MVP</div>
+              <div class="event-desc">A cliente validou a priorização apresentada e aprovou com ressalvas o MVP. A equipe incluiu RF11 (indicadores de custo), rebaixou RF21 (estorno financeiro), excluiu RF16 e postergou RNF01 (modo offline), além de definir o subdomínio finance.doc.br na Vercel. [Ver Ata 05](../governanca/atas/reuniao-05.md).</div>
             </div>
           </div>
           <span class="status-pill concluido">Realizada</span>
@@ -1241,7 +1241,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           <div class="week-section-title">Atividades Executadas e Técnicas de ER</div>
           <ul>
             <li>Levantamento e especificação rigorosa de Requisitos Funcionais (RF) e Não-Funcionais (RNF) sob o framework <strong>URPS+</strong>;</li>
-            <li>Reunião 05 (24/09/2026): verificação e priorização de requisitos via matriz Valor × Esforço, alinhamento do escopo do MVP (<a href="../../governanca/atas/reuniao-05/">Ver Ata 05</a>);</li>
+            <li>Reunião 05 com a cliente (24/09/2026): verificação e priorização de requisitos via matriz Valor × Esforço, alinhamento do escopo do MVP (<a href="../../governanca/atas/reuniao-05/">Ver Ata 05</a>);</li>
             <li>Formulação formal dos acordos de trabalho: DoR (<em>Definition of Ready</em>) como portão de entrada para implementação de lógica e persistência e DoD (<em>Definition of Done</em>) como portão de saída;</li>
             <li>Definição dos requisitos arquiteturais de segurança e privacidade (LGPD, papéis RBAC preliminares);</li>
             <li>Início da prototipagem: concepção da base visual no Figma (Design System, paleta de cores e tokens) e estruturação dos componentes base de interface no Frontend (React SPA / Tailwind CSS).</li>
