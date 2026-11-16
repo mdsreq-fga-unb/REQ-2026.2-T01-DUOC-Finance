@@ -77,7 +77,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
           <div class="tooltip-body">
             <p><strong>Período:</strong> 01/10 a 31/10</p>
             <p><strong>Marcos:</strong> PC2 concluído (publicação 13/10; apresentações 13 e 15/10)</p>
-            <p><strong>Validações:</strong> validação presencial do protótipo no Figma realizada em 02/10 (Ata 06) • início do Incremento 1 em 20/10 (Semana 08 em atraso)</p>
+            <p><strong>Validações:</strong> validação presencial do protótipo no Figma realizada em 02/10 (Ata 06) • início do Incremento 1 em 20/10 (Semanas 08 a 10 pendentes)</p>
           </div>
           <div class="tooltip-hint">Clique para alternar para Outubro</div>
         </div>
@@ -97,7 +97,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
           <div class="tooltip-body">
             <p><strong>Período:</strong> 01/11 a 30/11</p>
             <p><strong>Marcos:</strong> PC3: publicação 17/11; apresentações 17 e 19/11</p>
-            <p><strong>Reuniões:</strong> validação do Incr. 2 (13/11; a confirmar) • UAT prevista (27/11; a confirmar) • Correções (28 a 30/11) • Aceite Formal (30/11)</p>
+            <p><strong>Reuniões:</strong> validação do Incr. 2 (remarcada pela cliente de 13/11 para 16/11) • UAT prevista (27/11; a confirmar) • Correções (28 a 30/11) • Aceite Formal (30/11)</p>
           </div>
           <div class="tooltip-hint">Clique para alternar para Novembro</div>
         </div>
@@ -616,7 +616,7 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
                 <div class="cell-top"><span class="cell-num">26</span></div>
                 <span class="event-chip active-phase">CAR-01 / CAR-07</span>
               </td>
-              <td class="day-u3 day-done" title="Encerramento da Semana 08 com pendências registradas (em atraso)">
+              <td class="day-u3 day-done" title="Encerramento da Semana 08 com entregáveis pendentes">
                 <div class="cell-top"><span class="cell-num">27</span></div>
                 <span class="event-chip">S08 em atraso</span>
               </td>
@@ -670,10 +670,10 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             <span class="event-date-badge"><span class="ev-d">20</span><span class="ev-m">OUT</span></span>
             <div class="event-info">
               <div class="event-name">Abertura do Incremento 1: Construção do Cadastro, Autenticação e RVT (Semana 08)</div>
-              <div class="event-desc">Atualização dos requisitos do incremento (Plan), desenvolvimento Frontend de cadastro/login e módulo móvel de RVT, modelagem conceitual (DER / Supabase), setup do repositório com pipeline na Vercel e início da lógica de CAR-01 e CAR-07. A semana foi encerrada com pendências.</div>
+              <div class="event-desc">Atualização dos requisitos do incremento (Plan), desenvolvimento Frontend de cadastro/login e módulo móvel de RVT, modelagem conceitual (DER / Supabase), setup do repositório com pipeline na Vercel e início da lógica de CAR-01 e CAR-07. Entregues: DER, telas de cadastro/autenticação, pipeline na Vercel e escopo no GitHub Projects. Pendentes: RBAC base, RVT inicial e carga de dados sintéticos (entrega prorrogada para a Semana 11 por decisão da equipe; ver Visão Consolidada).</div>
             </div>
           </div>
-          <span class="status-pill andamento">Em Desenvolvimento / Em Atraso</span>
+          <span class="status-pill pendente">Pendente</span>
         </div>
 
         <div class="month-event-item">
@@ -681,10 +681,10 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             <span class="event-date-badge"><span class="ev-d">28</span><span class="ev-m">OUT</span></span>
             <div class="event-info">
               <div class="event-name">Criação do Banco Supabase, Camada ORM e Refino de RBAC (Semana 09)</div>
-              <div class="event-desc">Provisionamento do banco Supabase a partir do DER, conexão com a aplicação via ORM, refino das telas de login e RVT e dos papéis de acesso (RBAC).</div>
+              <div class="event-desc">Entregáveis pendentes: banco Supabase com migrations, camada ORM, telas de login e RVT refinadas, matriz RBAC refinada e testes unitários. Nenhum artefato gerado até o momento (entrega prorrogada para a Semana 11 por decisão da equipe).</div>
             </div>
           </div>
-          <span class="status-pill andamento">Em Desenvolvimento</span>
+          <span class="status-pill pendente">Pendente</span>
         </div>
       </div>
     </div>
@@ -753,9 +753,9 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
                 <div class="cell-top"><span class="cell-num">12</span></div>
                 <span class="event-chip active-phase">Início Incr. 2</span>
               </td>
-              <td class="day-u3 day-meet" title="Validação sociotécnica do Incremento 2 com Maria Beatryz (a confirmar)">
+              <td class="day-u3" title="Validação do Incremento 2 prevista para 13/11, remarcada pela cliente para 16/11">
                 <div class="cell-top"><span class="cell-num">13</span></div>
-                <span class="event-chip meet">Validação Incr. 2</span>
+                <span class="event-chip">Remarcada p/ 16/11</span>
               </td>
               <td class="day-u3">
                 <div class="cell-top"><span class="cell-num">14</span></div>
@@ -766,9 +766,9 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
                 <div class="cell-top"><span class="cell-num">15</span></div>
                 <span class="event-chip">Proclamação</span>
               </td>
-              <td class="day-u3" title="DoR atendido para a lógica do Incremento 2">
+              <td class="day-u3 day-meet" title="Validação sociotécnica do Incremento 2 com Maria Beatryz (remarcada pela cliente de 13/11) e DoR do Incremento 2">
                 <div class="cell-top"><span class="cell-num">16</span></div>
-                <span class="event-chip active-phase">DoR Incr. 2</span>
+                <span class="event-chip meet">Validação Incr. 2</span>
               </td>
               <td class="day-milestone" title="PC3 — prazo de publicação antes das 08h e primeiro dia de apresentações">
                 <div class="cell-top"><span class="cell-num">17</span></div>
@@ -847,10 +847,10 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
             <span class="event-date-badge"><span class="ev-d">05</span><span class="ev-m">NOV</span></span>
             <div class="event-info">
               <div class="event-name">Conclusão do Incremento 1 (Semana 10)</div>
-              <div class="event-desc">Fechamento das pendências de cadastro, autenticação, RBAC e RVT integrados ao banco Supabase, validação das telas no frontend navegável, verificação em Staging e revisão dos requisitos do incremento.</div>
+              <div class="event-desc">Entregáveis pendentes: cadastro e autenticação com persistência em Staging, RVT integrado ao banco, RBAC completo, relatório Fagan, catálogo e rastreabilidade revisados e DoD. Nenhum artefato gerado até 15/11/2026 (entrega prorrogada para a Semana 11 por decisão da equipe).</div>
             </div>
           </div>
-          <span class="status-pill andamento">Em Desenvolvimento</span>
+          <span class="status-pill pendente">Pendente</span>
         </div>
 
         <div class="month-event-item">
@@ -866,13 +866,13 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
 
         <div class="month-event-item">
           <div class="month-event-left">
-            <span class="event-date-badge"><span class="ev-d">13</span><span class="ev-m">NOV</span></span>
+            <span class="event-date-badge"><span class="ev-d">16</span><span class="ev-m">NOV</span></span>
             <div class="event-info">
-              <div class="event-name">Validação Sociotécnica do Incremento 2 com Maria Beatryz</div>
-              <div class="event-desc">Navegação guiada no Frontend com foco nas telas financeiras; revisão e validação dos requisitos afetados após a sessão. Sujeita a confirmação de agenda e registro em ata.</div>
+              <div class="event-name">Validação Sociotécnica do Incremento 2 com Maria Beatryz (remarcada de 13/11 para 16/11)</div>
+              <div class="event-desc">Sessão prevista para 13/11 e remarcada pela cliente para 16/11. Navegação guiada no Frontend com foco nas telas financeiras; os requisitos afetados serão revisados e validados após a sessão. A ata será registrada após a realização.</div>
             </div>
           </div>
-          <span class="status-pill marcada">Sessão prevista (a confirmar)</span>
+          <span class="status-pill marcada">Remarcada para 16/11</span>
         </div>
 
         <div class="month-event-item">
@@ -1030,6 +1030,19 @@ Utilize os **cards seletores integrados no topo do calendário** para alternar e
 </div> <!-- fim .calendar-unified-card -->
 
 </div> <!-- fim .calendar-unified-widget -->
+
+---
+
+## Visão Consolidada: Incremento 1 e Validação do Incremento 2
+
+Situação em **16/11/2026**: as semanas 08 a 10 já se encerraram e seguem **pendentes** (entrega prorrogada para a Semana 11 por decisão da equipe). A tabela relaciona cada atividade ao prazo previsto, ao estado real, ao resultado e à evidência. Onde não há evidência, a pendência é registrada como `pendente: motivo`.
+
+| Atividade / Incremento | Prazo previsto | Estado real | Resultado | Evidência |
+| :--- | :---: | :---: | :--- | :--- |
+| **Incremento 1 — Semana 08:** DER, telas de cadastro/autenticação, repositório com pipeline na Vercel e escopo no GitHub Projects | 20/10 a 27/10 | <span class="status-pill pendente">Pendente</span> | Entregues: DER revisado, telas de cadastro e autenticação, repositório com pipeline na Vercel e escopo atualizado. Pendentes (entrega prorrogada para a Semana 11 por decisão da equipe): RBAC base, RVT inicial e dados sintéticos | [DER (modelagem_bd.md)](../mvp/modelagem_bd.md) • [PR #167](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167) • [PR #160](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/160) • [GitHub Projects #119](https://github.com/orgs/mdsreq-fga-unb/projects/119) |
+| **Incremento 1 — Semana 09:** banco Supabase, camada ORM, telas de login/RVT refinadas, RBAC refinado e testes | 28/10 a 04/11 | <span class="status-pill pendente">Pendente</span> | Nenhum entregável concluído | pendente: entrega prorrogada para a Semana 11 por decisão da equipe |
+| **Incremento 1 — Semana 10:** cadastro e autenticação com persistência em Staging, RVT integrado, RBAC completo, Fagan, catálogo/rastreabilidade revisados e DoD | 05/11 a 11/11 | <span class="status-pill pendente">Pendente</span> | Nenhum entregável concluído | pendente: entrega prorrogada para a Semana 11 por decisão da equipe |
+| **Validação sociotécnica do Incremento 2** com Maria Beatryz | 13/11 (remarcada para 16/11) | <span class="status-pill marcada">Remarcada</span> | Remarcada pela cliente de 13/11 para 16/11; realização a registrar em ata | pendente: ata da sessão de 16/11 ainda não registrada
 
 ---
 
@@ -1329,16 +1342,16 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
 
 === "Incremento 1 — Cadastro, Autenticação & RVT (Semanas 08 a 10)"
 
-    > **Período:** 20/10 a 11/11/2026 • **Status:** Em Desenvolvimento, com atraso registrado na Semana 08<br>
+    > **Período:** 20/10 a 11/11/2026 (encerrado) • **Status:** Pendente — consulte a [Visão Consolidada](#visao-consolidada-incremento-1-e-validacao-do-incremento-2)<br>
     > **Foco:** Construção da lógica e persistência por trás das telas já validadas: cadastro unificado (CAR-01), RVT (CAR-02), RBAC (CAR-07), modelagem de dados (DER / Supabase), conexão via ORM e verificação em Staging.
 
-    <div class="week-card status-andamento">
+    <div class="week-card status-pendente">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <span class="week-card-title">Semana 08</span>
           <span class="week-card-period">20/10 a 27/10/2026</span>
         </div>
-        <span class="status-pill andamento">Em Desenvolvimento / Em Atraso</span>
+        <span class="status-pill pendente">Pendente</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -1363,27 +1376,35 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           </ul>
         </div>
         <div>
-          <div class="week-section-title">Entregáveis Esperados</div>
+          <div class="week-section-title">Entregáveis Pendentes</div>
           <ul>
-            <li>Diagrama Entidade-Relacionamento (DER) revisado, com homologação sujeita a registro;</li>
-            <li>Repositório de código configurado com pipeline na Vercel;</li>
-            <li>Telas de cadastro e autenticação de usuário;</li>
             <li>Controle de acesso baseado em papéis (RBAC) em versão base;</li>
             <li>Módulo móvel de registro de viagens (RVT) em versão inicial;</li>
-            <li>Dados sintéticos carregados para o ambiente de desenvolvimento;</li>
-            <li>Backlog atualizado no GitHub Projects, com as pendências da semana registradas para replanejamento.</li>
+            <li>Dados sintéticos carregados para o ambiente de desenvolvimento.</li>
+        <li><em>Justificativa: entrega prorrogada para a Semana 11 por decisão da equipe.</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="week-card-grid">
+        <div>
+          <div class="week-section-title">Entregáveis e Artefatos Gerados</div>
+          <ul>
+            <li>Diagrama Entidade-Relacionamento (DER) revisado, com homologação sujeita a registro — evidência: <a href="../../mvp/modelagem_bd/">docs/mvp/modelagem_bd.md</a></li>
+            <li>Telas de cadastro e autenticação de usuário — evidência: <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener noreferrer">Pull Request #167</a></li>
+            <li>Repositório de código configurado com pipeline na Vercel — evidência: <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/160" target="_blank" rel="noopener noreferrer">Pull Request #160</a></li>
+            <li>Escopo atualizado no GitHub Projects, com as pendências da semana registradas para replanejamento — evidência: <a href="https://github.com/orgs/mdsreq-fga-unb/projects/119" target="_blank" rel="noopener noreferrer">GitHub Projects #119</a></li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="week-card status-andamento">
+    <div class="week-card status-pendente">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <span class="week-card-title">Semana 09</span>
           <span class="week-card-period">28/10 a 04/11/2026</span>
         </div>
-        <span class="status-pill andamento">Em Desenvolvimento</span>
+        <span class="status-pill pendente">Pendente</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -1407,25 +1428,34 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           </ul>
         </div>
         <div>
-          <div class="week-section-title">Entregáveis Esperados</div>
+          <div class="week-section-title">Entregáveis Pendentes</div>
           <ul>
             <li>Banco de dados Supabase provisionado, com <em>migrations</em> versionadas;</li>
             <li>Camada ORM conectada à aplicação e às entidades do DER;</li>
             <li>Telas de login e RVT refinadas e integradas à persistência;</li>
             <li>Matriz de papéis × permissões (RBAC) refinada e documentada;</li>
             <li>Testes unitários das regras de cadastro e autenticação.</li>
+        <li><em>Justificativa: entrega prorrogada para a Semana 11 por decisão da equipe.</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="week-card-grid">
+        <div>
+          <div class="week-section-title">Entregáveis e Artefatos Gerados</div>
+          <ul>
+            <li><em>Nenhum artefato gerado até o momento.</em></li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="week-card status-andamento">
+    <div class="week-card status-pendente">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <span class="week-card-title">Semana 10</span>
           <span class="week-card-period">05/11 a 11/11/2026</span>
         </div>
-        <span class="status-pill andamento">Em Desenvolvimento</span>
+        <span class="status-pill pendente">Pendente</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -1450,14 +1480,23 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           </ul>
         </div>
         <div>
-          <div class="week-section-title">Entregáveis Esperados</div>
+          <div class="week-section-title">Entregáveis Pendentes</div>
           <ul>
-            <li>Cadastro unificado (<a href="../../visao-produto/solucao-proposta/#car-01">CAR-01</a>) e autenticação com persistência funcionando em <em>Staging</em>;</li>
-            <li>Módulo RVT (<a href="../../visao-produto/solucao-proposta/#car-02">CAR-02</a>) integrado ao banco de dados;</li>
-            <li>RBAC (<a href="../../visao-produto/solucao-proposta/#car-07">CAR-07</a>) completo e testado;</li>
+            <li>Cadastro unificado (CAR-01) e autenticação com persistência funcionando em <em>Staging</em>;</li>
+            <li>Módulo RVT (CAR-02) integrado ao banco de dados;</li>
+            <li>RBAC (CAR-07) completo e testado;</li>
             <li>Relatório de verificação (Fagan) e testes automatizados do incremento;</li>
             <li>Catálogo de requisitos revisado e matriz de rastreabilidade atualizada;</li>
             <li>Registro de DoD do Incremento 1 e backlog replanejado no GitHub Projects.</li>
+        <li><em>Justificativa: entrega prorrogada para a Semana 11 por decisão da equipe.</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="week-card-grid">
+        <div>
+          <div class="week-section-title">Entregáveis e Artefatos Gerados</div>
+          <ul>
+            <li><em>Nenhum artefato gerado até o momento.</em></li>
           </ul>
         </div>
       </div>
@@ -1493,10 +1532,11 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
         <div>
           <div class="week-section-title">Atividades Planejadas e Técnicas de ER</div>
           <ul>
-            <li><strong>Plan do Incremento 2:</strong> atualização dos requisitos do incremento (<a href="../../visao-produto/solucao-proposta/#car-03">CAR-03</a>, <a href="../../visao-produto/solucao-proposta/#car-04">CAR-04</a> e <a href="../../visao-produto/solucao-proposta/#car-08">CAR-08</a>) sobre o catálogo vigente;</li>
+            <li>Conclusão dos entregáveis prorrogados das Semanas 08 a 10 do Incremento 1 (RBAC, RVT, dados sintéticos, banco Supabase e ORM, telas refinadas, testes, verificação em <em>Staging</em> e DoD);</li>
+          <li><strong>Plan do Incremento 2:</strong> atualização dos requisitos do incremento (<a href="../../visao-produto/solucao-proposta/#car-03">CAR-03</a>, <a href="../../visao-produto/solucao-proposta/#car-04">CAR-04</a> e <a href="../../visao-produto/solucao-proposta/#car-08">CAR-08</a>) sobre o catálogo vigente;</li>
             <li>Estabelecimento dos designs das telas do <strong>Motor Financeiro (<a href="../../visao-produto/solucao-proposta/#car-03">CAR-03</a>)</strong> e da <strong>Prestação de Contas / Reembolsos (<a href="../../visao-produto/solucao-proposta/#car-04">CAR-04</a>)</strong> diretamente no Frontend, com o Figma como referência;</li>
             <li>Desenho funcional dos fluxos de aprovação de diárias de campo, cálculo visual de adiantamentos e upload de comprovantes com dados simulados;</li>
-            <li><strong>Sessão de Validação Sociotécnica Invertida (13/11/2026, a confirmar)</strong>: Maria Beatryz navega pelas telas financeiras no Frontend via Google Meet, validando campos, layouts e regras visuais;</li>
+            <li><strong>Sessão de Validação Sociotécnica Invertida (prevista para 13/11/2026 e remarcada pela cliente para 16/11/2026)</strong>: Maria Beatryz navega pelas telas financeiras no Frontend via Google Meet, validando campos, layouts e regras visuais;</li>
             <li>Revisão e validação dos requisitos afetados após a sessão, registro dos apontamentos de IHC e verificação do DoR do Incremento 2;</li>
             <li><strong>PC3:</strong> publicação da Entrega 3 até 17/11/2026 às 08h, com gravação em 18/11 e apresentações em 17 e 19/11.</li>
           </ul>

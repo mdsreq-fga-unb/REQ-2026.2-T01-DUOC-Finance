@@ -4484,3 +4484,43 @@
   color: #cbd5e1;
   border-color: rgba(148, 163, 184, 0.3);
 }
+
+
+/* Status Pendente (Vermelho #971828) */
+.status-pill.pendente {
+  background: rgba(151, 24, 40, 0.18) !important;
+  color: #ff8a97 !important;
+  border: 1px solid #971828 !important;
+}
+
+[data-md-color-scheme="default"] .status-pill.pendente {
+  background: rgba(151, 24, 40, 0.10) !important;
+  color: #971828 !important;
+}
+
+.week-card.status-pendente {
+  border: 1px solid #971828 !important;
+}
+
+.week-card.status-pendente:hover {
+  border-color: #971828 !important;
+  box-shadow: 0 4px 14px rgba(151, 24, 40, 0.28) !important;
+}
+
+.week-card.status-pendente .week-card-header {
+  background: rgba(151, 24, 40, 0.22) !important;
+  border-bottom-color: rgba(151, 24, 40, 0.5) !important;
+}
+
+[data-md-color-scheme="default"] .week-card.status-pendente .week-card-header {
+  background: rgba(151, 24, 40, 0.08) !important;
+  border-bottom-color: rgba(151, 24, 40, 0.3) !important;
+}
+
+.week-card.status-pendente .week-card-title {
+  color: #ff8a97 !important;
+}
+
+[data-md-color-scheme="default"] .week-card.status-pendente .week-card-title {
+  color: #971828 !important;
+}
