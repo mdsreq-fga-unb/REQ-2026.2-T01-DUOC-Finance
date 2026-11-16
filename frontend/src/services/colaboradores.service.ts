@@ -11,6 +11,12 @@ import { unmaskCPF } from "../utils/masks";
 
 const STORAGE_KEY = "duoc_finance_colaboradores_v1";
 
+// Flag para determinar integração com API remota (/api/colaboradores)
+// Como o backend ainda está na fase de infraestrutura base (apenas /api/health),
+// mantemos 'false' por padrão para evitar erros 502 (Bad Gateway) do proxy do Vite.
+// Alterne VITE_USE_REMOTE_API=true no ambiente quando o controlador NestJS for publicado.
+const USE_REMOTE_API = import.meta.env.VITE_USE_REMOTE_API === "true";
+
 // Carga inicial (Seed) para demonstração e desenvolvimento do DUOC Finance
 const SEED_COLABORADORES: Colaborador[] = [
   {
@@ -144,21 +150,23 @@ export const ColaboradoresService = {
     page: number;
     totalPages: number;
   }> {
-    // Tenta chamada HTTP real se API estiver disponível
-    try {
-      const query = new URLSearchParams();
-      if (filters.search) query.append("search", filters.search);
-      if (filters.status && filters.status !== "Todos") query.append("status", filters.status);
-      if (filters.regime && filters.regime !== "Todos") query.append("regime", filters.regime);
-      if (filters.page) query.append("page", String(filters.page));
-      if (filters.limit) query.append("limit", String(filters.limit));
+    // Tenta chamada HTTP real se a flag de API remota estiver habilitada
+    if (USE_REMOTE_API) {
+      try {
+        const query = new URLSearchParams();
+        if (filters.search) query.append("search", filters.search);
+        if (filters.status && filters.status !== "Todos") query.append("status", filters.status);
+        if (filters.regime && filters.regime !== "Todos") query.append("regime", filters.regime);
+        if (filters.page) query.append("page", String(filters.page));
+        if (filters.limit) query.append("limit", String(filters.limit));
 
-      const res = await fetch(`/api/colaboradores?${query.toString()}`);
-      if (res.ok) {
-        return await res.json();
+        const res = await fetch(`/api/colaboradores?${query.toString()}`);
+        if (res.ok) {
+          return await res.json();
+        }
+      } catch {
+        // Fallback para persistência local
       }
-    } catch {
-      // Fallback para persistência local
     }
 
     // Processamento local de filtros
@@ -203,13 +211,15 @@ export const ColaboradoresService = {
    * Busca um colaborador por ID
    */
   async getColaboradorById(id: string): Promise<Colaborador> {
-    try {
-      const res = await fetch(`/api/colaboradores/${id}`);
-      if (res.ok) {
-        return await res.json();
+    if (USE_REMOTE_API) {
+      try {
+        const res = await fetch(`/api/colaboradores/${id}`);
+        if (res.ok) {
+          return await res.json();
+        }
+      } catch {
+        // Fallback
       }
-    } catch {
-      // Fallback
     }
 
     const list = getStoredColaboradores();
@@ -224,17 +234,19 @@ export const ColaboradoresService = {
    * Cria um novo colaborador com validação de unicidade de CPF (RN22)
    */
   async createColaborador(dto: CreateColaboradorDTO): Promise<Colaborador> {
-    try {
-      const res = await fetch("/api/colaboradores", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(dto),
-      });
-      if (res.ok) {
-        return await res.json();
+    if (USE_REMOTE_API) {
+      try {
+        const res = await fetch("/api/colaboradores", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dto),
+        });
+        if (res.ok) {
+          return await res.json();
+        }
+      } catch {
+        // Fallback
       }
-    } catch {
-      // Fallback
     }
 
     const list = getStoredColaboradores();
@@ -263,17 +275,19 @@ export const ColaboradoresService = {
    * Atualiza os dados de um colaborador existente (RF02)
    */
   async updateColaborador(id: string, dto: UpdateColaboradorDTO): Promise<Colaborador> {
-    try {
-      const res = await fetch(`/api/colaboradores/${id}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(dto),
-      });
-      if (res.ok) {
-        return await res.json();
+    if (USE_REMOTE_API) {
+      try {
+        const res = await fetch(`/api/colaboradores/${id}`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dto),
+        });
+        if (res.ok) {
+          return await res.json();
+        }
+      } catch {
+        // Fallback
       }
-    } catch {
-      // Fallback
     }
 
     const list = getStoredColaboradores();
