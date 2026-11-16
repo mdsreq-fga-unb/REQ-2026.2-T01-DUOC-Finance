@@ -10,11 +10,12 @@ describe('AuthController | HTTP', () => {
   const login = vi.fn();
   const renovar = vi.fn();
   const logout = vi.fn();
+  const trocarSenha = vi.fn();
 
   beforeAll(async () => {
     const modulo = await Test.createTestingModule({
       controllers: [AuthController],
-      providers: [{ provide: AuthService, useValue: { login, renovar, logout } }],
+      providers: [{ provide: AuthService, useValue: { login, renovar, logout, trocarSenha } }],
     }).compile();
     app = modulo.createNestApplication();
     app.setGlobalPrefix('api');
@@ -25,6 +26,7 @@ describe('AuthController | HTTP', () => {
     login.mockReset();
     renovar.mockReset();
     logout.mockReset();
+    trocarSenha.mockReset();
   });
   afterAll(async () => app.close());
 
@@ -70,6 +72,43 @@ describe('AuthController | HTTP', () => {
         expect(res.body).toMatchObject({ statusCode: 401, message: 'Credenciais inválidas.' });
       });
     expect(login).toHaveBeenCalledTimes(1);
+  });
+
+  it('troca senha por HTTP 204 e não devolve nenhum hash', async () => {
+    trocarSenha.mockResolvedValue(undefined);
+    await request(app.getHttpServer())
+      .post('/api/auth/trocar-senha')
+      .send({
+        email: 'admin@duoc.com.br',
+        senhaAtual: 'SenhaAntigaDeTeste!2026',
+        senhaNova: 'SenhaNovaDeTeste!2026',
+      })
+      .expect(204);
+    expect(trocarSenha).toHaveBeenCalledWith(
+      'admin@duoc.com.br', 'SenhaAntigaDeTeste!2026', 'SenhaNovaDeTeste!2026',
+    );
+  });
+
+  it('recusa payload inválido na troca de senha com HTTP 400', async () => {
+    await request(app.getHttpServer())
+      .post('/api/auth/trocar-senha')
+      .send({ email: 'invalido', senhaAtual: 'x', senhaNova: 'curta' })
+      .expect(400);
+    expect(trocarSenha).not.toHaveBeenCalled();
+  });
+
+  it('responde HTTP 401 para senha atual incorreta', async () => {
+    trocarSenha.mockImplementationOnce(() => {
+      throw new UnauthorizedException('Credenciais inválidas.');
+    });
+    await request(app.getHttpServer())
+      .post('/api/auth/trocar-senha')
+      .send({
+        email: 'admin@duoc.com.br',
+        senhaAtual: 'SenhaAntigaDeTeste!2026',
+        senhaNova: 'SenhaNovaDeTeste!2026',
+      })
+      .expect(401);
   });
 
   it('renova tokens por HTTP 200', async () => {

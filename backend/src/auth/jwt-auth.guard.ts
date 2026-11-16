@@ -8,6 +8,7 @@ import {
 import type { Request } from 'express';
 import { PrismaService } from '../prisma/prisma.service.js';
 import { JwtInvalidoError, verificarJwtHs256 } from './jwt.util.js';
+import { senhaExpirada } from './politica-senha.util.js';
 
 export interface UsuarioAutenticado {
   usuarioId?: string;
@@ -77,7 +78,8 @@ export class JwtAuthGuard implements CanActivate {
       sessao.revogadaEm !== null ||
       sessao.expiraEm <= new Date() ||
       !sessao.usuario.ativo ||
-      sessao.usuario.senhaAtualizadaEm.getTime() > sessao.criadaEm.getTime()
+      sessao.usuario.senhaAtualizadaEm.getTime() > sessao.criadaEm.getTime() ||
+      senhaExpirada(sessao.usuario.senhaAtualizadaEm)
     ) {
       throw new UnauthorizedException('Sessão inválida ou revogada.');
     }

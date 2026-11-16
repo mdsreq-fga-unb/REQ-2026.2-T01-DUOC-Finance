@@ -22,7 +22,7 @@ function sessaoBase() {
       id: 'usuario-1',
       ativo: true,
       papel: 'GESTOR_OPERACIONAL',
-      senhaAtualizadaEm: new Date('2026-01-01'),
+      senhaAtualizadaEm: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
     },
   };
 }
@@ -108,6 +108,18 @@ describe('JwtAuthGuard | sessão real / RN16', () => {
       usuario: { ...sessaoBase().usuario, senhaAtualizadaEm: new Date(Date.now()+1000) },
     });
     await expect(guard.canActivate(contexto(jwt()).context)).rejects.toThrow(UnauthorizedException);
+  });
+
+  it('recusa access token quando a senha já ultrapassou o prazo RF24', async () => {
+    sessaoFindUnique.mockResolvedValue({
+      ...sessaoBase(),
+      usuario: {
+        ...sessaoBase().usuario,
+        senhaAtualizadaEm: new Date(Date.now() - 91 * 24 * 60 * 60 * 1000),
+      },
+    });
+    await expect(guard.canActivate(contexto(jwt()).context))
+      .rejects.toThrow(UnauthorizedException);
   });
 
   it('mantém vínculo com colaborador separado do sub da conta', async () => {

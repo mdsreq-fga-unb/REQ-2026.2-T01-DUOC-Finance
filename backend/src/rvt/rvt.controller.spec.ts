@@ -63,7 +63,7 @@ describe('RvtController (HTTP)', () => {
         id: usuarioAtual,
         ativo: true,
         papel: 'TECNICO_CAMPO',
-        senhaAtualizadaEm: new Date('2026-01-01T00:00:00Z'),
+        senhaAtualizadaEm: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
       },
     }));
   });

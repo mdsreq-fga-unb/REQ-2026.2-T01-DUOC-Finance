@@ -1,11 +1,14 @@
 import {
+  BadRequestException,
+  ForbiddenException,
   Injectable,
   ServiceUnavailableException,
   UnauthorizedException,
 } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service.js';
 import { assinarJwtHs256 } from './jwt.util.js';
-import { conferirSenha } from './senha.util.js';
+import { conferirSenha, gerarHashSenha } from './senha.util.js';
+import { senhaExpirada } from './politica-senha.util.js';
 import {
   formatoRefreshTokenValido,
   gerarRefreshToken,
@@ -135,6 +138,12 @@ export class AuthService {
       throw new UnauthorizedException('Credenciais inválidas.');
     }
 
+    // RF24 — só revela a necessidade de renovação após confirmar a senha.
+    // Não emite JWT nem sessão para senhas vencidas.
+    if (senhaExpirada(usuario.senhaAtualizadaEm, agora)) {
+      throw new ForbiddenException('Senha expirada. Atualize sua senha.');
+    }
+
     // O reset usa condição no banco para que um login correto concorrente não
     // consiga abrir uma sessão após a quinta falha registrar o bloqueio.
     const reset = await this.prisma.usuario.updateMany({
@@ -180,7 +189,8 @@ export class AuthService {
       sessao.revogadaEm !== null ||
       sessao.expiraEm <= agora ||
       !sessao.usuario.ativo ||
-      sessao.usuario.senhaAtualizadaEm.getTime() > sessao.criadaEm.getTime()
+      sessao.usuario.senhaAtualizadaEm.getTime() > sessao.criadaEm.getTime() ||
+      senhaExpirada(sessao.usuario.senhaAtualizadaEm, agora)
     ) {
       throw new UnauthorizedException('Sessão inválida ou expirada.');
     }
@@ -208,6 +218,66 @@ export class AuthService {
       agora,
       sessao.expiraEm,
     );
+  }
+
+  /**
+   * RF24 — permite trocar senha vencida mediante prova da senha atual.
+   * Revoga TODAS as sessões na mesma transação que altera o hash.
+   * A conta precisa autenticar novamente após a troca.
+   */
+  async trocarSenha(
+    emailInformado: string,
+    senhaAtual: string,
+    senhaNova: string,
+  ): Promise<void> {
+    if (senhaNova.length < 12 || Buffer.byteLength(senhaNova, 'utf8') > 72) {
+      throw new BadRequestException('A nova senha deve ter ao menos 12 caracteres e até 72 bytes.');
+    }
+
+    const email = emailInformado.trim().toLowerCase();
+    const usuario = await this.prisma.usuario.findUnique({ where: { email } });
+    // Mesmo para contas inexistentes, realiza comparação bcrypt.
+    const senhaCorreta = await conferirSenha(
+      senhaAtual,
+      usuario?.senhaHash ?? HASH_FICTICIO,
+    );
+    const agora = new Date();
+    const estaBloqueado = !!usuario?.bloqueadoAte && usuario.bloqueadoAte > agora;
+    if (!usuario || !usuario.ativo || !senhaCorreta || estaBloqueado) {
+      if (usuario?.ativo && !senhaCorreta && !estaBloqueado) {
+        await this.registrarFalhaLogin(usuario.id);
+      }
+      throw new UnauthorizedException('Credenciais inválidas.');
+    }
+    if (await conferirSenha(senhaNova, usuario.senhaHash)) {
+      throw new BadRequestException('A nova senha deve ser diferente da atual.');
+    }
+
+    const novoHash = await gerarHashSenha(senhaNova);
+    // Transação garante revogação de sessões e troca de senha como um único ato.
+    await this.prisma.$transaction(async (tx) => {
+      const alteracao = await tx.usuario.updateMany({
+        where: {
+          id: usuario.id,
+          ativo: true,
+          senhaHash: usuario.senhaHash, // proteção contra atualização concorrente
+          OR: [{ bloqueadoAte: null }, { bloqueadoAte: { lte: agora } }],
+        },
+        data: {
+          senhaHash: novoHash,
+          senhaAtualizadaEm: agora,
+          tentativasFalhas: 0,
+          bloqueadoAte: null,
+        },
+      });
+      if (alteracao.count !== 1) {
+        throw new UnauthorizedException('Credenciais inválidas.');
+      }
+      await tx.sessao.updateMany({
+        where: { usuarioId: usuario.id, revogadaEm: null },
+        data: { revogadaEm: agora, refreshTokenHash: null },
+      });
+    });
   }
 
   /** RF18 — permite logout mesmo quando o access token já expirou. */

@@ -1,4 +1,4 @@
-import { ServiceUnavailableException, UnauthorizedException } from '@nestjs/common';
+import { BadRequestException, ForbiddenException, ServiceUnavailableException, UnauthorizedException } from '@nestjs/common';
 import type { PrismaService } from '../prisma/prisma.service.js';
 import { verificarJwtHs256 } from './jwt.util.js';
 import {
@@ -8,7 +8,8 @@ import {
   MAX_TENTATIVAS_LOGIN,
   BLOQUEIO_LOGIN_MINUTOS,
 } from './auth.service.js';
-import { gerarHashSenha } from './senha.util.js';
+import { conferirSenha, gerarHashSenha } from './senha.util.js';
+import { VALIDADE_SENHA_DIAS } from './politica-senha.util.js';
 import { gerarRefreshToken, hashRefreshToken } from './refresh-token.util.js';
 
 const SEGREDO = 'segredo-seguro-para-testes-de-autenticacao-123';
@@ -19,12 +20,14 @@ const ambienteOriginal = process.env.JWT_SECRET;
 const usuarioFindUnique = vi.fn();
 const usuarioUpdateMany = vi.fn();
 const executeRaw = vi.fn();
+const transacao = vi.fn();
 const sessaoCreate = vi.fn();
 const sessaoFindUnique = vi.fn();
 const sessaoUpdateMany = vi.fn();
 const prisma = {
   usuario: { findUnique: usuarioFindUnique, updateMany: usuarioUpdateMany },
   $executeRaw: executeRaw,
+  $transaction: transacao,
   sessao: {
     create: sessaoCreate,
     findUnique: sessaoFindUnique,
@@ -42,7 +45,7 @@ function usuarioBase() {
     senhaHash,
     papel: 'ADMIN_FINANCEIRO',
     ativo: true,
-    senhaAtualizadaEm: new Date('2026-01-01T00:00:00Z'),
+    senhaAtualizadaEm: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
     tentativasFalhas: 0,
     bloqueadoAte: null as Date | null,
   };
@@ -70,6 +73,13 @@ beforeEach(() => {
   executeRaw.mockReset();
   usuarioUpdateMany.mockResolvedValue({ count: 1 });
   executeRaw.mockResolvedValue(1);
+  transacao.mockReset();
+  transacao.mockImplementation((operacao: (tx: unknown) => Promise<unknown>) =>
+    operacao({
+      usuario: { updateMany: usuarioUpdateMany },
+      sessao: { updateMany: sessaoUpdateMany },
+    }),
+  );
   sessaoCreate.mockReset();
   sessaoFindUnique.mockReset();
   sessaoUpdateMany.mockReset();
@@ -327,6 +337,104 @@ describe('AuthService.renovar / logout | RF18 / RN16', () => {
     });
     sessaoUpdateMany.mockReset();
     await service.logout('invalido');
+    expect(sessaoUpdateMany).not.toHaveBeenCalled();
+  });
+});
+
+
+describe('AuthService | RF24 — renovação periódica de senhas', () => {
+  const SENHA_NOVA = 'NovaSenhaDeTeste!2026';
+  const senhaVencidaEm = () => new Date(
+    Date.now() - (VALIDADE_SENHA_DIAS + 1) * 24 * 60 * 60 * 1000,
+  );
+
+  it('nega login com senha vencida, mesmo correta, com 403 e sem criar sessão', async () => {
+    usuarioFindUnique.mockResolvedValue({
+      ...usuarioBase(), senhaAtualizadaEm: senhaVencidaEm(),
+    });
+    await expect(service.login('admin@duoc.com.br', SENHA))
+      .rejects.toThrow(ForbiddenException);
+    expect(sessaoCreate).not.toHaveBeenCalled();
+    expect(usuarioUpdateMany).not.toHaveBeenCalled();
+  });
+
+  it('mantém 401 genérico para senha errada mesmo quando a senha venceu', async () => {
+    usuarioFindUnique.mockResolvedValue({
+      ...usuarioBase(), senhaAtualizadaEm: senhaVencidaEm(),
+    });
+    await expect(service.login('admin@duoc.com.br', 'SenhaErradaDeTeste!'))
+      .rejects.toThrow(UnauthorizedException);
+    expect(executeRaw).toHaveBeenCalledTimes(1);
+  });
+
+  it('recusa refresh quando a senha venceu, sem rotacionar token', async () => {
+    sessaoFindUnique.mockResolvedValue({
+      ...sessaoBase(),
+      usuario: { ...usuarioBase(), senhaAtualizadaEm: senhaVencidaEm() },
+    });
+    await expect(service.renovar(gerarRefreshToken()))
+      .rejects.toThrow(UnauthorizedException);
+    expect(sessaoUpdateMany).not.toHaveBeenCalled();
+  });
+
+  it('permite trocar senha vencida e revoga todas as sessões em transação', async () => {
+    usuarioFindUnique.mockResolvedValue({
+      ...usuarioBase(), senhaAtualizadaEm: senhaVencidaEm(),
+    });
+    await expect(service.trocarSenha(' ADMIN@DUOC.COM.BR ', SENHA, SENHA_NOVA))
+      .resolves.toBeUndefined();
+    expect(transacao).toHaveBeenCalledTimes(1);
+    expect(usuarioUpdateMany).toHaveBeenCalledTimes(1);
+    const alteracao = usuarioUpdateMany.mock.calls[0][0];
+    expect(alteracao.where).toMatchObject({
+      id: USUARIO_ID, ativo: true, senhaHash,
+    });
+    expect(alteracao.data).toMatchObject({
+      senhaAtualizadaEm: expect.any(Date),
+      tentativasFalhas: 0,
+      bloqueadoAte: null,
+    });
+    expect(alteracao.data.senhaHash).not.toBe(senhaHash);
+    expect(await conferirSenha(SENHA_NOVA, alteracao.data.senhaHash)).toBe(true);
+    expect(sessaoUpdateMany).toHaveBeenCalledWith({
+      where: { usuarioId: USUARIO_ID, revogadaEm: null },
+      data: { revogadaEm: alteracao.data.senhaAtualizadaEm, refreshTokenHash: null },
+    });
+    expect(sessaoCreate).not.toHaveBeenCalled();
+  });
+
+  it('recusa reutilização da senha atual', async () => {
+    await expect(service.trocarSenha('admin@duoc.com.br', SENHA, SENHA))
+      .rejects.toThrow(BadRequestException);
+    expect(transacao).not.toHaveBeenCalled();
+  });
+
+  it('recusa nova senha fraca e não consulta o banco', async () => {
+    await expect(service.trocarSenha('admin@duoc.com.br', SENHA, '123'))
+      .rejects.toThrow(BadRequestException);
+    expect(usuarioFindUnique).not.toHaveBeenCalled();
+  });
+
+  it('registra falha quando a senha atual está errada, sem alterar o hash', async () => {
+    await expect(service.trocarSenha('admin@duoc.com.br', 'senha-errada', SENHA_NOVA))
+      .rejects.toThrow(UnauthorizedException);
+    expect(executeRaw).toHaveBeenCalledTimes(1);
+    expect(transacao).not.toHaveBeenCalled();
+  });
+
+  it('não permite trocar senha com conta bloqueada, mesmo conhecendo a atual', async () => {
+    usuarioFindUnique.mockResolvedValue({
+      ...usuarioBase(), bloqueadoAte: new Date(Date.now() + 60_000),
+    });
+    await expect(service.trocarSenha('admin@duoc.com.br', SENHA, SENHA_NOVA))
+      .rejects.toThrow(UnauthorizedException);
+    expect(transacao).not.toHaveBeenCalled();
+  });
+
+  it('cancela transação quando outro processo já trocou a senha', async () => {
+    usuarioUpdateMany.mockResolvedValue({ count: 0 });
+    await expect(service.trocarSenha('admin@duoc.com.br', SENHA, SENHA_NOVA))
+      .rejects.toThrow(UnauthorizedException);
     expect(sessaoUpdateMany).not.toHaveBeenCalled();
   });
 });
