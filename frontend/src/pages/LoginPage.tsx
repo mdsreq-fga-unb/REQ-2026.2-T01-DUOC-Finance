@@ -10,11 +10,11 @@ import {
   Briefcase,
   Users,
   HardHat,
-  ShieldCheck,
   Loader2,
   HelpCircle,
   X,
   CheckCircle2,
+  MapPin,
 } from "lucide-react";
 import Button from "../components/ui/Button";
 import Input from "../components/ui/Input";
@@ -127,10 +127,10 @@ export default function LoginPage() {
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 scale-105"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1600&q=80')",
+              "url('https://images.unsplash.com/photo-1686150360446-ee7eae8026cf?auto=format&fit=crop&w=1600&q=80')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/65 to-dark/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent" />
 
         {/* Topo do Banner */}
         <div className="relative z-10">
@@ -246,7 +246,7 @@ export default function LoginPage() {
                 }}
                 className="text-primary hover:text-primary-dark font-medium transition-colors cursor-pointer"
               >
-                Primeiro acesso / Esqueci a senha
+                Esqueci minha senha
               </button>
             </div>
 
@@ -287,36 +287,36 @@ export default function LoginPage() {
               type="button"
               onClick={() => handleDemoAccess("gestor@duoc.com.br")}
               disabled={isLoading}
-              className="flex flex-col items-center justify-center p-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs text-dark gap-1.5 cursor-pointer shadow-2xs"
+              className="flex items-center justify-center py-2.5 px-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs font-medium text-dark gap-2 cursor-pointer shadow-2xs"
             >
-              <Briefcase className="w-4 h-4 text-primary" />
-              <span className="font-medium">Gestor</span>
+              <Briefcase className="w-4 h-4 text-dark/70" />
+              <span>Gestor</span>
             </button>
 
             <button
               type="button"
               onClick={() => handleDemoAccess("rh@duoc.com.br")}
               disabled={isLoading}
-              className="flex flex-col items-center justify-center p-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs text-dark gap-1.5 cursor-pointer shadow-2xs"
+              className="flex items-center justify-center py-2.5 px-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs font-medium text-dark gap-2 cursor-pointer shadow-2xs"
             >
-              <Users className="w-4 h-4 text-primary" />
-              <span className="font-medium">RH</span>
+              <Users className="w-4 h-4 text-dark/70" />
+              <span>RH</span>
             </button>
 
             <button
               type="button"
               onClick={() => handleDemoAccess("tecnico@duoc.com.br")}
               disabled={isLoading}
-              className="flex flex-col items-center justify-center p-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs text-dark gap-1.5 cursor-pointer shadow-2xs"
+              className="flex items-center justify-center py-2.5 px-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs font-medium text-dark gap-2 cursor-pointer shadow-2xs"
             >
-              <HardHat className="w-4 h-4 text-primary" />
-              <span className="font-medium">Técnico</span>
+              <HardHat className="w-4 h-4 text-dark/70" />
+              <span>Técnico</span>
             </button>
           </div>
 
           {/* Rodapé / Nota informativa */}
           <div className="flex items-center justify-center gap-1.5 text-xs text-muted pt-2">
-            <ShieldCheck className="w-3.5 h-3.5" />
+            <MapPin className="w-3.5 h-3.5" />
             <span>Ambiente de demonstração · Sem dados reais</span>
           </div>
         </div>
