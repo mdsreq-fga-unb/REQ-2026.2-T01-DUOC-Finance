@@ -16,6 +16,8 @@
 * **Objetivo da Sessão:** Verificar a especificação de requisitos de software (21 Requisitos Funcionais e Requisitos Não Funcionais cobrindo os 4 módulos essenciais), discutir com a cliente a priorização e a matriz 4 × 4 baseada em esforço, complexidade e capacidade da equipe, deliberar sobre ajustes propostos para o Minimum Viable Product (inclusão do RF11, rebaixamento do RF21, exclusão do RF16 e postergação do RNF01), revisar os requisitos de segurança e infraestrutura na Vercel (`finance.doc.br`) e validar a priorização e a proposta de escopo do MVP, aprovada com ressalvas.
 
 
+
+
 ---
 
 ## 1. Pauta
@@ -58,8 +60,7 @@ Foram estabelecidas regras de negócio fundamentais para assegurar a consistênc
 * **Bloqueio Automático de Edição Retroativa por Cinco Dias Úteis:** Mecanismo compulsório que impede alterações arbitrárias após o fechamento de lotes (`00:05:06`);
 * **Gerenciamento de Perfis de Acesso (RBAC):** Configuração de níveis de privilégio para solucionar de forma definitiva os problemas decorrentes do compartilhamento generalizado de planilhas (`00:08:23`).
 
-Eric Araújo revisou a aderência dos documentos ao contexto da empresa e à dinâmica das obras (`00:05:06`, `00:09:27`). A cliente também participou da reunião e validou a priorização apresentada, conforme o registro da decisão D5.
-
+Maria Beatryz revisou a aderência dos documentos ao contexto da empresa e à dinâmica das obras e validou institucionalmente os requisitos discutidos (`00:05:06`, `00:09:27`).
 ### 3.3 Critérios de Priorização e Definição do Minimum Viable Product
 Para gerenciar o volume de requisitos, Matheus Ribeiro Szervinsk apresentou a estratégia de priorização utilizando o método MoSCoW e uma fórmula de cálculo simples baseada em esforço, complexidade e capacidade da equipe (`00:10:34`). 
 
@@ -68,17 +69,17 @@ Os resultados foram mapeados em uma matriz 4x4 para definir o Minimum Viable Pro
 ### 3.4 Ajustes nos Requisitos do MVP com Inclusão de Indicadores de Custos
 Durante a revisão visual da matriz 4x4 compartilhada por Eric Araújo, Matheus Ribeiro Szervinsk e a equipe avaliaram os itens priorizados e postergados (`00:16:27`). 
 
-Constatou-se que o requisito funcional **RF11**, referente à filtragem de indicadores de custo por obra, havia sido adiado preliminarmente. O grupo alinhou e decidiu incluí-lo imediatamente no escopo prioritário do MVP para elevar o valor de negócio da solução e atender diretamente à necessidade de visibilidade financeira por canteiro (`00:19:39`).
+Constatou-se que o requisito funcional **RF11**, referente à filtragem de indicadores de custo por obra, havia sido adiado preliminarmente. Maria Beatryz destacou a importância do requisito e pediu sua inclusão no escopo prioritário do MVP; a equipe acolheu a solicitação para atender à necessidade de visibilidade financeira por canteiro (`00:19:39`).
 
 ### 3.5 Ajustes nos Requisitos do MVP com Remoção da Reversão de Fechamento Financeiro
 A equipe debateu o requisito funcional **RF21**, que tratava do estorno de fechamento financeiro com justificativa auditável obrigatória (`00:23:02`). 
 
-Eric Araújo explicou que o requisito havia sido criado sob a premissa de validação por parte dos sócios, mas como essa validação não ocorre na prática e a responsabilidade recai internamente sobre a rotina administrativa, o requisito foi considerado desnecessário no momento atual e teve sua prioridade reduzida, sendo retirado do escopo do MVP (`00:24:26`).
+Maria Beatryz explicou que o requisito havia sido criado sob a premissa de validação por parte dos sócios, mas como essa validação não ocorre na prática e a responsabilidade recai internamente sobre a rotina administrativa, o requisito foi considerado desnecessário no momento atual e teve sua prioridade reduzida, sendo retirado do escopo do MVP (`00:24:26`).
 
 ### 3.6 Avaliação do Requisito de Exportação de Relatórios de Auditoria
 O requisito funcional **RF16**, focado na exportação de relatórios de auditoria, foi analisado para verificar sua inclusão no MVP (`00:28:32`). 
 
-Eric Araújo argumentou que permitir a geração de relatórios e PDFs agora aumentaria a complexidade do sistema, transformando a ferramenta em um gerador de planilhas. Pontuou ainda que o uso de relatórios pela equipe é extremamente raro e restrito a períodos anuais (`00:29:31`). Ficou acordado manter o requisito RF16 fora do escopo inicial do MVP, permanecendo postergado (`00:28:32`).
+Maria Beatryz argumentou que permitir a geração de relatórios e PDFs agora aumentaria a complexidade do sistema, transformando a ferramenta em um gerador de planilhas. Pontuou ainda que o uso de relatórios pela equipe é extremamente raro e restrito a períodos anuais (`00:29:31`). Ficou acordado manter o requisito RF16 fora do escopo inicial do MVP, permanecendo postergado (`00:28:32`).
 
 ### 3.7 Análise de Requisitos Não Funcionais e Modo Offline
 Os requisitos não funcionais foram examinados, com ênfase no requisito **RNF01**, referente à operação offline em canteiros sem conectividade (`00:06:11`). Eric Araújo indicou que, como a solução será um aplicativo web e não um aplicativo mobile nativo, a operação offline não é estritamente necessária no momento, decidindo-se postergá-la e classificá-la como requisito evolutivo (`00:33:36`). 
@@ -86,7 +87,7 @@ Os requisitos não funcionais foram examinados, com ênfase no requisito **RNF01
 Em contrapartida, requisitos mandatórios de segurança e infraestrutura — tais como criptografia de repouso, expiração de token em 8 horas e rotina diária de backup automático com procedimento de restauração — foram confirmados como obrigatórios no MVP (`00:35:11`).
 
 ### 3.8 Aprovação do MVP com Ressalvas e Próximos Passos
-O Minimum Viable Product e a priorização apresentada foram aprovados com ressalvas pela equipe e validados pela cliente (`00:37:50`). A leitura detalhada posterior da documentação pela equipe ficou como ação para ajustes pontuais; ela não representa pendência de validação da priorização aprovada na sessão.
+Maria Beatryz validou a priorização apresentada e aprovou com ressalvas o Minimum Viable Product (`00:37:50`). A leitura detalhada posterior da documentação pela equipe ficou como ação para ajustes pontuais; ela não representa pendência de validação da priorização aprovada na sessão.
 
 Como próximos passos, Eric Araújo disponibilizará o manual de marca da empresa para identidade visual e orientará sobre o uso de ferramentas de prototipação como o Figma (`00:38:56`). Além disso, ficou estabelecido que o sistema financeiro será hospedado como um subdomínio estruturado como **`finance.doc.br`** na plataforma Vercel para assegurar melhor desempenho operacional em comparação ao servidor legado da Locaweb (`00:41:47`).
 
@@ -96,11 +97,11 @@ Como próximos passos, Eric Araújo disponibilizará o manual de marca da empres
 
 | # | Decisão | Descrição e Impacto |
 | :---: | :--- | :--- |
-| <a id="decisao-d1-rf11"></a>**D1** | **Inclusão de indicadores de custo no MVP** | O grupo alinhou adicionar o requisito funcional de filtragem de indicadores de custo (RF11) ao escopo prioritário do MVP para elevar o valor de negócio da entrega inicial. |
-| <a id="decisao-d2-rf21"></a>**D2** | **Rebaixamento do requisito de estorno financeiro** | O grupo concordou em reduzir a prioridade e retirar o requisito funcional de estorno de fechamento financeiro (RF21) do escopo do MVP, considerando que a premissa de validação por sócios não ocorre na prática e a responsabilidade recai internamente. |
-| <a id="decisao-d3-rf16"></a>**D3** | **Exclusão da exportação de relatórios do MVP** | Ficou acordado manter o requisito de exportação de relatórios de auditoria (RF16) fora do escopo inicial do MVP devido à baixa frequência de uso (rotina anual) e para evitar transformar o sistema em gerador de planilhas. |
+| <a id="decisao-d1-rf11"></a>**D1** | **Inclusão de indicadores de custo no MVP** | Maria Beatryz destacou a importância da filtragem de indicadores de custo (RF11) e pediu sua inclusão no escopo prioritário; a equipe acolheu a solicitação. |
+| <a id="decisao-d2-rf21"></a>**D2** | **Rebaixamento do requisito de estorno financeiro** | Maria Beatryz explicou que a premissa de validação por sócios não ocorre na prática e que a responsabilidade recai internamente; o requisito de estorno de fechamento financeiro (RF21) teve a prioridade reduzida e foi retirado do escopo do MVP. |
+| <a id="decisao-d3-rf16"></a>**D3** | **Exclusão da exportação de relatórios do MVP** | Maria Beatryz ponderou que relatórios e PDFs aumentariam a complexidade do sistema e que o uso de relatórios é raro (rotina anual); o requisito de exportação de relatórios de auditoria (RF16) permaneceu fora do escopo inicial do MVP. |
 | <a id="decisao-d4-rnf01"></a>**D4** | **Postergação do modo de operação offline** | Os participantes decidiram postergar o requisito não funcional de operação offline (RNF01), visto que a entrega inicial será um web app e não um aplicativo mobile nativo, classificando-o como funcionalidade evolutiva. |
-| <a id="decisao-d5-mvp"></a>**D5** | **Validação da priorização e aprovação do escopo do MVP com ressalvas** | A cliente validou a priorização apresentada e aprovou o escopo do MVP com ressalvas. A equipe ficou responsável por revisar posteriormente a documentação para ajustes pontuais e consolidação da lista. |
+| <a id="decisao-d5-mvp"></a>**D5** | **Validação da priorização e aprovação do escopo do MVP com ressalvas** | Maria Beatryz validou os requisitos e a priorização discutidos e aprovou o escopo do MVP com ressalvas. A equipe ficou responsável por revisar posteriormente a documentação para ajustes pontuais e consolidação da lista. |
 | <a id="decisao-d6-seguranca-infraestrutura"></a>**D6** | **Hospedagem do sistema como subdomínio na Vercel e Segurança** | O sistema financeiro será hospedado como um subdomínio estruturado como `finance.doc.br` utilizando a plataforma Vercel (substituindo a Locaweb), com confirmação obrigatória dos requisitos de criptografia em repouso, expiração de token em 8h e backup diário automático com restauração. |
 
 ---
@@ -108,6 +109,7 @@ Como próximos passos, Eric Araújo disponibilizará o manual de marca da empres
 ## 5. Gravação e Links
 
 * **Registro:** Gravação interna e transcrição automática da reunião via Google Meet arquivadas para fins de governança e rastreabilidade da equipe.
+* **Errata da identificação das falas:** Maria Beatryz participou da reunião usando o telefone de Eric Araújo. A transcrição atribuiu a Eric algumas falas feitas por Maria; esta ata, como registro oficial da reunião, corrige essa identificação nas minutagens `00:05:06`, `00:09:27`, `00:19:39`, `00:24:26`, `00:29:31` e `00:37:50`. A gravação e a transcrição automática originais permanecem arquivadas internamente.
 * **Artefatos Relacionados:**
     * [Capítulo 8 — Especificação de Requisitos de Software](../../requisitos/index.md)
     * [Capítulo 8 — Priorização de Requisitos e MVP](../../requisitos/priorizacao.md)
@@ -136,23 +138,23 @@ Como próximos passos, Eric Araújo disponibilizará o manual de marca da empres
 * `00:00:03` — **Apresentação da Metodologia de Requisitos:** Matheus Ribeiro Szervinsk abre a reunião de verificação e validação dos requisitos de software levantados, com participação da cliente, explicando a distinção entre requisitos funcionais (relacionados ao produto) e não funcionais (relacionados ao sistema operacional).
 * `00:01:08` — **Apresentação da Documentação no Git Pages:** Revisão dos documentos registrados cobrindo o cenário atual, a solução proposta, os impactos da intervenção social, estratégias e cronograma.
 * `00:02:07` — **Estrutura Modular e Derivação de Requisitos:** Apresentação da estruturação dos requisitos em quatro módulos derivados dos objetivos específicos, somando cerca de 21 requisitos funcionais.
-* `00:05:06` — **Regras de Negócio e Unicidade Cadastral:** Estabelecimento de regras como unicidade por CPF, bloqueio automático de edição retroativa por cinco dias úteis e validação das correções implementadas com Eric Araújo.
+* `00:05:06` — **Regras de Negócio e Unicidade Cadastral:** Maria Beatryz valida a aderência dos requisitos ao contexto da empresa e discute regras como unicidade por CPF e bloqueio automático de edição retroativa por cinco dias úteis.
 * `00:06:11` — **Requisitos Não Funcionais em Canteiro:** Levantamento das condições operacionais de conectividade nas obras.
 * `00:07:14` — **Detalhamento dos Módulos Funcionais:** Arquitetura cobrindo padronização de dados, eficiência administrativa financeira, inteligência de custos e governança.
 * `00:08:23` — **Gerenciamento de Perfis de Acesso (RBAC):** Definição de permissões para sanar gargalos e inseguranças no compartilhamento de planilhas.
-* `00:09:27` — **Validação Institucional:** Eric Araújo valida os documentos com base na cultura da empresa DUOC.
+* `00:09:27` — **Validação Institucional:** Maria Beatryz valida os documentos com base na cultura da empresa DUOC.
 * `00:10:34` — **Estratégia de Priorização MoSCoW e Cálculo:** Matheus Ribeiro Szervinsk apresenta os critérios de cálculo simples baseados em esforço, complexidade e capacidade da equipe.
 * `00:12:55` — **Mapeamento na Matriz 4x4:** Projeção visual dos requisitos na matriz cartesiana para identificar os obrigatórios do Minimum Viable Product.
 * `00:15:09` — **Definição dos Sete Requisitos Essenciais:** Mapeamento inicial dos 7 requisitos funcionais inegociáveis para viabilizar a entrega.
 * `00:16:27` — **Revisão Visual da Matriz Compartilhada:** Eric Araújo compartilha a matriz 4x4; Matheus Ribeiro e a equipe avaliam os itens priorizados e postergados.
-* `00:19:39` — **Inclusão do RF11 no MVP:** Constatação de que o requisito funcional RF11 (filtragem de indicadores de custo por obra) havia sido adiado; decisão unânime de incluí-lo imediatamente no escopo prioritário do MVP para elevar o valor de negócio.
+* `00:19:39` — **Inclusão do RF11 no MVP:** Maria Beatryz destaca a importância da filtragem de indicadores de custo por obra (RF11) e pede sua inclusão no MVP; a equipe acolhe a solicitação.
 * `00:23:02` — **Debate sobre Estorno Financeiro (RF21):** Análise do requisito de reversão de fechamento com justificativa auditável obrigatória.
-* `00:24:26` — **Rebaixamento e Remoção do RF21:** Eric Araújo esclarece que a premissa de validação por sócios não ocorre na prática e a responsabilidade recai internamente; prioridade reduzida e item retirado do escopo do MVP.
+* `00:24:26` — **Rebaixamento e Remoção do RF21:** Maria Beatryz esclarece que a premissa de validação por sócios não ocorre na prática e a responsabilidade recai internamente; prioridade reduzida e item retirado do escopo do MVP.
 * `00:28:32` — **Avaliação do Requisito de Relatórios (RF16):** Análise de esforço e demanda para a exportação de relatórios de auditoria.
-* `00:29:31` — **Manutenção do RF16 Fora do MVP:** Eric Araújo argumenta que relatórios e PDFs aumentariam a complexidade do sistema (transformando-o em gerador de planilhas) e que seu uso é raríssimo/anual; o item permanece postergado.
+* `00:29:31` — **Manutenção do RF16 Fora do MVP:** Maria Beatryz argumenta que relatórios e PDFs aumentariam a complexidade do sistema (transformando-o em gerador de planilhas) e que seu uso é raríssimo/anual; o item permanece postergado.
 * `00:33:36` — **Postergação da Operação Offline (RNF01):** Definição de que, como a entrega inicial será um web app e não um aplicativo mobile nativo, a operação offline não é estritamente necessária no momento, sendo classificada como evolutiva.
 * `00:35:11` — **Confirmação dos Requisitos de Segurança e Infraestrutura:** Ratificação obrigatória no MVP de criptografia em repouso, expiração de token em 8 horas e backup diário automático com restauração.
-* `00:37:50` — **Validação da Priorização e Aprovação do MVP com Ressalvas:** A cliente valida a priorização apresentada e aprova o escopo do MVP com ressalvas; a equipe fará leitura e revisão posterior detalhada da documentação.
+* `00:37:50` — **Validação da Priorização e Aprovação do MVP com Ressalvas:** Maria Beatryz valida os requisitos e a priorização discutidos e aprova o escopo do MVP com ressalvas; a equipe fará leitura e revisão posterior detalhada da documentação.
 * `00:38:56` — **Identidade Visual e Prototipação:** Encaminhamento para Eric Araújo disponibilizar o manual de marca da empresa e orientação sobre abertura de contas e uso do Figma.
 * `00:41:47` — **Hospedagem na Vercel e Encerramento:** Estabelecimento de hospedagem como subdomínio (`finance.doc.br`) na Vercel para assegurar melhor desempenho operacional sobre a Locaweb e alinhamento da ordem da apresentação para o dia seguinte.
 
@@ -164,5 +166,6 @@ Como próximos passos, Eric Araújo disponibilizará o manual de marca da empres
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 24/09/2026 | Registro preliminar da pauta e estrutura da Reunião 05 de Priorização de Requisitos. | Eric Araújo e Matheus Ribeiro Szervinsk | Lucas Zanetti |
 | `2.0` | 24/09/2026 | Ajuste e consolidação integral da ata com transcrição oficial da sessão de priorização com a equipe e a cliente: detalhamento dos 4 módulos e 21 RFs, aplicação do MoSCoW e matriz 4 × 4, inclusão do RF11, rebaixamento do RF21, exclusão do RF16, postergação do RNF01, segurança, hospedagem na Vercel (`finance.doc.br`) e novas ações futuras. | Matheus Ribeiro Szervinsk e Eric Araújo | Lucas Zanetti e Giovana Ferreira |
-| `2.1` | 28/10/2026 | Esclarecimento então registrado de que a Reunião 05 foi interna; classificação corrigida na versão 2.2 após confirmação da participação da cliente e da validação da priorização. | Giovana Ferreira Santos | — |
+| `2.1` | 28/10/2026 | Esclarecimento então registrado de que a Reunião 05 foi interna; classificação posteriormente corrigida. | Giovana Ferreira Santos | — |
 | `2.2` | 11/11/2026 | Correção da natureza da Reunião 05: registro da participação da cliente e da validação da priorização e do escopo do MVP com ressalvas. | Giovana Ferreira | — |
+| `2.3` | 15/11/2026 | Errata retrospectiva das falas atribuídas a Eric nas minutagens 00:05:06, 00:09:27, 00:19:39, 00:24:26, 00:29:31 e 00:37:50: correção para Maria Beatryz, participante pelo telefone de Eric. | Giovana Ferreira | — |
