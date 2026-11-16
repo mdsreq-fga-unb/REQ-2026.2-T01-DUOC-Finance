@@ -1,38 +1,33 @@
-import { NavLink, useNavigate } from "react-router-dom";
-import type { NavItem } from "../../types/navigation";
-import Button from "../ui/Button";
+import { NavLink, useNavigate } from 'react-router-dom'
+import type { NavItem } from '../../types/navigation'
+import Button from '../ui/Button'
 
-import {
-  LayoutDashboard,
-  Users,
-  CircleDollarSign,
-  LogOut,
-} from "lucide-react";
+import { LayoutDashboard, Users, CircleDollarSign, LogOut } from 'lucide-react'
 
 const menuItems: NavItem[] = [
   {
     iconName: LayoutDashboard,
-    title: "Visão Geral",
-    path: "/",
+    title: 'Visão Geral',
+    path: '/',
   },
   {
     iconName: Users,
-    title: "Colaboradores",
-    path: "/colaboradores",
-    badge: "RF01",
+    title: 'Colaboradores',
+    path: '/colaboradores',
+    badge: 'RF01',
   },
   {
     iconName: CircleDollarSign,
-    title: "Fechamento",
-    path: "/fechamento",
+    title: 'Fechamento',
+    path: '/fechamento',
   },
-];
+]
 
 export default function Sidebar() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const handleLogout = () => {
-    navigate("/login");
+    navigate('/login')
   }
 
   return (
@@ -66,8 +61,8 @@ export default function Sidebar() {
             className={({ isActive }) =>
               `flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${
                 isActive
-                  ? "bg-primary-light text-primary border border-primary/30 font-semibold shadow-2xs"
-                  : "text-dark/80 hover:text-primary hover:bg-primary-light/50"
+                  ? 'bg-primary-light text-primary border border-primary/30 font-semibold shadow-2xs'
+                  : 'text-dark/80 hover:text-primary hover:bg-primary-light/50'
               }`
             }
           >
@@ -109,5 +104,5 @@ export default function Sidebar() {
         </Button>
       </div>
     </aside>
-  );
+  )
 }
