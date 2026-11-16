@@ -108,25 +108,91 @@ O recorte do MVP foi concebido para assegurar que o fluxo operacional central da
 <a id="criterios-qualitativos-de-negocio"></a>
 <a id="criterios-quantitativos-de-negocio"></a>
 <a id="rubrica-de-julgamento-do-valor-de-negocio"></a>
-## Avaliação do Valor de Negócio (VB)
+## Avaliação do Valor de Negócio
 
-O Valor de Negócio quantifica o retorno operacional, a redução de gargalos de gestão e a eliminação de riscos jurídicos da solução para a DUOC, avaliado em uma **escala inteira de 1 a 4**:
+A Engenharia de Requisitos orientada ao valor assegura que os esforços de modelagem, prototipação ágil (*UI-First*) e implementação concentrem-se prioritariamente nas funcionalidades que geram o mais alto retorno operacional e mitigam os maiores riscos institucionais da organização parceira.
 
-| Nota | Nível de Valor | Diretriz de Julgamento no Negócio | Destinação no Escopo |
-| :---: | :---: | :--- | :---: |
-| **4** | **Muito Alto** *(Crítico)* | **Indispensável:** sem ele, o sistema é operacionalmente inviável ou juridicamente vulnerável (CLT/LGPD). Sua ausência paralisa o processo central ou impede a substituição da rotina manual. | **Obrigatório no MVP** |
-| **3** | **Alto** *(Importante)* | **Prioritário:** automatiza etapas de suporte direto aos gargalos centrais (TR-01 a TR-04), garante governança orçamentária ou economiza mais de 3 h/mês de conferência manual da administradora. | **Prioritário no MVP** |
-| **2** | **Moderado** *(Desejável)* | **Evolutivo:** agrega conveniência ou recursos analíticos complementares; sua ausência no ciclo piloto é contornável sem paralisar o negócio da empresa parceira. | **Pós-MVP** |
-| **1** | **Baixo** *(Postergável)* | **Futuro:** recurso válido para maturidade futura (ex.: exportações avançadas), de baixa frequência ou não urgente no ciclo inicial. | **Pós-MVP** |
+Navegue pelas abas abaixo para consultar as diretrizes metodológicas do julgamento de valor:
 
-### Dimensões de Julgamento do Valor
-A atribuição da nota considera o **maior grau atingido** entre três fatores bloqueantes e um critério de ajuste:
-1. **Gargalos Operacionais (TR-01 a TR-04):** Resolução dos gargalos identificados no [Diagrama de Ishikawa](../visao-produto/cenario-atual.md#diagrama-de-causa-e-efeito-ishikawa) (apontamento móvel de campo RVT, conferência de comprovantes de despesa, fechamento de diárias e apropriação por obra).
-2. **Mitigação de Riscos Jurídico-Trabalhistas e Fiscais:** Rastreabilidade probatória exigida pelo Art. 11 da CLT, comprovação fiscal para ressarcimentos e conformidade com a LGPD.
-3. **Economia de Horas Administrativas:** Redução do retrabalho sobre a base de mais de 30 h/mês de digitação manual da equipe financeira.
-4. **Frequência de Uso:** Rotina diária/contínua (peso confirmatório) vs. operações excepcionais ou de suporte.
+=== "Escala de Valor (1 a 4)"
 
-*Regra de Corte de Negócio:* Requisitos com **VB 4 ou 3 integram o MVP**; requisitos com **VB 2 ou 1 integram o Pós-MVP**.
+    Para tornar a avaliação auditável e comparável, o valor de cada requisito é expresso em uma **escala quantitativa de 1 a 4**. Não há classificação categórica adicional: a priorização decorre exclusivamente do cruzamento **Valor de Negócio × Esforço Técnico** na Matriz 4 × 4.
+
+    | Pontuação | Nível de Valor | Interpretação e Impacto no Negócio | Diretriz Operacional para o MVP |
+    | :---: | :---: | :--- | :--- |
+    | **4** | **Muito alto**<br>*(Crítico)* | **Indispensável:** sem esta funcionalidade, o sistema torna-se operacionalmente inviável ou juridicamente vulnerável. Sua ausência paralisa o processo central ou impede a substituição das rotinas manuais prioritárias. | **Inclusão obrigatória no MVP.** Bloqueante para a primeira versão operacional. |
+    | **3** | **Alto**<br>*(Importante)* | **Muito importante:** resolve atritos operacionais severos ou automatiza etapas de suporte direto ao fluxo principal. O produto ainda pode operar temporariamente sem ela mediante contorno manual assistido a curtíssimo prazo. | **Inclusão prioritária no MVP** para garantir sustentabilidade da rotina de trabalho. |
+    | **2** | **Moderado**<br>*(Desejável)* | **Agrega valor e conveniência:** melhora a experiência do usuário ou oferece recursos analíticos avançados, mas sua ausência não degrada a execução dos fluxos financeiros e cadastrais essenciais. | **Inclusão condicionada à capacidade residual** ou postergada para o ciclo seguinte. |
+    | **1** | **Baixo**<br>*(Postergável)* | **Não prioritário para a versão atual:** requisito reconhecido como valoroso para a maturidade corporativa futura, mas postergado por não atender às dores imediatas ou possuir melhor alternativa temporária. | **Fora do MVP.** Registrado formalmente no *roadmap* pós-implantação. |
+
+=== "Dimensões da Rubrica (D1 a D4)"
+
+    As notas de 1 a 4 são atribuídas à luz de quatro dimensões de julgamento operacional. As faixas de economia de horas são calculadas sobre a base de referência de **mais de 30 h/mês** de conferência manual da auxiliar-administradora:
+
+    | Dimensão de Julgamento | **Nota 4** — Valor muito alto | **Nota 3** — Valor alto | **Nota 2** — Valor moderado | **Nota 1** — Valor baixo |
+    | :--- | :--- | :--- | :--- | :--- |
+    | **D1 — Impacto nos gargalos TR-01 a TR-04** | Sem o requisito, ao menos um fluxo TR-01 a TR-04 não se completa ou não pode ser conferido. | Automatiza ou dá visibilidade a etapa de suporte direto a um TR; o TR ainda se completa com contorno assistido. | Oferece análise avançada ou comparativa (histórico, alertas, previsto × realizado) sobre dado de um TR já atendido. | Sem vínculo direto com um TR; contornável pela fase piloto. |
+    | **D2 — Economia de horas administrativas** | ≥ 25% da economia mensal estimada (≈ 8 h/mês ou mais). | De 10% a 25% (≈ 3 a 8 h/mês). | Inferior a 10% (< 3 h/mês) ou ganho apenas indireto. | Sem economia mensurável no primeiro ciclo. |
+    | **D3 — Risco jurídico-trabalhista, fiscal e LGPD** | Ausência gera exposição direta e imediata: reembolso sem comprovante fiscal (RN06), acesso sem autenticação a dados pessoais e bancários (RN15, RN16) ou lançamento financeiro sem base cadastral válida (RN01, RN03). | Controle preventivo ou de rastreabilidade que reduz a probabilidade ou o impacto do risco (ex.: RN04, RN14, RN23). | Risco indireto ou residual, com controle compensatório existente (ex.: gravação de logs pelo backend, RN19). | Risco tratável por suporte técnico pontual. |
+    | **D4 — Frequência de operação** | Contínua: a cada apontamento, transação ou acesso, ou pré-requisito de todos os perfis. | Recorrente: por solicitação, por competência ou por evento de cadastro. | Ocasional: análise gerencial periódica ou política de manutenção. | Eventual ou de exceção. |
+
+=== "Gargalos Operacionais (TR-01 a TR-04)"
+
+    A priorização ancora-se diretamente nos gargalos mapeados no [Cenário Atual](../visao-produto/cenario-atual.md#diagrama-de-causa-e-efeito-ishikawa):
+
+    | Gargalo | Fluxo Operacional na DUOC | Capacidades de Software Vinculadas | Nível de Valor Predominante |
+    | :---: | :--- | :--- | :---: |
+    | **TR-01** | Envio e homologação do Relatório de Viagem Técnica (RVT) | Coleta móvel, fotos de evidência, deliberação e consulta pelo diarista | **4 / 3** (Crítico) |
+    | **TR-02** | Submissão e conferência de comprovantes de despesa | Prestação de contas digital, adiantamentos e validação de cupons fiscais | **4 / 3** (Crítico) |
+    | **TR-03** | Consolidação de diárias técnicas e comissões | Prévia automatizada, cálculo centesimal e homologação irrevogável | **4 / 2** (Crítico) |
+    | **TR-04** | Apropriação de custo por contrato e centro de custo | Vinculação direta de despesas a obras e painel orçamentário | **3 / 2** (Importante) |
+    | **Transversal** | Base cadastral unificada, autenticação e auditoria probatória | Cadastro validado por CPF, perfis RBAC, logs append-only e retenção CLT | **4 a 1** (Fundacional) |
+
+=== "Regras de Consolidação & MVP"
+
+    **Regra de Consolidação:** A nota final é definida pelo **maior grau atingido entre D1 e D3** (fatores bloqueantes de processo ou de exposição de risco). As dimensões **D2 e D4** funcionam como critérios de ajuste: confirmam a nota ou podem deslocá-la em no máximo 1 ponto quando convergirem.
+    
+    A linha de corte do MVP decorre diretamente do eixo de Valor de Negócio: **requisitos de valor 4 ou 3 integram o MVP** e requisitos de **valor 2 ou 1 integram o backlog de evolução pós-MVP**. O esforço técnico não elimina requisitos de alto valor; orienta a decomposição arquitetural.
+
+    ```mermaid
+    flowchart LR
+        subgraph NIVEIS["Distribuição dos 40 RFs do Backlog por Valor de Negócio"]
+            direction TB
+            V4["<b>VALOR 4 — Muito alto (Crítico)</b><br>10 RFs (25,0%) · RF01, RF04, RF05, RF06, RF07, RF08, RF13, RF19, RF27, RF32"]
+            V3["<b>VALOR 3 — Alto (Importante)</b><br>21 RFs (52,5%) · RF02, RF03, RF09, RF10, RF11, RF14, RF17, RF18, RF22, RF23, RF25, RF26, RF28, RF29, RF33, RF34, RF35, RF37, RF38, RF39, RF40"]
+            V2["<b>VALOR 2 — Moderado (Desejável)</b><br>8 RFs (20,0%) · RF12, RF15, RF20, RF21, RF24, RF30, RF31, RF36"]
+            V1["<b>VALOR 1 — Baixo (Postergável)</b><br>1 RF (2,5%) · RF16"]
+            V4 ~~~ V3
+            V3 ~~~ V2
+            V2 ~~~ V1
+        end
+
+        subgraph DEST["Linha de Corte e Destinação"]
+            direction TB
+            MVP["<b>PRODUTO MÍNIMO VIÁVEL (MVP)</b><br>31 RFs selecionados (77,5% do Backlog)<br>Núcleo operacional completo para a DUOC"]
+            POST["<b>BACKLOG DE EVOLUÇÃO PÓS-MVP</b><br>9 RFs postergados (22,5% do Backlog)<br>Ciclos posteriores e capacidade residual"]
+            MVP ~~~ POST
+        end
+
+        V4 ==> MVP
+        V3 ==> MVP
+        V2 -.-> POST
+        V1 -.-> POST
+
+        classDef v4Class fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff;
+        classDef v3Class fill:#0284c7,stroke:#0369a1,stroke-width:2px,color:#ffffff;
+        classDef v2Class fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#ffffff;
+        classDef v1Class fill:#64748b,stroke:#475569,stroke-width:2px,color:#ffffff;
+        classDef mvpClass fill:#047857,stroke:#065f46,stroke-width:3px,color:#ffffff;
+        classDef postClass fill:#334155,stroke:#1e293b,stroke-width:2px,color:#ffffff;
+
+        class V4 v4Class;
+        class V3 v3Class;
+        class V2 v2Class;
+        class V1 v1Class;
+        class MVP mvpClass;
+        class POST postClass;
+    ```
 
 ---
 
@@ -138,17 +204,18 @@ A atribuição da nota considera o **maior grau atingido** entre três fatores b
 <a id="complexidade-tecnica"></a>
 <a id="lacuna-de-capacidade-da-equipe"></a>
 <a id="formula-de-consolidacao-e-regra-de-conversao"></a>
-## Avaliação do Esforço Técnico (EC)
+## Avaliação do Esforço Técnico
 
-O esforço técnico mensura a barreira de engenharia para entrega de cada requisito, integrando três dimensões analíticas avaliadas na mesma direção (**1 = menor barreira; 4 = maior desafio**):
+O esforço técnico consolidado é composto por três dimensões mensuráveis, orientadas no mesmo sentido (onde **1 representa menor barreira e 4 representa maior desafio**):
 
-| Dimensão | Sigla | Escala (1 a 4) | Critério Objetivo de Julgamento |
-| :--- | :---: | :---: | :--- |
-| **Esforço de Implementação** | **ES** | 1 a 4 | **Horas de desenvolvimento e testes:**<br>• Nota 1: Até 2 h (telas simples, ajustes pontuais)<br>• Nota 2: > 2 h a 8 h (formulários e CRUDs relacionais padrão)<br>• Nota 3: > 8 h a 16 h (múltiplas etapas, validações condicionais)<br>• Nota 4: > 16 h (alta densidade — evitada por decomposição atômica) |
-| **Complexidade Arquitetural** | **CX** | 1 a 4 | **Densidade de regras e acoplamento:**<br>• Nota 1: CRUD básico isolado<br>• Nota 2: Filtros compostos e validações relacionais<br>• Nota 3: Regras estritas (imutabilidade, bloqueio retroativo, cálculo centesimal)<br>• Nota 4: Consistência ACID mandatória, controle RBAC estrito e auditoria em lote |
-| **Lacuna de Capacidade** | **LC** | 1 a 4 | **Familiaridade da equipe com a stack (React, NestJS, Supabase/PostgreSQL):**<br>• Nota 1: Domínio pleno do padrão<br>• Nota 2: Conhecimento suficiente, pesquisa pontual<br>• Nota 3: Demanda estudo específico (ponto fixo centesimal, RBAC multinível)<br>• Nota 4: Lacuna crítica / necessidade de Prova de Conceito (PoC) |
+Navegue pelas abas abaixo para consultar as escalas e a regra de conversão:
 
-*Conversão Ordinal para a Matriz 4 × 4:* O valor consolidado da média aritmética converte-se em classes discretas para plotagem: **Classe 1** (1,00 a 1,49); **Classe 2** (1,50 a 2,49); **Classe 3** (2,50 a 3,49); **Classe 4** (3,50 a 4,00).
+=== "Tempo de Implementação (Horas)"
+
+    Mede o volume de trabalho em pessoa-hora para desenvolvimento de backend, frontend, persistência e testes automatizados:
+
+    | Pontuação | Classificação | Faixa de Tempo Estimada | Descrição Operacional |
+    | :---
 
 ---
 
@@ -511,13 +578,19 @@ Nenhum requisito foi descartado por falta de valor. Os **9 Requisitos Funcionais
 <a id="8-12-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
 <a id="107-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
 <a id="evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
+<a id="tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp"></a>
 ## Registro da Priorização e Validação com a Cliente
 
-A priorização do escopo foi construída em estreita colaboração com a cliente parceira **Maria Beatryz** (DUOC Engenharia):
+A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra a sessão de alinhamento com a equipe e a cliente realizada em 24/09/2026. Na ocasião, a cliente avaliou a metodologia de priorização apresentada e aprovou com ressalvas o escopo preliminar do MVP. A linha de corte oficial foi subsequentemente consolidada em **31 RFs no MVP (77,5%)** e **9 RFs no backlog evolutivo pós-MVP (22,5%)**, totalizando as 40 histórias de usuário (US01 a US40) após a incorporação de RF32 a RF35 e dos requisitos decompostos RF37 a RF40. O status formal de homologação definitiva dessa composição consolidada consta como **Pendente de validação** perante a cliente parceira, conforme discriminado a seguir:
 
-1. **Alinhamento Inicial de Prioridades (Reunião 05 — 24/09/2026):** A cliente participou da calibração das dores centrais do negócio, aprovando com ressalvas o escopo preliminar e determinando a priorização máxima para os fluxos de campo e fechamento ([Ata da Reunião 05 — Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp)).
-2. **Validação Operacional e de Interfaces (Reunião 06 — 03/11/2026):** Em reunião presencial com a equipe, a cliente Maria Beatryz validou as telas, fluxos de apontamento, deliberação de despesas e cálculos de diárias apresentados no protótipo de alta fidelidade ([Ata da Reunião 06](../governanca/atas/reuniao-06.md)).
-3. **Próximo Passo (Homologação Formal do Corte Final):** A composição canônica de **31 RFs no MVP e 9 no Pós-MVP** (incorporando a granularidade atômica dos RF37 a RF40) está formalizada para assinatura e ratificação definitiva no início do Ciclo RAD.
+| Tópico Deliberado | Decisão / Escopo Registrado | Status Perante a Cliente | Evidência Rastreável |
+| :--- | :--- | :--- | :--- |
+| **Linha de corte do MVP** | Escopo aprovado internamente com ressalvas na Reunião 05 e consolidado posteriormente em 31 RFs (inclusão de RF32 a RF35 e dos decompostos RF37 a RF40). | **Pendente de validação** | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) e [Linha de Corte do MVP](#linha-de-corte-do-mvp). |
+| **Inclusão de indicadores (RF11)** | Incluir a filtragem de custos por obra no escopo prioritário do MVP. | **Pendente de validação** | [Ata 05, Decisão D1](../governanca/atas/reuniao-05.md#decisao-d1-rf11) e [Especificação do RF11](index.md#rf11). |
+| **Tratamento do estorno (RF21)** | Retirar o estorno automático do MVP e manter tratamento operacional assistido. | **Pendente de validação** | [Ata 05, Decisão D2](../governanca/atas/reuniao-05.md#decisao-d2-rf21) e [Especificação do RF21](index.md#rf21). |
+| **Postergação do modo offline (RNF01)** | Classificar a operação offline completa como evolutiva. | **Pendente de validação** | [Ata 05, Decisão D4](../governanca/atas/reuniao-05.md#decisao-d4-rnf01) e [Classificação dos RNFs](index.md#catalogo-nao-funcionais). |
+| **Exportação de auditoria (RF16)** | Manter relatórios avançados de auditoria fora do escopo inicial do MVP. | **Pendente de validação** | [Ata 05, Decisão D3](../governanca/atas/reuniao-05.md#decisao-d3-rf16) e [Especificação do RF16](index.md#rf16). |
+| **Segurança e infraestrutura** | Registrar como mandatórios no MVP os requisitos de login, RBAC e integridade. | **Pendente de validação** | [Ata 05, Decisão D6](../governanca/atas/reuniao-05.md#decisao-d6-seguranca-infraestrutura) e [Classificação dos RNFs](index.md#catalogo-nao-funcionais). |
 
 ---
 
