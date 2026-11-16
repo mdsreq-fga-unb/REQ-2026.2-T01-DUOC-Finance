@@ -19,20 +19,84 @@ A fundamentação metodológica está estruturada em:
 
 A partir das informações sobre o cenário atual da DUOC Arquitetura e Engenharia e da solução proposta para o sistema DUOC Finance, esta seção detalha as estratégias de engenharia de software escolhidas para orientar o desenvolvimento do projeto.
 
-### Definição da Estratégia Metodológica
+### O que Escolhemos
 
-*   **Abordagem de Desenvolvimento de Software:** Híbrida. Esta abordagem combina elementos das metodologias dirigidas por plano e ágeis. No contexto do DUOC Finance, a base arquitetural e as regras matemáticas do domínio financeiro (cálculos de folha, retenção de impostos) exigem estabilidade e previsibilidade (dirigido por plano). Em contrapartida, as interfaces de lançamento de horas de campo (RVT) e relatórios gerenciais demandam experimentação e refinamento empírico de usabilidade (ágil).
-*   **Ciclo de vida:** Iterativo e Incremental. O produto de software será construído em ciclos de evolução progressiva. Cada incremento adicionará fatias verticais funcionais, permitindo que a solução integre as regras financeiras complexas de forma modular e gradual.
-*   **Processo de Engenharia de Software:** RAD (Rapid Application Development). O RAD é um processo de desenvolvimento que enfatiza o ciclo curto de planejamento de requisitos seguido de intensa modelagem de dados e prototipagem contínua de interfaces.
+<div class="stats">
+  <div class="stat">
+    <span class="label">Abordagem</span>
+    <div class="val">Híbrida</div>
+  </div>
+  <div class="stat">
+    <span class="label">Ciclo de Vida</span>
+    <div class="val">Iterativo e Incremental</div>
+  </div>
+  <div class="stat">
+    <span class="label">Processo de Software</span>
+    <div class="val">RAD (UI-First)</div>
+  </div>
+</div>
+
+### Por Que Essa Combinação?
+
+<div class="cards">
+  <div class="card">
+    <span class="dot">1</span>
+    <h3>Estabilidade e Flexibilidade (Abordagem Híbrida)</h3>
+    <p>O domínio financeiro exige previsibilidade e estabilidade contábil nos cálculos de folha, alíquotas e apuração de diárias (dirigido por plano). Em contrapartida, as interfaces de lançamento de horas de campo (RVT) e relatórios operacionais demandam validação ágil e experimentação visual contínua.</p>
+  </div>
+  <div class="card">
+    <span class="dot">2</span>
+    <h3>Fatias Verticais Funcionais (Ciclo Iterativo & Incremental)</h3>
+    <p>O produto é construído em ciclos progressivos de evolução. Cada incremento adiciona fatias funcionais completas de ponta a ponta (interface, regras de negócio e banco de dados), permitindo que o sistema integre regras complexas de forma modular e homologada.</p>
+  </div>
+  <div class="card">
+    <span class="dot">3</span>
+    <h3>Prototipagem Ativa e Dados Sólidos (Processo RAD)</h3>
+    <p>O processo RAD enfatiza o planejamento conciso de requisitos seguido por modelagem de dados consistente (PostgreSQL/Supabase) e intensa prototipagem de interfaces (Figma e React SPA), alinhando a solução com a cliente parceira antes da codificação extensiva.</p>
+  </div>
+</div>
 
 #### Adaptação do Processo RAD ao Contexto da DUOC
 
-Para atender à necessidade de integração sistêmica e consistência técnica, o processo RAD será estruturado nas seguintes fases, integrando as definições arquiteturais da equipe (React SPA/Vite no frontend, NestJS no backend e PostgreSQL gerenciado via Supabase):
+Para atender à necessidade de integração sistêmica e consistência técnica, o processo RAD foi customizado nas quatro fases a seguir, integrando a arquitetura da equipe (React SPA/Vite no frontend, NestJS no backend e PostgreSQL gerenciado via Supabase):
 
-1.  **Modelagem de Negócio e Planejamento de Requisitos:** Levantamento inicial com a cliente (Maria Beatryz) para estabelecer a taxonomia de dados (o que é uma obra, o que é RVT, quais são as verbas da folha). O foco inicial é estabelecer o *schema* do banco de dados (PostgreSQL/Supabase) para garantir a integridade das informações desde o primeiro dia.
-2.  **Design do Usuário (Prototipagem e Dados):** Sessões conjuntas e frequentes com os usuários finais. Esta fase ocorre em duas frentes: visual (usabilidade das telas no React SPA para os operários/engenheiros) e funcional/matemática (prototipagem dos serviços no NestJS para validar os algoritmos de cálculo de diárias e comissões antes da integração visual).
-3.  **Construção Iterativa:** Implementação das funcionalidades em fatias. Em vez de entregar o backend inteiro e depois o frontend, a equipe foca em entregar fluxos completos (ex: de ponta a ponta, salvar um registro de RVT no banco e visualizar no relatório).
-4.  **Cutover e Refinamento:** Liberação do módulo funcional para uso e homologação da cliente, iterando com base nos resultados práticos de cálculo.
+<div class="rad-flow">
+  <div class="rad-step">
+    <div class="rad-step-header">
+      <span class="rad-step-num">Fase 1</span>
+      <span class="rad-arrow">→</span>
+    </div>
+    <h4>Modelagem & Requisitos</h4>
+    <p>Taxonomia de dados (obras, RVTs e diárias) e modelagem relacional inicial do banco.</p>
+    <span class="rad-tag">PostgreSQL / Schema</span>
+  </div>
+  <div class="rad-step">
+    <div class="rad-step-header">
+      <span class="rad-step-num">Fase 2</span>
+      <span class="rad-arrow">→</span>
+    </div>
+    <h4>Design do Usuário</h4>
+    <p>Sessões conjuntas no Figma e validação de algoritmos de cálculo de diárias e folha.</p>
+    <span class="rad-tag">Figma + Regras</span>
+  </div>
+  <div class="rad-step">
+    <div class="rad-step-header">
+      <span class="rad-step-num">Fase 3</span>
+      <span class="rad-arrow">→</span>
+    </div>
+    <h4>Construção Iterativa</h4>
+    <p>Implementação em fatias funcionais verticais de ponta a ponta (React SPA + NestJS).</p>
+    <span class="rad-tag">Full-Stack Slices</span>
+  </div>
+  <div class="rad-step">
+    <div class="rad-step-header">
+      <span class="rad-step-num">Fase 4</span>
+    </div>
+    <h4>Cutover & Homologação</h4>
+    <p>Transposição assistida para operação real com a cliente e refinamento de fechamentos.</p>
+    <span class="rad-tag">Produção / Validação</span>
+  </div>
+</div>
 
 #### Execução do Design do Usuário no Incremento 1
 
@@ -87,3 +151,4 @@ Com base nas características intrínsecas do produto DUOC Finance, na decomposi
 | `2.0` | 15/09/2026 | Unificação integral dos artefatos 4.1 a 4.3 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `2.1` | 20/09/2026 | Refatoração profunda para aderência ao Processo RAD, eliminação de nomenclaturas ágeis de gestão e alinhamento de stack tecnológica | Eric Araújo | |
 | `2.2` | 28/10/2026 | Inclusão da execução do Design do Usuário no Incremento 1: fluxos prototipados no Figma, responsável, avaliação pela cliente em 02/10/2026 (Ata 06), resultado, próximo passo e desvio em relação ao processo planejado. | Paulo Nery | — |
+| `2.3` | 15/11/2026 | Modernização visual com cards inteligentes para decisões de abordagem, ciclo de vida e fases do processo RAD | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

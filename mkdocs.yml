@@ -74,17 +74,18 @@ extra_javascript:
 
 
 nav:
-  - 'Início': index.md
   - 'Visão do Produto':
+      - 'Apresentação do Produto': index.md
       - 'Cenário Atual & Diagnóstico': visao-produto/cenario-atual.md
       - 'Solução Proposta, OEs & CARs': visao-produto/solucao-proposta.md
       - 'Intervenção Social & Cultural': visao-produto/intervencao-social.md
   - 'Metodologia':
       - 'Estratégias de Engenharia': metodologia/estrategias-esw.md
       - 'Processo de Requisitos': metodologia/engenharia-requisitos.md
-      - 'Planejamento': metodologia/planejamento.md
+      - 'Interação com o Cliente': metodologia/interacao-cliente.md   
+  - 'Planejamento':                                                   
       - 'Cronograma': metodologia/cronograma.md
-      - 'Interação com o Cliente': metodologia/interacao-cliente.md
+      - 'Estratégias de Planejamento': metodologia/planejamento.md
   - 'Requisitos':
       - 'Catálogo Integrado de Requisitos': requisitos/index.md
       - 'Rastreabilidade & Matrizes': requisitos/rastreabilidade.md

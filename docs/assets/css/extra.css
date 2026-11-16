@@ -1,10 +1,20 @@
 /* ============================================================
    PALETA PERSONALIZADA: DUOC ARQUITETURA & ENGENHARIA
-   Tema Dark Base + Acentos em Dourado Ocre (#DAA520)
+   Tema Dark Base + Acentos em Dourado Ocre (#DAA520) e Vermelho DUOC (#a5162b)
    ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&display=swap');
 
 :root,
 [data-md-color-scheme="slate"] {
+  /* Vermelho Corporativo Primário DUOC */
+  --duoc-primary: #a5162b;
+  --duoc-primary-dark: #971828;
+  --duoc-primary-light: #ffeef0;
+
+  /* Tipografia Editorial dos Títulos e Destaques */
+  --duoc-font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+
   /* Dourado Ocre do cliente */
   --duoc-gold: #DAA520;
   --duoc-gold-hover: #b8860b;
@@ -4483,4 +4493,353 @@
   background: rgba(148, 163, 184, 0.15);
   color: #cbd5e1;
   border-color: rgba(148, 163, 184, 0.3);
+}
+
+/* ============================================================
+   COMPONENTES VISUAIS: CARDS INTELIGENTES & STATS METODOLÓGICOS
+   Tipografia Fraunces + Paleta Vermelho DUOC (#a5162b) & Dourado (#DAA520)
+   ============================================================ */
+
+.md-typeset .stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.md-typeset .stat {
+  border: 1px solid rgba(165, 22, 43, 0.15);
+  border-radius: 10px;
+  background: var(--md-default-bg-color);
+  padding: 12px 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.md-typeset .stat:hover {
+  transform: translateY(-2px);
+  border-color: var(--duoc-primary);
+  box-shadow: 0 4px 12px rgba(165, 22, 43, 0.12);
+}
+
+.md-typeset .stat span.label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--duoc-gold);
+  margin-bottom: 3px;
+}
+
+.md-typeset .stat .val {
+  font-family: var(--duoc-font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--duoc-primary);
+  line-height: 1.2;
+}
+
+.md-typeset .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.md-typeset .card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--md-default-bg-color);
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.md-typeset .card:hover {
+  transform: translateY(-2px);
+  border-color: var(--duoc-primary);
+  box-shadow: 0 4px 14px rgba(165, 22, 43, 0.1);
+}
+
+.md-typeset .card .dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(165, 22, 43, 0.08);
+  color: var(--duoc-primary);
+  border: 1.5px solid var(--duoc-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.78rem;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+.md-typeset .card h3 {
+  font-family: var(--duoc-font-display);
+  margin: 0 0 6px 0;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--md-typeset-color);
+  line-height: 1.3;
+  border: none;
+  padding: 0;
+}
+
+.md-typeset .card p {
+  margin: 0;
+  font-size: 0.83rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--light);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .stat {
+  background: rgba(22, 24, 29, 0.75);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .stat .val {
+  color: #fca5a5;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .card {
+  background: rgba(22, 24, 29, 0.75);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .card .dot {
+  background: rgba(225, 29, 72, 0.18);
+  color: #fb7185;
+  border-color: rgba(225, 29, 72, 0.4);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .stat:hover,
+[data-md-color-scheme="slate"] .md-typeset .card:hover {
+  border-color: var(--duoc-primary);
+  background: rgba(22, 24, 29, 0.95);
+  box-shadow: 0 4px 14px rgba(165, 22, 43, 0.25);
+}
+
+/* ============================================================
+   FLUXO OPERACIONAL RAD (PIPELINE COM SETAS)
+   ============================================================ */
+
+.md-typeset .rad-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 1.25rem 0 1.75rem;
+}
+
+@media (max-width: 900px) {
+  .md-typeset .rad-flow {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+.md-typeset .rad-step {
+  border: 1px solid rgba(165, 22, 43, 0.12);
+  background: var(--md-default-bg-color);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.md-typeset .rad-step:hover {
+  transform: translateY(-2px);
+  border-color: var(--duoc-gold);
+  box-shadow: 0 4px 12px rgba(218, 165, 32, 0.15);
+}
+
+.md-typeset .rad-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.md-typeset .rad-step-num {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(165, 22, 43, 0.08);
+  color: var(--duoc-primary);
+  border: 1px solid rgba(165, 22, 43, 0.2);
+}
+
+.md-typeset .rad-arrow {
+  color: var(--duoc-gold);
+  font-size: 1.15rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .md-typeset .rad-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+.md-typeset .rad-step h4 {
+  font-family: var(--duoc-font-display);
+  margin: 0 0 6px 0;
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--md-typeset-color);
+  line-height: 1.25;
+  border: none;
+  padding: 0;
+}
+
+.md-typeset .rad-step p {
+  margin: 0;
+  font-size: 0.81rem;
+  line-height: 1.45;
+  color: var(--md-default-fg-color--light);
+  flex-grow: 1;
+}
+
+.md-typeset .rad-tag {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--duoc-gold);
+  background: rgba(218, 165, 32, 0.08);
+  border: 1px solid rgba(218, 165, 32, 0.25);
+  padding: 2px 6px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .rad-step {
+  background: rgba(22, 24, 29, 0.75);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .rad-step:hover {
+  border-color: var(--duoc-gold);
+  background: rgba(22, 24, 29, 0.95);
+  box-shadow: 0 4px 14px rgba(218, 165, 32, 0.2);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .rad-step-num {
+  background: rgba(225, 29, 72, 0.15);
+  color: #fca5a5;
+  border-color: rgba(225, 29, 72, 0.35);
+}
+
+/* ============================================================
+   CADEIA DE RASTREABILIDADE (.chain COM SETAS)
+   ============================================================ */
+
+.md-typeset .chain {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.md-typeset .chain li {
+  position: relative;
+  padding: 6px 12px;
+  border: 1px solid rgba(165, 22, 43, 0.2);
+  border-radius: 6px;
+  background: rgba(165, 22, 43, 0.04);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--md-typeset-color);
+}
+
+.md-typeset .chain li:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -18px;
+  color: var(--duoc-gold);
+  font-weight: bold;
+}
+
+/* ============================================================
+   CHIPS INTELIGENTES DE REQUISITOS (MATRIZ 4X4 E TABELAS)
+   ============================================================ */
+
+.md-typeset .rf-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  margin: 3px 2px;
+  border-radius: 6px;
+  font-family: var(--md-code-font-family, monospace);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  border: 1px solid rgba(218, 165, 32, 0.35);
+  background: rgba(218, 165, 32, 0.08);
+  color: var(--duoc-gold) !important;
+  line-height: 1.2;
+  transition: all 0.2s ease;
+  vertical-align: middle;
+}
+
+.md-typeset .rf-chip:hover {
+  background: var(--duoc-gold) !important;
+  color: #121212 !important;
+  border-color: var(--duoc-gold) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(218, 165, 32, 0.25);
+}
+
+.md-typeset .rf-chip.mvp {
+  background: rgba(4, 120, 87, 0.12);
+  border-color: rgba(5, 150, 105, 0.4);
+  color: #059669 !important;
+}
+
+.md-typeset .rf-chip.mvp:hover {
+  background: #059669 !important;
+  color: #ffffff !important;
+  border-color: #059669 !important;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.3);
+}
+
+.md-typeset .rf-chip.post-mvp {
+  background: rgba(100, 116, 139, 0.1);
+  border-color: rgba(100, 116, 139, 0.3);
+  color: #64748b !important;
+}
+
+.md-typeset .rf-chip.post-mvp:hover {
+  background: #64748b !important;
+  color: #ffffff !important;
+  border-color: #64748b !important;
+  box-shadow: 0 2px 6px rgba(100, 116, 139, 0.3);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .rf-chip.mvp {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.35);
+  color: #34d399 !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .rf-chip.post-mvp {
+  background: rgba(148, 163, 184, 0.12);
+  border-color: rgba(148, 163, 184, 0.25);
+  color: #94a3b8 !important;
 }
