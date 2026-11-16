@@ -397,7 +397,7 @@ Para assegurar total transparência e padronização com a Seção 10.2 do Templ
 
 | Indicador | Sigla | Escala | Descrição e Origem Metodológica |
 | :--- | :---: | :---: | :--- |
-| **Valor de Negócio** | **VB** | 1 a 4 | Atribuído com a cliente parceira Maria Beatryz na [Reunião 05](../governanca/atas/reuniao-05.md), segundo a [Rubrica de Julgamento de Negócio](#rubrica-de-julgamento-do-valor-de-negocio) (D1 a D4). |
+| **Valor de Negócio** | **VB** | 1 a 4 | Validado com a cliente na [Reunião 05](../governanca/atas/reuniao-05.md), segundo a [Rubrica de Julgamento de Negócio](#rubrica-de-julgamento-do-valor-de-negocio) (D1 a D4); esforço técnico estimado pela equipe. |
 | **Complexidade Técnica** | **CX** | 1 a 4 | Avaliação estrutural de arquitetura, acoplamento e regras de negócio conforme a [Escala de Complexidade](#complexidade-tecnica). |
 | **Esforço de Implementação** | **ES** | 1 a 4 | Nota derivada das horas estimadas de codificação conforme a [Escala de Esforço de Implementação](#esforco-de-implementacao-tempo-em-horas). |
 | **Lacuna de Capacidade** | **LC** | 1 a 4 | Avaliação de domínio técnico e familiaridade da equipe com a stack (React SPA, Vite, NestJS, Supabase/PostgreSQL) conforme a [Escala de Lacuna](#lacuna-de-capacidade-da-equipe). |
@@ -565,11 +565,11 @@ Navegue pelas abas abaixo para consultar o enquadramento dos RNFs:
 <a id="8-12-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
 <a id="107-evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
 <a id="evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
-## Registro da Priorização Interna e Deliberações da Equipe
+## Registro da Priorização e Validação com a Cliente
 
-A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra uma sessão interna da equipe realizada em 24/09/2026 para revisar requisitos, calibrar a Matriz 4 × 4 e propor o escopo do MVP:
+A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra a sessão com a equipe e a cliente realizada em 24/09/2026. A cliente validou a priorização apresentada e aprovou com ressalvas o escopo do MVP. A composição atual da linha de corte, consolidada posteriormente em 27 RFs, também foi aprovada pela cliente, conforme confirmação da equipe; 
 
-| Tópico Deliberado | Decisão Técnica Interna | Status Perante a Cliente | Evidência Rastreável |
+| Tópico Deliberado | Decisão / Escopo Registrado | Status Perante a Cliente | Evidência Rastreável |
 | :--- | :--- | :--- | :--- |
 | **Linha de corte do MVP** | Escopo aprovado internamente com ressalvas na Reunião 05 e consolidado posteriormente em 31 RFs (inclusão de RF32 a RF35 e dos decompostos RF37 a RF40). | **Pendente de validação** | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) e [Linha de Corte do MVP](#linha-de-corte-do-mvp). |
 | **Inclusão de indicadores (RF11)** | Incluir a filtragem de custos por obra no escopo prioritário do MVP. | **Pendente de validação** | [Ata 05, Decisão D1](../governanca/atas/reuniao-05.md#decisao-d1-rf11) e [Especificação do RF11](index.md#rf11). |
