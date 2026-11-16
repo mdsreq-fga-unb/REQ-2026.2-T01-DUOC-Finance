@@ -85,6 +85,7 @@ nav:
       - 'Interação com o Cliente': metodologia/interacao-cliente.md   
   - 'Planejamento':                                                   
       - 'Cronograma': metodologia/cronograma.md
+      - 'Detalhamento de Ciclos & Semanas': metodologia/detalhamento-ciclos.md
       - 'Estratégias de Planejamento': metodologia/planejamento.md
   - 'Requisitos':
       - 'Catálogo Integrado de Requisitos': requisitos/index.md

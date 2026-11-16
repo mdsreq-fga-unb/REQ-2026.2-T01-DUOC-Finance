@@ -166,13 +166,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US01)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por CPF que sustente os apontamentos e os pagamentos de diárias.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por CPF que sustente os apontamentos e os pagamentos de diárias.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -182,10 +183,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Validados (Incr. 1)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -194,7 +195,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -203,7 +204,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -215,6 +216,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -340,13 +380,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US02)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero atualizar os dados cadastrais e bancários de um colaborador ativo, para que todos os módulos passem a usar imediatamente as informações corretas, sem perder a versão anterior da ficha.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero atualizar os dados cadastrais e bancários de um colaborador ativo, para que todos os módulos passem a usar imediatamente as informações corretas, sem perder a versão anterior da ficha.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -356,10 +397,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Validados (Incr. 1)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -368,7 +409,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -377,7 +418,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -389,6 +430,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -514,13 +594,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US03)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero registrar afastamentos, férias e desligamentos de um colaborador, para que sua situação funcional fique atualizada e o acesso de campo seja revogado, evitando pagamentos indevidos.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero registrar afastamentos, férias e desligamentos de um colaborador, para que sua situação funcional fique atualizada e o acesso de campo seja revogado, evitando pagamentos indevidos.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -530,10 +611,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -542,18 +623,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn04" class="req-tag req-tag-rn"># RN04 · Revogação Automática de Credenciais em Afastamento ou Rescisão ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -563,6 +640,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -688,13 +804,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US04)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de WhatsApp.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Técnico de Campo</strong>, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de WhatsApp.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -704,10 +821,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -716,18 +833,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -737,6 +850,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -862,13 +1014,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US05)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -878,10 +1031,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -890,18 +1043,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -911,6 +1060,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -1036,13 +1224,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US06)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -1052,10 +1241,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -1064,18 +1253,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -1085,6 +1270,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -1210,13 +1434,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US07)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo ou Gestor Operacional de Obras</strong>, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Técnico de Campo ou Gestor Operacional de Obras</strong>, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -1226,10 +1451,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -1238,18 +1463,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn06" class="req-tag req-tag-rn"># RN06 · Janela Temporal para Prestação de Contas de Reembolso ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO / GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -1259,6 +1480,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -1384,13 +1644,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US08)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero aprovar ou reprovar as solicitações de reembolso com parecer obrigatório na reprovação, para que apenas despesas comprovadas sejam repassadas e o solicitante seja informado da decisão.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero aprovar ou reprovar as solicitações de reembolso com parecer obrigatório na reprovação, para que apenas despesas comprovadas sejam repassadas e o solicitante seja informado da decisão.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -1400,10 +1661,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -1412,18 +1673,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn07" class="req-tag req-tag-rn"># RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa ↗</a> <a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -1433,6 +1690,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -1558,13 +1854,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US09)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero disparar a apropriação dos custos homologados da competência aos respectivos contratos, para que eu conheça o custo real de cada obra sem duplicidade com a folha CLT.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero disparar a apropriação dos custos homologados da competência aos respectivos contratos, para que eu conheça o custo real de cada obra sem duplicidade com a folha CLT.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -1574,10 +1871,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -1586,18 +1883,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -1607,6 +1900,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -1732,13 +2064,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US10)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero visualizar a origem completa de cada custo apropriado, para que eu possa justificar e auditar qualquer linha de despesa do contrato.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero visualizar a origem completa de cada custo apropriado, para que eu possa justificar e auditar qualquer linha de despesa do contrato.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -1748,10 +2081,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -1760,18 +2093,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn12" class="req-tag req-tag-rn"># RN12 · Segregação de Despesas Administrativas e Operacionais ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -1781,6 +2110,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -1906,13 +2274,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US11)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras, Administrador Financeiro ou Administrador do Sistema</strong>, quero combinar filtros de período, contrato, colaborador e centro de custo no painel de custos, para que eu analise os custos diretos de cada obra no fechamento.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Gestor Operacional de Obras, Administrador Financeiro ou Administrador do Sistema</strong>, quero combinar filtros de período, contrato, colaborador e centro de custo no painel de custos, para que eu analise os custos diretos de cada obra no fechamento.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -1922,10 +2291,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -1934,18 +2303,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn14" class="req-tag req-tag-rn"># RN14 · Sigilo e Não-Exposição de Remunerações Individuais em Painéis ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -1955,6 +2320,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -2080,13 +2484,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US12)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -2096,10 +2501,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -2108,18 +2513,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -2129,6 +2530,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -2254,13 +2694,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US13)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>usuário da plataforma</strong>, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>usuário da plataforma</strong>, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -2270,10 +2711,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Validados (Incr. 1)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -2282,7 +2723,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -2291,7 +2732,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -2303,6 +2744,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -2428,13 +2908,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US14)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema</strong>, quero atribuir a cada usuário um papel de acesso, para que campo, gestão e financeiro visualizem apenas os dados da sua alçada (princípio do menor privilégio).</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador do Sistema</strong>, quero atribuir a cada usuário um papel de acesso, para que campo, gestão e financeiro visualizem apenas os dados da sua alçada (princípio do menor privilégio).</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -2444,10 +2925,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -2456,18 +2937,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn16" class="req-tag req-tag-rn"># RN16 · Princípio do Menor Privilégio e Segregação de Funções (SoD) ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -2477,6 +2954,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -2602,13 +3118,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US15)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema ou Administrador Financeiro</strong>, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador do Sistema ou Administrador Financeiro</strong>, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -2618,10 +3135,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -2630,18 +3147,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a> <a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf15" class="req-tag req-tag-rnf"># RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf"># RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf"># RNF17 · Realizar backup automático diário com restauração verificada ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -2651,6 +3164,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -2776,13 +3328,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US16)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema</strong>, quero exportar um dossiê em PDF/CSV com o histórico imutável das operações auditadas, para que a DUOC comprove conformidade legal e trabalhista (CLT Art. 11).</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador do Sistema</strong>, quero exportar um dossiê em PDF/CSV com o histórico imutável das operações auditadas, para que a DUOC comprove conformidade legal e trabalhista (CLT Art. 11).</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -2792,10 +3345,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -2804,18 +3357,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf15" class="req-tag req-tag-rnf"># RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf"># RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf"># RNF17 · Realizar backup automático diário com restauração verificada ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -2825,6 +3374,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -2950,13 +3538,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US17)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>colaborador que esqueceu a senha</strong>, quero receber no e-mail corporativo um link de redefinição de uso único, para que eu recupere o acesso sem depender de *reset* manual pela gestão.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>colaborador que esqueceu a senha</strong>, quero receber no e-mail corporativo um link de redefinição de uso único, para que eu recupere o acesso sem depender de *reset* manual pela gestão.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -2966,10 +3555,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Validados (Incr. 1)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -2978,7 +3567,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -2987,7 +3576,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -2999,6 +3588,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -3124,13 +3752,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US18)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>usuário autenticado</strong>, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>usuário autenticado</strong>, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -3140,10 +3769,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge">3 de 3 Validados (Incr. 1)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -3152,7 +3781,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -3161,7 +3790,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -3173,6 +3802,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -3298,13 +3966,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US19)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e identifique quais registros ainda posso retificar antes do fechamento.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Técnico de Campo</strong>, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e identifique quais registros ainda posso retificar antes do fechamento.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -3314,10 +3983,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -3326,18 +3995,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn16" class="req-tag req-tag-rn"># RN16 · Princípio do Menor Privilégio e Segregação de Funções (SoD) ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -3347,6 +4012,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -3472,13 +4176,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US20)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero importar as presenças homologadas do *FLIT* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero importar as presenças homologadas do *FLIT* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -3488,10 +4193,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -3500,18 +4205,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -3521,6 +4222,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -3646,13 +4386,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US21)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -3662,10 +4403,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -3674,18 +4415,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf08" class="req-tag req-tag-rnf"># RNF08 · Garantir rastreabilidade probatória e não-repúdio em operações de estorno ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -3695,6 +4432,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -3820,13 +4596,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US22)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no RVT.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Técnico de Campo</strong>, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no RVT.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -3836,10 +4613,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -3848,18 +4625,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn24" class="req-tag req-tag-rn"># RN24 · Captura de Geolocalização Não Bloqueante ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -3869,6 +4642,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -3994,13 +4806,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US23)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema</strong>, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador do Sistema</strong>, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -4010,10 +4823,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -4022,18 +4835,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn20" class="req-tag req-tag-rn"># RN20 · Limite de Tentativas de Autenticação ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -4043,6 +4852,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -4168,13 +5016,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US24)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador do Sistema</strong>, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador do Sistema</strong>, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -4184,10 +5033,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -4196,18 +5045,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn21" class="req-tag req-tag-rn"># RN21 · Política de Expiração e Histórico de Senhas ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -4217,6 +5062,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -4342,13 +5226,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US25)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero classificar o colaborador como Diarista, CLT ou Prestador de Serviço, para que o sistema aplique as regras administrativas e financeiras do vínculo correto.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero classificar o colaborador como Diarista, CLT ou Prestador de Serviço, para que o sistema aplique as regras administrativas e financeiras do vínculo correto.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -4358,10 +5243,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -4370,18 +5255,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn22" class="req-tag req-tag-rn"># RN22 · Tipos de Contratação Válidos ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -4391,6 +5272,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -4516,13 +5436,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US26)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero consultar o histórico de alterações cadastrais e bancárias de um colaborador, com autor e data de cada mudança, para que divergências administrativas possam ser rastreadas e esclarecidas.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero consultar o histórico de alterações cadastrais e bancárias de um colaborador, com autor e data de cada mudança, para que divergências administrativas possam ser rastreadas e esclarecidas.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -4532,10 +5453,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -4544,18 +5465,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -4565,6 +5482,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -4690,13 +5646,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US27)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero cadastrar as categorias de diária técnica com valor e período de vigência, para que prévias e fechamentos usem sempre o valor vigente da competência.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero cadastrar as categorias de diária técnica com valor e período de vigência, para que prévias e fechamentos usem sempre o valor vigente da competência.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -4706,10 +5663,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -4718,18 +5675,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -4739,6 +5692,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -4864,13 +5856,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US28)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero solicitar um adiantamento para uma despesa operacional de um contrato ativo, para que eu disponha dos recursos antes de executar a atividade.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Técnico de Campo</strong>, quero solicitar um adiantamento para uma despesa operacional de um contrato ativo, para que eu disponha dos recursos antes de executar a atividade.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -4880,10 +5873,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -4892,18 +5885,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn26" class="req-tag req-tag-rn"># RN26 · Elegibilidade do Adiantamento Operacional ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -4913,6 +5902,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -5038,13 +6066,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US29)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero aprovar ou reprovar os adiantamentos pendentes de análise, para que a liberação de recursos seja formal, rastreável e comunicada ao solicitante.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero aprovar ou reprovar os adiantamentos pendentes de análise, para que a liberação de recursos seja formal, rastreável e comunicada ao solicitante.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -5054,10 +6083,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -5066,18 +6095,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -5087,6 +6112,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -5212,13 +6276,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US30)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -5228,10 +6293,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -5240,18 +6305,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn28" class="req-tag req-tag-rn"># RN28 · Comparativo Histórico de Custos ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -5261,6 +6322,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -5386,13 +6486,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US31)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Gestor Operacional de Obras</strong>, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -5402,10 +6503,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -5414,18 +6515,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn29" class="req-tag req-tag-rn"># RN29 · Disparo de Alertas Preventivos de Extrapolação Orçamentária ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -5435,6 +6532,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -5560,13 +6696,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US32)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero homologar ou rejeitar os apontamentos de campo pendentes dos contratos sob minha responsabilidade, com parecer obrigatório na rejeição, para que apenas horas validadas sigam para o fechamento financeiro e o autor seja informado da decisão.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Gestor Operacional de Obras</strong>, quero homologar ou rejeitar os apontamentos de campo pendentes dos contratos sob minha responsabilidade, com parecer obrigatório na rejeição, para que apenas horas validadas sigam para o fechamento financeiro e o autor seja informado da decisão.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -5576,10 +6713,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -5588,18 +6725,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -5609,6 +6742,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -5734,13 +6906,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US33)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro ou Gestor Operacional de Obras</strong>, quero cadastrar, editar e consultar contratos de obras com vigência, valor global e retenções, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro ou Gestor Operacional de Obras</strong>, quero cadastrar, editar e consultar contratos de obras com vigência, valor global e retenções, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -5750,10 +6923,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -5762,18 +6935,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -5783,6 +6952,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -5908,13 +7116,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US34)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero cadastrar centros de custo e definir tetos orçamentários por categoria de despesa em cada contrato, para que o painel calcule a execução orçamentária e os desvios.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Gestor Operacional de Obras</strong>, quero cadastrar centros de custo e definir tetos orçamentários por categoria de despesa em cada contrato, para que o painel calcule a execução orçamentária e os desvios.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -5924,10 +7133,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -5936,18 +7145,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -5957,6 +7162,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -6082,13 +7326,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US35)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Técnico de Campo</strong>, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Técnico de Campo</strong>, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -6098,10 +7343,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -6110,18 +7355,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -6131,6 +7372,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -6256,13 +7536,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US36)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro</strong>, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas CSV e XLSX, para que eu faça a conciliação contábil externa sem redigitação.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Administrador Financeiro</strong>, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas CSV e XLSX, para que eu faça a conciliação contábil externa sem redigitação.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -6272,10 +7553,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -6284,18 +7565,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<span class="req-tag-none">—</span>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -6305,6 +7582,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -6430,13 +7746,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US33)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero atualizar aditivos, prazos e valores de contratos de obras vigentes, para que as apropriações reflitam as repactuações contratuais.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero atualizar aditivos, prazos e valores de contratos de obras vigentes, para que as apropriações reflitam as repactuações contratuais.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -6446,10 +7763,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -6458,18 +7775,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -6479,6 +7792,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -6604,13 +7956,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US33)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero consultar a relação e o detalhamento de contratos ativos e concluídos, para que eu visualize rapidamente as condições pactuadas de cada obra.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero consultar a relação e o detalhamento de contratos ativos e concluídos, para que eu visualize rapidamente as condições pactuadas de cada obra.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -6620,10 +7973,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -6632,18 +7985,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<span class="req-tag-none">—</span>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -6653,6 +8002,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -6778,13 +8166,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US34)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero atualizar nomenclaturas e parâmetros de centros de custo ativos, para que a estrutura de custos permaneça alinhada à evolução do canteiro sem quebrar vínculos históricos.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Gestor Operacional de Obras</strong>, quero atualizar nomenclaturas e parâmetros de centros de custo ativos, para que a estrutura de custos permaneça alinhada à evolução do canteiro sem quebrar vínculos históricos.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -6794,10 +8183,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -6806,18 +8195,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -6827,6 +8212,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -6952,13 +8376,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-header">
         <span class="req-checklist-title">História de Usuário (US34)</span>
       </div>
-      <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero estipular tetos monetários orçados por categoria de despesa em cada contrato, para que o sistema monitore limites e acione alertas preventivos de estouro orçamentário.</p>
+      <div class="req-desc-box">
+        <p class="req-desc-text">Como <strong>Gestor Operacional de Obras</strong>, quero estipular tetos monetários orçados por categoria de despesa em cada contrato, para que o sistema monitore limites e acione alertas preventivos de estouro orçamentário.</p>
       </div>
     </div>
 
     <div class="req-tabs-nav" role="tablist">
       <button type="button" class="req-tab-btn active" data-target="criterios">Critérios de Aceitação</button>
+      <button type="button" class="req-tab-btn" data-target="evidencias">Evidências & Validação</button>
       <button type="button" class="req-tab-btn" data-target="rastreabilidade">Rastreabilidade & Tags</button>
       <button type="button" class="req-tab-btn" data-target="priorizacao">Priorização & Score 4×4</button>
     </div>
@@ -6968,10 +8393,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Verificados</span>
+          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
+          <div class="req-check-box verified">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="req-check-body">
@@ -6980,18 +8405,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a> <a href="#rn29" class="req-tag req-tag-rn"># RN29 · Disparo de Alertas Preventivos de Extrapolação Orçamentária ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
+          <div class="req-check-box pending"></div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -7001,6 +8422,45 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <!-- ABA 2: Rastreabilidade Total & Tags Lumio Style -->
+        <!-- ABA 2: Evidências, Atas e Validação Sociotécnica -->
+    <div class="req-tab-pane" data-pane="evidencias">
+      <div class="req-evidence-container">
+        <div class="req-evidence-header">
+          <span class="req-evidence-title">Evidências, Atas e Registros de Validação Sociotécnica</span>
+          <span class="req-evidence-badge">Ciclo RAD</span>
+        </div>
+        <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Validação Sociotécnica & Ritos com a Cliente</strong>
+              <p>Fluxo validado presencialmente com Maria Beatryz na <a href="../governanca/atas/reuniao-06/">Ata de Reunião 06 (02/10/2026)</a> e sessões de refinamento operacional.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
+              <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card placeholder">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Registro Fotográfico & Execução no Sistema (UAT)</strong>
+              <p class="req-evidence-placeholder-text">Espaço reservado para inserção de prints das telas em homologação, evidências de testes manuais e extratos de validação do incremento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="req-tab-pane" data-pane="rastreabilidade">
       <div class="req-trace-grid">
         <div class="req-trace-item">
@@ -7081,7 +8541,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 
 As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integridade contábil, controles temporais e políticas de segurança da informação do ***DUOC Finance***. Cada card abaixo detalha a regra oficial e lista os **Requisitos Funcionais Executores** correspondentes em links bidirecionais navegáveis:
 
-<details class="req-card req-card-rn" id="rn01" data-type="rn" data-rn="RN01" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn01 unicidade e validação cadastral por cpf oe1 módulo 1 car-01 integridade cadastral os dados cadastrais de colaboradores utilizam o cpf como identificador unívoco no sistema, validando os dígitos verificadores pelo algoritmo oficial e impedindo registros duplicados. rf01 rf02 regra negocio dominio" data-search-text="rn01 unicidade e validação cadastral por cpf oe1 módulo 1 car-01 integridade cadastral os dados cadastrais de colaboradores utilizam o cpf como identificador unívoco no sistema, validando os dígitos verificadores pelo algoritmo oficial e impedindo registros duplicados. rf01 rf02 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe1" id="rn01" data-type="rn" data-rn="RN01" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn01 unicidade e validação cadastral por cpf oe1 módulo 1 car-01 integridade cadastral os dados cadastrais de colaboradores utilizam o cpf como identificador unívoco no sistema, validando os dígitos verificadores pelo algoritmo oficial e impedindo registros duplicados. rf01 rf02 regra negocio dominio" data-search-text="rn01 unicidade e validação cadastral por cpf oe1 módulo 1 car-01 integridade cadastral os dados cadastrais de colaboradores utilizam o cpf como identificador unívoco no sistema, validando os dígitos verificadores pelo algoritmo oficial e impedindo registros duplicados. rf01 rf02 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7142,7 +8602,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn02" data-type="rn" data-rn="RN02" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-text="rn02 janela temporal para submissão e edição de apontamento oe1 módulo 1 car-02 controle de apontamentos o apontamento diário de campo (rvt) deve ser submetido até as 23h59 do dia subsequente à prestação do serviço; após submissão e homologação, a edição é bloqueada, permitindo retificação apenas após deliberação de recusa com justificativa obrigatória. rf04 rf19 rf32 rf35 regra negocio dominio" data-search-text="rn02 janela temporal para submissão e edição de apontamento oe1 módulo 1 car-02 controle de apontamentos o apontamento diário de campo (rvt) deve ser submetido até as 23h59 do dia subsequente à prestação do serviço; após submissão e homologação, a edição é bloqueada, permitindo retificação apenas após deliberação de recusa com justificativa obrigatória. rf04 rf19 rf32 rf35 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe1" id="rn02" data-type="rn" data-rn="RN02" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-text="rn02 janela temporal para submissão e edição de apontamento oe1 módulo 1 car-02 controle de apontamentos o apontamento diário de campo (rvt) deve ser submetido até as 23h59 do dia subsequente à prestação do serviço; após submissão e homologação, a edição é bloqueada, permitindo retificação apenas após deliberação de recusa com justificativa obrigatória. rf04 rf19 rf32 rf35 regra negocio dominio" data-search-text="rn02 janela temporal para submissão e edição de apontamento oe1 módulo 1 car-02 controle de apontamentos o apontamento diário de campo (rvt) deve ser submetido até as 23h59 do dia subsequente à prestação do serviço; após submissão e homologação, a edição é bloqueada, permitindo retificação apenas após deliberação de recusa com justificativa obrigatória. rf04 rf19 rf32 rf35 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7203,7 +8663,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn03" data-type="rn" data-rn="RN03" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn03 validação prévia de dados bancários e chave pix oe1 módulo 1 car-01 validação financeira contas bancárias cadastradas devem passar por validação de formato de agência e conta conforme padrão febraban, além de verificação de sintaxe para chaves pix. rf01 regra negocio dominio" data-search-text="rn03 validação prévia de dados bancários e chave pix oe1 módulo 1 car-01 validação financeira contas bancárias cadastradas devem passar por validação de formato de agência e conta conforme padrão febraban, além de verificação de sintaxe para chaves pix. rf01 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe1" id="rn03" data-type="rn" data-rn="RN03" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn03 validação prévia de dados bancários e chave pix oe1 módulo 1 car-01 validação financeira contas bancárias cadastradas devem passar por validação de formato de agência e conta conforme padrão febraban, além de verificação de sintaxe para chaves pix. rf01 regra negocio dominio" data-search-text="rn03 validação prévia de dados bancários e chave pix oe1 módulo 1 car-01 validação financeira contas bancárias cadastradas devem passar por validação de formato de agência e conta conforme padrão febraban, além de verificação de sintaxe para chaves pix. rf01 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7264,7 +8724,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn04" data-type="rn" data-rn="RN04" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn04 revogação automática de credenciais em afastamento ou rescisão oe1 módulo 1 car-01 ciclo de vida & acesso o registro de rescisão ou afastamento funcional com status inativo revoga de forma imediata e compulsória todas as credenciais ativas e encerra as sessões abertas do colaborador. rf03 regra negocio dominio" data-search-text="rn04 revogação automática de credenciais em afastamento ou rescisão oe1 módulo 1 car-01 ciclo de vida & acesso o registro de rescisão ou afastamento funcional com status inativo revoga de forma imediata e compulsória todas as credenciais ativas e encerra as sessões abertas do colaborador. rf03 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe1" id="rn04" data-type="rn" data-rn="RN04" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn04 revogação automática de credenciais em afastamento ou rescisão oe1 módulo 1 car-01 ciclo de vida & acesso o registro de rescisão ou afastamento funcional com status inativo revoga de forma imediata e compulsória todas as credenciais ativas e encerra as sessões abertas do colaborador. rf03 regra negocio dominio" data-search-text="rn04 revogação automática de credenciais em afastamento ou rescisão oe1 módulo 1 car-01 ciclo de vida & acesso o registro de rescisão ou afastamento funcional com status inativo revoga de forma imediata e compulsória todas as credenciais ativas e encerra as sessões abertas do colaborador. rf03 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7325,7 +8785,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn05" data-type="rn" data-rn="RN05" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-text="rn05 pré-requisito de homologação de apontamentos para fechamento oe2 módulo 2 car-03 fluxo de aprovação a rotina de consolidação e homologação financeira processa exclusivamente apontamentos de campo que tenham sido formalmente homologados pelo gestor operacional de obras. rf05 rf06 regra negocio dominio" data-search-text="rn05 pré-requisito de homologação de apontamentos para fechamento oe2 módulo 2 car-03 fluxo de aprovação a rotina de consolidação e homologação financeira processa exclusivamente apontamentos de campo que tenham sido formalmente homologados pelo gestor operacional de obras. rf05 rf06 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe2" id="rn05" data-type="rn" data-rn="RN05" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-text="rn05 pré-requisito de homologação de apontamentos para fechamento oe2 módulo 2 car-03 fluxo de aprovação a rotina de consolidação e homologação financeira processa exclusivamente apontamentos de campo que tenham sido formalmente homologados pelo gestor operacional de obras. rf05 rf06 regra negocio dominio" data-search-text="rn05 pré-requisito de homologação de apontamentos para fechamento oe2 módulo 2 car-03 fluxo de aprovação a rotina de consolidação e homologação financeira processa exclusivamente apontamentos de campo que tenham sido formalmente homologados pelo gestor operacional de obras. rf05 rf06 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7386,7 +8846,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn06" data-type="rn" data-rn="RN06" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn06 janela temporal para prestação de contas de reembolso oe2 módulo 2 car-04 controle temporal despesas operacionais elegíveis a reembolso devem ser submetidas em até 5 dias úteis após a realização do gasto, acompanhadas obrigatoriamente de comprovante fiscal. rf07 rf28 regra negocio dominio" data-search-text="rn06 janela temporal para prestação de contas de reembolso oe2 módulo 2 car-04 controle temporal despesas operacionais elegíveis a reembolso devem ser submetidas em até 5 dias úteis após a realização do gasto, acompanhadas obrigatoriamente de comprovante fiscal. rf07 rf28 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe2" id="rn06" data-type="rn" data-rn="RN06" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn06 janela temporal para prestação de contas de reembolso oe2 módulo 2 car-04 controle temporal despesas operacionais elegíveis a reembolso devem ser submetidas em até 5 dias úteis após a realização do gasto, acompanhadas obrigatoriamente de comprovante fiscal. rf07 rf28 regra negocio dominio" data-search-text="rn06 janela temporal para prestação de contas de reembolso oe2 módulo 2 car-04 controle temporal despesas operacionais elegíveis a reembolso devem ser submetidas em até 5 dias úteis após a realização do gasto, acompanhadas obrigatoriamente de comprovante fiscal. rf07 rf28 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7447,7 +8907,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn07" data-type="rn" data-rn="RN07" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn07 bloqueio e justificativa obrigatória em recusa de despesa oe2 módulo 2 car-04 imutabilidade contábil a recusa de despesa pelo administrador financeiro exige parecer com no mínimo 20 caracteres; despesas homologadas não podem sofrer exclusão lógica. rf08 rf29 regra negocio dominio" data-search-text="rn07 bloqueio e justificativa obrigatória em recusa de despesa oe2 módulo 2 car-04 imutabilidade contábil a recusa de despesa pelo administrador financeiro exige parecer com no mínimo 20 caracteres; despesas homologadas não podem sofrer exclusão lógica. rf08 rf29 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe2" id="rn07" data-type="rn" data-rn="RN07" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn07 bloqueio e justificativa obrigatória em recusa de despesa oe2 módulo 2 car-04 imutabilidade contábil a recusa de despesa pelo administrador financeiro exige parecer com no mínimo 20 caracteres; despesas homologadas não podem sofrer exclusão lógica. rf08 rf29 regra negocio dominio" data-search-text="rn07 bloqueio e justificativa obrigatória em recusa de despesa oe2 módulo 2 car-04 imutabilidade contábil a recusa de despesa pelo administrador financeiro exige parecer com no mínimo 20 caracteres; despesas homologadas não podem sofrer exclusão lógica. rf08 rf29 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7508,7 +8968,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn08" data-type="rn" data-rn="RN08" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn08 comprovante fiscal obrigatório para homologação de reembolso oe2 módulo 2 car-04 comprovação fiscal nenhuma despesa ou prestação de contas de adiantamento pode ser homologada para pagamento sem ao menos um comprovante fiscal legível anexado e validado. rf07 rf08 rf28 rf29 regra negocio dominio" data-search-text="rn08 comprovante fiscal obrigatório para homologação de reembolso oe2 módulo 2 car-04 comprovação fiscal nenhuma despesa ou prestação de contas de adiantamento pode ser homologada para pagamento sem ao menos um comprovante fiscal legível anexado e validado. rf07 rf08 rf28 rf29 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe2" id="rn08" data-type="rn" data-rn="RN08" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn08 comprovante fiscal obrigatório para homologação de reembolso oe2 módulo 2 car-04 comprovação fiscal nenhuma despesa ou prestação de contas de adiantamento pode ser homologada para pagamento sem ao menos um comprovante fiscal legível anexado e validado. rf07 rf08 rf28 rf29 regra negocio dominio" data-search-text="rn08 comprovante fiscal obrigatório para homologação de reembolso oe2 módulo 2 car-04 comprovação fiscal nenhuma despesa ou prestação de contas de adiantamento pode ser homologada para pagamento sem ao menos um comprovante fiscal legível anexado e validado. rf07 rf08 rf28 rf29 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7569,7 +9029,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn09" data-type="rn" data-rn="RN09" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn09 rateio proporcional de custos indiretos por contrato oe3 módulo 3 car-05 apropriação & rateio custos de equipes que atuam simultaneamente em mais de um contrato ativo devem ser rateados proporcionalmente às horas trabalhadas registradas em cada obra. rf07 rf09 rf28 rf33 rf34 rf37 rf39 regra negocio dominio" data-search-text="rn09 rateio proporcional de custos indiretos por contrato oe3 módulo 3 car-05 apropriação & rateio custos de equipes que atuam simultaneamente em mais de um contrato ativo devem ser rateados proporcionalmente às horas trabalhadas registradas em cada obra. rf07 rf09 rf28 rf33 rf34 rf37 rf39 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe3" id="rn09" data-type="rn" data-rn="RN09" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn09 rateio proporcional de custos indiretos por contrato oe3 módulo 3 car-05 apropriação & rateio custos de equipes que atuam simultaneamente em mais de um contrato ativo devem ser rateados proporcionalmente às horas trabalhadas registradas em cada obra. rf07 rf09 rf28 rf33 rf34 rf37 rf39 regra negocio dominio" data-search-text="rn09 rateio proporcional de custos indiretos por contrato oe3 módulo 3 car-05 apropriação & rateio custos de equipes que atuam simultaneamente em mais de um contrato ativo devem ser rateados proporcionalmente às horas trabalhadas registradas em cada obra. rf07 rf09 rf28 rf33 rf34 rf37 rf39 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7630,7 +9090,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn10" data-type="rn" data-rn="RN10" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn10 garantia de consistência transacional no rateio de custos oe3 módulo 3 car-05 consistência transacional a gravação do rateio financeiro entre centros de custo deve ser atômica (acid); qualquer falha em uma das parcelas reverte a operação integralmente. rf09 rf37 regra negocio dominio" data-search-text="rn10 garantia de consistência transacional no rateio de custos oe3 módulo 3 car-05 consistência transacional a gravação do rateio financeiro entre centros de custo deve ser atômica (acid); qualquer falha em uma das parcelas reverte a operação integralmente. rf09 rf37 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe3" id="rn10" data-type="rn" data-rn="RN10" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn10 garantia de consistência transacional no rateio de custos oe3 módulo 3 car-05 consistência transacional a gravação do rateio financeiro entre centros de custo deve ser atômica (acid); qualquer falha em uma das parcelas reverte a operação integralmente. rf09 rf37 regra negocio dominio" data-search-text="rn10 garantia de consistência transacional no rateio de custos oe3 módulo 3 car-05 consistência transacional a gravação do rateio financeiro entre centros de custo deve ser atômica (acid); qualquer falha em uma das parcelas reverte a operação integralmente. rf09 rf37 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7691,7 +9151,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn11" data-type="rn" data-rn="RN11" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn11 parametrização obrigatória de centros de custo por contrato oe3 módulo 3 car-05 parametrização orçamentária todo contrato cadastrado deve possuir ao menos um centro de custo vinculado antes de receber qualquer apropriação de despesa ou diária técnica. rf10 rf30 rf38 regra negocio dominio" data-search-text="rn11 parametrização obrigatória de centros de custo por contrato oe3 módulo 3 car-05 parametrização orçamentária todo contrato cadastrado deve possuir ao menos um centro de custo vinculado antes de receber qualquer apropriação de despesa ou diária técnica. rf10 rf30 rf38 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe3" id="rn11" data-type="rn" data-rn="RN11" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn11 parametrização obrigatória de centros de custo por contrato oe3 módulo 3 car-05 parametrização orçamentária todo contrato cadastrado deve possuir ao menos um centro de custo vinculado antes de receber qualquer apropriação de despesa ou diária técnica. rf10 rf30 rf38 regra negocio dominio" data-search-text="rn11 parametrização obrigatória de centros de custo por contrato oe3 módulo 3 car-05 parametrização orçamentária todo contrato cadastrado deve possuir ao menos um centro de custo vinculado antes de receber qualquer apropriação de despesa ou diária técnica. rf10 rf30 rf38 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7752,7 +9212,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn12" data-type="rn" data-rn="RN12" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn12 segregação de despesas administrativas e operacionais oe3 módulo 3 car-05 segregação de despesas custos de deslocamento e hospedagem são alocados separadamente das despesas de materiais operacionais, viabilizando relatórios segregados por natureza de gasto. rf09 rf10 regra negocio dominio" data-search-text="rn12 segregação de despesas administrativas e operacionais oe3 módulo 3 car-05 segregação de despesas custos de deslocamento e hospedagem são alocados separadamente das despesas de materiais operacionais, viabilizando relatórios segregados por natureza de gasto. rf09 rf10 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe3" id="rn12" data-type="rn" data-rn="RN12" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn12 segregação de despesas administrativas e operacionais oe3 módulo 3 car-05 segregação de despesas custos de deslocamento e hospedagem são alocados separadamente das despesas de materiais operacionais, viabilizando relatórios segregados por natureza de gasto. rf09 rf10 regra negocio dominio" data-search-text="rn12 segregação de despesas administrativas e operacionais oe3 módulo 3 car-05 segregação de despesas custos de deslocamento e hospedagem são alocados separadamente das despesas de materiais operacionais, viabilizando relatórios segregados por natureza de gasto. rf09 rf10 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7813,7 +9273,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn13" data-type="rn" data-rn="RN13" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-text="rn13 bloqueio preventivo por extrapolação de teto orçamentário oe3 módulo 3 car-06 controle de teto orçamentário lançamentos de despesas operacionais que ultrapassem 100% do teto orçamentário parametrizado para o contrato demandam autorização formal com justificativa registrada. rf11 rf12 rf31 rf40 regra negocio dominio" data-search-text="rn13 bloqueio preventivo por extrapolação de teto orçamentário oe3 módulo 3 car-06 controle de teto orçamentário lançamentos de despesas operacionais que ultrapassem 100% do teto orçamentário parametrizado para o contrato demandam autorização formal com justificativa registrada. rf11 rf12 rf31 rf40 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe3" id="rn13" data-type="rn" data-rn="RN13" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-text="rn13 bloqueio preventivo por extrapolação de teto orçamentário oe3 módulo 3 car-06 controle de teto orçamentário lançamentos de despesas operacionais que ultrapassem 100% do teto orçamentário parametrizado para o contrato demandam autorização formal com justificativa registrada. rf11 rf12 rf31 rf40 regra negocio dominio" data-search-text="rn13 bloqueio preventivo por extrapolação de teto orçamentário oe3 módulo 3 car-06 controle de teto orçamentário lançamentos de despesas operacionais que ultrapassem 100% do teto orçamentário parametrizado para o contrato demandam autorização formal com justificativa registrada. rf11 rf12 rf31 rf40 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7874,7 +9334,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn14" data-type="rn" data-rn="RN14" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-text="rn14 sigilo e não-exposição de remunerações individuais em painéis oe3 módulo 3 car-06 sigilo & privacidade salarial painéis analíticos acessíveis por gestores operacionais exibem montantes agregados de custos por contrato, ocultando remunerações e dados bancários individuais dos colaboradores. rf11 rf12 rf34 rf39 regra negocio dominio" data-search-text="rn14 sigilo e não-exposição de remunerações individuais em painéis oe3 módulo 3 car-06 sigilo & privacidade salarial painéis analíticos acessíveis por gestores operacionais exibem montantes agregados de custos por contrato, ocultando remunerações e dados bancários individuais dos colaboradores. rf11 rf12 rf34 rf39 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe3" id="rn14" data-type="rn" data-rn="RN14" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-text="rn14 sigilo e não-exposição de remunerações individuais em painéis oe3 módulo 3 car-06 sigilo & privacidade salarial painéis analíticos acessíveis por gestores operacionais exibem montantes agregados de custos por contrato, ocultando remunerações e dados bancários individuais dos colaboradores. rf11 rf12 rf34 rf39 regra negocio dominio" data-search-text="rn14 sigilo e não-exposição de remunerações individuais em painéis oe3 módulo 3 car-06 sigilo & privacidade salarial painéis analíticos acessíveis por gestores operacionais exibem montantes agregados de custos por contrato, ocultando remunerações e dados bancários individuais dos colaboradores. rf11 rf12 rf34 rf39 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7935,7 +9395,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn15" data-type="rn" data-rn="RN15" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn15 autenticação por jwt com sessão temporal limitada oe4 módulo 4 car-07 segurança de autenticação tokens de autenticação jwt possuem validade máxima estrita de 8 horas, exigindo nova autenticação após expiração; links de ativação ou recuperação expiram em 30 minutos. rf13 rf17 rf18 regra negocio dominio" data-search-text="rn15 autenticação por jwt com sessão temporal limitada oe4 módulo 4 car-07 segurança de autenticação tokens de autenticação jwt possuem validade máxima estrita de 8 horas, exigindo nova autenticação após expiração; links de ativação ou recuperação expiram em 30 minutos. rf13 rf17 rf18 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe4" id="rn15" data-type="rn" data-rn="RN15" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn15 autenticação por jwt com sessão temporal limitada oe4 módulo 4 car-07 segurança de autenticação tokens de autenticação jwt possuem validade máxima estrita de 8 horas, exigindo nova autenticação após expiração; links de ativação ou recuperação expiram em 30 minutos. rf13 rf17 rf18 regra negocio dominio" data-search-text="rn15 autenticação por jwt com sessão temporal limitada oe4 módulo 4 car-07 segurança de autenticação tokens de autenticação jwt possuem validade máxima estrita de 8 horas, exigindo nova autenticação após expiração; links de ativação ou recuperação expiram em 30 minutos. rf13 rf17 rf18 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7996,7 +9456,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn16" data-type="rn" data-rn="RN16" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn16 princípio do menor privilégio e segregação de funções (sod) oe4 módulo 4 car-07 autorização rbac estrita cada perfil de usuário acessa estritamente os recursos indispensáveis à sua função; perfis operacionais de campo não possuem acesso a rotinas financeiras de homologação. rf14 regra negocio dominio" data-search-text="rn16 princípio do menor privilégio e segregação de funções (sod) oe4 módulo 4 car-07 autorização rbac estrita cada perfil de usuário acessa estritamente os recursos indispensáveis à sua função; perfis operacionais de campo não possuem acesso a rotinas financeiras de homologação. rf14 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe4" id="rn16" data-type="rn" data-rn="RN16" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn16 princípio do menor privilégio e segregação de funções (sod) oe4 módulo 4 car-07 autorização rbac estrita cada perfil de usuário acessa estritamente os recursos indispensáveis à sua função; perfis operacionais de campo não possuem acesso a rotinas financeiras de homologação. rf14 regra negocio dominio" data-search-text="rn16 princípio do menor privilégio e segregação de funções (sod) oe4 módulo 4 car-07 autorização rbac estrita cada perfil de usuário acessa estritamente os recursos indispensáveis à sua função; perfis operacionais de campo não possuem acesso a rotinas financeiras de homologação. rf14 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8057,7 +9517,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn17" data-type="rn" data-rn="RN17" data-oe="oe4" data-car="car-08" data-mvp="mvp" data-quad="q1" data-text="rn17 registro atômico de mutações em trilha de auditoria oe4 módulo 4 car-08 imutabilidade de trilha de auditoria toda mutação cadastral, financeira ou de aprovação gera registro síncrono e obrigatório em trilha de auditoria na mesma transação atômica do banco de dados. rf15 rf16 regra negocio dominio" data-search-text="rn17 registro atômico de mutações em trilha de auditoria oe4 módulo 4 car-08 imutabilidade de trilha de auditoria toda mutação cadastral, financeira ou de aprovação gera registro síncrono e obrigatório em trilha de auditoria na mesma transação atômica do banco de dados. rf15 rf16 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe4" id="rn17" data-type="rn" data-rn="RN17" data-oe="oe4" data-car="car-08" data-mvp="mvp" data-quad="q1" data-text="rn17 registro atômico de mutações em trilha de auditoria oe4 módulo 4 car-08 imutabilidade de trilha de auditoria toda mutação cadastral, financeira ou de aprovação gera registro síncrono e obrigatório em trilha de auditoria na mesma transação atômica do banco de dados. rf15 rf16 regra negocio dominio" data-search-text="rn17 registro atômico de mutações em trilha de auditoria oe4 módulo 4 car-08 imutabilidade de trilha de auditoria toda mutação cadastral, financeira ou de aprovação gera registro síncrono e obrigatório em trilha de auditoria na mesma transação atômica do banco de dados. rf15 rf16 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8118,7 +9578,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn18" data-type="rn" data-rn="RN18" data-oe="oe4" data-car="car-08" data-mvp="mvp" data-quad="q1" data-text="rn18 composição mínima obrigatória do registro de log de auditoria oe4 módulo 4 car-08 composição atômica de log utc cada log registra compulsoriamente: carimbo de data/hora em utc, identificador do usuário autor, endereço ip, entidade afetada, ação executada e snapshot de antes/depois dos dados. rf15 rf16 regra negocio dominio" data-search-text="rn18 composição mínima obrigatória do registro de log de auditoria oe4 módulo 4 car-08 composição atômica de log utc cada log registra compulsoriamente: carimbo de data/hora em utc, identificador do usuário autor, endereço ip, entidade afetada, ação executada e snapshot de antes/depois dos dados. rf15 rf16 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe4" id="rn18" data-type="rn" data-rn="RN18" data-oe="oe4" data-car="car-08" data-mvp="mvp" data-quad="q1" data-text="rn18 composição mínima obrigatória do registro de log de auditoria oe4 módulo 4 car-08 composição atômica de log utc cada log registra compulsoriamente: carimbo de data/hora em utc, identificador do usuário autor, endereço ip, entidade afetada, ação executada e snapshot de antes/depois dos dados. rf15 rf16 regra negocio dominio" data-search-text="rn18 composição mínima obrigatória do registro de log de auditoria oe4 módulo 4 car-08 composição atômica de log utc cada log registra compulsoriamente: carimbo de data/hora em utc, identificador do usuário autor, endereço ip, entidade afetada, ação executada e snapshot de antes/depois dos dados. rf15 rf16 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8179,7 +9639,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn19" data-type="rn" data-rn="RN19" data-oe="oe4" data-car="car-08" data-mvp="mvp" data-quad="q1" data-text="rn19 política de retenção quinquenal de logs oe4 módulo 4 car-08 retenção quinquenal clt/lgpd os registros da trilha de auditoria são mantidos de forma íntegra por no mínimo 5 anos fiscais (1.825 dias), assegurando conformidade defensiva com o artigo 11 da clt e artigo 16 da lgpd. rf15 rf16 regra negocio dominio" data-search-text="rn19 política de retenção quinquenal de logs oe4 módulo 4 car-08 retenção quinquenal clt/lgpd os registros da trilha de auditoria são mantidos de forma íntegra por no mínimo 5 anos fiscais (1.825 dias), assegurando conformidade defensiva com o artigo 11 da clt e artigo 16 da lgpd. rf15 rf16 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe4" id="rn19" data-type="rn" data-rn="RN19" data-oe="oe4" data-car="car-08" data-mvp="mvp" data-quad="q1" data-text="rn19 política de retenção quinquenal de logs oe4 módulo 4 car-08 retenção quinquenal clt/lgpd os registros da trilha de auditoria são mantidos de forma íntegra por no mínimo 5 anos fiscais (1.825 dias), assegurando conformidade defensiva com o artigo 11 da clt e artigo 16 da lgpd. rf15 rf16 regra negocio dominio" data-search-text="rn19 política de retenção quinquenal de logs oe4 módulo 4 car-08 retenção quinquenal clt/lgpd os registros da trilha de auditoria são mantidos de forma íntegra por no mínimo 5 anos fiscais (1.825 dias), assegurando conformidade defensiva com o artigo 11 da clt e artigo 16 da lgpd. rf15 rf16 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8240,7 +9700,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn20" data-type="rn" data-rn="RN20" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn20 limite de tentativas de autenticação oe4 módulo 4 car-07 proteção anti-brute force o acúmulo de 5 tentativas consecutivas de login incorretas em uma janela de 15 minutos bloqueia temporariamente a conta corporativa por 30 minutos. rf23 regra negocio dominio" data-search-text="rn20 limite de tentativas de autenticação oe4 módulo 4 car-07 proteção anti-brute force o acúmulo de 5 tentativas consecutivas de login incorretas em uma janela de 15 minutos bloqueia temporariamente a conta corporativa por 30 minutos. rf23 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe4" id="rn20" data-type="rn" data-rn="RN20" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn20 limite de tentativas de autenticação oe4 módulo 4 car-07 proteção anti-brute force o acúmulo de 5 tentativas consecutivas de login incorretas em uma janela de 15 minutos bloqueia temporariamente a conta corporativa por 30 minutos. rf23 regra negocio dominio" data-search-text="rn20 limite de tentativas de autenticação oe4 módulo 4 car-07 proteção anti-brute force o acúmulo de 5 tentativas consecutivas de login incorretas em uma janela de 15 minutos bloqueia temporariamente a conta corporativa por 30 minutos. rf23 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8301,7 +9761,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn21" data-type="rn" data-rn="RN21" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn21 política de expiração e histórico de senhas oe4 módulo 4 car-07 política de senhas & histórico credenciais de acesso possuem validade máxima de 90 dias, exigindo redefinição mandatória e impedindo a reutilização de qualquer uma das últimas 5 senhas adotadas. rf24 regra negocio dominio" data-search-text="rn21 política de expiração e histórico de senhas oe4 módulo 4 car-07 política de senhas & histórico credenciais de acesso possuem validade máxima de 90 dias, exigindo redefinição mandatória e impedindo a reutilização de qualquer uma das últimas 5 senhas adotadas. rf24 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe4" id="rn21" data-type="rn" data-rn="RN21" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn21 política de expiração e histórico de senhas oe4 módulo 4 car-07 política de senhas & histórico credenciais de acesso possuem validade máxima de 90 dias, exigindo redefinição mandatória e impedindo a reutilização de qualquer uma das últimas 5 senhas adotadas. rf24 regra negocio dominio" data-search-text="rn21 política de expiração e histórico de senhas oe4 módulo 4 car-07 política de senhas & histórico credenciais de acesso possuem validade máxima de 90 dias, exigindo redefinição mandatória e impedindo a reutilização de qualquer uma das últimas 5 senhas adotadas. rf24 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8362,7 +9822,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn22" data-type="rn" data-rn="RN22" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn22 tipos de contratação válidos oe1 módulo 1 car-01 enquadramento contratual o sistema restringe o vínculo de contratação às opções diarista, clt ou prestador de serviço (pj), aplicando regras específicas de apuração de diárias e rateio para cada categoria. rf01 rf25 regra negocio dominio" data-search-text="rn22 tipos de contratação válidos oe1 módulo 1 car-01 enquadramento contratual o sistema restringe o vínculo de contratação às opções diarista, clt ou prestador de serviço (pj), aplicando regras específicas de apuração de diárias e rateio para cada categoria. rf01 rf25 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe1" id="rn22" data-type="rn" data-rn="RN22" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn22 tipos de contratação válidos oe1 módulo 1 car-01 enquadramento contratual o sistema restringe o vínculo de contratação às opções diarista, clt ou prestador de serviço (pj), aplicando regras específicas de apuração de diárias e rateio para cada categoria. rf01 rf25 regra negocio dominio" data-search-text="rn22 tipos de contratação válidos oe1 módulo 1 car-01 enquadramento contratual o sistema restringe o vínculo de contratação às opções diarista, clt ou prestador de serviço (pj), aplicando regras específicas de apuração de diárias e rateio para cada categoria. rf01 rf25 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8423,7 +9883,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn23" data-type="rn" data-rn="RN23" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn23 versionamento obrigatório de dados cadastrais e bancários oe1 módulo 1 car-01 versionamento cadastral alterações em campos de dados pessoais, bancários ou funcionais geram novo snapshot na tabela histórica com carimbo temporal utc e identificador do autor, sem sobrescrever valores anteriores. rf02 rf26 regra negocio dominio" data-search-text="rn23 versionamento obrigatório de dados cadastrais e bancários oe1 módulo 1 car-01 versionamento cadastral alterações em campos de dados pessoais, bancários ou funcionais geram novo snapshot na tabela histórica com carimbo temporal utc e identificador do autor, sem sobrescrever valores anteriores. rf02 rf26 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe1" id="rn23" data-type="rn" data-rn="RN23" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn23 versionamento obrigatório de dados cadastrais e bancários oe1 módulo 1 car-01 versionamento cadastral alterações em campos de dados pessoais, bancários ou funcionais geram novo snapshot na tabela histórica com carimbo temporal utc e identificador do autor, sem sobrescrever valores anteriores. rf02 rf26 regra negocio dominio" data-search-text="rn23 versionamento obrigatório de dados cadastrais e bancários oe1 módulo 1 car-01 versionamento cadastral alterações em campos de dados pessoais, bancários ou funcionais geram novo snapshot na tabela histórica com carimbo temporal utc e identificador do autor, sem sobrescrever valores anteriores. rf02 rf26 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8484,7 +9944,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn24" data-type="rn" data-rn="RN24" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-text="rn24 captura de geolocalização não bloqueante oe1 módulo 1 car-02 geolocalização resiliente o sistema tenta capturar coordenadas geográficas no momento do anexo de evidências; caso a permissão seja negada ou o sinal gps indisponível, o anexo prossegue normalmente com a sinalização correspondente. rf04 rf22 regra negocio dominio" data-search-text="rn24 captura de geolocalização não bloqueante oe1 módulo 1 car-02 geolocalização resiliente o sistema tenta capturar coordenadas geográficas no momento do anexo de evidências; caso a permissão seja negada ou o sinal gps indisponível, o anexo prossegue normalmente com a sinalização correspondente. rf04 rf22 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe1" id="rn24" data-type="rn" data-rn="RN24" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-text="rn24 captura de geolocalização não bloqueante oe1 módulo 1 car-02 geolocalização resiliente o sistema tenta capturar coordenadas geográficas no momento do anexo de evidências; caso a permissão seja negada ou o sinal gps indisponível, o anexo prossegue normalmente com a sinalização correspondente. rf04 rf22 regra negocio dominio" data-search-text="rn24 captura de geolocalização não bloqueante oe1 módulo 1 car-02 geolocalização resiliente o sistema tenta capturar coordenadas geográficas no momento do anexo de evidências; caso a permissão seja negada ou o sinal gps indisponível, o anexo prossegue normalmente com a sinalização correspondente. rf04 rf22 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8545,7 +10005,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn25" data-type="rn" data-rn="RN25" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-text="rn25 vigência dos valores de diárias técnicas oe2 módulo 2 car-03 tabela de diárias vigente o cálculo de prévia e fechamento utiliza estritamente os valores nominais de diárias técnicas vigentes na competência de realização da atividade de campo. rf05 rf27 regra negocio dominio" data-search-text="rn25 vigência dos valores de diárias técnicas oe2 módulo 2 car-03 tabela de diárias vigente o cálculo de prévia e fechamento utiliza estritamente os valores nominais de diárias técnicas vigentes na competência de realização da atividade de campo. rf05 rf27 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe2" id="rn25" data-type="rn" data-rn="RN25" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-text="rn25 vigência dos valores de diárias técnicas oe2 módulo 2 car-03 tabela de diárias vigente o cálculo de prévia e fechamento utiliza estritamente os valores nominais de diárias técnicas vigentes na competência de realização da atividade de campo. rf05 rf27 regra negocio dominio" data-search-text="rn25 vigência dos valores de diárias técnicas oe2 módulo 2 car-03 tabela de diárias vigente o cálculo de prévia e fechamento utiliza estritamente os valores nominais de diárias técnicas vigentes na competência de realização da atividade de campo. rf05 rf27 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8606,7 +10066,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn26" data-type="rn" data-rn="RN26" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn26 elegibilidade do adiantamento operacional oe2 módulo 2 car-04 elegibilidade de adiantamento a solicitação de adiantamento operacional é restrita a colaboradores alocados em contratos ativos e demanda justificativa de aplicação dos recursos. rf28 regra negocio dominio" data-search-text="rn26 elegibilidade do adiantamento operacional oe2 módulo 2 car-04 elegibilidade de adiantamento a solicitação de adiantamento operacional é restrita a colaboradores alocados em contratos ativos e demanda justificativa de aplicação dos recursos. rf28 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe2" id="rn26" data-type="rn" data-rn="RN26" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn26 elegibilidade do adiantamento operacional oe2 módulo 2 car-04 elegibilidade de adiantamento a solicitação de adiantamento operacional é restrita a colaboradores alocados em contratos ativos e demanda justificativa de aplicação dos recursos. rf28 regra negocio dominio" data-search-text="rn26 elegibilidade do adiantamento operacional oe2 módulo 2 car-04 elegibilidade de adiantamento a solicitação de adiantamento operacional é restrita a colaboradores alocados em contratos ativos e demanda justificativa de aplicação dos recursos. rf28 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8667,7 +10127,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn27" data-type="rn" data-rn="RN27" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn27 notificação de pendências financeiras oe2 módulo 2 car-04 mensageria & notificação a decisão de homologação ou recusa em solicitações de reembolso e adiantamento dispara notificação automática de status para o colaborador solicitante. rf08 rf29 regra negocio dominio" data-search-text="rn27 notificação de pendências financeiras oe2 módulo 2 car-04 mensageria & notificação a decisão de homologação ou recusa em solicitações de reembolso e adiantamento dispara notificação automática de status para o colaborador solicitante. rf08 rf29 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe2" id="rn27" data-type="rn" data-rn="RN27" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn27 notificação de pendências financeiras oe2 módulo 2 car-04 mensageria & notificação a decisão de homologação ou recusa em solicitações de reembolso e adiantamento dispara notificação automática de status para o colaborador solicitante. rf08 rf29 regra negocio dominio" data-search-text="rn27 notificação de pendências financeiras oe2 módulo 2 car-04 mensageria & notificação a decisão de homologação ou recusa em solicitações de reembolso e adiantamento dispara notificação automática de status para o colaborador solicitante. rf08 rf29 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8728,7 +10188,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn28" data-type="rn" data-rn="RN28" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn28 comparativo histórico de custos oe3 módulo 3 car-05 base histórica de custos análises comparativas de despesas históricas consolidam dados de contratos com ao menos um fechamento financeiro previamente homologado. rf30 regra negocio dominio" data-search-text="rn28 comparativo histórico de custos oe3 módulo 3 car-05 base histórica de custos análises comparativas de despesas históricas consolidam dados de contratos com ao menos um fechamento financeiro previamente homologado. rf30 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe3" id="rn28" data-type="rn" data-rn="RN28" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn28 comparativo histórico de custos oe3 módulo 3 car-05 base histórica de custos análises comparativas de despesas históricas consolidam dados de contratos com ao menos um fechamento financeiro previamente homologado. rf30 regra negocio dominio" data-search-text="rn28 comparativo histórico de custos oe3 módulo 3 car-05 base histórica de custos análises comparativas de despesas históricas consolidam dados de contratos com ao menos um fechamento financeiro previamente homologado. rf30 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8789,7 +10249,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn29" data-type="rn" data-rn="RN29" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-text="rn29 disparo de alertas preventivos de extrapolação orçamentária oe3 módulo 3 car-06 alertas preventivos de desvio quando o montante de custos apropriados a uma categoria atinge o limiar percentual parametrizado pelo gestor, o sistema emite avisos visuais no painel e alertas por e-mail. rf31 rf40 regra negocio dominio" data-search-text="rn29 disparo de alertas preventivos de extrapolação orçamentária oe3 módulo 3 car-06 alertas preventivos de desvio quando o montante de custos apropriados a uma categoria atinge o limiar percentual parametrizado pelo gestor, o sistema emite avisos visuais no painel e alertas por e-mail. rf31 rf40 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe3" id="rn29" data-type="rn" data-rn="RN29" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-text="rn29 disparo de alertas preventivos de extrapolação orçamentária oe3 módulo 3 car-06 alertas preventivos de desvio quando o montante de custos apropriados a uma categoria atinge o limiar percentual parametrizado pelo gestor, o sistema emite avisos visuais no painel e alertas por e-mail. rf31 rf40 regra negocio dominio" data-search-text="rn29 disparo de alertas preventivos de extrapolação orçamentária oe3 módulo 3 car-06 alertas preventivos de desvio quando o montante de custos apropriados a uma categoria atinge o limiar percentual parametrizado pelo gestor, o sistema emite avisos visuais no painel e alertas por e-mail. rf31 rf40 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8850,7 +10310,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn30" data-type="rn" data-rn="RN30" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-text="rn30 justificativa obrigatória e bloqueio na deliberação de apontamentos oe1 módulo 1 car-02 justificativa obrigatória & bloqueio o gestor operacional de obras deve registrar compulsoriamente parecer justificatório com no mínimo 15 caracteres ao rejeitar um apontamento de campo. a aprovação transiciona o status para 'homologado' e bloqueia compulsoriamente a edição do registro pelo colaborador (rn02), habilitando-o para as rotinas financeiras (rn05). rf19 rf32 rf35 regra negocio dominio" data-search-text="rn30 justificativa obrigatória e bloqueio na deliberação de apontamentos oe1 módulo 1 car-02 justificativa obrigatória & bloqueio o gestor operacional de obras deve registrar compulsoriamente parecer justificatório com no mínimo 15 caracteres ao rejeitar um apontamento de campo. a aprovação transiciona o status para 'homologado' e bloqueia compulsoriamente a edição do registro pelo colaborador (rn02), habilitando-o para as rotinas financeiras (rn05). rf19 rf32 rf35 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe1" id="rn30" data-type="rn" data-rn="RN30" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-text="rn30 justificativa obrigatória e bloqueio na deliberação de apontamentos oe1 módulo 1 car-02 justificativa obrigatória & bloqueio o gestor operacional de obras deve registrar compulsoriamente parecer justificatório com no mínimo 15 caracteres ao rejeitar um apontamento de campo. a aprovação transiciona o status para 'homologado' e bloqueia compulsoriamente a edição do registro pelo colaborador (rn02), habilitando-o para as rotinas financeiras (rn05). rf19 rf32 rf35 regra negocio dominio" data-search-text="rn30 justificativa obrigatória e bloqueio na deliberação de apontamentos oe1 módulo 1 car-02 justificativa obrigatória & bloqueio o gestor operacional de obras deve registrar compulsoriamente parecer justificatório com no mínimo 15 caracteres ao rejeitar um apontamento de campo. a aprovação transiciona o status para 'homologado' e bloqueia compulsoriamente a edição do registro pelo colaborador (rn02), habilitando-o para as rotinas financeiras (rn05). rf19 rf32 rf35 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8911,7 +10371,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn31" data-type="rn" data-rn="RN31" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-text="rn31 parametrização e fórmulas de diárias e comissões técnicas de campo oe2 módulo 2 car-03 fórmula paramétrica de remuneração a apuração de remuneração variável de campo combina a quantidade de diárias homologadas multiplicadas pelo valor vigente com os percentuais de comissão pactuados por contrato. rf05 rf27 regra negocio dominio" data-search-text="rn31 parametrização e fórmulas de diárias e comissões técnicas de campo oe2 módulo 2 car-03 fórmula paramétrica de remuneração a apuração de remuneração variável de campo combina a quantidade de diárias homologadas multiplicadas pelo valor vigente com os percentuais de comissão pactuados por contrato. rf05 rf27 regra negocio dominio">
+<details class="req-card req-card-rn req-card-oe2" id="rn31" data-type="rn" data-rn="RN31" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-text="rn31 parametrização e fórmulas de diárias e comissões técnicas de campo oe2 módulo 2 car-03 fórmula paramétrica de remuneração a apuração de remuneração variável de campo combina a quantidade de diárias homologadas multiplicadas pelo valor vigente com os percentuais de comissão pactuados por contrato. rf05 rf27 regra negocio dominio" data-search-text="rn31 parametrização e fórmulas de diárias e comissões técnicas de campo oe2 módulo 2 car-03 fórmula paramétrica de remuneração a apuração de remuneração variável de campo combina a quantidade de diárias homologadas multiplicadas pelo valor vigente com os percentuais de comissão pactuados por contrato. rf05 rf27 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8984,7 +10444,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 !!! info "Pacote Transversal de Atributos de Qualidade (T)"
     Os requisitos **RNF03** (Criptografia AES-256 / TLS 1.3), **RNF14** (Autorização RBAC em 100% dos endpoints), **RNF15** (Consistência e Atomicidade de Logs), **RNF16** (Retenção Quinquenal CLT Art. 11), **RNF17** (Rotina de Backup Diário), **RNF18** (Disponibilidade ≥ 99,5%), **RNF19** (Acessibilidade WCAG 2.1 AA) e **RNF20** (Validação de Schema em Escritas) compõem o **Pacote Transversal (T)** obrigatório, aplicando-se de forma pervasiva a todas as telas, rotinas e histórias de usuário do produto.
 
-<details class="req-card req-card-rnf" id="rnf01" data-type="rnf" data-rnf="RNF01" data-oe="oe1" data-mvp="pos-mvp" data-quad="q3" data-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe1" id="rnf01" data-type="rnf" data-rnf="RNF01" data-oe="oe1" data-mvp="pos-mvp" data-quad="q3" data-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
@@ -9041,7 +10501,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf02" data-type="rnf" data-rnf="RNF02" data-oe="oe1" data-mvp="mvp" data-quad="q1" data-text="rnf02 garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos urps+ desempenho produto — desempenho módulo 1 / oe1 o tempo de resposta para busca, paginação e renderização da ficha unificada de qualquer colaborador deve ser inferior ou igual a 2,0 segundos em 95% das requisições sob carga nominal (concorrência típica de até 50 usuários simultâneos autenticados a 10 req/s). rf01 rf02 rf03 rf20 rf25 rf26 rf36 requisito nao funcional atributo qualidade dod" data-search-text="rnf02 garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos urps+ desempenho produto — desempenho módulo 1 / oe1 o tempo de resposta para busca, paginação e renderização da ficha unificada de qualquer colaborador deve ser inferior ou igual a 2,0 segundos em 95% das requisições sob carga nominal (concorrência típica de até 50 usuários simultâneos autenticados a 10 req/s). rf01 rf02 rf03 rf20 rf25 rf26 rf36 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe1" id="rnf02" data-type="rnf" data-rnf="RNF02" data-oe="oe1" data-mvp="mvp" data-quad="q1" data-text="rnf02 garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos urps+ desempenho produto — desempenho módulo 1 / oe1 o tempo de resposta para busca, paginação e renderização da ficha unificada de qualquer colaborador deve ser inferior ou igual a 2,0 segundos em 95% das requisições sob carga nominal (concorrência típica de até 50 usuários simultâneos autenticados a 10 req/s). rf01 rf02 rf03 rf20 rf25 rf26 rf36 requisito nao funcional atributo qualidade dod" data-search-text="rnf02 garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos urps+ desempenho produto — desempenho módulo 1 / oe1 o tempo de resposta para busca, paginação e renderização da ficha unificada de qualquer colaborador deve ser inferior ou igual a 2,0 segundos em 95% das requisições sob carga nominal (concorrência típica de até 50 usuários simultâneos autenticados a 10 req/s). rf01 rf02 rf03 rf20 rf25 rf26 rf36 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
@@ -9098,7 +10558,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf03" data-type="rnf" data-rnf="RNF03" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf03 proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito urps+ segurança (+) produto — segurança transversal (t) / oe1 100% dos dados pessoais e cadastrais confidenciais (cpf, dados de conta bancária, chave pix e remuneração) armazenados em banco devem utilizar criptografia aes-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo tls 1.3 (em conformidade com o princípio de segurança do art. 6º, vii da lgpd). rf01 rf02 rf03 rf13 rf23 requisito nao funcional atributo qualidade dod" data-search-text="rnf03 proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito urps+ segurança (+) produto — segurança transversal (t) / oe1 100% dos dados pessoais e cadastrais confidenciais (cpf, dados de conta bancária, chave pix e remuneração) armazenados em banco devem utilizar criptografia aes-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo tls 1.3 (em conformidade com o princípio de segurança do art. 6º, vii da lgpd). rf01 rf02 rf03 rf13 rf23 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-transversal" id="rnf03" data-type="rnf" data-rnf="RNF03" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf03 proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito urps+ segurança (+) produto — segurança transversal (t) / oe1 100% dos dados pessoais e cadastrais confidenciais (cpf, dados de conta bancária, chave pix e remuneração) armazenados em banco devem utilizar criptografia aes-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo tls 1.3 (em conformidade com o princípio de segurança do art. 6º, vii da lgpd). rf01 rf02 rf03 rf13 rf23 requisito nao funcional atributo qualidade dod" data-search-text="rnf03 proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito urps+ segurança (+) produto — segurança transversal (t) / oe1 100% dos dados pessoais e cadastrais confidenciais (cpf, dados de conta bancária, chave pix e remuneração) armazenados em banco devem utilizar criptografia aes-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo tls 1.3 (em conformidade com o princípio de segurança do art. 6º, vii da lgpd). rf01 rf02 rf03 rf13 rf23 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
@@ -9155,7 +10615,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf04" data-type="rnf" data-rnf="RNF04" data-oe="oe1" data-mvp="mvp" data-quad="q1" data-text="rnf04 garantir usabilidade e agilidade no preenchimento de apontamentos de campo urps+ usabilidade produto — usabilidade módulo 1 / oe1 o preenchimento completo de um apontamento diário de campo deve ser concluído por usuários em primeiro uso, sem suporte externo ou treinamento prévio, em no máximo 5 passos/telas, com taxa de conclusão bem-sucedida ≥ 90% em teste de usabilidade. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf04 garantir usabilidade e agilidade no preenchimento de apontamentos de campo urps+ usabilidade produto — usabilidade módulo 1 / oe1 o preenchimento completo de um apontamento diário de campo deve ser concluído por usuários em primeiro uso, sem suporte externo ou treinamento prévio, em no máximo 5 passos/telas, com taxa de conclusão bem-sucedida ≥ 90% em teste de usabilidade. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe1" id="rnf04" data-type="rnf" data-rnf="RNF04" data-oe="oe1" data-mvp="mvp" data-quad="q1" data-text="rnf04 garantir usabilidade e agilidade no preenchimento de apontamentos de campo urps+ usabilidade produto — usabilidade módulo 1 / oe1 o preenchimento completo de um apontamento diário de campo deve ser concluído por usuários em primeiro uso, sem suporte externo ou treinamento prévio, em no máximo 5 passos/telas, com taxa de conclusão bem-sucedida ≥ 90% em teste de usabilidade. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf04 garantir usabilidade e agilidade no preenchimento de apontamentos de campo urps+ usabilidade produto — usabilidade módulo 1 / oe1 o preenchimento completo de um apontamento diário de campo deve ser concluído por usuários em primeiro uso, sem suporte externo ou treinamento prévio, em no máximo 5 passos/telas, com taxa de conclusão bem-sucedida ≥ 90% em teste de usabilidade. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
@@ -9212,7 +10672,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf05" data-type="rnf" data-rnf="RNF05" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf05 processar rotina de fechamento financeiro em até 5,0 segundos urps+ desempenho produto — desempenho módulo 2 / oe2 o cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal. rf05 rf06 rf21 rf27 requisito nao funcional atributo qualidade dod" data-search-text="rnf05 processar rotina de fechamento financeiro em até 5,0 segundos urps+ desempenho produto — desempenho módulo 2 / oe2 o cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal. rf05 rf06 rf21 rf27 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe2" id="rnf05" data-type="rnf" data-rnf="RNF05" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf05 processar rotina de fechamento financeiro em até 5,0 segundos urps+ desempenho produto — desempenho módulo 2 / oe2 o cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal. rf05 rf06 rf21 rf27 requisito nao funcional atributo qualidade dod" data-search-text="rnf05 processar rotina de fechamento financeiro em até 5,0 segundos urps+ desempenho produto — desempenho módulo 2 / oe2 o cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal. rf05 rf06 rf21 rf27 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
@@ -9269,7 +10729,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf06" data-type="rnf" data-rnf="RNF06" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf06 garantir exatidão aritmética centesimal em cálculos monetários urps+ confiabilidade produto — confiabilidade módulo 2 / oe2 todas as rotinas de cálculo de diárias, comissões, reembolsos e rateios devem operar com representação decimal exata (tipo decimal/numeric com no mínimo 4 casas de precisão interna e arredondamento padrão bancário para 2 casas), garantindo divergência zero em auditoria centesimal. rf05 rf06 rf07 rf08 rf21 rf27 rf28 rf29 requisito nao funcional atributo qualidade dod" data-search-text="rnf06 garantir exatidão aritmética centesimal em cálculos monetários urps+ confiabilidade produto — confiabilidade módulo 2 / oe2 todas as rotinas de cálculo de diárias, comissões, reembolsos e rateios devem operar com representação decimal exata (tipo decimal/numeric com no mínimo 4 casas de precisão interna e arredondamento padrão bancário para 2 casas), garantindo divergência zero em auditoria centesimal. rf05 rf06 rf07 rf08 rf21 rf27 rf28 rf29 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe2" id="rnf06" data-type="rnf" data-rnf="RNF06" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf06 garantir exatidão aritmética centesimal em cálculos monetários urps+ confiabilidade produto — confiabilidade módulo 2 / oe2 todas as rotinas de cálculo de diárias, comissões, reembolsos e rateios devem operar com representação decimal exata (tipo decimal/numeric com no mínimo 4 casas de precisão interna e arredondamento padrão bancário para 2 casas), garantindo divergência zero em auditoria centesimal. rf05 rf06 rf07 rf08 rf21 rf27 rf28 rf29 requisito nao funcional atributo qualidade dod" data-search-text="rnf06 garantir exatidão aritmética centesimal em cálculos monetários urps+ confiabilidade produto — confiabilidade módulo 2 / oe2 todas as rotinas de cálculo de diárias, comissões, reembolsos e rateios devem operar com representação decimal exata (tipo decimal/numeric com no mínimo 4 casas de precisão interna e arredondamento padrão bancário para 2 casas), garantindo divergência zero em auditoria centesimal. rf05 rf06 rf07 rf08 rf21 rf27 rf28 rf29 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
@@ -9326,7 +10786,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf07" data-type="rnf" data-rnf="RNF07" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf07 garantir robustez e segurança no processamento e armazenamento de comprovantes urps+ segurança / usabilidade produto — segurança módulo 2 / oe2 arquivos de comprovantes devem aceitar formatos pdf, jpeg e png com validação estrita de magic bytes no backend, tamanho máximo de 10 mb por arquivo e escaneamento preventivo contra ameaças, com compressão automática sem perda de legibilidade fiscal. rf04 rf07 rf08 rf22 rf28 rf29 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf07 garantir robustez e segurança no processamento e armazenamento de comprovantes urps+ segurança / usabilidade produto — segurança módulo 2 / oe2 arquivos de comprovantes devem aceitar formatos pdf, jpeg e png com validação estrita de magic bytes no backend, tamanho máximo de 10 mb por arquivo e escaneamento preventivo contra ameaças, com compressão automática sem perda de legibilidade fiscal. rf04 rf07 rf08 rf22 rf28 rf29 rf35 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe2" id="rnf07" data-type="rnf" data-rnf="RNF07" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf07 garantir robustez e segurança no processamento e armazenamento de comprovantes urps+ segurança / usabilidade produto — segurança módulo 2 / oe2 arquivos de comprovantes devem aceitar formatos pdf, jpeg e png com validação estrita de magic bytes no backend, tamanho máximo de 10 mb por arquivo e escaneamento preventivo contra ameaças, com compressão automática sem perda de legibilidade fiscal. rf04 rf07 rf08 rf22 rf28 rf29 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf07 garantir robustez e segurança no processamento e armazenamento de comprovantes urps+ segurança / usabilidade produto — segurança módulo 2 / oe2 arquivos de comprovantes devem aceitar formatos pdf, jpeg e png com validação estrita de magic bytes no backend, tamanho máximo de 10 mb por arquivo e escaneamento preventivo contra ameaças, com compressão automática sem perda de legibilidade fiscal. rf04 rf07 rf08 rf22 rf28 rf29 rf35 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
@@ -9383,7 +10843,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf08" data-type="rnf" data-rnf="RNF08" data-oe="oe2" data-mvp="pos-mvp" data-quad="q3" data-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf06 rf08 rf21 rf29 requisito nao funcional atributo qualidade dod" data-search-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf06 rf08 rf21 rf29 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe2" id="rnf08" data-type="rnf" data-rnf="RNF08" data-oe="oe2" data-mvp="pos-mvp" data-quad="q3" data-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf06 rf08 rf21 rf29 requisito nao funcional atributo qualidade dod" data-search-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf06 rf08 rf21 rf29 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
@@ -9440,7 +10900,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf09" data-type="rnf" data-rnf="RNF09" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf09 garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos urps+ desempenho produto — desempenho módulo 3 / oe3 a aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos. rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf09 garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos urps+ desempenho produto — desempenho módulo 3 / oe3 a aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos. rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe3" id="rnf09" data-type="rnf" data-rnf="RNF09" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf09 garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos urps+ desempenho produto — desempenho módulo 3 / oe3 a aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos. rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf09 garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos urps+ desempenho produto — desempenho módulo 3 / oe3 a aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos. rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
@@ -9497,7 +10957,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf10" data-type="rnf" data-rnf="RNF10" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf10 garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais urps+ segurança / legal externo — legislativo (lgpd) módulo 3 / oe3 consultas analíticas executadas por perfis operacionais ou de gestão de obra não devem expor valores salariais individuais ou dados bancários de colaboradores, exibindo unicamente montantes agregados de mão de obra. rf05 rf06 rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf10 garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais urps+ segurança / legal externo — legislativo (lgpd) módulo 3 / oe3 consultas analíticas executadas por perfis operacionais ou de gestão de obra não devem expor valores salariais individuais ou dados bancários de colaboradores, exibindo unicamente montantes agregados de mão de obra. rf05 rf06 rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe3" id="rnf10" data-type="rnf" data-rnf="RNF10" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf10 garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais urps+ segurança / legal externo — legislativo (lgpd) módulo 3 / oe3 consultas analíticas executadas por perfis operacionais ou de gestão de obra não devem expor valores salariais individuais ou dados bancários de colaboradores, exibindo unicamente montantes agregados de mão de obra. rf05 rf06 rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf10 garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais urps+ segurança / legal externo — legislativo (lgpd) módulo 3 / oe3 consultas analíticas executadas por perfis operacionais ou de gestão de obra não devem expor valores salariais individuais ou dados bancários de colaboradores, exibindo unicamente montantes agregados de mão de obra. rf05 rf06 rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
@@ -9554,7 +11014,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf11" data-type="rnf" data-rnf="RNF11" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf11 garantir consistência transacional acid na apropriação concorrente de custos urps+ confiabilidade produto — confiabilidade módulo 3 / oe3 a rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento serializable/repeatable read no banco de dados postgresql, impedindo lançamentos duplicados ou rateios parciais em concorrência. rf09 rf10 rf30 rf33 rf37 rf38 requisito nao funcional atributo qualidade dod" data-search-text="rnf11 garantir consistência transacional acid na apropriação concorrente de custos urps+ confiabilidade produto — confiabilidade módulo 3 / oe3 a rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento serializable/repeatable read no banco de dados postgresql, impedindo lançamentos duplicados ou rateios parciais em concorrência. rf09 rf10 rf30 rf33 rf37 rf38 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe3" id="rnf11" data-type="rnf" data-rnf="RNF11" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf11 garantir consistência transacional acid na apropriação concorrente de custos urps+ confiabilidade produto — confiabilidade módulo 3 / oe3 a rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento serializable/repeatable read no banco de dados postgresql, impedindo lançamentos duplicados ou rateios parciais em concorrência. rf09 rf10 rf30 rf33 rf37 rf38 requisito nao funcional atributo qualidade dod" data-search-text="rnf11 garantir consistência transacional acid na apropriação concorrente de custos urps+ confiabilidade produto — confiabilidade módulo 3 / oe3 a rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento serializable/repeatable read no banco de dados postgresql, impedindo lançamentos duplicados ou rateios parciais em concorrência. rf09 rf10 rf30 rf33 rf37 rf38 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
@@ -9611,7 +11071,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf12" data-type="rnf" data-rnf="RNF12" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf12 assegurar responsividade do painel em resoluções de desktop e tablet urps+ usabilidade produto — usabilidade módulo 3 / oe3 o painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops). rf11 rf12 rf30 rf31 rf34 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf12 assegurar responsividade do painel em resoluções de desktop e tablet urps+ usabilidade produto — usabilidade módulo 3 / oe3 o painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops). rf11 rf12 rf30 rf31 rf34 rf39 rf40 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe3" id="rnf12" data-type="rnf" data-rnf="RNF12" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf12 assegurar responsividade do painel em resoluções de desktop e tablet urps+ usabilidade produto — usabilidade módulo 3 / oe3 o painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops). rf11 rf12 rf30 rf31 rf34 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf12 assegurar responsividade do painel em resoluções de desktop e tablet urps+ usabilidade produto — usabilidade módulo 3 / oe3 o painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops). rf11 rf12 rf30 rf31 rf34 rf39 rf40 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
@@ -9668,7 +11128,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf13" data-type="rnf" data-rnf="RNF13" data-oe="oe4" data-mvp="mvp" data-quad="q1" data-text="rnf13 expirar token de acesso temporário em no máximo 8 horas urps+ segurança (+) produto — segurança módulo 4 / oe4 tokens de autenticação jwt possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam http 401 unauthorized. rf13 rf17 rf18 rf23 requisito nao funcional atributo qualidade dod" data-search-text="rnf13 expirar token de acesso temporário em no máximo 8 horas urps+ segurança (+) produto — segurança módulo 4 / oe4 tokens de autenticação jwt possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam http 401 unauthorized. rf13 rf17 rf18 rf23 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-oe4" id="rnf13" data-type="rnf" data-rnf="RNF13" data-oe="oe4" data-mvp="mvp" data-quad="q1" data-text="rnf13 expirar token de acesso temporário em no máximo 8 horas urps+ segurança (+) produto — segurança módulo 4 / oe4 tokens de autenticação jwt possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam http 401 unauthorized. rf13 rf17 rf18 rf23 requisito nao funcional atributo qualidade dod" data-search-text="rnf13 expirar token de acesso temporário em no máximo 8 horas urps+ segurança (+) produto — segurança módulo 4 / oe4 tokens de autenticação jwt possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam http 401 unauthorized. rf13 rf17 rf18 rf23 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 4 / OE4</span>
@@ -9725,7 +11185,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf14" data-type="rnf" data-rnf="RNF14" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf14 validar perfil de autorização em 100% das rotas de api com dados protegidos urps+ segurança / legal externo — legislativo (lgpd) transversal (t) / oe4 100% dos endpoints de backend que manipulam dados corporativos passam por guard/filtro rbac que valida papel e competência do usuário, rejeitando tentativas não autorizadas com http 403 forbidden em menos de 15 ms. rf13 rf14 rf17 rf18 rf23 rf24 requisito nao funcional atributo qualidade dod" data-search-text="rnf14 validar perfil de autorização em 100% das rotas de api com dados protegidos urps+ segurança / legal externo — legislativo (lgpd) transversal (t) / oe4 100% dos endpoints de backend que manipulam dados corporativos passam por guard/filtro rbac que valida papel e competência do usuário, rejeitando tentativas não autorizadas com http 403 forbidden em menos de 15 ms. rf13 rf14 rf17 rf18 rf23 rf24 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-transversal" id="rnf14" data-type="rnf" data-rnf="RNF14" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf14 validar perfil de autorização em 100% das rotas de api com dados protegidos urps+ segurança / legal externo — legislativo (lgpd) transversal (t) / oe4 100% dos endpoints de backend que manipulam dados corporativos passam por guard/filtro rbac que valida papel e competência do usuário, rejeitando tentativas não autorizadas com http 403 forbidden em menos de 15 ms. rf13 rf14 rf17 rf18 rf23 rf24 requisito nao funcional atributo qualidade dod" data-search-text="rnf14 validar perfil de autorização em 100% das rotas de api com dados protegidos urps+ segurança / legal externo — legislativo (lgpd) transversal (t) / oe4 100% dos endpoints de backend que manipulam dados corporativos passam por guard/filtro rbac que valida papel e competência do usuário, rejeitando tentativas não autorizadas com http 403 forbidden em menos de 15 ms. rf13 rf14 rf17 rf18 rf23 rf24 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
@@ -9782,7 +11242,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf15" data-type="rnf" data-rnf="RNF15" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf15 garantir consistência transacional e atomicidade na gravação de logs de auditoria urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 em 100% das mutações cadastrais e financeiras, o registro correspondente de auditoria é confirmado na mesma transação atômica acid do banco de dados, com perda zero e latência de persistência ≤ 50 ms. rf15 rf16 requisito nao funcional atributo qualidade dod" data-search-text="rnf15 garantir consistência transacional e atomicidade na gravação de logs de auditoria urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 em 100% das mutações cadastrais e financeiras, o registro correspondente de auditoria é confirmado na mesma transação atômica acid do banco de dados, com perda zero e latência de persistência ≤ 50 ms. rf15 rf16 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-transversal" id="rnf15" data-type="rnf" data-rnf="RNF15" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf15 garantir consistência transacional e atomicidade na gravação de logs de auditoria urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 em 100% das mutações cadastrais e financeiras, o registro correspondente de auditoria é confirmado na mesma transação atômica acid do banco de dados, com perda zero e latência de persistência ≤ 50 ms. rf15 rf16 requisito nao funcional atributo qualidade dod" data-search-text="rnf15 garantir consistência transacional e atomicidade na gravação de logs de auditoria urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 em 100% das mutações cadastrais e financeiras, o registro correspondente de auditoria é confirmado na mesma transação atômica acid do banco de dados, com perda zero e latência de persistência ≤ 50 ms. rf15 rf16 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
@@ -9839,7 +11299,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf16" data-type="rnf" data-rnf="RNF16" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf16 reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido urps+ confiabilidade / legal externo — legal (clt art. 11 / lgpd) transversal (t) / oe4 inexistência comprovada de rotinas ou permissões de exclusão de registros com tempo de retenção inferior a 5 anos fiscais (1.825 dias), garantindo substrato defensivo em conformidade com o artigo 11 da clt. rf15 rf16 requisito nao funcional atributo qualidade dod" data-search-text="rnf16 reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido urps+ confiabilidade / legal externo — legal (clt art. 11 / lgpd) transversal (t) / oe4 inexistência comprovada de rotinas ou permissões de exclusão de registros com tempo de retenção inferior a 5 anos fiscais (1.825 dias), garantindo substrato defensivo em conformidade com o artigo 11 da clt. rf15 rf16 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-transversal" id="rnf16" data-type="rnf" data-rnf="RNF16" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf16 reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido urps+ confiabilidade / legal externo — legal (clt art. 11 / lgpd) transversal (t) / oe4 inexistência comprovada de rotinas ou permissões de exclusão de registros com tempo de retenção inferior a 5 anos fiscais (1.825 dias), garantindo substrato defensivo em conformidade com o artigo 11 da clt. rf15 rf16 requisito nao funcional atributo qualidade dod" data-search-text="rnf16 reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido urps+ confiabilidade / legal externo — legal (clt art. 11 / lgpd) transversal (t) / oe4 inexistência comprovada de rotinas ou permissões de exclusão de registros com tempo de retenção inferior a 5 anos fiscais (1.825 dias), garantindo substrato defensivo em conformidade com o artigo 11 da clt. rf15 rf16 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
@@ -9896,7 +11356,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf17" data-type="rnf" data-rnf="RNF17" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf17 realizar backup automático diário com restauração verificada urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 rotina automatizada de backup completo diário do banco de dados e arquivos de mídia, com retenção de 30 dias e testes automatizados periódicos de restauração em até 4 horas com perda máxima (rpo) de 24 horas. rf15 rf16 requisito nao funcional atributo qualidade dod" data-search-text="rnf17 realizar backup automático diário com restauração verificada urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 rotina automatizada de backup completo diário do banco de dados e arquivos de mídia, com retenção de 30 dias e testes automatizados periódicos de restauração em até 4 horas com perda máxima (rpo) de 24 horas. rf15 rf16 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-transversal" id="rnf17" data-type="rnf" data-rnf="RNF17" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf17 realizar backup automático diário com restauração verificada urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 rotina automatizada de backup completo diário do banco de dados e arquivos de mídia, com retenção de 30 dias e testes automatizados periódicos de restauração em até 4 horas com perda máxima (rpo) de 24 horas. rf15 rf16 requisito nao funcional atributo qualidade dod" data-search-text="rnf17 realizar backup automático diário com restauração verificada urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 rotina automatizada de backup completo diário do banco de dados e arquivos de mídia, com retenção de 30 dias e testes automatizados periódicos de restauração em até 4 horas com perda máxima (rpo) de 24 horas. rf15 rf16 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
@@ -9953,7 +11413,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf18" data-type="rnf" data-rnf="RNF18" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf18 garantir disponibilidade mínima mensal do sistema urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 disponibilidade mínima mensal de 99,5%, medida por monitoramento sintético contínuo, com avisos de janelas de manutenção com antecedência mínima de 48 horas e execução restrita à madrugada (22h às 06h). rf01 rf04 rf05 rf09 rf13 requisito nao funcional atributo qualidade dod" data-search-text="rnf18 garantir disponibilidade mínima mensal do sistema urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 disponibilidade mínima mensal de 99,5%, medida por monitoramento sintético contínuo, com avisos de janelas de manutenção com antecedência mínima de 48 horas e execução restrita à madrugada (22h às 06h). rf01 rf04 rf05 rf09 rf13 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-transversal" id="rnf18" data-type="rnf" data-rnf="RNF18" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf18 garantir disponibilidade mínima mensal do sistema urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 disponibilidade mínima mensal de 99,5%, medida por monitoramento sintético contínuo, com avisos de janelas de manutenção com antecedência mínima de 48 horas e execução restrita à madrugada (22h às 06h). rf01 rf04 rf05 rf09 rf13 requisito nao funcional atributo qualidade dod" data-search-text="rnf18 garantir disponibilidade mínima mensal do sistema urps+ confiabilidade produto — confiabilidade transversal (t) / oe4 disponibilidade mínima mensal de 99,5%, medida por monitoramento sintético contínuo, com avisos de janelas de manutenção com antecedência mínima de 48 horas e execução restrita à madrugada (22h às 06h). rf01 rf04 rf05 rf09 rf13 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
@@ -10010,7 +11470,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf19" data-type="rnf" data-rnf="RNF19" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf19 garantir acessibilidade digital nas interfaces do sistema urps+ usabilidade produto — usabilidade (wcag) transversal (t) / oe1 formulários e telas de apontamento e consulta devem atender aos critérios de conformidade wcag 2.1 nível aa, incluindo navegação integral por teclado, contraste mínimo de 4.5:1 e rotulagem acessível aria sem erros críticos. rf01 rf02 rf03 rf04 rf11 rf12 requisito nao funcional atributo qualidade dod" data-search-text="rnf19 garantir acessibilidade digital nas interfaces do sistema urps+ usabilidade produto — usabilidade (wcag) transversal (t) / oe1 formulários e telas de apontamento e consulta devem atender aos critérios de conformidade wcag 2.1 nível aa, incluindo navegação integral por teclado, contraste mínimo de 4.5:1 e rotulagem acessível aria sem erros críticos. rf01 rf02 rf03 rf04 rf11 rf12 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-transversal" id="rnf19" data-type="rnf" data-rnf="RNF19" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf19 garantir acessibilidade digital nas interfaces do sistema urps+ usabilidade produto — usabilidade (wcag) transversal (t) / oe1 formulários e telas de apontamento e consulta devem atender aos critérios de conformidade wcag 2.1 nível aa, incluindo navegação integral por teclado, contraste mínimo de 4.5:1 e rotulagem acessível aria sem erros críticos. rf01 rf02 rf03 rf04 rf11 rf12 requisito nao funcional atributo qualidade dod" data-search-text="rnf19 garantir acessibilidade digital nas interfaces do sistema urps+ usabilidade produto — usabilidade (wcag) transversal (t) / oe1 formulários e telas de apontamento e consulta devem atender aos critérios de conformidade wcag 2.1 nível aa, incluindo navegação integral por teclado, contraste mínimo de 4.5:1 e rotulagem acessível aria sem erros críticos. rf01 rf02 rf03 rf04 rf11 rf12 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
@@ -10067,7 +11527,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf20" data-type="rnf" data-rnf="RNF20" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf20 validar integridade de payloads em todas as rotas de escrita da api urps+ confiabilidade / segurança produto — confiabilidade transversal (t) / oe4 100% das requisições post/put/patch são submetidas a validação formal de schema e sanitização contra injection antes do processamento, respondendo http 400 bad request com detalhes estruturados em caso de inconsistência. rf01 rf04 rf07 rf09 rf13 rf14 requisito nao funcional atributo qualidade dod" data-search-text="rnf20 validar integridade de payloads em todas as rotas de escrita da api urps+ confiabilidade / segurança produto — confiabilidade transversal (t) / oe4 100% das requisições post/put/patch são submetidas a validação formal de schema e sanitização contra injection antes do processamento, respondendo http 400 bad request com detalhes estruturados em caso de inconsistência. rf01 rf04 rf07 rf09 rf13 rf14 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf req-card-transversal" id="rnf20" data-type="rnf" data-rnf="RNF20" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf20 validar integridade de payloads em todas as rotas de escrita da api urps+ confiabilidade / segurança produto — confiabilidade transversal (t) / oe4 100% das requisições post/put/patch são submetidas a validação formal de schema e sanitização contra injection antes do processamento, respondendo http 400 bad request com detalhes estruturados em caso de inconsistência. rf01 rf04 rf07 rf09 rf13 rf14 requisito nao funcional atributo qualidade dod" data-search-text="rnf20 validar integridade de payloads em todas as rotas de escrita da api urps+ confiabilidade / segurança produto — confiabilidade transversal (t) / oe4 100% das requisições post/put/patch são submetidas a validação formal de schema e sanitização contra injection antes do processamento, respondendo http 400 bad request com detalhes estruturados em caso de inconsistência. rf01 rf04 rf07 rf09 rf13 rf14 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
