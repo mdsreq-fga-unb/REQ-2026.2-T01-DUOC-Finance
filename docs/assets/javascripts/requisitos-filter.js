@@ -98,6 +98,7 @@
     let currentOeFilter = "all";
     let currentMvpFilter = "all";
     let currentQuadFilter = "all";
+    let currentExecFilter = "all";
     let searchQuery = "";
 
     function filterCards() {
@@ -114,14 +115,16 @@
         const oe = (card.getAttribute("data-oe") || "").toLowerCase();
         const mvp = (card.getAttribute("data-mvp") || "").toLowerCase();
         const quad = (card.getAttribute("data-quad") || "").toLowerCase();
+        const exec = (card.getAttribute("data-exec") || "").toLowerCase();
 
         const matchesSearch = terms.length === 0 || terms.every((term) => text.includes(term));
         const matchesType = currentTypeFilter === "all" || type === currentTypeFilter;
         const matchesOe = currentOeFilter === "all" || oe === currentOeFilter;
         const matchesMvp = currentMvpFilter === "all" || mvp === currentMvpFilter;
         const matchesQuad = currentQuadFilter === "all" || quad === currentQuadFilter;
+        const matchesExec = currentExecFilter === "all" || exec === currentExecFilter;
 
-        if (matchesSearch && matchesType && matchesOe && matchesMvp && matchesQuad) {
+        if (matchesSearch && matchesType && matchesOe && matchesMvp && matchesQuad && matchesExec) {
           card.classList.remove("req-card-hidden");
           visibleCount++;
           if (type === "rf") countRf++;
@@ -207,6 +210,8 @@
           currentMvpFilter = val;
         } else if (type === "quad") {
           currentQuadFilter = val;
+        } else if (type === "exec") {
+          currentExecFilter = val;
         }
 
         filterCards();
@@ -265,6 +270,14 @@
       });
     });
   }
+
+  // Impede que links de Issue/PR dentro do summary alternem o card <details>
+  document.addEventListener("click", (e) => {
+    const ghLink = e.target.closest(".req-summary-chips a.req-gh-pill");
+    if (ghLink) {
+      e.stopPropagation();
+    }
+  });
 
   // Delegacao global de cliques em ancoras de hash na mesma pagina
   document.addEventListener("click", (e) => {

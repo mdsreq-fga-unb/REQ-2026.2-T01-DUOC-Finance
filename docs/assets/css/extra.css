@@ -10052,3 +10052,209 @@ p .req-tag {
   color: #fff !important;
 }
 
+
+/* ============================================================
+   CARDS DE REQUISITOS COMPACTOS, STATUS DE CICLO E LINKS GITHUB
+   ============================================================ */
+
+.md-typeset details.req-card {
+  margin-bottom: 0.65rem !important;
+}
+
+.md-typeset details.req-card > summary.req-card-summary {
+  padding: 0.6rem 0.95rem !important;
+}
+
+.req-summary-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px !important;
+  margin-bottom: 4px !important;
+}
+
+.req-pill {
+  font-size: 0.68rem !important;
+  padding: 2px 7px !important;
+  line-height: 1.3 !important;
+}
+
+.md-typeset .req-card-title {
+  font-size: 0.88rem !important;
+  line-height: 1.3 !important;
+}
+
+/* Badges de Status de Execucao & Incremento */
+.req-pill-exec {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  padding: 2px 7px !important;
+  border-radius: 999px;
+}
+
+.req-pill-exec-concluido {
+  background: rgba(5, 150, 105, 0.12);
+  color: #047857;
+}
+[data-md-color-scheme="slate"] .req-pill-exec-concluido {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
+}
+
+.req-pill-exec-dev {
+  background: rgba(2, 132, 199, 0.12);
+  color: #0369a1;
+}
+[data-md-color-scheme="slate"] .req-pill-exec-dev {
+  background: rgba(56, 189, 248, 0.18);
+  color: #7dd3fc;
+}
+
+.req-pill-exec-pronto {
+  background: rgba(217, 119, 6, 0.12);
+  color: #b45309;
+}
+[data-md-color-scheme="slate"] .req-pill-exec-pronto {
+  background: rgba(251, 191, 36, 0.16);
+  color: #fcd34d;
+}
+
+.req-pill-exec-aguardando {
+  background: rgba(124, 58, 237, 0.1);
+  color: #6d28d9;
+}
+[data-md-color-scheme="slate"] .req-pill-exec-aguardando {
+  background: rgba(167, 139, 250, 0.16);
+  color: #c4b5fd;
+}
+
+.req-pill-exec-pos {
+  background: rgba(100, 116, 139, 0.12);
+  color: #475569;
+}
+[data-md-color-scheme="slate"] .req-pill-exec-pos {
+  background: rgba(148, 163, 184, 0.16);
+  color: #cbd5e1;
+}
+
+/* Badges clicaveis de Issue e PR do GitHub */
+a.req-gh-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--md-code-font-family, monospace);
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  padding: 2px 7px !important;
+  border-radius: 6px;
+  text-decoration: none !important;
+  background: rgba(15, 23, 42, 0.06);
+  color: #1e293b !important;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+a.req-gh-pill:hover {
+  transform: translateY(-1px);
+  background: rgba(218, 165, 32, 0.18);
+  color: #92400e !important;
+}
+[data-md-color-scheme="slate"] a.req-gh-pill {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0 !important;
+}
+[data-md-color-scheme="slate"] a.req-gh-pill:hover {
+  background: rgba(218, 165, 32, 0.25);
+  color: #fde68a !important;
+}
+
+/* Grade de metadados compacta 2x2 dentro da expansao */
+.req-lumio-meta {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)) !important;
+  gap: 6px 14px !important;
+  padding: 0.65rem 1rem 0.45rem !important;
+}
+
+.req-lumio-row {
+  gap: 6px !important;
+  min-height: 22px !important;
+}
+
+.req-lumio-label {
+  font-size: 0.74rem !important;
+  min-width: 108px !important;
+  gap: 5px !important;
+}
+
+.req-lumio-icon {
+  width: 13px !important;
+  height: 13px !important;
+}
+
+.req-lumio-tag {
+  font-size: 0.72rem !important;
+  padding: 2px 7px !important;
+}
+
+/* Descricao, abas e checklists mais compactos */
+.req-expanded-desc {
+  padding: 0.35rem 1rem 0.55rem !important;
+}
+
+.req-desc-box {
+  padding: 0.5rem 0.8rem !important;
+}
+
+.req-desc-text {
+  font-size: 0.81rem !important;
+  line-height: 1.45 !important;
+  margin: 0 !important;
+}
+
+.req-tabs-nav {
+  padding: 0 1rem !important;
+  gap: 4px !important;
+}
+
+.req-tab-btn {
+  font-size: 0.74rem !important;
+  padding: 0.42rem 0.75rem !important;
+}
+
+.req-tab-pane {
+  padding: 0.65rem 1rem !important;
+}
+
+.req-checklist-container {
+  gap: 6px !important;
+}
+
+.req-checklist-header {
+  margin-bottom: 2px !important;
+}
+
+.req-checklist-title {
+  font-size: 0.74rem !important;
+}
+
+.req-checklist-item {
+  padding: 0.48rem 0.72rem !important;
+  gap: 0.55rem !important;
+}
+
+.req-check-tag {
+  font-size: 0.72rem !important;
+}
+
+.req-check-text {
+  font-size: 0.78rem !important;
+  line-height: 1.42 !important;
+}
+
+.req-tag {
+  font-size: 0.7rem !important;
+  padding: 1px 6px !important;
+  line-height: 1.4 !important;
+}
