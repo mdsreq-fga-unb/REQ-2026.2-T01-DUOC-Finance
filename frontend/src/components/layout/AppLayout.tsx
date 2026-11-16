@@ -20,10 +20,10 @@ export default function AppLayout() {
             <div className="max-w-7xl mx-auto">
                 {/* react router injeta a pagina aqui... */}
 
-                <Outlet />
-            </div>
-            </main>
-        </div>
-        </div>
-    );
+            <Outlet />
+          </div>
+        </main>
+      </div>
+    </div>
+  )
 }

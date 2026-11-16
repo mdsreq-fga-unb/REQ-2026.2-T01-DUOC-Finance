@@ -1,6 +1,6 @@
-import { useState } from "react";
-import type { FormEvent } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react'
+import type { FormEvent } from 'react'
+import { useNavigate } from 'react-router-dom'
 import {
   Mail,
   Lock,
@@ -15,109 +15,109 @@ import {
   HelpCircle,
   X,
   CheckCircle2,
-} from "lucide-react";
-import Button from "../components/ui/Button";
-import Input from "../components/ui/Input";
-import { useToast } from "../components/ui/useToast";
-import { validateEmail, validateCPF } from "../utils/validators";
-import { maskCPF } from "../utils/masks";
+} from 'lucide-react'
+import Button from '../components/ui/Button'
+import Input from '../components/ui/Input'
+import { useToast } from '../components/ui/useToast'
+import { validateEmail, validateCPF } from '../utils/validators'
+import { maskCPF } from '../utils/masks'
 
 export default function LoginPage() {
-  const navigate = useNavigate();
-  const toast = useToast();
+  const navigate = useNavigate()
+  const toast = useToast()
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
+  const [rememberMe, setRememberMe] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   // Erros de validação cliente (RNF03)
-  const [emailError, setEmailError] = useState("");
-  const [passwordError, setPasswordError] = useState("");
+  const [emailError, setEmailError] = useState('')
+  const [passwordError, setPasswordError] = useState('')
 
   // Modal de Primeiro Acesso / Recuperação (RF17)
-  const [isRecoveryModalOpen, setIsRecoveryModalOpen] = useState(false);
-  const [recoveryIdentifier, setRecoveryIdentifier] = useState("");
-  const [recoveryError, setRecoveryError] = useState("");
-  const [recoverySuccess, setRecoverySuccess] = useState(false);
-  const [isRecovering, setIsRecovering] = useState(false);
+  const [isRecoveryModalOpen, setIsRecoveryModalOpen] = useState(false)
+  const [recoveryIdentifier, setRecoveryIdentifier] = useState('')
+  const [recoveryError, setRecoveryError] = useState('')
+  const [recoverySuccess, setRecoverySuccess] = useState(false)
+  const [isRecovering, setIsRecovering] = useState(false)
 
   const handleEmailChange = (val: string) => {
-    setEmail(val);
-    if (emailError) setEmailError("");
-  };
+    setEmail(val)
+    if (emailError) setEmailError('')
+  }
 
   const handlePasswordChange = (val: string) => {
-    setPassword(val);
-    if (passwordError) setPasswordError("");
-  };
+    setPassword(val)
+    if (passwordError) setPasswordError('')
+  }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    let hasError = false;
+    let hasError = false
 
     if (!email.trim()) {
-      setEmailError("O e-mail é obrigatório.");
-      hasError = true;
+      setEmailError('O e-mail é obrigatório.')
+      hasError = true
     } else if (!validateEmail(email)) {
-      setEmailError("Informe um e-mail válido (ex: seu.nome@duoc.com.br).");
-      hasError = true;
+      setEmailError('Informe um e-mail válido (ex: seu.nome@duoc.com.br).')
+      hasError = true
     }
 
     if (!password.trim()) {
-      setPasswordError("A senha é obrigatória.");
-      hasError = true;
+      setPasswordError('A senha é obrigatória.')
+      hasError = true
     } else if (password.length < 6) {
-      setPasswordError("A senha deve ter no mínimo 6 caracteres.");
-      hasError = true;
+      setPasswordError('A senha deve ter no mínimo 6 caracteres.')
+      hasError = true
     }
 
-    if (hasError) return;
+    if (hasError) return
 
-    setIsLoading(true);
+    setIsLoading(true)
 
     // Simulação síncrona com feedback visual de carregamento (RF13)
     setTimeout(() => {
-      setIsLoading(false);
-      toast.success("Autenticado com sucesso! Bem-vindo ao DUOC Finance.");
-      navigate("/");
-    }, 700);
-  };
+      setIsLoading(false)
+      toast.success('Autenticado com sucesso! Bem-vindo ao DUOC Finance.')
+      navigate('/')
+    }, 700)
+  }
 
   const handleDemoAccess = (roleEmail: string) => {
-    setEmail(roleEmail);
-    setPassword("duoc2026");
-    setEmailError("");
-    setPasswordError("");
-    toast.info(`Perfil demonstrativo (${roleEmail}) carregado.`);
-  };
+    setEmail(roleEmail)
+    setPassword('duoc2026')
+    setEmailError('')
+    setPasswordError('')
+    toast.info(`Perfil demonstrativo (${roleEmail}) carregado.`)
+  }
 
   const handleRecoverySubmit = (e: FormEvent) => {
-    e.preventDefault();
-    setRecoveryError("");
+    e.preventDefault()
+    setRecoveryError('')
 
-    const isEmailValid = validateEmail(recoveryIdentifier);
-    const isCPFValid = validateCPF(recoveryIdentifier);
+    const isEmailValid = validateEmail(recoveryIdentifier)
+    const isCPFValid = validateCPF(recoveryIdentifier)
 
     if (!isEmailValid && !isCPFValid) {
       setRecoveryError(
-        "Por favor, informe um CPF válido (11 dígitos) ou e-mail cadastrado."
-      );
-      return;
+        'Por favor, informe um CPF válido (11 dígitos) ou e-mail cadastrado.',
+      )
+      return
     }
 
-    setIsRecovering(true);
+    setIsRecovering(true)
 
     setTimeout(() => {
-      setIsRecovering(false);
-      setRecoverySuccess(true);
+      setIsRecovering(false)
+      setRecoverySuccess(true)
       toast.success(
-        "Instruções enviadas para o e-mail cadastrado na base DUOC."
-      );
-    }, 800);
-  };
+        'Instruções enviadas para o e-mail cadastrado na base DUOC.',
+      )
+    }, 800)
+  }
 
   return (
     <div className="min-h-screen w-screen grid grid-cols-1 lg:grid-cols-2 bg-surface">
@@ -198,7 +198,7 @@ export default function LoginPage() {
 
             <Input
               label="Senha"
-              type={showPassword ? "text" : "password"}
+              type={showPassword ? 'text' : 'password'}
               placeholder="Digite sua senha"
               leftIcon={Lock}
               value={password}
@@ -211,7 +211,7 @@ export default function LoginPage() {
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className="text-muted hover:text-dark transition-colors cursor-pointer p-1"
-                  aria-label={showPassword ? "Ocultar senha" : "Ver senha"}
+                  aria-label={showPassword ? 'Ocultar senha' : 'Ver senha'}
                   tabIndex={-1}
                 >
                   {showPassword ? (
@@ -239,10 +239,10 @@ export default function LoginPage() {
               <button
                 type="button"
                 onClick={() => {
-                  setIsRecoveryModalOpen(true);
-                  setRecoverySuccess(false);
-                  setRecoveryIdentifier("");
-                  setRecoveryError("");
+                  setIsRecoveryModalOpen(true)
+                  setRecoverySuccess(false)
+                  setRecoveryIdentifier('')
+                  setRecoveryError('')
                 }}
                 className="text-primary hover:text-primary-dark font-medium transition-colors cursor-pointer"
               >
@@ -285,7 +285,7 @@ export default function LoginPage() {
           <div className="grid grid-cols-3 gap-2.5">
             <button
               type="button"
-              onClick={() => handleDemoAccess("gestor@duoc.com.br")}
+              onClick={() => handleDemoAccess('gestor@duoc.com.br')}
               disabled={isLoading}
               className="flex flex-col items-center justify-center p-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs text-dark gap-1.5 cursor-pointer shadow-2xs"
             >
@@ -295,7 +295,7 @@ export default function LoginPage() {
 
             <button
               type="button"
-              onClick={() => handleDemoAccess("rh@duoc.com.br")}
+              onClick={() => handleDemoAccess('rh@duoc.com.br')}
               disabled={isLoading}
               className="flex flex-col items-center justify-center p-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs text-dark gap-1.5 cursor-pointer shadow-2xs"
             >
@@ -305,7 +305,7 @@ export default function LoginPage() {
 
             <button
               type="button"
-              onClick={() => handleDemoAccess("tecnico@duoc.com.br")}
+              onClick={() => handleDemoAccess('tecnico@duoc.com.br')}
               disabled={isLoading}
               className="flex flex-col items-center justify-center p-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs text-dark gap-1.5 cursor-pointer shadow-2xs"
             >
@@ -335,7 +335,9 @@ export default function LoginPage() {
                   <h3 className="text-base font-bold text-dark">
                     Recuperação & Primeiro Acesso
                   </h3>
-                  <p className="text-xs text-muted">RF17 · Ativação de credenciais</p>
+                  <p className="text-xs text-muted">
+                    RF17 · Ativação de credenciais
+                  </p>
                 </div>
               </div>
               <button
@@ -353,9 +355,13 @@ export default function LoginPage() {
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
                 <div className="space-y-1">
-                  <h4 className="text-sm font-bold text-dark">Instruções enviadas!</h4>
+                  <h4 className="text-sm font-bold text-dark">
+                    Instruções enviadas!
+                  </h4>
                   <p className="text-xs text-muted leading-relaxed">
-                    Se o dado informado constar na base da DUOC Finance, um link seguro com token temporário foi emitido para o seu e-mail cadastrado.
+                    Se o dado informado constar na base da DUOC Finance, um link
+                    seguro com token temporário foi emitido para o seu e-mail
+                    cadastrado.
                   </p>
                 </div>
                 <Button
@@ -369,7 +375,9 @@ export default function LoginPage() {
             ) : (
               <form onSubmit={handleRecoverySubmit} className="space-y-4">
                 <p className="text-xs text-muted leading-relaxed">
-                  Informe o seu **CPF** ou **e-mail corporativo**. Verificaremos a base unificada cadastral para liberar sua senha de acesso ou redefinição.
+                  Informe o seu **CPF** ou **e-mail corporativo**. Verificaremos
+                  a base unificada cadastral para liberar sua senha de acesso ou
+                  redefinição.
                 </p>
 
                 <Input
@@ -378,12 +386,15 @@ export default function LoginPage() {
                   value={recoveryIdentifier}
                   error={recoveryError}
                   onChange={(e) => {
-                    const val = e.target.value;
+                    const val = e.target.value
                     // Se estiver digitando números, aplica máscara de CPF
-                    if (/^\d+$/.test(val.replace(/\D/g, "")) && !val.includes("@")) {
-                      setRecoveryIdentifier(maskCPF(val));
+                    if (
+                      /^\d+$/.test(val.replace(/\D/g, '')) &&
+                      !val.includes('@')
+                    ) {
+                      setRecoveryIdentifier(maskCPF(val))
                     } else {
-                      setRecoveryIdentifier(val);
+                      setRecoveryIdentifier(val)
                     }
                   }}
                   disabled={isRecovering}
@@ -422,5 +433,5 @@ export default function LoginPage() {
         </div>
       )}
     </div>
-  );
+  )
 }

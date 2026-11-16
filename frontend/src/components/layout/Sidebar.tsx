@@ -1,6 +1,6 @@
-import { NavLink, useNavigate } from "react-router-dom";
-import type { NavItem } from "../../types/navigation";
-import Button from "../ui/Button";
+import { NavLink, useNavigate } from 'react-router-dom'
+import type { NavItem } from '../../types/navigation'
+import Button from '../ui/Button'
 
 import {
   LayoutDashboard,
@@ -15,14 +15,14 @@ import {
 const menuItems: NavItem[] = [
   {
     iconName: LayoutDashboard,
-    title: "Visão Geral",
-    path: "/",
+    title: 'Visão Geral',
+    path: '/',
   },
   {
     iconName: Users,
-    title: "Colaboradores",
-    path: "/colaboradores",
-    badge: "RF01",
+    title: 'Colaboradores',
+    path: '/colaboradores',
+    badge: 'RF01',
   },
   {
     iconName: ClipboardPlus,
@@ -37,10 +37,10 @@ const menuItems: NavItem[] = [
   },
   {
     iconName: CircleDollarSign,
-    title: "Fechamento",
-    path: "/fechamento",
+    title: 'Fechamento',
+    path: '/fechamento',
   },
-];
+]
 
 interface SidebarProps {
   /** Estado da gaveta em telas menores que md */
@@ -110,8 +110,8 @@ export default function Sidebar({ aberta, onFechar }: SidebarProps) {
             className={({ isActive }) =>
               `flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${
                 isActive
-                  ? "bg-primary-light text-primary border border-primary/30 font-semibold shadow-2xs"
-                  : "text-dark/80 hover:text-primary hover:bg-primary-light/50"
+                  ? 'bg-primary-light text-primary border border-primary/30 font-semibold shadow-2xs'
+                  : 'text-dark/80 hover:text-primary hover:bg-primary-light/50'
               }`
             }
           >
