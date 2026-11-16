@@ -14,6 +14,8 @@ import {
 
 export const ACCESS_TOKEN_TTL_SECONDS = 15 * 60;
 export const SESSAO_TTL_SECONDS = 7 * 24 * 60 * 60;
+export const MAX_TENTATIVAS_LOGIN = 5;
+export const BLOQUEIO_LOGIN_MINUTOS = 15;
 
 // Hash bcrypt válido usado para reduzir diferenças de tempo para e-mails inexistentes.
 // Não representa uma conta de verdade; o resultado da comparação é descartado.
@@ -77,20 +79,76 @@ function emitirResposta(
 export class AuthService {
   constructor(private readonly prisma: PrismaService) {}
 
+  /**
+   * RF23 — uma única instrução SQL incrementa o contador e ativa o bloqueio.
+   * O UPDATE é atômico no PostgreSQL: cinco requisições simultâneas não perdem
+   * incrementos. Tentativas durante o bloqueio não prolongam os 15 minutos.
+   */
+  private async registrarFalhaLogin(usuarioId: string): Promise<void> {
+    const agora = new Date();
+    const bloqueadoAte = new Date(
+      agora.getTime() + BLOQUEIO_LOGIN_MINUTOS * 60 * 1000,
+    );
+    await this.prisma.$executeRaw`
+      UPDATE "usuarios"
+      SET "tentativas_falhas" =
+        CASE
+          WHEN "bloqueado_ate" IS NOT NULL AND "bloqueado_ate" <= ${agora}
+            THEN 1
+          ELSE "tentativas_falhas" + 1
+        END,
+        "bloqueado_ate" =
+          CASE
+            WHEN (
+              CASE
+                WHEN "bloqueado_ate" IS NOT NULL AND "bloqueado_ate" <= ${agora}
+                  THEN 1
+                ELSE "tentativas_falhas" + 1
+              END
+            ) >= ${MAX_TENTATIVAS_LOGIN}
+              THEN ${bloqueadoAte}
+            ELSE NULL
+          END
+      WHERE "id" = ${usuarioId}
+        AND "ativo" = TRUE
+        AND ("bloqueado_ate" IS NULL OR "bloqueado_ate" <= ${agora})
+    `;
+  }
+
   async login(emailInformado: string, senha: string): Promise<LoginResposta> {
     const segredo = segredoJwt();
     const email = emailInformado.trim().toLowerCase();
     const usuario = await this.prisma.usuario.findUnique({ where: { email } });
+    // Sempre verifica bcrypt, inclusive para contas desconhecidas ou bloqueadas.
+    // A mensagem HTTP é genérica para não confirmar a existência de uma conta.
     const senhaCorreta = await conferirSenha(
       senha,
       usuario?.senhaHash ?? HASH_FICTICIO,
     );
+    const agora = new Date();
+    const estaBloqueado = !!usuario?.bloqueadoAte && usuario.bloqueadoAte > agora;
 
-    if (!usuario || !usuario.ativo || !senhaCorreta) {
+    if (!usuario || !usuario.ativo || !senhaCorreta || estaBloqueado) {
+      if (usuario?.ativo && !senhaCorreta && !estaBloqueado) {
+        await this.registrarFalhaLogin(usuario.id);
+      }
       throw new UnauthorizedException('Credenciais inválidas.');
     }
 
-    const agora = new Date();
+    // O reset usa condição no banco para que um login correto concorrente não
+    // consiga abrir uma sessão após a quinta falha registrar o bloqueio.
+    const reset = await this.prisma.usuario.updateMany({
+      where: {
+        id: usuario.id,
+        ativo: true,
+        OR: [{ bloqueadoAte: null }, { bloqueadoAte: { lte: agora } }],
+      },
+      data: { tentativasFalhas: 0, bloqueadoAte: null },
+    });
+    if (reset.count !== 1) {
+      throw new UnauthorizedException('Credenciais inválidas.');
+    }
+
     const refreshToken = gerarRefreshToken();
     const expiraEm = new Date(agora.getTime() + SESSAO_TTL_SECONDS * 1000);
     const sessao = await this.prisma.sessao.create({

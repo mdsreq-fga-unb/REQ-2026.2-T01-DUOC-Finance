@@ -5,6 +5,8 @@ import {
   AuthService,
   ACCESS_TOKEN_TTL_SECONDS,
   SESSAO_TTL_SECONDS,
+  MAX_TENTATIVAS_LOGIN,
+  BLOQUEIO_LOGIN_MINUTOS,
 } from './auth.service.js';
 import { gerarHashSenha } from './senha.util.js';
 import { gerarRefreshToken, hashRefreshToken } from './refresh-token.util.js';
@@ -15,11 +17,14 @@ const USUARIO_ID = '22f0e6c0-7a87-4789-9940-ddda33071733';
 const SESSAO_ID = 'c66782e9-3686-4d0a-8e5a-8299f4e89ef4';
 const ambienteOriginal = process.env.JWT_SECRET;
 const usuarioFindUnique = vi.fn();
+const usuarioUpdateMany = vi.fn();
+const executeRaw = vi.fn();
 const sessaoCreate = vi.fn();
 const sessaoFindUnique = vi.fn();
 const sessaoUpdateMany = vi.fn();
 const prisma = {
-  usuario: { findUnique: usuarioFindUnique },
+  usuario: { findUnique: usuarioFindUnique, updateMany: usuarioUpdateMany },
+  $executeRaw: executeRaw,
   sessao: {
     create: sessaoCreate,
     findUnique: sessaoFindUnique,
@@ -38,6 +43,8 @@ function usuarioBase() {
     papel: 'ADMIN_FINANCEIRO',
     ativo: true,
     senhaAtualizadaEm: new Date('2026-01-01T00:00:00Z'),
+    tentativasFalhas: 0,
+    bloqueadoAte: null as Date | null,
   };
 }
 
@@ -59,6 +66,10 @@ beforeAll(async () => {
 beforeEach(() => {
   process.env.JWT_SECRET = SEGREDO;
   usuarioFindUnique.mockReset();
+  usuarioUpdateMany.mockReset();
+  executeRaw.mockReset();
+  usuarioUpdateMany.mockResolvedValue({ count: 1 });
+  executeRaw.mockResolvedValue(1);
   sessaoCreate.mockReset();
   sessaoFindUnique.mockReset();
   sessaoUpdateMany.mockReset();
@@ -135,6 +146,116 @@ describe('AuthService.login | RF13 / RNF01 / RNF13', () => {
       ServiceUnavailableException,
     );
     expect(usuarioFindUnique).not.toHaveBeenCalled();
+  });
+});
+
+
+describe('AuthService.login | RF23 — cinco falhas e bloqueio de 15 minutos', () => {
+  it('registra cada falha em UPDATE atômico, sem emitir token ou expor se a conta existe', async () => {
+    await expect(service.login('admin@duoc.com.br', 'SenhaErrada123!')).rejects.toThrow(
+      UnauthorizedException,
+    );
+    expect(executeRaw).toHaveBeenCalledTimes(1);
+    const [sql, ...parametros] = executeRaw.mock.calls[0] as [TemplateStringsArray, ...unknown[]];
+    const comando = sql.join('?');
+    expect(comando).toContain('UPDATE "usuarios"');
+    expect(comando).toContain('"tentativas_falhas" + 1');
+    expect(comando).toContain('"bloqueado_ate"');
+    expect(parametros).toContain(MAX_TENTATIVAS_LOGIN);
+    expect(parametros).toEqual(expect.arrayContaining([USUARIO_ID]));
+    const datas = parametros.filter((valor) => valor instanceof Date) as Date[];
+    expect(datas).toHaveLength(4);
+    expect(datas[2].getTime() - datas[0].getTime()).toBe(
+      BLOQUEIO_LOGIN_MINUTOS * 60 * 1000,
+    );
+    expect(sessaoCreate).not.toHaveBeenCalled();
+
+    usuarioFindUnique.mockResolvedValue(null);
+    await expect(service.login('desconhecido@duoc.com.br', 'SenhaErrada123!'))
+      .rejects.toThrow(UnauthorizedException);
+    expect(executeRaw).toHaveBeenCalledTimes(1);
+  });
+
+  it('bloqueia no quinto erro e não prolonga o bloqueio mesmo com a senha correta', async () => {
+    let falhas = 0;
+    let bloqueadoAte: Date | null = null;
+    usuarioFindUnique.mockImplementation(() =>
+      Promise.resolve({ ...usuarioBase(), tentativasFalhas: falhas, bloqueadoAte }),
+    );
+    executeRaw.mockImplementation(() => {
+      falhas += 1;
+      if (falhas === MAX_TENTATIVAS_LOGIN) {
+        bloqueadoAte = new Date(Date.now() + BLOQUEIO_LOGIN_MINUTOS * 60 * 1000);
+      }
+      return 1;
+    });
+
+    for (let indice = 0; indice < MAX_TENTATIVAS_LOGIN; indice += 1) {
+      await expect(service.login('admin@duoc.com.br', 'SenhaErrada123!'))
+        .rejects.toThrow(UnauthorizedException);
+    }
+    expect(falhas).toBe(5);
+    expect(bloqueadoAte).toBeInstanceOf(Date);
+    await expect(service.login('admin@duoc.com.br', SENHA))
+      .rejects.toThrow(UnauthorizedException);
+    await expect(service.login('admin@duoc.com.br', 'SenhaErrada123!'))
+      .rejects.toThrow(UnauthorizedException);
+    expect(executeRaw).toHaveBeenCalledTimes(5);
+    expect(usuarioUpdateMany).not.toHaveBeenCalled();
+    expect(sessaoCreate).not.toHaveBeenCalled();
+  });
+
+  it('reinicia o contador no login correto antes do limite', async () => {
+    usuarioFindUnique.mockResolvedValue({
+      ...usuarioBase(), tentativasFalhas: MAX_TENTATIVAS_LOGIN - 1,
+    });
+    await service.login('admin@duoc.com.br', SENHA);
+    expect(usuarioUpdateMany).toHaveBeenCalledWith({
+      where: {
+        id: USUARIO_ID,
+        ativo: true,
+        OR: [{ bloqueadoAte: null }, { bloqueadoAte: { lte: expect.any(Date) } }],
+      },
+      data: { tentativasFalhas: 0, bloqueadoAte: null },
+    });
+    expect(executeRaw).not.toHaveBeenCalled();
+    expect(sessaoCreate).toHaveBeenCalledTimes(1);
+  });
+
+  it('permite login após 15 minutos; falha posterior recomeça em um', async () => {
+    usuarioFindUnique.mockResolvedValue({
+      ...usuarioBase(),
+      tentativasFalhas: MAX_TENTATIVAS_LOGIN,
+      bloqueadoAte: new Date(Date.now() - 1000),
+    });
+    await service.login('admin@duoc.com.br', SENHA);
+    expect(usuarioUpdateMany).toHaveBeenCalledTimes(1);
+    expect(sessaoCreate).toHaveBeenCalledTimes(1);
+    // Após um bloqueio expirado, a instrução SQL zera a série e inicia em 1.
+    expect(executeRaw).not.toHaveBeenCalled();
+
+    usuarioUpdateMany.mockClear();
+    sessaoCreate.mockClear();
+    await expect(service.login('admin@duoc.com.br', 'SenhaErrada123!'))
+      .rejects.toThrow(UnauthorizedException);
+    expect(executeRaw).toHaveBeenCalledTimes(1);
+    const [sql] = executeRaw.mock.calls[0] as [TemplateStringsArray];
+    expect(sql.join('?')).toContain('THEN 1');
+    expect(sessaoCreate).not.toHaveBeenCalled();
+  });
+
+  it('não cria sessão se a conta foi bloqueada entre leitura e atualização', async () => {
+    usuarioUpdateMany.mockResolvedValue({ count: 0 });
+    await expect(service.login('admin@duoc.com.br', SENHA))
+      .rejects.toThrow(UnauthorizedException);
+    expect(sessaoCreate).not.toHaveBeenCalled();
+  });
+
+  it('não contabiliza falhas em contas desativadas', async () => {
+    usuarioFindUnique.mockResolvedValue({ ...usuarioBase(), ativo: false });
+    await expect(service.login('admin@duoc.com.br', 'SenhaErrada123!'))
+      .rejects.toThrow(UnauthorizedException);
+    expect(executeRaw).not.toHaveBeenCalled();
   });
 });
 

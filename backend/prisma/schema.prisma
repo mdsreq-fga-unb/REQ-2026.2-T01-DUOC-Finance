@@ -103,6 +103,9 @@ model Usuario {
   papel             PapelUsuario
   ativo             Boolean      @default(true)
   senhaAtualizadaEm DateTime     @default(now()) @map("senha_atualizada_em")
+  // RF23 — estado persistente de bloqueio após cinco falhas consecutivas.
+  tentativasFalhas  Int          @default(0) @map("tentativas_falhas")
+  bloqueadoAte      DateTime?    @map("bloqueado_ate")
   createdAt         DateTime     @default(now()) @map("created_at")
   updatedAt         DateTime     @updatedAt @map("updated_at")
   sessoes           Sessao[]
