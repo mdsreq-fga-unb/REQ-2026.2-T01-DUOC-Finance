@@ -1,9 +1,11 @@
-import { Routes, Route } from 'react-router-dom'
-import AppLayout from '../components/layout/AppLayout'
-import DashboardPage from '../pages/DashboardPage'
-import ColaboradoresPage from '../pages/ColaboradoresPage'
-import ColaboradorFormPage from '../pages/ColaboradorFormPage'
-import LoginPage from '../pages/LoginPage'
+import { Routes, Route, Navigate } from "react-router-dom";
+import AppLayout from "../components/layout/AppLayout";
+import DashboardPage from "../pages/DashboardPage";
+import ColaboradoresPage from "../pages/ColaboradoresPage";
+import ColaboradorFormPage from "../pages/ColaboradorFormPage";
+import LoginPage from "../pages/LoginPage";
+import RvtFormPage from "../pages/RvtFormPage";
+import RvtHistoricoPage from "../pages/RvtHistoricoPage";
 
 export default function AppRoutes() {
   return (
@@ -16,10 +18,30 @@ export default function AppRoutes() {
         {/* ROTA PADRÃO (index) para dashboard */}
         <Route index element={<DashboardPage />} />
 
-        {/* ROTAS de colaboradores (RF01, RF02, RF03) */}
-        <Route path="colaboradores" element={<ColaboradoresPage />} />
-        <Route path="colaboradores/novo" element={<ColaboradorFormPage />} />
-        <Route path="colaboradores/:id" element={<ColaboradorFormPage />} />
+                {/* ROTAS de colaboradores (RF01, RF02, RF03) */}
+                <Route path="colaboradores" element={<ColaboradoresPage />} />
+                <Route path="colaboradores/novo" element={<ColaboradorFormPage />} />
+                <Route path="colaboradores/:id" element={<ColaboradorFormPage />} />
+
+                {/* ROTAS do apontamento de campo / RVT (RF04 · CAR-02) */}
+                <Route path="rvt" element={<Navigate to="/rvt/historico" replace />} />
+                <Route path="rvt/novo" element={<RvtFormPage />} />
+                <Route path="rvt/historico" element={<RvtHistoricoPage />} />
+                
+                {/* ROTA de fechamento com outras opções para sidebar */}
+                <Route
+                path="fechamento"
+                element={
+                    <div className="p-6 bg-surface border border-border rounded-xl shadow-xs">
+                    <h2 className="text-xl font-bold text-dark">
+                        Fechamento Financeiro
+                    </h2>
+                    <p className="text-muted mt-1">
+                        Tela em desenvolvimento (RF05)...
+                    </p>
+                    </div>
+                }
+                />
 
         {/* ROTA de fechamento com outras opções para sidebar */}
         <Route
