@@ -83,3 +83,42 @@ model RvtEvidencia {
   @@index([rvtId])
   @@map("rvt_evidencias")
 }
+
+// ---------------------------------------------------------------------------
+// CAR-07 · Controle de acesso e sessões (issue #155)
+// O vínculo com o cadastro de colaboradores será integrado separadamente.
+// ---------------------------------------------------------------------------
+
+enum PapelUsuario {
+  ADMIN_FINANCEIRO
+  GESTOR_OPERACIONAL
+  TECNICO_CAMPO
+  AUDITOR_EXTERNO
+}
+
+model Usuario {
+  id                String       @id @default(uuid())
+  email             String       @unique @db.VarChar(254)
+  senhaHash         String       @map("senha_hash") @db.VarChar(255)
+  papel             PapelUsuario
+  ativo             Boolean      @default(true)
+  senhaAtualizadaEm DateTime     @default(now()) @map("senha_atualizada_em")
+  createdAt         DateTime     @default(now()) @map("created_at")
+  updatedAt         DateTime     @updatedAt @map("updated_at")
+  sessoes           Sessao[]
+
+  @@map("usuarios")
+}
+
+model Sessao {
+  id         String    @id @default(uuid())
+  usuarioId  String    @map("usuario_id")
+  criadaEm   DateTime  @default(now()) @map("criada_em")
+  expiraEm   DateTime  @map("expira_em")
+  revogadaEm DateTime? @map("revogada_em")
+
+  usuario Usuario @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+
+  @@index([usuarioId, revogadaEm])
+  @@map("sessoes")
+}
