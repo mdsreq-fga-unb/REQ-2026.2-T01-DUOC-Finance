@@ -1,13 +1,13 @@
-import { forwardRef, useId } from "react";
-import type { InputHTMLAttributes, ReactNode } from "react";
-import type { LucideIcon } from "lucide-react";
+import { forwardRef, useId } from 'react'
+import type { InputHTMLAttributes, ReactNode } from 'react'
+import type { LucideIcon } from 'lucide-react'
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
-  error?: string;
-  helperText?: ReactNode;
-  leftIcon?: LucideIcon;
-  rightElement?: ReactNode;
+  label?: string
+  error?: string
+  helperText?: ReactNode
+  leftIcon?: LucideIcon
+  rightElement?: ReactNode
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
@@ -19,14 +19,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       leftIcon: LeftIcon,
       rightElement,
       id,
-      className = "",
+      className = '',
       disabled,
       ...rest
     },
-    ref
+    ref,
   ) => {
-    const generatedId = useId();
-    const inputId = id || generatedId;
+    const generatedId = useId()
+    const inputId = id || generatedId
 
     return (
       <div className="w-full space-y-1.5 text-left">
@@ -52,11 +52,11 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             disabled={disabled}
             aria-invalid={Boolean(error)}
             className={`w-full h-11 bg-surface text-dark text-sm rounded-lg border transition-all placeholder:text-muted/60 focus:outline-hidden focus:ring-2 disabled:bg-surface-subtle disabled:opacity-60 disabled:cursor-not-allowed ${
-              LeftIcon ? "pl-10" : "pl-3.5"
-            } ${rightElement ? "pr-10" : "pr-3.5"} ${
+              LeftIcon ? 'pl-10' : 'pl-3.5'
+            } ${rightElement ? 'pr-10' : 'pr-3.5'} ${
               error
-                ? "border-primary focus:border-primary focus:ring-primary/20 text-primary"
-                : "border-border hover:border-dark/30 focus:border-primary focus:ring-primary/20"
+                ? 'border-primary focus:border-primary focus:ring-primary/20 text-primary'
+                : 'border-border hover:border-dark/30 focus:border-primary focus:ring-primary/20'
             } ${className}`}
             {...rest}
           />
@@ -74,10 +74,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           <p className="text-xs text-muted">{helperText}</p>
         ) : null}
       </div>
-    );
-  }
-);
+    )
+  },
+)
 
-Input.displayName = "Input";
+Input.displayName = 'Input'
 
-export default Input;
+export default Input

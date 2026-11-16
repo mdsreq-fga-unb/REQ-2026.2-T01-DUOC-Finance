@@ -12,3 +12,74 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+// ---------------------------------------------------------------------------
+// CAR-02 · Apontamento de Campo (RVT)
+// ---------------------------------------------------------------------------
+
+enum StatusContratoObra {
+  ATIVO
+  SUSPENSO
+  ENCERRADO
+}
+
+enum StatusRvt {
+  PENDENTE
+  HOMOLOGADO
+  REJEITADO
+}
+
+// Contrato de obra ao qual todo apontamento deve estar vinculado (RN04).
+// O cadastro completo de contratos pertence a outra história; aqui ficam
+// apenas os campos necessários para o vínculo do RVT.
+model ContratoObra {
+  id        String             @id @default(uuid())
+  codigo    String             @unique
+  nome      String
+  cliente   String?
+  status    StatusContratoObra @default(ATIVO)
+  createdAt DateTime           @default(now()) @map("created_at")
+  updatedAt DateTime           @updatedAt @map("updated_at")
+
+  apontamentos Rvt[]
+
+  @@map("contratos_obra")
+}
+
+// Registro de Visita Técnica / apontamento diário de campo (RF04)
+model Rvt {
+  id               String    @id @default(uuid())
+  // Identificador do colaborador extraído do JWT. Ainda sem FK porque o
+  // model de colaboradores não existe no banco.
+  colaboradorId    String    @map("colaborador_id")
+  contratoId       String    @map("contrato_id")
+  dataJornada      DateTime  @map("data_jornada") @db.Date
+  horasTrabalhadas Decimal   @map("horas_trabalhadas") @db.Decimal(4, 2)
+  escopoExecutado  String    @map("escopo_executado")
+  status           StatusRvt @default(PENDENTE)
+  createdAt        DateTime  @default(now()) @map("created_at")
+  updatedAt        DateTime  @updatedAt @map("updated_at")
+
+  contrato   ContratoObra   @relation(fields: [contratoId], references: [id])
+  evidencias RvtEvidencia[]
+
+  @@index([colaboradorId, dataJornada])
+  @@map("rvts")
+}
+
+// Arquivo comprobatório (foto ou PDF) anexado ao RVT (RN06, RNF19)
+model RvtEvidencia {
+  id             String   @id @default(uuid())
+  rvtId          String   @map("rvt_id")
+  nomeOriginal   String   @map("nome_original")
+  mimeType       String   @map("mime_type")
+  tamanhoBytes   Int      @map("tamanho_bytes")
+  hashSha256     String   @map("hash_sha256")
+  caminhoArquivo String   @map("caminho_arquivo")
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  rvt Rvt @relation(fields: [rvtId], references: [id], onDelete: Cascade)
+
+  @@index([rvtId])
+  @@map("rvt_evidencias")
+}

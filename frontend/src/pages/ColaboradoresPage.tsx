@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   UserPlus,
   Search,
@@ -16,97 +16,102 @@ import {
   AlertCircle,
   Loader2,
   RotateCcw,
-} from "lucide-react";
-import Button from "../components/ui/Button";
-import ModalAfastamento from "../components/colaboradores/ModalAfastamento";
-import { ColaboradoresService } from "../services/colaboradores.service";
+} from 'lucide-react'
+import Button from '../components/ui/Button'
+import ModalAfastamento from '../components/colaboradores/ModalAfastamento'
+import { ColaboradoresService } from '../services/colaboradores.service'
 import type {
   Colaborador,
   StatusOperacional,
   RegimeTrabalho,
-} from "../types/colaborador";
-import { formatCPFMasked, maskCPF, formatCurrency } from "../utils/masks";
+} from '../types/colaborador'
+import { formatCPFMasked, maskCPF, formatCurrency } from '../utils/masks'
 
 export default function ColaboradoresPage() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
-  const [colaboradores, setColaboradores] = useState<Colaborador[]>([]);
-  const [totalCount, setTotalCount] = useState(0);
-  const [totalPages, setTotalPages] = useState(1);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [isLoading, setIsLoading] = useState(true);
+  const [colaboradores, setColaboradores] = useState<Colaborador[]>([])
+  const [totalCount, setTotalCount] = useState(0)
+  const [totalPages, setTotalPages] = useState(1)
+  const [currentPage, setCurrentPage] = useState(1)
+  const [isLoading, setIsLoading] = useState(true)
 
   // Filtros
-  const [searchTerm, setSearchTerm] = useState("");
-  const [statusFilter, setStatusFilter] = useState<StatusOperacional | "Todos">("Todos");
-  const [regimeFilter, setRegimeFilter] = useState<RegimeTrabalho | "Todos">("Todos");
+  const [searchTerm, setSearchTerm] = useState('')
+  const [statusFilter, setStatusFilter] = useState<StatusOperacional | 'Todos'>(
+    'Todos',
+  )
+  const [regimeFilter, setRegimeFilter] = useState<RegimeTrabalho | 'Todos'>(
+    'Todos',
+  )
 
   // Estado para revelar CPFs completos na tabela
-  const [revealedCPFs, setRevealedCPFs] = useState<Record<string, boolean>>({});
+  const [revealedCPFs, setRevealedCPFs] = useState<Record<string, boolean>>({})
 
   // Modal de Afastamento rápido a partir da tabela (RF03)
-  const [selectedColabAfastamento, setSelectedColabAfastamento] = useState<Colaborador | null>(null);
+  const [selectedColabAfastamento, setSelectedColabAfastamento] =
+    useState<Colaborador | null>(null)
 
-  const [refreshTrigger, setRefreshTrigger] = useState(0);
+  const [refreshTrigger, setRefreshTrigger] = useState(0)
 
   useEffect(() => {
-    let isMounted = true;
+    let isMounted = true
 
     async function loadData() {
       try {
-        setIsLoading(true);
+        setIsLoading(true)
         const res = await ColaboradoresService.getColaboradores({
           search: searchTerm,
           status: statusFilter,
           regime: regimeFilter,
           page: currentPage,
           limit: 8,
-        });
+        })
 
         if (isMounted) {
-          setColaboradores(res.data);
-          setTotalCount(res.total);
-          setTotalPages(res.totalPages);
+          setColaboradores(res.data)
+          setTotalCount(res.total)
+          setTotalPages(res.totalPages)
         }
       } catch (err) {
-        console.error("Erro ao listar colaboradores:", err);
+        console.error('Erro ao listar colaboradores:', err)
       } finally {
         if (isMounted) {
-          setIsLoading(false);
+          setIsLoading(false)
         }
       }
     }
 
-    loadData();
+    loadData()
 
     return () => {
-      isMounted = false;
-    };
-  }, [searchTerm, statusFilter, regimeFilter, currentPage, refreshTrigger]);
+      isMounted = false
+    }
+  }, [searchTerm, statusFilter, regimeFilter, currentPage, refreshTrigger])
 
   // Contadores para métricas no topo
-  const countAtivos = colaboradores.filter((c) => c.status === "Ativo").length;
-  const countFerias = colaboradores.filter((c) => c.status === "Férias").length;
+  const countAtivos = colaboradores.filter((c) => c.status === 'Ativo').length
+  const countFerias = colaboradores.filter((c) => c.status === 'Férias').length
   const countAfastados = colaboradores.filter(
-    (c) => c.status === "Afastado" || c.status === "Desligado"
-  ).length;
+    (c) => c.status === 'Afastado' || c.status === 'Desligado',
+  ).length
 
   const toggleCPFReveal = (id: string) => {
     setRevealedCPFs((prev) => ({
       ...prev,
       [id]: !prev[id],
-    }));
-  };
+    }))
+  }
 
   const handleClearFilters = () => {
-    setSearchTerm("");
-    setStatusFilter("Todos");
-    setRegimeFilter("Todos");
-    setCurrentPage(1);
-  };
+    setSearchTerm('')
+    setStatusFilter('Todos')
+    setRegimeFilter('Todos')
+    setCurrentPage(1)
+  }
 
   const hasActiveFilters =
-    searchTerm !== "" || statusFilter !== "Todos" || regimeFilter !== "Todos";
+    searchTerm !== '' || statusFilter !== 'Todos' || regimeFilter !== 'Todos'
 
   return (
     <div className="space-y-6 pb-12">
@@ -122,13 +127,17 @@ export default function ColaboradoresPage() {
             </span>
           </div>
           <p className="text-xs text-muted mt-1 leading-relaxed">
-            Base cadastral unificada com validação síncrona de CPF, dados bancários e controle de enquadramento funcional.
+            Base cadastral unificada com validação síncrona de CPF, dados
+            bancários e controle de enquadramento funcional.
           </p>
         </div>
 
         <div className="flex items-center gap-3">
           <Link to="/colaboradores/novo">
-            <Button variant="primary" className="flex items-center gap-2 shadow-xs">
+            <Button
+              variant="primary"
+              className="flex items-center gap-2 shadow-xs"
+            >
               <UserPlus className="w-4 h-4" />
               <span>Novo Colaborador</span>
             </Button>
@@ -143,7 +152,9 @@ export default function ColaboradoresPage() {
             <Users className="w-4 h-4" />
           </div>
           <div>
-            <p className="text-[11px] font-semibold text-muted uppercase">Cadastrados</p>
+            <p className="text-[11px] font-semibold text-muted uppercase">
+              Cadastrados
+            </p>
             <p className="text-lg font-bold text-dark">{totalCount}</p>
           </div>
         </div>
@@ -153,7 +164,9 @@ export default function ColaboradoresPage() {
             <CheckCircle2 className="w-4 h-4" />
           </div>
           <div>
-            <p className="text-[11px] font-semibold text-muted uppercase">Ativos</p>
+            <p className="text-[11px] font-semibold text-muted uppercase">
+              Ativos
+            </p>
             <p className="text-lg font-bold text-emerald-600">{countAtivos}</p>
           </div>
         </div>
@@ -163,7 +176,9 @@ export default function ColaboradoresPage() {
             <Palmtree className="w-4 h-4" />
           </div>
           <div>
-            <p className="text-[11px] font-semibold text-muted uppercase">Em Férias</p>
+            <p className="text-[11px] font-semibold text-muted uppercase">
+              Em Férias
+            </p>
             <p className="text-lg font-bold text-blue-600">{countFerias}</p>
           </div>
         </div>
@@ -173,7 +188,9 @@ export default function ColaboradoresPage() {
             <AlertCircle className="w-4 h-4" />
           </div>
           <div>
-            <p className="text-[11px] font-semibold text-muted uppercase">Afastados/Rescisão</p>
+            <p className="text-[11px] font-semibold text-muted uppercase">
+              Afastados/Rescisão
+            </p>
             <p className="text-lg font-bold text-amber-600">{countAfastados}</p>
           </div>
         </div>
@@ -190,8 +207,8 @@ export default function ColaboradoresPage() {
               placeholder="Buscar instantaneamente por nome ou CPF..."
               value={searchTerm}
               onChange={(e) => {
-                setSearchTerm(e.target.value);
-                setCurrentPage(1);
+                setSearchTerm(e.target.value)
+                setCurrentPage(1)
               }}
               className="w-full h-10 pl-10 pr-3.5 text-xs bg-surface-subtle/50 text-dark rounded-lg border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-hidden transition-all"
             />
@@ -203,8 +220,8 @@ export default function ColaboradoresPage() {
             <select
               value={statusFilter}
               onChange={(e) => {
-                setStatusFilter(e.target.value as StatusOperacional | "Todos");
-                setCurrentPage(1);
+                setStatusFilter(e.target.value as StatusOperacional | 'Todos')
+                setCurrentPage(1)
               }}
               className="h-10 text-xs bg-surface text-dark rounded-lg border border-border px-3 focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-hidden"
             >
@@ -219,8 +236,8 @@ export default function ColaboradoresPage() {
             <select
               value={regimeFilter}
               onChange={(e) => {
-                setRegimeFilter(e.target.value as RegimeTrabalho | "Todos");
-                setCurrentPage(1);
+                setRegimeFilter(e.target.value as RegimeTrabalho | 'Todos')
+                setCurrentPage(1)
               }}
               className="h-10 text-xs bg-surface text-dark rounded-lg border border-border px-3 focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-hidden"
             >
@@ -273,11 +290,13 @@ export default function ColaboradoresPage() {
               ) : colaboradores.length === 0 ? (
                 <tr>
                   <td colSpan={7} className="py-12 text-center text-muted">
-                    <p className="font-semibold text-dark">Nenhum colaborador encontrado.</p>
+                    <p className="font-semibold text-dark">
+                      Nenhum colaborador encontrado.
+                    </p>
                     <p className="text-xs text-muted mt-1">
                       {hasActiveFilters
-                        ? "Tente ajustar os filtros ou os termos da busca."
-                        : "Cadastre o primeiro colaborador para iniciar a base."}
+                        ? 'Tente ajustar os filtros ou os termos da busca.'
+                        : 'Cadastre o primeiro colaborador para iniciar a base.'}
                     </p>
                     {hasActiveFilters && (
                       <Button
@@ -293,7 +312,7 @@ export default function ColaboradoresPage() {
                 </tr>
               ) : (
                 colaboradores.map((colab) => {
-                  const isCPFRevealed = Boolean(revealedCPFs[colab.id]);
+                  const isCPFRevealed = Boolean(revealedCPFs[colab.id])
 
                   return (
                     <tr
@@ -302,8 +321,12 @@ export default function ColaboradoresPage() {
                     >
                       {/* Nome e E-mail */}
                       <td className="py-3.5 px-4">
-                        <div className="font-semibold text-dark">{colab.nome}</div>
-                        <div className="text-[11px] text-muted">{colab.email}</div>
+                        <div className="font-semibold text-dark">
+                          {colab.nome}
+                        </div>
+                        <div className="text-[11px] text-muted">
+                          {colab.email}
+                        </div>
                       </td>
 
                       {/* CPF com Máscara e Privacidade ***.456.789-** */}
@@ -318,7 +341,16 @@ export default function ColaboradoresPage() {
                             type="button"
                             onClick={() => toggleCPFReveal(colab.id)}
                             className="p-1 text-muted hover:text-dark transition-colors cursor-pointer"
-                            title={isCPFRevealed ? "Ocultar CPF" : "Visualizar CPF completo"}
+                            aria-label={
+                              isCPFRevealed
+                                ? 'Ocultar CPF completo'
+                                : 'Mostrar CPF completo'
+                            }
+                            title={
+                              isCPFRevealed
+                                ? 'Ocultar CPF'
+                                : 'Visualizar CPF completo'
+                            }
                           >
                             {isCPFRevealed ? (
                               <EyeOff className="w-3.5 h-3.5" />
@@ -338,9 +370,9 @@ export default function ColaboradoresPage() {
                       <td className="py-3.5 px-4">
                         <span
                           className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase border ${
-                            colab.regime === "CLT"
-                              ? "bg-slate-100 text-slate-700 border-slate-300"
-                              : "bg-indigo-50 text-indigo-700 border-indigo-200"
+                            colab.regime === 'CLT'
+                              ? 'bg-slate-100 text-slate-700 border-slate-300'
+                              : 'bg-indigo-50 text-indigo-700 border-indigo-200'
                           }`}
                         >
                           {colab.regime}
@@ -351,24 +383,24 @@ export default function ColaboradoresPage() {
                       <td className="py-3.5 px-4">
                         <span
                           className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold border ${
-                            colab.status === "Ativo"
-                              ? "bg-emerald-50 text-emerald-700 border-emerald-200"
-                              : colab.status === "Férias"
-                              ? "bg-blue-50 text-blue-700 border-blue-200"
-                              : colab.status === "Afastado"
-                              ? "bg-amber-50 text-amber-700 border-amber-200"
-                              : "bg-red-50 text-red-700 border-red-200"
+                            colab.status === 'Ativo'
+                              ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                              : colab.status === 'Férias'
+                                ? 'bg-blue-50 text-blue-700 border-blue-200'
+                                : colab.status === 'Afastado'
+                                  ? 'bg-amber-50 text-amber-700 border-amber-200'
+                                  : 'bg-red-50 text-red-700 border-red-200'
                           }`}
                         >
                           <span
                             className={`w-1.5 h-1.5 rounded-full ${
-                              colab.status === "Ativo"
-                                ? "bg-emerald-500"
-                                : colab.status === "Férias"
-                                ? "bg-blue-500"
-                                : colab.status === "Afastado"
-                                ? "bg-amber-500"
-                                : "bg-red-500"
+                              colab.status === 'Ativo'
+                                ? 'bg-emerald-500'
+                                : colab.status === 'Férias'
+                                  ? 'bg-blue-500'
+                                  : colab.status === 'Afastado'
+                                    ? 'bg-amber-500'
+                                    : 'bg-red-500'
                             }`}
                           />
                           {colab.status}
@@ -385,8 +417,11 @@ export default function ColaboradoresPage() {
                         <div className="flex items-center justify-end gap-1.5">
                           <button
                             type="button"
-                            onClick={() => navigate(`/colaboradores/${colab.id}`)}
+                            onClick={() =>
+                              navigate(`/colaboradores/${colab.id}`)
+                            }
                             className="p-1.5 rounded-lg border border-border bg-surface hover:bg-surface-subtle text-dark transition-colors cursor-pointer"
+                            aria-label={`Editar ${colab.nome}`}
                             title="Editar colaborador (RF02)"
                           >
                             <Edit2 className="w-3.5 h-3.5 text-muted hover:text-dark" />
@@ -396,6 +431,7 @@ export default function ColaboradoresPage() {
                             type="button"
                             onClick={() => setSelectedColabAfastamento(colab)}
                             className="p-1.5 rounded-lg border border-border bg-surface hover:bg-amber-50 hover:border-amber-200 text-amber-700 transition-colors cursor-pointer"
+                            aria-label={`Afastar ou desligar ${colab.nome}`}
                             title="Afastar ou desligar (RF03 / RN23)"
                           >
                             <UserX className="w-3.5 h-3.5" />
@@ -403,7 +439,7 @@ export default function ColaboradoresPage() {
                         </div>
                       </td>
                     </tr>
-                  );
+                  )
                 })
               )}
             </tbody>
@@ -413,15 +449,15 @@ export default function ColaboradoresPage() {
         {/* 5. Paginação */}
         <div className="p-4 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted">
           <div>
-            Mostrando{" "}
+            Mostrando{' '}
             <span className="font-semibold text-dark">
               {colaboradores.length > 0 ? (currentPage - 1) * 8 + 1 : 0}
-            </span>{" "}
-            a{" "}
+            </span>{' '}
+            a{' '}
             <span className="font-semibold text-dark">
               {Math.min(currentPage * 8, totalCount)}
-            </span>{" "}
-            de <span className="font-semibold text-dark">{totalCount}</span>{" "}
+            </span>{' '}
+            de <span className="font-semibold text-dark">{totalCount}</span>{' '}
             colaboradores
           </div>
 
@@ -445,7 +481,9 @@ export default function ColaboradoresPage() {
               variant="outline"
               size="sm"
               disabled={currentPage >= totalPages || isLoading}
-              onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+              onClick={() =>
+                setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+              }
               className="flex items-center gap-1 text-xs"
             >
               <span>Próxima</span>
@@ -462,10 +500,10 @@ export default function ColaboradoresPage() {
           isOpen={Boolean(selectedColabAfastamento)}
           onClose={() => setSelectedColabAfastamento(null)}
           onSuccess={() => {
-            setRefreshTrigger((prev) => prev + 1);
+            setRefreshTrigger((prev) => prev + 1)
           }}
         />
       )}
     </div>
-  );
+  )
 }

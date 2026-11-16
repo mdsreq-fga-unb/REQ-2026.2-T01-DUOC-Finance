@@ -2298,6 +2298,18 @@ O planejamento metodológico, as folgas e o método de atualização de requisit
   </div>
 </div>
 
+---
+
+## Visão Consolidada: Incremento 1 e Validação do Incremento 2
+
+Situação em **16/11/2026**: as semanas 08 a 10 já se encerraram e seguem **pendentes** (entrega prorrogada para a Semana 11 por decisão da equipe). A tabela relaciona cada atividade ao prazo previsto, ao estado real, ao resultado e à evidência. Onde não há evidência, a pendência é registrada como `pendente: motivo`.
+
+| Atividade / Incremento | Prazo previsto | Estado real | Resultado | Evidência |
+| :--- | :---: | :---: | :--- | :--- |
+| **Incremento 1 — Semana 08:** DER, telas de cadastro/autenticação, repositório com pipeline na Vercel e escopo no GitHub Projects | 20/10 a 27/10 | <span class="status-pill pendente">Pendente</span> | Entregues: DER revisado, telas de cadastro e autenticação, repositório com pipeline na Vercel e escopo atualizado. Pendentes (entrega prorrogada para a Semana 11 por decisão da equipe): RBAC base, RVT inicial e dados sintéticos | [DER (modelagem_bd.md)](../mvp/modelagem_bd.md) • [PR #167](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167) • [PR #160](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/160) • [GitHub Projects #119](https://github.com/orgs/mdsreq-fga-unb/projects/119) |
+| **Incremento 1 — Semana 09:** banco Supabase, camada ORM, telas de login/RVT refinadas, RBAC refinado e testes | 28/10 a 04/11 | <span class="status-pill pendente">Pendente</span> | Nenhum entregável concluído | pendente: entrega prorrogada para a Semana 11 por decisão da equipe |
+| **Incremento 1 — Semana 10:** cadastro e autenticação com persistência em Staging, RVT integrado, RBAC completo, Fagan, catálogo/rastreabilidade revisados e DoD | 05/11 a 11/11 | <span class="status-pill pendente">Pendente</span> | Nenhum entregável concluído | pendente: entrega prorrogada para a Semana 11 por decisão da equipe |
+| **Validação sociotécnica do Incremento 2** com Maria Beatryz | 13/11 (remarcada para 16/11) | <span class="status-pill marcada">Remarcada</span> | Remarcada pela cliente de 13/11 para 16/11; realização a registrar em ata | pendente: ata da sessão de 16/11 ainda não registrada |
 
 <a id="detalhamento-temporal-semana-a-semana-semanas-01-a-13"></a>
 <div class="crono-detail-callout">
@@ -2311,7 +2323,6 @@ O planejamento metodológico, as folgas e o método de atualização de requisit
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
   </a>
 </div>
-
 
 ---
 
@@ -2333,5 +2344,5 @@ O planejamento metodológico, as folgas e o método de atualização de requisit
 | `2.3` | 28/10/2026 | Atualização do quantitativo do catálogo vigente de requisitos para 36 RFs e 20 RNFs, em sincronia com o Capítulo 8. | Paulo Nery | — |
 | `2.4` | 02/11/2026 | Alinhamento do encerramento da Unidade 2 e Semana 07 (concluídos); substituição de termos legados (auditor.ia por FLIT, Next.js por React/NestJS, MoSCoW por Matriz 4x4) e atualização da especificação vigente para 40 RFs. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `3.0` | 10/11/2026 | Refatoração integral do capítulo em duas seções (Planejamento e Cronograma): movimentação do racional metodológico, folgas, governança e fontes para o Planejamento; atualização do catálogo para 40 RFs e 20 RNFs e inclusão do método de atualização de requisitos no RAD com diagrama; remoção dos vínculos com as Unidades do plano de ensino e das tabelas de marcos avaliativos; marcação dos marcos já ocorridos (base 09/11/2026) como concluídos; replanejamento das Semanas 01 a 13 conforme a realidade executada (Incremento 1 estendido até a Semana 10; Incrementos 2 e 3 condensados; Cutover na Semana 13). | Eric Araújo | — |
-| `3.1` | 16/11/2026 | Otimização da experiência: links funcionais para o detalhamento, suporte aprimorado a temas claro e escuro, cards compactos de ciclos e navegação profunda | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-
+| `3.1` | 16/11/2026 | Auditoria de prazos do Incremento 1 e inclusão da Visão Consolidada de pendências das Semanas 08 a 10 com prorrogação para a Semana 11 | Eric Araújo | — |
+| `3.2` | 16/11/2026 | Otimização da experiência: links funcionais para o detalhamento, suporte aprimorado a temas claro e escuro, cards compactos de ciclos e navegação profunda | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

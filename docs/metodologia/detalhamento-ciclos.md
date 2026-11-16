@@ -391,17 +391,17 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
 === "Ciclo 1 — Fundação Arquitetural & Colaboradores (Semanas 08 a 10)"
 
     <a id="ciclo-1"></a>
-    > **Período:** 20/10 a 11/11/2026 • **Status:** Em Desenvolvimento, com atraso registrado na Semana 08<br>
+    > **Período:** 20/10 a 11/11/2026 (encerrado) • **Status:** Pendente — consulte a [Visão Consolidada](cronograma.md#visao-consolidada-incremento-1-e-validacao-do-incremento-2)<br>
     > **Foco:** Construção da lógica e persistência por trás das telas já validadas: cadastro unificado (CAR-01), RVT (CAR-02), RBAC (CAR-07), modelagem de dados (DER / Supabase), conexão via ORM e verificação em Staging.
 
-    <div class="week-card status-andamento">
+    <div class="week-card status-pendente">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <a id="semana-08"></a>
           <span class="week-card-title">Semana 08</span>
           <span class="week-card-period">20/10 a 27/10/2026</span>
         </div>
-        <span class="status-pill andamento">Em Desenvolvimento / Em Atraso</span>
+        <span class="status-pill pendente">Pendente</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -426,28 +426,36 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           </ul>
         </div>
         <div>
-          <div class="week-section-title">Entregáveis Esperados</div>
+          <div class="week-section-title">Entregáveis Pendentes</div>
           <ul>
-            <li>Diagrama Entidade-Relacionamento (DER) revisado, com homologação sujeita a registro;</li>
-            <li>Repositório de código configurado com pipeline na Vercel;</li>
-            <li>Telas de cadastro e autenticação de usuário;</li>
             <li>Controle de acesso baseado em papéis (RBAC) em versão base;</li>
             <li>Módulo móvel de registro de viagens (RVT) em versão inicial;</li>
-            <li>Dados sintéticos carregados para o ambiente de desenvolvimento;</li>
-            <li>Backlog atualizado no GitHub Projects, com as pendências da semana registradas para replanejamento.</li>
+            <li>Dados sintéticos carregados para o ambiente de desenvolvimento.</li>
+            <li><em>Justificativa: entrega prorrogada para a Semana 11 por decisão da equipe.</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="week-card-grid">
+        <div>
+          <div class="week-section-title">Entregáveis e Artefatos Gerados</div>
+          <ul>
+            <li>Diagrama Entidade-Relacionamento (DER) revisado, com homologação sujeita a registro — evidência: <a href="../../mvp/modelagem_bd/">docs/mvp/modelagem_bd.md</a></li>
+            <li>Telas de cadastro e autenticação de usuário — evidência: <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener noreferrer">Pull Request #167</a></li>
+            <li>Repositório de código configurado com pipeline na Vercel — evidência: <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/160" target="_blank" rel="noopener noreferrer">Pull Request #160</a></li>
+            <li>Escopo atualizado no GitHub Projects, com as pendências da semana registradas para replanejamento — evidência: <a href="https://github.com/orgs/mdsreq-fga-unb/projects/119" target="_blank" rel="noopener noreferrer">GitHub Projects #119</a></li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="week-card status-andamento">
+    <div class="week-card status-pendente">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <a id="semana-09"></a>
           <span class="week-card-title">Semana 09</span>
           <span class="week-card-period">28/10 a 04/11/2026</span>
         </div>
-        <span class="status-pill andamento">Em Desenvolvimento</span>
+        <span class="status-pill pendente">Pendente</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -471,26 +479,35 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           </ul>
         </div>
         <div>
-          <div class="week-section-title">Entregáveis Esperados</div>
+          <div class="week-section-title">Entregáveis Pendentes</div>
           <ul>
             <li>Banco de dados Supabase provisionado, com <em>migrations</em> versionadas;</li>
             <li>Camada ORM conectada à aplicação e às entidades do DER;</li>
             <li>Telas de login e RVT refinadas e integradas à persistência;</li>
             <li>Matriz de papéis × permissões (RBAC) refinada e documentada;</li>
             <li>Testes unitários das regras de cadastro e autenticação.</li>
+            <li><em>Justificativa: entrega prorrogada para a Semana 11 por decisão da equipe.</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="week-card-grid">
+        <div>
+          <div class="week-section-title">Entregáveis e Artefatos Gerados</div>
+          <ul>
+            <li><em>Nenhum artefato gerado até o momento.</em></li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="week-card status-andamento">
+    <div class="week-card status-pendente">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <a id="semana-10"></a>
           <span class="week-card-title">Semana 10</span>
           <span class="week-card-period">05/11 a 11/11/2026</span>
         </div>
-        <span class="status-pill andamento">Em Desenvolvimento</span>
+        <span class="status-pill pendente">Pendente</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -515,7 +532,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           </ul>
         </div>
         <div>
-          <div class="week-section-title">Entregáveis Esperados</div>
+          <div class="week-section-title">Entregáveis Pendentes</div>
           <ul>
             <li>Cadastro unificado (<a href="../../visao-produto/solucao-proposta/#car-01">CAR-01</a>) e autenticação com persistência funcionando em <em>Staging</em>;</li>
             <li>Módulo RVT (<a href="../../visao-produto/solucao-proposta/#car-02">CAR-02</a>) integrado ao banco de dados;</li>
@@ -523,6 +540,15 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
             <li>Relatório de verificação (Fagan) e testes automatizados do incremento;</li>
             <li>Catálogo de requisitos revisado e matriz de rastreabilidade atualizada;</li>
             <li>Registro de DoD do Incremento 1 e backlog replanejado no GitHub Projects.</li>
+            <li><em>Justificativa: entrega prorrogada para a Semana 11 por decisão da equipe.</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="week-card-grid">
+        <div>
+          <div class="week-section-title">Entregáveis e Artefatos Gerados</div>
+          <ul>
+            <li><em>Nenhum artefato gerado até o momento.</em></li>
           </ul>
         </div>
       </div>
@@ -560,10 +586,11 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
         <div>
           <div class="week-section-title">Atividades Planejadas e Técnicas de ER</div>
           <ul>
+            <li>Conclusão dos entregáveis prorrogados das Semanas 08 a 10 do Incremento 1 (RBAC, RVT, dados sintéticos, banco Supabase e ORM, telas refinadas, testes, verificação em <em>Staging</em> e DoD);</li>
             <li><strong>Plan do Incremento 2:</strong> atualização dos requisitos do incremento (<a href="../../visao-produto/solucao-proposta/#car-03">CAR-03</a>, <a href="../../visao-produto/solucao-proposta/#car-04">CAR-04</a> e <a href="../../visao-produto/solucao-proposta/#car-08">CAR-08</a>) sobre o catálogo vigente;</li>
             <li>Estabelecimento dos designs das telas do <strong>Motor Financeiro (<a href="../../visao-produto/solucao-proposta/#car-03">CAR-03</a>)</strong> e da <strong>Prestação de Contas / Reembolsos (<a href="../../visao-produto/solucao-proposta/#car-04">CAR-04</a>)</strong> diretamente no Frontend, com o Figma como referência;</li>
             <li>Desenho funcional dos fluxos de aprovação de diárias de campo, cálculo visual de adiantamentos e upload de comprovantes com dados simulados;</li>
-            <li><strong>Sessão de Validação Sociotécnica Invertida (13/11/2026, a confirmar)</strong>: Maria Beatryz navega pelas telas financeiras no Frontend via Google Meet, validando campos, layouts e regras visuais;</li>
+            <li><strong>Sessão de Validação Sociotécnica Invertida (prevista para 13/11/2026 e remarcada pela cliente para 16/11/2026)</strong>: Maria Beatryz navega pelas telas financeiras no Frontend via Google Meet, validando campos, layouts e regras visuais;</li>
             <li>Revisão e validação dos requisitos afetados após a sessão, registro dos apontamentos de IHC e verificação do DoR do Incremento 2;</li>
             <li><strong>PC3:</strong> publicação da Entrega 3 até 17/11/2026 às 08h, com gravação em 18/11 e apresentações em 17 e 19/11.</li>
           </ul>
@@ -771,3 +798,4 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
     | Versão | Data | Descrição | Autor(es) | Revisor(es) |
     | :---: | :---: | :--- | :--- | :--- |
     | `1.0` | 16/11/2026 | Criação do capítulo de detalhamento operacional dos Ciclos RAD e Semanas 01 a 13 com navegação profunda e rastreabilidade direta do Cronograma | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+    | `1.1` | 16/11/2026 | Atualização do status das Semanas 08 a 10 para Pendente (prorrogação para a Semana 11) e inclusão da sessão de validação em 16/11 | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
