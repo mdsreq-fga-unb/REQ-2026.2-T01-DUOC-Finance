@@ -740,9 +740,9 @@ O planejamento metodológico, as folgas e o método de atualização de requisit
               </span>
               <span class="uui-chip-time">19:00</span>
               <span class="uui-chip-tooltip">
-                <span class="tooltip-chip-title">Reunião 05 (Prioriz. 4x4)</span>
+                <span class="tooltip-chip-title">Reunião 05 com a cliente (Prioriz. 4x4)</span>
                 <span class="tooltip-chip-meta">19:00 • Rito / Reunião</span>
-                <span class="tooltip-chip-desc">Sessão interna de priorização pela Matriz 4x4 e delimitação do MVP.</span>
+                <span class="tooltip-chip-desc">A cliente validou a priorização apresentada e aprovou com ressalvas o MVP. A equipe incluiu RF11 (indicadores de custo), rebaixou RF21 (estorno financeiro), excluiu RF16 e postergou RNF01 (modo offline). [Ver Ata 05](../governanca/atas/reuniao-05.md).</span>
                 <span class="tooltip-chip-action">Clique para ver o detalhamento da semana ↗</span>
               </span>
             </a>
@@ -2344,5 +2344,6 @@ Situação em **16/11/2026**: as semanas 08 a 10 já se encerraram e seguem **pe
 | `2.3` | 28/10/2026 | Atualização do quantitativo do catálogo vigente de requisitos para 36 RFs e 20 RNFs, em sincronia com o Capítulo 8. | Paulo Nery | — |
 | `2.4` | 02/11/2026 | Alinhamento do encerramento da Unidade 2 e Semana 07 (concluídos); substituição de termos legados (auditor.ia por FLIT, Next.js por React/NestJS, MoSCoW por Matriz 4x4) e atualização da especificação vigente para 40 RFs. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `3.0` | 10/11/2026 | Refatoração integral do capítulo em duas seções (Planejamento e Cronograma): movimentação do racional metodológico, folgas, governança e fontes para o Planejamento; atualização do catálogo para 40 RFs e 20 RNFs e inclusão do método de atualização de requisitos no RAD com diagrama; remoção dos vínculos com as Unidades do plano de ensino e das tabelas de marcos avaliativos; marcação dos marcos já ocorridos (base 09/11/2026) como concluídos; replanejamento das Semanas 01 a 13 conforme a realidade executada (Incremento 1 estendido até a Semana 10; Incrementos 2 e 3 condensados; Cutover na Semana 13). | Eric Araújo | — |
-| `3.1` | 16/11/2026 | Auditoria de prazos do Incremento 1 e inclusão da Visão Consolidada de pendências das Semanas 08 a 10 com prorrogação para a Semana 11 | Eric Araújo | — |
-| `3.2` | 16/11/2026 | Otimização da experiência: links funcionais para o detalhamento, suporte aprimorado a temas claro e escuro, cards compactos de ciclos e navegação profunda | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `3.1` | 11/11/2026 | Correção do quantitativo histórico do PC2 (36 RFs no marco de 13/10); substituição de contagens repetidas por referências ao catálogo vigente e à linha de corte atual (40 RFs, 31 MVP). | Gustavo Bonifácio | — |
+| `3.2` | 16/11/2026 | Auditoria de prazos do Incremento 1 e inclusão da Visão Consolidada de pendências das Semanas 08 a 10 com prorrogação para a Semana 11 | Eric Araújo | — |
+| `3.3` | 16/11/2026 | Otimização da experiência: links funcionais para o detalhamento, suporte aprimorado a temas claro e escuro, cards compactos de ciclos e navegação profunda | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
