@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import AppLayout from "../components/layout/AppLayout";
 import DashboardPage from "../pages/DashboardPage";
 import ColaboradoresPage from "../pages/ColaboradoresPage";
+import ColaboradorFormPage from "../pages/ColaboradorFormPage";
 import LoginPage from "../pages/LoginPage";
 
 export default function AppRoutes() {
@@ -16,8 +17,10 @@ export default function AppRoutes() {
                 {/* ROTA PADRÃO (index) para dashboard */}
                 <Route index element={<DashboardPage />} />
 
-                {/* ROTA para colaboradores */}
+                {/* ROTAS de colaboradores (RF01, RF02, RF03) */}
                 <Route path="colaboradores" element={<ColaboradoresPage />} />
+                <Route path="colaboradores/novo" element={<ColaboradorFormPage />} />
+                <Route path="colaboradores/:id" element={<ColaboradorFormPage />} />
                 
                 {/* ROTA de fechamento com outras opções para sidebar */}
                 <Route

@@ -11,43 +11,118 @@ import {
   Users,
   HardHat,
   ShieldCheck,
+  Loader2,
+  HelpCircle,
+  X,
+  CheckCircle2,
 } from "lucide-react";
 import Button from "../components/ui/Button";
 import Input from "../components/ui/Input";
+import { useToast } from "../components/ui/useToast";
+import { validateEmail, validateCPF } from "../utils/validators";
+import { maskCPF } from "../utils/masks";
 
 export default function LoginPage() {
   const navigate = useNavigate();
+  const toast = useToast();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
-  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  // Erros de validação cliente (RNF03)
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+
+  // Modal de Primeiro Acesso / Recuperação (RF17)
+  const [isRecoveryModalOpen, setIsRecoveryModalOpen] = useState(false);
+  const [recoveryIdentifier, setRecoveryIdentifier] = useState("");
+  const [recoveryError, setRecoveryError] = useState("");
+  const [recoverySuccess, setRecoverySuccess] = useState(false);
+  const [isRecovering, setIsRecovering] = useState(false);
+
+  const handleEmailChange = (val: string) => {
+    setEmail(val);
+    if (emailError) setEmailError("");
+  };
+
+  const handlePasswordChange = (val: string) => {
+    setPassword(val);
+    if (passwordError) setPasswordError("");
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!email.trim() || !password.trim()) {
-      setError("Por favor, preencha todos os campos.");
-      return;
+    let hasError = false;
+
+    if (!email.trim()) {
+      setEmailError("O e-mail é obrigatório.");
+      hasError = true;
+    } else if (!validateEmail(email)) {
+      setEmailError("Informe um e-mail válido (ex: seu.nome@duoc.com.br).");
+      hasError = true;
     }
 
-    setError("");
-    // Redireciona para o dashboard principal
-    navigate("/");
+    if (!password.trim()) {
+      setPasswordError("A senha é obrigatória.");
+      hasError = true;
+    } else if (password.length < 6) {
+      setPasswordError("A senha deve ter no mínimo 6 caracteres.");
+      hasError = true;
+    }
+
+    if (hasError) return;
+
+    setIsLoading(true);
+
+    // Simulação síncrona com feedback visual de carregamento (RF13)
+    setTimeout(() => {
+      setIsLoading(false);
+      toast.success("Autenticado com sucesso! Bem-vindo ao DUOC Finance.");
+      navigate("/");
+    }, 700);
   };
 
   const handleDemoAccess = (roleEmail: string) => {
     setEmail(roleEmail);
     setPassword("duoc2026");
-    setError("");
+    setEmailError("");
+    setPasswordError("");
+    toast.info(`Perfil demonstrativo (${roleEmail}) carregado.`);
+  };
+
+  const handleRecoverySubmit = (e: FormEvent) => {
+    e.preventDefault();
+    setRecoveryError("");
+
+    const isEmailValid = validateEmail(recoveryIdentifier);
+    const isCPFValid = validateCPF(recoveryIdentifier);
+
+    if (!isEmailValid && !isCPFValid) {
+      setRecoveryError(
+        "Por favor, informe um CPF válido (11 dígitos) ou e-mail cadastrado."
+      );
+      return;
+    }
+
+    setIsRecovering(true);
+
+    setTimeout(() => {
+      setIsRecovering(false);
+      setRecoverySuccess(true);
+      toast.success(
+        "Instruções enviadas para o e-mail cadastrado na base DUOC."
+      );
+    }, 800);
   };
 
   return (
     <div className="min-h-screen w-screen grid grid-cols-1 lg:grid-cols-2 bg-surface">
       {/* 1. Coluna Esquerda: Hero Banner Institucional (apenas em telas grandes) */}
       <div className="hidden lg:flex relative flex-col justify-between p-12 overflow-hidden bg-dark">
-        {/* Imagem de Fundo com Arquitetura e Filtro Gradiente */}
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 scale-105"
           style={{
@@ -108,14 +183,16 @@ export default function LoginPage() {
           </div>
 
           {/* Formulário */}
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4" noValidate>
             <Input
               label="E-mail"
               type="email"
               placeholder="seu.nome@duoc.com.br"
               leftIcon={Mail}
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              error={emailError}
+              onChange={(e) => handleEmailChange(e.target.value)}
+              disabled={isLoading}
               required
             />
 
@@ -125,7 +202,9 @@ export default function LoginPage() {
               placeholder="Digite sua senha"
               leftIcon={Lock}
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              error={passwordError}
+              onChange={(e) => handlePasswordChange(e.target.value)}
+              disabled={isLoading}
               required
               rightElement={
                 <button
@@ -133,6 +212,7 @@ export default function LoginPage() {
                   onClick={() => setShowPassword(!showPassword)}
                   className="text-muted hover:text-dark transition-colors cursor-pointer p-1"
                   aria-label={showPassword ? "Ocultar senha" : "Ver senha"}
+                  tabIndex={-1}
                 >
                   {showPassword ? (
                     <EyeOff className="w-4 h-4" />
@@ -143,17 +223,14 @@ export default function LoginPage() {
               }
             />
 
-            {error && (
-              <p className="text-xs text-primary font-medium">{error}</p>
-            )}
-
-            {/* Lembrar de mim e Esqueci a senha */}
+            {/* Lembrar de mim e Esqueci a senha / Primeiro acesso (RF17) */}
             <div className="flex items-center justify-between text-xs pt-1">
               <label className="flex items-center gap-2 cursor-pointer text-dark/80 select-none">
                 <input
                   type="checkbox"
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
+                  disabled={isLoading}
                   className="rounded border-border text-primary focus:ring-primary/20 accent-primary"
                 />
                 <span>Lembrar de mim</span>
@@ -161,24 +238,40 @@ export default function LoginPage() {
 
               <button
                 type="button"
+                onClick={() => {
+                  setIsRecoveryModalOpen(true);
+                  setRecoverySuccess(false);
+                  setRecoveryIdentifier("");
+                  setRecoveryError("");
+                }}
                 className="text-primary hover:text-primary-dark font-medium transition-colors cursor-pointer"
               >
-                Esqueci minha senha
+                Primeiro acesso / Esqueci a senha
               </button>
             </div>
 
-            {/* Botão de Submissão */}
+            {/* Botão de Submissão com Estado de Carregamento */}
             <Button
               type="submit"
               variant="primary"
+              disabled={isLoading}
               className="w-full h-11 text-sm font-semibold flex items-center justify-center gap-2 mt-2"
             >
-              <span>Entrar</span>
-              <ArrowRight className="w-4 h-4" />
+              {isLoading ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  <span>Validando credenciais...</span>
+                </>
+              ) : (
+                <>
+                  <span>Entrar</span>
+                  <ArrowRight className="w-4 h-4" />
+                </>
+              )}
             </Button>
           </form>
 
-          {/* Divisor de Acesso Rápido */}
+          {/* Divisor de Acesso Demonstrativo */}
           <div className="relative">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-border" />
@@ -193,6 +286,7 @@ export default function LoginPage() {
             <button
               type="button"
               onClick={() => handleDemoAccess("gestor@duoc.com.br")}
+              disabled={isLoading}
               className="flex flex-col items-center justify-center p-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs text-dark gap-1.5 cursor-pointer shadow-2xs"
             >
               <Briefcase className="w-4 h-4 text-primary" />
@@ -202,6 +296,7 @@ export default function LoginPage() {
             <button
               type="button"
               onClick={() => handleDemoAccess("rh@duoc.com.br")}
+              disabled={isLoading}
               className="flex flex-col items-center justify-center p-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs text-dark gap-1.5 cursor-pointer shadow-2xs"
             >
               <Users className="w-4 h-4 text-primary" />
@@ -211,6 +306,7 @@ export default function LoginPage() {
             <button
               type="button"
               onClick={() => handleDemoAccess("tecnico@duoc.com.br")}
+              disabled={isLoading}
               className="flex flex-col items-center justify-center p-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs text-dark gap-1.5 cursor-pointer shadow-2xs"
             >
               <HardHat className="w-4 h-4 text-primary" />
@@ -225,6 +321,106 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
+
+      {/* 3. Modal de Primeiro Acesso ou Recuperação de Credenciais (RF17) */}
+      {isRecoveryModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-dark/60 backdrop-blur-xs animate-in fade-in duration-200">
+          <div className="bg-surface w-full max-w-md rounded-2xl border border-border shadow-2xl p-6 space-y-5">
+            <div className="flex items-start justify-between">
+              <div className="flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-xl bg-primary-light flex items-center justify-center text-primary">
+                  <HelpCircle className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-dark">
+                    Recuperação & Primeiro Acesso
+                  </h3>
+                  <p className="text-xs text-muted">RF17 · Ativação de credenciais</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsRecoveryModalOpen(false)}
+                className="text-muted hover:text-dark p-1 rounded-md"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            {recoverySuccess ? (
+              <div className="space-y-4 text-center py-4">
+                <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="w-6 h-6" />
+                </div>
+                <div className="space-y-1">
+                  <h4 className="text-sm font-bold text-dark">Instruções enviadas!</h4>
+                  <p className="text-xs text-muted leading-relaxed">
+                    Se o dado informado constar na base da DUOC Finance, um link seguro com token temporário foi emitido para o seu e-mail cadastrado.
+                  </p>
+                </div>
+                <Button
+                  variant="primary"
+                  className="w-full mt-4"
+                  onClick={() => setIsRecoveryModalOpen(false)}
+                >
+                  Concluir
+                </Button>
+              </div>
+            ) : (
+              <form onSubmit={handleRecoverySubmit} className="space-y-4">
+                <p className="text-xs text-muted leading-relaxed">
+                  Informe o seu **CPF** ou **e-mail corporativo**. Verificaremos a base unificada cadastral para liberar sua senha de acesso ou redefinição.
+                </p>
+
+                <Input
+                  label="CPF ou E-mail Cadastrado"
+                  placeholder="000.000.000-00 ou nome@duoc.com.br"
+                  value={recoveryIdentifier}
+                  error={recoveryError}
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    // Se estiver digitando números, aplica máscara de CPF
+                    if (/^\d+$/.test(val.replace(/\D/g, "")) && !val.includes("@")) {
+                      setRecoveryIdentifier(maskCPF(val));
+                    } else {
+                      setRecoveryIdentifier(val);
+                    }
+                  }}
+                  disabled={isRecovering}
+                  required
+                />
+
+                <div className="flex gap-2.5 pt-2">
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    className="flex-1"
+                    onClick={() => setIsRecoveryModalOpen(false)}
+                    disabled={isRecovering}
+                  >
+                    Cancelar
+                  </Button>
+                  <Button
+                    type="submit"
+                    variant="primary"
+                    className="flex-1 flex items-center justify-center gap-1.5"
+                    disabled={isRecovering}
+                  >
+                    {isRecovering ? (
+                      <>
+                        <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                        <span>Verificando...</span>
+                      </>
+                    ) : (
+                      <span>Enviar Instruções</span>
+                    )}
+                  </Button>
+                </div>
+              </form>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

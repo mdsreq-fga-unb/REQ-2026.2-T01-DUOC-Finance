@@ -5,7 +5,7 @@ import type { LucideIcon } from "lucide-react";
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
-  helperText?: string;
+  helperText?: ReactNode;
   leftIcon?: LucideIcon;
   rightElement?: ReactNode;
 }
