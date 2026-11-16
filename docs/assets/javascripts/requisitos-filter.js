@@ -285,6 +285,29 @@
 
   window.addEventListener("hashchange", handleUniversalHashNavigation);
 
+  /**
+   * Alternancia entre visao por Caracteristica e Matriz 4x4
+   */
+  window.switchScopeView = function(view) {
+    const carView = document.getElementById("scope-view-car");
+    const matrixView = document.getElementById("scope-view-matrix");
+    const btnCar = document.getElementById("btn-view-car");
+    const btnMatrix = document.getElementById("btn-view-matrix");
+    if (!carView || !matrixView) return;
+
+    if (view === "matrix") {
+      carView.style.display = "none";
+      matrixView.style.display = "block";
+      if (btnCar) btnCar.classList.remove("active");
+      if (btnMatrix) btnMatrix.classList.add("active");
+    } else {
+      carView.style.display = "block";
+      matrixView.style.display = "none";
+      if (btnCar) btnCar.classList.add("active");
+      if (btnMatrix) btnMatrix.classList.remove("active");
+    }
+  };
+
   // Inicializacao com suporte ao carregamento instantaneo do Material for MkDocs
   function initAll() {
     initRequirementsFilter();

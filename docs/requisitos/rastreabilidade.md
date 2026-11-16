@@ -2,22 +2,6 @@
 
 Este documento consolida a **rastreabilidade vertical e horizontal** dos requisitos de software do sistema ***DUOC Finance***, formalizando as inter-relações entre os direcionadores estratégicos do negócio, os objetivos táticos, as capacidades do produto e os artefatos de verificação e teste.
 
-<div class="catalog-nav-deck">
-  <a href="../" class="catalog-nav-btn">
-    <span class="nav-btn-badge">91</span>
-    <span class="nav-btn-text">Catálogo Geral de Requisitos ↗</span>
-  </a>
-  <a href="../priorizacao/" class="catalog-nav-btn">
-    <span class="nav-btn-badge">4×4</span>
-    <span class="nav-btn-text">Matriz de Priorização ↗</span>
-  </a>
-  <a href="../governanca-conformidade/#61-matriz-canonica-de-papeis-rbac" class="catalog-nav-btn catalog-nav-btn-ext">
-    <span class="nav-btn-text">Atores & Papéis RBAC ↗</span>
-  </a>
-</div>
-
----
-
 ## Métricas de Cobertura e Rastreabilidade
 
 <div class="grid cards" markdown>
