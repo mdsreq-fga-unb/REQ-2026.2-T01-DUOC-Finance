@@ -404,7 +404,7 @@ Para assegurar total transparência e padronização com a Seção 10.2 do Templ
 
 | Indicador | Sigla | Escala | Descrição e Origem Metodológica |
 | :--- | :---: | :---: | :--- |
-| **Valor de Negócio** | **VB** | 1 a 4 | Validado com a cliente na [Reunião 05](../governanca/atas/reuniao-05.md), segundo a [Rubrica de Julgamento de Negócio](#rubrica-de-julgamento-do-valor-de-negocio) (D1 a D4); esforço técnico estimado pela equipe. |
+| **Valor de Negócio** | **VB** | 1 a 4 | Atribuído segundo a [Rubrica de Julgamento de Negócio](#rubrica-de-julgamento-do-valor-de-negocio) (D1 a D4), com escala e diretrizes alinhadas com a cliente na [Reunião 05](../governanca/atas/reuniao-05.md) (com ressalvas); a homologação definitiva da composição de 31 RFs do MVP consta formalmente como pendente de validação perante a cliente (ver [Seção 8.12](#evidencia-e-registro-da-validacao-do-mvp-com-o-cliente)). |
 | **Complexidade Técnica** | **CX** | 1 a 4 | Avaliação estrutural de arquitetura, acoplamento e regras de negócio conforme a [Escala de Complexidade](#complexidade-tecnica). |
 | **Esforço de Implementação** | **ES** | 1 a 4 | Nota derivada das horas estimadas de codificação conforme a [Escala de Esforço de Implementação](#esforco-de-implementacao-tempo-em-horas). |
 | **Lacuna de Capacidade** | **LC** | 1 a 4 | Avaliação de domínio técnico e familiaridade da equipe com a stack (React SPA, Vite, NestJS, Supabase/PostgreSQL) conforme a [Escala de Lacuna](#lacuna-de-capacidade-da-equipe). |
@@ -474,6 +474,104 @@ Quanto **maior o IP**, maior o retorno operacional de negócio por unidade de es
     Consulte os requisitos pós-MVP no [Catálogo Integrado de Requisitos](index.md).
 
 </div>
+
+<a id="analise-de-viabilidade-do-corte"></a>
+### Análise de Viabilidade do Corte: Esforço Total versus Capacidade Efetiva da Equipe
+
+A consolidação da linha de corte do MVP decorre da conjunção entre a prioridade estratégica (Índice de Prioridade — IP e foco nos níveis de valor VB = 3 ou 4) e a **comprovação de viabilidade técnica e matemática**: o confronto direto entre a demanda total de horas dos 31 RFs selecionados e a capacidade produtiva líquida da equipe de desenvolvimento durante os Ciclos RAD de construção rápida.
+
+#### 1. Esforço Total Estimado para os 31 Requisitos do MVP
+
+O cálculo da carga horária direta de implementação baseia-se na métrica analítica de **Esforço de Implementação (ES)** de cada item, estimada em horas nominais de desenvolvimento:
+
+*   **Módulo 1 — OE1 (10 RFs no MVP):** RF01 (6 h), RF02 (6 h), RF03 (6 h), RF04 (16 h), RF19 (4 h), RF22 (8 h), RF25 (4 h), RF26 (8 h), RF32 (6 h), RF35 (4 h) ➔ **Subtotal: 68 horas**.
+*   **Módulo 2 — OE2 (7 RFs no MVP):** RF05 (16 h), RF06 (6 h), RF07 (6 h), RF08 (6 h), RF27 (6 h), RF28 (6 h), RF29 (8 h) ➔ **Subtotal: 54 horas**.
+*   **Módulo 3 — OE3 (9 RFs no MVP):** RF09 (16 h), RF10 (6 h), RF11 (6 h), RF33 (8 h), RF34 (8 h), RF37 (6 h), RF38 (2 h), RF39 (6 h), RF40 (6 h) ➔ **Subtotal: 64 horas**.
+*   **Módulo 4 — OE4 (5 RFs no MVP):** RF13 (2 h), RF14 (6 h), RF17 (4 h), RF18 (1 h), RF23 (6 h) ➔ **Subtotal: 19 horas**.
+*   **Demanda Direta de Codificação do MVP (Total Bruto):** **205 horas**.
+
+#### 2. Premissas Metodológicas de Reserva Técnica (Integração, Testes e Correções)
+
+Em projetos orientados a métodos ágeis e RAD, o dimensionamento não pode restringir o esforço à codificação isolada de requisitos. Adota-se uma **reserva técnica compulsória de 30%** sobre o esforço de implementação para absorver atividades essenciais de garantia de qualidade:
+1.  **Integração Contínua e Configuração de Ambiente:** Estruturação e manutenção dos pipelines de CI/CD (GitHub Actions / Vercel), variáveis de ambiente e automação de migrações DDL no Supabase PostgreSQL.
+2.  **Automação de Testes e Qualidade:** Implementação de testes unitários para regras de cálculo financeiro (RN05, RN08, RN31) e testes de integração de APIs e autorização RBAC.
+3.  **Inspeções por Pares (Fagan Checklists) e Docs as Code:** Ciclos de revisão de código cruzada antes de merges e atualização contínua dos artefatos documentais.
+4.  **Estabilização em Staging e Correção de Divergências:** Janela dedicada ao saneamento de bugs identificados nos Testes de Aceitação de Usuário (UAT) com a cliente.
+
+*   **Reserva Técnica Alocada (30% sobre 205 h):** **61,5 horas** (~62 horas).
+*   **Demanda Total Consolidada de Esforço do MVP:** 205 h + 61,5 h = **266,5 horas**.
+
+#### 3. Capacidade Efetivamente Disponível da Equipe
+
+A capacidade da equipe Cascata Ágil é dimensionada de forma transparente com base na dedicação real da equipe acadêmica:
+
+| Parâmetro de Dimensionamento | Valor Adotado | Justificativa Metodológica |
+| :--- | :---: | :--- |
+| **Desenvolvedores Técnicos Ativos** | 6 integrantes | Dos 7 integrantes da equipe, 6 atuam com dedicação prioritária à engenharia de software (full-stack, frontend, backend e QA) e 1 atua na liderança técnica, facilitação e gestão de produto. |
+| **Janela Temporal de Construção (RAD)** | 5 semanas | Período reservado para construção rápida dos incrementos (Semanas 08 a 12 do cronograma). |
+| **Dedicação Semanal Útil por Integrante** | 10 horas / semana | Carga horária líquida voltada exclusivamente a código, testes e revisões, descontados ritos de alinhamento e aulas da disciplina. |
+| **Capacidade Nominal Total da Equipe** | **300 horas** | 6 desenvolvedores × 10 h/semana × 5 semanas úteis de trabalho. |
+| **Fator de Eficiência Operacional (Foco)** | **90%** | Desconto preventivo para atritos naturais de comunicação, dúvidas de domínio e coordenação técnica. |
+| **Capacidade Efetiva Líquida Disponível** | **270 horas** | 300 h nominais × 0,90 de fator de foco. |
+
+#### 4. Demonstração de Viabilidade e Condicionamento de Escopo
+
+*   **Balanço Capacidade × Esforço:** **266,5 horas demandadas ≤ 270,0 horas de capacidade líquida** (ou 300,0 horas nominais).
+*   **Margem de Folga Positiva:** A equipe opera com saldo favorável de **+3,5 horas** sobre a capacidade líquida e **+33,5 horas** sobre a capacidade nominal bruta.
+*   **Condicionamento e Níveis de Contingência:** Caso ocorram bloqueios técnicos ou atrasos na homologação externa durante os Ciclos RAD, a equipe definiu o seguinte protocolo de desacoplamento condicional:
+    *   *Nível 1 de Contingência (Atrasos até 16 h):* Desacoplamento do **RF09 (Apropriar custos aos centros de custo — 16 h, Q2, IP 1,20)** para pós-MVP, mantendo a apropriação direta simplificada por contrato ativo.
+    *   *Nível 2 de Contingência (Atrasos até 24 h):* Postergação dos requisitos secundários de cadastro **RF39 e RF40 (12 h combinadas, Q1, IP 1,64)**, fixando tetos e centros de custo por carga administrativa inicial.
+    *   *Núcleo Essencial Blindado:* Os módulos de apontamento de campo (OE1) e fechamento de diárias (OE2) totalizam 122 h (158,6 h com reserva) e estão blindados contra qualquer corte, garantindo a entrega do valor central mesmo sob forte estresse de cronograma.
+
+<a id="procedimento-operacional-de-retificacao-e-estorno-assistido-no-mvp"></a>
+### Procedimento Operacional de Retificação e Estorno Assistido no MVP (RF06 × RF21 × RF35)
+
+Na especificação do [RF06 (Homologar fechamento financeiro)](index.md#rf06), estabelece-se que a homologação encerra formalmente a competência, bloqueia edições diretas de diárias e despesas (RN02) e emite o extrato definitivo para liquidação contábil. Na Reunião 05, deliberou-se que o estorno automatizado de fechamento em lote ([RF21](index.md#rf21)) seria postergado para o backlog evolutivo pós-MVP, uma vez que a validação de reversões por parte dos sócios da DUOC não ocorre no dia a dia e sua automação agregaria alta complexidade ao ciclo inicial.
+
+Para assegurar a tratativa viável e auditável de eventuais correções pós-fechamento no primeiro ciclo operacional do MVP, foi estabelecido o **Procedimento Operacional de Exceção Assistida**:
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor G as Gestor Operacional
+    actor A as Administrador Financeiro
+    participant S as DUOC Finance (Sistema)
+    participant B as Banco / Auditoria (RNF15/16)
+
+    Note over G,S: Identificação de inconsistência após homologação
+    G->>A: 1. Submete chamado de retificação justificado com evidência
+    A->>S: 2. Autoriza administrativamente reabertura do lote
+    S->>B: 3. Grava snapshot imutável e status RETIFICADO_EM_ABERTO (RN17)
+    G->>S: 4. Executa ajuste pontual via RF35 (justificativa obrigatória RN24)
+    S->>B: 5. Registra mutação pontual na trilha de auditoria
+    A->>S: 6. Gera nova prévia consolidada via RF05
+    A->>S: 7. Re-homologa lote corrigido via RF06
+    S->>B: 8. Grava novo carimbo (v2), bloqueia registros e emite extrato v2
+```
+
+1.  **Atores e Responsabilidades (Quem solicita, autoriza e executa):**
+    *   **Solicitação:** O `GESTOR_OPERACIONAL` identifica erro em apontamento de horas, quilometragem ou comprovante de despesa de lote homologado e submete um chamado formal à administração com a devida justificativa e anexo comprobatório.
+    *   **Autorização e Reabertura:** O `ADMIN_FINANCEIRO` (papel assumido por Maria Beatryz na DUOC) analisa o pedido. Sendo procedente, executa a reabertura administrativa do lote, que transita do estado `HOMOLOGADO` para `RETIFICADO_EM_ABERTO`.
+    *   **Execução da Retificação:** O ajuste do apontamento em questão é executado via **[RF35 (Retificar apontamento de campo)](index.md#rf35)** pelo Gestor ou Administrador Financeiro, sendo obrigatório o preenchimento da justificativa de retificação (RN24).
+
+2.  **Preservação da Imutabilidade e Trilha de Auditoria (RN17, RNF15 e RNF16):**
+    *   O lote original homologado **não é fisicamente sobrescrito ou deletado** no PostgreSQL (*estratégia append-only*).
+    *   O sistema registra na tabela de logs de auditoria: data/hora UTC, ID do usuário que autorizou a reabertura, justificativa integral e snapshot serializado dos dados do fechamento anterior.
+    *   Garante-se total respaldo probatório perante a fiscalização do trabalho (Art. 11 da CLT) e compliance com a LGPD (RNF15 e RNF16).
+
+3.  **Fluxo de Reprocessamento e Nova Homologação:**
+    *   Com os registros retificados via RF35, o `ADMIN_FINANCEIRO` executa a emissão de nova prévia ([RF05](index.md#rf05)) para validar os novos totais de diárias e reembolsos recalculados.
+    *   Estando conformes, o lote é re-homologado pelo `ADMIN_FINANCEIRO` através do **[RF06](index.md#rf06)**.
+    *   O sistema emite o extrato financeiro definitivo versionado (Extrato v2), bloqueia novamente os registros contra modificações diretas e arquiva o ciclo retificador.
+
+4.  **Verificação e Validação do Procedimento:**
+    *   **Cenário de Teste no Plano de Qualidade (CT-M2-02-B):** A dinâmica é verificada em homologação através do cenário formal:
+        1. Homologação do lote inicial (RF06);
+        2. Bloqueio automático validado (RN02);
+        3. Autorização de reabertura com justificativa;
+        4. Retificação pontual de lançamento via RF35;
+        5. Re-homologação (RF06) gerando extrato v2;
+        6. Inspeção de banco para comprovar a coexistência íntegra do log anterior e do extrato v2 na trilha de auditoria.
 
 <a id="requisitos-de-granularidade-decompostos-rf37-a-rf40"></a>
 <a id="requisitos-decompostos-e-mapeamento-das-historias"></a>
@@ -574,7 +672,7 @@ Navegue pelas abas abaixo para consultar o enquadramento dos RNFs:
 <a id="evidencia-e-registro-da-validacao-do-mvp-com-o-cliente"></a>
 ## Registro da Priorização e Validação com a Cliente
 
-A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra a sessão com a equipe e a cliente realizada em 24/09/2026. A cliente validou a priorização apresentada e aprovou com ressalvas o escopo do MVP. A composição atual da linha de corte, consolidada posteriormente em 27 RFs, também foi aprovada pela cliente, conforme confirmação da equipe;
+A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra a sessão de alinhamento com a equipe e a cliente realizada em 24/09/2026. Na ocasião, a cliente avaliou a metodologia de priorização apresentada e aprovou com ressalvas o escopo preliminar do MVP. A linha de corte oficial foi subsequentemente consolidada em **31 RFs no MVP (77,5%)** e **9 RFs no backlog evolutivo pós-MVP (22,5%)**, totalizando as 40 histórias de usuário (US01 a US40) após a incorporação de RF32 a RF35 e dos requisitos decompostos RF37 a RF40. O status formal de homologação definitiva dessa composição consolidada consta como **Pendente de validação** perante a cliente parceira, conforme discriminado a seguir:
 
 | Tópico Deliberado | Decisão / Escopo Registrado | Status Perante a Cliente | Evidência Rastreável |
 | :--- | :--- | :--- | :--- |
@@ -617,3 +715,4 @@ A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra a sessão com 
 | `3.8` | 03/11/2026 | Unificação de Priorização e Escopo do Produto: formalização explícita das métricas e siglas de cálculo (VB, CX, ES, LC, EC, IP) na linha de corte do MVP; integração das notas individuais e Histórias de Usuário diretamente nos cards interativos do Catálogo de Requisitos; atualização da navegação estrutural. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `3.9` | 10/11/2026 | Consolidação dos requisitos decompostos: inclusão de RF37 a RF40 na linha de corte (31 RFs no MVP / 77,5% e 9 no pós-MVP / 22,5%, 40 histórias US01 a US40); criação das histórias próprias US37 a US40 e restrição de US33 e US34 ao cadastro; ratificação das 8 h de RF33 e RF34 como estimativas restritas ao cadastro, com explicitação do esforço consolidado de contratos (16 h) e centros de custo (20 h); atualização da distribuição por valor, da calibração do esforço, da Matriz 4×4 e da distribuição modular. | Paulo Nery | — |
 | `3.10` | 10/11/2026 | Alinhamento da coluna de RFs vinculados da classificação dos RNFs com os cards do catálogo: inclusão de RF20 e RF36 (RNF02), RF32 e RF35 (RNF04), RF28 e RF35 (RNF07), RF34, RF39 e RF40 (RNF09), RF12, RF30, RF31, RF33, RF34 e RF37 a RF40 (RNF10), RF33 e RF37 (RNF11), RF18 (RNF13) e RF17, RF23 e RF24 (RNF14); inclusão de RF19, RF22 e RF35 (RNF01), RF21 (RNF05), RF07, RF21 e RF28 (RNF06), RF04, RF08 e RF29 (RNF07) e RF10 e RF38 (RNF09), após a reconciliação dos vínculos bidirecionais do catálogo; classificações dos RNFs mantidas; correção do atalho "Backlog & Linha de Corte", que apontava para a página de backlog removida. | Paulo Nery | — |
+| `3.11` | 16/11/2026 | Atendimento às diretrizes docentes de auditoria: inclusão da análise formal de viabilidade do corte (confronto entre 205 h de codificação + 30% de reserva técnica vs. 270 h de capacidade efetiva da equipe nos ciclos RAD); formalização do Procedimento Operacional de Exceção Assistida pós-fechamento (RF06 × RF21 × RF35) com diagrama de sequência e preservação de auditoria (RN17, RNF15, RNF16); e harmonização do status de pendente de validação formal para a linha de corte dos 31 RFs do MVP. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
