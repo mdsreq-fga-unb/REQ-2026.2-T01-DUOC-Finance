@@ -494,12 +494,6 @@ Os decompostos herdam o **valor de negócio 3** dos requisitos de origem e foram
 
 O acréscimo de 20 h decorre do detalhamento de responsabilidades que estavam subdimensionadas na estimativa agregada original (edição, consulta e parametrização orçamentária). As notas individuais permanecem nos cards do [Catálogo Integrado de Requisitos](index.md).
 
----: | :--- | :---: | :---: | :--- | :--- |
-| **[RF37](index.md#rf37)** | Atualizar contrato de obra | Módulo 3 (OE3) | CAR-05 | Atualização de vigência, objeto e valores de contrato | Decomposição atômica de edição do RF33 (RN09, RN11). |
-| **[RF38](index.md#rf38)** | Consultar contratos de obra | Módulo 3 (OE3) | CAR-05 | Consulta operacional e financeira da listagem de contratos | Decomposição atômica de consulta do RF33 (RNF10). |
-| **[RF39](index.md#rf39)** | Atualizar centro de custo de obra | Módulo 3 (OE3) | CAR-06 | Atualização de parâmetros de centro de custo | Decomposição atômica de edição do RF34 (RN09, RN11). |
-| **[RF40](index.md#rf40)** | Definir tetos orçamentários de obra | Módulo 3 (OE3) | CAR-06 | Estipulação de limites monetários orçados por centro de custo | Decomposição de parametrização orçamentária do RF34 (RN13, RN29). |
-
 ---
 
 <a id="8-11-tratamento-dos-requisitos-nao-funcionais-rnfs"></a>
