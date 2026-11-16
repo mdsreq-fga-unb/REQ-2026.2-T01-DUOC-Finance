@@ -7,3 +7,4 @@ coverage
 Dockerfile
 .dockerignore
 src/generated
+uploads

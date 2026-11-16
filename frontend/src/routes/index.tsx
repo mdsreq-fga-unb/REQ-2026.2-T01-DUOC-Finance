@@ -1,9 +1,11 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import AppLayout from "../components/layout/AppLayout";
 import DashboardPage from "../pages/DashboardPage";
 import ColaboradoresPage from "../pages/ColaboradoresPage";
 import ColaboradorFormPage from "../pages/ColaboradorFormPage";
 import LoginPage from "../pages/LoginPage";
+import RvtFormPage from "../pages/RvtFormPage";
+import RvtHistoricoPage from "../pages/RvtHistoricoPage";
 
 export default function AppRoutes() {
     return (
@@ -21,6 +23,11 @@ export default function AppRoutes() {
                 <Route path="colaboradores" element={<ColaboradoresPage />} />
                 <Route path="colaboradores/novo" element={<ColaboradorFormPage />} />
                 <Route path="colaboradores/:id" element={<ColaboradorFormPage />} />
+
+                {/* ROTAS do apontamento de campo / RVT (RF04 · CAR-02) */}
+                <Route path="rvt" element={<Navigate to="/rvt/historico" replace />} />
+                <Route path="rvt/novo" element={<RvtFormPage />} />
+                <Route path="rvt/historico" element={<RvtHistoricoPage />} />
                 
                 {/* ROTA de fechamento com outras opções para sidebar */}
                 <Route

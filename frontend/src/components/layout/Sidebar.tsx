@@ -7,6 +7,9 @@ import {
   Users,
   CircleDollarSign,
   LogOut,
+  ClipboardPlus,
+  History,
+  X,
 } from "lucide-react";
 
 const menuItems: NavItem[] = [
@@ -22,21 +25,53 @@ const menuItems: NavItem[] = [
     badge: "RF01",
   },
   {
+    iconName: ClipboardPlus,
+    title: "Novo Apontamento",
+    path: "/rvt/novo",
+    badge: "RF04",
+  },
+  {
+    iconName: History,
+    title: "Meus Apontamentos",
+    path: "/rvt/historico",
+  },
+  {
     iconName: CircleDollarSign,
     title: "Fechamento",
     path: "/fechamento",
   },
 ];
 
-export default function Sidebar() {
+interface SidebarProps {
+  /** Estado da gaveta em telas menores que md */
+  aberta: boolean;
+  onFechar: () => void;
+}
+
+export default function Sidebar({ aberta, onFechar }: SidebarProps) {
   const navigate = useNavigate();
 
   const handleLogout = () => {
+    onFechar();
     navigate("/login");
   }
 
   return (
-    <aside className="w-64 h-screen bg-surface border-r border-border flex flex-col shrink-0 shadow-2xs">
+    <>
+    {/* Fundo escurecido da gaveta (somente mobile) */}
+    <div
+      className={`fixed inset-0 z-30 bg-dark/40 md:hidden transition-opacity ${
+        aberta ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+      onClick={onFechar}
+      aria-hidden="true"
+    />
+
+    <aside
+      className={`fixed inset-y-0 left-0 z-40 w-64 h-dvh bg-surface border-r border-border flex flex-col shrink-0 shadow-2xs transition-transform duration-200 md:static md:translate-x-0 ${
+        aberta ? "translate-x-0 shadow-lg" : "-translate-x-full"
+      }`}
+    >
       {/* 1. Cabeçalho / Logotipo */}
       <div className="h-16 flex items-center px-6 border-b border-border gap-3">
         <div
@@ -51,6 +86,14 @@ export default function Sidebar() {
           </h1>
           <p className="text-xs text-muted">Engenharia e Gestão</p>
         </div>
+        <button
+          type="button"
+          onClick={onFechar}
+          className="md:hidden ml-auto w-9 h-9 rounded-lg flex items-center justify-center text-muted hover:text-primary hover:bg-surface-subtle cursor-pointer"
+          aria-label="Fechar menu"
+        >
+          <X className="w-4 h-4" />
+        </button>
       </div>
 
       {/* 2. Menu de Navegação */}
@@ -63,6 +106,7 @@ export default function Sidebar() {
           <NavLink
             key={path}
             to={path}
+            onClick={onFechar}
             className={({ isActive }) =>
               `flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${
                 isActive
@@ -109,5 +153,6 @@ export default function Sidebar() {
         </Button>
       </div>
     </aside>
+    </>
   );
 }
