@@ -77,8 +77,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       </div>
       <div class="req-filter-tab-pane" data-filter-pane="mvp">
         <button class="req-filter-pill active" data-filter-type="mvp" data-filter="all">Todo o Escopo (91)</button>
-        <button class="req-filter-pill" data-filter-type="mvp" data-filter="mvp">Escopo MVP (88)</button>
-        <button class="req-filter-pill" data-filter-type="mvp" data-filter="pos-mvp">Evolutivo Pós-MVP (3)</button>
+        <button class="req-filter-pill" data-filter-type="mvp" data-filter="mvp">Escopo MVP (80)</button>
+        <button class="req-filter-pill" data-filter-type="mvp" data-filter="pos-mvp">Evolutivo Pós-MVP (11)</button>
       </div>
       <div class="req-filter-tab-pane" data-filter-pane="prioridade">
         <button class="req-filter-pill active" data-filter-type="quad" data-filter="all">Todas as Prioridades (91)</button>
@@ -107,7 +107,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 </div>
 
 
-<details class="req-card req-card-rf req-card-oe1" id="rf01" data-type="rf" data-rf="RF01" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf01 cadastrar colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-01 us01 como **administrador financeiro**, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por cpf que sustente os apontamentos e os pagamentos de diárias. rn01 rn03 rn22 rn23 rnf02 rnf03 rnf19" data-search-text="rf01 cadastrar colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-01 us01 como **administrador financeiro**, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por cpf que sustente os apontamentos e os pagamentos de diárias. rn01 rn03 rn22 rn23 rnf02 rnf03 rnf19">
+<details class="req-card req-card-rf req-card-oe1" id="rf01" data-type="rf" data-rf="RF01" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf01 cadastrar colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-01 us01 como **administrador financeiro**, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por cpf que sustente os apontamentos e os pagamentos de diárias. rn01 rn03 rn22 rn23 rnf02 rnf03 rnf18 rnf19 rnf20" data-search-text="rf01 cadastrar colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-01 us01 como **administrador financeiro**, quero cadastrar um novo colaborador com seus dados pessoais, bancários e trabalhistas, para que exista uma base única e validada por cpf que sustente os apontamentos e os pagamentos de diárias. rn01 rn03 rn22 rn23 rnf02 rnf03 rnf18 rnf19 rnf20">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -208,7 +208,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -235,7 +235,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -281,7 +281,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf02" data-type="rf" data-rf="RF02" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf02 atualizar cadastro de colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-02 us02 como **administrador financeiro**, quero atualizar os dados cadastrais e bancários de um colaborador ativo, para que todos os módulos passem a usar imediatamente as informações corretas, sem perder a versão anterior da ficha. rn23 rnf02 rnf03 rnf19" data-search-text="rf02 atualizar cadastro de colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-02 us02 como **administrador financeiro**, quero atualizar os dados cadastrais e bancários de um colaborador ativo, para que todos os módulos passem a usar imediatamente as informações corretas, sem perder a versão anterior da ficha. rn23 rnf02 rnf03 rnf19">
+<details class="req-card req-card-rf req-card-oe1" id="rf02" data-type="rf" data-rf="RF02" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf02 atualizar cadastro de colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-02 us02 como **administrador financeiro**, quero atualizar os dados cadastrais e bancários de um colaborador ativo, para que todos os módulos passem a usar imediatamente as informações corretas, sem perder a versão anterior da ficha. rn01 rn23 rnf02 rnf03 rnf19" data-search-text="rf02 atualizar cadastro de colaborador oe1 car-01 admin_financeiro mvp q1 ct-m1-02 us02 como **administrador financeiro**, quero atualizar os dados cadastrais e bancários de um colaborador ativo, para que todos os módulos passem a usar imediatamente as informações corretas, sem perder a versão anterior da ficha. rn01 rn23 rnf02 rnf03 rnf19">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -373,7 +373,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn01" class="req-tag req-tag-rn"># RN01 · Unicidade e Validação Cadastral por CPF ↗</a> <a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -405,7 +405,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rn01" class="req-tag req-tag-rn"># RN01 · Unicidade e Validação Cadastral por CPF ↗</a> <a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
@@ -629,7 +629,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf04" data-type="rf" data-rf="RF04" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q2" data-role="TECNICO_CAMPO" data-text="rf04 submeter apontamento de campo oe1 car-02 tecnico_campo mvp q2 ct-m1-04 us04 como **técnico de campo**, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de whatsapp. rn02 rnf01 rnf04" data-search-text="rf04 submeter apontamento de campo oe1 car-02 tecnico_campo mvp q2 ct-m1-04 us04 como **técnico de campo**, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de whatsapp. rn02 rnf01 rnf04">
+<details class="req-card req-card-rf req-card-oe1" id="rf04" data-type="rf" data-rf="RF04" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q2" data-role="TECNICO_CAMPO" data-text="rf04 submeter apontamento de campo oe1 car-02 tecnico_campo mvp q2 ct-m1-04 us04 como **técnico de campo**, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de whatsapp. rn02 rnf01 rnf04 rnf07 rnf18 rnf19 rnf20" data-search-text="rf04 submeter apontamento de campo oe1 car-02 tecnico_campo mvp q2 ct-m1-04 us04 como **técnico de campo**, quero enviar pelo dispositivo móvel as horas trabalhadas e o escopo executado ao final da jornada, para que meu apontamento chegue à supervisão sem depender de planilhas ou mensagens de whatsapp. rn02 rnf01 rnf04 rnf07 rnf18 rnf19 rnf20">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q2"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Planejado</span></span>
@@ -730,7 +730,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -757,7 +757,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -803,7 +803,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf05" data-type="rf" data-rf="RF05" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q2" data-role="ADMIN_FINANCEIRO" data-text="rf05 solicitar prévia de fechamento oe2 car-03 admin_financeiro mvp q2 ct-m2-01 us05 como **administrador financeiro**, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente. rn25 rn31 rnf05 rnf06 rnf10" data-search-text="rf05 solicitar prévia de fechamento oe2 car-03 admin_financeiro mvp q2 ct-m2-01 us05 como **administrador financeiro**, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente. rn25 rn31 rnf05 rnf06 rnf10">
+<details class="req-card req-card-rf req-card-oe2" id="rf05" data-type="rf" data-rf="RF05" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q2" data-role="ADMIN_FINANCEIRO" data-text="rf05 solicitar prévia de fechamento oe2 car-03 admin_financeiro mvp q2 ct-m2-01 us05 como **administrador financeiro**, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente. rn05 rn25 rn31 rnf05 rnf06 rnf10 rnf18" data-search-text="rf05 solicitar prévia de fechamento oe2 car-03 admin_financeiro mvp q2 ct-m2-01 us05 como **administrador financeiro**, quero gerar a prévia de fechamento da competência com diárias e comissões já calculadas, para que eu confira os valores sem consolidar planilhas manualmente. rn05 rn25 rn31 rnf05 rnf06 rnf10 rnf18">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q2"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Planejado</span></span>
@@ -895,7 +895,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -904,7 +904,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -927,11 +927,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -977,7 +977,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf06" data-type="rf" data-rf="RF06" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf06 homologar fechamento financeiro oe2 car-03 admin_financeiro mvp q1 ct-m2-02 us06 como **administrador financeiro**, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança. rn08 rn17 rnf05 rnf06 rnf10" data-search-text="rf06 homologar fechamento financeiro oe2 car-03 admin_financeiro mvp q1 ct-m2-02 us06 como **administrador financeiro**, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança. rn08 rn17 rnf05 rnf06 rnf10">
+<details class="req-card req-card-rf req-card-oe2" id="rf06" data-type="rf" data-rf="RF06" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf06 homologar fechamento financeiro oe2 car-03 admin_financeiro mvp q1 ct-m2-02 us06 como **administrador financeiro**, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança. rn05 rn08 rn17 rnf05 rnf06 rnf10" data-search-text="rf06 homologar fechamento financeiro oe2 car-03 admin_financeiro mvp q1 ct-m2-02 us06 como **administrador financeiro**, quero homologar o lote de fechamento após a conferência, para que os lançamentos fiquem bloqueados contra alterações diretas e o extrato final seja emitido com segurança. rn05 rn08 rn17 rnf05 rnf06 rnf10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -1060,7 +1060,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
-            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`), após conferir o extrato preliminar consolidado (RF05), confirma formalmente a homologação do lote da competência mensal dos contratos selecionados. A confirmação encerra a competência, bloqueia compulsoriamente os apontamentos e despesas contra qualquer modificação direta (RN08), grava o carimbo de homologação com UTC e autor na trilha de auditoria (RN17) e emite o extrato financeiro definitivo para conciliação contábil; eventuais retificações posteriores exigem compulsoriamente o procedimento de estorno formal (RF21).</p>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`), após conferir o extrato preliminar consolidado (RF05), confirma formalmente a homologação do lote da competência mensal dos contratos selecionados. A confirmação encerra a competência, processando exclusivamente apontamentos homologados e despesas com comprovante fiscal validado (RN05, RN08), bloqueia compulsoriamente os apontamentos e despesas contra qualquer modificação direta, grava o carimbo de homologação com UTC e autor na trilha de auditoria (RN17) e emite o extrato financeiro definitivo para conciliação contábil; eventuais retificações posteriores exigem compulsoriamente o procedimento de estorno formal (RF21).</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -1069,7 +1069,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -1101,7 +1101,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
@@ -1151,7 +1151,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf07" data-type="rf" data-rf="RF07" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO / GESTOR_OBRAS" data-text="rf07 submeter solicitação de reembolso oe2 car-04 tecnico_campo / gestor_obras mvp q1 ct-m2-03 us07 como **técnico de campo ou gestor operacional de obras**, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas. rn06 rn09 rnf07" data-search-text="rf07 submeter solicitação de reembolso oe2 car-04 tecnico_campo / gestor_obras mvp q1 ct-m2-03 us07 como **técnico de campo ou gestor operacional de obras**, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas. rn06 rn09 rnf07">
+<details class="req-card req-card-rf req-card-oe2" id="rf07" data-type="rf" data-rf="RF07" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO / GESTOR_OBRAS" data-text="rf07 submeter solicitação de reembolso oe2 car-04 tecnico_campo / gestor_obras mvp q1 ct-m2-03 us07 como **técnico de campo ou gestor operacional de obras**, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas. rn06 rn08 rn09 rnf06 rnf07 rnf20" data-search-text="rf07 submeter solicitação de reembolso oe2 car-04 tecnico_campo / gestor_obras mvp q1 ct-m2-03 us07 como **técnico de campo ou gestor operacional de obras**, quero solicitar o reembolso de uma despesa operacional anexando o comprovante fiscal, para que eu seja ressarcido sem entregar recibos físicos ou enviar fotos avulsas. rn06 rn08 rn09 rnf06 rnf07 rnf20">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -1243,7 +1243,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn06" class="req-tag req-tag-rn"># RN06 · Janela Temporal para Prestação de Contas de Reembolso ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO / GESTOR_OBRAS</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn06" class="req-tag req-tag-rn"># RN06 · Janela Temporal para Prestação de Contas de Reembolso ↗</a> <a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO / GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -1252,7 +1252,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -1275,11 +1275,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn06" class="req-tag req-tag-rn"># RN06 · Janela Temporal para Prestação de Contas de Reembolso ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rn06" class="req-tag req-tag-rn"># RN06 · Janela Temporal para Prestação de Contas de Reembolso ↗</a> <a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -1325,7 +1325,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf08" data-type="rf" data-rf="RF08" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf08 deliberar solicitação de reembolso oe2 car-04 admin_financeiro mvp q1 ct-m2-04 us08 como **administrador financeiro**, quero aprovar ou reprovar as solicitações de reembolso com parecer obrigatório na reprovação, para que apenas despesas comprovadas sejam repassadas e o solicitante seja informado da decisão. rn07 rn27 rnf06" data-search-text="rf08 deliberar solicitação de reembolso oe2 car-04 admin_financeiro mvp q1 ct-m2-04 us08 como **administrador financeiro**, quero aprovar ou reprovar as solicitações de reembolso com parecer obrigatório na reprovação, para que apenas despesas comprovadas sejam repassadas e o solicitante seja informado da decisão. rn07 rn27 rnf06">
+<details class="req-card req-card-rf req-card-oe2" id="rf08" data-type="rf" data-rf="RF08" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf08 deliberar solicitação de reembolso oe2 car-04 admin_financeiro mvp q1 ct-m2-04 us08 como **administrador financeiro**, quero aprovar ou reprovar as solicitações de reembolso com parecer obrigatório na reprovação, para que apenas despesas comprovadas sejam repassadas e o solicitante seja informado da decisão. rn07 rn08 rn27 rnf06 rnf07" data-search-text="rf08 deliberar solicitação de reembolso oe2 car-04 admin_financeiro mvp q1 ct-m2-04 us08 como **administrador financeiro**, quero aprovar ou reprovar as solicitações de reembolso com parecer obrigatório na reprovação, para que apenas despesas comprovadas sejam repassadas e o solicitante seja informado da decisão. rn07 rn08 rn27 rnf06 rnf07">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -1417,7 +1417,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn07" class="req-tag req-tag-rn"># RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa ↗</a> <a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn07" class="req-tag req-tag-rn"># RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa ↗</a> <a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -1426,7 +1426,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -1449,11 +1449,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn07" class="req-tag req-tag-rn"># RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa ↗</a> <a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rn07" class="req-tag req-tag-rn"># RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa ↗</a> <a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -1499,7 +1499,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf09" data-type="rf" data-rf="RF09" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q2" data-role="ADMIN_FINANCEIRO" data-text="rf09 apropriar custos operacionais oe3 car-05 admin_financeiro mvp q2 ct-m3-01 us09 como **administrador financeiro**, quero disparar a apropriação dos custos homologados da competência aos respectivos contratos, para que eu conheça o custo real de cada obra sem duplicidade com a folha clt. rn05 rn09 rn10 rn11 rnf10 rnf11" data-search-text="rf09 apropriar custos operacionais oe3 car-05 admin_financeiro mvp q2 ct-m3-01 us09 como **administrador financeiro**, quero disparar a apropriação dos custos homologados da competência aos respectivos contratos, para que eu conheça o custo real de cada obra sem duplicidade com a folha clt. rn05 rn09 rn10 rn11 rnf10 rnf11">
+<details class="req-card req-card-rf req-card-oe3" id="rf09" data-type="rf" data-rf="RF09" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q2" data-role="ADMIN_FINANCEIRO" data-text="rf09 apropriar custos operacionais oe3 car-05 admin_financeiro mvp q2 ct-m3-01 us09 como **administrador financeiro**, quero disparar a apropriação dos custos homologados da competência aos respectivos contratos, para que eu conheça o custo real de cada obra sem duplicidade com a folha clt. rn05 rn09 rn10 rn11 rn12 rnf10 rnf11 rnf18 rnf20" data-search-text="rf09 apropriar custos operacionais oe3 car-05 admin_financeiro mvp q2 ct-m3-01 us09 como **administrador financeiro**, quero disparar a apropriação dos custos homologados da competência aos respectivos contratos, para que eu conheça o custo real de cada obra sem duplicidade com a folha clt. rn05 rn09 rn10 rn11 rn12 rnf10 rnf11 rnf18 rnf20">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q2"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Planejado</span></span>
@@ -1591,7 +1591,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a> <a href="#rn12" class="req-tag req-tag-rn"># RN12 · Segregação de Despesas Administrativas e Operacionais ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -1600,7 +1600,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -1623,11 +1623,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a> <a href="#rn12" class="req-tag req-tag-rn"># RN12 · Segregação de Despesas Administrativas e Operacionais ↗</a></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -1673,7 +1673,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf10" data-type="rf" data-rf="RF10" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf10 consultar rastreabilidade de custos oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-02 us10 como **gestor operacional de obras ou administrador financeiro**, quero visualizar a origem completa de cada custo apropriado, para que eu possa justificar e auditar qualquer linha de despesa do contrato. rn12 rnf10" data-search-text="rf10 consultar rastreabilidade de custos oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-02 us10 como **gestor operacional de obras ou administrador financeiro**, quero visualizar a origem completa de cada custo apropriado, para que eu possa justificar e auditar qualquer linha de despesa do contrato. rn12 rnf10">
+<details class="req-card req-card-rf req-card-oe3" id="rf10" data-type="rf" data-rf="RF10" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf10 consultar rastreabilidade de custos oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-02 us10 como **gestor operacional de obras ou administrador financeiro**, quero visualizar a origem completa de cada custo apropriado, para que eu possa justificar e auditar qualquer linha de despesa do contrato. rn12 rnf09 rnf10" data-search-text="rf10 consultar rastreabilidade de custos oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-02 us10 como **gestor operacional de obras ou administrador financeiro**, quero visualizar a origem completa de cada custo apropriado, para que eu possa justificar e auditar qualquer linha de despesa do contrato. rn12 rnf09 rnf10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -1774,7 +1774,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -1801,7 +1801,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -1847,7 +1847,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf11" data-type="rf" data-rf="RF11" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA" data-text="rf11 filtrar indicadores de custos oe3 car-06 gestor_obras / admin_financeiro / admin_sistema mvp q1 ct-m3-03 us11 como **gestor operacional de obras, administrador financeiro ou administrador do sistema**, quero combinar filtros de período, contrato, colaborador e centro de custo no painel de custos, para que eu analise os custos diretos de cada obra no fechamento. rn14 rnf09 rnf10 rnf12" data-search-text="rf11 filtrar indicadores de custos oe3 car-06 gestor_obras / admin_financeiro / admin_sistema mvp q1 ct-m3-03 us11 como **gestor operacional de obras, administrador financeiro ou administrador do sistema**, quero combinar filtros de período, contrato, colaborador e centro de custo no painel de custos, para que eu analise os custos diretos de cada obra no fechamento. rn14 rnf09 rnf10 rnf12">
+<details class="req-card req-card-rf req-card-oe3" id="rf11" data-type="rf" data-rf="RF11" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA" data-text="rf11 filtrar indicadores de custos oe3 car-06 gestor_obras / admin_financeiro / admin_sistema mvp q1 ct-m3-03 us11 como **gestor operacional de obras, administrador financeiro ou administrador do sistema**, quero combinar filtros de período, contrato, colaborador e centro de custo no painel de custos, para que eu analise os custos diretos de cada obra no fechamento. rn14 rnf09 rnf10 rnf12 rnf19" data-search-text="rf11 filtrar indicadores de custos oe3 car-06 gestor_obras / admin_financeiro / admin_sistema mvp q1 ct-m3-03 us11 como **gestor operacional de obras, administrador financeiro ou administrador do sistema**, quero combinar filtros de período, contrato, colaborador e centro de custo no painel de custos, para que eu analise os custos diretos de cada obra no fechamento. rn14 rnf09 rnf10 rnf12 rnf19">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -1948,7 +1948,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -1975,7 +1975,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -2021,7 +2021,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf12" data-type="rf" data-rf="RF12" data-oe="oe3" data-car="car-06" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 us12 como **gestor operacional de obras ou administrador financeiro**, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir. rn13 rnf09 rnf10 rnf12" data-search-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 us12 como **gestor operacional de obras ou administrador financeiro**, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir. rn13 rnf09 rnf10 rnf12">
+<details class="req-card req-card-rf req-card-oe3" id="rf12" data-type="rf" data-rf="RF12" data-oe="oe3" data-car="car-06" data-mvp="pos-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 us12 como **gestor operacional de obras ou administrador financeiro**, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir. rn13 rn14 rnf09 rnf10 rnf12 rnf19" data-search-text="rf12 monitorar execução orçamentária oe3 car-06 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-04 us12 como **gestor operacional de obras ou administrador financeiro**, quero acompanhar o previsto, o realizado, o desvio e o percentual de execução orçamentária, para que eu identifique extrapolações do orçamento a tempo de agir. rn13 rn14 rnf09 rnf10 rnf12 rnf19">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -2113,7 +2113,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a> <a href="#rn14" class="req-tag req-tag-rn"># RN14 · Sigilo e Não-Exposição de Remunerações Individuais em Painéis ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -2122,7 +2122,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -2145,11 +2145,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a> <a href="#rn14" class="req-tag req-tag-rn"># RN14 · Sigilo e Não-Exposição de Remunerações Individuais em Painéis ↗</a></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -2195,7 +2195,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf13" data-type="rf" data-rf="RF13" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="TODOS OS USUÁRIOS" data-text="rf13 efetuar login no sistema oe4 car-07 todos os usuários mvp q1 ct-m4-01 us13 como **usuário da plataforma**, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil. rn15 rnf13 rnf14" data-search-text="rf13 efetuar login no sistema oe4 car-07 todos os usuários mvp q1 ct-m4-01 us13 como **usuário da plataforma**, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil. rn15 rnf13 rnf14">
+<details class="req-card req-card-rf req-card-oe4" id="rf13" data-type="rf" data-rf="RF13" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="TODOS OS USUÁRIOS" data-text="rf13 efetuar login no sistema oe4 car-07 todos os usuários mvp q1 ct-m4-01 us13 como **usuário da plataforma**, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil. rn15 rnf03 rnf13 rnf14 rnf18 rnf20" data-search-text="rf13 efetuar login no sistema oe4 car-07 todos os usuários mvp q1 ct-m4-01 us13 como **usuário da plataforma**, quero entrar na plataforma com e-mail e senha corporativos, para que eu acesse somente as funcionalidades e os dados permitidos ao meu perfil. rn15 rnf03 rnf13 rnf14 rnf18 rnf20">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -2296,7 +2296,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -2323,7 +2323,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -2369,7 +2369,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf14" data-type="rf" data-rf="RF14" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="ADMIN_SISTEMA" data-text="rf14 gerenciar perfis de acesso oe4 car-07 admin_sistema mvp q1 ct-m4-02 us14 como **administrador do sistema**, quero atribuir a cada usuário um papel de acesso, para que campo, gestão e financeiro visualizem apenas os dados da sua alçada (princípio do menor privilégio). rn16 rnf14" data-search-text="rf14 gerenciar perfis de acesso oe4 car-07 admin_sistema mvp q1 ct-m4-02 us14 como **administrador do sistema**, quero atribuir a cada usuário um papel de acesso, para que campo, gestão e financeiro visualizem apenas os dados da sua alçada (princípio do menor privilégio). rn16 rnf14">
+<details class="req-card req-card-rf req-card-oe4" id="rf14" data-type="rf" data-rf="RF14" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="ADMIN_SISTEMA" data-text="rf14 gerenciar perfis de acesso oe4 car-07 admin_sistema mvp q1 ct-m4-02 us14 como **administrador do sistema**, quero atribuir a cada usuário um papel de acesso, para que campo, gestão e financeiro visualizem apenas os dados da sua alçada (princípio do menor privilégio). rn16 rnf14 rnf20" data-search-text="rf14 gerenciar perfis de acesso oe4 car-07 admin_sistema mvp q1 ct-m4-02 us14 como **administrador do sistema**, quero atribuir a cada usuário um papel de acesso, para que campo, gestão e financeiro visualizem apenas os dados da sua alçada (princípio do menor privilégio). rn16 rnf14 rnf20">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -2470,7 +2470,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -2497,7 +2497,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -2543,7 +2543,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf15" data-type="rf" data-rf="RF15" data-oe="oe4" data-car="car-08" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_SISTEMA / ADMIN_FINANCEIRO" data-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 us15 como **administrador do sistema ou administrador financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. rn17 rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 us15 como **administrador do sistema ou administrador financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. rn17 rn18 rn19 rnf15 rnf16 rnf17">
+<details class="req-card req-card-rf req-card-oe4" id="rf15" data-type="rf" data-rf="RF15" data-oe="oe4" data-car="car-08" data-mvp="pos-mvp" data-quad="q4" data-role="ADMIN_SISTEMA / ADMIN_FINANCEIRO" data-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 us15 como **administrador do sistema ou administrador financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. rn17 rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf15 consultar trilha de auditoria oe4 car-08 admin_sistema / admin_financeiro pós-mvp q4 ct-m4-03 us15 como **administrador do sistema ou administrador financeiro**, quero pesquisar a trilha de auditoria por período, usuário, operação e módulo, para que eu identifique quem executou cada operação sensível e quando. rn17 rn18 rn19 rnf15 rnf16 rnf17">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -2717,7 +2717,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf16" data-type="rf" data-rf="RF16" data-oe="oe4" data-car="car-08" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_SISTEMA" data-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 us16 como **administrador do sistema**, quero exportar um dossiê em pdf/csv com o histórico imutável das operações auditadas, para que a duoc comprove conformidade legal e trabalhista (clt art. 11). rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 us16 como **administrador do sistema**, quero exportar um dossiê em pdf/csv com o histórico imutável das operações auditadas, para que a duoc comprove conformidade legal e trabalhista (clt art. 11). rn18 rn19 rnf15 rnf16 rnf17">
+<details class="req-card req-card-rf req-card-oe4" id="rf16" data-type="rf" data-rf="RF16" data-oe="oe4" data-car="car-08" data-mvp="pos-mvp" data-quad="q4" data-role="ADMIN_SISTEMA" data-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 us16 como **administrador do sistema**, quero exportar um dossiê em pdf/csv com o histórico imutável das operações auditadas, para que a duoc comprove conformidade legal e trabalhista (clt art. 11). rn17 rn18 rn19 rnf15 rnf16 rnf17" data-search-text="rf16 exportar relatório de auditoria oe4 car-08 admin_sistema pós-mvp q4 ct-m4-04 us16 como **administrador do sistema**, quero exportar um dossiê em pdf/csv com o histórico imutável das operações auditadas, para que a duoc comprove conformidade legal e trabalhista (clt art. 11). rn17 rn18 rn19 rnf15 rnf16 rnf17">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -2809,7 +2809,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a> <a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -2841,7 +2841,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a> <a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
@@ -3065,7 +3065,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf18" data-type="rf" data-rf="RF18" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="TODOS OS USUÁRIOS" data-text="rf18 encerrar sessão manualmente oe4 car-07 todos os usuários mvp q1 ct-m4-10 us18 como **usuário autenticado**, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado. rn15 rnf13" data-search-text="rf18 encerrar sessão manualmente oe4 car-07 todos os usuários mvp q1 ct-m4-10 us18 como **usuário autenticado**, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado. rn15 rnf13">
+<details class="req-card req-card-rf req-card-oe4" id="rf18" data-type="rf" data-rf="RF18" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="TODOS OS USUÁRIOS" data-text="rf18 encerrar sessão manualmente oe4 car-07 todos os usuários mvp q1 ct-m4-10 us18 como **usuário autenticado**, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado. rn15 rnf13 rnf14" data-search-text="rf18 encerrar sessão manualmente oe4 car-07 todos os usuários mvp q1 ct-m4-10 us18 como **usuário autenticado**, quero encerrar minha sessão manualmente, para que ninguém utilize meu acesso em um dispositivo compartilhado. rn15 rnf13 rnf14">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -3166,7 +3166,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -3193,7 +3193,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -3239,7 +3239,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf19" data-type="rf" data-rf="RF19" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf19 consultar apontamentos registrados oe1 car-02 tecnico_campo mvp q1 ct-m1-09 us19 como **técnico de campo**, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e identifique quais registros ainda posso retificar antes do fechamento. rn16 rn30 rnf04" data-search-text="rf19 consultar apontamentos registrados oe1 car-02 tecnico_campo mvp q1 ct-m1-09 us19 como **técnico de campo**, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e identifique quais registros ainda posso retificar antes do fechamento. rn16 rn30 rnf04">
+<details class="req-card req-card-rf req-card-oe1" id="rf19" data-type="rf" data-rf="RF19" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf19 consultar apontamentos registrados oe1 car-02 tecnico_campo mvp q1 ct-m1-09 us19 como **técnico de campo**, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e identifique quais registros ainda posso retificar antes do fechamento. rn16 rn30 rnf01 rnf04" data-search-text="rf19 consultar apontamentos registrados oe1 car-02 tecnico_campo mvp q1 ct-m1-09 us19 como **técnico de campo**, quero consultar meus apontamentos e o status de cada um, para que eu acompanhe homologações e rejeições e identifique quais registros ainda posso retificar antes do fechamento. rn16 rn30 rnf01 rnf04">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -3340,7 +3340,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -3367,7 +3367,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -3413,7 +3413,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf20" data-type="rf" data-rf="RF20" data-oe="oe1" data-car="car-09" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 us20 como **administrador financeiro**, quero importar as presenças homologadas do *flit* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação. rn10 rnf02" data-search-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 us20 como **administrador financeiro**, quero importar as presenças homologadas do *flit* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação. rn10 rnf02">
+<details class="req-card req-card-rf req-card-oe1" id="rf20" data-type="rf" data-rf="RF20" data-oe="oe1" data-car="car-09" data-mvp="pos-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 us20 como **administrador financeiro**, quero importar as presenças homologadas do *flit* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação.  rnf02" data-search-text="rf20 importar presenças homologadas oe1 car-09 admin_financeiro pós-mvp q4 ct-m1-10 us20 como **administrador financeiro**, quero importar as presenças homologadas do *flit* por competência e contrato, para que as horas registradas no ponto biométrico sejam aproveitadas sem redigitação.  rnf02">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -3496,7 +3496,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
-            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) seleciona a competência mensal e os contratos de obras e importa as presenças homologadas disponibilizadas pelo painel (*dashboard*) do sistema externo *FLIT*. Os registros importados são vinculados a cada colaborador e contrato na competência selecionada, viabilizando a apuração financeira de horas sem modificar os dados de origem no *FLIT* (RN10).</p>
+            <p class="req-check-text">O Administrador Financeiro (`ADMIN_FINANCEIRO`) seleciona a competência mensal e os contratos de obras e importa as presenças homologadas disponibilizadas pelo painel (*dashboard*) do sistema externo *FLIT*. Os registros importados são vinculados a cada colaborador e contrato na competência selecionada, viabilizando a apuração financeira de horas sem modificar os dados de origem no *FLIT*.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -3505,7 +3505,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<span class="req-tag-none">—</span>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -3537,7 +3537,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a></div>
+          <div class="req-tags-wrap"><span class="req-tag-none">—</span></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
@@ -3587,7 +3587,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf21" data-type="rf" data-rf="RF21" data-oe="oe2" data-car="car-03" data-mvp="pós-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 us21 como **administrador financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original. rn08 rn17 rnf08" data-search-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 us21 como **administrador financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original. rn08 rn17 rnf08">
+<details class="req-card req-card-rf req-card-oe2" id="rf21" data-type="rf" data-rf="RF21" data-oe="oe2" data-car="car-03" data-mvp="pos-mvp" data-quad="q4" data-role="ADMIN_FINANCEIRO" data-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 us21 como **administrador financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original. rn17 rnf05 rnf06 rnf08" data-search-text="rf21 estornar fechamento financeiro oe2 car-03 admin_financeiro pós-mvp q4 ct-m2-09 us21 como **administrador financeiro**, quero estornar um fechamento já homologado mediante justificativa formal, para que inconsistências sejam corrigidas sem apagar o histórico do fechamento original. rn17 rnf05 rnf06 rnf08">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -3670,7 +3670,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
-            <p class="req-check-text">Diante de divergência material em lote de competência já homologado, o Administrador Financeiro (`ADMIN_FINANCEIRO`) estorna o fechamento financeiro informando compulsoriamente justificativa formal com no mínimo 15 caracteres (RN08, RNF08). A competência é reaberta para retificação, o fechamento original permanece preservado no histórico imutável e o evento de estorno é gravado na trilha de auditoria com autor, justificativa e carimbo UTC (RN17). Após as correções, o Administrador Financeiro deve solicitar uma nova prévia de fechamento (RF05) e realizar uma nova homologação (RF06), sendo vedado considerar a competência novamente encerrada antes da conclusão desse processo.</p>
+            <p class="req-check-text">Diante de divergência material em lote de competência já homologado, o Administrador Financeiro (`ADMIN_FINANCEIRO`) estorna o fechamento financeiro informando compulsoriamente justificativa formal com no mínimo 20 caracteres (RNF08). A competência é reaberta para retificação, o fechamento original permanece preservado no histórico imutável e o evento de estorno é gravado na trilha de auditoria com autor, justificativa e carimbo UTC (RN17). Após as correções, o Administrador Financeiro deve solicitar uma nova prévia de fechamento (RF05) e realizar uma nova homologação (RF06), sendo vedado considerar a competência novamente encerrada antes da conclusão desse processo.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -3679,7 +3679,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -3688,7 +3688,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf08" class="req-tag req-tag-rnf"># RNF08 · Garantir rastreabilidade probatória e não-repúdio em operações de estorno ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf08" class="req-tag req-tag-rnf"># RNF08 · Garantir rastreabilidade probatória e não-repúdio em operações de estorno ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -3711,11 +3711,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf08" class="req-tag req-tag-rnf"># RNF08 · Garantir rastreabilidade probatória e não-repúdio em operações de estorno ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf08" class="req-tag req-tag-rnf"># RNF08 · Garantir rastreabilidade probatória e não-repúdio em operações de estorno ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -3761,7 +3761,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf22" data-type="rf" data-rf="RF22" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf22 anexar evidências e geolocalização ao apontamento oe1 car-02 tecnico_campo mvp q1 ct-m1-11 us22 como **técnico de campo**, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no rvt. rn24 rnf04 rnf07" data-search-text="rf22 anexar evidências e geolocalização ao apontamento oe1 car-02 tecnico_campo mvp q1 ct-m1-11 us22 como **técnico de campo**, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no rvt. rn24 rnf04 rnf07">
+<details class="req-card req-card-rf req-card-oe1" id="rf22" data-type="rf" data-rf="RF22" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf22 anexar evidências e geolocalização ao apontamento oe1 car-02 tecnico_campo mvp q1 ct-m1-11 us22 como **técnico de campo**, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no rvt. rn24 rnf01 rnf04 rnf07" data-search-text="rf22 anexar evidências e geolocalização ao apontamento oe1 car-02 tecnico_campo mvp q1 ct-m1-11 us22 como **técnico de campo**, quero anexar fotos e comprovantes com geolocalização ao meu apontamento, para que a execução da atividade fique comprovada no rvt. rn24 rnf01 rnf04 rnf07">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -3862,7 +3862,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -3889,7 +3889,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -4109,7 +4109,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf24" data-type="rf" data-rf="RF24" data-oe="oe4" data-car="car-07" data-mvp="pós-mvp" data-quad="q3" data-role="ADMIN_SISTEMA" data-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 us24 como **administrador do sistema**, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema. rn21 rnf14" data-search-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 us24 como **administrador do sistema**, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema. rn21 rnf14">
+<details class="req-card req-card-rf req-card-oe4" id="rf24" data-type="rf" data-rf="RF24" data-oe="oe4" data-car="car-07" data-mvp="pos-mvp" data-quad="q3" data-role="ADMIN_SISTEMA" data-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 us24 como **administrador do sistema**, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema. rn21 rnf14" data-search-text="rf24 impor renovação periódica de senhas oe4 car-07 admin_sistema pós-mvp q3 ct-m4-13 us24 como **administrador do sistema**, quero impor a renovação periódica de senhas e impedir a reutilização das últimas credenciais, para que senhas antigas ou vazadas deixem de dar acesso ao sistema. rn21 rnf14">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q3"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Evolutivo</span></span>
@@ -4805,7 +4805,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf28" data-type="rf" data-rf="RF28" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf28 submeter solicitação de adiantamento operacional oe2 car-04 tecnico_campo mvp q1 ct-m2-11 us28 como **técnico de campo**, quero solicitar um adiantamento para uma despesa operacional de um contrato ativo, para que eu disponha dos recursos antes de executar a atividade. rn26 rnf07" data-search-text="rf28 submeter solicitação de adiantamento operacional oe2 car-04 tecnico_campo mvp q1 ct-m2-11 us28 como **técnico de campo**, quero solicitar um adiantamento para uma despesa operacional de um contrato ativo, para que eu disponha dos recursos antes de executar a atividade. rn26 rnf07">
+<details class="req-card req-card-rf req-card-oe2" id="rf28" data-type="rf" data-rf="RF28" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf28 submeter solicitação de adiantamento operacional oe2 car-04 tecnico_campo mvp q1 ct-m2-11 us28 como **técnico de campo**, quero solicitar um adiantamento para uma despesa operacional de um contrato ativo, para que eu disponha dos recursos antes de executar a atividade. rn09 rn26 rnf06 rnf07" data-search-text="rf28 submeter solicitação de adiantamento operacional oe2 car-04 tecnico_campo mvp q1 ct-m2-11 us28 como **técnico de campo**, quero solicitar um adiantamento para uma despesa operacional de um contrato ativo, para que eu disponha dos recursos antes de executar a atividade. rn09 rn26 rnf06 rnf07">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -4888,7 +4888,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
-            <p class="req-check-text">O Técnico de Campo (`TECNICO_CAMPO`) solicita adiantamento de recursos para despesa operacional autorizada de um contrato ativo informando valor, categoria, contrato e justificativa formal de aplicação. O adiantamento é registrado com status "Pendente de Análise" e fica disponível para análise financeira (RN03, RN09, RN26).</p>
+            <p class="req-check-text">O Técnico de Campo (`TECNICO_CAMPO`) solicita adiantamento de recursos para despesa operacional autorizada de um contrato ativo informando valor, categoria, contrato e justificativa formal de aplicação. O adiantamento é registrado com status "Pendente de Análise" e fica disponível para análise financeira (RN09, RN26).</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -4897,7 +4897,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn26" class="req-tag req-tag-rn"># RN26 · Elegibilidade do Adiantamento Operacional ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn26" class="req-tag req-tag-rn"># RN26 · Elegibilidade do Adiantamento Operacional ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -4906,7 +4906,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -4929,11 +4929,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn26" class="req-tag req-tag-rn"># RN26 · Elegibilidade do Adiantamento Operacional ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn26" class="req-tag req-tag-rn"># RN26 · Elegibilidade do Adiantamento Operacional ↗</a></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -4979,7 +4979,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe2" id="rf29" data-type="rf" data-rf="RF29" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf29 deliberar solicitação de adiantamento operacional oe2 car-04 admin_financeiro mvp q1 ct-m2-12 us29 como **administrador financeiro**, quero aprovar ou reprovar os adiantamentos pendentes de análise, para que a liberação de recursos seja formal, rastreável e comunicada ao solicitante. rn27 rnf06" data-search-text="rf29 deliberar solicitação de adiantamento operacional oe2 car-04 admin_financeiro mvp q1 ct-m2-12 us29 como **administrador financeiro**, quero aprovar ou reprovar os adiantamentos pendentes de análise, para que a liberação de recursos seja formal, rastreável e comunicada ao solicitante. rn27 rnf06">
+<details class="req-card req-card-rf req-card-oe2" id="rf29" data-type="rf" data-rf="RF29" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-role="ADMIN_FINANCEIRO" data-text="rf29 deliberar solicitação de adiantamento operacional oe2 car-04 admin_financeiro mvp q1 ct-m2-12 us29 como **administrador financeiro**, quero aprovar ou reprovar os adiantamentos pendentes de análise, para que a liberação de recursos seja formal, rastreável e comunicada ao solicitante. rn07 rn27 rnf06 rnf07" data-search-text="rf29 deliberar solicitação de adiantamento operacional oe2 car-04 admin_financeiro mvp q1 ct-m2-12 us29 como **administrador financeiro**, quero aprovar ou reprovar os adiantamentos pendentes de análise, para que a liberação de recursos seja formal, rastreável e comunicada ao solicitante. rn07 rn27 rnf06 rnf07">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -5071,7 +5071,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn07" class="req-tag req-tag-rn"># RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa ↗</a> <a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -5080,7 +5080,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -5103,11 +5103,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rn07" class="req-tag req-tag-rn"># RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa ↗</a> <a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -5153,7 +5153,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf30" data-type="rf" data-rf="RF30" data-oe="oe3" data-car="car-05" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 us30 como **gestor operacional de obras ou administrador financeiro**, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras. rn28 rnf09 rnf10 rnf12" data-search-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 us30 como **gestor operacional de obras ou administrador financeiro**, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras. rn28 rnf09 rnf10 rnf12">
+<details class="req-card req-card-rf req-card-oe3" id="rf30" data-type="rf" data-rf="RF30" data-oe="oe3" data-car="car-05" data-mvp="pos-mvp" data-quad="q4" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 us30 como **gestor operacional de obras ou administrador financeiro**, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras. rn28 rnf09 rnf10 rnf12" data-search-text="rf30 consultar comparativo histórico de custos entre contratos oe3 car-05 gestor_obras / admin_financeiro pós-mvp q4 ct-m3-09 us30 como **gestor operacional de obras ou administrador financeiro**, quero comparar os custos apropriados de dois ou mais contratos em um período, para que eu utilize o histórico de obras anteriores em orçamentos e decisões futuras. rn28 rnf09 rnf10 rnf12">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -5327,7 +5327,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf31" data-type="rf" data-rf="RF31" data-oe="oe3" data-car="car-06" data-mvp="pós-mvp" data-quad="q4" data-role="GESTOR_OBRAS" data-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 us31 como **gestor operacional de obras**, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado. rn29 rnf09 rnf10 rnf12" data-search-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 us31 como **gestor operacional de obras**, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado. rn29 rnf09 rnf10 rnf12">
+<details class="req-card req-card-rf req-card-oe3" id="rf31" data-type="rf" data-rf="RF31" data-oe="oe3" data-car="car-06" data-mvp="pos-mvp" data-quad="q4" data-role="GESTOR_OBRAS" data-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 us31 como **gestor operacional de obras**, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado. rn29 rnf09 rnf10 rnf12" data-search-text="rf31 configurar alertas de execução orçamentária oe3 car-06 gestor_obras pós-mvp q4 ct-m3-10 us31 como **gestor operacional de obras**, quero configurar o percentual de execução orçamentária que dispara alertas no painel e por e-mail, para que eu seja avisado antes que o orçamento seja ultrapassado. rn29 rnf09 rnf10 rnf12">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q4"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Fora do MVP</span></span>
@@ -5501,7 +5501,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf32" data-type="rf" data-rf="RF32" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf32 deliberar apontamento de campo oe1 car-02 gestor_obras mvp q1 ct-m1-15 us32 como **gestor operacional de obras**, quero homologar ou rejeitar os apontamentos de campo pendentes dos contratos sob minha responsabilidade, com parecer obrigatório na rejeição, para que apenas horas validadas sigam para o fechamento financeiro e o autor seja informado da decisão. rn02 rn05 rn10 rn30 rnf04" data-search-text="rf32 deliberar apontamento de campo oe1 car-02 gestor_obras mvp q1 ct-m1-15 us32 como **gestor operacional de obras**, quero homologar ou rejeitar os apontamentos de campo pendentes dos contratos sob minha responsabilidade, com parecer obrigatório na rejeição, para que apenas horas validadas sigam para o fechamento financeiro e o autor seja informado da decisão. rn02 rn05 rn10 rn30 rnf04">
+<details class="req-card req-card-rf req-card-oe1" id="rf32" data-type="rf" data-rf="RF32" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf32 deliberar apontamento de campo oe1 car-02 gestor_obras mvp q1 ct-m1-15 us32 como **gestor operacional de obras**, quero homologar ou rejeitar os apontamentos de campo pendentes dos contratos sob minha responsabilidade, com parecer obrigatório na rejeição, para que apenas horas validadas sigam para o fechamento financeiro e o autor seja informado da decisão. rn02 rn05 rn30 rnf04" data-search-text="rf32 deliberar apontamento de campo oe1 car-02 gestor_obras mvp q1 ct-m1-15 us32 como **gestor operacional de obras**, quero homologar ou rejeitar os apontamentos de campo pendentes dos contratos sob minha responsabilidade, com parecer obrigatório na rejeição, para que apenas horas validadas sigam para o fechamento financeiro e o autor seja informado da decisão. rn02 rn05 rn30 rnf04">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -5584,7 +5584,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
-            <p class="req-check-text">O Gestor Operacional de Obras (`GESTOR_OBRAS`) analisa os apontamentos com status "Pendente de Homologação" vinculados aos contratos sob sua responsabilidade técnica e delibera aprovando ou rejeitando cada registro. A aprovação transiciona o status para "Homologado", bloqueia edições pelo autor (RN02) e disponibiliza as horas/diárias para apuração financeira (RN05, RN10). A rejeição exige compulsoriamente parecer formal justificado com no mínimo 15 caracteres (RN30), transiciona o status para "Rejeitado" e notifica o colaborador para ciência e retificação (RF35). Após a correção e o reenvio pelo colaborador, o apontamento retorna ao status "Pendente de Homologação" para nova análise, preservando o histórico de rejeições, justificativas e alterações.</p>
+            <p class="req-check-text">O Gestor Operacional de Obras (`GESTOR_OBRAS`) analisa os apontamentos com status "Pendente de Homologação" vinculados aos contratos sob sua responsabilidade técnica e delibera aprovando ou rejeitando cada registro. A aprovação transiciona o status para "Homologado", bloqueia edições pelo autor (RN02) e disponibiliza as horas/diárias para apuração financeira (RN05). A rejeição exige compulsoriamente parecer formal justificado com no mínimo 15 caracteres (RN30), transiciona o status para "Rejeitado" e notifica o colaborador para ciência e retificação (RF35). Após a correção e o reenvio pelo colaborador, o apontamento retorna ao status "Pendente de Homologação" para nova análise, preservando o histórico de rejeições, justificativas e alterações.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -5593,7 +5593,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -5625,7 +5625,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
@@ -5675,7 +5675,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf33" data-type="rf" data-rf="RF33" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf33 cadastrar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-11 us33 como **administrador financeiro ou gestor operacional de obras**, quero cadastrar, editar e consultar contratos de obras com vigência, valor global e retenções, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido. rn09 rn11 rnf10 rnf11" data-search-text="rf33 cadastrar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-11 us33 como **administrador financeiro ou gestor operacional de obras**, quero cadastrar, editar e consultar contratos de obras com vigência, valor global e retenções, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido. rn09 rn11 rnf10 rnf11">
+<details class="req-card req-card-rf req-card-oe3" id="rf33" data-type="rf" data-rf="RF33" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf33 cadastrar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-11 us33 como **administrador financeiro ou gestor operacional de obras**, quero cadastrar contratos de obras vinculados a clientes, com vigência, valor global, objeto, retenções e alçadas de supervisão, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido. rn09 rn11 rnf10 rnf11" data-search-text="rf33 cadastrar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-11 us33 como **administrador financeiro ou gestor operacional de obras**, quero cadastrar contratos de obras vinculados a clientes, com vigência, valor global, objeto, retenções e alçadas de supervisão, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido. rn09 rn11 rnf10 rnf11">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -5735,7 +5735,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         <span class="req-checklist-title">História de Usuário (US33)</span>
       </div>
       <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro ou Gestor Operacional de Obras</strong>, quero cadastrar, editar e consultar contratos de obras com vigência, valor global e retenções, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Administrador Financeiro ou Gestor Operacional de Obras</strong>, quero cadastrar contratos de obras vinculados a clientes, com vigência, valor global, objeto, retenções e alçadas de supervisão, para que despesas, reembolsos e apropriações de custo sejam sempre vinculados a um contrato válido.</p>
       </div>
     </div>
 
@@ -5841,7 +5841,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>. Estimativa ratificada após a decomposição: as 8 h cobrem apenas o cadastro; a atualização (RF37/US37) e a consulta (RF38/US38) possuem histórias e estimativas próprias.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -5849,7 +5849,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf34" data-type="rf" data-rf="RF34" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf34 cadastrar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-12 us34 como **gestor operacional de obras**, quero cadastrar centros de custo e definir tetos orçamentários por categoria de despesa em cada contrato, para que o painel calcule a execução orçamentária e os desvios. rn09 rn11 rnf09 rnf10" data-search-text="rf34 cadastrar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-12 us34 como **gestor operacional de obras**, quero cadastrar centros de custo e definir tetos orçamentários por categoria de despesa em cada contrato, para que o painel calcule a execução orçamentária e os desvios. rn09 rn11 rnf09 rnf10">
+<details class="req-card req-card-rf req-card-oe3" id="rf34" data-type="rf" data-rf="RF34" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf34 cadastrar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-12 us34 como **gestor operacional de obras**, quero cadastrar centros de custo vinculados a contratos de obras ativos, para que as despesas operacionais sejam classificadas e apropriadas à estrutura de custos correta. rn09 rn11 rnf09 rnf10" data-search-text="rf34 cadastrar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-12 us34 como **gestor operacional de obras**, quero cadastrar centros de custo vinculados a contratos de obras ativos, para que as despesas operacionais sejam classificadas e apropriadas à estrutura de custos correta. rn09 rn11 rnf09 rnf10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -5909,7 +5909,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         <span class="req-checklist-title">História de Usuário (US34)</span>
       </div>
       <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
-        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero cadastrar centros de custo e definir tetos orçamentários por categoria de despesa em cada contrato, para que o painel calcule a execução orçamentária e os desvios.</p>
+        <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero cadastrar centros de custo vinculados a contratos de obras ativos, para que as despesas operacionais sejam classificadas e apropriadas à estrutura de custos correta.</p>
       </div>
     </div>
 
@@ -6015,7 +6015,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
       </div>
       <div class="req-metrics-footer">
-        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>.</span>
+        <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>. Estimativa ratificada após a decomposição: as 8 h cobrem apenas o cadastro; a atualização (RF39/US39) e os tetos orçamentários (RF40/US40) possuem histórias e estimativas próprias.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
     </div>
@@ -6023,7 +6023,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf35" data-type="rf" data-rf="RF35" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf35 retificar apontamento de campo oe1 car-02 tecnico_campo mvp q1 ct-m1-16 us35 como **técnico de campo**, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão. rn02 rnf04 rnf07" data-search-text="rf35 retificar apontamento de campo oe1 car-02 tecnico_campo mvp q1 ct-m1-16 us35 como **técnico de campo**, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão. rn02 rnf04 rnf07">
+<details class="req-card req-card-rf req-card-oe1" id="rf35" data-type="rf" data-rf="RF35" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-role="TECNICO_CAMPO" data-text="rf35 retificar apontamento de campo oe1 car-02 tecnico_campo mvp q1 ct-m1-16 us35 como **técnico de campo**, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão. rn02 rn30 rnf01 rnf04 rnf07" data-search-text="rf35 retificar apontamento de campo oe1 car-02 tecnico_campo mvp q1 ct-m1-16 us35 como **técnico de campo**, quero retificar horas, escopo e anexos de um apontamento ainda pendente de homologação dentro de 5 dias úteis, para que eu corrija erros sem depender de reabertura pela gestão. rn02 rn30 rnf01 rnf04 rnf07">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -6115,7 +6115,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
+            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
@@ -6124,7 +6124,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -6147,11 +6147,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a></div>
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -6197,7 +6197,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe1" id="rf36" data-type="rf" data-rf="RF36" data-oe="oe1" data-car="car-10" data-mvp="pós-mvp" data-quad="q3" data-role="ADMIN_FINANCEIRO" data-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 us36 como **administrador financeiro**, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas csv e xlsx, para que eu faça a conciliação contábil externa sem redigitação.  rnf02" data-search-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 us36 como **administrador financeiro**, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas csv e xlsx, para que eu faça a conciliação contábil externa sem redigitação.  rnf02">
+<details class="req-card req-card-rf req-card-oe1" id="rf36" data-type="rf" data-rf="RF36" data-oe="oe1" data-car="car-10" data-mvp="pos-mvp" data-quad="q3" data-role="ADMIN_FINANCEIRO" data-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 us36 como **administrador financeiro**, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas csv e xlsx, para que eu faça a conciliação contábil externa sem redigitação.  rnf02" data-search-text="rf36 exportar dados consolidados em planilha oe1 car-10 admin_financeiro pós-mvp q3 ct-m1-17 us36 como **administrador financeiro**, quero exportar dados consolidados de apontamentos, presenças e apropriações em planilhas csv e xlsx, para que eu faça a conciliação contábil externa sem redigitação.  rnf02">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q3"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Evolutivo</span></span>
@@ -6371,7 +6371,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf37" data-type="rf" data-rf="RF37" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf37 atualizar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-13 us33 como **gestor operacional de obras ou administrador financeiro**, quero atualizar aditivos, prazos e valores de contratos de obras vigentes, para que as apropriações reflitam as repactuações contratuais. rn09 rn11 rnf10 rnf11" data-search-text="rf37 atualizar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-13 us33 como **gestor operacional de obras ou administrador financeiro**, quero atualizar aditivos, prazos e valores de contratos de obras vigentes, para que as apropriações reflitam as repactuações contratuais. rn09 rn11 rnf10 rnf11">
+<details class="req-card req-card-rf req-card-oe3" id="rf37" data-type="rf" data-rf="RF37" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf37 atualizar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-13 us37 como **gestor operacional de obras ou administrador financeiro**, quero atualizar aditivos, prazos e valores de contratos de obras vigentes, para que as apropriações reflitam as repactuações contratuais. rn09 rn11 rnf10 rnf11" data-search-text="rf37 atualizar contrato de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-13 us37 como **gestor operacional de obras ou administrador financeiro**, quero atualizar aditivos, prazos e valores de contratos de obras vigentes, para que as apropriações reflitam as repactuações contratuais. rn09 rn11 rnf10 rnf11">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -6428,7 +6428,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 
     <div class="req-expanded-desc">
       <div class="req-checklist-header">
-        <span class="req-checklist-title">História de Usuário (US33)</span>
+        <span class="req-checklist-title">História de Usuário (US37)</span>
       </div>
       <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero atualizar aditivos, prazos e valores de contratos de obras vigentes, para que as apropriações reflitam as repactuações contratuais.</p>
@@ -6545,7 +6545,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf38" data-type="rf" data-rf="RF38" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf38 consultar contratos de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-14 us33 como **gestor operacional de obras ou administrador financeiro**, quero consultar a relação e o detalhamento de contratos ativos e concluídos, para que eu visualize rapidamente as condições pactuadas de cada obra.  rnf10" data-search-text="rf38 consultar contratos de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-14 us33 como **gestor operacional de obras ou administrador financeiro**, quero consultar a relação e o detalhamento de contratos ativos e concluídos, para que eu visualize rapidamente as condições pactuadas de cada obra.  rnf10">
+<details class="req-card req-card-rf req-card-oe3" id="rf38" data-type="rf" data-rf="RF38" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS / ADMIN_FINANCEIRO" data-text="rf38 consultar contratos de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-14 us38 como **gestor operacional de obras ou administrador financeiro**, quero consultar a relação e o detalhamento de contratos ativos e concluídos, para que eu visualize rapidamente as condições pactuadas de cada obra.  rnf09 rnf10" data-search-text="rf38 consultar contratos de obra oe3 car-05 gestor_obras / admin_financeiro mvp q1 ct-m3-14 us38 como **gestor operacional de obras ou administrador financeiro**, quero consultar a relação e o detalhamento de contratos ativos e concluídos, para que eu visualize rapidamente as condições pactuadas de cada obra.  rnf09 rnf10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -6602,7 +6602,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 
     <div class="req-expanded-desc">
       <div class="req-checklist-header">
-        <span class="req-checklist-title">História de Usuário (US33)</span>
+        <span class="req-checklist-title">História de Usuário (US38)</span>
       </div>
       <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras ou Administrador Financeiro</strong>, quero consultar a relação e o detalhamento de contratos ativos e concluídos, para que eu visualize rapidamente as condições pactuadas de cada obra.</p>
@@ -6646,7 +6646,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
-            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
+            <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
           </div>
         </div>
       </div>
@@ -6673,7 +6673,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-trace-item req-trace-full">
           <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
         </div>
       </div>
     </div>
@@ -6719,7 +6719,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf39" data-type="rf" data-rf="RF39" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf39 atualizar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-15 us34 como **gestor operacional de obras**, quero atualizar nomenclaturas e parâmetros de centros de custo ativos, para que a estrutura de custos permaneça alinhada à evolução do canteiro sem quebrar vínculos históricos. rn09 rn11 rnf09 rnf10" data-search-text="rf39 atualizar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-15 us34 como **gestor operacional de obras**, quero atualizar nomenclaturas e parâmetros de centros de custo ativos, para que a estrutura de custos permaneça alinhada à evolução do canteiro sem quebrar vínculos históricos. rn09 rn11 rnf09 rnf10">
+<details class="req-card req-card-rf req-card-oe3" id="rf39" data-type="rf" data-rf="RF39" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf39 atualizar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-15 us39 como **gestor operacional de obras**, quero atualizar nomenclaturas e parâmetros de centros de custo ativos, para que a estrutura de custos permaneça alinhada à evolução do canteiro sem quebrar vínculos históricos. rn09 rn11 rnf09 rnf10" data-search-text="rf39 atualizar centro de custo de obra oe3 car-06 gestor_obras mvp q1 ct-m3-15 us39 como **gestor operacional de obras**, quero atualizar nomenclaturas e parâmetros de centros de custo ativos, para que a estrutura de custos permaneça alinhada à evolução do canteiro sem quebrar vínculos históricos. rn09 rn11 rnf09 rnf10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -6776,7 +6776,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 
     <div class="req-expanded-desc">
       <div class="req-checklist-header">
-        <span class="req-checklist-title">História de Usuário (US34)</span>
+        <span class="req-checklist-title">História de Usuário (US39)</span>
       </div>
       <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero atualizar nomenclaturas e parâmetros de centros de custo ativos, para que a estrutura de custos permaneça alinhada à evolução do canteiro sem quebrar vínculos históricos.</p>
@@ -6893,7 +6893,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe3" id="rf40" data-type="rf" data-rf="RF40" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf40 definir tetos orçamentários de obra oe3 car-06 gestor_obras mvp q1 ct-m3-16 us34 como **gestor operacional de obras**, quero estipular tetos monetários orçados por categoria de despesa em cada contrato, para que o sistema monitore limites e acione alertas preventivos de estouro orçamentário. rn13 rn29 rnf09 rnf10" data-search-text="rf40 definir tetos orçamentários de obra oe3 car-06 gestor_obras mvp q1 ct-m3-16 us34 como **gestor operacional de obras**, quero estipular tetos monetários orçados por categoria de despesa em cada contrato, para que o sistema monitore limites e acione alertas preventivos de estouro orçamentário. rn13 rn29 rnf09 rnf10">
+<details class="req-card req-card-rf req-card-oe3" id="rf40" data-type="rf" data-rf="RF40" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-role="GESTOR_OBRAS" data-text="rf40 definir tetos orçamentários de obra oe3 car-06 gestor_obras mvp q1 ct-m3-16 us40 como **gestor operacional de obras**, quero estipular tetos monetários orçados por categoria de despesa em cada contrato, para que o sistema monitore limites e acione alertas preventivos de estouro orçamentário. rn13 rn29 rnf09 rnf10" data-search-text="rf40 definir tetos orçamentários de obra oe3 car-06 gestor_obras mvp q1 ct-m3-16 us40 como **gestor operacional de obras**, quero estipular tetos monetários orçados por categoria de despesa em cada contrato, para que o sistema monitore limites e acione alertas preventivos de estouro orçamentário. rn13 rn29 rnf09 rnf10">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
@@ -6950,7 +6950,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 
     <div class="req-expanded-desc">
       <div class="req-checklist-header">
-        <span class="req-checklist-title">História de Usuário (US34)</span>
+        <span class="req-checklist-title">História de Usuário (US40)</span>
       </div>
       <div class="req-desc-box" style="border-left: 3px solid var(--duoc-gold, #DAA520);">
         <p class="req-desc-text"><strong>História de Usuário:</strong> Como <strong>Gestor Operacional de Obras</strong>, quero estipular tetos monetários orçados por categoria de despesa em cada contrato, para que o sistema monitore limites e acione alertas preventivos de estouro orçamentário.</p>
@@ -7142,7 +7142,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn02" data-type="rn" data-rn="RN02" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-text="rn02 janela temporal para submissão e edição de apontamento oe1 módulo 1 car-02 controle de apontamentos o apontamento diário de campo (rvt) deve ser submetido até as 23h59 do dia subsequente à prestação do serviço; após submissão e homologação, a edição é bloqueada, permitindo retificação apenas após deliberação de recusa com justificativa obrigatória. rf04 rf19 rf32 rf35 regra negocio dominio" data-search-text="rn02 janela temporal para submissão e edição de apontamento oe1 módulo 1 car-02 controle de apontamentos o apontamento diário de campo (rvt) deve ser submetido até as 23h59 do dia subsequente à prestação do serviço; após submissão e homologação, a edição é bloqueada, permitindo retificação apenas após deliberação de recusa com justificativa obrigatória. rf04 rf19 rf32 rf35 regra negocio dominio">
+<details class="req-card req-card-rn" id="rn02" data-type="rn" data-rn="RN02" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-text="rn02 janela temporal para submissão e edição de apontamento oe1 módulo 1 car-02 controle de apontamentos o apontamento diário de campo (rvt) deve ser submetido até as 23h59 do dia subsequente à prestação do serviço; após submissão e homologação, a edição é bloqueada, permitindo retificação apenas após deliberação de recusa com justificativa obrigatória. rf04 rf32 rf35 regra negocio dominio" data-search-text="rn02 janela temporal para submissão e edição de apontamento oe1 módulo 1 car-02 controle de apontamentos o apontamento diário de campo (rvt) deve ser submetido até as 23h59 do dia subsequente à prestação do serviço; após submissão e homologação, a edição é bloqueada, permitindo retificação apenas após deliberação de recusa com justificativa obrigatória. rf04 rf32 rf35 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7186,7 +7186,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>RFs Executores (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a> <a href="#rf19" class="req-tag req-tag-rf"># RF19 · Consultar apontamentos registrados ↗</a> <a href="#rf32" class="req-tag req-tag-rf"># RF32 · Deliberar apontamento de campo ↗</a> <a href="#rf35" class="req-tag req-tag-rf"># RF35 · Retificar apontamento de campo ↗</a>
+          <a href="#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a> <a href="#rf32" class="req-tag req-tag-rf"># RF32 · Deliberar apontamento de campo ↗</a> <a href="#rf35" class="req-tag req-tag-rf"># RF35 · Retificar apontamento de campo ↗</a>
         </div>
       </div>
     </div>
@@ -7325,7 +7325,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn05" data-type="rn" data-rn="RN05" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-text="rn05 pré-requisito de homologação de apontamentos para fechamento oe2 módulo 2 car-03 fluxo de aprovação a rotina de consolidação e homologação financeira processa exclusivamente apontamentos de campo que tenham sido formalmente homologados pelo gestor operacional de obras. rf05 rf06 regra negocio dominio" data-search-text="rn05 pré-requisito de homologação de apontamentos para fechamento oe2 módulo 2 car-03 fluxo de aprovação a rotina de consolidação e homologação financeira processa exclusivamente apontamentos de campo que tenham sido formalmente homologados pelo gestor operacional de obras. rf05 rf06 regra negocio dominio">
+<details class="req-card req-card-rn" id="rn05" data-type="rn" data-rn="RN05" data-oe="oe2" data-car="car-03" data-mvp="mvp" data-quad="q1" data-text="rn05 pré-requisito de homologação de apontamentos para fechamento oe2 módulo 2 car-03 fluxo de aprovação a rotina de consolidação e homologação financeira processa exclusivamente apontamentos de campo que tenham sido formalmente homologados pelo gestor operacional de obras. rf05 rf06 rf09 rf32 regra negocio dominio" data-search-text="rn05 pré-requisito de homologação de apontamentos para fechamento oe2 módulo 2 car-03 fluxo de aprovação a rotina de consolidação e homologação financeira processa exclusivamente apontamentos de campo que tenham sido formalmente homologados pelo gestor operacional de obras. rf05 rf06 rf09 rf32 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7369,7 +7369,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>RFs Executores (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a> <a href="#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a>
+          <a href="#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a> <a href="#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a> <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf32" class="req-tag req-tag-rf"># RF32 · Deliberar apontamento de campo ↗</a>
         </div>
       </div>
     </div>
@@ -7386,7 +7386,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn06" data-type="rn" data-rn="RN06" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn06 janela temporal para prestação de contas de reembolso oe2 módulo 2 car-04 controle temporal despesas operacionais elegíveis a reembolso devem ser submetidas em até 5 dias úteis após a realização do gasto, acompanhadas obrigatoriamente de comprovante fiscal. rf07 rf28 regra negocio dominio" data-search-text="rn06 janela temporal para prestação de contas de reembolso oe2 módulo 2 car-04 controle temporal despesas operacionais elegíveis a reembolso devem ser submetidas em até 5 dias úteis após a realização do gasto, acompanhadas obrigatoriamente de comprovante fiscal. rf07 rf28 regra negocio dominio">
+<details class="req-card req-card-rn" id="rn06" data-type="rn" data-rn="RN06" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn06 janela temporal para prestação de contas de reembolso oe2 módulo 2 car-04 controle temporal despesas operacionais elegíveis a reembolso devem ser submetidas em até 5 dias úteis após a realização do gasto, acompanhadas obrigatoriamente de comprovante fiscal. rf07 regra negocio dominio" data-search-text="rn06 janela temporal para prestação de contas de reembolso oe2 módulo 2 car-04 controle temporal despesas operacionais elegíveis a reembolso devem ser submetidas em até 5 dias úteis após a realização do gasto, acompanhadas obrigatoriamente de comprovante fiscal. rf07 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7430,7 +7430,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>RFs Executores (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a> <a href="#rf28" class="req-tag req-tag-rf"># RF28 · Submeter solicitação de adiantamento operacional ↗</a>
+          <a href="#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a>
         </div>
       </div>
     </div>
@@ -7508,7 +7508,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn08" data-type="rn" data-rn="RN08" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn08 comprovante fiscal obrigatório para homologação de reembolso oe2 módulo 2 car-04 comprovação fiscal nenhuma despesa ou prestação de contas de adiantamento pode ser homologada para pagamento sem ao menos um comprovante fiscal legível anexado e validado. rf07 rf08 rf28 rf29 regra negocio dominio" data-search-text="rn08 comprovante fiscal obrigatório para homologação de reembolso oe2 módulo 2 car-04 comprovação fiscal nenhuma despesa ou prestação de contas de adiantamento pode ser homologada para pagamento sem ao menos um comprovante fiscal legível anexado e validado. rf07 rf08 rf28 rf29 regra negocio dominio">
+<details class="req-card req-card-rn" id="rn08" data-type="rn" data-rn="RN08" data-oe="oe2" data-car="car-04" data-mvp="mvp" data-quad="q1" data-text="rn08 comprovante fiscal obrigatório para homologação de reembolso oe2 módulo 2 car-04 comprovação fiscal nenhuma despesa ou prestação de contas de adiantamento pode ser homologada para pagamento sem ao menos um comprovante fiscal legível anexado e validado. rf06 rf07 rf08 regra negocio dominio" data-search-text="rn08 comprovante fiscal obrigatório para homologação de reembolso oe2 módulo 2 car-04 comprovação fiscal nenhuma despesa ou prestação de contas de adiantamento pode ser homologada para pagamento sem ao menos um comprovante fiscal legível anexado e validado. rf06 rf07 rf08 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7552,7 +7552,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>RFs Executores (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a> <a href="#rf08" class="req-tag req-tag-rf"># RF08 · Deliberar solicitação de reembolso ↗</a> <a href="#rf28" class="req-tag req-tag-rf"># RF28 · Submeter solicitação de adiantamento operacional ↗</a> <a href="#rf29" class="req-tag req-tag-rf"># RF29 · Deliberar solicitação de adiantamento operacional ↗</a>
+          <a href="#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a> <a href="#rf07" class="req-tag req-tag-rf"># RF07 · Submeter solicitação de reembolso ↗</a> <a href="#rf08" class="req-tag req-tag-rf"># RF08 · Deliberar solicitação de reembolso ↗</a>
         </div>
       </div>
     </div>
@@ -7630,7 +7630,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn10" data-type="rn" data-rn="RN10" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn10 garantia de consistência transacional no rateio de custos oe3 módulo 3 car-05 consistência transacional a gravação do rateio financeiro entre centros de custo deve ser atômica (acid); qualquer falha em uma das parcelas reverte a operação integralmente. rf09 rf37 regra negocio dominio" data-search-text="rn10 garantia de consistência transacional no rateio de custos oe3 módulo 3 car-05 consistência transacional a gravação do rateio financeiro entre centros de custo deve ser atômica (acid); qualquer falha em uma das parcelas reverte a operação integralmente. rf09 rf37 regra negocio dominio">
+<details class="req-card req-card-rn" id="rn10" data-type="rn" data-rn="RN10" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn10 garantia de consistência transacional no rateio de custos oe3 módulo 3 car-05 consistência transacional a gravação do rateio financeiro entre centros de custo deve ser atômica (acid); qualquer falha em uma das parcelas reverte a operação integralmente. rf09 regra negocio dominio" data-search-text="rn10 garantia de consistência transacional no rateio de custos oe3 módulo 3 car-05 consistência transacional a gravação do rateio financeiro entre centros de custo deve ser atômica (acid); qualquer falha em uma das parcelas reverte a operação integralmente. rf09 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7674,7 +7674,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>RFs Executores (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a>
+          <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a>
         </div>
       </div>
     </div>
@@ -7691,7 +7691,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn11" data-type="rn" data-rn="RN11" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn11 parametrização obrigatória de centros de custo por contrato oe3 módulo 3 car-05 parametrização orçamentária todo contrato cadastrado deve possuir ao menos um centro de custo vinculado antes de receber qualquer apropriação de despesa ou diária técnica. rf10 rf30 rf38 regra negocio dominio" data-search-text="rn11 parametrização obrigatória de centros de custo por contrato oe3 módulo 3 car-05 parametrização orçamentária todo contrato cadastrado deve possuir ao menos um centro de custo vinculado antes de receber qualquer apropriação de despesa ou diária técnica. rf10 rf30 rf38 regra negocio dominio">
+<details class="req-card req-card-rn" id="rn11" data-type="rn" data-rn="RN11" data-oe="oe3" data-car="car-05" data-mvp="mvp" data-quad="q1" data-text="rn11 parametrização obrigatória de centros de custo por contrato oe3 módulo 3 car-05 parametrização orçamentária todo contrato cadastrado deve possuir ao menos um centro de custo vinculado antes de receber qualquer apropriação de despesa ou diária técnica. rf09 rf33 rf34 rf37 rf39 regra negocio dominio" data-search-text="rn11 parametrização obrigatória de centros de custo por contrato oe3 módulo 3 car-05 parametrização orçamentária todo contrato cadastrado deve possuir ao menos um centro de custo vinculado antes de receber qualquer apropriação de despesa ou diária técnica. rf09 rf33 rf34 rf37 rf39 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7735,7 +7735,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>RFs Executores (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf10" class="req-tag req-tag-rf"># RF10 · Consultar rastreabilidade de custos ↗</a> <a href="#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a> <a href="#rf38" class="req-tag req-tag-rf"># RF38 · Consultar contratos de obra ↗</a>
+          <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf33" class="req-tag req-tag-rf"># RF33 · Cadastrar contrato de obra ↗</a> <a href="#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a> <a href="#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a> <a href="#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a>
         </div>
       </div>
     </div>
@@ -7813,7 +7813,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn13" data-type="rn" data-rn="RN13" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-text="rn13 bloqueio preventivo por extrapolação de teto orçamentário oe3 módulo 3 car-06 controle de teto orçamentário lançamentos de despesas operacionais que ultrapassem 100% do teto orçamentário parametrizado para o contrato demandam autorização formal com justificativa registrada. rf11 rf12 rf31 rf40 regra negocio dominio" data-search-text="rn13 bloqueio preventivo por extrapolação de teto orçamentário oe3 módulo 3 car-06 controle de teto orçamentário lançamentos de despesas operacionais que ultrapassem 100% do teto orçamentário parametrizado para o contrato demandam autorização formal com justificativa registrada. rf11 rf12 rf31 rf40 regra negocio dominio">
+<details class="req-card req-card-rn" id="rn13" data-type="rn" data-rn="RN13" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-text="rn13 bloqueio preventivo por extrapolação de teto orçamentário oe3 módulo 3 car-06 controle de teto orçamentário lançamentos de despesas operacionais que ultrapassem 100% do teto orçamentário parametrizado para o contrato demandam autorização formal com justificativa registrada. rf12 rf40 regra negocio dominio" data-search-text="rn13 bloqueio preventivo por extrapolação de teto orçamentário oe3 módulo 3 car-06 controle de teto orçamentário lançamentos de despesas operacionais que ultrapassem 100% do teto orçamentário parametrizado para o contrato demandam autorização formal com justificativa registrada. rf12 rf40 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7857,7 +7857,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>RFs Executores (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a> <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a> <a href="#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a> <a href="#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
+          <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a> <a href="#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
         </div>
       </div>
     </div>
@@ -7874,7 +7874,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn14" data-type="rn" data-rn="RN14" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-text="rn14 sigilo e não-exposição de remunerações individuais em painéis oe3 módulo 3 car-06 sigilo & privacidade salarial painéis analíticos acessíveis por gestores operacionais exibem montantes agregados de custos por contrato, ocultando remunerações e dados bancários individuais dos colaboradores. rf11 rf12 rf34 rf39 regra negocio dominio" data-search-text="rn14 sigilo e não-exposição de remunerações individuais em painéis oe3 módulo 3 car-06 sigilo & privacidade salarial painéis analíticos acessíveis por gestores operacionais exibem montantes agregados de custos por contrato, ocultando remunerações e dados bancários individuais dos colaboradores. rf11 rf12 rf34 rf39 regra negocio dominio">
+<details class="req-card req-card-rn" id="rn14" data-type="rn" data-rn="RN14" data-oe="oe3" data-car="car-06" data-mvp="mvp" data-quad="q1" data-text="rn14 sigilo e não-exposição de remunerações individuais em painéis oe3 módulo 3 car-06 sigilo & privacidade salarial painéis analíticos acessíveis por gestores operacionais exibem montantes agregados de custos por contrato, ocultando remunerações e dados bancários individuais dos colaboradores. rf11 rf12 regra negocio dominio" data-search-text="rn14 sigilo e não-exposição de remunerações individuais em painéis oe3 módulo 3 car-06 sigilo & privacidade salarial painéis analíticos acessíveis por gestores operacionais exibem montantes agregados de custos por contrato, ocultando remunerações e dados bancários individuais dos colaboradores. rf11 rf12 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -7918,7 +7918,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>RFs Executores (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a> <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a> <a href="#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a> <a href="#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a>
+          <a href="#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a> <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a>
         </div>
       </div>
     </div>
@@ -7996,7 +7996,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn16" data-type="rn" data-rn="RN16" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn16 princípio do menor privilégio e segregação de funções (sod) oe4 módulo 4 car-07 autorização rbac estrita cada perfil de usuário acessa estritamente os recursos indispensáveis à sua função; perfis operacionais de campo não possuem acesso a rotinas financeiras de homologação. rf14 regra negocio dominio" data-search-text="rn16 princípio do menor privilégio e segregação de funções (sod) oe4 módulo 4 car-07 autorização rbac estrita cada perfil de usuário acessa estritamente os recursos indispensáveis à sua função; perfis operacionais de campo não possuem acesso a rotinas financeiras de homologação. rf14 regra negocio dominio">
+<details class="req-card req-card-rn" id="rn16" data-type="rn" data-rn="RN16" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-text="rn16 princípio do menor privilégio e segregação de funções (sod) oe4 módulo 4 car-07 autorização rbac estrita cada perfil de usuário acessa estritamente os recursos indispensáveis à sua função; perfis operacionais de campo não possuem acesso a rotinas financeiras de homologação. rf14 rf19 regra negocio dominio" data-search-text="rn16 princípio do menor privilégio e segregação de funções (sod) oe4 módulo 4 car-07 autorização rbac estrita cada perfil de usuário acessa estritamente os recursos indispensáveis à sua função; perfis operacionais de campo não possuem acesso a rotinas financeiras de homologação. rf14 rf19 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8040,7 +8040,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>RFs Executores (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf14" class="req-tag req-tag-rf"># RF14 · Gerenciar perfis de acesso ↗</a>
+          <a href="#rf14" class="req-tag req-tag-rf"># RF14 · Gerenciar perfis de acesso ↗</a> <a href="#rf19" class="req-tag req-tag-rf"># RF19 · Consultar apontamentos registrados ↗</a>
         </div>
       </div>
     </div>
@@ -8057,7 +8057,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn17" data-type="rn" data-rn="RN17" data-oe="oe4" data-car="car-08" data-mvp="mvp" data-quad="q1" data-text="rn17 registro atômico de mutações em trilha de auditoria oe4 módulo 4 car-08 imutabilidade de trilha de auditoria toda mutação cadastral, financeira ou de aprovação gera registro síncrono e obrigatório em trilha de auditoria na mesma transação atômica do banco de dados. rf15 rf16 regra negocio dominio" data-search-text="rn17 registro atômico de mutações em trilha de auditoria oe4 módulo 4 car-08 imutabilidade de trilha de auditoria toda mutação cadastral, financeira ou de aprovação gera registro síncrono e obrigatório em trilha de auditoria na mesma transação atômica do banco de dados. rf15 rf16 regra negocio dominio">
+<details class="req-card req-card-rn" id="rn17" data-type="rn" data-rn="RN17" data-oe="oe4" data-car="car-08" data-mvp="mvp" data-quad="q1" data-text="rn17 registro atômico de mutações em trilha de auditoria oe4 módulo 4 car-08 imutabilidade de trilha de auditoria toda mutação cadastral, financeira ou de aprovação gera registro síncrono e obrigatório em trilha de auditoria na mesma transação atômica do banco de dados. rf06 rf15 rf16 rf21 regra negocio dominio" data-search-text="rn17 registro atômico de mutações em trilha de auditoria oe4 módulo 4 car-08 imutabilidade de trilha de auditoria toda mutação cadastral, financeira ou de aprovação gera registro síncrono e obrigatório em trilha de auditoria na mesma transação atômica do banco de dados. rf06 rf15 rf16 rf21 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8101,7 +8101,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>RFs Executores (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf15" class="req-tag req-tag-rf"># RF15 · Consultar trilha de auditoria ↗</a> <a href="#rf16" class="req-tag req-tag-rf"># RF16 · Exportar relatório de auditoria ↗</a>
+          <a href="#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a> <a href="#rf15" class="req-tag req-tag-rf"># RF15 · Consultar trilha de auditoria ↗</a> <a href="#rf16" class="req-tag req-tag-rf"># RF16 · Exportar relatório de auditoria ↗</a> <a href="#rf21" class="req-tag req-tag-rf"># RF21 · Estornar fechamento financeiro ↗</a>
         </div>
       </div>
     </div>
@@ -8423,7 +8423,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn23" data-type="rn" data-rn="RN23" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn23 versionamento obrigatório de dados cadastrais e bancários oe1 módulo 1 car-01 versionamento cadastral alterações em campos de dados pessoais, bancários ou funcionais geram novo snapshot na tabela histórica com carimbo temporal utc e identificador do autor, sem sobrescrever valores anteriores. rf02 rf26 regra negocio dominio" data-search-text="rn23 versionamento obrigatório de dados cadastrais e bancários oe1 módulo 1 car-01 versionamento cadastral alterações em campos de dados pessoais, bancários ou funcionais geram novo snapshot na tabela histórica com carimbo temporal utc e identificador do autor, sem sobrescrever valores anteriores. rf02 rf26 regra negocio dominio">
+<details class="req-card req-card-rn" id="rn23" data-type="rn" data-rn="RN23" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn23 versionamento obrigatório de dados cadastrais e bancários oe1 módulo 1 car-01 versionamento cadastral alterações em campos de dados pessoais, bancários ou funcionais geram novo snapshot na tabela histórica com carimbo temporal utc e identificador do autor, sem sobrescrever valores anteriores. rf01 rf02 rf26 regra negocio dominio" data-search-text="rn23 versionamento obrigatório de dados cadastrais e bancários oe1 módulo 1 car-01 versionamento cadastral alterações em campos de dados pessoais, bancários ou funcionais geram novo snapshot na tabela histórica com carimbo temporal utc e identificador do autor, sem sobrescrever valores anteriores. rf01 rf02 rf26 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8467,7 +8467,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>RFs Executores (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf02" class="req-tag req-tag-rf"># RF02 · Atualizar cadastro de colaborador ↗</a> <a href="#rf26" class="req-tag req-tag-rf"># RF26 · Consultar histórico de alterações cadastrais e bancárias ↗</a>
+          <a href="#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a> <a href="#rf02" class="req-tag req-tag-rf"># RF02 · Atualizar cadastro de colaborador ↗</a> <a href="#rf26" class="req-tag req-tag-rf"># RF26 · Consultar histórico de alterações cadastrais e bancárias ↗</a>
         </div>
       </div>
     </div>
@@ -8484,7 +8484,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
   </div>
 </details>
 
-<details class="req-card req-card-rn" id="rn24" data-type="rn" data-rn="RN24" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-text="rn24 captura de geolocalização não bloqueante oe1 módulo 1 car-02 geolocalização resiliente o sistema tenta capturar coordenadas geográficas no momento do anexo de evidências; caso a permissão seja negada ou o sinal gps indisponível, o anexo prossegue normalmente com a sinalização correspondente. rf04 rf22 regra negocio dominio" data-search-text="rn24 captura de geolocalização não bloqueante oe1 módulo 1 car-02 geolocalização resiliente o sistema tenta capturar coordenadas geográficas no momento do anexo de evidências; caso a permissão seja negada ou o sinal gps indisponível, o anexo prossegue normalmente com a sinalização correspondente. rf04 rf22 regra negocio dominio">
+<details class="req-card req-card-rn" id="rn24" data-type="rn" data-rn="RN24" data-oe="oe1" data-car="car-02" data-mvp="mvp" data-quad="q1" data-text="rn24 captura de geolocalização não bloqueante oe1 módulo 1 car-02 geolocalização resiliente o sistema tenta capturar coordenadas geográficas no momento do anexo de evidências; caso a permissão seja negada ou o sinal gps indisponível, o anexo prossegue normalmente com a sinalização correspondente. rf22 regra negocio dominio" data-search-text="rn24 captura de geolocalização não bloqueante oe1 módulo 1 car-02 geolocalização resiliente o sistema tenta capturar coordenadas geográficas no momento do anexo de evidências; caso a permissão seja negada ou o sinal gps indisponível, o anexo prossegue normalmente com a sinalização correspondente. rf22 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-pill-rn">
@@ -8528,7 +8528,7 @@ As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integ
           <span>RFs Executores (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a> <a href="#rf22" class="req-tag req-tag-rf"># RF22 · Anexar evidências e geolocalização ao apontamento ↗</a>
+          <a href="#rf22" class="req-tag req-tag-rf"># RF22 · Anexar evidências e geolocalização ao apontamento ↗</a>
         </div>
       </div>
     </div>
@@ -8984,7 +8984,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 !!! info "Pacote Transversal de Atributos de Qualidade (T)"
     Os requisitos **RNF03** (Criptografia AES-256 / TLS 1.3), **RNF14** (Autorização RBAC em 100% dos endpoints), **RNF15** (Consistência e Atomicidade de Logs), **RNF16** (Retenção Quinquenal CLT Art. 11), **RNF17** (Rotina de Backup Diário), **RNF18** (Disponibilidade ≥ 99,5%), **RNF19** (Acessibilidade WCAG 2.1 AA) e **RNF20** (Validação de Schema em Escritas) compõem o **Pacote Transversal (T)** obrigatório, aplicando-se de forma pervasiva a todas as telas, rotinas e histórias de usuário do produto.
 
-<details class="req-card req-card-rnf" id="rnf01" data-type="rnf" data-rnf="RNF01" data-oe="oe1" data-mvp="pos-mvp" data-quad="q3" data-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf32 rf35 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf" id="rnf01" data-type="rnf" data-rnf="RNF01" data-oe="oe1" data-mvp="pos-mvp" data-quad="q3" data-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf35 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
@@ -9024,7 +9024,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a> <a href="#rf19" class="req-tag req-tag-rf"># RF19 · Consultar apontamentos registrados ↗</a> <a href="#rf22" class="req-tag req-tag-rf"># RF22 · Anexar evidências e geolocalização ao apontamento ↗</a> <a href="#rf32" class="req-tag req-tag-rf"># RF32 · Deliberar apontamento de campo ↗</a> <a href="#rf35" class="req-tag req-tag-rf"># RF35 · Retificar apontamento de campo ↗</a>
+          <a href="#rf04" class="req-tag req-tag-rf"># RF04 · Submeter apontamento de campo ↗</a> <a href="#rf19" class="req-tag req-tag-rf"># RF19 · Consultar apontamentos registrados ↗</a> <a href="#rf22" class="req-tag req-tag-rf"># RF22 · Anexar evidências e geolocalização ao apontamento ↗</a> <a href="#rf35" class="req-tag req-tag-rf"># RF35 · Retificar apontamento de campo ↗</a>
         </div>
       </div>
     </div>
@@ -9098,7 +9098,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf03" data-type="rnf" data-rnf="RNF03" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf03 proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito urps+ segurança (+) produto — segurança transversal (t) / oe1 100% dos dados pessoais e cadastrais confidenciais (cpf, dados de conta bancária, chave pix e remuneração) armazenados em banco devem utilizar criptografia aes-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo tls 1.3 (em conformidade com o princípio de segurança do art. 6º, vii da lgpd). rf01 rf02 rf03 rf13 rf23 requisito nao funcional atributo qualidade dod" data-search-text="rnf03 proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito urps+ segurança (+) produto — segurança transversal (t) / oe1 100% dos dados pessoais e cadastrais confidenciais (cpf, dados de conta bancária, chave pix e remuneração) armazenados em banco devem utilizar criptografia aes-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo tls 1.3 (em conformidade com o princípio de segurança do art. 6º, vii da lgpd). rf01 rf02 rf03 rf13 rf23 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf" id="rnf03" data-type="rnf" data-rnf="RNF03" data-oe="transversal" data-mvp="mvp" data-quad="q1" data-text="rnf03 proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito urps+ segurança (+) produto — segurança transversal (t) / oe1 100% dos dados pessoais e cadastrais confidenciais (cpf, dados de conta bancária, chave pix e remuneração) armazenados em banco devem utilizar criptografia aes-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo tls 1.3 (em conformidade com o princípio de segurança do art. 6º, vii da lgpd). rf01 rf02 rf03 rf13 requisito nao funcional atributo qualidade dod" data-search-text="rnf03 proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito urps+ segurança (+) produto — segurança transversal (t) / oe1 100% dos dados pessoais e cadastrais confidenciais (cpf, dados de conta bancária, chave pix e remuneração) armazenados em banco devem utilizar criptografia aes-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo tls 1.3 (em conformidade com o princípio de segurança do art. 6º, vii da lgpd). rf01 rf02 rf03 rf13 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
@@ -9138,7 +9138,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a> <a href="#rf02" class="req-tag req-tag-rf"># RF02 · Atualizar cadastro de colaborador ↗</a> <a href="#rf03" class="req-tag req-tag-rf"># RF03 · Registrar movimentação funcional ↗</a> <a href="#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a> <a href="#rf23" class="req-tag req-tag-rf"># RF23 · Bloquear acesso após tentativas falhas consecutivas ↗</a>
+          <a href="#rf01" class="req-tag req-tag-rf"># RF01 · Cadastrar colaborador ↗</a> <a href="#rf02" class="req-tag req-tag-rf"># RF02 · Atualizar cadastro de colaborador ↗</a> <a href="#rf03" class="req-tag req-tag-rf"># RF03 · Registrar movimentação funcional ↗</a> <a href="#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a>
         </div>
       </div>
     </div>
@@ -9212,7 +9212,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf05" data-type="rnf" data-rnf="RNF05" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf05 processar rotina de fechamento financeiro em até 5,0 segundos urps+ desempenho produto — desempenho módulo 2 / oe2 o cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal. rf05 rf06 rf21 rf27 requisito nao funcional atributo qualidade dod" data-search-text="rnf05 processar rotina de fechamento financeiro em até 5,0 segundos urps+ desempenho produto — desempenho módulo 2 / oe2 o cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal. rf05 rf06 rf21 rf27 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf" id="rnf05" data-type="rnf" data-rnf="RNF05" data-oe="oe2" data-mvp="mvp" data-quad="q1" data-text="rnf05 processar rotina de fechamento financeiro em até 5,0 segundos urps+ desempenho produto — desempenho módulo 2 / oe2 o cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal. rf05 rf06 rf21 requisito nao funcional atributo qualidade dod" data-search-text="rnf05 processar rotina de fechamento financeiro em até 5,0 segundos urps+ desempenho produto — desempenho módulo 2 / oe2 o cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal. rf05 rf06 rf21 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
@@ -9252,7 +9252,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a> <a href="#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a> <a href="#rf21" class="req-tag req-tag-rf"># RF21 · Estornar fechamento financeiro ↗</a> <a href="#rf27" class="req-tag req-tag-rf"># RF27 · Configurar tabela de valores de diárias técnicas ↗</a>
+          <a href="#rf05" class="req-tag req-tag-rf"># RF05 · Solicitar prévia de fechamento ↗</a> <a href="#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a> <a href="#rf21" class="req-tag req-tag-rf"># RF21 · Estornar fechamento financeiro ↗</a>
         </div>
       </div>
     </div>
@@ -9383,7 +9383,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf08" data-type="rnf" data-rnf="RNF08" data-oe="oe2" data-mvp="pos-mvp" data-quad="q3" data-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf06 rf08 rf21 rf29 requisito nao funcional atributo qualidade dod" data-search-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf06 rf08 rf21 rf29 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf" id="rnf08" data-type="rnf" data-rnf="RNF08" data-oe="oe2" data-mvp="pos-mvp" data-quad="q3" data-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf21 requisito nao funcional atributo qualidade dod" data-search-text="rnf08 garantir rastreabilidade probatória e não-repúdio em operações de estorno urps+ segurança (+) produto — segurança módulo 2 / oe2 operações de estorno, cancelamento ou retificação financeira exigem registro síncrono de justificativa textual com no mínimo 20 caracteres, gerando log de auditoria append-only associado ao identificador do usuário e ip de origem antes da confirmação da mutação. rf21 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
@@ -9423,7 +9423,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf06" class="req-tag req-tag-rf"># RF06 · Homologar fechamento financeiro ↗</a> <a href="#rf08" class="req-tag req-tag-rf"># RF08 · Deliberar solicitação de reembolso ↗</a> <a href="#rf21" class="req-tag req-tag-rf"># RF21 · Estornar fechamento financeiro ↗</a> <a href="#rf29" class="req-tag req-tag-rf"># RF29 · Deliberar solicitação de adiantamento operacional ↗</a>
+          <a href="#rf21" class="req-tag req-tag-rf"># RF21 · Estornar fechamento financeiro ↗</a>
         </div>
       </div>
     </div>
@@ -9440,7 +9440,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf09" data-type="rnf" data-rnf="RNF09" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf09 garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos urps+ desempenho produto — desempenho módulo 3 / oe3 a aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos. rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf09 garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos urps+ desempenho produto — desempenho módulo 3 / oe3 a aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos. rf09 rf10 rf11 rf12 rf30 rf31 rf33 rf34 rf37 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf" id="rnf09" data-type="rnf" data-rnf="RNF09" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf09 garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos urps+ desempenho produto — desempenho módulo 3 / oe3 a aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos. rf10 rf11 rf12 rf30 rf31 rf34 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf09 garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos urps+ desempenho produto — desempenho módulo 3 / oe3 a aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos. rf10 rf11 rf12 rf30 rf31 rf34 rf38 rf39 rf40 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
@@ -9480,7 +9480,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf10" class="req-tag req-tag-rf"># RF10 · Consultar rastreabilidade de custos ↗</a> <a href="#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a> <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a> <a href="#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a> <a href="#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a> <a href="#rf33" class="req-tag req-tag-rf"># RF33 · Cadastrar contrato de obra ↗</a> <a href="#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a> <a href="#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a> <a href="#rf38" class="req-tag req-tag-rf"># RF38 · Consultar contratos de obra ↗</a> <a href="#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a> <a href="#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
+          <a href="#rf10" class="req-tag req-tag-rf"># RF10 · Consultar rastreabilidade de custos ↗</a> <a href="#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a> <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a> <a href="#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a> <a href="#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a> <a href="#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a> <a href="#rf38" class="req-tag req-tag-rf"># RF38 · Consultar contratos de obra ↗</a> <a href="#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a> <a href="#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
         </div>
       </div>
     </div>
@@ -9554,7 +9554,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf11" data-type="rnf" data-rnf="RNF11" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf11 garantir consistência transacional acid na apropriação concorrente de custos urps+ confiabilidade produto — confiabilidade módulo 3 / oe3 a rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento serializable/repeatable read no banco de dados postgresql, impedindo lançamentos duplicados ou rateios parciais em concorrência. rf09 rf10 rf30 rf33 rf37 rf38 requisito nao funcional atributo qualidade dod" data-search-text="rnf11 garantir consistência transacional acid na apropriação concorrente de custos urps+ confiabilidade produto — confiabilidade módulo 3 / oe3 a rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento serializable/repeatable read no banco de dados postgresql, impedindo lançamentos duplicados ou rateios parciais em concorrência. rf09 rf10 rf30 rf33 rf37 rf38 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf" id="rnf11" data-type="rnf" data-rnf="RNF11" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf11 garantir consistência transacional acid na apropriação concorrente de custos urps+ confiabilidade produto — confiabilidade módulo 3 / oe3 a rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento serializable/repeatable read no banco de dados postgresql, impedindo lançamentos duplicados ou rateios parciais em concorrência. rf09 rf33 rf37 requisito nao funcional atributo qualidade dod" data-search-text="rnf11 garantir consistência transacional acid na apropriação concorrente de custos urps+ confiabilidade produto — confiabilidade módulo 3 / oe3 a rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento serializable/repeatable read no banco de dados postgresql, impedindo lançamentos duplicados ou rateios parciais em concorrência. rf09 rf33 rf37 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
@@ -9594,7 +9594,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf10" class="req-tag req-tag-rf"># RF10 · Consultar rastreabilidade de custos ↗</a> <a href="#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a> <a href="#rf33" class="req-tag req-tag-rf"># RF33 · Cadastrar contrato de obra ↗</a> <a href="#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a> <a href="#rf38" class="req-tag req-tag-rf"># RF38 · Consultar contratos de obra ↗</a>
+          <a href="#rf09" class="req-tag req-tag-rf"># RF09 · Apropriar custos operacionais ↗</a> <a href="#rf33" class="req-tag req-tag-rf"># RF33 · Cadastrar contrato de obra ↗</a> <a href="#rf37" class="req-tag req-tag-rf"># RF37 · Atualizar contrato de obra ↗</a>
         </div>
       </div>
     </div>
@@ -9611,7 +9611,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf12" data-type="rnf" data-rnf="RNF12" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf12 assegurar responsividade do painel em resoluções de desktop e tablet urps+ usabilidade produto — usabilidade módulo 3 / oe3 o painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops). rf11 rf12 rf30 rf31 rf34 rf39 rf40 requisito nao funcional atributo qualidade dod" data-search-text="rnf12 assegurar responsividade do painel em resoluções de desktop e tablet urps+ usabilidade produto — usabilidade módulo 3 / oe3 o painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops). rf11 rf12 rf30 rf31 rf34 rf39 rf40 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf" id="rnf12" data-type="rnf" data-rnf="RNF12" data-oe="oe3" data-mvp="mvp" data-quad="q1" data-text="rnf12 assegurar responsividade do painel em resoluções de desktop e tablet urps+ usabilidade produto — usabilidade módulo 3 / oe3 o painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops). rf11 rf12 rf30 rf31 requisito nao funcional atributo qualidade dod" data-search-text="rnf12 assegurar responsividade do painel em resoluções de desktop e tablet urps+ usabilidade produto — usabilidade módulo 3 / oe3 o painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops). rf11 rf12 rf30 rf31 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
@@ -9651,7 +9651,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a> <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a> <a href="#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a> <a href="#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a> <a href="#rf34" class="req-tag req-tag-rf"># RF34 · Cadastrar centro de custo de obra ↗</a> <a href="#rf39" class="req-tag req-tag-rf"># RF39 · Atualizar centro de custo de obra ↗</a> <a href="#rf40" class="req-tag req-tag-rf"># RF40 · Definir tetos orçamentários de obra ↗</a>
+          <a href="#rf11" class="req-tag req-tag-rf"># RF11 · Filtrar indicadores de custos ↗</a> <a href="#rf12" class="req-tag req-tag-rf"># RF12 · Monitorar execução orçamentária ↗</a> <a href="#rf30" class="req-tag req-tag-rf"># RF30 · Consultar comparativo histórico de custos entre contratos ↗</a> <a href="#rf31" class="req-tag req-tag-rf"># RF31 · Configurar alertas de execução orçamentária ↗</a>
         </div>
       </div>
     </div>
@@ -9668,7 +9668,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   </div>
 </details>
 
-<details class="req-card req-card-rnf" id="rnf13" data-type="rnf" data-rnf="RNF13" data-oe="oe4" data-mvp="mvp" data-quad="q1" data-text="rnf13 expirar token de acesso temporário em no máximo 8 horas urps+ segurança (+) produto — segurança módulo 4 / oe4 tokens de autenticação jwt possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam http 401 unauthorized. rf13 rf17 rf18 rf23 requisito nao funcional atributo qualidade dod" data-search-text="rnf13 expirar token de acesso temporário em no máximo 8 horas urps+ segurança (+) produto — segurança módulo 4 / oe4 tokens de autenticação jwt possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam http 401 unauthorized. rf13 rf17 rf18 rf23 requisito nao funcional atributo qualidade dod">
+<details class="req-card req-card-rnf" id="rnf13" data-type="rnf" data-rnf="RNF13" data-oe="oe4" data-mvp="mvp" data-quad="q1" data-text="rnf13 expirar token de acesso temporário em no máximo 8 horas urps+ segurança (+) produto — segurança módulo 4 / oe4 tokens de autenticação jwt possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam http 401 unauthorized. rf13 rf18 requisito nao funcional atributo qualidade dod" data-search-text="rnf13 expirar token de acesso temporário em no máximo 8 horas urps+ segurança (+) produto — segurança módulo 4 / oe4 tokens de autenticação jwt possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam http 401 unauthorized. rf13 rf18 requisito nao funcional atributo qualidade dod">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 4 / OE4</span>
@@ -9708,7 +9708,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
           <span>RFs Cobertos (Bidirecional)</span>
         </span>
         <div class="req-lumio-val">
-          <a href="#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a> <a href="#rf17" class="req-tag req-tag-rf"># RF17 · Ativar acesso inicial e recuperar credenciais ↗</a> <a href="#rf18" class="req-tag req-tag-rf"># RF18 · Encerrar sessão manualmente ↗</a> <a href="#rf23" class="req-tag req-tag-rf"># RF23 · Bloquear acesso após tentativas falhas consecutivas ↗</a>
+          <a href="#rf13" class="req-tag req-tag-rf"># RF13 · Efetuar login no sistema ↗</a> <a href="#rf18" class="req-tag req-tag-rf"># RF18 · Encerrar sessão manualmente ↗</a>
         </div>
       </div>
     </div>
@@ -10130,6 +10130,8 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
+| `4.5` | 10/11/2026 | **Reconciliação bidirecional dos vínculos:** sincronização dos RNs e RNFs de cada RF (DoR, DoD, aba de rastreabilidade e termos de busca) com os campos "RFs Executores" das RNs e "RFs Cobertos" dos RNFs, mantendo apenas vínculos sustentados pelo enunciado de cada regra; inclusões: RN01 em RF02, RN05 em RF05, RF06 e RF32 (reverso), RN07 em RF29, RN08 em RF07 e RF08, RN12 em RF09, RN14 em RF12, RN17 em RF16 e RN30 em RF35, além de RNF01, RNF03, RNF05 a RNF07, RNF09, RNF14 e RNF18 a RNF20 nos RFs correspondentes; remoções: RN10 de RF20 e RF32 (regra de ACID no rateio) e RN08 de RF21 (regra de comprovante fiscal), além dos vínculos reversos sem sustentação nos cards de RN e RNF; correção das citações nos critérios de RF06, RF20, RF21 (justificativa mínima de 20 caracteres, conforme RNF08), RF28 e RF32. | Paulo Nery | — |
+| `4.4` | 10/11/2026 | **Histórias dos requisitos decompostos:** criação das histórias próprias US37 a US40 para RF37 a RF40 (correspondência 1:1 US*nn* ↔ RF*nn*, 40 histórias); restrição dos enunciados de US33 e US34 ao cadastro, eliminando a sobreposição com atualização, consulta e tetos orçamentários; ratificação das 8 h de RF33 e RF34 como estimativa restrita ao cadastro; correção do filtro "Evolutivo Pós-MVP" (atributo `data-mvp` sem acento nos 9 RFs pós-MVP) e dos contadores do filtro (80 itens no MVP e 11 pós-MVP). | Paulo Nery | — |
 | `4.3` | 02/11/2026 | **Revisão Cruzada & FLIT:** ferramenta de presença padronizada como FLIT (anteriormente registrada como Shifton) em RF20, CAR-09, critérios DoR/DoD e catálogo; refinamento dos perfis dos atores RBAC e inclusão de nota de alinhamento sociotécnico de Maria Beatryz. | Gustavo Bonifácio e Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `4.2` | 02/11/2026 | **Padronização Expandida & Links Bidirecionais:** migração das Regras de Negócio (cards vermelhos) e Requisitos Não Funcionais (cards azuis) para a arquitetura expansível padronizada dos RFs; estabelecimento da linkagem bidirecional recíproca entre Características de Produto (CAR-01 a CAR-10) e Requisitos Funcionais; saneamento de rotas e âncoras relativas do MkDocs. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `4.1` | 30/10/2026 | **Desacoplamento e Interconexão Bidirecional Total:** separação da Pirâmide de Abstração e Matriz-Síntese no documento exclusivo `rastreabilidade.md`; remoção da seção preliminar de Casos de Uso do Catálogo; reestruturação completa das 31 Regras de Negócio e 20 Requisitos Não Funcionais em cards visuais interativos com links bidirecionais diretos para os Requisitos Funcionais executores; integração com deck de navegação rápida. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

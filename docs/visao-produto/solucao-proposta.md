@@ -343,8 +343,8 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
 | CAR-02 | MVP | RF04, RF19, RF22, RF32 e RF35 no MVP |
 | CAR-03 | MVP (parcial) | RF05, RF06 e RF27 no MVP; RF21 na Fase 2 |
 | CAR-04 | MVP | RF07, RF08, RF28 e RF29 no MVP |
-| CAR-05 | MVP (parcial) | RF09, RF10 e RF33 no MVP; RF30 na Fase 2 |
-| CAR-06 | MVP (parcial) | RF11 e RF34 no MVP; RF12 e RF31 na Fase 2 |
+| CAR-05 | MVP (parcial) | RF09, RF10, RF33, RF37 e RF38 no MVP; RF30 na Fase 2 |
+| CAR-06 | MVP (parcial) | RF11, RF34, RF39 e RF40 no MVP; RF12 e RF31 na Fase 2 |
 | CAR-07 | MVP (parcial) | RF13, RF14, RF17, RF18 e RF23 no MVP; RF24 na Fase 2 |
 | CAR-08 | Fase 2 | RF15 e RF16 na Fase 2 (logs de auditoria persistidos no MVP via RNF15/RNF16) |
 | CAR-09 | Fase 2 | RF20 na Fase 2 |
@@ -1352,3 +1352,4 @@ O DUOC Finance deverá gerar benefícios tangíveis para a organização e para 
 | `2.6` | 29/10/2026 | Classificação das características (CAR) por fase de entrega (MVP ou Fase 2), esclarecendo o escopo das CAR-08 a CAR-12, conforme issue docente; harmonização das contribuições secundárias das CAR-03 e CAR-10 e das listas de apoio das OEs com a matriz-síntese do Capítulo 8. | Gustavo Bonifácio |  |
 | `2.7` | 02/11/2026 | Revisão cruzada com os Capítulos 2, 4 e 6 após feedback do professor: ferramenta de presença padronizada como FLIT (nome anteriormente registrado como Shifton); perfil do Administrador Financeiro e visão gerencial dos sócios sem referência a folha de pagamento. | Gustavo Bonifácio |  |
 | `2.8` | 02/11/2026 | Padronização das relações de OEs e CARs com cards interativos; diferenciação cromática de headers de cards pais por módulo; abertura dinâmica por ancoragem e recolhimento padrão de CARs. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `2.9` | 10/11/2026 | Inclusão dos requisitos decompostos RF37 e RF38 (CAR-05) e RF39 e RF40 (CAR-06) na classificação das características por fase de entrega, em sincronia com a linha de corte do MVP (31 RFs). | Paulo Nery | — |
