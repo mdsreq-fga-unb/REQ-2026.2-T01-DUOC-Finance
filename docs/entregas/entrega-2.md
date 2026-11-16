@@ -141,10 +141,6 @@ A tabela a seguir consolida o checklist de conformidade dos artefatos da Entrega
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `0.1` | 07/09/2026 | Criação da página com alerta de documento em desenvolvimento | Matheus Ribeiro | Eric Araújo |
-| `1.0` | 12/10/2026 | Estruturação formal do Ponto de Controle 2 com base no Template Oficial (v8): O Que Foi Solicitado (Seções 8, 9, 10 e 11.2), matriz de rastreabilidade dos artefatos entregues, seção de vídeo com espaço reservado para o link da gravação, distribuição por integrante, decisões estruturantes, autoavaliação e checklist de auditoria e conformidade | Paulo Nery | |
-| `1.1` | 13/10/2026 | Atualização de âncoras semânticas da Seção 2 e Checklist da Seção 5 (Priorização, DoR/DoD, Backlog), alinhamento métrico com o escopo consolidado do MVP e incorporação da gravação oficial em vídeo da apresentação da Entrega 2 | Matheus Ribeiro | Eric Araújo | |
-| `1.2` | 28/10/2026 | Atualização da descrição da Definição do MVP (36 RFs: 27 no MVP e 9 no backlog evolutivo, sem requisitos complementares) e do Backlog Geral (10 épicos e 36 histórias), em sincronia com os Capítulos 8 e 10. | Paulo Nery | — |
-| `1.3` | 02/11/2026 | Atualização do status da Entrega 2 para concluída com link direto para o vídeo oficial incorporado na Seção 3. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `1.4` | 10/11/2026 | Sincronização dos quantitativos com o catálogo e a priorização após a consolidação dos requisitos decompostos: 40 RFs (RF01 a RF40) e 40 casos de teste; linha de corte com 31 RFs no MVP (77,5%) e 9 no backlog evolutivo (22,5%), com 40 histórias de usuário. | Paulo Nery | — |
-| `1.5` | 16/11/2026 | Desduplicação e harmonização com o registro canônico de validação do MVP (Seção 8.12): retificação da síntese da decisão 6 e do item 12 do checklist, registrando o alinhamento inicial com ressalvas na Reunião 05 e o status de pendente de validação formal para a composição de 31 RFs; sincronização das menções de contagem do MVP. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `1.0` | 12/10/2026 | Estruturação formal do Ponto de Controle 2 da Unidade 2, vídeo oficial e checklist de conformidade. | Paulo Nery e Matheus Ribeiro | Eric Araújo |
+| `1.4` | 10/11/2026 | Sincronização dos quantitativos canônicos para 40 RFs (31 no MVP / 9 Pós-MVP) e 40 Histórias de Usuário 1:1. | Paulo Nery | Matheus Ribeiro |
+| `1.5` | 16/11/2026 | Desduplicação do registro de validação com a cliente (Seção 8.12 canônica) e alinhamento do escopo do MVP. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

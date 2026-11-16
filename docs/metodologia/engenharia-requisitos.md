@@ -126,13 +126,7 @@ Nesta seção, as atividades clássicas de Engenharia de Requisitos (ER), suas p
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 05/09/2026 | Estruturação inicial das atividades e mapeamento ao processo | Carlos Gabriel | Matheus Ribeiro |
-| `1.1` | 07/09/2026 | Detalhamento das técnicas de ER e reestruturação da matriz nas fases do RAD | Carlos Gabriel | Matheus Ribeiro Szervinsk |
-| `2.0` | 15/09/2026 | Unificação integral dos artefatos 5.1 e 5.2 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
-| `2.1` | 20/09/2026 | Padronização taxonômica das seções 5.1 e 5.2 (técnicas, práticas, ferramentas, artefatos e critérios), alinhamento da stack técnica para NestJS/Supabase e especificação do uso de dados sintéticos e reais anonimizados em UAT. | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |
-| `2.2` | 21/09/2026 | Ajuste da estratégia de representação e validação de requisitos: UI-First com base no Figma e designs via Frontend, postergando lógica e persistência para após validação do DoR | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `2.3` | 22/09/2026 | Adequação das Seções 5.1 e 5.2 ao feedback do monitor: inclusão de colunas de status/evidência, ajuste taxonômico de elementos de ER, alinhamento do DER (lógico vs físico) e validação incremental. | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |
-| `2.4` | 28/10/2026 | Atualização dos estados das histórias, priorização e DoR/DoD com links para evidências; distinção entre revisão interna por pares e validação pendente com a cliente; sincronização dos estados entre o mapeamento e as fases do RAD. | Giovana Ferreira | — |
-| `2.5` | 02/11/2026 | Revisão cruzada com os Capítulos 2, 4 e 6 após feedback do professor: terminologia de fechamento operacional de diárias e comissões no lugar de folha nas fases 2 e 3 do RAD | Gustavo Bonifácio |  |
-| `2.6` | 10/11/2026 | Correção dos links para o Backlog de Histórias de Usuário, que passou a residir nos cards do Catálogo Integrado de Requisitos após a remoção da página de backlog. | Paulo Nery | — |
-| `2.7` | 16/11/2026 | Sincronização do status da priorização com a Seção 8.12 canônica: registro do escopo consolidado em 31 RFs no MVP e 9 no Pós-MVP e status de pendente de validação formal perante a cliente parceira. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `1.0` | 05/09/2026 | Estruturação inicial das atividades e mapeamento ao processo RAD. | Carlos Gabriel | Matheus Ribeiro |
+| `2.0` | 15/09/2026 | Unificação integral dos artefatos em página contínua e alinhamento da stack (NestJS/Supabase). | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
+| `2.5` | 02/11/2026 | Revisão terminológica sociotécnica e sincronização dos estados de validação com as fases do RAD. | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |
+| `2.7` | 16/11/2026 | Sincronização canônica do escopo do MVP (31 RFs no MVP / 9 Pós-MVP) e status pendente de homologação formal. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

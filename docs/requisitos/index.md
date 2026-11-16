@@ -36,6 +36,138 @@ Todos os elementos estão interligados por **vínculos bidirecionais navegáveis
 <a id="catalogo-funcionais"></a>
 <a id="especificacao-modular-dos-requisitos"></a>
 <a id="catalogo-geral-consolidado"></a>
+
+<details class="tree-overview-box" open>
+  <summary class="tree-overview-header">
+    <span><b>Árvore Estrutural de Requisitos (Problema ➔ OEs ➔ CARs ➔ RFs)</b></span>
+  </summary>
+  
+  <div class="tree-root-card">
+    <b>Problema Central & Objetivo Geral (OG)</b>
+    <span>Descentralização financeira, retrabalho em planilhas e vulnerabilidade jurídica no fechamento de diárias</span>
+  </div>
+
+  <div class="tree-modules-grid">
+    <!-- MÓDULO 1 -->
+    <div class="tree-module-col">
+      <div class="tree-module-header">
+        <span style="color: #0284c7;">OE1 · Padronização e Campo</span>
+        <span class="feat-cov-ratio">10 RFs</span>
+      </div>
+      <div class="tree-car-block">
+        <span class="tree-car-title">CAR-01: Gestão Cadastral</span>
+        <div class="tree-rf-chips">
+          <a href="#rf01" class="tree-rf-btn" title="RF01: Cadastrar colaborador">RF01</a>
+          <a href="#rf02" class="tree-rf-btn" title="RF02: Atualizar cadastro">RF02</a>
+          <a href="#rf03" class="tree-rf-btn" title="RF03: Movimentação funcional">RF03</a>
+          <a href="#rf25" class="tree-rf-btn" title="RF25: Tipo de contratação">RF25</a>
+          <a href="#rf26" class="tree-rf-btn" title="RF26: Histórico cadastral">RF26</a>
+        </div>
+      </div>
+      <div class="tree-car-block">
+        <span class="tree-car-title">CAR-02: Apontamento Campo (RVT)</span>
+        <div class="tree-rf-chips">
+          <a href="#rf04" class="tree-rf-btn" title="RF04: Submeter apontamento">RF04</a>
+          <a href="#rf19" class="tree-rf-btn" title="RF19: Consultar apontamentos">RF19</a>
+          <a href="#rf22" class="tree-rf-btn" title="RF22: Anexar evidências e GPS">RF22</a>
+          <a href="#rf32" class="tree-rf-btn" title="RF32: Deliberar apontamento">RF32</a>
+          <a href="#rf35" class="tree-rf-btn" title="RF35: Retificar apontamento">RF35</a>
+        </div>
+      </div>
+      <div class="tree-car-block">
+        <span class="tree-car-title">CAR-09 / CAR-10: Integrações</span>
+        <div class="tree-rf-chips">
+          <a href="#rf20" class="tree-rf-btn off" title="RF20: Importar presenças FLIT (Pós-MVP)">RF20</a>
+          <a href="#rf36" class="tree-rf-btn off" title="RF36: Exportar planilhas (Pós-MVP)">RF36</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MÓDULO 2 -->
+    <div class="tree-module-col">
+      <div class="tree-module-header">
+        <span style="color: #059669;">OE2 · Fechamento e Reembolsos</span>
+        <span class="feat-cov-ratio">8 RFs</span>
+      </div>
+      <div class="tree-car-block">
+        <span class="tree-car-title">CAR-03: Fechamento Financeiro</span>
+        <div class="tree-rf-chips">
+          <a href="#rf05" class="tree-rf-btn" title="RF05: Solicitar prévia">RF05</a>
+          <a href="#rf06" class="tree-rf-btn" title="RF06: Homologar fechamento">RF06</a>
+          <a href="#rf27" class="tree-rf-btn" title="RF27: Configurar diárias">RF27</a>
+          <a href="#rf21" class="tree-rf-btn off" title="RF21: Estornar fechamento (Pós-MVP)">RF21</a>
+        </div>
+      </div>
+      <div class="tree-car-block">
+        <span class="tree-car-title">CAR-04: Prestação e Reembolsos</span>
+        <div class="tree-rf-chips">
+          <a href="#rf07" class="tree-rf-btn" title="RF07: Submeter reembolso">RF07</a>
+          <a href="#rf08" class="tree-rf-btn" title="RF08: Deliberar reembolso">RF08</a>
+          <a href="#rf28" class="tree-rf-btn" title="RF28: Submeter adiantamento">RF28</a>
+          <a href="#rf29" class="tree-rf-btn" title="RF29: Deliberar adiantamento">RF29</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MÓDULO 3 -->
+    <div class="tree-module-col">
+      <div class="tree-module-header">
+        <span style="color: #d97706;">OE3 · Custos e Orçamento</span>
+        <span class="feat-cov-ratio">12 RFs</span>
+      </div>
+      <div class="tree-car-block">
+        <span class="tree-car-title">CAR-05: Apropriação por Obra</span>
+        <div class="tree-rf-chips">
+          <a href="#rf09" class="tree-rf-btn" title="RF09: Apropriar custos">RF09</a>
+          <a href="#rf10" class="tree-rf-btn" title="RF10: Rastreabilidade custos">RF10</a>
+          <a href="#rf33" class="tree-rf-btn" title="RF33: Cadastrar contrato">RF33</a>
+          <a href="#rf37" class="tree-rf-btn" title="RF37: Atualizar contrato">RF37</a>
+          <a href="#rf38" class="tree-rf-btn" title="RF38: Consultar contratos">RF38</a>
+          <a href="#rf30" class="tree-rf-btn off" title="RF30: Comparativo custos (Pós-MVP)">RF30</a>
+        </div>
+      </div>
+      <div class="tree-car-block">
+        <span class="tree-car-title">CAR-06: Painel Orçamentário</span>
+        <div class="tree-rf-chips">
+          <a href="#rf11" class="tree-rf-btn" title="RF11: Filtrar indicadores">RF11</a>
+          <a href="#rf34" class="tree-rf-btn" title="RF34: Cadastrar centro custo">RF34</a>
+          <a href="#rf39" class="tree-rf-btn" title="RF39: Atualizar centro custo">RF39</a>
+          <a href="#rf40" class="tree-rf-btn" title="RF40: Definir tetos obra">RF40</a>
+          <a href="#rf12" class="tree-rf-btn off" title="RF12: Execução orçamentária (Pós-MVP)">RF12</a>
+          <a href="#rf31" class="tree-rf-btn off" title="RF31: Alertas teto (Pós-MVP)">RF31</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MÓDULO 4 -->
+    <div class="tree-module-col">
+      <div class="tree-module-header">
+        <span style="color: #7c3aed;">OE4 · Governança e RBAC</span>
+        <span class="feat-cov-ratio">8 RFs</span>
+      </div>
+      <div class="tree-car-block">
+        <span class="tree-car-title">CAR-07: Controle Acesso (RBAC)</span>
+        <div class="tree-rf-chips">
+          <a href="#rf13" class="tree-rf-btn" title="RF13: Efetuar login">RF13</a>
+          <a href="#rf14" class="tree-rf-btn" title="RF14: Gerenciar perfis">RF14</a>
+          <a href="#rf17" class="tree-rf-btn" title="RF17: Ativar / recuperar">RF17</a>
+          <a href="#rf18" class="tree-rf-btn" title="RF18: Logout manual">RF18</a>
+          <a href="#rf23" class="tree-rf-btn" title="RF23: Bloquear tentativas">RF23</a>
+          <a href="#rf24" class="tree-rf-btn off" title="RF24: Renovar senhas (Pós-MVP)">RF24</a>
+        </div>
+      </div>
+      <div class="tree-car-block">
+        <span class="tree-car-title">CAR-08: Trilha de Auditoria</span>
+        <div class="tree-rf-chips">
+          <a href="#rf15" class="tree-rf-btn off" title="RF15: Consultar trilha (Pós-MVP)">RF15</a>
+          <a href="#rf16" class="tree-rf-btn off" title="RF16: Exportar auditoria (Pós-MVP)">RF16</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+
+
 ## Catálogo Geral de Requisitos Funcionais (Cards Interativos)
 
 Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicamente entre os **91 Itens Estruturantes** do catálogo (**40 Requisitos Funcionais**, **31 Regras de Negócio** e **20 Requisitos Não Funcionais**). Cada card consolida a especificação oficial, critérios de aceitação DoR/DoD e rastreabilidade direta com os **elementos estruturantes do projeto** como <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OEs ↗</a>, <a href="../visao-produto/solucao-proposta/#23-caracteristicas-do-produto-car" class="req-tag req-tag-car"># CARs ↗</a>, <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix"># Matriz 4 × 4 ↗</a>, <a href="governanca-conformidade/" class="req-tag req-tag-law"># Governança & CLT/LGPD ↗</a>, <a href="#catalogo-regras-de-negocio" class="req-tag req-tag-rn"># RNs ↗</a> e <a href="#catalogo-nao-funcionais" class="req-tag req-tag-rnf"># RNFs ↗</a>.
@@ -256,26 +388,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE1 · Padronizar e Unificar os Dados ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-01 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF01</strong> · Cadastrar colaborador
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn01" class="req-tag req-tag-rn"># RN01 · Unicidade e Validação Cadastral por CPF ↗</a> <a href="#rn03" class="req-tag req-tag-rn"># RN03 · Validação Prévia de Dados Bancários e Chave Pix ↗</a> <a href="#rn22" class="req-tag req-tag-rn"># RN22 · Tipos de Contratação Válidos ↗</a> <a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn01" class="req-tag req-tag-rn"># RN01 · Unicidade e Validação Cadastral por CPF ↗</a> <a href="#rn03" class="req-tag req-tag-rn"># RN03 · Validação Prévia de Dados Bancários e Chave Pix ↗</a> <a href="#rn22" class="req-tag req-tag-rn"># RN22 · Tipos de Contratação Válidos ↗</a> <a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -470,26 +616,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE1 · Padronizar e Unificar os Dados ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-01 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF02</strong> · Atualizar cadastro de colaborador
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn01" class="req-tag req-tag-rn"># RN01 · Unicidade e Validação Cadastral por CPF ↗</a> <a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn01" class="req-tag req-tag-rn"># RN01 · Unicidade e Validação Cadastral por CPF ↗</a> <a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -680,26 +840,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE1 · Padronizar e Unificar os Dados ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-01 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF03</strong> · Registrar movimentação funcional
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn04" class="req-tag req-tag-rn"># RN04 · Revogação Automática de Credenciais em Afastamento ou Rescisão ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn04" class="req-tag req-tag-rn"># RN04 · Revogação Automática de Credenciais em Afastamento ou Rescisão ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -890,26 +1064,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE1 · Padronizar e Unificar os Dados ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-02 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF04</strong> · Submeter apontamento de campo
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # TECNICO_CAMPO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1100,26 +1288,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE2 · Acelerar Fechamento e Eficiência Administrativa ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-03 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF05</strong> · Solicitar prévia de fechamento
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1310,26 +1512,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE2 · Acelerar Fechamento e Eficiência Administrativa ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-03 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF06</strong> · Homologar fechamento financeiro
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1520,26 +1736,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE2 · Acelerar Fechamento e Eficiência Administrativa ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-04 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF07</strong> · Submeter solicitação de reembolso
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # TECNICO_CAMPO / GESTOR_OBRAS
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn06" class="req-tag req-tag-rn"># RN06 · Janela Temporal para Prestação de Contas de Reembolso ↗</a> <a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># TECNICO_CAMPO / GESTOR_OBRAS</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn06" class="req-tag req-tag-rn"># RN06 · Janela Temporal para Prestação de Contas de Reembolso ↗</a> <a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1730,26 +1960,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE2 · Acelerar Fechamento e Eficiência Administrativa ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-04 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF08</strong> · Deliberar solicitação de reembolso
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn07" class="req-tag req-tag-rn"># RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa ↗</a> <a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn07" class="req-tag req-tag-rn"># RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa ↗</a> <a href="#rn08" class="req-tag req-tag-rn"># RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso ↗</a> <a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1940,26 +2184,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE3 · Transparência de Custos por Contrato de Obra ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-05 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF09</strong> · Apropriar custos operacionais
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a> <a href="#rn12" class="req-tag req-tag-rn"># RN12 · Segregação de Despesas Administrativas e Operacionais ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn10" class="req-tag req-tag-rn"># RN10 · Garantia de Consistência Transacional no Rateio de Custos ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a> <a href="#rn12" class="req-tag req-tag-rn"># RN12 · Segregação de Despesas Administrativas e Operacionais ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -2150,26 +2408,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE3 · Transparência de Custos por Contrato de Obra ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-05 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF10</strong> · Consultar rastreabilidade de custos
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # GESTOR_OBRAS / ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn12" class="req-tag req-tag-rn"># RN12 · Segregação de Despesas Administrativas e Operacionais ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn12" class="req-tag req-tag-rn"># RN12 · Segregação de Despesas Administrativas e Operacionais ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -2360,26 +2632,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE3 · Transparência de Custos por Contrato de Obra ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-06 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF11</strong> · Filtrar indicadores de custos
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn14" class="req-tag req-tag-rn"># RN14 · Sigilo e Não-Exposição de Remunerações Individuais em Painéis ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn14" class="req-tag req-tag-rn"># RN14 · Sigilo e Não-Exposição de Remunerações Individuais em Painéis ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -2570,26 +2856,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE3 · Transparência de Custos por Contrato de Obra ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-06 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF12</strong> · Monitorar execução orçamentária
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # GESTOR_OBRAS / ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a> <a href="#rn14" class="req-tag req-tag-rn"># RN14 · Sigilo e Não-Exposição de Remunerações Individuais em Painéis ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a> <a href="#rn14" class="req-tag req-tag-rn"># RN14 · Sigilo e Não-Exposição de Remunerações Individuais em Painéis ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf"># RNF19 · Garantir acessibilidade digital nas interfaces do sistema ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -2784,26 +3084,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE4 · Segurança, Governança e Conformidade Legal ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-07 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF13</strong> · Efetuar login no sistema
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # TODOS OS USUÁRIOS
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn15" class="req-tag req-tag-rn"># RN15 · Autenticação por JWT com Sessão Temporal Limitada ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># TODOS OS USUÁRIOS</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn15" class="req-tag req-tag-rn"># RN15 · Autenticação por JWT com Sessão Temporal Limitada ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf03" class="req-tag req-tag-rnf"># RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito ↗</a> <a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf"># RNF18 · Garantir disponibilidade mínima mensal do sistema ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -2994,26 +3308,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE4 · Segurança, Governança e Conformidade Legal ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-07 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF14</strong> · Gerenciar perfis de acesso
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_SISTEMA
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn16" class="req-tag req-tag-rn"># RN16 · Princípio do Menor Privilégio e Segregação de Funções (SoD) ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_SISTEMA</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn16" class="req-tag req-tag-rn"># RN16 · Princípio do Menor Privilégio e Segregação de Funções (SoD) ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf"># RNF20 · Validar integridade de payloads em todas as rotas de escrita da API ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -3204,26 +3532,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE4 · Segurança, Governança e Conformidade Legal ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-08" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-08 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF15</strong> · Consultar trilha de auditoria
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_SISTEMA / ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-08" class="req-tag req-tag-car"># CAR-08 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a> <a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_SISTEMA / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a> <a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf15" class="req-tag req-tag-rnf"># RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf"># RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf"># RNF17 · Realizar backup automático diário com restauração verificada ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf15" class="req-tag req-tag-rnf"># RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf"># RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf"># RNF17 · Realizar backup automático diário com restauração verificada ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -3414,26 +3756,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE4 · Segurança, Governança e Conformidade Legal ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-08" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-08 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF16</strong> · Exportar relatório de auditoria
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_SISTEMA
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-08" class="req-tag req-tag-car"># CAR-08 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a> <a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_SISTEMA</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a> <a href="#rn18" class="req-tag req-tag-rn"># RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria ↗</a> <a href="#rn19" class="req-tag req-tag-rn"># RN19 · Política de Retenção Quinquenal de Logs ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf15" class="req-tag req-tag-rnf"># RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf"># RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf"># RNF17 · Realizar backup automático diário com restauração verificada ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf15" class="req-tag req-tag-rnf"># RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf"># RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf"># RNF17 · Realizar backup automático diário com restauração verificada ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -3628,26 +3984,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE4 · Segurança, Governança e Conformidade Legal ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-07 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF17</strong> · Ativar acesso inicial e recuperar credenciais
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # TODOS OS USUÁRIOS
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn15" class="req-tag req-tag-rn"># RN15 · Autenticação por JWT com Sessão Temporal Limitada ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># TODOS OS USUÁRIOS</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn15" class="req-tag req-tag-rn"># RN15 · Autenticação por JWT com Sessão Temporal Limitada ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -3842,26 +4212,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE4 · Segurança, Governança e Conformidade Legal ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-07 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF18</strong> · Encerrar sessão manualmente
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # TODOS OS USUÁRIOS
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn15" class="req-tag req-tag-rn"># RN15 · Autenticação por JWT com Sessão Temporal Limitada ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># TODOS OS USUÁRIOS</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn15" class="req-tag req-tag-rn"># RN15 · Autenticação por JWT com Sessão Temporal Limitada ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf13" class="req-tag req-tag-rnf"># RNF13 · Expirar token de acesso temporário em no máximo 8 horas ↗</a> <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -4052,26 +4436,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE1 · Padronizar e Unificar os Dados ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-02 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF19</strong> · Consultar apontamentos registrados
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # TECNICO_CAMPO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn16" class="req-tag req-tag-rn"># RN16 · Princípio do Menor Privilégio e Segregação de Funções (SoD) ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn16" class="req-tag req-tag-rn"># RN16 · Princípio do Menor Privilégio e Segregação de Funções (SoD) ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -4262,26 +4660,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE1 · Padronizar e Unificar os Dados ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-09" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-09 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF20</strong> · Importar presenças homologadas
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-09" class="req-tag req-tag-car"># CAR-09 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <span class="req-tag-none">—</span>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><span class="req-tag-none">—</span></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -4472,26 +4884,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE2 · Acelerar Fechamento e Eficiência Administrativa ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-03 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF21</strong> · Estornar fechamento financeiro
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn17" class="req-tag req-tag-rn"># RN17 · Registro Atômico de Mutações em Trilha de Auditoria ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf08" class="req-tag req-tag-rnf"># RNF08 · Garantir rastreabilidade probatória e não-repúdio em operações de estorno ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf05" class="req-tag req-tag-rnf"># RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf08" class="req-tag req-tag-rnf"># RNF08 · Garantir rastreabilidade probatória e não-repúdio em operações de estorno ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -4682,26 +5108,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE1 · Padronizar e Unificar os Dados ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-02 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF22</strong> · Anexar evidências e geolocalização ao apontamento
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # TECNICO_CAMPO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn24" class="req-tag req-tag-rn"># RN24 · Captura de Geolocalização Não Bloqueante ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn24" class="req-tag req-tag-rn"># RN24 · Captura de Geolocalização Não Bloqueante ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -4892,26 +5332,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE4 · Segurança, Governança e Conformidade Legal ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-07 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF23</strong> · Bloquear acesso após tentativas falhas consecutivas
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_SISTEMA
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn20" class="req-tag req-tag-rn"># RN20 · Limite de Tentativas de Autenticação ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_SISTEMA</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn20" class="req-tag req-tag-rn"># RN20 · Limite de Tentativas de Autenticação ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -5102,26 +5556,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE4 · Segurança, Governança e Conformidade Legal ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-07 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF24</strong> · Impor renovação periódica de senhas
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_SISTEMA
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-07" class="req-tag req-tag-car"># CAR-07 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn21" class="req-tag req-tag-rn"># RN21 · Política de Expiração e Histórico de Senhas ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_SISTEMA</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn21" class="req-tag req-tag-rn"># RN21 · Política de Expiração e Histórico de Senhas ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf14" class="req-tag req-tag-rnf"># RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -5312,26 +5780,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE1 · Padronizar e Unificar os Dados ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-01 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF25</strong> · Cadastrar tipo de contratação do colaborador
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn22" class="req-tag req-tag-rn"># RN22 · Tipos de Contratação Válidos ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn22" class="req-tag req-tag-rn"># RN22 · Tipos de Contratação Válidos ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -5522,26 +6004,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE1 · Padronizar e Unificar os Dados ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-01 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF26</strong> · Consultar histórico de alterações cadastrais e bancárias
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-01" class="req-tag req-tag-car"># CAR-01 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn23" class="req-tag req-tag-rn"># RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -5732,26 +6228,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE2 · Acelerar Fechamento e Eficiência Administrativa ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-03" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-03 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF27</strong> · Configurar tabela de valores de diárias técnicas
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-03" class="req-tag req-tag-car"># CAR-03 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn25" class="req-tag req-tag-rn"># RN25 · Vigência dos Valores de Diárias Técnicas ↗</a> <a href="#rn31" class="req-tag req-tag-rn"># RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -5942,26 +6452,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE2 · Acelerar Fechamento e Eficiência Administrativa ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-04 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF28</strong> · Submeter solicitação de adiantamento operacional
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # TECNICO_CAMPO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn26" class="req-tag req-tag-rn"># RN26 · Elegibilidade do Adiantamento Operacional ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn26" class="req-tag req-tag-rn"># RN26 · Elegibilidade do Adiantamento Operacional ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -6152,26 +6676,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE2 · Acelerar Fechamento e Eficiência Administrativa ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-04" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-04 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF29</strong> · Deliberar solicitação de adiantamento operacional
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-04" class="req-tag req-tag-car"># CAR-04 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn07" class="req-tag req-tag-rn"># RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa ↗</a> <a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn07" class="req-tag req-tag-rn"># RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa ↗</a> <a href="#rn27" class="req-tag req-tag-rn"># RN27 · Notificação de Pendências Financeiras ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf06" class="req-tag req-tag-rnf"># RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -6362,26 +6900,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE3 · Transparência de Custos por Contrato de Obra ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-05 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF30</strong> · Consultar comparativo histórico de custos entre contratos
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # GESTOR_OBRAS / ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn28" class="req-tag req-tag-rn"># RN28 · Comparativo Histórico de Custos ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn28" class="req-tag req-tag-rn"># RN28 · Comparativo Histórico de Custos ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -6572,26 +7124,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE3 · Transparência de Custos por Contrato de Obra ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-06 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF31</strong> · Configurar alertas de execução orçamentária
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # GESTOR_OBRAS
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn29" class="req-tag req-tag-rn"># RN29 · Disparo de Alertas Preventivos de Extrapolação Orçamentária ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn29" class="req-tag req-tag-rn"># RN29 · Disparo de Alertas Preventivos de Extrapolação Orçamentária ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf"># RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -6782,26 +7348,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE1 · Padronizar e Unificar os Dados ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-02 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF32</strong> · Deliberar apontamento de campo
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # GESTOR_OBRAS
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn05" class="req-tag req-tag-rn"># RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -6992,26 +7572,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE3 · Transparência de Custos por Contrato de Obra ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-05 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF33</strong> · Cadastrar contrato de obra
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # GESTOR_OBRAS / ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -7202,26 +7796,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE3 · Transparência de Custos por Contrato de Obra ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-06 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF34</strong> · Cadastrar centro de custo de obra
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # GESTOR_OBRAS
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -7412,26 +8020,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE1 · Padronizar e Unificar os Dados ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-02 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF35</strong> · Retificar apontamento de campo
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # TECNICO_CAMPO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-02" class="req-tag req-tag-car"># CAR-02 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf01" class="req-tag req-tag-rnf"># RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf"># RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf"># RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -7622,26 +8244,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE1 · Padronizar e Unificar os Dados ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-10" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-10 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF36</strong> · Exportar dados consolidados em planilha
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-10" class="req-tag req-tag-car"># CAR-10 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <span class="req-tag-none">—</span>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><span class="req-tag-none">—</span></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf02" class="req-tag req-tag-rnf"># RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -7832,26 +8468,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE3 · Transparência de Custos por Contrato de Obra ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-05 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF37</strong> · Atualizar contrato de obra
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # GESTOR_OBRAS / ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf"># RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -8042,26 +8692,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE3 · Transparência de Custos por Contrato de Obra ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-05 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF38</strong> · Consultar contratos de obra
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # GESTOR_OBRAS / ADMIN_FINANCEIRO
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-05" class="req-tag req-tag-car"># CAR-05 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <span class="req-tag-none">—</span>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><span class="req-tag-none">—</span></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -8252,26 +8916,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE3 · Transparência de Custos por Contrato de Obra ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-06 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF39</strong> · Atualizar centro de custo de obra
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # GESTOR_OBRAS
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn09" class="req-tag req-tag-rn"># RN09 · Rateio Proporcional de Custos Indiretos por Contrato ↗</a> <a href="#rn11" class="req-tag req-tag-rn"># RN11 · Parametrização Obrigatória de Centros de Custo por Contrato ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -8462,26 +9140,40 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
     </div>
 
     <div class="req-tab-pane" data-pane="rastreabilidade">
-      <div class="req-trace-grid">
-        <div class="req-trace-item">
-          <span class="req-trace-title">Objetivo Estratégico (OE)</span>
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
+      <div class="req-tree-branch">
+        <div class="req-tree-step">
+          <span class="req-tree-node req-tree-og" title="Problema Central e Objetivo Geral">
+            <strong>OG</strong> · Descentralização Financeira
+          </span>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-tree-node req-tag-oe" title="Objetivo Específico Estratégico">
+            # OE3 · Transparência de Custos por Contrato de Obra ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tree-node req-tag-car" title="Característica Arquitetural de Produto">
+            # CAR-06 ↗
+          </a>
+          <span class="req-tree-arrow">➔</span>
+          <span class="req-tree-node req-tag-rf" style="font-weight: 800; border: 1.5px solid var(--duoc-gold) !important;" title="Requisito Funcional em Foco">
+            <strong>RF40</strong> · Definir tetos orçamentários de obra
+          </span>
+          <span class="req-tree-node req-tag-role" title="Ator Canônico RBAC">
+            # GESTOR_OBRAS
+          </span>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Característica de Produto (CAR)</span>
-          <a href="../visao-produto/solucao-proposta/#car-06" class="req-tag req-tag-car"># CAR-06 ↗</a>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Regras de Negócio Condicionantes:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a> <a href="#rn29" class="req-tag req-tag-rn"># RN29 · Disparo de Alertas Preventivos de Extrapolação Orçamentária ↗</a>
+          </div>
         </div>
-        <div class="req-trace-item">
-          <span class="req-trace-title">Perfil de Acesso Canônico (RBAC)</span>
-          <span class="req-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Regras de Negócio (RNs) Condicionantes</span>
-          <div class="req-tags-wrap"><a href="#rn13" class="req-tag req-tag-rn"># RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário ↗</a> <a href="#rn29" class="req-tag req-tag-rn"># RN29 · Disparo de Alertas Preventivos de Extrapolação Orçamentária ↗</a></div>
-        </div>
-        <div class="req-trace-item req-trace-full">
-          <span class="req-trace-title">Requisitos Não Funcionais (RNFs) e Restrições</span>
-          <div class="req-tags-wrap"><a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a></div>
+
+        <div class="req-tree-leaves-row">
+          <span class="req-tree-leaves-label">Requisitos Não Funcionais & Restrições:</span>
+          <div class="req-tree-leaves-chips">
+            <a href="#rnf09" class="req-tag req-tag-rnf"># RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf"># RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -11610,15 +12302,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `4.6` | 16/11/2026 | **Harmonização do procedimento de retificação pós-fechamento (RF06 e RF35):** explicitação do Procedimento Operacional de Exceção Assistida no critério de aceitação do RF06 e desbloqueio administrativo via RF35 sob autorização do Administrador Financeiro, mantendo o estorno em lote (RF21) no backlog pós-MVP com integridade e trilha de auditoria (RN17, RNF15, RNF16). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `4.5` | 10/11/2026 | **Reconciliação bidirecional dos vínculos:** sincronização dos RNs e RNFs de cada RF (DoR, DoD, aba de rastreabilidade e termos de busca) com os campos "RFs Executores" das RNs e "RFs Cobertos" dos RNFs, mantendo apenas vínculos sustentados pelo enunciado de cada regra; inclusões: RN01 em RF02, RN05 em RF05, RF06 e RF32 (reverso), RN07 em RF29, RN08 em RF07 e RF08, RN12 em RF09, RN14 em RF12, RN17 em RF16 e RN30 em RF35, além de RNF01, RNF03, RNF05 a RNF07, RNF09, RNF14 e RNF18 a RNF20 nos RFs correspondentes; remoções: RN10 de RF20 e RF32 (regra de ACID no rateio) e RN08 de RF21 (regra de comprovante fiscal), além dos vínculos reversos sem sustentação nos cards de RN e RNF; correção das citações nos critérios de RF06, RF20, RF21 (justificativa mínima de 20 caracteres, conforme RNF08), RF28 e RF32. | Paulo Nery | — |
-| `4.4` | 10/11/2026 | **Histórias dos requisitos decompostos:** criação das histórias próprias US37 a US40 para RF37 a RF40 (correspondência 1:1 US*nn* ↔ RF*nn*, 40 histórias); restrição dos enunciados de US33 e US34 ao cadastro, eliminando a sobreposição com atualização, consulta e tetos orçamentários; ratificação das 8 h de RF33 e RF34 como estimativa restrita ao cadastro; correção do filtro "Evolutivo Pós-MVP" (atributo `data-mvp` sem acento nos 9 RFs pós-MVP) e dos contadores do filtro (80 itens no MVP e 11 pós-MVP). | Paulo Nery | — |
-| `4.3` | 02/11/2026 | **Revisão Cruzada & FLIT:** ferramenta de presença padronizada como FLIT (anteriormente registrada como Shifton) em RF20, CAR-09, critérios DoR/DoD e catálogo; refinamento dos perfis dos atores RBAC e inclusão de nota de alinhamento sociotécnico de Maria Beatryz. | Gustavo Bonifácio e Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `4.2` | 02/11/2026 | **Padronização Expandida & Links Bidirecionais:** migração das Regras de Negócio (cards vermelhos) e Requisitos Não Funcionais (cards azuis) para a arquitetura expansível padronizada dos RFs; estabelecimento da linkagem bidirecional recíproca entre Características de Produto (CAR-01 a CAR-10) e Requisitos Funcionais; saneamento de rotas e âncoras relativas do MkDocs. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `4.1` | 30/10/2026 | **Desacoplamento e Interconexão Bidirecional Total:** separação da Pirâmide de Abstração e Matriz-Síntese no documento exclusivo `rastreabilidade.md`; remoção da seção preliminar de Casos de Uso do Catálogo; reestruturação completa das 31 Regras de Negócio e 20 Requisitos Não Funcionais em cards visuais interativos com links bidirecionais diretos para os Requisitos Funcionais executores; integração com deck de navegação rápida. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `4.0` | 29/10/2026 | Consolidação do Catálogo Unificado de Requisitos: centralização dos 40 RFs em Cards de Rastreabilidade Total interativos com links para OEs, CARs, USs, Matriz 4×4 e RNFs; introdução de barra de pesquisa instantânea e filtros rápidos por Módulo e MVP. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `3.8` | 29/10/2026 | Atendimento à issue #126: consolidação das especificações nos módulos, atualização da rastreabilidade e das referências do catálogo; alinhamento de RN02, RF32, RF35 e casos de teste para correção de apontamentos rejeitados. | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |
-| `3.7` | 28/10/2026 | Sincronização com a Priorização e o Backlog: confirmação da alocação no MVP de RF32 a RF35 e de RF36 no backlog evolutivo, refletida nas histórias US32 a US36. | Paulo Nery | Matheus Ribeiro Szervinsk |
-| `3.6` | 13/10/2026 | Auditoria de integridade e qualidade metodológica: restauração do Mapeamento de Necessidades do Cliente e Grafo de Interdependência; padronização estrita de RF24 e métricas de RNF02 e RNF05. | Matheus Ribeiro Szervinsk | Eric Araújo |
-| `3.0` | 08/10/2026 | Atendimento ao feedback docente: conversão dos critérios de aceitação para texto corrido verificável orientado a valor. | Paulo Nery | Matheus Ribeiro Szervinsk |
-| `1.0` | 07/09/2026 | Criação e estruturação da especificação inicial de requisitos de software (Unidade 2). | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
+| `1.0` | 07/09/2026 | Criação e estruturação da especificação inicial de requisitos de software da Unidade 2. | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
+| `2.0` | 29/10/2026 | Consolidação do Catálogo Geral com 40 RFs, 31 RNs e 20 RNFs em cards interativos com busca dinâmica. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `3.0` | 10/11/2026 | Reconciliação atômica de RF37 a RF40 (US37 a US40) em mapeamento 1:1 e alinhamento bidirecional dos vínculos. | Paulo Nery | Matheus Ribeiro Szervinsk |
+| `4.0` | 16/11/2026 | Visualização da Árvore Estrutural de Requisitos no catálogo e ramo da árvore por requisito, eliminando bordas pesadas e consolidando o fluxo assistido de retificação (RF06 x RF35). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

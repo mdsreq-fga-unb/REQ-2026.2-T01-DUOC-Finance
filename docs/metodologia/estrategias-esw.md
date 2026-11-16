@@ -145,10 +145,6 @@ Com base nas características intrínsecas do produto DUOC Finance, na decomposi
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 05/09/2026 | Definição da abordagem, ciclo de vida, comparativo e justificativa | Eric Araújo | Matheus Ribeiro Szervinsk |
-| `1.1` | 07/09/2026 | Padronização metodológica, alinhamento institucional e histórico | Eric Araújo | Matheus Ribeiro Szervinsk |
-| `1.2` | 02/11/2026 | Harmonização da stack tecnológica com o Capítulo 2 (React SPA/Vite, NestJS e PostgreSQL/Supabase), saneamento de termos legados e alinhamento às decisões de arquitetura | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `2.0` | 15/09/2026 | Unificação integral dos artefatos 4.1 a 4.3 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
-| `2.1` | 20/09/2026 | Refatoração profunda para aderência ao Processo RAD, eliminação de nomenclaturas ágeis de gestão e alinhamento de stack tecnológica | Eric Araújo | |
-| `2.2` | 28/10/2026 | Inclusão da execução do Design do Usuário no Incremento 1: fluxos prototipados no Figma, responsável, avaliação pela cliente em 02/10/2026 (Ata 06), resultado, próximo passo e desvio em relação ao processo planejado. | Paulo Nery | — |
-| `2.3` | 15/11/2026 | Modernização visual com cards inteligentes para decisões de abordagem, ciclo de vida e fases do processo RAD | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `1.0` | 05/09/2026 | Definição da abordagem de ciclo de vida RAD, comparativo e justificativa de engenharia. | Eric Araújo | Matheus Ribeiro Szervinsk |
+| `2.0` | 15/09/2026 | Unificação integral dos artefatos metodológicos em página contínua e alinhamento de stack. | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
+| `2.3` | 15/11/2026 | Registro da execução do Design do Usuário (Ata 06) e modernização com cards inteligentes das fases RAD. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

@@ -189,9 +189,6 @@ flowchart TD
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 05/09/2026 | Levantamento da equipe, papéis, canais e rito de validação | Eric Araújo, Gustavo | Matheus Ribeiro Szervinsk |
-| `1.1` | 07/09/2026 | Detalhamento dos ritos sociotécnicos e matriz de canais de comunicação | Eric Araújo, Gustavo | Matheus Ribeiro Szervinsk |
-| `2.0` | 15/09/2026 | Unificação integral dos artefatos 7.1 a 7.3 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
-| `2.1` | 21/09/2026 | Refinamento metodológico do fluxo de validação (UI-First): base conceitual no Figma, estabelecimento ágil dos designs via Frontend com mocks e implementação posterior da lógica de backend e persistência após validação do DoR | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `2.2` | 28/10/2026 | Inclusão das sessões de validação realizadas: validação presencial do protótipo do Incremento 1 no Figma em 02/10/2026, com link para o protótipo, a Ata 06 e o ciclo descrito no Capítulo 4. | Paulo Nery | — |
-| `2.3` | 16/11/2026 | Desduplicação dos acordos de qualidade: substituição de listas redundantes de DoR e DoD pela explicação da dinâmica de validação no fluxo UI-First e inserção de links para os checklists oficiais em dor-dod.md. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `1.0` | 05/09/2026 | Levantamento inicial de canais de comunicação e ritos de validação sociotécnica com a cliente. | Eric Araújo e Gustavo | Matheus Ribeiro Szervinsk |
+| `2.0` | 15/09/2026 | Unificação em página contínua e definição do fluxo de validação iterativa UI-First. | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
+| `2.3` | 16/11/2026 | Desduplicação dos acordos de qualidade DoR/DoD em prol do documento oficial `dor-dod.md` e registro da validação presencial (Ata 06). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
