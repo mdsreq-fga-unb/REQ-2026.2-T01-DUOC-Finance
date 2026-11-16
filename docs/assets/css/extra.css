@@ -272,50 +272,15 @@
   }
 }
 
-/* Tabelas e matrizes fluidas, integradas ao design do portal e com tipografia harmoniosa */
+/* Tabelas e matrizes preenchem a largura disponível horizontalmente e padronizam fonte em 12.8px */
 .md-typeset table:not([class]) {
   width: 100%;
   display: table;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  margin: 1.25rem 0 1.75rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
-[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: none;
-}
-
-.md-typeset table:not([class]) th {
-  font-size: 0.76rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 10px 14px !important;
-  background: rgba(165, 22, 43, 0.05);
-  color: var(--duoc-primary);
-  border-bottom: 2px solid rgba(165, 22, 43, 0.2);
-}
-
-[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
-  background: rgba(22, 24, 29, 0.9);
-  color: #fca5a5;
-  border-bottom: 2px solid rgba(165, 22, 43, 0.35);
-}
-
+.md-typeset table:not([class]) th,
 .md-typeset table:not([class]) td {
-  font-size: 0.84rem !important;
-  line-height: 1.55 !important;
-  padding: 10px 14px !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-}
-
-[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 12.8px !important;
 }
 
 /* ============================================================

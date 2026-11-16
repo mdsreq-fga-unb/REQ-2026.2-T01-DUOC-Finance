@@ -43,6 +43,13 @@
     const target = document.getElementById(targetId) || document.getElementById(rawHash);
     if (!target) return;
 
+    // Se o alvo estiver dentro da Matriz 4x4 oculta, alternar automaticamente a visualizacao
+    if (target.closest("#scope-view-matrix") && typeof window.switchScopeView === "function") {
+      window.switchScopeView("matrix");
+    } else if (target.closest("#scope-view-car") && typeof window.switchScopeView === "function") {
+      window.switchScopeView("car");
+    }
+
     const details = findTargetDetails(target);
     if (details) {
       details.open = true;

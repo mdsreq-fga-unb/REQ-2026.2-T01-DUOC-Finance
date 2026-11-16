@@ -115,10 +115,10 @@ Nesta seção são detalhados os canais oficiais de comunicação, a frequência
 
 <ul>
   <li>
-    <b>Aplicação do Definition of Ready (DoR) na Validação:</b> Nenhuma história de usuário avança para a escrita de rotinas de negócio de backend ou criação de tabelas de banco de dados sem que sua interface frontend esteja prototipada, navegável com dados sintéticos e <b>aprovada pela cliente Maria Beatryz na sessão invertida</b>. O checklist completo, com os critérios de maturidade, INVEST, base visual e requisitos não funcionais mapeados, está documentado canonicamente em <b><a href="../mvp/dor-dod.md#definition-of-ready-dor">Definition of Ready (DoR)</a></b>.
+    <b>Aplicação do Definition of Ready (DoR) na Validação:</b> Nenhuma história de usuário avança para a escrita de rotinas de negócio de backend ou criação de tabelas de banco de dados sem que sua interface frontend esteja prototipada, navegável com dados sintéticos e <b>aprovada pela cliente Maria Beatryz na sessão invertida</b>. O checklist completo, com os critérios de maturidade, INVEST, base visual e requisitos não funcionais mapeados, está documentado canonicamente em <b><a href="../../mvp/dor-dod/#definition-of-ready-dor">Definition of Ready (DoR)</a></b>.
   </li>
   <li>
-    <b>Aplicação do Definition of Done (DoD) na Homologação:</b> Uma entrega só é considerada concluída e passível de merge após ter sua lógica implementada, seus testes unitários e de integração validados no pipeline CI, sua documentação atualizada em conformidade com Docs as Code e seu incremento formalmente homologado pela cliente em ambiente de Staging. Os critérios operacionais completos e o registro de evidências estão formalizados em <b><a href="../mvp/dor-dod.md#definition-of-done-dod">Definition of Done (DoD)</a></b>.
+    <b>Aplicação do Definition of Done (DoD) na Homologação:</b> Uma entrega só é considerada concluída e passível de merge após ter sua lógica implementada, seus testes unitários e de integração validados no pipeline CI, sua documentação atualizada em conformidade com Docs as Code e seu incremento formalmente homologado pela cliente em ambiente de Staging. Os critérios operacionais completos e o registro de evidências estão formalizados em <b><a href="../../mvp/dor-dod/#definition-of-done-dod">Definition of Done (DoD)</a></b>.
   </li>
 </ul>
 

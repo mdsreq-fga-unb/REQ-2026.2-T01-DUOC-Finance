@@ -33,11 +33,11 @@ O recorte do MVP foi concebido para assegurar que o fluxo operacional central da
     <h4 class="journey-title">Cadastro e Identificação</h4>
     <p class="journey-desc">Base cadastral única e validada de colaboradores, dados bancários e funções técnicas de campo.</p>
     <div class="journey-reqs">
-      <a href="index.md#rf01" class="req-tag req-tag-rf"># RF01</a>
-      <a href="index.md#rf02" class="req-tag req-tag-rf"># RF02</a>
-      <a href="index.md#rf03" class="req-tag req-tag-rf"># RF03</a>
-      <a href="index.md#rf25" class="req-tag req-tag-rf"># RF25</a>
-      <a href="index.md#rf26" class="req-tag req-tag-rf"># RF26</a>
+      <a href="../#rf01" class="req-tag req-tag-rf"># RF01</a>
+      <a href="../#rf02" class="req-tag req-tag-rf"># RF02</a>
+      <a href="../#rf03" class="req-tag req-tag-rf"># RF03</a>
+      <a href="../#rf25" class="req-tag req-tag-rf"># RF25</a>
+      <a href="../#rf26" class="req-tag req-tag-rf"># RF26</a>
     </div>
   </div>
 
@@ -46,11 +46,11 @@ O recorte do MVP foi concebido para assegurar que o fluxo operacional central da
     <h4 class="journey-title">Apontamento em Campo</h4>
     <p class="journey-desc">Registro digital de horas trabalhadas em canteiros com GPS, fotos de evidência e retificações.</p>
     <div class="journey-reqs">
-      <a href="index.md#rf04" class="req-tag req-tag-rf"># RF04</a>
-      <a href="index.md#rf19" class="req-tag req-tag-rf"># RF19</a>
-      <a href="index.md#rf22" class="req-tag req-tag-rf"># RF22</a>
-      <a href="index.md#rf32" class="req-tag req-tag-rf"># RF32</a>
-      <a href="index.md#rf35" class="req-tag req-tag-rf"># RF35</a>
+      <a href="../#rf04" class="req-tag req-tag-rf"># RF04</a>
+      <a href="../#rf19" class="req-tag req-tag-rf"># RF19</a>
+      <a href="../#rf22" class="req-tag req-tag-rf"># RF22</a>
+      <a href="../#rf32" class="req-tag req-tag-rf"># RF32</a>
+      <a href="../#rf35" class="req-tag req-tag-rf"># RF35</a>
     </div>
   </div>
 
@@ -59,13 +59,13 @@ O recorte do MVP foi concebido para assegurar que o fluxo operacional central da
     <h4 class="journey-title">Fechamento e Reembolsos</h4>
     <p class="journey-desc">Cálculo de diárias técnicas, prévias, deliberação de despesas e homologação bloqueada.</p>
     <div class="journey-reqs">
-      <a href="index.md#rf05" class="req-tag req-tag-rf"># RF05</a>
-      <a href="index.md#rf06" class="req-tag req-tag-rf"># RF06</a>
-      <a href="index.md#rf07" class="req-tag req-tag-rf"># RF07</a>
-      <a href="index.md#rf08" class="req-tag req-tag-rf"># RF08</a>
-      <a href="index.md#rf27" class="req-tag req-tag-rf"># RF27</a>
-      <a href="index.md#rf28" class="req-tag req-tag-rf"># RF28</a>
-      <a href="index.md#rf29" class="req-tag req-tag-rf"># RF29</a>
+      <a href="../#rf05" class="req-tag req-tag-rf"># RF05</a>
+      <a href="../#rf06" class="req-tag req-tag-rf"># RF06</a>
+      <a href="../#rf07" class="req-tag req-tag-rf"># RF07</a>
+      <a href="../#rf08" class="req-tag req-tag-rf"># RF08</a>
+      <a href="../#rf27" class="req-tag req-tag-rf"># RF27</a>
+      <a href="../#rf28" class="req-tag req-tag-rf"># RF28</a>
+      <a href="../#rf29" class="req-tag req-tag-rf"># RF29</a>
     </div>
   </div>
 
@@ -74,11 +74,11 @@ O recorte do MVP foi concebido para assegurar que o fluxo operacional central da
     <h4 class="journey-title">Apropriação por Obra</h4>
     <p class="journey-desc">Vinculação direta de custos e despesas aos contratos vigentes, garantindo rastreabilidade contábil.</p>
     <div class="journey-reqs">
-      <a href="index.md#rf09" class="req-tag req-tag-rf"># RF09</a>
-      <a href="index.md#rf10" class="req-tag req-tag-rf"># RF10</a>
-      <a href="index.md#rf33" class="req-tag req-tag-rf"># RF33</a>
-      <a href="index.md#rf37" class="req-tag req-tag-rf"># RF37</a>
-      <a href="index.md#rf38" class="req-tag req-tag-rf"># RF38</a>
+      <a href="../#rf09" class="req-tag req-tag-rf"># RF09</a>
+      <a href="../#rf10" class="req-tag req-tag-rf"># RF10</a>
+      <a href="../#rf33" class="req-tag req-tag-rf"># RF33</a>
+      <a href="../#rf37" class="req-tag req-tag-rf"># RF37</a>
+      <a href="../#rf38" class="req-tag req-tag-rf"># RF38</a>
     </div>
   </div>
 
@@ -87,15 +87,15 @@ O recorte do MVP foi concebido para assegurar que o fluxo operacional central da
     <h4 class="journey-title">Painel e Governança</h4>
     <p class="journey-desc">Visão de centros de custo, login seguro corporativo, autenticação RBAC e bloqueio de ataques.</p>
     <div class="journey-reqs">
-      <a href="index.md#rf11" class="req-tag req-tag-rf"># RF11</a>
-      <a href="index.md#rf34" class="req-tag req-tag-rf"># RF34</a>
-      <a href="index.md#rf39" class="req-tag req-tag-rf"># RF39</a>
-      <a href="index.md#rf40" class="req-tag req-tag-rf"># RF40</a>
-      <a href="index.md#rf13" class="req-tag req-tag-rf"># RF13</a>
-      <a href="index.md#rf14" class="req-tag req-tag-rf"># RF14</a>
-      <a href="index.md#rf17" class="req-tag req-tag-rf"># RF17</a>
-      <a href="index.md#rf18" class="req-tag req-tag-rf"># RF18</a>
-      <a href="index.md#rf23" class="req-tag req-tag-rf"># RF23</a>
+      <a href="../#rf11" class="req-tag req-tag-rf"># RF11</a>
+      <a href="../#rf34" class="req-tag req-tag-rf"># RF34</a>
+      <a href="../#rf39" class="req-tag req-tag-rf"># RF39</a>
+      <a href="../#rf40" class="req-tag req-tag-rf"># RF40</a>
+      <a href="../#rf13" class="req-tag req-tag-rf"># RF13</a>
+      <a href="../#rf14" class="req-tag req-tag-rf"># RF14</a>
+      <a href="../#rf17" class="req-tag req-tag-rf"># RF17</a>
+      <a href="../#rf18" class="req-tag req-tag-rf"># RF18</a>
+      <a href="../#rf23" class="req-tag req-tag-rf"># RF23</a>
     </div>
   </div>
 </div>
@@ -252,7 +252,7 @@ A consolidação analítica e a priorização relativa operam por meio de duas f
 </div>
 
 <div class="example-clean-box">
-  <strong>Exemplo Prático Único Demonstrativo: <a href="index.md#rf06">RF06 — Homologar Fechamento Financeiro</a></strong>
+  <strong>Exemplo Prático Único Demonstrativo: <a href="../#rf06">RF06 — Homologar Fechamento Financeiro</a></strong>
   <p style="margin: 4px 0 6px 0;">Com Valor de Negócio <strong>VB = 4</strong> (crítico para encerrar a competência financeira), Esforço <strong>ES = 2</strong> (6 horas de desenvolvimento), Complexidade <strong>CX = 3</strong> (bloqueio compulsório de edição e carimbo UTC) e Lacuna <strong>LC = 2</strong> (equipe domina transações relacionais no PostgreSQL/Supabase):</p>
   <div style="font-family: var(--md-code-font-family, monospace); line-height: 1.5;">
     • <strong>EC</strong> = (2 + 3 + 2) ÷ 3 = 7 ÷ 3 = <strong>2,33</strong> ➔ <strong>Classe 2 (Esforço Moderado)</strong><br>
@@ -300,11 +300,11 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
       <span class="feat-cov-car">CAR-01</span>
       <span class="feat-cov-name">Gestão Cadastral Unificada</span>
       <div class="feat-cov-waf">
-        <a href="index.md#rf01" class="feat-cov-sq on" title="RF01: Cadastrar colaborador (MVP)">RF01</a>
-        <a href="index.md#rf02" class="feat-cov-sq on" title="RF02: Atualizar cadastro (MVP)">RF02</a>
-        <a href="index.md#rf03" class="feat-cov-sq on" title="RF03: Movimentação funcional (MVP)">RF03</a>
-        <a href="index.md#rf25" class="feat-cov-sq on" title="RF25: Tipo de contratação (MVP)">RF25</a>
-        <a href="index.md#rf26" class="feat-cov-sq on" title="RF26: Histórico cadastral (MVP)">RF26</a>
+        <a href="../#rf01" class="feat-cov-sq on" title="RF01: Cadastrar colaborador (MVP)">RF01</a>
+        <a href="../#rf02" class="feat-cov-sq on" title="RF02: Atualizar cadastro (MVP)">RF02</a>
+        <a href="../#rf03" class="feat-cov-sq on" title="RF03: Movimentação funcional (MVP)">RF03</a>
+        <a href="../#rf25" class="feat-cov-sq on" title="RF25: Tipo de contratação (MVP)">RF25</a>
+        <a href="../#rf26" class="feat-cov-sq on" title="RF26: Histórico cadastral (MVP)">RF26</a>
       </div>
       <span class="feat-cov-ratio">5 / 5</span>
     </div>
@@ -313,11 +313,11 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
       <span class="feat-cov-car">CAR-02</span>
       <span class="feat-cov-name">Apontamento de Campo (RVT)</span>
       <div class="feat-cov-waf">
-        <a href="index.md#rf04" class="feat-cov-sq on" title="RF04: Submeter apontamento (MVP)">RF04</a>
-        <a href="index.md#rf19" class="feat-cov-sq on" title="RF19: Consultar apontamentos (MVP)">RF19</a>
-        <a href="index.md#rf22" class="feat-cov-sq on" title="RF22: Anexar evidências e GPS (MVP)">RF22</a>
-        <a href="index.md#rf32" class="feat-cov-sq on" title="RF32: Deliberar apontamento (MVP)">RF32</a>
-        <a href="index.md#rf35" class="feat-cov-sq on" title="RF35: Retificar apontamento (MVP)">RF35</a>
+        <a href="../#rf04" class="feat-cov-sq on" title="RF04: Submeter apontamento (MVP)">RF04</a>
+        <a href="../#rf19" class="feat-cov-sq on" title="RF19: Consultar apontamentos (MVP)">RF19</a>
+        <a href="../#rf22" class="feat-cov-sq on" title="RF22: Anexar evidências e GPS (MVP)">RF22</a>
+        <a href="../#rf32" class="feat-cov-sq on" title="RF32: Deliberar apontamento (MVP)">RF32</a>
+        <a href="../#rf35" class="feat-cov-sq on" title="RF35: Retificar apontamento (MVP)">RF35</a>
       </div>
       <span class="feat-cov-ratio">5 / 5</span>
     </div>
@@ -326,10 +326,10 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
       <span class="feat-cov-car">CAR-03</span>
       <span class="feat-cov-name">Fechamento Financeiro</span>
       <div class="feat-cov-waf">
-        <a href="index.md#rf05" class="feat-cov-sq on" title="RF05: Solicitar prévia (MVP)">RF05</a>
-        <a href="index.md#rf06" class="feat-cov-sq on" title="RF06: Homologar fechamento (MVP)">RF06</a>
-        <a href="index.md#rf27" class="feat-cov-sq on" title="RF27: Configurar diárias (MVP)">RF27</a>
-        <a href="index.md#rf21" class="feat-cov-sq off" title="RF21: Estornar fechamento (Pós-MVP)">RF21</a>
+        <a href="../#rf05" class="feat-cov-sq on" title="RF05: Solicitar prévia (MVP)">RF05</a>
+        <a href="../#rf06" class="feat-cov-sq on" title="RF06: Homologar fechamento (MVP)">RF06</a>
+        <a href="../#rf27" class="feat-cov-sq on" title="RF27: Configurar diárias (MVP)">RF27</a>
+        <a href="../#rf21" class="feat-cov-sq off" title="RF21: Estornar fechamento (Pós-MVP)">RF21</a>
       </div>
       <span class="feat-cov-ratio">3 / 4</span>
     </div>
@@ -338,10 +338,10 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
       <span class="feat-cov-car">CAR-04</span>
       <span class="feat-cov-name">Prestação de Contas e Reembolsos</span>
       <div class="feat-cov-waf">
-        <a href="index.md#rf07" class="feat-cov-sq on" title="RF07: Submeter reembolso (MVP)">RF07</a>
-        <a href="index.md#rf08" class="feat-cov-sq on" title="RF08: Deliberar reembolso (MVP)">RF08</a>
-        <a href="index.md#rf28" class="feat-cov-sq on" title="RF28: Submeter adiantamento (MVP)">RF28</a>
-        <a href="index.md#rf29" class="feat-cov-sq on" title="RF29: Deliberar adiantamento (MVP)">RF29</a>
+        <a href="../#rf07" class="feat-cov-sq on" title="RF07: Submeter reembolso (MVP)">RF07</a>
+        <a href="../#rf08" class="feat-cov-sq on" title="RF08: Deliberar reembolso (MVP)">RF08</a>
+        <a href="../#rf28" class="feat-cov-sq on" title="RF28: Submeter adiantamento (MVP)">RF28</a>
+        <a href="../#rf29" class="feat-cov-sq on" title="RF29: Deliberar adiantamento (MVP)">RF29</a>
       </div>
       <span class="feat-cov-ratio">4 / 4</span>
     </div>
@@ -350,12 +350,12 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
       <span class="feat-cov-car">CAR-05</span>
       <span class="feat-cov-name">Apropriação de Custos por Obra</span>
       <div class="feat-cov-waf">
-        <a href="index.md#rf09" class="feat-cov-sq on" title="RF09: Apropriar custos operacionais (MVP)">RF09</a>
-        <a href="index.md#rf10" class="feat-cov-sq on" title="RF10: Consultar rastreabilidade de custos (MVP)">RF10</a>
-        <a href="index.md#rf33" class="feat-cov-sq on" title="RF33: Cadastrar contrato de obra (MVP)">RF33</a>
-        <a href="index.md#rf37" class="feat-cov-sq on" title="RF37: Atualizar contrato de obra (MVP)">RF37</a>
-        <a href="index.md#rf38" class="feat-cov-sq on" title="RF38: Consultar contratos de obra (MVP)">RF38</a>
-        <a href="index.md#rf30" class="feat-cov-sq off" title="RF30: Consultar comparativo de custos (Pós-MVP)">RF30</a>
+        <a href="../#rf09" class="feat-cov-sq on" title="RF09: Apropriar custos operacionais (MVP)">RF09</a>
+        <a href="../#rf10" class="feat-cov-sq on" title="RF10: Consultar rastreabilidade de custos (MVP)">RF10</a>
+        <a href="../#rf33" class="feat-cov-sq on" title="RF33: Cadastrar contrato de obra (MVP)">RF33</a>
+        <a href="../#rf37" class="feat-cov-sq on" title="RF37: Atualizar contrato de obra (MVP)">RF37</a>
+        <a href="../#rf38" class="feat-cov-sq on" title="RF38: Consultar contratos de obra (MVP)">RF38</a>
+        <a href="../#rf30" class="feat-cov-sq off" title="RF30: Consultar comparativo de custos (Pós-MVP)">RF30</a>
       </div>
       <span class="feat-cov-ratio">5 / 6</span>
     </div>
@@ -364,12 +364,12 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
       <span class="feat-cov-car">CAR-06</span>
       <span class="feat-cov-name">Painel Orçamentário e Centros de Custo</span>
       <div class="feat-cov-waf">
-        <a href="index.md#rf11" class="feat-cov-sq on" title="RF11: Filtrar indicadores de custos (MVP)">RF11</a>
-        <a href="index.md#rf34" class="feat-cov-sq on" title="RF34: Cadastrar centro de custo de obra (MVP)">RF34</a>
-        <a href="index.md#rf39" class="feat-cov-sq on" title="RF39: Atualizar centro de custo de obra (MVP)">RF39</a>
-        <a href="index.md#rf40" class="feat-cov-sq on" title="RF40: Definir tetos orçamentários de obra (MVP)">RF40</a>
-        <a href="index.md#rf12" class="feat-cov-sq off" title="RF12: Monitorar execução orçamentária (Pós-MVP)">RF12</a>
-        <a href="index.md#rf31" class="feat-cov-sq off" title="RF31: Configurar alertas orçamentários (Pós-MVP)">RF31</a>
+        <a href="../#rf11" class="feat-cov-sq on" title="RF11: Filtrar indicadores de custos (MVP)">RF11</a>
+        <a href="../#rf34" class="feat-cov-sq on" title="RF34: Cadastrar centro de custo de obra (MVP)">RF34</a>
+        <a href="../#rf39" class="feat-cov-sq on" title="RF39: Atualizar centro de custo de obra (MVP)">RF39</a>
+        <a href="../#rf40" class="feat-cov-sq on" title="RF40: Definir tetos orçamentários de obra (MVP)">RF40</a>
+        <a href="../#rf12" class="feat-cov-sq off" title="RF12: Monitorar execução orçamentária (Pós-MVP)">RF12</a>
+        <a href="../#rf31" class="feat-cov-sq off" title="RF31: Configurar alertas orçamentários (Pós-MVP)">RF31</a>
       </div>
       <span class="feat-cov-ratio">4 / 6</span>
     </div>
@@ -378,12 +378,12 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
       <span class="feat-cov-car">CAR-07</span>
       <span class="feat-cov-name">Controle de Acesso (RBAC) e Segurança</span>
       <div class="feat-cov-waf">
-        <a href="index.md#rf13" class="feat-cov-sq on" title="RF13: Efetuar login no sistema (MVP)">RF13</a>
-        <a href="index.md#rf14" class="feat-cov-sq on" title="RF14: Gerenciar perfis de acesso (MVP)">RF14</a>
-        <a href="index.md#rf17" class="feat-cov-sq on" title="RF17: Ativar acesso inicial e recuperar credenciais (MVP)">RF17</a>
-        <a href="index.md#rf18" class="feat-cov-sq on" title="RF18: Encerrar sessão manualmente (MVP)">RF18</a>
-        <a href="index.md#rf23" class="feat-cov-sq on" title="RF23: Bloquear acesso após tentativas falhas (MVP)">RF23</a>
-        <a href="index.md#rf24" class="feat-cov-sq off" title="RF24: Impor renovação periódica de senhas (Pós-MVP)">RF24</a>
+        <a href="../#rf13" class="feat-cov-sq on" title="RF13: Efetuar login no sistema (MVP)">RF13</a>
+        <a href="../#rf14" class="feat-cov-sq on" title="RF14: Gerenciar perfis de acesso (MVP)">RF14</a>
+        <a href="../#rf17" class="feat-cov-sq on" title="RF17: Ativar acesso inicial e recuperar credenciais (MVP)">RF17</a>
+        <a href="../#rf18" class="feat-cov-sq on" title="RF18: Encerrar sessão manualmente (MVP)">RF18</a>
+        <a href="../#rf23" class="feat-cov-sq on" title="RF23: Bloquear acesso após tentativas falhas (MVP)">RF23</a>
+        <a href="../#rf24" class="feat-cov-sq off" title="RF24: Impor renovação periódica de senhas (Pós-MVP)">RF24</a>
       </div>
       <span class="feat-cov-ratio">5 / 6</span>
     </div>
@@ -392,8 +392,8 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
       <span class="feat-cov-car">CAR-08</span>
       <span class="feat-cov-name">Trilha de Auditoria</span>
       <div class="feat-cov-waf">
-        <a href="index.md#rf15" class="feat-cov-sq off" title="RF15: Consultar trilha de auditoria (Pós-MVP)">RF15</a>
-        <a href="index.md#rf16" class="feat-cov-sq off" title="RF16: Exportar relatório de auditoria (Pós-MVP)">RF16</a>
+        <a href="../#rf15" class="feat-cov-sq off" title="RF15: Consultar trilha de auditoria (Pós-MVP)">RF15</a>
+        <a href="../#rf16" class="feat-cov-sq off" title="RF16: Exportar relatório de auditoria (Pós-MVP)">RF16</a>
       </div>
       <span class="feat-cov-ratio">0 / 2</span>
     </div>
@@ -402,7 +402,7 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
       <span class="feat-cov-car">CAR-09</span>
       <span class="feat-cov-name">Integração Externa FLIT</span>
       <div class="feat-cov-waf">
-        <a href="index.md#rf20" class="feat-cov-sq off" title="RF20: Importar presenças homologadas (Pós-MVP)">RF20</a>
+        <a href="../#rf20" class="feat-cov-sq off" title="RF20: Importar presenças homologadas (Pós-MVP)">RF20</a>
       </div>
       <span class="feat-cov-ratio">0 / 1</span>
     </div>
@@ -411,7 +411,7 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
       <span class="feat-cov-car">CAR-10</span>
       <span class="feat-cov-name">Exportação de Planilhas</span>
       <div class="feat-cov-waf">
-        <a href="index.md#rf36" class="feat-cov-sq off" title="RF36: Exportar dados em planilha (Pós-MVP)">RF36</a>
+        <a href="../#rf36" class="feat-cov-sq off" title="RF36: Exportar dados em planilha (Pós-MVP)">RF36</a>
       </div>
       <span class="feat-cov-ratio">0 / 1</span>
     </div>
@@ -437,34 +437,34 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
         </div>
         <p class="quad-desc">Alto Valor (3-4) · Baixo/Médio Esforço (1-2) — Espinha dorsal indispensável</p>
         <div class="quad-chips-grid">
-          <a href="index.md#rf01" class="quad-rf-btn btn-mvp" title="RF01: Cadastrar colaborador | VB: 4 · EC: 1,67 (2) · IP: 2,40">RF01</a>
-          <a href="index.md#rf02" class="quad-rf-btn btn-mvp" title="RF02: Atualizar cadastro | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF02</a>
-          <a href="index.md#rf03" class="quad-rf-btn btn-mvp" title="RF03: Movimentação funcional | VB: 3 · EC: 2,00 (2) · IP: 1,50">RF03</a>
-          <a href="index.md#rf06" class="quad-rf-btn btn-mvp" title="RF06: Homologar fechamento | VB: 4 · EC: 2,33 (2) · IP: 1,71">RF06</a>
-          <a href="index.md#rf07" class="quad-rf-btn btn-mvp" title="RF07: Submeter reembolso | VB: 4 · EC: 2,00 (2) · IP: 2,00">RF07</a>
-          <a href="index.md#rf08" class="quad-rf-btn btn-mvp" title="RF08: Deliberar reembolso | VB: 4 · EC: 2,00 (2) · IP: 2,00">RF08</a>
-          <a href="index.md#rf10" class="quad-rf-btn btn-mvp" title="RF10: Rastreabilidade custos | VB: 3 · EC: 2,00 (2) · IP: 1,50">RF10</a>
-          <a href="index.md#rf11" class="quad-rf-btn btn-mvp" title="RF11: Filtrar indicadores | VB: 3 · EC: 2,00 (2) · IP: 1,50">RF11</a>
-          <a href="index.md#rf13" class="quad-rf-btn btn-mvp" title="RF13: Efetuar login | VB: 4 · EC: 1,00 (1) · IP: 4,00">RF13</a>
-          <a href="index.md#rf14" class="quad-rf-btn btn-mvp" title="RF14: Gerenciar perfis | VB: 3 · EC: 2,33 (2) · IP: 1,29">RF14</a>
-          <a href="index.md#rf17" class="quad-rf-btn btn-mvp" title="RF17: Ativar / recuperar credenciais | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF17</a>
-          <a href="index.md#rf18" class="quad-rf-btn btn-mvp" title="RF18: Logout manual | VB: 3 · EC: 1,00 (1) · IP: 3,00">RF18</a>
-          <a href="index.md#rf19" class="quad-rf-btn btn-mvp" title="RF19: Consultar apontamentos | VB: 4 · EC: 1,67 (2) · IP: 2,40">RF19</a>
-          <a href="index.md#rf22" class="quad-rf-btn btn-mvp" title="RF22: Anexar evidências e GPS | VB: 3 · EC: 2,33 (2) · IP: 1,29">RF22</a>
-          <a href="index.md#rf23" class="quad-rf-btn btn-mvp" title="RF23: Bloquear tentativas falhas | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF23</a>
-          <a href="index.md#rf25" class="quad-rf-btn btn-mvp" title="RF25: Tipo de contratação | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF25</a>
-          <a href="index.md#rf26" class="quad-rf-btn btn-mvp" title="RF26: Histórico cadastral | VB: 3 · EC: 2,33 (2) · IP: 1,29">RF26</a>
-          <a href="index.md#rf27" class="quad-rf-btn btn-mvp" title="RF27: Configurar diárias técnicas | VB: 4 · EC: 1,67 (2) · IP: 2,40">RF27</a>
-          <a href="index.md#rf28" class="quad-rf-btn btn-mvp" title="RF28: Submeter adiantamento | VB: 3 · EC: 2,00 (2) · IP: 1,50">RF28</a>
-          <a href="index.md#rf29" class="quad-rf-btn btn-mvp" title="RF29: Deliberar adiantamento | VB: 3 · EC: 2,00 (2) · IP: 1,50">RF29</a>
-          <a href="index.md#rf32" class="quad-rf-btn btn-mvp" title="RF32: Deliberar apontamento | VB: 4 · EC: 1,67 (2) · IP: 2,40">RF32</a>
-          <a href="index.md#rf33" class="quad-rf-btn btn-mvp" title="RF33: Cadastrar contrato de obra | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF33</a>
-          <a href="index.md#rf34" class="quad-rf-btn btn-mvp" title="RF34: Cadastrar centro de custo | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF34</a>
-          <a href="index.md#rf35" class="quad-rf-btn btn-mvp" title="RF35: Retificar apontamento | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF35</a>
-          <a href="index.md#rf37" class="quad-rf-btn btn-mvp" title="RF37: Atualizar contrato de obra | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF37</a>
-          <a href="index.md#rf38" class="quad-rf-btn btn-mvp" title="RF38: Consultar contratos de obra | VB: 3 · EC: 1,00 (1) · IP: 3,00">RF38</a>
-          <a href="index.md#rf39" class="quad-rf-btn btn-mvp" title="RF39: Atualizar centro de custo | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF39</a>
-          <a href="index.md#rf40" class="quad-rf-btn btn-mvp" title="RF40: Definir tetos de obra | VB: 3 · EC: 2,00 (2) · IP: 1,50">RF40</a>
+          <a href="../#rf01" class="quad-rf-btn btn-mvp" title="RF01: Cadastrar colaborador | VB: 4 · EC: 1,67 (2) · IP: 2,40">RF01</a>
+          <a href="../#rf02" class="quad-rf-btn btn-mvp" title="RF02: Atualizar cadastro | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF02</a>
+          <a href="../#rf03" class="quad-rf-btn btn-mvp" title="RF03: Movimentação funcional | VB: 3 · EC: 2,00 (2) · IP: 1,50">RF03</a>
+          <a href="../#rf06" class="quad-rf-btn btn-mvp" title="RF06: Homologar fechamento | VB: 4 · EC: 2,33 (2) · IP: 1,71">RF06</a>
+          <a href="../#rf07" class="quad-rf-btn btn-mvp" title="RF07: Submeter reembolso | VB: 4 · EC: 2,00 (2) · IP: 2,00">RF07</a>
+          <a href="../#rf08" class="quad-rf-btn btn-mvp" title="RF08: Deliberar reembolso | VB: 4 · EC: 2,00 (2) · IP: 2,00">RF08</a>
+          <a href="../#rf10" class="quad-rf-btn btn-mvp" title="RF10: Rastreabilidade custos | VB: 3 · EC: 2,00 (2) · IP: 1,50">RF10</a>
+          <a href="../#rf11" class="quad-rf-btn btn-mvp" title="RF11: Filtrar indicadores | VB: 3 · EC: 2,00 (2) · IP: 1,50">RF11</a>
+          <a href="../#rf13" class="quad-rf-btn btn-mvp" title="RF13: Efetuar login | VB: 4 · EC: 1,00 (1) · IP: 4,00">RF13</a>
+          <a href="../#rf14" class="quad-rf-btn btn-mvp" title="RF14: Gerenciar perfis | VB: 3 · EC: 2,33 (2) · IP: 1,29">RF14</a>
+          <a href="../#rf17" class="quad-rf-btn btn-mvp" title="RF17: Ativar / recuperar credenciais | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF17</a>
+          <a href="../#rf18" class="quad-rf-btn btn-mvp" title="RF18: Logout manual | VB: 3 · EC: 1,00 (1) · IP: 3,00">RF18</a>
+          <a href="../#rf19" class="quad-rf-btn btn-mvp" title="RF19: Consultar apontamentos | VB: 4 · EC: 1,67 (2) · IP: 2,40">RF19</a>
+          <a href="../#rf22" class="quad-rf-btn btn-mvp" title="RF22: Anexar evidências e GPS | VB: 3 · EC: 2,33 (2) · IP: 1,29">RF22</a>
+          <a href="../#rf23" class="quad-rf-btn btn-mvp" title="RF23: Bloquear tentativas falhas | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF23</a>
+          <a href="../#rf25" class="quad-rf-btn btn-mvp" title="RF25: Tipo de contratação | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF25</a>
+          <a href="../#rf26" class="quad-rf-btn btn-mvp" title="RF26: Histórico cadastral | VB: 3 · EC: 2,33 (2) · IP: 1,29">RF26</a>
+          <a href="../#rf27" class="quad-rf-btn btn-mvp" title="RF27: Configurar diárias técnicas | VB: 4 · EC: 1,67 (2) · IP: 2,40">RF27</a>
+          <a href="../#rf28" class="quad-rf-btn btn-mvp" title="RF28: Submeter adiantamento | VB: 3 · EC: 2,00 (2) · IP: 1,50">RF28</a>
+          <a href="../#rf29" class="quad-rf-btn btn-mvp" title="RF29: Deliberar adiantamento | VB: 3 · EC: 2,00 (2) · IP: 1,50">RF29</a>
+          <a href="../#rf32" class="quad-rf-btn btn-mvp" title="RF32: Deliberar apontamento | VB: 4 · EC: 1,67 (2) · IP: 2,40">RF32</a>
+          <a href="../#rf33" class="quad-rf-btn btn-mvp" title="RF33: Cadastrar contrato de obra | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF33</a>
+          <a href="../#rf34" class="quad-rf-btn btn-mvp" title="RF34: Cadastrar centro de custo | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF34</a>
+          <a href="../#rf35" class="quad-rf-btn btn-mvp" title="RF35: Retificar apontamento | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF35</a>
+          <a href="../#rf37" class="quad-rf-btn btn-mvp" title="RF37: Atualizar contrato de obra | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF37</a>
+          <a href="../#rf38" class="quad-rf-btn btn-mvp" title="RF38: Consultar contratos de obra | VB: 3 · EC: 1,00 (1) · IP: 3,00">RF38</a>
+          <a href="../#rf39" class="quad-rf-btn btn-mvp" title="RF39: Atualizar centro de custo | VB: 3 · EC: 1,67 (2) · IP: 1,80">RF39</a>
+          <a href="../#rf40" class="quad-rf-btn btn-mvp" title="RF40: Definir tetos de obra | VB: 3 · EC: 2,00 (2) · IP: 1,50">RF40</a>
         </div>
       </div>
 
@@ -479,9 +479,9 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
         </div>
         <p class="quad-desc">Alto Valor (3-4) · Alto Esforço (3) — Viabilizados por redução planejada de escopo</p>
         <div class="quad-chips-grid">
-          <a href="index.md#rf04" class="quad-rf-btn btn-mvp" title="RF04: Submeter apontamento | VB: 4 · EC: 3,00 (3) · IP: 1,33">RF04</a>
-          <a href="index.md#rf05" class="quad-rf-btn btn-mvp" title="RF05: Solicitar prévia | VB: 4 · EC: 3,33 (3) · IP: 1,20">RF05</a>
-          <a href="index.md#rf09" class="quad-rf-btn btn-mvp" title="RF09: Apropriar custos operacionais | VB: 3 · EC: 3,33 (3) · IP: 0,90">RF09</a>
+          <a href="../#rf04" class="quad-rf-btn btn-mvp" title="RF04: Submeter apontamento | VB: 4 · EC: 3,00 (3) · IP: 1,33">RF04</a>
+          <a href="../#rf05" class="quad-rf-btn btn-mvp" title="RF05: Solicitar prévia | VB: 4 · EC: 3,33 (3) · IP: 1,20">RF05</a>
+          <a href="../#rf09" class="quad-rf-btn btn-mvp" title="RF09: Apropriar custos operacionais | VB: 3 · EC: 3,33 (3) · IP: 0,90">RF09</a>
         </div>
       </div>
 
@@ -496,8 +496,8 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
         </div>
         <p class="quad-desc">Valor Moderado (2) · Baixo/Médio Esforço (2) — Recursos de conveniência</p>
         <div class="quad-chips-grid">
-          <a href="index.md#rf24" class="quad-rf-btn btn-pos" title="RF24: Impor renovação periódica de senhas | VB: 2 · EC: 2,00 (2) · IP: 1,00">RF24</a>
-          <a href="index.md#rf36" class="quad-rf-btn btn-pos" title="RF36: Exportar dados em planilha | VB: 2 · EC: 1,67 (2) · IP: 1,20">RF36</a>
+          <a href="../#rf24" class="quad-rf-btn btn-pos" title="RF24: Impor renovação periódica de senhas | VB: 2 · EC: 2,00 (2) · IP: 1,00">RF24</a>
+          <a href="../#rf36" class="quad-rf-btn btn-pos" title="RF36: Exportar dados em planilha | VB: 2 · EC: 1,67 (2) · IP: 1,20">RF36</a>
         </div>
       </div>
 
@@ -512,13 +512,13 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
         </div>
         <p class="quad-desc">Valor Moderado/Baixo (1-2) · Alto Esforço (3) — Demandam histórico ou integrações</p>
         <div class="quad-chips-grid">
-          <a href="index.md#rf12" class="quad-rf-btn btn-pos" title="RF12: Monitorar execução orçamentária | VB: 2 · EC: 3,00 (3) · IP: 0,67">RF12</a>
-          <a href="index.md#rf15" class="quad-rf-btn btn-pos" title="RF15: Consultar trilha de auditoria | VB: 2 · EC: 3,00 (3) · IP: 0,67">RF15</a>
-          <a href="index.md#rf16" class="quad-rf-btn btn-pos" title="RF16: Exportar relatório de auditoria | VB: 1 · EC: 3,00 (3) · IP: 0,33">RF16</a>
-          <a href="index.md#rf20" class="quad-rf-btn btn-pos" title="RF20: Importar presenças homologadas | VB: 2 · EC: 3,00 (3) · IP: 0,67">RF20</a>
-          <a href="index.md#rf21" class="quad-rf-btn btn-pos" title="RF21: Estornar fechamento financeiro | VB: 2 · EC: 2,67 (3) · IP: 0,75">RF21</a>
-          <a href="index.md#rf30" class="quad-rf-btn btn-pos" title="RF30: Consultar comparativo de custos | VB: 2 · EC: 2,67 (3) · IP: 0,75">RF30</a>
-          <a href="index.md#rf31" class="quad-rf-btn btn-pos" title="RF31: Configurar alertas orçamentários | VB: 2 · EC: 2,67 (3) · IP: 0,75">RF31</a>
+          <a href="../#rf12" class="quad-rf-btn btn-pos" title="RF12: Monitorar execução orçamentária | VB: 2 · EC: 3,00 (3) · IP: 0,67">RF12</a>
+          <a href="../#rf15" class="quad-rf-btn btn-pos" title="RF15: Consultar trilha de auditoria | VB: 2 · EC: 3,00 (3) · IP: 0,67">RF15</a>
+          <a href="../#rf16" class="quad-rf-btn btn-pos" title="RF16: Exportar relatório de auditoria | VB: 1 · EC: 3,00 (3) · IP: 0,33">RF16</a>
+          <a href="../#rf20" class="quad-rf-btn btn-pos" title="RF20: Importar presenças homologadas | VB: 2 · EC: 3,00 (3) · IP: 0,67">RF20</a>
+          <a href="../#rf21" class="quad-rf-btn btn-pos" title="RF21: Estornar fechamento financeiro | VB: 2 · EC: 2,67 (3) · IP: 0,75">RF21</a>
+          <a href="../#rf30" class="quad-rf-btn btn-pos" title="RF30: Consultar comparativo de custos | VB: 2 · EC: 2,67 (3) · IP: 0,75">RF30</a>
+          <a href="../#rf31" class="quad-rf-btn btn-pos" title="RF31: Configurar alertas orçamentários | VB: 2 · EC: 2,67 (3) · IP: 0,75">RF31</a>
         </div>
       </div>
     </div>
