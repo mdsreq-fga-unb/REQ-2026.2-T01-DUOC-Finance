@@ -9,13 +9,12 @@
  */
 import type { ContratoObra, CriarRvtDTO, RascunhoRvt, Rvt } from "../types/rvt";
 import { LIMITE_HORAS_DIARIAS, formatarHoras } from "../utils/rvt";
+import { AuthApi, ErroAuth } from "./auth.service";
 
 const USE_REMOTE_API = import.meta.env.VITE_USE_REMOTE_API === "true";
 
 const STORAGE_KEY = "duoc_finance_rvt_v1";
 const RASCUNHO_KEY = "duoc_finance_rvt_rascunho_v1";
-/** Token emitido pelo futuro fluxo de login (RF17) */
-const TOKEN_KEY = "duoc_finance_access_token";
 
 const SEED_CONTRATOS: ContratoObra[] = [
   { id: "contrato-001", codigo: "OBR-2026-014", nome: "Residencial Parque Noroeste — Bloco B", cliente: "Construtora Planalto" },
@@ -58,14 +57,13 @@ const SEED_APONTAMENTOS: Rvt[] = [
 // ---------------------------------------------------------------------------
 
 async function requisicao<T>(url: string, init: RequestInit = {}): Promise<T> {
-  const headers = new Headers(init.headers);
-  const token = localStorage.getItem(TOKEN_KEY);
-  if (token) headers.set("Authorization", `Bearer ${token}`);
-
   let res: Response;
   try {
-    res = await fetch(url, { ...init, headers });
-  } catch {
+    res = await AuthApi.requisicaoAutenticada(url, init);
+  } catch (erro) {
+    if (erro instanceof ErroAuth && erro.status === 401) {
+      throw new Error("Sua sessão expirou. Entre novamente para enviar o apontamento.");
+    }
     throw new Error("Sem conexão com o servidor. Seu rascunho foi mantido; tente novamente quando o sinal voltar.");
   }
 

@@ -111,14 +111,6 @@ A definição do DoD está estabelecida neste capítulo. **Até esta revisão, n
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 07/09/2026 | Criação e estruturação da página preliminar de acordos DoR e DoD (Unidade 2) | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
-| `1.1` | 21/09/2026 | Ajuste do DoR alinhando a estratégia UI-First (base no Figma e designs via Frontend com posterior codificação de lógica) | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
-| `1.2` | 11/10/2026 | Consolidação dos checklists DoR/DoD, perguntas de verificação, evidências operacionais e rastreabilidade aos capítulos 4, 6, 7 e 8 | Giovana Ferreira Santos | Pendente de revisão |
-| `1.3` | 13/10/2026 | Remoção dos prefixos numéricos das seções (9.1 e 9.2) alinhando a estrutura com os demais capítulos e preservando âncoras para rastreabilidade | Matheus Ribeiro Szervinsk | Eric Araújo |
-| `1.4` | 13/10/2026 | Remoção do card de alerta de rastreabilidade acadêmica e integração direta na introdução textual | Matheus Ribeiro Szervinsk | Eric Araújo |
-| `1.5` | 13/10/2026 | Auditoria de governança metodológica: inclusão de contrato de dados preliminar e critérios objetivos de aceitação no DoR; formalização de checklists de inspeção baseados no método de Fagan no DoD. | Matheus Ribeiro Szervinsk | Eric Araújo |
-| `1.8` | 28/10/2026 | Esclarecimento do estado representado por Done: exige homologação aceita e não implica publicação em produção. | Giovana Ferreira| Pendente de revisão |
-| `1.9` | 28/10/2026 | Definição de procedimento viável de inspeção por pares inspirado em Fagan e do registro comprobatório no PR. | Giovana Ferreira | Pendente de revisão |
-| `2.0` | 28/10/2026 | Registro de que o DoD está definido, mas sua aplicação no Incremento 1 ainda não está evidenciada. | Giovana Ferreira | Pendente de revisão |
-| `1.6` | 28/10/2026 | Esclarecimento de que o DoR é o acordo de prontidão para lógica e persistência após a prototipagem frontend UI-First. | Giovana Ferreira Santos | Pendente de revisão |
-| `1.7` | 28/10/2026 | Registro da aplicação documental do checklist DoR à US04 no Incremento 1, com evidências disponíveis, pendências e decisão de prontidão. | Giovana Ferreira Santos | Pendente de revisão |
+| `1.0` | 07/09/2026 | Estruturação inicial dos acordos de Definition of Ready (DoR) e Definition of Done (DoD). | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
+| `1.5` | 13/10/2026 | Auditoria de governança metodológica: critérios objetivos de aceitação no DoR e inspeção Fagan no DoD. | Matheus Ribeiro Szervinsk | Eric Araújo |
+| `2.0` | 28/10/2026 | Consolidação do status de aplicação do DoR na US04 e esclarecimento dos registros comprobatórios de DoD. | Giovana Ferreira Santos | Matheus Ribeiro Szervinsk |

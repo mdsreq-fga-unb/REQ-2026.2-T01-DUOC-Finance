@@ -3,14 +3,18 @@ import { Test } from '@nestjs/testing';
 import request from 'supertest';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard.js';
 import { assinarJwtHs256 } from '../auth/jwt.util.js';
+import { PrismaService } from '../prisma/prisma.service.js';
 import { RvtController } from './rvt.controller.js';
 import { RvtService } from './rvt.service.js';
 
-const SEGREDO = 'segredo-de-teste';
+const SEGREDO = 'segredo-seguro-para-testes-de-autenticacao-123';
+const SESSAO_ID = 'sessao-de-teste';
 const RVT_ID = '6f1c1c1e-3f8a-4c4b-9d55-6a2f3b2f9b10';
 
 describe('RvtController (HTTP)', () => {
   let app: INestApplication;
+  let usuarioAtual = 'colab-1';
+  const findSessao = vi.fn();
   const service = {
     listarContratosAtivos: vi.fn(),
     criar: vi.fn(),
@@ -18,9 +22,10 @@ describe('RvtController (HTTP)', () => {
     listarDoColaborador: vi.fn(),
   };
 
-  function token(sub = 'colab-1'): string {
+  function token(sub = 'colab-1', vinculado = true): string {
+    usuarioAtual = sub;
     return assinarJwtHs256(
-      { sub, exp: Math.floor(Date.now() / 1000) + 300 },
+      { sub, sid: SESSAO_ID, ...(vinculado ? { colaboradorId: sub } : {}), exp: Math.floor(Date.now() / 1000) + 300 },
       SEGREDO,
     );
   }
@@ -29,7 +34,11 @@ describe('RvtController (HTTP)', () => {
     process.env.JWT_SECRET = SEGREDO;
     const modulo = await Test.createTestingModule({
       controllers: [RvtController],
-      providers: [{ provide: RvtService, useValue: service }, JwtAuthGuard],
+      providers: [
+        { provide: RvtService, useValue: service },
+        { provide: PrismaService, useValue: { sessao: { findUnique: findSessao } } },
+        JwtAuthGuard,
+      ],
     }).compile();
     app = modulo.createNestApplication();
     app.setGlobalPrefix('api');
@@ -42,12 +51,35 @@ describe('RvtController (HTTP)', () => {
 
   beforeEach(() => {
     Object.values(service).forEach((fn) => fn.mockReset());
+    findSessao.mockReset();
+    usuarioAtual = 'colab-1';
+    findSessao.mockImplementation(async () => ({
+      id: SESSAO_ID,
+      usuarioId: usuarioAtual,
+      criadaEm: new Date(Date.now() - 60_000),
+      expiraEm: new Date(Date.now() + 60_000),
+      revogadaEm: null,
+      usuario: {
+        id: usuarioAtual,
+        ativo: true,
+        papel: 'TECNICO_CAMPO',
+        senhaAtualizadaEm: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
+      },
+    }));
   });
 
   it('exige token de acesso', async () => {
     await request(app.getHttpServer())
       .get('/api/rvt/meus-apontamentos')
       .expect(401);
+    expect(service.listarDoColaborador).not.toHaveBeenCalled();
+  });
+
+  it('recusa acesso ao RVT para conta sem vínculo com colaborador', async () => {
+    await request(app.getHttpServer())
+      .get('/api/rvt/meus-apontamentos')
+      .set('Authorization', `Bearer ${token('usuario-1', false)}`)
+      .expect(403);
     expect(service.listarDoColaborador).not.toHaveBeenCalled();
   });
 
