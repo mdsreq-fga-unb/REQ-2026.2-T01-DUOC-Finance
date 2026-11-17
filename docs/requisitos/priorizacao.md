@@ -148,52 +148,6 @@ Navegue pelas abas abaixo para consultar as diretrizes metodológicas do julgame
     | **TR-04** | Apropriação de custo por contrato e centro de custo | Vinculação direta de despesas a obras e painel orçamentário | **3 / 2** (Importante) |
     | **Transversal** | Base cadastral unificada, autenticação e auditoria probatória | Cadastro validado por CPF, perfis RBAC, logs append-only e retenção CLT | **4 a 1** (Fundacional) |
 
-=== "Regras de Consolidação & MVP"
-
-    **Regra de Consolidação:** A nota final é definida pelo **maior grau atingido entre D1 e D3** (fatores bloqueantes de processo ou de exposição de risco). As dimensões **D2 e D4** funcionam como critérios de ajuste: confirmam a nota ou podem deslocá-la em no máximo 1 ponto quando convergirem.
-    
-    A linha de corte do MVP decorre diretamente do eixo de Valor de Negócio: **requisitos de valor 4 ou 3 integram o MVP** e requisitos de **valor 2 ou 1 integram o backlog de evolução pós-MVP**. O esforço técnico não elimina requisitos de alto valor; orienta a decomposição arquitetural.
-
-    ```mermaid
-    flowchart LR
-        subgraph NIVEIS["Distribuição dos 40 RFs do Backlog por Valor de Negócio"]
-            direction TB
-            V4["<b>VALOR 4 — Muito alto (Crítico)</b><br>10 RFs (25,0%) · RF01, RF04, RF05, RF06, RF07, RF08, RF13, RF19, RF27, RF32"]
-            V3["<b>VALOR 3 — Alto (Importante)</b><br>21 RFs (52,5%) · RF02, RF03, RF09, RF10, RF11, RF14, RF17, RF18, RF22, RF23, RF25, RF26, RF28, RF29, RF33, RF34, RF35, RF37, RF38, RF39, RF40"]
-            V2["<b>VALOR 2 — Moderado (Desejável)</b><br>8 RFs (20,0%) · RF12, RF15, RF20, RF21, RF24, RF30, RF31, RF36"]
-            V1["<b>VALOR 1 — Baixo (Postergável)</b><br>1 RF (2,5%) · RF16"]
-            V4 ~~~ V3
-            V3 ~~~ V2
-            V2 ~~~ V1
-        end
-
-        subgraph DEST["Linha de Corte e Destinação"]
-            direction TB
-            MVP["<b>PRODUTO MÍNIMO VIÁVEL (MVP)</b><br>31 RFs selecionados (77,5% do Backlog)<br>Núcleo operacional completo para a DUOC"]
-            POST["<b>BACKLOG DE EVOLUÇÃO PÓS-MVP</b><br>9 RFs postergados (22,5% do Backlog)<br>Ciclos posteriores e capacidade residual"]
-            MVP ~~~ POST
-        end
-
-        V4 ==> MVP
-        V3 ==> MVP
-        V2 -.-> POST
-        V1 -.-> POST
-
-        classDef v4Class fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff;
-        classDef v3Class fill:#0284c7,stroke:#0369a1,stroke-width:2px,color:#ffffff;
-        classDef v2Class fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#ffffff;
-        classDef v1Class fill:#64748b,stroke:#475569,stroke-width:2px,color:#ffffff;
-        classDef mvpClass fill:#047857,stroke:#065f46,stroke-width:3px,color:#ffffff;
-        classDef postClass fill:#334155,stroke:#1e293b,stroke-width:2px,color:#ffffff;
-
-        class V4 v4Class;
-        class V3 v3Class;
-        class V2 v2Class;
-        class V1 v1Class;
-        class MVP mvpClass;
-        class POST postClass;
-    ```
-
 ---
 
 <a id="8-7-avaliacao-do-esforco-tecnico"></a>
@@ -243,28 +197,6 @@ Navegue pelas abas abaixo para consultar as escalas e a regra de conversão:
     | **3** | Aprendizagem relevante | A equipe precisa desenvolver conceitos específicos (ponto fixo centesimal, isolamento RBAC rígido e concorrência). |
     | **4** | Lacuna crítica | A equipe ainda não possui experiência prévia com o padrão, demandando investigação aprofundada ou prova de conceito. |
 
-=== "Cálculo & Conversão Ordinal"
-
-    Para consolidar as três dimensões em um indicador único e reprodutível, adota-se a média aritmética simples:
-
-    <div class="formula-clean-card" style="margin: 0.75rem 0 1rem; max-width: 480px;">
-      <div class="formula-math-display">
-        <span>Média Consolidada = </span>
-        <div class="formula-frac-box">
-          <span class="frac-num">Horas (ES) + Complexidade (CX) + Lacuna (LC)</span>
-          <span class="frac-den">3</span>
-        </div>
-      </div>
-    </div>
-
-    A média decimal resultante é convertida para a escala ordinal inteira de **1 a 4** da Matriz 4 × 4:
-
-    | Intervalo da Média | Esforço Consolidado | Coluna na Matriz 4 × 4 | Interpretação Técnica |
-    | :---: | :---: | :---: | :--- |
-    | **1,00 a 1,49** | **1 — Baixo** | 1ª Coluna | Demanda técnica muito reduzida, tecnologia dominada e rápida entrega. |
-    | **1,50 a 2,49** | **2 — Moderado** | 2ª Coluna | Demanda balanceada, regras claras e execução controlada no ciclo regular. |
-    | **2,50 a 3,49** | **3 — Alto** | 3ª Coluna | Demanda substancial, regras de negócio densas e atenção especial a testes. |
-    | **3,50 a 4,00** | **4 — Muito alto** | 4ª Coluna | Elevada incerteza, múltiplos componentes acoplados ou risco de retrabalho. |
 ---
 
 <a id="indicadores-e-formulas-de-calculo"></a>
