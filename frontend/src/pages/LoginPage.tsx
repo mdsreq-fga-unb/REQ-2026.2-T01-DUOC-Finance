@@ -155,12 +155,11 @@ export default function LoginPage() {
           {/* Cabeçalho do Formulário / Logotipo */}
           <div className="space-y-4">
             <div>
-              <span className="text-3xl font-extrabold tracking-tight text-dark block">
-                DUOC
-              </span>
-              <span className="text-xs font-semibold tracking-[0.35em] text-gold uppercase block -mt-1">
-                finance
-              </span>
+              <img
+                src="/duoc-finance-logo.svg"
+                alt="DUOC Finance"
+                className="h-11 w-auto"
+              />
             </div>
 
             <div className="pt-2">

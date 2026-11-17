@@ -16,13 +16,15 @@ describe('CAR-07 / RN15 — matriz de autorização no frontend', () => {
     expect(possuiPapel('GESTOR_OPERACIONAL', PERMISSOES.colaboradores)).toBe(false)
     expect(possuiPapel('AUDITOR_EXTERNO', PERMISSOES.fechamento)).toBe(false)
   })
-  it('apenas tecnico pode criar novo RVT', () => {
+  it('tecnico e admin podem criar novo RVT; auditor nao', () => {
     expect(possuiPapel('TECNICO_CAMPO', PERMISSOES.novoRvt)).toBe(true)
-    expect(possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.novoRvt)).toBe(false)
+    expect(possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.novoRvt)).toBe(true)
+    expect(possuiPapel('AUDITOR_EXTERNO', PERMISSOES.novoRvt)).toBe(false)
   })
-  it('historico fica limitado ao tecnico e gestor operacional', () => {
+  it('historico fica disponivel para tecnico, gestor operacional e admin', () => {
     expect(possuiPapel('GESTOR_OPERACIONAL', PERMISSOES.historicoRvt)).toBe(true)
     expect(possuiPapel('TECNICO_CAMPO', PERMISSOES.historicoRvt)).toBe(true)
+    expect(possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.historicoRvt)).toBe(true)
     expect(possuiPapel('AUDITOR_EXTERNO', PERMISSOES.historicoRvt)).toBe(false)
   })
   it('sem usuario nao existe permissao', () => {

@@ -27,6 +27,7 @@ Todas as atas seguem a mesma estrutura, de modo a garantir a rastreabilidade aud
 | **Reunião 04** | 17/09/2026 | Retrospectiva da Unidade 1 e Planejamento da Unidade 2 (interna) | Equipe Cascata Ágil | Distribuição das correções da Unidade 1, ajuste do cronograma ao RAD, divisão das características para os requisitos, prazos (22/09, 24/09 e 29/09) e validação com a cliente | [Acessar Ata](reuniao-04.md) |
 | **Reunião 05** | 24/09/2026 | Priorização de Requisitos, Matriz 4x4 e Alinhamento do MVP (com a cliente) | Equipe Cascata Ágil e Maria Beatryz | Validação da priorização e aprovação do MVP com ressalvas; inclusão do RF11, rebaixamento do RF21, exclusão do RF16, postergação do RNF01 e definição do subdomínio na Vercel (`finance.doc.br`) | [Acessar Ata](reuniao-05.md) |
 | **Reunião 06** | 02/10/2026 | Validação do Protótipo no Figma — Design do Usuário do Incremento 1 (com a cliente, presencial) | Eric Araújo e Maria Beatryz | Telas de Colaboradores, Visão Geral, Análise de Custos e Perfis e Permissões aprovadas sem alterações; frontend navegável como próximo passo | [Acessar Ata](reuniao-06.md) |
+| **Reunião 07** | 16/11/2026 | Gravação da Apresentação do Ponto de Controle 3 (interna, gravada) | Equipe Cascata Ágil | Alinhamento final do portal, demonstração do Incremento 1, organização Cap. 12, Boas Práticas GitHub e gravação da Entrega 3 | [Acessar Ata](reuniao-07.md) |
 
 ---
 
@@ -63,6 +64,11 @@ Todas as atas seguem a mesma estrutura, de modo a garantir a rastreabilidade aud
 
     ---
     Sessão presencial conduzida por Eric Araújo com a cliente Maria Beatryz sobre o protótipo de alta fidelidade no Figma. Telas de Colaboradores, Visão Geral, Análise de Custos e Perfis e Permissões aprovadas sem alterações; construção do frontend navegável e nova validação definidas como próximos passos.
+
+-   :material-video-outline: **[Reunião 07 — Gravação da Entrega 3 / PC3 (16/11/2026)](reuniao-07.md)**
+
+    ---
+    Sessão interna síncrona da equipe Cascata Ágil para alinhamento final do portal (Cap. 12 e Boas Práticas GitHub), demonstração do Incremento 1 em execução e gravação audiovisual da apresentação do Ponto de Controle 3.
 
 </div>
 
