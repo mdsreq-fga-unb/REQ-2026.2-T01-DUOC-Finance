@@ -592,7 +592,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
             <li>Desenho funcional dos fluxos de aprovação de diárias de campo, cálculo visual de adiantamentos e upload de comprovantes com dados simulados;</li>
             <li><strong>Sessão de Validação Sociotécnica Invertida (prevista para 13/11/2026 e remarcada pela cliente para 16/11/2026)</strong>: Maria Beatryz navega pelas telas financeiras no Frontend via Google Meet, validando campos, layouts e regras visuais;</li>
             <li>Revisão e validação dos requisitos afetados após a sessão, registro dos apontamentos de IHC e verificação do DoR do Incremento 2;</li>
-            <li><strong>PC3:</strong> publicação da Entrega 3 até 17/11/2026 às 08h, com gravação em 18/11 e apresentações em 17 e 19/11.</li>
+            <li><strong>PC3:</strong> publicação da Entrega 3 até 17/11/2026 às 08h, com gravação do vídeo técnico em 16/11 e apresentações em 17 e 19/11.</li>
           </ul>
         </div>
         <div>

@@ -102,42 +102,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-concluido">Concluído · Incr. 1</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/154" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #154 no GitHub">Issue #154 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #167 no GitHub">PR #167 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -322,42 +286,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-concluido">Concluído · Incr. 1</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/154" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #154 no GitHub">Issue #154 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #167 no GitHub">PR #167 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -542,42 +470,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-concluido">Concluído · Incr. 1</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/154" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #154 no GitHub">Issue #154 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #167 no GitHub">PR #167 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -758,42 +650,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-concluido">Concluído · Incr. 1</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #170 no GitHub">PR #170 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -974,42 +830,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pronto">Pronto (DoR) · Incr. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -1190,42 +1010,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pronto">Pronto (DoR) · Incr. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -1406,42 +1190,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-dev">Em Dev · Incr. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># TECNICO_CAMPO / GESTOR_OBRAS</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -1622,42 +1370,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-dev">Em Dev · Incr. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -1838,42 +1550,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pronto">Pronto (DoR) · Incr. 3</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/62" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #62 no GitHub">Issue #62 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -2054,42 +1730,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pronto">Pronto (DoR) · Incr. 3</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/62" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #62 no GitHub">Issue #62 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -2270,42 +1910,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pronto">Pronto (DoR) · Incr. 3</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/62" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #62 no GitHub">Issue #62 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -2485,42 +2089,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pos">Pós-MVP · Rel. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/131" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #131 no GitHub">Issue #131 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -2701,42 +2269,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-concluido">Concluído · Incr. 1</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/154" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #154 no GitHub">Issue #154 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #167 no GitHub">PR #167 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># TODOS OS USUÁRIOS</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -2921,42 +2453,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-aguardando">Aguardando · Incr. 3</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_SISTEMA</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -3136,42 +2632,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pos">Pós-MVP · Rel. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/131" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #131 no GitHub">Issue #131 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_SISTEMA / ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -3351,42 +2811,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pos">Pós-MVP · Rel. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/131" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #131 no GitHub">Issue #131 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-08" class="req-lumio-tag req-tag-car"># CAR-08 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_SISTEMA</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -3567,42 +2991,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-concluido">Concluído · Incr. 1</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/154" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #154 no GitHub">Issue #154 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #167 no GitHub">PR #167 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># TODOS OS USUÁRIOS</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -3787,42 +3175,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-concluido">Concluído · Incr. 1</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/154" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #154 no GitHub">Issue #154 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #167 no GitHub">PR #167 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># TODOS OS USUÁRIOS</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -4007,42 +3359,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-concluido">Concluído · Incr. 1</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #170 no GitHub">PR #170 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -4222,42 +3538,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pos">Pós-MVP · Rel. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/131" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #131 no GitHub">Issue #131 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-09" class="req-lumio-tag req-tag-car"># CAR-09 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -4437,42 +3717,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pos">Pós-MVP · Rel. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/131" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #131 no GitHub">Issue #131 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -4653,42 +3897,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-concluido">Concluído · Incr. 1</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #170 no GitHub">PR #170 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -4869,42 +4077,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-aguardando">Aguardando · Incr. 3</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_SISTEMA</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -5084,42 +4256,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pos">Pós-MVP · Rel. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/131" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #131 no GitHub">Issue #131 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe4-garantir-seguranca-e-governanca-de-dados" class="req-lumio-tag req-tag-oe"># OE4 · Segurança, Governança e Conformidade Legal ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-07" class="req-lumio-tag req-tag-car"># CAR-07 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_SISTEMA</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -5300,42 +4436,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-aguardando">Aguardando · Incr. 3</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -5516,42 +4616,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-aguardando">Aguardando · Incr. 3</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-01" class="req-lumio-tag req-tag-car"># CAR-01 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -5732,42 +4796,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pronto">Pronto (DoR) · Incr. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-03" class="req-lumio-tag req-tag-car"># CAR-03 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -5948,42 +4976,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-dev">Em Dev · Incr. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -6164,42 +5156,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-dev">Em Dev · Incr. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe2-aumentar-a-eficiencia-administrativo-financeira" class="req-lumio-tag req-tag-oe"># OE2 · Acelerar Fechamento e Eficiência Administrativa ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-04" class="req-lumio-tag req-tag-car"># CAR-04 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -6379,42 +5335,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pos">Pós-MVP · Rel. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/131" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #131 no GitHub">Issue #131 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -6594,42 +5514,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pos">Pós-MVP · Rel. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/131" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #131 no GitHub">Issue #131 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -6810,42 +5694,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-dev">Em Dev · Incr. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -7026,42 +5874,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pronto">Pronto (DoR) · Incr. 3</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/62" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #62 no GitHub">Issue #62 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -7242,42 +6054,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pronto">Pronto (DoR) · Incr. 3</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/62" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #62 no GitHub">Issue #62 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -7458,42 +6234,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-dev">Em Dev · Incr. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-02" class="req-lumio-tag req-tag-car"># CAR-02 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># TECNICO_CAMPO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -7673,42 +6413,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pos">Pós-MVP · Rel. 2</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/131" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #131 no GitHub">Issue #131 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-lumio-tag req-tag-oe"># OE1 · Padronizar e Unificar os Dados ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-10" class="req-lumio-tag req-tag-car"># CAR-10 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -7889,42 +6593,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pronto">Pronto (DoR) · Incr. 3</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/62" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #62 no GitHub">Issue #62 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -8105,42 +6773,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pronto">Pronto (DoR) · Incr. 3</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/62" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #62 no GitHub">Issue #62 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-05" class="req-lumio-tag req-tag-car"># CAR-05 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS / ADMIN_FINANCEIRO</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -8321,42 +6953,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pronto">Pronto (DoR) · Incr. 3</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/62" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #62 no GitHub">Issue #62 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">
@@ -8537,42 +7133,6 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   <div class="req-card-expansion">
     <!-- Metadados no Padrão Lumio UI (com Ícones e Tags da Foto 3) -->
     <div class="req-lumio-meta">
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
-          <span>Status</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-pill-exec req-pill-exec-pronto">Pronto (DoR) · Incr. 3</span> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/62" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #62 no GitHub">Issue #62 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>Objetivo Específico</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#oe3-transparecer-as-informacoes-sobre-os-custos-por-contrato" class="req-lumio-tag req-tag-oe"># OE3 · Transparência de Custos por Contrato de Obra ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-          <span>Características (CAR)</span>
-        </span>
-        <div class="req-lumio-val">
-          <a href="../visao-produto/solucao-proposta/#car-06" class="req-lumio-tag req-tag-car"># CAR-06 ↗</a>
-        </div>
-      </div>
-      <div class="req-lumio-row">
-        <span class="req-lumio-label">
-          <svg class="req-lumio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span>Responsável (Ator)</span>
-        </span>
-        <div class="req-lumio-val">
-          <span class="req-lumio-tag req-tag-role"># GESTOR_OBRAS</span>
-        </div>
-      </div>
     </div>
 
     <div class="req-expanded-desc">

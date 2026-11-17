@@ -1816,7 +1816,6 @@
 .mermaid svg {
   width: 100% !important;
   max-width: 920px !important;
-  min-height: 600px !important;
   height: auto !important;
   display: block !important;
   margin: 0 auto !important;

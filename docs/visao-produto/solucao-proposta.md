@@ -337,22 +337,6 @@ Os **Objetivos Específicos (OE1 a OE4)** decompõem o Objetivo Geral do produto
 
 As características do produto descrevem as capacidades funcionais do **DUOC Finance**, mapeadas diretamente aos Objetivos Específicos do negócio. Nem todas pertencem à primeira release: cada característica é classificada por fase de entrega conforme o catálogo de requisitos do [Catálogo de Requisitos](../requisitos/index.md).
 
-| CAR | Fase | Base da classificação |
-| :---: | :--- | :--- |
-| CAR-01 | MVP | RF01, RF02, RF03, RF25 e RF26 no MVP |
-| CAR-02 | MVP | RF04, RF19, RF22, RF32 e RF35 no MVP |
-| CAR-03 | MVP (parcial) | RF05, RF06 e RF27 no MVP; RF21 na Fase 2 |
-| CAR-04 | MVP | RF07, RF08, RF28 e RF29 no MVP |
-| CAR-05 | MVP (parcial) | RF09, RF10, RF33, RF37 e RF38 no MVP; RF30 na Fase 2 |
-| CAR-06 | MVP (parcial) | RF11, RF34, RF39 e RF40 no MVP; RF12 e RF31 na Fase 2 |
-| CAR-07 | MVP (parcial) | RF13, RF14, RF17, RF18 e RF23 no MVP; RF24 na Fase 2 |
-| CAR-08 | Fase 2 | RF15 e RF16 na Fase 2 (logs de auditoria persistidos no MVP via RNF15/RNF16) |
-| CAR-09 | Fase 2 | RF20 na Fase 2 |
-| CAR-10 | Fase 2 | RF36 na Fase 2 |
-| CAR-11 | Fase 2 | Integração BIM/Orçamento adiada |
-| CAR-12 | Fase 2 | Integração de mensageria corporativa adiada |
-
-Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI e rastreabilidade bidirecional total com os Requisitos Funcionais:
 ### Módulo de Padronização e Unificação de Dados (Suporte a OE1)
 
 <details class="req-card car-card car-card-oe1" id="car-01" data-car="CAR-01">

@@ -16,13 +16,6 @@ flowchart LR
     CAT --> PRIO["<b>Priorização & MVP</b><br>Método VB × EC e Linha de Corte"]
     CAT --> RAST["<b>Rastreabilidade</b><br>Matrizes e Cobertura"]
     CAT --> HIST["<b>Histórico de Entregas</b><br>PC1–PC4, Atas e PRs"]
-
-    classDef src fill:#0284c7,stroke:#0369a1,color:#fff;
-    classDef cat fill:#059669,stroke:#047857,color:#fff,stroke-width:2px;
-    classDef view fill:#334155,stroke:#1e293b,color:#fff;
-    class VP src;
-    class CAT cat;
-    class PRIO,RAST,HIST view;
 ```
 
 ### Papel de Cada Página sem Listas Paralelas
@@ -84,9 +77,6 @@ flowchart LR
     A["<b>1. Descoberta / Achado</b><br>Feedback da cliente, revisão<br>docente ou teste em Staging"] --> B["<b>2. Análise e Decisão</b><br>Avaliação de impacto em<br>OEs, RFs, RNs, RNFs e MVP"]
     B --> C["<b>3. Atualização Canônica</b><br>Edição no Catálogo e<br>propagação para links/visões"]
     C --> D["<b>4. Comunicação & Memória</b><br>Registro em Ata/Histórico,<br>Issue e Pull Request revisado"]
-
-    classDef step fill:#1e293b,stroke:#daa520,color:#f8fafc;
-    class A,B,C,D step;
 ```
 
 ### Exemplos Reais de Propagação no Projeto

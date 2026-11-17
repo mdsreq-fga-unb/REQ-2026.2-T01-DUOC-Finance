@@ -215,8 +215,48 @@ Navegue pelas abas abaixo para consultar as escalas e a regra de conversão:
     Mede o volume de trabalho em pessoa-hora para desenvolvimento de backend, frontend, persistência e testes automatizados:
 
     | Pontuação | Classificação | Faixa de Tempo Estimada | Descrição Operacional |
-    | :---
+    | :---: | :--- | :---: | :--- |
+    | **1** | Esforço baixo | Até 2 h | Alteração pontual, fluxo direto com tela simples e validação básica. |
+    | **2** | Esforço moderado | Mais de 2 h até 8 h | Fluxo de complexidade média, com formulários, validações e persistência relacional padrão. |
+    | **3** | Esforço alto | Mais de 8 h até 16 h | Fluxo abrangente, com múltiplas etapas, processamentos condicionais ou manipulação de arquivos/tokens. |
+    | **4** | Esforço muito alto | Mais de 16 h | Rotina de alta densidade algorítmica, concorrência crítica, reconciliação em lote ou integração com incertezas. |
 
+=== "Complexidade Arquitetural (CX)"
+
+    Avalia as dependências arquiteturais, regras de validação cruzada e requisitos de integridade transacional:
+
+    | Pontuação | Classificação | Interpretação Técnica |
+    | :---: | :--- | :--- |
+    | **1** | Baixa | Utiliza padrão CRUD conhecido, com poucas dependências locais e consultas simples. |
+    | **2** | Moderada | Exige parametrizações de filtros, validações condicionais simples ou integridade entre tabelas relacionais. |
+    | **3** | Alta | Possui regras de negócio estritas (imutabilidade, bloqueio retroativo, validações centesimais ou upload de mídia). |
+    | **4** | Muito alta | Apresenta consistência transacional ACID mandatória, segregação RBAC em camadas, auditoria atômica ou integração externa legada. |
+
+=== "Lacuna de Capacidade (LC)"
+
+    Mede a distância entre o domínio tecnológico/conceitual necessário e a experiência prévia dos integrantes:
+
+    | Pontuação | Classificação | Interpretação Técnica |
+    | :---: | :--- | :--- |
+    | **1** | Domínio pleno | A equipe domina plenamente os conceitos e as tecnologias envolvidas (React/TypeScript, NestJS, PostgreSQL). |
+    | **2** | Conhecimento suficiente | A equipe possui conhecimento teórico e prático satisfatório, demandando apenas pesquisa pontual de padrões conhecidos. |
+    | **3** | Aprendizagem relevante | A equipe precisa desenvolver conceitos específicos (ponto fixo centesimal, isolamento RBAC rígido e concorrência). |
+    | **4** | Lacuna crítica | A equipe ainda não possui experiência prévia com o padrão, demandando investigação aprofundada ou prova de conceito. |
+
+=== "Cálculo & Conversão Ordinal"
+
+    Para consolidar as três dimensões em um indicador único e reprodutível, adota-se a média aritmética simples:
+
+    $$\text{Média Consolidada} = \frac{\text{Horas (Nota)} + \text{Complexidade} + \text{Lacuna}}{3}$$
+
+    A média decimal resultante é convertida para a escala ordinal inteira de **1 a 4** da Matriz 4 × 4:
+
+    | Intervalo da Média | Esforço Consolidado | Coluna na Matriz 4 × 4 | Interpretação Técnica |
+    | :---: | :---: | :---: | :--- |
+    | **1,00 a 1,49** | **1 — Baixo** | 1ª Coluna | Demanda técnica muito reduzida, tecnologia dominada e rápida entrega. |
+    | **1,50 a 2,49** | **2 — Moderado** | 2ª Coluna | Demanda balanceada, regras claras e execução controlada no ciclo regular. |
+    | **2,50 a 3,49** | **3 — Alto** | 3ª Coluna | Demanda substancial, regras de negócio densas e atenção especial a testes. |
+    | **3,50 a 4,00** | **4 — Muito alto** | 4ª Coluna | Elevada incerteza, múltiplos componentes acoplados ou risco de retrabalho. |
 ---
 
 <a id="indicadores-e-formulas-de-calculo"></a>
@@ -557,21 +597,6 @@ sequenceDiagram
 1. O `GESTOR_OPERACIONAL` solicita o ajuste com justificativa e comprovação; o `ADMIN_FINANCEIRO` analisa e autoriza a reabertura do lote.
 2. O lote original é preservado imutável (*append-only*); o ajuste pontual é efetuado via **[RF35](index.md#rf35)** com justificativa obrigatória registrada em banco.
 3. O lote é recalculado via **[RF05](index.md#rf05)** e re-homologado via **[RF06](index.md#rf06)**, gerando nova versão do extrato sem violar o histórico probatório.
-
----
-
-## Por que algo ficou de fora (Pós-MVP)
-
-Nenhum requisito foi descartado por falta de valor. Os **9 Requisitos Funcionais alocados no pós-MVP** foram postergados por motivos operacionais e técnicos objetivos:
-
-*   **[RF21](index.md#rf21) · Estornar fechamento financeiro:** Operação excepcional de reversão em lote; contornada de forma segura pelo fluxo assistido de retificação ([RF35](index.md#rf35) + [RF06](index.md#rf06)).
-*   **[RF24](index.md#rf24) · Impor renovação periódica de senhas:** Política de expiração forçada gera atrito no piloto inicial; as salvaguardas de bloqueio ([RF23](index.md#rf23)) e requisitos de complexidade suprem a segurança da v1.
-*   **[RF36](index.md#rf36) · Exportar dados consolidados em planilha:** Os relatórios nativos em tela no frontend cobrem a validação operacional imediata sem dependência de gerador XLSX/CSV no backend.
-*   **[RF12](index.md#rf12) · Monitorar execução orçamentária preditiva:** Projeções orçamentárias demandam histórico acumulado de meses de execução para produzir indicadores estatísticos válidos.
-*   **[RF15](index.md#rf15) e [RF16](index.md#rf16) · Consultar e exportar trilha de auditoria:** Os logs estruturados do banco de dados (PostgreSQL/Supabase) já gravam todas as mutações (*append-only* via [RNF15](index.md#rnf15)), dispensando tela administrativa própria no primeiro ciclo.
-*   **[RF20](index.md#rf20) · Importar presenças da FLIT:** Integração externa via API de terceiro cuja liberação de endpoints e chaves depende do parceiro externo.
-*   **[RF30](index.md#rf30) · Consultar comparativo de custos entre contratos:** Análise comparativa entre obras requer banco consolidado com massa de dados de múltiplos projetos encerrados.
-*   **[RF31](index.md#rf31) · Configurar alertas de execução orçamentária:** Disparo automatizado de notificações assíncronas planejado para a segunda fase de evolução.
 
 ---
 
