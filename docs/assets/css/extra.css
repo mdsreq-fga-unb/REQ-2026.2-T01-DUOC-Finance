@@ -10362,3 +10362,77 @@ details.dod-ev-details[open] > summary.dod-ev-summary::before {
 .dod-ev-gallery .req-evidence-media-card img {
   max-height: 150px;
 }
+
+/* Grade 3x2 para Etapas do Processo de Engenharia de Requisitos */
+.er-cards-grid-3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 1rem 0 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .er-cards-grid-3x2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .er-cards-grid-3x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.er-stage-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: var(--md-default-bg-color, #ffffff);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+[data-md-color-scheme="slate"] .er-stage-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.09);
+  box-shadow: none;
+}
+
+.er-stage-title {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--duoc-primary, #971828);
+  padding-bottom: 6px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+[data-md-color-scheme="slate"] .er-stage-title {
+  color: #fbbf24;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.er-stage-card p,
+.er-stage-card ul {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  margin: 0 !important;
+}
+
+.er-stage-card ul {
+  padding-left: 16px !important;
+  margin-top: 4px !important;
+}
+
+.er-stage-card li {
+  margin-bottom: 3px;
+}
+
+.er-stage-links {
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 0.74rem;
+  font-weight: 600;
+}

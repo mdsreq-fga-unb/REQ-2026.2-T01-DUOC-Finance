@@ -10,62 +10,78 @@ Este capítulo sintetiza como as atividades de **Engenharia de Requisitos (ER)**
 <a id="51-elementos-de-engenharia-de-requisitos"></a>
 ## Etapas do Processo de Engenharia de Requisitos
 
-<div class="grid cards" markdown>
+<div class="er-cards-grid-3x2">
+  <div class="er-stage-card">
+    <div class="er-stage-title">1. Elicitação e Descoberta</div>
+    <p><strong>Objetivo:</strong> Descobrir necessidades operacionais reais, regras de negócio e gargalos da DUOC.</p>
+    <ul>
+      <li><strong>Técnicas:</strong> Entrevistas semiestruturadas com Maria Beatryz e análise de planilhas legadas.</li>
+      <li><strong>Artefatos:</strong> Planilhas sanitizadas e fluxos transacionais (<code>TR-01</code> a <code>TR-04</code>).</li>
+    </ul>
+    <div class="er-stage-links">
+      Evidências: <a href="../../governanca/atas/reuniao-01/">Ata 01</a> · <a href="../../visao-produto/cenario-atual/#estrutura-detalhada-das-transacoes">Cenário Atual</a>
+    </div>
+  </div>
 
--   :material-compass-outline: **1. Elicitação e Descoberta**
+  <div class="er-stage-card">
+    <div class="er-stage-title">2. Análise e Consenso</div>
+    <p><strong>Objetivo:</strong> Estruturar o domínio, desambiguar conflitos e priorizar o escopo do MVP.</p>
+    <ul>
+      <li><strong>Técnicas:</strong> <em>Rich Picture</em>, Diagrama de Ishikawa e Matriz 4 × 4 (Valor × Esforço).</li>
+      <li><strong>Artefatos:</strong> Mapa de Stakeholders, papéis RBAC e recorte de <strong>31 RFs MVP / 9 Pós-MVP</strong>.</li>
+    </ul>
+    <div class="er-stage-links">
+      Evidências: <a href="../../visao-produto/cenario-atual/">Cenário Atual</a> · <a href="../../requisitos/priorizacao/">Priorização</a> · <a href="../../governanca/atas/reuniao-05/">Ata 05</a>
+    </div>
+  </div>
 
-    ---
-    **Objetivo:** Descobrir necessidades operacionais reais, regras de negócio e gargalos da DUOC.
+  <div class="er-stage-card">
+    <div class="er-stage-title">3. Declaração e Especificação</div>
+    <p><strong>Objetivo:</strong> Registrar os requisitos de forma atômica, clara e testável para negócio e engenharia.</p>
+    <ul>
+      <li><strong>Técnicas:</strong> Modelagem relacional (DER / Prisma) e decomposição modular por <code>OE</code>/<code>CAR</code>.</li>
+      <li><strong>Artefatos:</strong> <code>40 RFs</code> + <code>40 USs</code> (1:1), <code>31 RNs</code>, <code>20 RNFs</code> (URPS+) e DER PostgreSQL.</li>
+    </ul>
+    <div class="er-stage-links">
+      Evidências: <a href="../../visao-produto/solucao-proposta/">Solução Proposta</a> · <a href="../../requisitos/">Catálogo</a> · <a href="../../mvp/modelagem_bd/">Modelagem BD</a>
+    </div>
+  </div>
 
-    * **Técnicas:** Entrevistas semiestruturadas com a gestora Maria Beatryz e análise documental de planilhas legadas.
-    * **Artefatos:** Planilhas sanitizadas e fluxos transacionais (`TR-01` a `TR-04`).
-    * **Evidências:** [Ata da Reunião 01](../governanca/atas/reuniao-01.md) · [Transações no Cenário Atual](../visao-produto/cenario-atual.md#estrutura-detalhada-das-transacoes)
+  <div class="er-stage-card">
+    <div class="er-stage-title">4. Representação e Prototipação</div>
+    <p><strong>Objetivo:</strong> Traduzir especificações em interfaces visuais e fluxos navegáveis (<em>UI-First</em>).</p>
+    <ul>
+      <li><strong>Ferramentas:</strong> Prototipação de alta fidelidade no <strong>Figma</strong> (Desktop e Mobile) e Frontend React.</li>
+      <li><strong>Artefatos:</strong> Telas validadas sem alterações no Figma e fluxo sociotécnico documentado.</li>
+    </ul>
+    <div class="er-stage-links">
+      Evidências: <a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3&t=CHCrS3jVWsoutYCM-1" target="_blank" rel="noopener">Figma ↗</a> · <a href="../../governanca/atas/reuniao-06/">Ata 06</a> · <a href="../interacao-cliente/">Interação</a>
+    </div>
+  </div>
 
--   :material-scale-balance: **2. Análise e Consenso**
+  <div class="er-stage-card">
+    <div class="er-stage-title">5. Verificação e Validação (V&amp;V)</div>
+    <p><strong>Objetivo:</strong> Garantir corretude técnica (Verificação) e aderência ao negócio (Validação).</p>
+    <ul>
+      <li><strong>Técnicas:</strong> Avaliação por pares, inspeção em PRs, suítes Vitest (<code>107</code> backend / <code>18</code> frontend), CI/CD e UAT.</li>
+      <li><strong>Critérios:</strong> Portões formais de entrada (DoR) e saída (DoD).</li>
+    </ul>
+    <div class="er-stage-links">
+      Evidências: <a href="../../requisitos/feedback/">Feedback</a> · <a href="../../mvp/dor/">DoR</a> · <a href="../../mvp/dod/">DoD</a>
+    </div>
+  </div>
 
-    ---
-    **Objetivo:** Estruturar o domínio, desambiguar conflitos e priorizar o escopo do MVP.
-
-    * **Técnicas:** *Rich Picture*, Diagrama de Ishikawa e Matriz 4 × 4 (Valor de Negócio × Esforço Técnico).
-    * **Artefatos:** Mapa de Stakeholders, papéis RBAC e recorte de **31 RFs no MVP / 9 Pós-MVP**.
-    * **Evidências:** [Cenário Atual](../visao-produto/cenario-atual.md) · [Priorização & MVP](../requisitos/priorizacao.md) · [Ata 05](../governanca/atas/reuniao-05.md)
-
--   :material-file-document-edit-outline: **3. Declaração e Especificação**
-
-    ---
-    **Objetivo:** Registrar os requisitos de forma atômica, clara e testável para negócio e engenharia.
-
-    * **Técnicas:** Modelagem de dados relacional (DER / Prisma) e decomposição modular por `OE`/`CAR`.
-    * **Artefatos:** `40 RFs` + `40 USs` (1:1), `31 RNs`, `20 RNFs` (URPS+) e DER PostgreSQL.
-    * **Evidências:** [Solução Proposta](../visao-produto/solucao-proposta.md) · [Catálogo Integrado](../requisitos/index.md) · [Modelagem BD](../mvp/modelagem_bd.md)
-
--   :material-palette-outline: **4. Representação e Prototipação**
-
-    ---
-    **Objetivo:** Traduzir especificações em interfaces visuais e fluxos navegáveis (*UI-First*).
-
-    * **Técnicas & Ferramenta:** Prototipação de alta fidelidade no **Figma** (Desktop e Mobile) e Frontend React.
-    * **Artefatos:** Telas validadas sem alterações no Figma e fluxo sociotécnico documentado.
-    * **Evidências:** [Protótipo no Figma](https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3&t=CHCrS3jVWsoutYCM-1) · [Ata 06](../governanca/atas/reuniao-06.md) · [Interação Cliente](interacao-cliente.md)
-
--   :material-check-decagram-outline: **5. Verificação e Validação (V&V)**
-
-    ---
-    **Objetivo:** Garantir corretude técnica (Verificação) e aderência ao negócio (Validação).
-
-    * **Técnicas:** Avaliação por pares, inspeção em PRs, suítes Vitest (`107` backend / `18` frontend), CI/CD e sessões UAT.
-    * **Critérios:** Portões formais de entrada ([DoR](../mvp/dor.md)) e saída ([DoD](../mvp/dod.md)).
-    * **Evidências:** [Feedback em Pares](../requisitos/feedback.md) · [DoR](../mvp/dor.md) · [DoD](../mvp/dod.md)
-
--   :material-source-branch: **6. Organização e Atualização**
-
-    ---
-    **Objetivo:** Controlar mudanças sem listas paralelas e manter rastreabilidade bidirecional.
-
-    * **Práticas & Ferramentas:** *Docs as Code* (MkDocs), GitHub Issues/Projects, Pull Requests e Fonte Única Canônica.
-    * **Artefatos:** Cards unificados, matrizes de rastreabilidade e registro histórico por unidade.
-    * **Evidências:** [Organização do Backlog](organizacao-atualizacao.md) · [Boas Práticas GitHub](organizacao-e-boas-praticas.md) · [Rastreabilidade](../requisitos/rastreabilidade.md)
-
+  <div class="er-stage-card">
+    <div class="er-stage-title">6. Organização e Atualização</div>
+    <p><strong>Objetivo:</strong> Controlar mudanças sem listas paralelas e manter rastreabilidade bidirecional.</p>
+    <ul>
+      <li><strong>Práticas:</strong> <em>Docs as Code</em> (MkDocs), GitHub Issues/Projects, Pull Requests e Fonte Única Canônica.</li>
+      <li><strong>Artefatos:</strong> Cards unificados, matrizes de rastreabilidade e histórico por unidade.</li>
+    </ul>
+    <div class="er-stage-links">
+      Evidências: <a href="../organizacao-atualizacao/">Organização</a> · <a href="../organizacao-e-boas-praticas/">Boas Práticas</a> · <a href="../../requisitos/rastreabilidade/">Rastreabilidade</a>
+    </div>
+  </div>
 </div>
 
 ---
@@ -76,4 +92,4 @@ Este capítulo sintetiza como as atividades de **Engenharia de Requisitos (ER)**
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 05/09/2026 | Estruturação inicial das atividades de Engenharia de Requisitos. | Carlos Gabriel | Matheus Ribeiro |
 | `2.0` | 15/09/2026 | Unificação dos artefatos e alinhamento à stack NestJS/Supabase. | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
-| `2.8` | 17/11/2026 | Conversão das etapas para layout em cards e remoção do mapeamento redundante com as fases do RAD. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `2.8` | 17/11/2026 | Conversão das etapas para grade 3×2 em cards e remoção do mapeamento redundante com as fases do RAD. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
