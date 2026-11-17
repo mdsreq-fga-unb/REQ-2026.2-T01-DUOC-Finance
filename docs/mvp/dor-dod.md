@@ -110,6 +110,35 @@ A tabela abaixo registra a comprovação objetiva de cada critério do DoD para 
 | **Documentação — Docs as Code** | **Atendido** | Catálogo de requisitos atualizado com evidências visuais ([PR #174](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/174)) e `mkdocs build --strict` sem erros/avisos. |
 | **Homologação sociotécnica do incremento** | **Pendente de sessão UAT** | Telas validadas previamente na [Ata 06](../governanca/atas/reuniao-06.md); homologação do fluxo integrado em Staging agendada na sessão de UAT com Maria Beatryz (27/11/2026). |
 
+### Galeria de Evidências Visuais (Execução, Testes, Latência e CI/CD)
+
+<div class="req-evidence-media-grid">
+  <div class="req-evidence-media-card">
+    <img src="../../assets/images/evidencias/containers.png" alt="Containers Docker em execução (db, backend, frontend)" loading="lazy">
+    <span class="req-evidence-media-caption">Containers Docker ativos (PostgreSQL, NestJS e Vite)</span>
+  </div>
+  <div class="req-evidence-media-card">
+    <img src="../../assets/images/evidencias/testes-backend.png" alt="Testes automatizados Backend (107/107)" loading="lazy">
+    <span class="req-evidence-media-caption">Backend Vitest: 15 suítes e 107/107 testes aprovados</span>
+  </div>
+  <div class="req-evidence-media-card">
+    <img src="../../assets/images/evidencias/testes-frontend.png" alt="Testes automatizados Frontend (18/18)" loading="lazy">
+    <span class="req-evidence-media-caption">Frontend Vitest: 3 suítes e 18/18 testes aprovados</span>
+  </div>
+  <div class="req-evidence-media-card">
+    <img src="../../assets/images/evidencias/teste-api.png" alt="Latência API e build MkDocs --strict" loading="lazy">
+    <span class="req-evidence-media-caption">Latência medida (20ms / 11ms HTTP 401) e mkdocs build --strict</span>
+  </div>
+  <div class="req-evidence-media-card">
+    <img src="../../assets/images/evidencias/actions.png" alt="GitHub Actions CI/CD" loading="lazy">
+    <span class="req-evidence-media-caption">Pipelines GitHub Actions (CI e Deploy GH Pages)</span>
+  </div>
+  <div class="req-evidence-media-card">
+    <img src="../../assets/images/evidencias/estrutura-pr.png" alt="Checklist e estrutura do Pull Request" loading="lazy">
+    <span class="req-evidence-media-caption">Revisão por pares e checklist de Pull Request</span>
+  </div>
+</div>
+
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |

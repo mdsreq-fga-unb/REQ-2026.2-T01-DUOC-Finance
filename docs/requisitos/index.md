@@ -196,12 +196,16 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-evidence-media-grid">
           <div class="req-evidence-media-card">
-            <img src="../assets/images/evidencias/NovoColaborador.png" alt="Tela de Novo Colaborador (execução em ambiente Docker/Staging)" loading="lazy">
-            <span class="req-evidence-media-caption">Tela de Novo Colaborador (execução em ambiente Docker/Staging)</span>
+            <img src="../assets/images/evidencias/novo-colaborador.png" alt="Tela de Novo Colaborador com validação em execução" loading="lazy">
+            <span class="req-evidence-media-caption">Tela de Novo Colaborador com validação em execução</span>
           </div>
           <div class="req-evidence-media-card">
-            <img src="../assets/images/evidencias/Colaboradores.png" alt="Listagem de Colaboradores cadastrados" loading="lazy">
-            <span class="req-evidence-media-caption">Listagem de Colaboradores cadastrados</span>
+            <img src="../assets/images/evidencias/colaborador.png" alt="Painel de Colaboradores em execução" loading="lazy">
+            <span class="req-evidence-media-caption">Painel de Colaboradores em execução</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/testes-frontend.png" alt="Suíte Frontend Vitest (18/18 aprovados)" loading="lazy">
+            <span class="req-evidence-media-caption">Suíte Frontend Vitest (18/18 aprovados)</span>
           </div>
         </div>
       </div>
@@ -399,12 +403,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-evidence-media-grid">
           <div class="req-evidence-media-card">
-            <img src="../assets/images/evidencias/EditarColaborador.png" alt="Tela de Edição de Colaborador (execução em ambiente Docker/Staging)" loading="lazy">
-            <span class="req-evidence-media-caption">Tela de Edição de Colaborador (execução em ambiente Docker/Staging)</span>
+            <img src="../assets/images/evidencias/EditarColaborador.png" alt="Tela de Edição de Colaborador" loading="lazy">
+            <span class="req-evidence-media-caption">Tela de Edição de Colaborador</span>
           </div>
           <div class="req-evidence-media-card">
-            <img src="../assets/images/evidencias/Colaboradores.png" alt="Listagem de Colaboradores" loading="lazy">
-            <span class="req-evidence-media-caption">Listagem de Colaboradores</span>
+            <img src="../assets/images/evidencias/colaborador.png" alt="Listagem atualizada de Colaboradores" loading="lazy">
+            <span class="req-evidence-media-caption">Listagem atualizada de Colaboradores</span>
           </div>
         </div>
       </div>
@@ -531,6 +535,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">3 de 3 Validados (Incr. 1)</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -543,14 +548,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn04" class="req-tag req-tag-rn" title="RN04 · Revogação Automática de Credenciais em Afastamento ou Rescisão"># RN04 ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf" title="RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos"># RNF02 ↗</a> <a href="#rnf03" class="req-tag req-tag-rnf" title="RNF03 · Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito"># RNF03 ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf" title="RNF19 · Garantir acessibilidade digital nas interfaces do sistema"># RNF19 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -598,11 +607,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-evidence-media-grid">
           <div class="req-evidence-media-card">
-            <img src="../assets/images/evidencias/EditarColaborador.png" alt="Tela de Edição e Movimentação Funcional (execução em Docker/Staging)" loading="lazy">
-            <span class="req-evidence-media-caption">Tela de Edição e Movimentação Funcional (execução em Docker/Staging)</span>
+            <img src="../assets/images/evidencias/EditarColaborador.png" alt="Movimentação funcional de Colaborador" loading="lazy">
+            <span class="req-evidence-media-caption">Movimentação funcional de Colaborador</span>
           </div>
           <div class="req-evidence-media-card">
-            <img src="../assets/images/evidencias/Colaboradores.png" alt="Listagem de Colaboradores" loading="lazy">
+            <img src="../assets/images/evidencias/colaborador.png" alt="Listagem de Colaboradores" loading="lazy">
             <span class="req-evidence-media-caption">Listagem de Colaboradores</span>
           </div>
         </div>
@@ -730,6 +739,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">3 de 3 Validados (Incr. 1)</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -742,14 +752,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn" title="RN02 · Janela Temporal para Submissão e Edição de Apontamento"># RN02 ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf01" class="req-tag req-tag-rnf" title="RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade"># RNF01 ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf" title="RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo"># RNF04 ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf" title="RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes"># RNF07 ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf" title="RNF18 · Garantir disponibilidade mínima mensal do sistema"># RNF18 ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf" title="RNF19 · Garantir acessibilidade digital nas interfaces do sistema"># RNF19 ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf" title="RNF20 · Validar integridade de payloads em todas as rotas de escrita da API"># RNF20 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -793,6 +807,20 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
               <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
               <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
             </div>
+          </div>
+        </div>
+        <div class="req-evidence-media-grid">
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/novo-apontamento.png" alt="Formulário de Novo Apontamento de Campo (RVT)" loading="lazy">
+            <span class="req-evidence-media-caption">Formulário de Novo Apontamento de Campo (RVT)</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/apontamento.png" alt="Listagem de Apontamentos RVT" loading="lazy">
+            <span class="req-evidence-media-caption">Listagem de Apontamentos RVT</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/testes-backend.png" alt="Suíte Backend Vitest (107/107 aprovados)" loading="lazy">
+            <span class="req-evidence-media-caption">Suíte Backend Vitest (107/107 aprovados)</span>
           </div>
         </div>
       </div>
@@ -919,6 +947,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -931,14 +960,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn05" class="req-tag req-tag-rn" title="RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento"># RN05 ↗</a> <a href="#rn25" class="req-tag req-tag-rn" title="RN25 · Vigência dos Valores de Diárias Técnicas"># RN25 ↗</a> <a href="#rn31" class="req-tag req-tag-rn" title="RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo"># RN31 ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf05" class="req-tag req-tag-rnf" title="RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos"># RNF05 ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf" title="RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários"># RNF06 ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf" title="RNF18 · Garantir disponibilidade mínima mensal do sistema"># RNF18 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -1099,6 +1132,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -1111,14 +1145,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn05" class="req-tag req-tag-rn" title="RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento"># RN05 ↗</a> <a href="#rn08" class="req-tag req-tag-rn" title="RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso"># RN08 ↗</a> <a href="#rn17" class="req-tag req-tag-rn" title="RN17 · Registro Atômico de Mutações em Trilha de Auditoria"># RN17 ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf05" class="req-tag req-tag-rnf" title="RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos"># RNF05 ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf" title="RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários"># RNF06 ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -1279,6 +1317,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -1291,14 +1330,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn06" class="req-tag req-tag-rn" title="RN06 · Janela Temporal para Prestação de Contas de Reembolso"># RN06 ↗</a> <a href="#rn08" class="req-tag req-tag-rn" title="RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso"># RN08 ↗</a> <a href="#rn09" class="req-tag req-tag-rn" title="RN09 · Rateio Proporcional de Custos Indiretos por Contrato"># RN09 ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO / GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf" title="RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários"># RNF06 ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf" title="RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes"># RNF07 ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf" title="RNF20 · Validar integridade de payloads em todas as rotas de escrita da API"># RNF20 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -1459,6 +1502,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -1471,14 +1515,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn07" class="req-tag req-tag-rn" title="RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa"># RN07 ↗</a> <a href="#rn08" class="req-tag req-tag-rn" title="RN08 · Comprovante Fiscal Obrigatório para Homologação de Reembolso"># RN08 ↗</a> <a href="#rn27" class="req-tag req-tag-rn" title="RN27 · Notificação de Pendências Financeiras"># RN27 ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf" title="RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários"># RNF06 ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf" title="RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes"># RNF07 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -1639,6 +1687,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -1651,14 +1700,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn05" class="req-tag req-tag-rn" title="RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento"># RN05 ↗</a> <a href="#rn09" class="req-tag req-tag-rn" title="RN09 · Rateio Proporcional de Custos Indiretos por Contrato"># RN09 ↗</a> <a href="#rn10" class="req-tag req-tag-rn" title="RN10 · Garantia de Consistência Transacional no Rateio de Custos"># RN10 ↗</a> <a href="#rn11" class="req-tag req-tag-rn" title="RN11 · Parametrização Obrigatória de Centros de Custo por Contrato"># RN11 ↗</a> <a href="#rn12" class="req-tag req-tag-rn" title="RN12 · Segregação de Despesas Administrativas e Operacionais"># RN12 ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf" title="RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos"># RNF11 ↗</a> <a href="#rnf18" class="req-tag req-tag-rnf" title="RNF18 · Garantir disponibilidade mínima mensal do sistema"># RNF18 ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf" title="RNF20 · Validar integridade de payloads em todas as rotas de escrita da API"># RNF20 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -1819,6 +1872,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -1831,14 +1885,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn12" class="req-tag req-tag-rn" title="RN12 · Segregação de Despesas Administrativas e Operacionais"># RN12 ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf" title="RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos"># RNF09 ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -1999,6 +2057,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -2011,14 +2070,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn14" class="req-tag req-tag-rn" title="RN14 · Sigilo e Não-Exposição de Remunerações Individuais em Painéis"># RN14 ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO / ADMIN_SISTEMA</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf" title="RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos"># RNF09 ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf" title="RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet"># RNF12 ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf" title="RNF19 · Garantir acessibilidade digital nas interfaces do sistema"># RNF19 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -2178,11 +2241,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">Pós-MVP · DoD Não Iniciado</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box verified">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
@@ -2190,14 +2254,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn13" class="req-tag req-tag-rn" title="RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário"># RN13 ↗</a> <a href="#rn14" class="req-tag req-tag-rn" title="RN14 · Sigilo e Não-Exposição de Remunerações Individuais em Painéis"># RN14 ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf" title="RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos"># RNF09 ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf" title="RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet"># RNF12 ↗</a> <a href="#rnf19" class="req-tag req-tag-rnf" title="RNF19 · Garantir acessibilidade digital nas interfaces do sistema"># RNF19 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -2431,8 +2499,16 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-evidence-media-grid">
           <div class="req-evidence-media-card">
-            <img src="../assets/images/evidencias/AcessoLogin.png" alt="Tela de Autenticação e Login Corporativo (execução em Docker/Staging)" loading="lazy">
-            <span class="req-evidence-media-caption">Tela de Autenticação e Login Corporativo (execução em Docker/Staging)</span>
+            <img src="../assets/images/evidencias/login.png" alt="Tela oficial de Login com identidade visual DUOC" loading="lazy">
+            <span class="req-evidence-media-caption">Tela oficial de Login com identidade visual DUOC</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/dashboard.png" alt="Dashboard autenticado após login" loading="lazy">
+            <span class="req-evidence-media-caption">Dashboard autenticado após login</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/testes-backend.png" alt="Testes de autenticação JWT/bcrypt aprovados (107/107)" loading="lazy">
+            <span class="req-evidence-media-caption">Testes de autenticação JWT/bcrypt aprovados (107/107)</span>
           </div>
         </div>
       </div>
@@ -2559,11 +2635,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">Aguardando Ciclo · DoD Não Iniciado</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box verified">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
@@ -2571,14 +2648,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn16" class="req-tag req-tag-rn" title="RN16 · Princípio do Menor Privilégio e Segregação de Funções (SoD)"># RN16 ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf" title="RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos"># RNF14 ↗</a> <a href="#rnf20" class="req-tag req-tag-rnf" title="RNF20 · Validar integridade de payloads em todas as rotas de escrita da API"># RNF20 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -2738,11 +2819,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">Pós-MVP · DoD Não Iniciado</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box verified">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
@@ -2750,14 +2832,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn17" class="req-tag req-tag-rn" title="RN17 · Registro Atômico de Mutações em Trilha de Auditoria"># RN17 ↗</a> <a href="#rn18" class="req-tag req-tag-rn" title="RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria"># RN18 ↗</a> <a href="#rn19" class="req-tag req-tag-rn" title="RN19 · Política de Retenção Quinquenal de Logs"># RN19 ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf15" class="req-tag req-tag-rnf" title="RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria"># RNF15 ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf" title="RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido"># RNF16 ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf" title="RNF17 · Realizar backup automático diário com restauração verificada"># RNF17 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -2917,11 +3003,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">Pós-MVP · DoD Não Iniciado</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box verified">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
@@ -2929,14 +3016,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn17" class="req-tag req-tag-rn" title="RN17 · Registro Atômico de Mutações em Trilha de Auditoria"># RN17 ↗</a> <a href="#rn18" class="req-tag req-tag-rn" title="RN18 · Composição Mínima Obrigatória do Registro de Log de Auditoria"># RN18 ↗</a> <a href="#rn19" class="req-tag req-tag-rn" title="RN19 · Política de Retenção Quinquenal de Logs"># RN19 ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf15" class="req-tag req-tag-rnf" title="RNF15 · Garantir consistência transacional e atomicidade na gravação de logs de auditoria"># RNF15 ↗</a> <a href="#rnf16" class="req-tag req-tag-rnf" title="RNF16 · Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido"># RNF16 ↗</a> <a href="#rnf17" class="req-tag req-tag-rnf" title="RNF17 · Realizar backup automático diário com restauração verificada"># RNF17 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -3170,8 +3261,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-evidence-media-grid">
           <div class="req-evidence-media-card">
-            <img src="../assets/images/evidencias/AcessoLogin.png" alt="Tela de Autenticação e Primeiro Acesso (execução em Docker/Staging)" loading="lazy">
-            <span class="req-evidence-media-caption">Tela de Autenticação e Primeiro Acesso (execução em Docker/Staging)</span>
+            <img src="../assets/images/evidencias/login-acesso.png" alt="Fluxo de acesso e recuperação de credenciais" loading="lazy">
+            <span class="req-evidence-media-caption">Fluxo de acesso e recuperação de credenciais</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/testes-backend.png" alt="Testes de política e troca de senha aprovados" loading="lazy">
+            <span class="req-evidence-media-caption">Testes de política e troca de senha aprovados</span>
           </div>
         </div>
       </div>
@@ -3371,12 +3466,16 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         </div>
         <div class="req-evidence-media-grid">
           <div class="req-evidence-media-card">
-            <img src="../assets/images/evidencias/AcessoLogin.png" alt="Autenticação Corporativa RBAC (execução em Docker/Staging)" loading="lazy">
-            <span class="req-evidence-media-caption">Autenticação Corporativa RBAC (execução em Docker/Staging)</span>
+            <img src="../assets/images/evidencias/dashboard.png" alt="Menu e rotas protegidas por perfil RBAC" loading="lazy">
+            <span class="req-evidence-media-caption">Menu e rotas protegidas por perfil RBAC</span>
           </div>
           <div class="req-evidence-media-card">
-            <img src="../assets/images/evidencias/Colaboradores.png" alt="Painel Administrativo protegido por perfil" loading="lazy">
-            <span class="req-evidence-media-caption">Painel Administrativo protegido por perfil</span>
+            <img src="../assets/images/evidencias/teste-api.png" alt="Bloqueio HTTP 401 sem token e latência < 20ms" loading="lazy">
+            <span class="req-evidence-media-caption">Bloqueio HTTP 401 sem token e latência < 20ms</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/testes-frontend.png" alt="Testes de matriz RBAC frontend (18/18)" loading="lazy">
+            <span class="req-evidence-media-caption">Testes de matriz RBAC frontend (18/18)</span>
           </div>
         </div>
       </div>
@@ -3503,6 +3602,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">3 de 3 Validados (Incr. 1)</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -3515,14 +3615,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn16" class="req-tag req-tag-rn" title="RN16 · Princípio do Menor Privilégio e Segregação de Funções (SoD)"># RN16 ↗</a> <a href="#rn30" class="req-tag req-tag-rn" title="RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos"># RN30 ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf01" class="req-tag req-tag-rnf" title="RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade"># RNF01 ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf" title="RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo"># RNF04 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -3566,6 +3670,16 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
               <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
               <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
             </div>
+          </div>
+        </div>
+        <div class="req-evidence-media-grid">
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/apontamento.png" alt="Consulta ao histórico de Apontamentos RVT" loading="lazy">
+            <span class="req-evidence-media-caption">Consulta ao histórico de Apontamentos RVT</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/testes-backend.png" alt="Testes de serviço e controller RVT aprovados" loading="lazy">
+            <span class="req-evidence-media-caption">Testes de serviço e controller RVT aprovados</span>
           </div>
         </div>
       </div>
@@ -3691,11 +3805,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">Pós-MVP · DoD Não Iniciado</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box verified">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
@@ -3703,14 +3818,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<span class="req-tag-none">—</span>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf" title="RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos"># RNF02 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -3870,11 +3989,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">Pós-MVP · DoD Não Iniciado</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box verified">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
@@ -3882,14 +4002,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn17" class="req-tag req-tag-rn" title="RN17 · Registro Atômico de Mutações em Trilha de Auditoria"># RN17 ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf05" class="req-tag req-tag-rnf" title="RNF05 · Processar rotina de fechamento financeiro em até 5,0 segundos"># RNF05 ↗</a> <a href="#rnf06" class="req-tag req-tag-rnf" title="RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários"># RNF06 ↗</a> <a href="#rnf08" class="req-tag req-tag-rnf" title="RNF08 · Garantir rastreabilidade probatória e não-repúdio em operações de estorno"># RNF08 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -4050,6 +4174,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">3 de 3 Validados (Incr. 1)</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -4062,14 +4187,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn24" class="req-tag req-tag-rn" title="RN24 · Captura de Geolocalização Não Bloqueante"># RN24 ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf01" class="req-tag req-tag-rnf" title="RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade"># RNF01 ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf" title="RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo"># RNF04 ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf" title="RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes"># RNF07 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -4113,6 +4242,16 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
               <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
               <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
             </div>
+          </div>
+        </div>
+        <div class="req-evidence-media-grid">
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/novo-apontamento.png" alt="Anexo de evidências comprobatórias no RVT" loading="lazy">
+            <span class="req-evidence-media-caption">Anexo de evidências comprobatórias no RVT</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/testes-backend.png" alt="Validação MIME/SHA-256 aprovada (107/107)" loading="lazy">
+            <span class="req-evidence-media-caption">Validação MIME/SHA-256 aprovada (107/107)</span>
           </div>
         </div>
       </div>
@@ -4241,6 +4380,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">3 de 3 Validados (Incr. 1)</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -4253,14 +4393,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn20" class="req-tag req-tag-rn" title="RN20 · Limite de Tentativas de Autenticação"># RN20 ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf" title="RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos"># RNF14 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -4304,6 +4448,16 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
               <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
               <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
             </div>
+          </div>
+        </div>
+        <div class="req-evidence-media-grid">
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/login.png" alt="Autenticação protegida contra força bruta" loading="lazy">
+            <span class="req-evidence-media-caption">Autenticação protegida contra força bruta</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/testes-backend.png" alt="25 testes em auth.service.spec.ts (bloqueio após 5 falhas)" loading="lazy">
+            <span class="req-evidence-media-caption">25 testes em auth.service.spec.ts (bloqueio após 5 falhas)</span>
           </div>
         </div>
       </div>
@@ -4429,11 +4583,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">Pós-MVP · DoD Não Iniciado</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box verified">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
@@ -4441,14 +4596,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn21" class="req-tag req-tag-rn" title="RN21 · Política de Expiração e Histórico de Senhas"># RN21 ↗</a>) e perfil canônico de acesso <code>ADMIN_SISTEMA</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf14" class="req-tag req-tag-rnf" title="RNF14 · Validar perfil de autorização em 100% das rotas de API com dados protegidos"># RNF14 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -4609,11 +4768,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">Aguardando Ciclo · DoD Não Iniciado</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box verified">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
@@ -4621,14 +4781,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn22" class="req-tag req-tag-rn" title="RN22 · Tipos de Contratação Válidos"># RN22 ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf" title="RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos"># RNF02 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -4789,11 +4953,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">Aguardando Ciclo · DoD Não Iniciado</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box verified">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
@@ -4801,14 +4966,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn23" class="req-tag req-tag-rn" title="RN23 · Versionamento Obrigatório de Dados Cadastrais e Bancários"># RN23 ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf" title="RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos"># RNF02 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -4969,6 +5138,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -4981,14 +5151,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn25" class="req-tag req-tag-rn" title="RN25 · Vigência dos Valores de Diárias Técnicas"># RN25 ↗</a> <a href="#rn31" class="req-tag req-tag-rn" title="RN31 · Parametrização e Fórmulas de Diárias e Comissões Técnicas de Campo"># RN31 ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf" title="RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários"># RNF06 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -5149,6 +5323,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -5161,14 +5336,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn" title="RN09 · Rateio Proporcional de Custos Indiretos por Contrato"># RN09 ↗</a> <a href="#rn26" class="req-tag req-tag-rn" title="RN26 · Elegibilidade do Adiantamento Operacional"># RN26 ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf" title="RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários"># RNF06 ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf" title="RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes"># RNF07 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -5329,6 +5508,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -5341,14 +5521,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn07" class="req-tag req-tag-rn" title="RN07 · Bloqueio e Justificativa Obrigatória em Recusa de Despesa"># RN07 ↗</a> <a href="#rn27" class="req-tag req-tag-rn" title="RN27 · Notificação de Pendências Financeiras"># RN27 ↗</a>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf06" class="req-tag req-tag-rnf" title="RNF06 · Garantir exatidão aritmética centesimal em cálculos monetários"># RNF06 ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf" title="RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes"># RNF07 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -5508,11 +5692,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">Pós-MVP · DoD Não Iniciado</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box verified">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
@@ -5520,14 +5705,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn28" class="req-tag req-tag-rn" title="RN28 · Comparativo Histórico de Custos"># RN28 ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf" title="RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos"># RNF09 ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf" title="RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet"># RNF12 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -5687,11 +5876,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">Pós-MVP · DoD Não Iniciado</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box verified">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
@@ -5699,14 +5889,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn29" class="req-tag req-tag-rn" title="RN29 · Disparo de Alertas Preventivos de Extrapolação Orçamentária"># RN29 ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf" title="RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos"># RNF09 ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnf12" class="req-tag req-tag-rnf" title="RNF12 · Assegurar responsividade do painel em resoluções de desktop e tablet"># RNF12 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -5867,6 +6061,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -5879,14 +6074,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn" title="RN02 · Janela Temporal para Submissão e Edição de Apontamento"># RN02 ↗</a> <a href="#rn05" class="req-tag req-tag-rn" title="RN05 · Pré-requisito de Homologação de Apontamentos para Fechamento"># RN05 ↗</a> <a href="#rn30" class="req-tag req-tag-rn" title="RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos"># RN30 ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf04" class="req-tag req-tag-rnf" title="RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo"># RNF04 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -6047,6 +6246,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -6059,14 +6259,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn" title="RN09 · Rateio Proporcional de Custos Indiretos por Contrato"># RN09 ↗</a> <a href="#rn11" class="req-tag req-tag-rn" title="RN11 · Parametrização Obrigatória de Centros de Custo por Contrato"># RN11 ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf" title="RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos"># RNF11 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -6227,6 +6431,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -6239,14 +6444,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn" title="RN09 · Rateio Proporcional de Custos Indiretos por Contrato"># RN09 ↗</a> <a href="#rn11" class="req-tag req-tag-rn" title="RN11 · Parametrização Obrigatória de Centros de Custo por Contrato"># RN11 ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf" title="RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos"># RNF09 ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -6443,6 +6652,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -6455,14 +6665,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn02" class="req-tag req-tag-rn"># RN02 · Janela Temporal para Submissão e Edição de Apontamento ↗</a> <a href="#rn30" class="req-tag req-tag-rn"># RN30 · Justificativa Obrigatória e Bloqueio na Deliberação de Apontamentos ↗</a>) e perfil canônico de acesso <code>TECNICO_CAMPO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf01" class="req-tag req-tag-rnf" title="RNF01 · Operar em modo offline para coleta de dados em canteiros sem conectividade"># RNF01 ↗</a> <a href="#rnf04" class="req-tag req-tag-rnf" title="RNF04 · Garantir usabilidade e agilidade no preenchimento de apontamentos de campo"># RNF04 ↗</a> <a href="#rnf07" class="req-tag req-tag-rnf" title="RNF07 · Garantir robustez e segurança no processamento e armazenamento de comprovantes"># RNF07 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -6622,11 +6836,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">Pós-MVP · DoD Não Iniciado</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box verified">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">Critério Funcional Oficial (Verificável)</span>
@@ -6634,14 +6849,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<span class="req-tag-none">—</span>) e perfil canônico de acesso <code>ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf02" class="req-tag req-tag-rnf" title="RNF02 · Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos"># RNF02 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -6802,6 +7021,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -6814,14 +7034,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn" title="RN09 · Rateio Proporcional de Custos Indiretos por Contrato"># RN09 ↗</a> <a href="#rn11" class="req-tag req-tag-rn" title="RN11 · Parametrização Obrigatória de Centros de Custo por Contrato"># RN11 ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnf11" class="req-tag req-tag-rnf" title="RNF11 · Garantir consistência transacional ACID na apropriação concorrente de custos"># RNF11 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -6982,6 +7206,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -6994,14 +7219,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<span class="req-tag-none">—</span>) e perfil canônico de acesso <code>GESTOR_OBRAS / ADMIN_FINANCEIRO</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf" title="RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos"># RNF09 ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -7162,6 +7391,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -7174,14 +7404,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn09" class="req-tag req-tag-rn" title="RN09 · Rateio Proporcional de Custos Indiretos por Contrato"># RN09 ↗</a> <a href="#rn11" class="req-tag req-tag-rn" title="RN11 · Parametrização Obrigatória de Centros de Custo por Contrato"># RN11 ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf" title="RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos"># RNF09 ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>
@@ -7342,6 +7576,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
+          <span class="req-checklist-badge">DoR Aprovado · DoD Pendente</span>
           <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
         </div>
         <div class="req-checklist-item">
@@ -7354,14 +7589,18 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
             <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn13" class="req-tag req-tag-rn" title="RN13 · Bloqueio Preventivo por Extrapolação de Teto Orçamentário"># RN13 ↗</a> <a href="#rn29" class="req-tag req-tag-rn" title="RN29 · Disparo de Alertas Preventivos de Extrapolação Orçamentária"># RN29 ↗</a>) e perfil canônico de acesso <code>GESTOR_OBRAS</code> autenticado.</p>
           </div>
         </div>
         <div class="req-checklist-item">
-          <div class="req-check-box pending"></div>
+          <div class="req-check-box pending">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoD — Qualidade Técnica & Não Funcionais</span>
             <p class="req-check-text">Transação atômica ACID assegurada, gravação em trilha de auditoria UTC e conformidade estrita aos atributos de qualidade (<a href="#rnf09" class="req-tag req-tag-rnf" title="RNF09 · Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos"># RNF09 ↗</a> <a href="#rnf10" class="req-tag req-tag-rnf" title="RNF10 · Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais"># RNF10 ↗</a> <a href="#rnfs-transversais" class="req-tag req-tag-rnf"># Transversais (T) ↗</a>).</p>

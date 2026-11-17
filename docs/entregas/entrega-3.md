@@ -79,6 +79,35 @@ A gravação oficial do Ponto de Controle 3 (realizada em **16/11/2026**) aprese
 | **Eric Araújo** | 200064053 | Product Owner (PO) e Engenheiro de Requisitos | Cronograma, Desacoplamento Metodológico e Método de Atualização de Requisitos no RAD. |
 | **Paulo Nery** | 221008740 | Engenheiro Backend | Demonstração do Incremento 1 entregue (Colaboradores, Auth/RBAC, RVT) e escopo do Incremento 2. |
 
+### Evidências de Execução e Qualidade (Staging/Docker, Testes e CI/CD)
+
+<div class="req-evidence-media-grid">
+  <div class="req-evidence-media-card">
+    <img src="../../assets/images/evidencias/containers.png" alt="Containers Docker em execução" loading="lazy">
+    <span class="req-evidence-media-caption">Containers Docker ativos (db, backend e frontend)</span>
+  </div>
+  <div class="req-evidence-media-card">
+    <img src="../../assets/images/evidencias/dashboard.png" alt="Dashboard DUOC Finance autenticado" loading="lazy">
+    <span class="req-evidence-media-caption">Visão Geral (Dashboard) após login autenticado</span>
+  </div>
+  <div class="req-evidence-media-card">
+    <img src="../../assets/images/evidencias/apontamento.png" alt="Listagem de Apontamentos RVT" loading="lazy">
+    <span class="req-evidence-media-caption">Módulo de Apontamentos de Campo (RVT) em execução</span>
+  </div>
+  <div class="req-evidence-media-card">
+    <img src="../../assets/images/evidencias/testes-backend.png" alt="Testes Backend Vitest" loading="lazy">
+    <span class="req-evidence-media-caption">107/107 testes backend aprovados</span>
+  </div>
+  <div class="req-evidence-media-card">
+    <img src="../../assets/images/evidencias/testes-frontend.png" alt="Testes Frontend Vitest" loading="lazy">
+    <span class="req-evidence-media-caption">18/18 testes frontend aprovados</span>
+  </div>
+  <div class="req-evidence-media-card">
+    <img src="../../assets/images/evidencias/actions2.png" alt="Execuções CI/CD no GitHub Actions" loading="lazy">
+    <span class="req-evidence-media-caption">Workflows CI/CD e Deploy aprovados no GitHub Actions</span>
+  </div>
+</div>
+
 ---
 
 ## 4. Considerações e Próximos Passos
