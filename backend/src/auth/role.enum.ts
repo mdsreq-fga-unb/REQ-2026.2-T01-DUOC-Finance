@@ -1,0 +1,7 @@
+/** CAR-07 | Papéis canônicos definidos na issue #155. */
+export enum Role {
+  ADMIN_FINANCEIRO = 'ADMIN_FINANCEIRO',
+  GESTOR_OPERACIONAL = 'GESTOR_OPERACIONAL',
+  TECNICO_CAMPO = 'TECNICO_CAMPO',
+  AUDITOR_EXTERNO = 'AUDITOR_EXTERNO',
+}

@@ -1,78 +1,60 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import AppLayout from "../components/layout/AppLayout";
-import DashboardPage from "../pages/DashboardPage";
-import ColaboradoresPage from "../pages/ColaboradoresPage";
-import ColaboradorFormPage from "../pages/ColaboradorFormPage";
-import LoginPage from "../pages/LoginPage";
-import RvtFormPage from "../pages/RvtFormPage";
-import RvtHistoricoPage from "../pages/RvtHistoricoPage";
+import { Routes, Route, Navigate } from 'react-router-dom'
+import AppLayout from '../components/layout/AppLayout'
+import DashboardPage from '../pages/DashboardPage'
+import ColaboradoresPage from '../pages/ColaboradoresPage'
+import ColaboradorFormPage from '../pages/ColaboradorFormPage'
+import LoginPage from '../pages/LoginPage'
+import RvtFormPage from '../pages/RvtFormPage'
+import RvtHistoricoPage from '../pages/RvtHistoricoPage'
+import AcessoNegadoPage from '../pages/AcessoNegadoPage'
+import TrocarSenhaPage from '../pages/TrocarSenhaPage'
+import PrivateRoute from '../components/auth/PrivateRoute'
+import RoleRoute from '../components/auth/RoleRoute'
+import { PERMISSOES } from '../auth/permissoes'
 
 export default function AppRoutes() {
   return (
     <Routes>
-      {/* Rota pública: Login isolado sem Sidebar/Header */}
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/trocar-senha" element={<TrocarSenhaPage />} />
 
-      {/* Rota pai: Carrega o AppLayout (Sidebar + Header + Outlet) */}
-      <Route path="/" element={<AppLayout />}>
-        {/* ROTA PADRÃO (index) para dashboard */}
-        <Route index element={<DashboardPage />} />
+      <Route element={<PrivateRoute />}>
+        <Route path="/" element={<AppLayout />}>
+          <Route index element={<DashboardPage />} />
+          <Route path="acesso-negado" element={<AcessoNegadoPage />} />
 
-                {/* ROTAS de colaboradores (RF01, RF02, RF03) */}
-                <Route path="colaboradores" element={<ColaboradoresPage />} />
-                <Route path="colaboradores/novo" element={<ColaboradorFormPage />} />
-                <Route path="colaboradores/:id" element={<ColaboradorFormPage />} />
+          <Route element={<RoleRoute permitidos={PERMISSOES.colaboradores} />}>
+            <Route path="colaboradores" element={<ColaboradoresPage />} />
+            <Route path="colaboradores/novo" element={<ColaboradorFormPage />} />
+            <Route path="colaboradores/:id" element={<ColaboradorFormPage />} />
+          </Route>
 
-                {/* ROTAS do apontamento de campo / RVT (RF04 · CAR-02) */}
-                <Route path="rvt" element={<Navigate to="/rvt/historico" replace />} />
-                <Route path="rvt/novo" element={<RvtFormPage />} />
-                <Route path="rvt/historico" element={<RvtHistoricoPage />} />
-                
-                {/* ROTA de fechamento com outras opções para sidebar */}
-                <Route
-                path="fechamento"
-                element={
-                    <div className="p-6 bg-surface border border-border rounded-xl shadow-xs">
-                    <h2 className="text-xl font-bold text-dark">
-                        Fechamento Financeiro
-                    </h2>
-                    <p className="text-muted mt-1">
-                        Tela em desenvolvimento (RF05)...
-                    </p>
-                    </div>
-                }
-                />
+          <Route path="rvt" element={<Navigate to="/rvt/historico" replace />} />
+          <Route element={<RoleRoute permitidos={PERMISSOES.novoRvt} />}>
+            <Route path="rvt/novo" element={<RvtFormPage />} />
+          </Route>
+          <Route element={<RoleRoute permitidos={PERMISSOES.historicoRvt} />}>
+            <Route path="rvt/historico" element={<RvtHistoricoPage />} />
+          </Route>
 
-        {/* ROTA de fechamento com outras opções para sidebar */}
-        <Route
-          path="fechamento"
-          element={
-            <div className="p-6 bg-surface border border-border rounded-xl shadow-xs">
-              <h2 className="text-xl font-bold text-dark">
-                Fechamento Financeiro
-              </h2>
-              <p className="text-muted mt-1">
-                Tela em desenvolvimento (RF05)...
-              </p>
-            </div>
-          }
-        />
+          <Route element={<RoleRoute permitidos={PERMISSOES.fechamento} />}>
+            <Route path="fechamento" element={
+              <section className="p-6 bg-surface border border-border rounded-xl shadow-xs">
+                <h2 className="text-xl font-bold text-dark">Fechamento Financeiro</h2>
+                <p className="text-muted mt-1">Tela em desenvolvimento (RF05)...</p>
+              </section>
+            } />
+          </Route>
 
-        {/* ROTA 404: Se o usuário digitar qualquer URL inexistente */}
-        <Route
-          path="*"
-          element={
-            <div className="text-center py-12">
-              <h2 className="text-2xl font-bold text-primary">
-                Página não encontrada (404)
-              </h2>
-              <p className="text-muted mt-2">
-                A rota que você tentou acessar não existe.
-              </p>
-            </div>
-          }
-        />
+          <Route path="*" element={
+            <section className="text-center py-12">
+              <h2 className="text-2xl font-bold text-primary">Página não encontrada (404)</h2>
+              <p className="text-muted mt-2">A rota que você tentou acessar não existe.</p>
+            </section>
+          } />
+        </Route>
       </Route>
+      <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   )
 }

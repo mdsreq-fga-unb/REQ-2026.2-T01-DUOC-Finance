@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom'
 import Button from '../components/ui/Button'
 
 export default function DashboardPage() {
+  const navigate = useNavigate()
   return (
     <div className="space-y-6">
       <div>
@@ -40,13 +42,17 @@ export default function DashboardPage() {
           Ações Rápidas & Variantes de Botão
         </h2>
         <div className="flex flex-wrap gap-3">
-          <Button variant="primary">Novo Colaborador</Button>
-          <Button variant="gold">Aprovar RVT</Button>
-          <Button variant="secondary">Filtrar</Button>
-          <Button variant="outline">Exportar</Button>
-          <Button variant="ghost">Cancelar</Button>
-          <Button variant="primary" disabled>
-            Desabilitado
+          <Button variant="primary" onClick={() => navigate('/colaboradores/novo')}>
+            Novo Colaborador
+          </Button>
+          <Button variant="gold" onClick={() => navigate('/rvt/novo')}>
+            Novo Apontamento (RVT)
+          </Button>
+          <Button variant="secondary" onClick={() => navigate('/rvt/historico')}>
+            Meus Apontamentos
+          </Button>
+          <Button variant="outline" onClick={() => navigate('/colaboradores')}>
+            Colaboradores
           </Button>
         </div>
       </div>

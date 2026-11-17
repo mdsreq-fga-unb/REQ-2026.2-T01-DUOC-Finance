@@ -1,20 +1,18 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { useAuth } from '../auth/AuthContext'
+import { ErroAuth } from '../services/auth.service'
 import {
   Mail,
   Lock,
   Eye,
   EyeOff,
   ArrowRight,
-  Briefcase,
-  Users,
-  HardHat,
   Loader2,
   HelpCircle,
   X,
   CheckCircle2,
-  MapPin,
 } from 'lucide-react'
 import Button from '../components/ui/Button'
 import Input from '../components/ui/Input'
@@ -24,12 +22,13 @@ import { maskCPF } from '../utils/masks'
 
 export default function LoginPage() {
   const navigate = useNavigate()
+  const location = useLocation()
+  const { login } = useAuth()
   const toast = useToast()
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
-  const [rememberMe, setRememberMe] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
   // Erros de validação cliente (RNF03)
@@ -41,7 +40,7 @@ export default function LoginPage() {
   const [recoveryIdentifier, setRecoveryIdentifier] = useState('')
   const [recoveryError, setRecoveryError] = useState('')
   const [recoverySuccess, setRecoverySuccess] = useState(false)
-  const [isRecovering, setIsRecovering] = useState(false)
+  const [isRecovering] = useState(false) // Recuperação RF17 ainda não integrada
 
   const handleEmailChange = (val: string) => {
     setEmail(val)
@@ -78,20 +77,23 @@ export default function LoginPage() {
 
     setIsLoading(true)
 
-    // Simulação síncrona com feedback visual de carregamento (RF13)
-    setTimeout(() => {
+    try {
+      await login(email.trim().toLowerCase(), password)
+      toast.success('Autenticado com sucesso!')
+      const origem = (location.state as { from?: { pathname?: unknown } } | null)?.from?.pathname
+      const destino = typeof origem === 'string' && origem.startsWith('/') && !origem.startsWith('//')
+        ? origem : '/'
+      navigate(destino, { replace: true })
+    } catch (erro) {
+      if (erro instanceof ErroAuth && erro.status === 403 && /senha expirada/i.test(erro.message)) {
+        navigate('/trocar-senha', { replace: true, state: { email: email.trim().toLowerCase() } })
+        return
+      }
+      const mensagem = erro instanceof ErroAuth ? erro.message : 'Não foi possível acessar o servidor.'
+      setPasswordError(mensagem)
+    } finally {
       setIsLoading(false)
-      toast.success('Autenticado com sucesso! Bem-vindo ao DUOC Finance.')
-      navigate('/')
-    }, 700)
-  }
-
-  const handleDemoAccess = (roleEmail: string) => {
-    setEmail(roleEmail)
-    setPassword('duoc2026')
-    setEmailError('')
-    setPasswordError('')
-    toast.info(`Perfil demonstrativo (${roleEmail}) carregado.`)
+    }
   }
 
   const handleRecoverySubmit = (e: FormEvent) => {
@@ -108,15 +110,8 @@ export default function LoginPage() {
       return
     }
 
-    setIsRecovering(true)
-
-    setTimeout(() => {
-      setIsRecovering(false)
-      setRecoverySuccess(true)
-      toast.success(
-        'Instruções enviadas para o e-mail cadastrado na base DUOC.',
-      )
-    }, 800)
+    // Ainda não existe backend de recuperação de credenciais (RF17).
+    setRecoveryError('Recuperação automática ainda indisponível. Contate o administrador da DUOC.')
   }
 
   return (
@@ -160,12 +155,11 @@ export default function LoginPage() {
           {/* Cabeçalho do Formulário / Logotipo */}
           <div className="space-y-4">
             <div>
-              <span className="text-3xl font-extrabold tracking-tight text-dark block">
-                DUOC
-              </span>
-              <span className="text-xs font-semibold tracking-[0.35em] text-gold uppercase block -mt-1">
-                finance
-              </span>
+              <img
+                src="/duoc-finance-logo.svg"
+                alt="DUOC Finance"
+                className="h-11 w-auto"
+              />
             </div>
 
             <div className="pt-2">
@@ -223,19 +217,8 @@ export default function LoginPage() {
               }
             />
 
-            {/* Lembrar de mim e Esqueci a senha / Primeiro acesso (RF17) */}
-            <div className="flex items-center justify-between text-xs pt-1">
-              <label className="flex items-center gap-2 cursor-pointer text-dark/80 select-none">
-                <input
-                  type="checkbox"
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                  disabled={isLoading}
-                  className="rounded border-border text-primary focus:ring-primary/20 accent-primary"
-                />
-                <span>Lembrar de mim</span>
-              </label>
-
+            {/* RF17: recuperação ainda não integrada ao backend. */}
+            <div className="flex items-center justify-end text-xs pt-1">
               <button
                 type="button"
                 onClick={() => {
@@ -271,54 +254,10 @@ export default function LoginPage() {
             </Button>
           </form>
 
-          {/* Divisor de Acesso Demonstrativo */}
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-border" />
-            </div>
-            <div className="relative flex justify-center text-[11px] uppercase tracking-wider text-muted font-semibold">
-              <span className="bg-surface px-3">Acesso Demonstrativo</span>
-            </div>
-          </div>
-
-          {/* Botões Rápidos para Demonstração */}
-          <div className="grid grid-cols-3 gap-2.5">
-            <button
-              type="button"
-              onClick={() => handleDemoAccess('gestor@duoc.com.br')}
-              disabled={isLoading}
-              className="flex items-center justify-center py-2.5 px-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs font-medium text-dark gap-2 cursor-pointer shadow-2xs"
-            >
-              <Briefcase className="w-4 h-4 text-dark/70" />
-              <span>Gestor</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => handleDemoAccess('rh@duoc.com.br')}
-              disabled={isLoading}
-              className="flex items-center justify-center py-2.5 px-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs font-medium text-dark gap-2 cursor-pointer shadow-2xs"
-            >
-              <Users className="w-4 h-4 text-dark/70" />
-              <span>RH</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => handleDemoAccess('tecnico@duoc.com.br')}
-              disabled={isLoading}
-              className="flex items-center justify-center py-2.5 px-3 rounded-lg border border-border bg-surface hover:bg-surface-subtle hover:border-dark/20 transition-all text-xs font-medium text-dark gap-2 cursor-pointer shadow-2xs"
-            >
-              <HardHat className="w-4 h-4 text-dark/70" />
-              <span>Técnico</span>
-            </button>
-          </div>
-
-          {/* Rodapé / Nota informativa */}
-          <div className="flex items-center justify-center gap-1.5 text-xs text-muted pt-2">
-            <MapPin className="w-3.5 h-3.5" />
-            <span>Ambiente de demonstração · Sem dados reais</span>
-          </div>
+          {/* Acesso requer credenciais reais; não oferecer contas demonstrativas. */}
+          <p className="text-center text-xs text-muted pt-2">
+            Entre com suas credenciais corporativas autorizadas.
+          </p>
         </div>
       </div>
 

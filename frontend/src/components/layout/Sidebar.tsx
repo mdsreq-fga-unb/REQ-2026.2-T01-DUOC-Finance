@@ -1,6 +1,8 @@
 import { NavLink, useNavigate } from 'react-router-dom'
 import type { NavItem } from '../../types/navigation'
 import Button from '../ui/Button'
+import { useAuth } from '../../auth/AuthContext'
+import { PERMISSOES, possuiPapel, type Papel } from '../../auth/permissoes'
 
 import {
   LayoutDashboard,
@@ -12,33 +14,38 @@ import {
   X,
 } from "lucide-react";
 
-const menuItems: NavItem[] = [
+const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
   {
     iconName: LayoutDashboard,
     title: 'Visão Geral',
     path: '/',
+    papeis: PERMISSOES.dashboard,
   },
   {
     iconName: Users,
     title: 'Colaboradores',
     path: '/colaboradores',
+    papeis: PERMISSOES.colaboradores,
     badge: 'RF01',
   },
   {
     iconName: ClipboardPlus,
     title: "Novo Apontamento",
     path: "/rvt/novo",
+    papeis: PERMISSOES.novoRvt,
     badge: "RF04",
   },
   {
     iconName: History,
     title: "Meus Apontamentos",
     path: "/rvt/historico",
+    papeis: PERMISSOES.historicoRvt,
   },
   {
     iconName: CircleDollarSign,
     title: 'Fechamento',
     path: '/fechamento',
+    papeis: PERMISSOES.fechamento,
   },
 ]
 
@@ -50,10 +57,13 @@ interface SidebarProps {
 
 export default function Sidebar({ aberta, onFechar }: SidebarProps) {
   const navigate = useNavigate();
+  const { usuario, logout } = useAuth();
+  const menuPermitido = menuItems.filter((item) => possuiPapel(usuario?.papel, item.papeis));
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
     onFechar();
-    navigate("/login");
+    await logout();
+    navigate('/login', { replace: true });
   }
 
   return (
@@ -102,7 +112,7 @@ export default function Sidebar({ aberta, onFechar }: SidebarProps) {
           Menu Principal
         </p>
 
-        {menuItems.map(({ title, path, badge, iconName: Icon }) => (
+        {menuPermitido.map(({ title, path, badge, iconName: Icon }) => (
           <NavLink
             key={path}
             to={path}
@@ -132,14 +142,14 @@ export default function Sidebar({ aberta, onFechar }: SidebarProps) {
       {/* 3. Rodapé do Usuário */}
       <div className="p-4 border-t border-border flex items-center gap-3 bg-surface-subtle/50">
         <div className="w-9 h-9 rounded-full bg-primary-light border border-primary/20 flex items-center justify-center text-sm font-bold text-primary">
-          MB
+          {usuario?.email?.slice(0, 2).toUpperCase() ?? 'DU'}
         </div>
 
         <div className="flex-1 min-w-0">
           <p className="text-sm font-semibold text-dark truncate">
-            Maria Beatryz
+            {usuario?.email}
           </p>
-          <p className="text-xs text-muted truncate">Auxiliar Administrativo</p>
+          <p className="text-xs text-muted truncate">{usuario?.papel.replaceAll('_', ' ')}</p>
         </div>
 
         <Button

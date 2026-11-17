@@ -11,8 +11,8 @@ Cada página de entrega reúne o mapeamento sistemático dos requisitos exigidos
 | Marco de Avaliação | Escopo / Fase RAD | Período de Execução | Status Atual | Documento Detalhado | Vídeo da Apresentação |
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **Entrega 1** | *Fase 1: Planejamento de Requisitos* (Ponto de Controle 1) | 11/08/2026 a 08/09/2026 | :white_check_mark: **Concluída** | [Acessar Entrega 1](entrega-1.md) | [Assistir Gravação](entrega-1.md#3-video-da-apresentacao-da-entrega-1) • [(YouTube)](https://youtu.be/OZ9LhKuI364) |
-| **Entrega 2** | *Fase 2: Design do Usuário* (Ponto de Controle 2) | 15/09 a 15/10/2026 | :warning: **Em Desenvolvimento** | [Acessar Entrega 2](entrega-2.md) | *A gravar* |
-| **Entrega 3** | *Fase 3: Construção Rápida* (Ponto de Controle 3) | 20/10 a 19/11/2026 | :warning: **Em Desenvolvimento** | [Acessar Entrega 3](entrega-3.md) | *A gravar* |
+| **Entrega 2** | *Fase 2: Design do Usuário* (Ponto de Controle 2) | 15/09 a 15/10/2026 | :white_check_mark: **Concluída** | [Acessar Entrega 2](entrega-2.md) | [Assistir Gravação](entrega-2.md#3-video-da-apresentacao-da-entrega-2) • [(YouTube)](https://youtu.be/JF_cYRJM7vk) |
+| **Entrega 3** | *Fase 3: Construção Rápida* (Ponto de Controle 3) | 20/10 a 17/11/2026 | :white_check_mark: **Concluída** | [Acessar Entrega 3](entrega-3.md) | [Espaço Reservado (16/11)](entrega-3.md#3-video-da-apresentacao-da-entrega-3) |
 | **Entrega 4** | *Fase 4: Transição / Cutover* (Ponto de Controle 4 — Final) | 24/11 a 01/12/2026 | :warning: **Em Desenvolvimento** | [Acessar Entrega 4](entrega-4.md) | *A gravar* |
 
 ---
@@ -43,16 +43,16 @@ Para assegurar máxima transparência, rastreabilidade acadêmica e clareza para
 -   **[Entrega 2 — Elicitação e Modelagem (Ponto de Controle 2)](entrega-2.md)**
     
     ---
-    Especificação formal de Requisitos (Funcionais e Não-Funcionais), técnicas de modelagem e elicitação aprofundadas.
+    Especificação formal de Requisitos (Funcionais e Não-Funcionais), matriz de rastreabilidade, DoR/DoD, priorização 4×4 e validação inicial do MVP.
     
-    *(Status: Em Desenvolvimento)*
+    *(Status: Concluída)*
 
--   **[Entrega 3 — Modelagem Ágil e User Design (Ponto de Controle 3)](entrega-3.md)**
+-   **[Entrega 3 — Construção Rápida e Organização (Ponto de Controle 3)](entrega-3.md)**
     
     ---
-    Histórias de Usuário, critérios de aceitação (DoR e DoD), Backlog priorizado e prototipação de alta fidelidade no Figma homologada.
+    Incremento 1 entregue (Colaboradores, Auth/RBAC e RVT), organização Cap. 12, Boas Práticas no GitHub, evidências visuais e avanço do Incremento 2.
     
-    *(Status: Em Desenvolvimento)*
+    *(Status: Concluída)*
 
 -   **[Entrega 4 — Validação e Entrega Final (Ponto de Controle 4)](entrega-4.md)**
     
