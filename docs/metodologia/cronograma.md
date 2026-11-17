@@ -1,31 +1,9 @@
 # Cronograma
 
-O planejamento metodológico, as folgas e o método de atualização de requisitos estão no capítulo [Planejamento](planejamento.md). Para a inspeção minuciosa das atividades e entregáveis de cada semana, consulte o [Detalhamento de Ciclos [Detalhamento de Ciclos & Semanas](../detalhamento-ciclos/) Semanas](detalhamento-ciclos.md).
+O planejamento metodológico, as folgas e o método de atualização de requisitos estão no capítulo [Planejamento](planejamento.md). Para a inspeção minuciosa das atividades e entregáveis de cada semana, consulte o [Detalhamento de Ciclos & Semanas](detalhamento-ciclos.md).
 
 ---
 
-<div class="crono-view-switcher">
-  <!-- Inputs invisíveis para alternância de visualização -->
-  <input type="radio" name="crono-view-mode" id="view-mode-calendar" class="crono-view-radio" checked>
-  <input type="radio" name="crono-view-mode" id="view-mode-gantt" class="crono-view-radio">
-
-  <!-- BARRA DE SELEÇÃO ENTRE CALENDÁRIO E GANTT -->
-  <div class="crono-view-nav">
-    <div class="crono-view-tabs">
-      <label for="view-mode-calendar" class="crono-view-tab tab-calendar">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-        <span>Calendário Mensal</span>
-      </label>
-      <label for="view-mode-gantt" class="crono-view-tab tab-gantt">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-        <span>Linha do Tempo Gantt (Semanas 01 a 13)</span>
-      </label>
-    </div>
-    <span class="crono-view-hint">Selecione para alternar entre o calendário mensal de eventos e o gráfico de Gantt executivo</span>
-  </div>
-
-  <!-- PAINEL 1: CALENDÁRIO MENSAL UNTITLED UI -->
-  <div class="crono-view-panel panel-calendar-view">
 <div class="uui-calendar-widget">
   <input type="radio" name="uui-active-month" id="uui-month-tab-ago" class="uui-month-radio">
   <input type="radio" name="uui-active-month" id="uui-month-tab-set" class="uui-month-radio">
@@ -1439,6 +1417,19 @@ O planejamento metodológico, as folgas e o método de atualização de requisit
                 <span class="tooltip-chip-action">Clique para ver o detalhamento da semana ↗</span>
               </span>
             </a>
+                      <a href="../detalhamento-ciclos/#semana-11" class="uui-event-chip purple" data-category="ritos">
+              <span class="uui-chip-content">
+                <span class="uui-chip-dot"></span>
+                <span class="uui-chip-title">Gravação Vídeo Técnico PC3</span>
+              </span>
+              <span class="uui-chip-time">20:00</span>
+              <span class="uui-chip-tooltip">
+                <span class="tooltip-chip-title">Gravação Vídeo Técnico PC3</span>
+                <span class="tooltip-chip-meta">20:00 • Rito / Reunião</span>
+                <span class="tooltip-chip-desc">Gravação da demonstração do software em execução (16/11).</span>
+                <span class="tooltip-chip-action">Clique para ver o detalhamento da semana ↗</span>
+              </span>
+            </a>
           </div>
         </td>
         <td class="uui-cal-cell">
@@ -1466,19 +1457,7 @@ O planejamento metodológico, as folgas e o método de atualização de requisit
             <span class="uui-cell-num">18</span>
           </div>
           <div class="uui-events-stack">
-            <a href="../detalhamento-ciclos/#semana-12" class="uui-event-chip purple" data-category="ritos">
-              <span class="uui-chip-content">
-                <span class="uui-chip-dot"></span>
-                <span class="uui-chip-title">Gravação Vídeo Técnico PC3</span>
-              </span>
-              <span class="uui-chip-time">14:00</span>
-              <span class="uui-chip-tooltip">
-                <span class="tooltip-chip-title">Gravação Vídeo Técnico PC3</span>
-                <span class="tooltip-chip-meta">14:00 • Rito / Reunião</span>
-                <span class="tooltip-chip-desc">Gravação da demonstração do software em execução.</span>
-                <span class="tooltip-chip-action">Clique para ver o detalhamento da semana ↗</span>
-              </span>
-            </a>
+
           </div>
         </td>
         <td class="uui-cal-cell">
@@ -1968,335 +1947,6 @@ O planejamento metodológico, as folgas e o método de atualização de requisit
   </div>
 
   <!-- PAINEL 2: GANTT TIMELINE SEMANAL -->
-  <div class="crono-view-panel panel-gantt-view">
-<div class="gantt-widget">
-  <div class="gantt-top-header">
-    <div class="gantt-title-area">
-      <h3 class="gantt-main-title">Linha do Tempo (Gantt Executivo)</h3>
-      <span class="gantt-header-sub">Distribuição Semanal das Fases do RAD • Semestre 2026.2</span>
-    </div>
-    <div class="gantt-header-badge-group">
-      <span class="gantt-today-indicator-badge">
-        <span class="today-pulse-dot"></span>
-        <span>Hoje: 16 de Novembro (Semana 11)</span>
-      </span>
-    </div>
-  </div>
-
-  <div class="gantt-table-wrapper">
-    <table class="gantt-table">
-      <thead>
-        <tr>
-          <th class="task-col">Fases &amp; Atividades (RAD)</th>
-          <th class="gantt-cycle-col cycle-c0">
-            <span class="cycle-col-badge c0">Ciclo 0: Concepção</span>
-            <div class="cycle-col-title">Sem 01 - 03</div>
-            <span class="gantt-col-sub">11 Ago - 31 Ago</span>
-          </th>
-          <th class="gantt-cycle-col cycle-c0">
-            <span class="cycle-col-badge c0">Ciclo 0: Requisitos (PC1)</span>
-            <div class="cycle-col-title">Sem 04 - 06</div>
-            <span class="gantt-col-sub">01 Set - 21 Set</span>
-          </th>
-          <th class="gantt-cycle-col cycle-c0">
-            <span class="cycle-col-badge c0">Ciclo 0: Figma &amp; PC2</span>
-            <div class="cycle-col-title">Sem 07 - 09</div>
-            <span class="gantt-col-sub">22 Set - 19 Out</span>
-          </th>
-          <th class="gantt-cycle-col cycle-c1-c2 gantt-today-col">
-            <div class="gantt-today-badge">16</div>
-            <span class="cycle-col-badge c1-c2">Incr. 1 &amp; 2 (Hoje)</span>
-            <div class="cycle-col-title">Sem 10 - 11</div>
-            <span class="gantt-col-sub">20 Out - 16 Nov</span>
-          </th>
-          <th class="gantt-cycle-col cycle-c3">
-            <span class="cycle-col-badge c3">Ciclo 3: Folha &amp; UAT</span>
-            <div class="cycle-col-title">Sem 12</div>
-            <span class="gantt-col-sub">17 Nov - 23 Nov</span>
-          </th>
-          <th class="gantt-cycle-col cycle-c4">
-            <span class="cycle-col-badge c4">Ciclo 4: Cutover (PC4)</span>
-            <div class="cycle-col-title">Sem 13</div>
-            <span class="gantt-col-sub">24 Nov - 01 Dez</span>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- CATEGORIA: PLANNING (PURPLE) -->
-        <tr class="gantt-cat-row">
-          <td colspan="7">
-            <div class="gantt-cat-title">
-              <span class="gantt-cat-dot purple"></span>
-              <span class="gantt-cat-text">Planning &amp; Elicitação (RAD Plan)</span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon checked">✓</span>
-              <span>Project kickoff &amp; Alinhamento DUOC</span>
-            </div>
-          </td>
-          <td class="gantt-bar-cell"><a href="../detalhamento-ciclos/#semana-01" class="gantt-bar purple" style="width: 85%; margin-left: 8%;">Kickoff (19/08)</a></td>
-          <td></td><td></td><td class="gantt-today-col"></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon checked">✓</span>
-              <span>Definição de escopo &amp; Ishikawa</span>
-            </div>
-          </td>
-          <td class="gantt-bar-cell"><a href="../detalhamento-ciclos/#semana-02" class="gantt-bar purple" style="width: 90%; margin-left: 5%;">Ishikawa 4M</a></td>
-          <td></td><td></td><td class="gantt-today-col"></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon checked">✓</span>
-              <span>Catálogo URPS+ &amp; Matriz 4x4</span>
-            </div>
-          </td>
-          <td></td>
-          <td class="gantt-bar-cell"><a href="../detalhamento-ciclos/#semana-06" class="gantt-bar purple" style="width: 90%; margin-left: 5%;">40 RFs / 20 RNFs</a></td>
-          <td></td><td class="gantt-today-col"></td><td></td><td></td>
-        </tr>
-
-        <!-- CATEGORIA: DESIGN (ORANGE) -->
-        <tr class="gantt-cat-row">
-          <td colspan="7">
-            <div class="gantt-cat-title">
-              <span class="gantt-cat-dot orange"></span>
-              <span class="gantt-cat-text">Design do Usuário (RAD User Design)</span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon checked">✓</span>
-              <span>Moodboard &amp; Design System Base</span>
-            </div>
-          </td>
-          <td class="gantt-bar-cell"><a href="../detalhamento-ciclos/#semana-02" class="gantt-bar orange" style="width: 75%; margin-left: 20%;">Mocks UI</a></td>
-          <td></td><td></td><td class="gantt-today-col"></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon checked">✓</span>
-              <span>Protótipo Navegável no Figma</span>
-            </div>
-          </td>
-          <td></td>
-          <td class="gantt-bar-cell" colspan="2"><a href="../detalhamento-ciclos/#semana-07" class="gantt-bar orange" style="width: 92%; margin-left: 4%;">Figma 1:3 • Fluxos Críticos</a></td>
-          <td class="gantt-today-col"></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon checked">✓</span>
-              <span>Validação presencial com Cliente (Ata 06)</span>
-            </div>
-          </td>
-          <td></td><td></td>
-          <td class="gantt-bar-cell"><a href="../detalhamento-ciclos/#semana-07" class="gantt-bar orange" style="width: 85%; margin-left: 8%;">Ata 06 (02/10)</a></td>
-          <td class="gantt-today-col"></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon hollow">○</span>
-              <span>Revisão de componentes UI &amp; Fichas RVT</span>
-            </div>
-          </td>
-          <td></td><td></td><td></td>
-          <td class="gantt-bar-cell gantt-today-col"><a href="../detalhamento-ciclos/#semana-11" class="gantt-bar orange" style="width: 80%; margin-left: 10%;">Telas Campo</a></td>
-          <td></td><td></td>
-        </tr>
-
-        <!-- CATEGORIA: DEVELOPMENT (GREEN) -->
-        <tr class="gantt-cat-row">
-          <td colspan="7">
-            <div class="gantt-cat-title">
-              <span class="gantt-cat-dot green"></span>
-              <span class="gantt-cat-text">Development &amp; APIs (RAD Construction)</span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon checked">✓</span>
-              <span>Setup Stack: React + NestJS + Supabase</span>
-            </div>
-          </td>
-          <td></td><td></td>
-          <td class="gantt-bar-cell"><a href="../detalhamento-ciclos/#semana-10" class="gantt-bar green" style="width: 85%; margin-left: 8%;">Stack Base</a></td>
-          <td class="gantt-today-col"></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon checked">✓</span>
-              <span>Incremento 1: Gestão de Colaboradores (RF01-03)</span>
-            </div>
-          </td>
-          <td></td><td></td>
-          <td class="gantt-bar-cell" colspan="2"><a href="../detalhamento-ciclos/#semana-10" class="gantt-bar green" style="width: 90%; margin-left: 5%;">Incr. 1 Validado (20/10 - 05/11)</a></td>
-          <td></td><td></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon hollow">○</span>
-              <span>Incremento 2: Apontamentos RVT &amp; Diárias (RF04-08)</span>
-            </div>
-          </td>
-          <td></td><td></td><td></td>
-          <td class="gantt-bar-cell gantt-today-col"><a href="../detalhamento-ciclos/#semana-11" class="gantt-bar green" style="width: 85%; margin-left: 5%;">Incr. 2 (Ativo)</a></td>
-          <td class="gantt-bar-cell"><a href="../detalhamento-ciclos/#semana-11" class="gantt-bar green" style="width: 40%;">Entrega 3</a></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon hollow">○</span>
-              <span>Incremento 3: Motor Financeiro &amp; Folha (RF05, RF06)</span>
-            </div>
-          </td>
-          <td></td><td></td><td></td><td class="gantt-today-col"></td>
-          <td class="gantt-bar-cell"><a href="../detalhamento-ciclos/#semana-12" class="gantt-bar green" style="width: 90%; margin-left: 5%;">Cálculo Folha</a></td>
-          <td></td>
-        </tr>
-
-        <!-- CATEGORIA: TESTING (PINK) -->
-        <tr class="gantt-cat-row">
-          <td colspan="7">
-            <div class="gantt-cat-title">
-              <span class="gantt-cat-dot pink"></span>
-              <span class="gantt-cat-text">Testing &amp; Homologação UAT</span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon checked">✓</span>
-              <span>Testes Unitários &amp; Integração Incr. 1</span>
-            </div>
-          </td>
-          <td></td><td></td><td></td>
-          <td class="gantt-bar-cell gantt-today-col"><a href="../detalhamento-ciclos/#semana-10" class="gantt-bar pink" style="width: 80%; margin-left: 10%;">Jest / Supertest</a></td>
-          <td></td><td></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon hollow">○</span>
-              <span>Homologação UAT com Usuário Final DUOC</span>
-            </div>
-          </td>
-          <td></td><td></td><td></td><td class="gantt-today-col"></td>
-          <td class="gantt-bar-cell"><a href="../detalhamento-ciclos/#semana-12" class="gantt-bar pink" style="width: 85%; margin-left: 10%;">Sessão UAT (27/11)</a></td>
-          <td></td>
-        </tr>
-
-        <!-- CATEGORIA: LAUNCH (BLUE) -->
-        <tr class="gantt-cat-row">
-          <td colspan="7">
-            <div class="gantt-cat-title">
-              <span class="gantt-cat-dot blue"></span>
-              <span class="gantt-cat-text">Launch &amp; Transição (RAD Cutover)</span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon hollow">○</span>
-              <span>Deploy Produção &amp; Cutover Assistido</span>
-            </div>
-          </td>
-          <td></td><td></td><td></td><td class="gantt-today-col"></td><td></td>
-          <td class="gantt-bar-cell"><a href="../detalhamento-ciclos/#semana-13" class="gantt-bar blue" style="width: 85%; margin-left: 5%;">Cutover DUOC</a></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="gantt-task-name">
-              <span class="gantt-check-icon hollow">○</span>
-              <span>Avaliação Final: Ponto de Controle 4 (PC4)</span>
-            </div>
-          </td>
-          <td></td><td></td><td></td><td class="gantt-today-col"></td><td></td>
-          <td class="gantt-bar-cell"><a href="../detalhamento-ciclos/#semana-13" class="gantt-bar blue" style="width: 90%; margin-left: 5%;">Marco PC4 (01/12)</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- 5 KPI METRICS CARDS -->
-  <div class="gantt-kpi-grid">
-    <div class="gantt-kpi-card">
-      <div class="gantt-kpi-main">
-        <span class="gantt-kpi-label">Total Tasks</span>
-        <span class="gantt-kpi-val">17</span>
-        <span class="gantt-kpi-sub">+2 this week</span>
-      </div>
-      <div class="gantt-kpi-icon-box orange">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-      </div>
-    </div>
-
-    <div class="gantt-kpi-card">
-      <div class="gantt-kpi-main">
-        <span class="gantt-kpi-label">In Progress</span>
-        <span class="gantt-kpi-val">3</span>
-        <span class="gantt-kpi-sub">18% of total</span>
-      </div>
-      <div class="gantt-kpi-icon-box orange">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-      </div>
-    </div>
-
-    <div class="gantt-kpi-card">
-      <div class="gantt-kpi-main">
-        <span class="gantt-kpi-label">Completed</span>
-        <span class="gantt-kpi-val">10</span>
-        <span class="gantt-kpi-sub">59% of total</span>
-      </div>
-      <div class="gantt-kpi-icon-box green">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-      </div>
-    </div>
-
-    <div class="gantt-kpi-card">
-      <div class="gantt-kpi-main">
-        <span class="gantt-kpi-label">Overdue</span>
-        <span class="gantt-kpi-val">0</span>
-        <span class="gantt-kpi-sub">0% of total</span>
-      </div>
-      <div class="gantt-kpi-icon-box red">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-      </div>
-    </div>
-
-    <div class="gantt-kpi-card">
-      <div class="gantt-kpi-main">
-        <span class="gantt-kpi-label">Progress</span>
-        <span class="gantt-kpi-val">65%</span>
-        <span class="gantt-kpi-sub">+12% this week</span>
-      </div>
-      <div class="gantt-kpi-icon-box blue">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
-      </div>
-    </div>
-  </div>
-</div>
-
-  </div>
-</div>
 
 ---
 
@@ -2327,23 +1977,10 @@ Situação em **16/11/2026**: as semanas 08 a 10 já se encerraram e seguem **pe
 ---
 
 ## Histórico de Versão
+
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 05/09/2026 | Estruturação inicial do planejamento temporal preliminar | Matheus Ribeiro Szervinsk | Matheus Ribeiro |
-| `1.1` | 07/09/2026 | Correção ortográfica, detalhamento das entregas e padronização | Matheus Ribeiro | Matheus Ribeiro |
-| `1.2` | 07/09/2026 | Alinhamento das fases e nomenclaturas com o processo RAD | Matheus Ribeiro | Matheus Ribeiro |
-| `1.3` | 07/09/2026 | Sincronização rigorosa dos períodos oficiais de cada Unidade com as fases do RAD | Matheus Ribeiro | |
-| `1.4` | 08/09/2026 | Implementação do Mapa Temporal de Execução com Grade Calendário Semestral (Agosto a Dezembro) e destaque para marcos avaliativos | Matheus Ribeiro Szervinsk | Equipe DUOC Finance |
-| `1.5` | 08/09/2026 | Redesenho unificado: integração dos cards seletores diretamente no contêiner do calendário, tooltips informativos por mês, layout centralizado e remoção integral de emojis | Matheus Ribeiro Szervinsk | Equipe DUOC Finance |
-| `1.6` | 19/09/2026 | Inclusão de tarefas para as integrações externas (CAR-09 a CAR-12: Shifton, ERP/planilhas, BIM, Slack) nas Semanas 04 e 12, lastreando as afirmações de interoperabilidade do Rich Picture no cronograma | Eric Araújo | |
-| `1.7` | 19/09/2026 | Correção da referência ao Diagrama de Ishikawa: "6Ms" substituído por "4 categorias causais (adaptação do modelo 6M)", alinhando com as 4 dimensões efetivamente usadas em 1.4 | Paulo Nery | |
-| `2.0` | 21/09/2026 | Reestruturação metodológica, arquitetural e visual integral do cronograma: desacoplamento dos marcos acadêmicos (PC1 a PC4) dos ciclos e incrementos RAD; distribuição das 8 CARs e integrações nos incrementos; estratégia de prototipagem evolutiva UI-First com base no Figma e validação de interfaces mockadas no Frontend antes da lógica de persistência (Supabase); antecipação do motor financeiro (CAR-03) e UAT com janela dedicada para correção de defeitos; inclusão de diagramas metodológicos com suporte nativo a temas claro e escuro; eliminação de conflitos de contraste cromático no calendário e reestruturação ergonômica das unidades e semanas em cards padronizados | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `2.1` | 24/09/2026 | Inclusão da Reunião 05 (Priorização MoSCoW, Matriz 4x4 e alinhamento do MVP) realizada em 24/09 no calendário de Setembro, feed de eventos, tabela de incrementos e detalhamento da Semana 05. | Matheus Ribeiro Szervinsk | Eric Araújo e Lucas Zanetti |
-| `2.2` | 11/10/2026 | Auditoria cronológica do Capítulo 6 conforme Plano de Ensino oficial: identificação dos primeiros e segundos dias de apresentações dos PCs 1–4 e corte de publicação às 08h; correção das Reuniões 03 (07/09), 04 (17/09) e natureza interna da 05; atualização dos calendários e semanas; padronização URPS+ e auditor.ia no planejamento vigente; registro de 31 RFs/20 RNFs e ressalvas de validação não comprovada; distinção entre marcos RAD e períodos acadêmicos. | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |
-| `2.3` | 28/10/2026 | Registro da validação presencial do protótipo do Incremento 1 no Figma em 02/10/2026 (Ata 06) no calendário, no feed de eventos e no detalhamento semanal, substituindo as marcações de realização não comprovada. | Paulo Nery | — |
-| `2.3` | 28/10/2026 | Atualização do quantitativo do catálogo vigente de requisitos para 36 RFs e 20 RNFs, em sincronia com o Capítulo 8. | Paulo Nery | — |
-| `2.4` | 02/11/2026 | Alinhamento do encerramento da Unidade 2 e Semana 07 (concluídos); substituição de termos legados (auditor.ia por FLIT, Next.js por React/NestJS, MoSCoW por Matriz 4x4) e atualização da especificação vigente para 40 RFs. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `3.0` | 10/11/2026 | Refatoração integral do capítulo em duas seções (Planejamento e Cronograma): movimentação do racional metodológico, folgas, governança e fontes para o Planejamento; atualização do catálogo para 40 RFs e 20 RNFs e inclusão do método de atualização de requisitos no RAD com diagrama; remoção dos vínculos com as Unidades do plano de ensino e das tabelas de marcos avaliativos; marcação dos marcos já ocorridos (base 09/11/2026) como concluídos; replanejamento das Semanas 01 a 13 conforme a realidade executada (Incremento 1 estendido até a Semana 10; Incrementos 2 e 3 condensados; Cutover na Semana 13). | Eric Araújo | — |
-| `3.1` | 11/11/2026 | Correção do quantitativo histórico do PC2 (36 RFs no marco de 13/10); substituição de contagens repetidas por referências ao catálogo vigente e à linha de corte atual (40 RFs, 31 MVP). | Gustavo Bonifácio | — |
-| `3.2` | 16/11/2026 | Auditoria de prazos do Incremento 1 e inclusão da Visão Consolidada de pendências das Semanas 08 a 10 com prorrogação para a Semana 11 | Eric Araújo | — |
-| `3.3` | 16/11/2026 | Otimização da experiência: links funcionais para o detalhamento, suporte aprimorado a temas claro e escuro, cards compactos de ciclos e navegação profunda | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `1.0` | 05/09/2026 | Estruturação inicial do planejamento temporal e marcos avaliativos do projeto. | Matheus Ribeiro Szervinsk | Matheus Ribeiro |
+| `2.0` | 21/09/2026 | Reestruturação metodológica com desacoplamento dos marcos acadêmicos dos ciclos RAD e prototipagem UI-First. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `3.0` | 10/11/2026 | Replanejamento executado dos ciclos RAD, atualização para 40 RFs e método de controle no RAD. | Eric Araújo | Paulo Nery |
+| `3.3` | 16/11/2026 | Otimização da experiência: consolidação dos incrementos, calendário semestral interativo e links para detalhamento semanal. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |

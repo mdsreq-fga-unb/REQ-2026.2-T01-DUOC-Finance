@@ -391,17 +391,17 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
 === "Ciclo 1 — Fundação Arquitetural & Colaboradores (Semanas 08 a 10)"
 
     <a id="ciclo-1"></a>
-    > **Período:** 20/10 a 11/11/2026 (encerrado) • **Status:** Pendente — consulte a [Visão Consolidada](cronograma.md#visao-consolidada-incremento-1-e-validacao-do-incremento-2)<br>
+    > **Período:** 20/10 a 11/11/2026 (concluído em 16/11 com PRs #167 e #170) • **Status:** Concluído — consulte a [Visão Consolidada](cronograma.md#visao-consolidada-incremento-1-e-validacao-do-incremento-2)<br>
     > **Foco:** Construção da lógica e persistência por trás das telas já validadas: cadastro unificado (CAR-01), RVT (CAR-02), RBAC (CAR-07), modelagem de dados (DER / Supabase), conexão via ORM e verificação em Staging.
 
-    <div class="week-card status-pendente">
+    <div class="week-card status-concluido">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <a id="semana-08"></a>
           <span class="week-card-title">Semana 08</span>
           <span class="week-card-period">20/10 a 27/10/2026</span>
         </div>
-        <span class="status-pill pendente">Pendente</span>
+        <span class="status-pill concluido">Concluído / Entregue</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -426,7 +426,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           </ul>
         </div>
         <div>
-          <div class="week-section-title">Entregáveis Pendentes</div>
+          <div class="week-section-title">Entregáveis Realizados</div>
           <ul>
             <li>Controle de acesso baseado em papéis (RBAC) em versão base;</li>
             <li>Módulo móvel de registro de viagens (RVT) em versão inicial;</li>
@@ -448,14 +448,14 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
       </div>
     </div>
 
-    <div class="week-card status-pendente">
+    <div class="week-card status-concluido">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <a id="semana-09"></a>
           <span class="week-card-title">Semana 09</span>
           <span class="week-card-period">28/10 a 04/11/2026</span>
         </div>
-        <span class="status-pill pendente">Pendente</span>
+        <span class="status-pill concluido">Concluído / Entregue</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -479,7 +479,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           </ul>
         </div>
         <div>
-          <div class="week-section-title">Entregáveis Pendentes</div>
+          <div class="week-section-title">Entregáveis Realizados</div>
           <ul>
             <li>Banco de dados Supabase provisionado, com <em>migrations</em> versionadas;</li>
             <li>Camada ORM conectada à aplicação e às entidades do DER;</li>
@@ -500,14 +500,14 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
       </div>
     </div>
 
-    <div class="week-card status-pendente">
+    <div class="week-card status-concluido">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <a id="semana-10"></a>
           <span class="week-card-title">Semana 10</span>
           <span class="week-card-period">05/11 a 11/11/2026</span>
         </div>
-        <span class="status-pill pendente">Pendente</span>
+        <span class="status-pill concluido">Concluído / Entregue</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -532,7 +532,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           </ul>
         </div>
         <div>
-          <div class="week-section-title">Entregáveis Pendentes</div>
+          <div class="week-section-title">Entregáveis Realizados</div>
           <ul>
             <li>Cadastro unificado (<a href="../../visao-produto/solucao-proposta/#car-01">CAR-01</a>) e autenticação com persistência funcionando em <em>Staging</em>;</li>
             <li>Módulo RVT (<a href="../../visao-produto/solucao-proposta/#car-02">CAR-02</a>) integrado ao banco de dados;</li>
@@ -563,14 +563,14 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
 
     
 
-    <div class="week-card status-planejado">
+    <div class="week-card status-andamento">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <a id="semana-11"></a>
           <span class="week-card-title">Semana 11</span>
           <span class="week-card-period">12/11 a 19/11/2026 (PC3: publicação até 17/11, 08h)</span>
         </div>
-        <span class="status-pill planejado">Planejado</span>
+        <span class="status-pill andamento">Em Andamento</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -592,7 +592,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
             <li>Desenho funcional dos fluxos de aprovação de diárias de campo, cálculo visual de adiantamentos e upload de comprovantes com dados simulados;</li>
             <li><strong>Sessão de Validação Sociotécnica Invertida (prevista para 13/11/2026 e remarcada pela cliente para 16/11/2026)</strong>: Maria Beatryz navega pelas telas financeiras no Frontend via Google Meet, validando campos, layouts e regras visuais;</li>
             <li>Revisão e validação dos requisitos afetados após a sessão, registro dos apontamentos de IHC e verificação do DoR do Incremento 2;</li>
-            <li><strong>PC3:</strong> publicação da Entrega 3 até 17/11/2026 às 08h, com gravação em 18/11 e apresentações em 17 e 19/11.</li>
+            <li><strong>PC3:</strong> publicação da Entrega 3 até 17/11/2026 às 08h, com gravação do vídeo técnico em 16/11 e apresentações em 17 e 19/11.</li>
           </ul>
         </div>
         <div>

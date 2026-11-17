@@ -337,22 +337,6 @@ Os **Objetivos Específicos (OE1 a OE4)** decompõem o Objetivo Geral do produto
 
 As características do produto descrevem as capacidades funcionais do **DUOC Finance**, mapeadas diretamente aos Objetivos Específicos do negócio. Nem todas pertencem à primeira release: cada característica é classificada por fase de entrega conforme o catálogo de requisitos do [Catálogo de Requisitos](../requisitos/index.md).
 
-| CAR | Fase | Base da classificação |
-| :---: | :--- | :--- |
-| CAR-01 | MVP | RF01, RF02, RF03, RF25 e RF26 no MVP |
-| CAR-02 | MVP | RF04, RF19, RF22, RF32 e RF35 no MVP |
-| CAR-03 | MVP (parcial) | RF05, RF06 e RF27 no MVP; RF21 na Fase 2 |
-| CAR-04 | MVP | RF07, RF08, RF28 e RF29 no MVP |
-| CAR-05 | MVP (parcial) | RF09, RF10, RF33, RF37 e RF38 no MVP; RF30 na Fase 2 |
-| CAR-06 | MVP (parcial) | RF11, RF34, RF39 e RF40 no MVP; RF12 e RF31 na Fase 2 |
-| CAR-07 | MVP (parcial) | RF13, RF14, RF17, RF18 e RF23 no MVP; RF24 na Fase 2 |
-| CAR-08 | Fase 2 | RF15 e RF16 na Fase 2 (logs de auditoria persistidos no MVP via RNF15/RNF16) |
-| CAR-09 | Fase 2 | RF20 na Fase 2 |
-| CAR-10 | Fase 2 | RF36 na Fase 2 |
-| CAR-11 | Fase 2 | Integração BIM/Orçamento adiada |
-| CAR-12 | Fase 2 | Integração de mensageria corporativa adiada |
-
-Cada card abaixo conta com identidade cromática por módulo, metadados Lumio UI e rastreabilidade bidirecional total com os Requisitos Funcionais:
 ### Módulo de Padronização e Unificação de Dados (Suporte a OE1)
 
 <details class="req-card car-card car-card-oe1" id="car-01" data-car="CAR-01">
@@ -1339,16 +1323,7 @@ O DUOC Finance deverá gerar benefícios tangíveis para a organização e para 
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 05/09/2026 | Estruturação inicial dos objetivos, características, stack e análise de mercado | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
-| `1.1` | 07/09/2026 | Refinamento dos artefatos, inclusão do histórico e alinhamento com OEs | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
-| `1.2` | 08/09/2026 | Expansão de CAR-01 a CAR-08, purificação de abstração e tags de tecnologias | Matheus Ribeiro Szervinsk | Equipe DUOC Finance |
-| `2.0` | 15/09/2026 | Unificação integral de todos os artefatos 2.1 a 2.7 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
-| `2.1` | 19/09/2026 | Reconciliação pós-merge com `develop`: adição de CAR-09 a CAR-12 (integrações externas) vinculadas a OE1; correção de terminologia financeira em OE3 e CAR-06 ("margem líquida"/"lucro real" → "custo de mão de obra apropriado"/"desvio orçamentário"), com nota de escopo explicitando ausência de receita e custos totais no MVP | Paulo Nery | |
-| `2.2` | 21/09/2026 | Ajuste da estratégia de mitigação de riscos: adoção de UI-First com base no Figma e designs via Frontend, garantindo validação de interface antes da codificação de lógica e persistência | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `2.3` | 28/09/2026 | Inclusão de nota de escopo em CAR-10 e de menção ao estorno de fechamentos em CAR-03, decorrentes da avaliação por pares dos requisitos (ver [Feedback dos Requisitos](../requisitos/feedback.md)) | Matheus Saraiva Camargo | Matheus Szervinsk |
-| `2.4` | 12/10/2026 | Harmonização do escopo do MVP (seção 2.6) com deliberações da Ata 05 e Capítulo 8 (postergação de Shifton e telas analíticas de auditoria para Fase 2, mantendo logs atômicos no MVP); inclusão do RF36 na CAR-10 e notas em CAR-11/CAR-12; saneamento de benefícios e explicitação de Web App / PWA. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `2.5` | 12/10/2026 | Harmonização da Matriz Canônica de Papéis RBAC (4 perfis na arquitetura backend), eliminação de menções residuais a folha CLT/tempo real e adequação terminológica sobre dados pessoais confidenciais (LGPD Art. 6º, VII). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `2.6` | 29/10/2026 | Classificação das características (CAR) por fase de entrega (MVP ou Fase 2), esclarecendo o escopo das CAR-08 a CAR-12, conforme issue docente; harmonização das contribuições secundárias das CAR-03 e CAR-10 e das listas de apoio das OEs com a matriz-síntese do Capítulo 8. | Gustavo Bonifácio |  |
-| `2.7` | 02/11/2026 | Revisão cruzada com os Capítulos 2, 4 e 6 após feedback do professor: ferramenta de presença padronizada como FLIT (nome anteriormente registrado como Shifton); perfil do Administrador Financeiro e visão gerencial dos sócios sem referência a folha de pagamento. | Gustavo Bonifácio |  |
-| `2.8` | 02/11/2026 | Padronização das relações de OEs e CARs com cards interativos; diferenciação cromática de headers de cards pais por módulo; abertura dinâmica por ancoragem e recolhimento padrão de CARs. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `2.9` | 10/11/2026 | Inclusão dos requisitos decompostos RF37 e RF38 (CAR-05) e RF39 e RF40 (CAR-06) na classificação das características por fase de entrega, em sincronia com a linha de corte do MVP (31 RFs). | Paulo Nery | — |
+| `1.0` | 05/09/2026 | Estruturação inicial dos objetivos estratégicos (OEs), características (CARs), stack e análise de mercado. | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
+| `2.0` | 15/09/2026 | Unificação integral de artefatos em página única contínua e adoção de prototipagem evolutiva UI-First. | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
+| `3.0` | 02/11/2026 | Padronização dos cards interativos por módulo, alinhamento com RBAC canônico e ferramenta de presença FLIT. | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |
+| `3.1` | 10/11/2026 | Sincronização das características com os requisitos decompostos (RF37 a RF40) e linha de corte do MVP (31 RFs). | Paulo Nery | Matheus Ribeiro Szervinsk |

@@ -82,7 +82,9 @@ nav:
   - 'Metodologia':
       - 'Estratégias de Engenharia': metodologia/estrategias-esw.md
       - 'Processo de Requisitos': metodologia/engenharia-requisitos.md
-      - 'Interação com o Cliente': metodologia/interacao-cliente.md   
+      - 'Interação com o Cliente': metodologia/interacao-cliente.md
+      - 'Organização & Atualização do Backlog': metodologia/organizacao-atualizacao.md
+      - 'Boas Práticas no GitHub': metodologia/organizacao-e-boas-praticas.md
   - 'Planejamento':                                                   
       - 'Cronograma': metodologia/cronograma.md
       - 'Detalhamento de Ciclos & Semanas': metodologia/detalhamento-ciclos.md
