@@ -122,10 +122,10 @@ export default function LoginPage() {
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 scale-105"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1600&q=80')",
+              "url('https://images.unsplash.com/photo-1686150360446-ee7eae8026cf?auto=format&fit=crop&w=1600&q=80')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/65 to-dark/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent" />
 
         {/* Topo do Banner */}
         <div className="relative z-10">
@@ -230,7 +230,7 @@ export default function LoginPage() {
                 }}
                 className="text-primary hover:text-primary-dark font-medium transition-colors cursor-pointer"
               >
-                Primeiro acesso / Esqueci a senha
+                Esqueci minha senha
               </button>
             </div>
 

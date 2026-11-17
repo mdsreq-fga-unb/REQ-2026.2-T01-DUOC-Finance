@@ -237,11 +237,6 @@ A caracterização dos segmentos de usuários que interagem com o ecossistema do
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 05/09/2026 | Levantamento inicial dos dados cadastrais, negócio, Rich Picture, Ishikawa e IHC | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
-| `1.1` | 07/09/2026 | Refinamento dos artefatos, inclusão do histórico de versão e padronização | Matheus Ribeiro Szervinsk | Eric Araújo |
-| `2.0` | 15/09/2026 | Unificação integral de todos os artefatos 1.1 a 1.7 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
-| `2.1` | 19/09/2026 | Reconciliação pós-merge com `develop`: correção do papel de Maria Beatryz (1.1); notas de limitação metodológica sobre caracterização de perfis (1.2, 1.5, 1.7); Rich Picture v2 com fronteiras AS-IS/TO-BE e lastro a CAR-09/CAR-12 (1.3); adaptação do modelo 6M para 4M no Ishikawa (1.4); correção de terminologia financeira ("margem líquida" → "custo apropriado") | Paulo Nery | |
-| `2.2` | 20/09/2026 | Atualização do Rich Picture (1.3) para novo arquivo de imagem `Rich_picture_DUOC.png`; habilitação de ampliação (zoom) de imagens em toda a documentação via plugin `mkdocs-glightbox`, registrada como regra de estilo no `CONTRIBUTING.md` | Paulo Nery | |
-| `2.3` | 12/10/2026 | Saneamento de escopo pós-revisão por pares: remoção de menções residuais a folha CLT, férias e benefícios, alinhando a fronteira do sistema a diárias técnicas, comissões de obra e prestação de contas operacionais (TR-03). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `2.4` | 29/10/2026 | Alinhamento ao Capítulo 2 e ao Capítulo 8 conforme issue docente: integrações CAR-09 a CAR-12 explicitadas como Fase 2 (pós-MVP); remoção de menções residuais a processamento de folha; ajuste de terminologia financeira na síntese do Ishikawa. | Gustavo Bonifácio |  |
-| `2.5` | 02/11/2026 | Revisão cruzada com os Capítulos 2, 4 e 6 após feedback do professor: ferramenta de presença padronizada como FLIT (nome anteriormente registrado como Shifton); perfil do Administrador Financeiro e visão gerencial dos sócios sem referência a folha de pagamento | Gustavo Bonifácio |  |
+| `1.0` | 05/09/2026 | Levantamento inicial de negócio, Rich Picture, Ishikawa e perfis sociotécnicos de usuários. | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
+| `2.0` | 15/09/2026 | Unificação integral dos artefatos de diagnóstico em página contínua e ampliação via glightbox. | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
+| `2.5` | 02/11/2026 | Alinhamento sociotécnico de fronteiras AS-IS/TO-BE, ferramenta FLIT e saneamento terminológico financeiro. | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |

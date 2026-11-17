@@ -107,25 +107,20 @@ Nesta seção são detalhados os canais oficiais de comunicação, a frequência
   <li><b>Registro de Sugestões e Mudanças:</b> As observações e apontamentos de melhoria são registrados na ata da reunião e geram ajustes imediatos nas telas do frontend ou na especificação de regras.</li>
 </ul>
 
-<h4>3. Critérios Formais de Aceite (DoR e DoD)</h4>
+<h4>3. Dinâmica de Validação e Critérios Formais de Aceite (DoR e DoD)</h4>
 
-<p><b>Definition of Ready (DoR) — Pronta para Implementação de Lógica e Persistência:</b></p>
-<ol>
-  <li>História de Usuário (US) descrita no padrão <i>Como [Papel], Quero [Ação], Para que [Benefício]</i>.</li>
-  <li>Base visual concebida no Figma e <b>design de tela e componentes interativos já estabelecidos e navegáveis no Frontend</b> (com dados mockados).</li>
-  <li><b>Aprovação da cliente Maria Beatryz</b> registrada em ata ou sessão sobre os layouts, campos de entrada e fluxo operacional.</li>
-  <li>Critérios de aceite da história definidos e formalizados em lista estruturada de regras de negócio verificáveis.</li>
-  <li>Contrato de banco de dados, endpoints e regras de domínio previstos e mapeados (sem DDLs executados no banco de produção).</li>
-</ol>
+<p>
+  A dinâmica de validação contínua com a cliente conecta-se diretamente aos critérios formais de aceite estabelecidos no projeto, orientando o fluxo de engenharia pelo princípio <i>UI-First</i> sem duplicação de regras:
+</p>
 
-<p><b>Definition of Done (DoD) — Entregue, Integrada e Aceita:</b></p>
-<ol>
-  <li>Lógica de negócio e camadas de persistência desenvolvidas e acopladas à interface frontend já homologada.</li>
-  <li>Cobertura de testes automatizados (unitários para regras de cálculo e de integração para APIs) validada no pipeline CI.</li>
-  <li>Demonstração funcional completa do software rodando em ambiente de Staging na Vercel com dados sintéticos LGPD.</li>
-  <li>Código integrado e aprovado via <i>Pull Request</i> na branch principal com revisão por pares.</li>
-  <li>Termo de Aceite ou validação formal registrada na documentação.</li>
-</ol>
+<ul>
+  <li>
+    <b>Aplicação do Definition of Ready (DoR) na Validação:</b> Nenhuma história de usuário avança para a escrita de rotinas de negócio de backend ou criação de tabelas de banco de dados sem que sua interface frontend esteja prototipada, navegável com dados sintéticos e <b>aprovada pela cliente Maria Beatryz na sessão invertida</b>. O checklist completo, com os critérios de maturidade, INVEST, base visual e requisitos não funcionais mapeados, está documentado canonicamente em <b><a href="../../mvp/dor-dod/#definition-of-ready-dor">Definition of Ready (DoR)</a></b>.
+  </li>
+  <li>
+    <b>Aplicação do Definition of Done (DoD) na Homologação:</b> Uma entrega só é considerada concluída e passível de merge após ter sua lógica implementada, seus testes unitários e de integração validados no pipeline CI, sua documentação atualizada em conformidade com Docs as Code e seu incremento formalmente homologado pela cliente em ambiente de Staging. Os critérios operacionais completos e o registro de evidências estão formalizados em <b><a href="../../mvp/dor-dod/#definition-of-done-dod">Definition of Done (DoD)</a></b>.
+  </li>
+</ul>
 
 <h4>4. Testes de Aceitação de Usuário (UAT)</h4>
 
@@ -194,8 +189,6 @@ flowchart TD
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 05/09/2026 | Levantamento da equipe, papéis, canais e rito de validação | Eric Araújo, Gustavo | Matheus Ribeiro Szervinsk |
-| `1.1` | 07/09/2026 | Detalhamento dos ritos sociotécnicos e matriz de canais de comunicação | Eric Araújo, Gustavo | Matheus Ribeiro Szervinsk |
-| `2.0` | 15/09/2026 | Unificação integral dos artefatos 7.1 a 7.3 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
-| `2.1` | 21/09/2026 | Refinamento metodológico do fluxo de validação (UI-First): base conceitual no Figma, estabelecimento ágil dos designs via Frontend com mocks e implementação posterior da lógica de backend e persistência após validação do DoR | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
-| `2.2` | 28/10/2026 | Inclusão das sessões de validação realizadas: validação presencial do protótipo do Incremento 1 no Figma em 02/10/2026, com link para o protótipo, a Ata 06 e o ciclo descrito no Capítulo 4. | Paulo Nery | — |
+| `1.0` | 05/09/2026 | Levantamento inicial de canais de comunicação e ritos de validação sociotécnica com a cliente. | Eric Araújo e Gustavo | Matheus Ribeiro Szervinsk |
+| `2.0` | 15/09/2026 | Unificação em página contínua e definição do fluxo de validação iterativa UI-First. | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
+| `2.3` | 16/11/2026 | Desduplicação dos acordos de qualidade DoR/DoD em prol do documento oficial `dor-dod.md` e registro da validação presencial (Ata 06). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
