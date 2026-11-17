@@ -185,6 +185,16 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             </div>
           </div>
         </div>
+        <div class="req-evidence-media-grid">
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/NovoColaborador.png" alt="Tela de Novo Colaborador (execução em ambiente Docker/Staging)" loading="lazy">
+            <span class="req-evidence-media-caption">Tela de Novo Colaborador (execução em ambiente Docker/Staging)</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/Colaboradores.png" alt="Listagem de Colaboradores cadastrados" loading="lazy">
+            <span class="req-evidence-media-caption">Listagem de Colaboradores cadastrados</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -369,6 +379,16 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             </div>
           </div>
         </div>
+        <div class="req-evidence-media-grid">
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/EditarColaborador.png" alt="Tela de Edição de Colaborador (execução em ambiente Docker/Staging)" loading="lazy">
+            <span class="req-evidence-media-caption">Tela de Edição de Colaborador (execução em ambiente Docker/Staging)</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/Colaboradores.png" alt="Listagem de Colaboradores" loading="lazy">
+            <span class="req-evidence-media-caption">Listagem de Colaboradores</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -547,6 +567,16 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
               <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
               <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
             </div>
+          </div>
+        </div>
+        <div class="req-evidence-media-grid">
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/EditarColaborador.png" alt="Tela de Edição e Movimentação Funcional (execução em Docker/Staging)" loading="lazy">
+            <span class="req-evidence-media-caption">Tela de Edição e Movimentação Funcional (execução em Docker/Staging)</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/Colaboradores.png" alt="Listagem de Colaboradores" loading="lazy">
+            <span class="req-evidence-media-caption">Listagem de Colaboradores</span>
           </div>
         </div>
       </div>
@@ -2352,6 +2382,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             </div>
           </div>
         </div>
+        <div class="req-evidence-media-grid">
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/AcessoLogin.png" alt="Tela de Autenticação e Login Corporativo (execução em Docker/Staging)" loading="lazy">
+            <span class="req-evidence-media-caption">Tela de Autenticação e Login Corporativo (execução em Docker/Staging)</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -3074,6 +3110,12 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             </div>
           </div>
         </div>
+        <div class="req-evidence-media-grid">
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/AcessoLogin.png" alt="Tela de Autenticação e Primeiro Acesso (execução em Docker/Staging)" loading="lazy">
+            <span class="req-evidence-media-caption">Tela de Autenticação e Primeiro Acesso (execução em Docker/Staging)</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -3256,6 +3298,16 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
               <strong>Design do Usuário & Protótipo de Alta Fidelidade</strong>
               <p><a href="https://www.figma.com/design/jJ5lOX1FJ52vpFGk8cimoM/DUOC-FINANCE?node-id=1-3" target="_blank" rel="noopener">Figma DUOC Finance (Node 1:3) ↗</a> • Telas aprovadas pela cliente parceira no DoR.</p>
             </div>
+          </div>
+        </div>
+        <div class="req-evidence-media-grid">
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/AcessoLogin.png" alt="Autenticação Corporativa RBAC (execução em Docker/Staging)" loading="lazy">
+            <span class="req-evidence-media-caption">Autenticação Corporativa RBAC (execução em Docker/Staging)</span>
+          </div>
+          <div class="req-evidence-media-card">
+            <img src="../assets/images/evidencias/Colaboradores.png" alt="Painel Administrativo protegido por perfil" loading="lazy">
+            <span class="req-evidence-media-caption">Painel Administrativo protegido por perfil</span>
           </div>
         </div>
       </div>

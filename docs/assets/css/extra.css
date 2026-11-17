@@ -10272,3 +10272,39 @@ a.req-gh-pill:hover {
   padding: 1px 6px !important;
   line-height: 1.4 !important;
 }
+
+/* Evidencias visuais (screenshots do sistema em execucao) nos cards */
+.req-evidence-media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.req-evidence-media-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 6px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.025);
+}
+
+[data-md-color-scheme="slate"] .req-evidence-media-card {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.req-evidence-media-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 4px;
+  display: block;
+}
+
+.req-evidence-media-caption {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color--light, #64748b);
+}
