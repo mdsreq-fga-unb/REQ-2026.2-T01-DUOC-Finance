@@ -168,6 +168,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         <div class="req-evidence-grid">
           <div class="req-evidence-card">
             <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Execução, Testes & DoR/DoD Comprovados</strong>
+              <p>Telas de cadastro validadas + tsc -b 0 erros + 18/18 testes frontend. Evidência registrada em <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener">PR #167 (Issue #154) ↗</a> e no <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Checklist DoR/DoD do Incremento 1</a>.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
             </div>
             <div class="req-evidence-content">
@@ -362,6 +371,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         <div class="req-evidence-grid">
           <div class="req-evidence-card">
             <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Execução, Testes & DoR/DoD Comprovados</strong>
+              <p>Edição cadastral implementada + tsc -b 0 erros + 18/18 testes frontend. Evidência registrada em <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener">PR #167 (Issue #154) ↗</a> e no <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Checklist DoR/DoD do Incremento 1</a>.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
             </div>
             <div class="req-evidence-content">
@@ -552,6 +570,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         <div class="req-evidence-grid">
           <div class="req-evidence-card">
             <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Execução, Testes & DoR/DoD Comprovados</strong>
+              <p>Movimentação funcional (ModalAfastamento) + 18/18 testes frontend. Evidência registrada em <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener">PR #167 (Issue #154) ↗</a> e no <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Checklist DoR/DoD do Incremento 1</a>.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
             </div>
             <div class="req-evidence-content">
@@ -740,6 +767,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="req-evidence-badge">Ciclo RAD</span>
         </div>
         <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Execução, Testes & DoR/DoD Comprovados</strong>
+              <p>RvtController/Service + 36 testes Vitest de RVT/DTO/Evidências + prints no PR. Evidência registrada em <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170" target="_blank" rel="noopener">PR #170 (Issue #156) ↗</a> e no <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Checklist DoR/DoD do Incremento 1</a>.</p>
+            </div>
+          </div>
           <div class="req-evidence-card">
             <div class="req-evidence-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -2287,6 +2323,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
       <span class="req-pill req-pill-exec req-pill-exec-concluido">Concluído · Incr. 1</span>
       <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/154" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #154 no GitHub">Issue #154 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #167 no GitHub">PR #167 ↗</a>
+    
+      <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/155" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #155 no GitHub">Issue #155 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #172 no GitHub">PR #172 ↗</a>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF13 - Efetuar login no sistema</h3>
@@ -2363,6 +2401,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="req-evidence-badge">Ciclo RAD</span>
         </div>
         <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Execução, Testes & DoR/DoD Comprovados</strong>
+              <p>AuthController/Service + 107/107 testes backend + 18/18 frontend + HTTP 200/401 validados. Evidência registrada em <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener">PR #172 (Issue #155) ↗</a> e no <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Checklist DoR/DoD do Incremento 1</a>.</p>
+            </div>
+          </div>
           <div class="req-evidence-card">
             <div class="req-evidence-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -3015,6 +3062,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
       <span class="req-pill req-pill-exec req-pill-exec-concluido">Concluído · Incr. 1</span>
       <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/154" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #154 no GitHub">Issue #154 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #167 no GitHub">PR #167 ↗</a>
+    
+      <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/155" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #155 no GitHub">Issue #155 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #172 no GitHub">PR #172 ↗</a>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF17 - Ativar acesso inicial e recuperar credenciais</h3>
@@ -3091,6 +3140,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="req-evidence-badge">Ciclo RAD</span>
         </div>
         <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Execução, Testes & DoR/DoD Comprovados</strong>
+              <p>Fluxo de senha e troca obrigatória (auth.service.spec.ts: 25 testes) + PR #167. Evidência registrada em <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener">PR #172 (Issue #155) ↗</a> e no <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Checklist DoR/DoD do Incremento 1</a>.</p>
+            </div>
+          </div>
           <div class="req-evidence-card">
             <div class="req-evidence-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -3205,6 +3263,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
       <span class="req-pill req-pill-exec req-pill-exec-concluido">Concluído · Incr. 1</span>
       <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/154" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #154 no GitHub">Issue #154 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #167 no GitHub">PR #167 ↗</a>
+    
+      <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/155" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #155 no GitHub">Issue #155 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #172 no GitHub">PR #172 ↗</a>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF18 - Encerrar sessão manualmente</h3>
@@ -3281,6 +3341,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="req-evidence-badge">Ciclo RAD</span>
         </div>
         <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Execução, Testes & DoR/DoD Comprovados</strong>
+              <p>RolesGuard + JwtAuthGuard (21 testes RBAC/JWT) + bloqueio HTTP 403 comprovado. Evidência registrada em <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener">PR #172 (Issue #155) ↗</a> e no <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Checklist DoR/DoD do Incremento 1</a>.</p>
+            </div>
+          </div>
           <div class="req-evidence-card">
             <div class="req-evidence-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -3471,6 +3540,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="req-evidence-badge">Ciclo RAD</span>
         </div>
         <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Execução, Testes & DoR/DoD Comprovados</strong>
+              <p>GET /api/rvt/meus-apontamentos + RvtHistoricoPage + 13 testes em rvt.service.spec.ts. Evidência registrada em <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170" target="_blank" rel="noopener">PR #170 (Issue #156) ↗</a> e no <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Checklist DoR/DoD do Incremento 1</a>.</p>
+            </div>
+          </div>
           <div class="req-evidence-card">
             <div class="req-evidence-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -4011,6 +4089,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         <div class="req-evidence-grid">
           <div class="req-evidence-card">
             <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Execução, Testes & DoR/DoD Comprovados</strong>
+              <p>POST /api/rvt/:id/evidencias (SHA-256 + MIME real) + 6 testes em arquivo-evidencia.util.spec.ts. Evidência registrada em <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170" target="_blank" rel="noopener">PR #170 (Issue #156) ↗</a> e no <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Checklist DoR/DoD do Incremento 1</a>.</p>
+            </div>
+          </div>
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
             </div>
             <div class="req-evidence-content">
@@ -4111,12 +4198,14 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
   </div>
 </details>
 
-<details class="req-card req-card-rf req-card-oe4" id="rf23" data-type="rf" data-rf="RF23" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="ADMIN_SISTEMA" data-text="rf23 bloquear acesso após tentativas falhas consecutivas oe4 car-07 admin_sistema mvp q1 ct-m4-12 us23 como **administrador do sistema**, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta. rn20 rnf14 aguardando aguardando · incr. 3 issue #59" data-search-text="rf23 bloquear acesso após tentativas falhas consecutivas oe4 car-07 admin_sistema mvp q1 ct-m4-12 us23 como **administrador do sistema**, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta. rn20 rnf14 aguardando aguardando · incr. 3 issue #59" data-exec="aguardando">
+<details class="req-card req-card-rf req-card-oe4" id="rf23" data-type="rf" data-rf="RF23" data-oe="oe4" data-car="car-07" data-mvp="mvp" data-quad="q1" data-role="ADMIN_SISTEMA" data-text="rf23 bloquear acesso após tentativas falhas consecutivas oe4 car-07 admin_sistema mvp q1 ct-m4-12 us23 como **administrador do sistema**, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta. rn20 rnf14 aguardando aguardando · incr. 3 issue #59" data-search-text="rf23 bloquear acesso após tentativas falhas consecutivas oe4 car-07 admin_sistema mvp q1 ct-m4-12 us23 como **administrador do sistema**, quero que a conta seja bloqueada temporariamente após tentativas de login inválidas consecutivas, para que contas com acesso a dados sensíveis fiquem protegidas contra ataques de força bruta. rn20 rnf14 aguardando aguardando · incr. 3 issue #59" data-exec="concluido">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-priority req-quad-q1"><svg class="req-priority-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg><span>Alta Prioridade</span></span>
-      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Aguardando · Incr. 3</span>
+      <span class="req-pill req-pill-exec req-pill-exec-concluido">Concluído · Incr. 1</span>
       <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #59 no GitHub">Issue #59 ↗</a>
+    
+      <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/155" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir Issue #155 no GitHub">Issue #155 ↗</a> <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #172 no GitHub">PR #172 ↗</a>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RF23 - Bloquear acesso após tentativas falhas consecutivas</h3>
@@ -4189,6 +4278,15 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           <span class="req-evidence-badge">Ciclo RAD</span>
         </div>
         <div class="req-evidence-grid">
+          <div class="req-evidence-card">
+            <div class="req-evidence-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="req-evidence-content">
+              <strong>Execução, Testes & DoR/DoD Comprovados</strong>
+              <p>Bloqueio após 5 falhas por 15 min (migration 20261116231000_bloqueio_login_rf23 + 25 testes em auth.service.spec.ts). Evidência registrada em <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener">PR #172 (Issue #155) ↗</a> e no <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Checklist DoR/DoD do Incremento 1</a>.</p>
+            </div>
+          </div>
           <div class="req-evidence-card">
             <div class="req-evidence-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -9317,6 +9415,9 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-pos">Pós-MVP · Rel. 2</span>
+      <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/144" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #144 no GitHub">PR #144 ↗</a>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF01 — Operar em modo offline para coleta de dados em canteiros sem conectividade</h3>
@@ -9367,6 +9468,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> A aplicação web responsiva (Web App / PWA) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Pós-MVP · Rel. 2):</strong> Modo offline postergado para Release 2 conforme alinhamento de escopo. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -9374,6 +9483,9 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-concluido">Verificado · Incr. 1</span>
+      <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #172 no GitHub">PR #172 ↗</a>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF02 — Garantir tempo de resposta para consulta cadastral inferior a 2,0 segundos</h3>
@@ -9424,6 +9536,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> O tempo de resposta para busca, paginação e renderização da ficha unificada de qualquer colaborador deve ser inferior ou igual a 2,0 segundos em 95% das requisições sob carga nominal (concorrência típica de até 50 usuários simultâneos autenticados a 10 req/s).</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Latência medida em Docker/Staging: /api/health em 0,337s e /api/rvt/contratos-ativos em 0,055s (abaixo do teto de 2,0s). <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -9432,6 +9552,9 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-concluido">Verificado · Incr. 1</span>
+      <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #172 no GitHub">PR #172 ↗</a>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF03 — Proteger dados pessoais e cadastrais com criptografia em repouso e em trânsito</h3>
@@ -9482,6 +9605,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> 100% dos dados pessoais e cadastrais confidenciais (CPF, dados de conta bancária, chave Pix e remuneração) armazenados em banco devem utilizar criptografia AES-256 em repouso, e 100% das comunicações de rede devem transitar sob protocolo TLS 1.3 (em conformidade com o princípio de segurança do Art. 6º, VII da LGPD).</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Hash bcrypt com custo >= 10 comprovado em senha.util.spec.ts (2 testes) e JWT HS256 em jwt.util.spec.ts (7 testes). <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -9489,6 +9620,9 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-concluido">Verificado · Incr. 1</span>
+      <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #170 no GitHub">PR #170 ↗</a>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF04 — Garantir usabilidade e agilidade no preenchimento de apontamentos de campo</h3>
@@ -9539,6 +9673,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> O preenchimento completo de um apontamento diário de campo deve ser concluído por usuários em primeiro uso, sem suporte externo ou treinamento prévio, em no máximo 5 passos/telas, com taxa de conclusão bem-sucedida ≥ 90% em teste de usabilidade.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Fluxo móvel de RVT implementado e demonstrado com capturas de tela anexadas no PR #170. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -9547,6 +9689,8 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Aguardando Ciclo / Produção</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF05 — Processar rotina de fechamento financeiro em até 5,0 segundos</h3>
@@ -9597,6 +9741,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> O cálculo consolidado da prévia ou homologação da competência de fechamento contendo até 500 apontamentos e 200 despesas deve ser concluído pelo backend em tempo inferior ou igual a 5,0 segundos em 95% das execuções sob carga nominal.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -9604,6 +9756,8 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Aguardando Ciclo / Produção</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF06 — Garantir exatidão aritmética centesimal em cálculos monetários</h3>
@@ -9654,6 +9808,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> Todas as rotinas de cálculo de diárias, comissões, reembolsos e rateios devem operar com representação decimal exata (tipo Decimal/Numeric com no mínimo 4 casas de precisão interna e arredondamento padrão bancário para 2 casas), garantindo divergência zero em auditoria centesimal.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -9661,6 +9823,9 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-concluido">Verificado · Incr. 1</span>
+      <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #170 no GitHub">PR #170 ↗</a>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF07 — Garantir robustez e segurança no processamento e armazenamento de comprovantes</h3>
@@ -9711,6 +9876,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> Para os arquivos recebidos por RF07 e RF22, o backend valida o formato real por magic bytes e realiza varredura contra ameaças antes do armazenamento. Arquivos incompatíveis ou identificados como ameaçadores são rejeitados. A compressão automática deve preservar a legibilidade fiscal dos comprovantes.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Validação de assinatura real JPEG/PNG/PDF, limite 5MB e integridade SHA-256 aprovados em arquivo-evidencia.util.spec.ts (6 testes). <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -9719,6 +9892,8 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 2 / OE2</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Aguardando Ciclo / Produção</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF08 — Garantir rastreabilidade probatória e não-repúdio em operações de estorno</h3>
@@ -9769,6 +9944,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> Cada estorno de fechamento deve gerar, na mesma transação da operação, um registro imutável de auditoria com identificador do usuário, IP de origem, carimbo temporal UTC e dados anteriores e posteriores à alteração. Se o registro de auditoria falhar, o estorno não deve ser confirmado.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -9777,6 +9960,8 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Aguardando Ciclo / Produção</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF09 — Garantir tempo de resposta para filtros e consultas do painel de custos inferior a 3,0 segundos</h3>
@@ -9827,6 +10012,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> A aplicação de filtros por período, contrato e centro de custo no painel analítico deve carregar e renderizar os gráficos e tabelas agregadas em tempo inferior ou igual a 3,0 segundos em 95% das consultas para bases históricas de até 10.000 lançamentos.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -9834,6 +10027,8 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Aguardando Ciclo / Produção</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF10 — Garantir sigilo e não-exposição de remunerações individuais em relatórios operacionais</h3>
@@ -9884,6 +10079,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> Consultas analíticas executadas por perfis operacionais ou de gestão de obra não devem expor valores salariais individuais ou dados bancários de colaboradores, exibindo unicamente montantes agregados de mão de obra.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -9892,6 +10095,8 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Aguardando Ciclo / Produção</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF11 — Garantir consistência transacional ACID na apropriação concorrente de custos</h3>
@@ -9942,6 +10147,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> A rotina de rateio e apropriação de custos diretos deve ser executada sob nível de isolamento Serializable/Repeatable Read no banco de dados PostgreSQL, impedindo lançamentos duplicados ou rateios parciais em concorrência.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -9950,6 +10163,8 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 3 / OE3</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Aguardando Ciclo / Produção</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF12 — Assegurar responsividade do painel em resoluções de desktop e tablet</h3>
@@ -10000,6 +10215,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> O painel analítico e telas de consulta de custos devem ser totalmente navegáveis e visualmente consistentes em larguras de tela a partir de 768 px (tablets verticais) e 1024 px (tablets horizontais e desktops).</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -10008,6 +10231,9 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 4 / OE4</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-concluido">Verificado · Incr. 1</span>
+      <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #172 no GitHub">PR #172 ↗</a>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF13 — Expirar token de acesso temporário em no máximo 8 horas</h3>
@@ -10058,6 +10284,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> Tokens de autenticação JWT possuem expiração máxima estrita de 8 horas (28.800 segundos), exigindo nova autenticação após o término do período; requisições com token expirado retornam HTTP 401 Unauthorized.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Expiração de accessToken configurada em 900s (15 min <= 8h) validada em jwt.util.spec.ts (7 testes) e auth.service.spec.ts. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -10065,6 +10299,9 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-concluido">Verificado · Incr. 1</span>
+      <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #172 no GitHub">PR #172 ↗</a>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF14 — Validar perfil de autorização em 100% das rotas de API com dados protegidos</h3>
@@ -10115,6 +10352,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> 100% dos endpoints de backend que manipulam dados corporativos devem aplicar o guard/filtro RBAC. Em teste controlado sob a carga nominal do RNF02 - até 50 usuários autenticados simultâneos e 10 requisições por segundo - o tempo entre o início da verificação pelo guard e a decisão de autorização deve ser inferior a 15 ms em pelo menos 95% das verificações. Essa medição considera apenas o processamento no servidor, sem o tempo de rede ou do cliente. Tentativas não autorizadas devem receber HTTP 403 Forbidden.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> JwtAuthGuard e RolesGuard validados em roles.guard.spec.ts (7 testes), jwt-auth.guard.spec.ts (9 testes) e acesso.controller.spec.ts (HTTP 401/403). <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -10122,6 +10367,8 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Aguardando Ciclo / Produção</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF15 — Garantir consistência transacional e atomicidade na gravação de logs de auditoria</h3>
@@ -10172,6 +10419,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> Em 100% das mutações cadastrais e financeiras, o registro correspondente de auditoria é confirmado na mesma transação atômica ACID do banco de dados, com perda zero e latência de persistência ≤ 50 ms.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -10179,6 +10434,8 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Aguardando Ciclo / Produção</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF16 — Reter registros de auditoria por no mínimo 5 anos contra expurgo físico indevido</h3>
@@ -10229,6 +10486,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> Inexistência comprovada de rotinas ou permissões de exclusão de registros com tempo de retenção inferior a 5 anos fiscais (1.825 dias), garantindo substrato defensivo em conformidade com o Artigo 11 da CLT.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -10236,6 +10501,8 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Aguardando Ciclo / Produção</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF17 — Realizar backup automático diário com restauração verificada</h3>
@@ -10286,6 +10553,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> Rotina automatizada de backup completo diário do banco de dados e arquivos de mídia, com retenção de 30 dias e testes automatizados periódicos de restauração em até 4 horas com perda máxima (RPO) de 24 horas.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -10293,6 +10568,8 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Aguardando Ciclo / Produção</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF18 — Garantir disponibilidade mínima mensal do sistema</h3>
@@ -10343,6 +10620,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> Disponibilidade mínima mensal de 99,5%, medida por monitoramento sintético contínuo, com avisos de janelas de manutenção com antecedência mínima de 48 horas e execução restrita à madrugada (22h às 06h).</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -10350,6 +10635,8 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Aguardando Ciclo / Produção</span>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF19 — Garantir acessibilidade digital nas interfaces do sistema</h3>
@@ -10400,6 +10687,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> Formulários e telas de apontamento e consulta devem atender aos critérios de conformidade WCAG 2.1 nível AA, incluindo navegação integral por teclado, contraste mínimo de 4.5:1 e rotulagem acessível ARIA sem erros críticos.</p>
       </div>
     </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -10407,6 +10702,9 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
   <summary class="req-card-summary">
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
+    
+      <span class="req-pill req-pill-exec req-pill-exec-concluido">Verificado · Incr. 1</span>
+      <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #170 no GitHub">PR #170 ↗</a>
     </div>
     <div class="req-title-row">
       <h3 class="req-card-title">RNF20 — Validar integridade de payloads em todas as rotas de escrita da API</h3>
@@ -10455,6 +10753,14 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
       </div>
       <div class="req-desc-box">
         <p class="req-desc-text"><strong>Métrica Técnica:</strong> 100% das requisições POST/PUT/PATCH são submetidas a validação formal de schema e sanitização contra injection antes do processamento, respondendo HTTP 400 Bad Request com detalhes estruturados em caso de inconsistência.</p>
+      </div>
+    </div>
+    <div class="req-expanded-desc">
+      <div class="req-checklist-header">
+        <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
+      </div>
+      <div class="req-desc-box">
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Validação estrita de payloads em CriarRvtValidationPipe (criar-rvt.dto.spec.ts, 9 testes) e validators.test.ts (4 testes frontend). <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
       </div>
     </div>
   </div>
