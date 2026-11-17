@@ -247,7 +247,15 @@ Navegue pelas abas abaixo para consultar as escalas e a regra de conversão:
 
     Para consolidar as três dimensões em um indicador único e reprodutível, adota-se a média aritmética simples:
 
-    $$\text{Média Consolidada} = \frac{\text{Horas (Nota)} + \text{Complexidade} + \text{Lacuna}}{3}$$
+    <div class="formula-clean-card" style="margin: 0.75rem 0 1rem; max-width: 480px;">
+      <div class="formula-math-display">
+        <span>Média Consolidada = </span>
+        <div class="formula-frac-box">
+          <span class="frac-num">Horas (ES) + Complexidade (CX) + Lacuna (LC)</span>
+          <span class="frac-den">3</span>
+        </div>
+      </div>
+    </div>
 
     A média decimal resultante é convertida para a escala ordinal inteira de **1 a 4** da Matriz 4 × 4:
 
