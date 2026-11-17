@@ -95,7 +95,8 @@ nav:
       - 'Conformidade Jurídica & Governança': requisitos/governanca-conformidade.md
   - 'Escopo do MVP':
       - 'Priorização & Escopo do Produto': requisitos/priorizacao.md
-      - 'Critérios de Aceitação (DoR & DoD)': mvp/dor-dod.md
+      - 'Definition of Ready (DoR)': mvp/dor.md
+      - 'Definition of Done (DoD)': mvp/dod.md
       - 'Estrutura do Banco de Dados': mvp/modelagem_bd.md
       - 'Avaliação por Pares & Feedback': requisitos/feedback.md
   - 'Entregas':

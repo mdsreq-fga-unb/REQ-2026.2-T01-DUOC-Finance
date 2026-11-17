@@ -9712,7 +9712,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Pós-MVP · Rel. 2):</strong> Modo offline postergado para Release 2 conforme alinhamento de escopo. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Pós-MVP · Rel. 2):</strong> Modo offline postergado para Release 2 conforme alinhamento de escopo. <a href="../mvp/dod/#incremento-2-e-3">Ver status geral do DoD (Ciclos Futuros) ↗</a></p>
       </div>
     </div>
   </div>
@@ -9780,7 +9780,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Latência medida em Docker/Staging: /api/health em 0,337s e /api/rvt/contratos-ativos em 0,055s (abaixo do teto de 2,0s). <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Latência medida em Docker/Staging: /api/health em 0,337s e /api/rvt/contratos-ativos em 0,055s (abaixo do teto de 2,0s). <a href="../mvp/dod/#incremento-1">Ver resultado geral e evidências do DoD (Incr. 1) ↗</a></p>
       </div>
     </div>
   </div>
@@ -9849,7 +9849,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Hash bcrypt com custo >= 10 comprovado em senha.util.spec.ts (2 testes) e JWT HS256 em jwt.util.spec.ts (7 testes). <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Hash bcrypt com custo >= 10 comprovado em senha.util.spec.ts (2 testes) e JWT HS256 em jwt.util.spec.ts (7 testes). <a href="../mvp/dod/#incremento-1">Ver resultado geral e evidências do DoD (Incr. 1) ↗</a></p>
       </div>
     </div>
   </div>
@@ -9917,7 +9917,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Fluxo móvel de RVT implementado e demonstrado com capturas de tela anexadas no PR #170. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Fluxo móvel de RVT implementado e demonstrado com capturas de tela anexadas no PR #170. <a href="../mvp/dod/#incremento-1">Ver resultado geral e evidências do DoD (Incr. 1) ↗</a></p>
       </div>
     </div>
   </div>
@@ -9985,7 +9985,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dod/#incremento-2-e-3">Ver status geral do DoD (Ciclos Futuros) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10052,7 +10052,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dod/#incremento-2-e-3">Ver status geral do DoD (Ciclos Futuros) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10120,7 +10120,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Validação de assinatura real JPEG/PNG/PDF, limite 5MB e integridade SHA-256 aprovados em arquivo-evidencia.util.spec.ts (6 testes). <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Validação de assinatura real JPEG/PNG/PDF, limite 5MB e integridade SHA-256 aprovados em arquivo-evidencia.util.spec.ts (6 testes). <a href="../mvp/dod/#incremento-1">Ver resultado geral e evidências do DoD (Incr. 1) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10188,7 +10188,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dod/#incremento-2-e-3">Ver status geral do DoD (Ciclos Futuros) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10256,7 +10256,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dod/#incremento-2-e-3">Ver status geral do DoD (Ciclos Futuros) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10323,7 +10323,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dod/#incremento-2-e-3">Ver status geral do DoD (Ciclos Futuros) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10391,7 +10391,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dod/#incremento-2-e-3">Ver status geral do DoD (Ciclos Futuros) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10459,7 +10459,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dod/#incremento-2-e-3">Ver status geral do DoD (Ciclos Futuros) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10528,7 +10528,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Expiração de accessToken configurada em 900s (15 min <= 8h) validada em jwt.util.spec.ts (7 testes) e auth.service.spec.ts. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Expiração de accessToken configurada em 900s (15 min <= 8h) validada em jwt.util.spec.ts (7 testes) e auth.service.spec.ts. <a href="../mvp/dod/#incremento-1">Ver resultado geral e evidências do DoD (Incr. 1) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10596,7 +10596,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> JwtAuthGuard e RolesGuard validados em roles.guard.spec.ts (7 testes), jwt-auth.guard.spec.ts (9 testes) e acesso.controller.spec.ts (HTTP 401/403). <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> JwtAuthGuard e RolesGuard validados em roles.guard.spec.ts (7 testes), jwt-auth.guard.spec.ts (9 testes) e acesso.controller.spec.ts (HTTP 401/403). <a href="../mvp/dod/#incremento-1">Ver resultado geral e evidências do DoD (Incr. 1) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10663,7 +10663,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dod/#incremento-2-e-3">Ver status geral do DoD (Ciclos Futuros) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10730,7 +10730,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dod/#incremento-2-e-3">Ver status geral do DoD (Ciclos Futuros) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10797,7 +10797,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dod/#incremento-2-e-3">Ver status geral do DoD (Ciclos Futuros) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10864,7 +10864,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dod/#incremento-2-e-3">Ver status geral do DoD (Ciclos Futuros) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10931,7 +10931,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Aguardando Ciclo / Produção):</strong> Atributo vinculado aos ciclos de construção subsequentes (Incrementos 2/3) ou verificação em ambiente de produção (Cutover), ainda não declarado como concluído. <a href="../mvp/dod/#incremento-2-e-3">Ver status geral do DoD (Ciclos Futuros) ↗</a></p>
       </div>
     </div>
   </div>
@@ -10999,7 +10999,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Validação estrita de payloads em CriarRvtValidationPipe (criar-rvt.dto.spec.ts, 9 testes) e validators.test.ts (4 testes frontend). <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Consultar registro DoD ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Validação estrita de payloads em CriarRvtValidationPipe (criar-rvt.dto.spec.ts, 9 testes) e validators.test.ts (4 testes frontend). <a href="../mvp/dod/#incremento-1">Ver resultado geral e evidências do DoD (Incr. 1) ↗</a></p>
       </div>
     </div>
   </div>

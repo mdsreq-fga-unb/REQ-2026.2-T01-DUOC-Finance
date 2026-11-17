@@ -10308,3 +10308,57 @@ a.req-gh-pill:hover {
   font-weight: 600;
   color: var(--md-default-fg-color--light, #64748b);
 }
+
+/* Dropdown de evidencias visuais dentro das tabelas de DoR e DoD */
+details.dod-ev-details {
+  margin-top: 6px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.02);
+  padding: 4px 8px;
+}
+
+[data-md-color-scheme="slate"] details.dod-ev-details {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+details.dod-ev-details > summary.dod-ev-summary {
+  cursor: pointer;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--duoc-primary, #971828);
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  user-select: none;
+}
+
+[data-md-color-scheme="slate"] details.dod-ev-details > summary.dod-ev-summary {
+  color: #fbbf24;
+}
+
+details.dod-ev-details > summary.dod-ev-summary::-webkit-details-marker {
+  display: none;
+}
+
+details.dod-ev-details > summary.dod-ev-summary::before {
+  content: "▸";
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+details.dod-ev-details[open] > summary.dod-ev-summary::before {
+  transform: rotate(90deg);
+}
+
+.dod-ev-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+  padding-bottom: 4px;
+}
+
+.dod-ev-gallery .req-evidence-media-card img {
+  max-height: 150px;
+}
