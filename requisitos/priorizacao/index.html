@@ -2196,7 +2196,7 @@
 <h2 id="avaliacao-do-valor-de-negocio">Avaliação do Valor de Negócio<a class="headerlink" href="#avaliacao-do-valor-de-negocio" title="Permanent link">¶</a></h2>
 <p>A Engenharia de Requisitos orientada ao valor assegura que os esforços de modelagem, prototipação ágil (<em>UI-First</em>) e implementação concentrem-se prioritariamente nas funcionalidades que geram o mais alto retorno operacional e mitigam os maiores riscos institucionais da organização parceira.</p>
 <p>Navegue pelas abas abaixo para consultar as diretrizes metodológicas do julgamento de valor:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Escala de Valor (1 a 4)</label><label for="__tabbed_1_2">Dimensões da Rubrica (D1 a D4)</label><label for="__tabbed_1_3">Gargalos Operacionais (TR-01 a TR-04)</label><label for="__tabbed_1_4">Regras de Consolidação &amp; MVP</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Escala de Valor (1 a 4)</label><label for="__tabbed_1_2">Dimensões da Rubrica (D1 a D4)</label><label for="__tabbed_1_3">Gargalos Operacionais (TR-01 a TR-04)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Para tornar a avaliação auditável e comparável, o valor de cada requisito é expresso em uma <strong>escala quantitativa de 1 a 4</strong>. Não há classificação categórica adicional: a priorização decorre exclusivamente do cruzamento <strong>Valor de Negócio × Esforço Técnico</strong> na Matriz 4 × 4.</p>
@@ -2326,47 +2326,6 @@
 </tbody>
 </table>
 </div>
-<div class="tabbed-block">
-<p><strong>Regra de Consolidação:</strong> A nota final é definida pelo <strong>maior grau atingido entre D1 e D3</strong> (fatores bloqueantes de processo ou de exposição de risco). As dimensões <strong>D2 e D4</strong> funcionam como critérios de ajuste: confirmam a nota ou podem deslocá-la em no máximo 1 ponto quando convergirem.</p>
-<p>A linha de corte do MVP decorre diretamente do eixo de Valor de Negócio: <strong>requisitos de valor 4 ou 3 integram o MVP</strong> e requisitos de <strong>valor 2 ou 1 integram o backlog de evolução pós-MVP</strong>. O esforço técnico não elimina requisitos de alto valor; orienta a decomposição arquitetural.</p>
-<pre class="mermaid"><code>flowchart LR
-    subgraph NIVEIS["Distribuição dos 40 RFs do Backlog por Valor de Negócio"]
-        direction TB
-        V4["&lt;b&gt;VALOR 4 — Muito alto (Crítico)&lt;/b&gt;&lt;br&gt;10 RFs (25,0%) · RF01, RF04, RF05, RF06, RF07, RF08, RF13, RF19, RF27, RF32"]
-        V3["&lt;b&gt;VALOR 3 — Alto (Importante)&lt;/b&gt;&lt;br&gt;21 RFs (52,5%) · RF02, RF03, RF09, RF10, RF11, RF14, RF17, RF18, RF22, RF23, RF25, RF26, RF28, RF29, RF33, RF34, RF35, RF37, RF38, RF39, RF40"]
-        V2["&lt;b&gt;VALOR 2 — Moderado (Desejável)&lt;/b&gt;&lt;br&gt;8 RFs (20,0%) · RF12, RF15, RF20, RF21, RF24, RF30, RF31, RF36"]
-        V1["&lt;b&gt;VALOR 1 — Baixo (Postergável)&lt;/b&gt;&lt;br&gt;1 RF (2,5%) · RF16"]
-        V4 ~~~ V3
-        V3 ~~~ V2
-        V2 ~~~ V1
-    end
-
-    subgraph DEST["Linha de Corte e Destinação"]
-        direction TB
-        MVP["&lt;b&gt;PRODUTO MÍNIMO VIÁVEL (MVP)&lt;/b&gt;&lt;br&gt;31 RFs selecionados (77,5% do Backlog)&lt;br&gt;Núcleo operacional completo para a DUOC"]
-        POST["&lt;b&gt;BACKLOG DE EVOLUÇÃO PÓS-MVP&lt;/b&gt;&lt;br&gt;9 RFs postergados (22,5% do Backlog)&lt;br&gt;Ciclos posteriores e capacidade residual"]
-        MVP ~~~ POST
-    end
-
-    V4 ==&gt; MVP
-    V3 ==&gt; MVP
-    V2 -.-&gt; POST
-    V1 -.-&gt; POST
-
-    classDef v4Class fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff;
-    classDef v3Class fill:#0284c7,stroke:#0369a1,stroke-width:2px,color:#ffffff;
-    classDef v2Class fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#ffffff;
-    classDef v1Class fill:#64748b,stroke:#475569,stroke-width:2px,color:#ffffff;
-    classDef mvpClass fill:#047857,stroke:#065f46,stroke-width:3px,color:#ffffff;
-    classDef postClass fill:#334155,stroke:#1e293b,stroke-width:2px,color:#ffffff;
-
-    class V4 v4Class;
-    class V3 v3Class;
-    class V2 v2Class;
-    class V1 v1Class;
-    class MVP mvpClass;
-    class POST postClass;</code></pre>
-</div>
 </div>
 </div>
 <hr>
@@ -2381,7 +2340,7 @@
 <h2 id="avaliacao-do-esforco-tecnico">Avaliação do Esforço Técnico<a class="headerlink" href="#avaliacao-do-esforco-tecnico" title="Permanent link">¶</a></h2>
 <p>O esforço técnico consolidado é composto por três dimensões mensuráveis, orientadas no mesmo sentido (onde <strong>1 representa menor barreira e 4 representa maior desafio</strong>):</p>
 <p>Navegue pelas abas abaixo para consultar as escalas e a regra de conversão:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Tempo de Implementação (Horas)</label><label for="__tabbed_2_2">Complexidade Arquitetural (CX)</label><label for="__tabbed_2_3">Lacuna de Capacidade (LC)</label><label for="__tabbed_2_4">Cálculo &amp; Conversão Ordinal</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Tempo de Implementação (Horas)</label><label for="__tabbed_2_2">Complexidade Arquitetural (CX)</label><label for="__tabbed_2_3">Lacuna de Capacidade (LC)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Mede o volume de trabalho em pessoa-hora para desenvolvimento de backend, frontend, persistência e testes automatizados:</p>
@@ -2486,55 +2445,6 @@
 <td style="text-align: center;"><strong>4</strong></td>
 <td style="text-align: left;">Lacuna crítica</td>
 <td style="text-align: left;">A equipe ainda não possui experiência prévia com o padrão, demandando investigação aprofundada ou prova de conceito.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="tabbed-block">
-<p>Para consolidar as três dimensões em um indicador único e reprodutível, adota-se a média aritmética simples:</p>
-<p></p><div class="formula-clean-card" style="margin: 0.75rem 0 1rem; max-width: 480px;">
-  <div class="formula-math-display">
-    <span>Média Consolidada = </span>
-    <div class="formula-frac-box">
-      <span class="frac-num">Horas (ES) + Complexidade (CX) + Lacuna (LC)</span>
-      <span class="frac-den">3</span>
-    </div>
-  </div>
-</div><p></p>
-<p>A média decimal resultante é convertida para a escala ordinal inteira de <strong>1 a 4</strong> da Matriz 4 × 4:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Intervalo da Média</th>
-<th style="text-align: center;">Esforço Consolidado</th>
-<th style="text-align: center;">Coluna na Matriz 4 × 4</th>
-<th style="text-align: left;">Interpretação Técnica</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>1,00 a 1,49</strong></td>
-<td style="text-align: center;"><strong>1 — Baixo</strong></td>
-<td style="text-align: center;">1ª Coluna</td>
-<td style="text-align: left;">Demanda técnica muito reduzida, tecnologia dominada e rápida entrega.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>1,50 a 2,49</strong></td>
-<td style="text-align: center;"><strong>2 — Moderado</strong></td>
-<td style="text-align: center;">2ª Coluna</td>
-<td style="text-align: left;">Demanda balanceada, regras claras e execução controlada no ciclo regular.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>2,50 a 3,49</strong></td>
-<td style="text-align: center;"><strong>3 — Alto</strong></td>
-<td style="text-align: center;">3ª Coluna</td>
-<td style="text-align: left;">Demanda substancial, regras de negócio densas e atenção especial a testes.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>3,50 a 4,00</strong></td>
-<td style="text-align: center;"><strong>4 — Muito alto</strong></td>
-<td style="text-align: center;">4ª Coluna</td>
-<td style="text-align: left;">Elevada incerteza, múltiplos componentes acoplados ou risco de retrabalho.</td>
 </tr>
 </tbody>
 </table>
