@@ -713,34 +713,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../metodologia/organizacao-atualizacao/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Organização &amp; Atualização do Backlog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../metodologia/organizacao-e-boas-praticas/" class="md-nav__link">
         
   
@@ -1141,14 +1113,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mvp/dor-dod/" class="md-nav__link">
+      <a href="../../mvp/dor/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Critérios de Aceitação (DoR &amp; DoD)
+    Definition of Ready (DoR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mvp/dod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Definition of Done (DoD)
   
 
     
@@ -1992,6 +1992,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/atas/reuniao-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 07 (16/11) — Gravação da Entrega 3 (PC3)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2638,7 +2666,7 @@
 <td style="text-align: left;">RN vs. RNF / Seção 8.1 e 8.5</td>
 <td style="text-align: left;">Sobreposição e confusão conceitual entre regras de negócio e atributos de qualidade: RNF15 ≈ RN17, RNF16 ≈ RN19, e RNF10 ≈ RNF14 ≈ RN16.</td>
 <td style="text-align: center;">Aceito</td>
-<td style="text-align: left;">Distinção formal estabelecida entre invariantes de negócio (políticas corporativas) e requisitos de arquitetura (atributos de software). RN17/RN19 regem direitos e fluxos de negócio, enquanto RNF15/RNF16 definem atomicidade ACID transacional e imutabilidade de armazenamento. RN16 define a política de privacidade (usuário só vê seus dados), RNF10 define o mecanismo técnico de sanitização e mascaramento de relatórios (&lt; 10 ms), e RNF14 define o tempo de bloqueio de API por guards (&lt; 15 ms).</td>
+<td style="text-align: left;">Distinção formal estabelecida entre políticas de negócio e atributos técnicos. RN16 define a política de privacidade por usuário; RNF10 protege consultas analíticas, impedindo a exposição de salários individuais e dados bancários; RNF14 especifica a verificação técnica de permissões RBAC nas rotas protegidas, com medição conforme seu critério vigente.</td>
 <td style="text-align: left;">Refatoração das redações e inclusão de nota de desambiguação estrutural na Seção 8.1 do Capítulo 8.</td>
 </tr>
 <tr>
@@ -2807,10 +2835,10 @@
 <tr>
 <td style="text-align: center;"><strong>FB-16</strong></td>
 <td style="text-align: center;"><strong>RN vs. RNF (RN17/19/16 vs RNF15/16/10/14)</strong></td>
-<td style="text-align: left;">Sobreposição conceitual entre regras de negócio e requisitos não funcionais.</td>
-<td style="text-align: left;">Desambiguação formal: RNs expressam políticas de domínio (ex: direitos do colaborador e obrigatoriedade de log); RNFs especificam propriedades de arquitetura (ex: latência de guard &lt; 15 ms, ACID &lt; 50 ms, imutabilidade física).</td>
-<td style="text-align: left;">Clareza taxonômica e eliminação de redundâncias conceituais entre domínio e software.</td>
-<td style="text-align: center;"><code>CT-M4-07</code><br><code>CT-M4-08</code><br><code>CT-M3-05</code></td>
+<td style="text-align: left;">Desambiguação formal: RNs expressam políticas de domínio e fluxos de negócio; RNFs especificam propriedades técnicas. RN17 e RN19 tratam de direitos e fluxos do domínio, enquanto RNF15 e RNF16 definem atomicidade transacional e imutabilidade do armazenamento. RN16 define a política de privacidade por usuário; RNF10 protege consultas analíticas contra exposição de salários individuais e dados bancários; RNF14 especifica a verificação técnica de permissões RBAC em rotas protegidas, conforme seu critério de medição vigente.</td>
+<td style="text-align: left;"><code>CT-M4-07</code><br><code>CT-M4-08</code><br><code>CT-M3-05</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td style="text-align: center;"><strong>FB-17</strong></td>
@@ -3421,8 +3449,8 @@
 <div class="admonition success">
 <p class="admonition-title">Desambiguação e Segregação de Camadas</p>
 <ul>
-<li><strong>Regras de Negócio (RNs):</strong> Políticas corporativas, invariantes e direitos de domínio. Ex.: RN16 dita que colaboradores operacionais só podem visualizar seus próprios apontamentos; RN19 dita que nenhuma transação financeira pode ocorrer sem registro de auditoria.</li>
-<li><strong>Requisitos Não Funcionais (RNFs):</strong> Propriedades de software, métricas de engenharia e restrições de arquitetura. Ex.: RNF10 afere que a rotina analítica de anonimização e mascaramento de dados executa com overhead &lt; 10 ms; RNF14 afere que a verificação de permissões do RBAC nas rotas de API adiciona latência &lt; 15 ms; RNF15 garante atomicidade transacional ACID com commit ou rollback total em até 50 ms.</li>
+<li><strong>Regras de Negócio (RNs):</strong> definem políticas e direitos do domínio. A RN16 limita a visualização de apontamentos aos próprios colaboradores; a RN17 define a política de expiração de token; e a RN19 exige registro de auditoria nas ações financeiras.</li>
+<li><strong>Requisitos Não Funcionais (RNFs):</strong> definem propriedades técnicas do software. O RNF10 protege consultas contra exposição de salários individuais e dados bancários; o RNF14 mede a decisão do guard RBAC no servidor, nas condições de carga definidas em seu critério; o RNF15 exige atomicidade na gravação dos eventos de auditoria; e o RNF16 define a retenção e a imutabilidade dos registros de log.</li>
 </ul>
 </div>
 </div>
@@ -3584,22 +3612,64 @@
 <tr>
 <td style="text-align: center;"><code>1.0</code></td>
 <td style="text-align: center;">28/09/2026</td>
-<td style="text-align: left;">Estruturação inicial da matriz deliberativa dos feedbacks da avaliação em pares (Ciclo 1).</td>
+<td style="text-align: left;">Criação da estrutura e matriz deliberativa de feedbacks da avaliação em pares (Issue #77).</td>
 <td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
 <td style="text-align: left;">Equipe Cascata Ágil</td>
 </tr>
 <tr>
+<td style="text-align: center;"><code>1.1</code></td>
+<td style="text-align: center;">28/09/2026</td>
+<td style="text-align: left;">Registro das deliberações FB-01 a FB-11, preenchimento do painel quantitativo, da rastreabilidade de impacto e do checklist de validação.</td>
+<td style="text-align: left;">Matheus Saraiva Camargo</td>
+<td style="text-align: left;">Matheus Szervinsk</td>
+</tr>
+<tr>
 <td style="text-align: center;"><code>2.0</code></td>
 <td style="text-align: center;">30/09/2026</td>
-<td style="text-align: left;">Implementação da matriz comparativa Antes vs Depois e atendimento às diretrizes docentes.</td>
+<td style="text-align: left;">Implementação da <strong>Matriz Rastreável de Transformação dos Requisitos ("Antes vs. Depois")</strong> atendendo ao feedback docente; atualização do sistema de ponto externo para <em>Shifton</em>; expansão da CAR-09 com RF20 e RF22 (<code>CT-M1-10</code> e <code>CT-M1-11</code>); sincronização com as deliberações da Reunião 05 e especificações refinadas do Capítulo 8.</td>
 <td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
-<td style="text-align: left;">Eric Araújo</td>
+<td style="text-align: left;">Eric Araújo e Lucas Zanetti</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>2.1</code></td>
+<td style="text-align: center;">07/10/2026</td>
+<td style="text-align: left;">Correção da renderização dos comparativos "Antes vs. Depois" nas abas da seção 8.4, com tabelas Markdown nativas e admonitions para as regras de negócio.</td>
+<td style="text-align: left;">Equipe Cascata Ágil</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>2.2</code></td>
+<td style="text-align: center;">08/10/2026</td>
+<td style="text-align: left;">Consistência terminológica com a remoção do BDD da especificação de requisitos (feedback docente da Unidade 2): diretrizes, deliberação FB-11, comparativo "Antes vs. Depois" e checklist passam a referenciar critérios de aceitação em texto corrido.</td>
+<td style="text-align: left;">Paulo Nery</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>2.3</code></td>
+<td style="text-align: center;">11/10/2026</td>
+<td style="text-align: left;">Harmonização hierárquica do título do documento com a estrutura do Capítulo 8 (Unidade 2) no menu de navegação e correção de inconsistência na numeração da Seção 8.1 (ajuste de 9.1 para 8.1, alinhando com 8.1.1 e 8.1.2).</td>
+<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+<td style="text-align: left;">Matheus Saraiva Camargo</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>2.4</code></td>
+<td style="text-align: center;">12/10/2026</td>
+<td style="text-align: left;">Saneamento e harmonização pós-revisão por pares: desambiguação de RF22 (alocado na CAR-02 com CT-M1-11 para anexação/GPS), RF20 único na CAR-09 (Shifton), associação de RF36 na CAR-10, substituição terminológica de "aplicativo móvel" por "aplicação web responsiva (Web App / PWA)" e sincronização de rastreabilidade.</td>
+<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+<td style="text-align: left;">Equipe Cascata Ágil</td>
 </tr>
 <tr>
 <td style="text-align: center;"><code>2.5</code></td>
 <td style="text-align: center;">12/10/2026</td>
-<td style="text-align: left;">Incorporação das deliberações do Ciclo 2 (FB-12 a FB-18): RBAC canônico, isolamento de RF06 e adequações jurídicas (CLT/LGPD).</td>
+<td style="text-align: left;">Incorporação das deliberações do Ciclo 2 de avaliação por pares (FB-12 a FB-18): definições operacionais para termos ambíguos, refatoração e isolamento do RF06, Matriz Canônica RBAC de 4 papéis, refatoração de RNF07/RNF08 como atributos de qualidade, desambiguação entre RNs e RNFs, reclassificação do RNF16 (Reliability / Legal +) e adequação jurídica (CLT Art. 11 e LGPD).</td>
 <td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+<td style="text-align: left;">Equipe Cascata Ágil</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>2.6</code></td>
+<td style="text-align: center;">16/11/2026</td>
+<td style="text-align: left;"><strong>Atualização da deliberação FB-16:</strong> revisão da desambiguação vigente entre regras de negócio e RNFs, alinhada às definições atuais de RN16, RN17, RN19, RNF10, RNF14, RNF15 e RNF16; remoção das metas antigas de desempenho da explicação vigente.</td>
+<td style="text-align: left;">Matheus Saraiva Camargo</td>
 <td style="text-align: left;">Equipe Cascata Ágil</td>
 </tr>
 </tbody>

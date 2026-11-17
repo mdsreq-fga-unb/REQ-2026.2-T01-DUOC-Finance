@@ -10308,3 +10308,148 @@ a.req-gh-pill:hover {
   font-weight: 600;
   color: var(--md-default-fg-color--light, #64748b);
 }
+
+/* Dropdown de evidencias visuais dentro das tabelas de DoR e DoD */
+details.dod-ev-details {
+  margin-top: 6px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.02);
+  padding: 4px 8px;
+}
+
+[data-md-color-scheme="slate"] details.dod-ev-details {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+details.dod-ev-details > summary.dod-ev-summary {
+  cursor: pointer;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--duoc-primary, #971828);
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  user-select: none;
+}
+
+[data-md-color-scheme="slate"] details.dod-ev-details > summary.dod-ev-summary {
+  color: #fbbf24;
+}
+
+details.dod-ev-details > summary.dod-ev-summary::-webkit-details-marker {
+  display: none;
+}
+
+details.dod-ev-details > summary.dod-ev-summary::before {
+  content: "▸";
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+details.dod-ev-details[open] > summary.dod-ev-summary::before {
+  transform: rotate(90deg);
+}
+
+.dod-ev-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+  padding-bottom: 4px;
+}
+
+.dod-ev-gallery .req-evidence-media-card img {
+  max-height: 150px;
+}
+
+/* Grade 3x2 para Etapas do Processo de Engenharia de Requisitos */
+.er-cards-grid-3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 1rem 0 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .er-cards-grid-3x2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .er-cards-grid-3x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.er-stage-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: var(--md-default-bg-color, #ffffff);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+[data-md-color-scheme="slate"] .er-stage-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.09);
+  box-shadow: none;
+}
+
+.er-stage-title {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--duoc-primary, #971828);
+  padding-bottom: 6px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+[data-md-color-scheme="slate"] .er-stage-title {
+  color: #fbbf24;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.er-stage-card p,
+.er-stage-card ul {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  margin: 0 !important;
+}
+
+.er-stage-card ul {
+  padding-left: 16px !important;
+  margin-top: 4px !important;
+}
+
+.er-stage-card li {
+  margin-bottom: 3px;
+}
+
+.er-stage-links {
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+
+/* Planejamento: sumario lateral direito completo (todos os niveis de titulo) */
+@media screen and (min-width: 76.25em) {
+  body:has(.toc-expandida) .md-sidebar--secondary {
+    width: 16rem !important;
+  }
+
+  body:has(.toc-expandida) .md-sidebar--secondary .md-nav--secondary .md-nav__item .md-nav {
+    display: block !important;
+  }
+
+  body:has(.toc-expandida) .md-sidebar--secondary .md-nav--secondary .md-nav .md-nav__link {
+    font-size: 0.62rem;
+    padding-left: 0.3rem;
+  }
+}
