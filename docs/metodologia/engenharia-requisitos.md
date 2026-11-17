@@ -3,7 +3,7 @@
 Este capítulo sintetiza como as atividades de **Engenharia de Requisitos (ER)** são executadas pela equipe **Cascata Ágil** no projeto ***DUOC Finance***, conectando técnicas, ferramentas, artefatos e critérios de qualidade.
 
 <a id="52-mapeamento-de-engenharia-de-requisitos-ao-processo"></a>
-*(Nota: Os critérios de aceitação adotam listas estruturadas de regras de negócio verificáveis, e o mapeamento completo das fases do ciclo RAD está consolidado em [Estratégias de Engenharia](estrategias-esw.md) e [Organização & Atualização do Backlog](organizacao-atualizacao.md)).*
+*(Nota: Os critérios de aceitação adotam listas estruturadas de regras de negócio verificáveis, e o mapeamento completo das fases do ciclo RAD está consolidado em [Estratégias de Engenharia](estrategias-esw.md) e [Organização & Atualização do Backlog](planejamento.md#organizacao-e-atualizacao-dos-requisitos)).*
 
 ---
 
@@ -79,7 +79,7 @@ Este capítulo sintetiza como as atividades de **Engenharia de Requisitos (ER)**
       <li><strong>Artefatos:</strong> Cards unificados, matrizes de rastreabilidade e histórico por unidade.</li>
     </ul>
     <div class="er-stage-links">
-      Evidências: <a href="../organizacao-atualizacao/">Organização</a> · <a href="../organizacao-e-boas-praticas/">Boas Práticas</a> · <a href="../../requisitos/rastreabilidade/">Rastreabilidade</a>
+      Evidências: <a href="../planejamento/#organizacao-e-atualizacao-dos-requisitos">Organização</a> · <a href="../organizacao-e-boas-praticas/">Boas Práticas</a> · <a href="../../requisitos/rastreabilidade/">Rastreabilidade</a>
     </div>
   </div>
 </div>

@@ -36,7 +36,7 @@ A tabela abaixo consolida os principais artefatos de documentação, governança
 
 | Eixo | Artefato / Módulo | Síntese do Conteúdo Entregue | Link Direto |
 | :--- | :--- | :--- | :---: |
-| **Organização (Cap. 12)** | Organização & Atualização do Backlog | Fonte Única Canônica, anatomia dos cards, refinamento progressivo (DEEP / Iceberg), tratamento de dependências, propagação de mudanças e checklist de conformidade. | [Acessar Organização](../metodologia/organizacao-atualizacao.md) |
+| **Organização (Cap. 12)** | Organização & Atualização do Backlog | Fonte Única Canônica, anatomia dos cards, refinamento progressivo (DEEP / Iceberg), tratamento de dependências, propagação de mudanças e checklist de conformidade. | [Acessar Organização](../metodologia/planejamento.md#organizacao-e-atualizacao-dos-requisitos) |
 | **Processo GitHub** | Boas Práticas no GitHub | Fluxo oficial de branches (`main`, `develop`, `feat/*`, `gh-pages`), templates em `.github/`, Conventional Commits, revisão de PRs e pipelines CI/CD. | [Acessar Boas Práticas](../metodologia/organizacao-e-boas-praticas.md) |
 | **Requisitos** | Catálogo Integrado de Requisitos | 91 itens (`40 RFs`, `31 RNs`, `20 RNFs`) em cards compactos com status real por incremento, links para Issues/PRs, filtro *Execução (Ciclo)* e evidências visuais. | [Acessar Catálogo](../requisitos/index.md) |
 | **Rastreabilidade** | Matrizes e Pirâmide Interativa | Rastreabilidade bidirecional (`OG ➔ OE ➔ CAR ➔ RF ➔ RN/RNF`) e matriz-síntese de cobertura do produto. | [Acessar Rastreabilidade](../requisitos/rastreabilidade.md) |
@@ -51,22 +51,22 @@ A tabela abaixo consolida os principais artefatos de documentação, governança
 
 A gravação oficial do Ponto de Controle 3 (realizada em **16/11/2026**) apresenta a reorganização documental do portal, o catálogo integrado de requisitos com rastreabilidade ao GitHub, a metodologia de priorização do MVP, o planejamento dos ciclos RAD e a demonstração prática do sistema em execução local via Docker.
 
+
 ### Gravação Oficial da Apresentação
 
-!!! note "Vídeo em Processamento / Publicação"
-    O espaço abaixo está reservado para a incorporação do vídeo oficial gravado na Reunião 07 (`16/11/2026`). Assim que o upload no YouTube for concluído, o player incorporado e o link direto serão adicionados nesta seção.
-
-<!--
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; border: 1px solid var(--duoc-gold, #DAA520); margin: 1.5rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
-  <iframe
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-    src="https://www.youtube-nocookie.com/embed/ID_DO_VIDEO"
-    title="Vídeo de Apresentação — Entrega 3 (Unidade 3) — Equipe Cascata Ágil"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  <iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+    src="https://www.youtube-nocookie.com/embed/U_35Or_Tm7M?si=qBFOgzxUXoIFzxFE" 
+    title="Vídeo de Apresentação — Entrega 3 (Unidade 3) — Equipe Cascata Ágil" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
   </iframe>
 </div>
--->
+
+> Caso o player incorporado acima apresente restrições de rede ou dispositivo, utilize o acesso direto:
+> **[Assistir à Apresentação da Entrega 2 no YouTube (Link Direto: youtu.be/JF_cYRJM7vk)](https://youtu.be/U_35Or_Tm7M?si=qBFOgzxUXoIFzxFE)**
+
 
 ### Distribuição dos Temas por Integrante
 

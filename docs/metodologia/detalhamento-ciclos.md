@@ -401,7 +401,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           <span class="week-card-title">Semana 08</span>
           <span class="week-card-period">20/10 a 27/10/2026</span>
         </div>
-        <span class="status-pill concluido">Concluído / Entregue</span>
+        <span class="status-pill concluido">Concluído</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -426,36 +426,27 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           </ul>
         </div>
         <div>
-          <div class="week-section-title">Entregáveis Realizados</div>
-          <ul>
-            <li>Controle de acesso baseado em papéis (RBAC) em versão base;</li>
-            <li>Módulo móvel de registro de viagens (RVT) em versão inicial;</li>
-            <li>Dados sintéticos carregados para o ambiente de desenvolvimento.</li>
-            <li><em>Justificativa: entrega prorrogada para a Semana 11 por decisão da equipe.</em></li>
-          </ul>
-        </div>
-      </div>
-      <div class="week-card-grid">
-        <div>
           <div class="week-section-title">Entregáveis e Artefatos Gerados</div>
           <ul>
-            <li>Diagrama Entidade-Relacionamento (DER) revisado, com homologação sujeita a registro — evidência: <a href="../../mvp/modelagem_bd/">docs/mvp/modelagem_bd.md</a></li>
-            <li>Telas de cadastro e autenticação de usuário — evidência: <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener noreferrer">Pull Request #167</a></li>
-            <li>Repositório de código configurado com pipeline na Vercel — evidência: <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/160" target="_blank" rel="noopener noreferrer">Pull Request #160</a></li>
-            <li>Escopo atualizado no GitHub Projects, com as pendências da semana registradas para replanejamento — evidência: <a href="https://github.com/orgs/mdsreq-fga-unb/projects/119" target="_blank" rel="noopener noreferrer">GitHub Projects #119</a></li>
+            <li>Diagrama Entidade-Relacionamento (DER) revisado, com homologação sujeita a registro; (artefato <a href="../../mvp/modelagem_bd/">docs/mvp/modelagem_bd.md</a>)</li>
+            <li>Telas de cadastro e autenticação de usuário; <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167">https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167</a></li>
+            <li>Repositório de código configurado com pipeline na Vercel; <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/160">https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/160</a></li>
+            <li>Escopo atualizado no GitHub Projects, com as pendências da semana registradas para replanejamento. <a href="https://github.com/orgs/mdsreq-fga-unb/projects/119">https://github.com/orgs/mdsreq-fga-unb/projects/119</a></li>
+            <li>Controle de acesso baseado em papéis (RBAC) em versão base; <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167">https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167</a></li>
+            <li>Módulo móvel de registro de viagens (RVT) em versão inicial; <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170">https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170</a></li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="week-card status-concluido">
+    <div class="week-card status-pendente">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <a id="semana-09"></a>
           <span class="week-card-title">Semana 09</span>
           <span class="week-card-period">28/10 a 04/11/2026</span>
         </div>
-        <span class="status-pill concluido">Concluído / Entregue</span>
+        <span class="status-pill pendente">Pendente</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -479,14 +470,10 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           </ul>
         </div>
         <div>
-          <div class="week-section-title">Entregáveis Realizados</div>
+          <div class="week-section-title">Entregáveis Pendentes</div>
           <ul>
             <li>Banco de dados Supabase provisionado, com <em>migrations</em> versionadas;</li>
             <li>Camada ORM conectada à aplicação e às entidades do DER;</li>
-            <li>Telas de login e RVT refinadas e integradas à persistência;</li>
-            <li>Matriz de papéis × permissões (RBAC) refinada e documentada;</li>
-            <li>Testes unitários das regras de cadastro e autenticação.</li>
-            <li><em>Justificativa: entrega prorrogada para a Semana 11 por decisão da equipe.</em></li>
           </ul>
         </div>
       </div>
@@ -494,20 +481,22 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
         <div>
           <div class="week-section-title">Entregáveis e Artefatos Gerados</div>
           <ul>
-            <li><em>Nenhum artefato gerado até o momento.</em></li>
+            <li>Telas de login e RVT refinadas e integradas à persistência; <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170">https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170</a></li>
+            <li>Matriz de papéis × permissões (RBAC) refinada e documentada; <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172">https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172</a></li>
+            <li>Testes unitários das regras de cadastro e autenticação. <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/168">https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/168</a></li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="week-card status-concluido">
+    <div class="week-card status-pendente">
       <div class="week-card-header">
         <div class="week-card-header-left">
           <a id="semana-10"></a>
           <span class="week-card-title">Semana 10</span>
           <span class="week-card-period">05/11 a 11/11/2026</span>
         </div>
-        <span class="status-pill concluido">Concluído / Entregue</span>
+        <span class="status-pill pendente">Pendente</span>
       </div>
       <div class="week-card-meta">
         <div class="week-meta-item">
@@ -532,15 +521,13 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
           </ul>
         </div>
         <div>
-          <div class="week-section-title">Entregáveis Realizados</div>
+          <div class="week-section-title">Entregáveis Pendentes</div>
           <ul>
-            <li>Cadastro unificado (<a href="../../visao-produto/solucao-proposta/#car-01">CAR-01</a>) e autenticação com persistência funcionando em <em>Staging</em>;</li>
-            <li>Módulo RVT (<a href="../../visao-produto/solucao-proposta/#car-02">CAR-02</a>) integrado ao banco de dados;</li>
-            <li>RBAC (<a href="../../visao-produto/solucao-proposta/#car-07">CAR-07</a>) completo e testado;</li>
+            <li>Módulo RVT (CAR-02) integrado ao banco de dados;</li>
             <li>Relatório de verificação (Fagan) e testes automatizados do incremento;</li>
             <li>Catálogo de requisitos revisado e matriz de rastreabilidade atualizada;</li>
-            <li>Registro de DoD do Incremento 1 e backlog replanejado no GitHub Projects.</li>
-            <li><em>Justificativa: entrega prorrogada para a Semana 11 por decisão da equipe.</em></li>
+            <li>Registro de DoD do Incremento 1 e backlog replanejado no GitHub Projects;</li>
+            <li>Cadastro unificado (CAR-01) e autenticação com persistência funcionando em Staging;</li>
           </ul>
         </div>
       </div>
@@ -548,7 +535,7 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
         <div>
           <div class="week-section-title">Entregáveis e Artefatos Gerados</div>
           <ul>
-            <li><em>Nenhum artefato gerado até o momento.</em></li>
+            <li>RBAC (CAR-07) completo e testado; <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172">https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172</a></li>
           </ul>
         </div>
       </div>
@@ -799,3 +786,4 @@ Navegue pelas abas abaixo para inspecionar o planejamento operacional de cada ci
     | :---: | :---: | :--- | :--- | :--- |
     | `1.0` | 16/11/2026 | Criação do capítulo de detalhamento operacional dos Ciclos RAD e Semanas 01 a 13 com navegação profunda e rastreabilidade direta do Cronograma | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
     | `1.1` | 16/11/2026 | Atualização do status das Semanas 08 a 10 para Pendente (prorrogação para a Semana 11) e inclusão da sessão de validação em 16/11 | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+    | `1.2` | 17/11/2026 | Atualização das Semanas 08, 09 e 10 para o status "Concluído" com base nas entregas registradas; remoção das tabelas de pendências das semanas concluídas. | Eric Araújo | - |
