@@ -41,6 +41,8 @@ Thumbs.db
 node_modules/
 # Prisma Client gerado por "prisma generate"
 backend/src/generated/
+# Evidências enviadas no RVT (armazenamento local de desenvolvimento)
+backend/uploads/
 coverage/
 *.tsbuildinfo
 

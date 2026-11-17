@@ -74,17 +74,21 @@ extra_javascript:
 
 
 nav:
-  - 'Início': index.md
   - 'Visão do Produto':
+      - 'Apresentação do Produto': index.md
       - 'Cenário Atual & Diagnóstico': visao-produto/cenario-atual.md
       - 'Solução Proposta, OEs & CARs': visao-produto/solucao-proposta.md
       - 'Intervenção Social & Cultural': visao-produto/intervencao-social.md
   - 'Metodologia':
       - 'Estratégias de Engenharia': metodologia/estrategias-esw.md
       - 'Processo de Requisitos': metodologia/engenharia-requisitos.md
-      - 'Planejamento': metodologia/planejamento.md
-      - 'Cronograma': metodologia/cronograma.md
       - 'Interação com o Cliente': metodologia/interacao-cliente.md
+      - 'Organização & Atualização do Backlog': metodologia/organizacao-atualizacao.md
+      - 'Boas Práticas no GitHub': metodologia/organizacao-e-boas-praticas.md
+  - 'Planejamento':                                                   
+      - 'Cronograma': metodologia/cronograma.md
+      - 'Detalhamento de Ciclos & Semanas': metodologia/detalhamento-ciclos.md
+      - 'Estratégias de Planejamento': metodologia/planejamento.md
   - 'Requisitos':
       - 'Catálogo Integrado de Requisitos': requisitos/index.md
       - 'Rastreabilidade & Matrizes': requisitos/rastreabilidade.md
@@ -92,6 +96,7 @@ nav:
   - 'Escopo do MVP':
       - 'Priorização & Escopo do Produto': requisitos/priorizacao.md
       - 'Critérios de Aceitação (DoR & DoD)': mvp/dor-dod.md
+      - 'Estrutura do Banco de Dados': mvp/modelagem_bd.md
       - 'Avaliação por Pares & Feedback': requisitos/feedback.md
   - 'Entregas':
       - 'Painel Geral de Entregas': entregas/index.md

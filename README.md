@@ -50,6 +50,7 @@ O **DUOC Finance** é uma solução digital desenvolvida para a empresa **DUOC A
 │   │   ├── doc_update.md        # Template para atualização de documentação
 │   │   └── feature_request.md   # Template para novos requisitos / funcionalidades
 │   ├── workflows/
+│   │   ├── ci.yml               # Verificações de lint, tipos, testes e build
 │   │   └── deploy.yml           # Pipeline de build e deploy no GitHub Pages
 │   └── PULL_REQUEST_TEMPLATE.md # Template padronizado de Pull Requests
 ├── backend/                     # API REST em NestJS (TypeScript) + Prisma ORM + Dockerfile de desenvolvimento
@@ -153,6 +154,53 @@ As tabelas são definidas em [`backend/prisma/schema.prisma`](./backend/prisma/s
 | Criar uma migration após alterar o schema | `docker compose exec backend npx prisma migrate dev --name <descricao>` |
 | Regenerar o Prisma Client | `docker compose exec backend npx prisma generate` |
 | Ver o status das migrations | `docker compose exec backend npx prisma migrate status` |
+
+---
+
+## 🧪 Qualidade, Lint e Testes
+
+A pipeline de CI executa em `push` e Pull Requests direcionados a `develop` ou `main`. Localmente, rode os comandos na pasta de cada projeto:
+
+### Frontend
+
+O frontend usa Oxlint com regras para TypeScript, React e acessibilidade. Mantemos essa ferramenta porque o TypeScript 7 do projeto ainda não é suportado oficialmente pelo parser do ESLint.
+
+```bash
+cd frontend
+npm ci
+npm run lint
+npx tsc --noEmit
+npm test
+npm run build
+```
+
+Para aplicar correções automáticas ou formatar os arquivos:
+
+```bash
+npm run lint:fix
+npm run format
+```
+
+### Backend
+
+O backend usa ESLint com regras recomendadas para TypeScript.
+
+```bash
+cd backend
+npm ci
+npm run lint
+npm test
+npm run build
+```
+
+Para aplicar correções automáticas ou formatar os arquivos:
+
+```bash
+npm run lint:fix
+npm run format
+```
+
+Para exigir a CI na branch `develop`, uma pessoa com permissão de administração deve configurar a proteção da branch no GitHub e marcar os status checks **Frontend** e **Backend** como obrigatórios.
 
 ---
 

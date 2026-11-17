@@ -26,6 +26,10 @@ services:
     environment:
       PORT: 3000
       DATABASE_URL: postgresql://${POSTGRES_USER:-duoc}:${POSTGRES_PASSWORD:-duoc}@db:5432/${POSTGRES_DB:-duoc_finance}
+      # Segredo HS256 dos tokens de acesso (troque fora do ambiente local)
+      JWT_SECRET: ${JWT_SECRET:-duoc-dev-secret-troque-em-producao}
+      # Evidências do RVT (fotos/PDFs); fica em backend/uploads via volume
+      UPLOAD_DIR: /app/uploads
       # Polling no watch do TypeScript: Docker Desktop (Windows/macOS) não propaga eventos de arquivo
       TSC_WATCHFILE: DynamicPriorityPolling
       TSC_WATCHDIRECTORY: DynamicPriorityPolling
