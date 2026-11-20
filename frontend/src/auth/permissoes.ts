@@ -20,7 +20,9 @@ export const PERMISSOES = {
   dashboard: PAPEIS,
   colaboradores: ['ADMIN_FINANCEIRO'],
   novoRvt: ['TECNICO_CAMPO'],
-  historicoRvt: ['TECNICO_CAMPO', 'GESTOR_OBRAS', 'ADMIN_FINANCEIRO'],
+  historicoRvt: ['TECNICO_CAMPO'],
+  aprovacaoDiarias: ['ADMIN_FINANCEIRO'],
+  reembolsos: ['TECNICO_CAMPO', 'GESTOR_OBRAS', 'ADMIN_FINANCEIRO'],
   fechamento: ['ADMIN_FINANCEIRO'],
   gestaoAcessos: ['ADMIN_SISTEMA'],
 } as const satisfies Record<string, readonly Papel[]>
