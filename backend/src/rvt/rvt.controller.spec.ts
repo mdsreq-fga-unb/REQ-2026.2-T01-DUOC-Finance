@@ -14,12 +14,17 @@ const RVT_ID = '6f1c1c1e-3f8a-4c4b-9d55-6a2f3b2f9b10';
 describe('RvtController (HTTP)', () => {
   let app: INestApplication;
   let usuarioAtual = 'colab-1';
+  let papelAtual = 'TECNICO_CAMPO';
   const findSessao = vi.fn();
   const service = {
     listarContratosAtivos: vi.fn(),
     criar: vi.fn(),
     anexarEvidencias: vi.fn(),
     listarDoColaborador: vi.fn(),
+    retificar: vi.fn(),
+    removerEvidencia: vi.fn(),
+    listarPendentesDoGestor: vi.fn(),
+    deliberar: vi.fn(),
   };
 
   function token(sub = 'colab-1', vinculado = true): string {
@@ -53,6 +58,7 @@ describe('RvtController (HTTP)', () => {
     Object.values(service).forEach((fn) => fn.mockReset());
     findSessao.mockReset();
     usuarioAtual = 'colab-1';
+    papelAtual = 'TECNICO_CAMPO';
     findSessao.mockImplementation(async () => ({
       id: SESSAO_ID,
       usuarioId: usuarioAtual,
@@ -62,7 +68,7 @@ describe('RvtController (HTTP)', () => {
       usuario: {
         id: usuarioAtual,
         ativo: true,
-        papel: 'TECNICO_CAMPO',
+        papel: papelAtual,
         senhaAtualizadaEm: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
       },
     }));
@@ -108,6 +114,7 @@ describe('RvtController (HTTP)', () => {
     expect(service.criar).toHaveBeenCalledWith(
       'colab-1',
       expect.not.objectContaining({ colaboradorId: expect.anything() }),
+      'colab-1',
     );
   });
 
@@ -156,5 +163,103 @@ describe('RvtController (HTTP)', () => {
       .set('Authorization', `Bearer ${token()}`)
       .attach('arquivos', Buffer.from([0xff, 0xd8, 0xff]), 'obra.jpg')
       .expect(400);
+  });
+
+  describe('RF35 — retificação', () => {
+    it('envia ao service apenas os campos retificáveis', async () => {
+      service.retificar.mockResolvedValue({ id: RVT_ID });
+      await request(app.getHttpServer())
+        .patch(`/api/rvt/${RVT_ID}`)
+        .set('Authorization', `Bearer ${token('colab-1')}`)
+        .send({ horasTrabalhadas: 7.5, contratoId: 'outro', colaboradorId: 'x' })
+        .expect(200);
+      expect(service.retificar).toHaveBeenCalledWith(
+        { colaboradorId: 'colab-1', usuarioId: 'colab-1' },
+        RVT_ID,
+        { horasTrabalhadas: 7.5 },
+      );
+    });
+
+    it('valida horas e escopo como na criação', async () => {
+      await request(app.getHttpServer())
+        .patch(`/api/rvt/${RVT_ID}`)
+        .set('Authorization', `Bearer ${token()}`)
+        .send({ horasTrabalhadas: 30 })
+        .expect(400);
+      expect(service.retificar).not.toHaveBeenCalled();
+    });
+
+    it('remove evidência pelo id', async () => {
+      const EVIDENCIA_ID = '0b9a4f3e-2c1d-4e5f-8a7b-6c5d4e3f2a1b';
+      service.removerEvidencia.mockResolvedValue({ id: RVT_ID });
+      await request(app.getHttpServer())
+        .delete(`/api/rvt/${RVT_ID}/evidencias/${EVIDENCIA_ID}`)
+        .set('Authorization', `Bearer ${token()}`)
+        .expect(200);
+      expect(service.removerEvidencia).toHaveBeenCalledWith(
+        { colaboradorId: 'colab-1', usuarioId: 'colab-1' },
+        RVT_ID,
+        EVIDENCIA_ID,
+      );
+    });
+  });
+
+  describe('RF32 — deliberação (RN16)', () => {
+    it.each(['TECNICO_CAMPO', 'ADMIN_FINANCEIRO', 'AUDITOR_EXTERNO'])(
+      'recusa a fila de homologação para %s',
+      async (papel) => {
+        papelAtual = papel;
+        await request(app.getHttpServer())
+          .get('/api/rvt/pendentes-homologacao')
+          .set('Authorization', `Bearer ${token()}`)
+          .expect(403);
+        expect(service.listarPendentesDoGestor).not.toHaveBeenCalled();
+      },
+    );
+
+    it('lista a fila do gestor mesmo sem vínculo com colaborador', async () => {
+      papelAtual = 'GESTOR_OPERACIONAL';
+      service.listarPendentesDoGestor.mockResolvedValue([]);
+      await request(app.getHttpServer())
+        .get('/api/rvt/pendentes-homologacao')
+        .set('Authorization', `Bearer ${token('gestor-1', false)}`)
+        .expect(200, []);
+      expect(service.listarPendentesDoGestor).toHaveBeenCalledWith('gestor-1');
+    });
+
+    it('recusa deliberação por técnico de campo', async () => {
+      await request(app.getHttpServer())
+        .post(`/api/rvt/${RVT_ID}/deliberacao`)
+        .set('Authorization', `Bearer ${token()}`)
+        .send({ decisao: 'HOMOLOGAR' })
+        .expect(403);
+      expect(service.deliberar).not.toHaveBeenCalled();
+    });
+
+    it('exige parecer na rejeição (RN30)', async () => {
+      papelAtual = 'GESTOR_OPERACIONAL';
+      const resposta = await request(app.getHttpServer())
+        .post(`/api/rvt/${RVT_ID}/deliberacao`)
+        .set('Authorization', `Bearer ${token('gestor-1', false)}`)
+        .send({ decisao: 'REJEITAR' })
+        .expect(400);
+      expect(resposta.body.message[0]).toMatch(/RN30/);
+      expect(service.deliberar).not.toHaveBeenCalled();
+    });
+
+    it('repassa a decisão com o gestor da sessão', async () => {
+      papelAtual = 'GESTOR_OPERACIONAL';
+      service.deliberar.mockResolvedValue({ id: RVT_ID });
+      await request(app.getHttpServer())
+        .post(`/api/rvt/${RVT_ID}/deliberacao`)
+        .set('Authorization', `Bearer ${token('gestor-1', false)}`)
+        .send({ decisao: 'REJEITAR', parecer: 'Foto do quadro ilegível, reenviar.' })
+        .expect(201);
+      expect(service.deliberar).toHaveBeenCalledWith(
+        { usuarioId: 'gestor-1', colaboradorId: undefined },
+        RVT_ID,
+        { decisao: 'REJEITAR', parecer: 'Foto do quadro ilegível, reenviar.' },
+      );
+    });
   });
 });

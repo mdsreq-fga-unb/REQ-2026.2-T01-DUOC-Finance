@@ -25,3 +25,21 @@ export const UsuarioAutenticado = createParamDecorator(
     return request.usuario;
   },
 );
+
+/**
+ * Conta da sessão sem exigir vínculo com colaborador (ex.: gestor que
+ * delibera apontamentos). Garante que o ID da conta está presente.
+ */
+export const UsuarioDaSessao = createParamDecorator(
+  (
+    _dados: unknown,
+    context: ExecutionContext,
+  ): Usuario & { usuarioId: string } => {
+    const request = context.switchToHttp().getRequest<RequestAutenticado>();
+    const usuario = request.usuario;
+    if (!usuario?.usuarioId) {
+      throw new UnauthorizedException('Usuário não autenticado.');
+    }
+    return { ...usuario, usuarioId: usuario.usuarioId };
+  },
+);
