@@ -14,6 +14,9 @@ import {
   JwtAuthGuard,
   type UsuarioAutenticado as Usuario,
 } from '../auth/jwt-auth.guard.js';
+import { Role } from '../auth/role.enum.js';
+import { Roles } from '../auth/roles.decorator.js';
+import { RolesGuard } from '../auth/roles.guard.js';
 import { UsuarioAutenticado } from '../auth/usuario-autenticado.decorator.js';
 import {
   CriarRvtValidationPipe,
@@ -31,18 +34,20 @@ import {
 } from './rvt.service.js';
 
 @Controller('rvt')
-@UseGuards(JwtAuthGuard)
+@UseGuards(JwtAuthGuard, RolesGuard)
 export class RvtController {
   constructor(private readonly rvtService: RvtService) {}
 
   /** Contratos disponíveis para vínculo no formulário (RN04) */
   @Get('contratos-ativos')
+  @Roles(Role.TECNICO_CAMPO)
   listarContratosAtivos(): Promise<ContratoObraResumo[]> {
     return this.rvtService.listarContratosAtivos();
   }
 
   /** RF04 — registra o apontamento para o colaborador do token */
   @Post()
+  @Roles(Role.TECNICO_CAMPO)
   criar(
     @UsuarioAutenticado() usuario: Usuario,
     @Body(CriarRvtValidationPipe) dto: CriarRvtDto,
@@ -52,6 +57,7 @@ export class RvtController {
 
   /** Anexa fotos/PDFs comprobatórios (multipart, campo "arquivos") */
   @Post(':id/evidencias')
+  @Roles(Role.TECNICO_CAMPO)
   @UseInterceptors(
     // Sem "storage": o multer mantém o arquivo em memória até a validação
     FilesInterceptor('arquivos', MAX_ARQUIVOS_POR_ENVIO, {
@@ -75,6 +81,7 @@ export class RvtController {
 
   /** Histórico do técnico autenticado, do mais recente para o mais antigo */
   @Get('meus-apontamentos')
+  @Roles(Role.TECNICO_CAMPO)
   listarMeusApontamentos(
     @UsuarioAutenticado() usuario: Usuario,
   ): Promise<RvtResposta[]> {

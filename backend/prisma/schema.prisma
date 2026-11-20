@@ -109,8 +109,35 @@ model Usuario {
   createdAt         DateTime     @default(now()) @map("created_at")
   updatedAt         DateTime     @updatedAt @map("updated_at")
   sessoes           Sessao[]
+  eventosOperados   EventoAcesso[] @relation("EventosOperados")
+  eventosRecebidos  EventoAcesso[] @relation("EventosRecebidos")
 
   @@map("usuarios")
+}
+
+enum AcaoAcesso {
+  PAPEL_ALTERADO
+  CONTA_ATIVADA
+  CONTA_DESATIVADA
+}
+
+model EventoAcesso {
+  id            String     @id @default(uuid())
+  operadorId    String     @map("operador_id")
+  usuarioId     String     @map("usuario_id")
+  acao          AcaoAcesso
+  papelAnterior PapelUsuario? @map("papel_anterior")
+  papelNovo     PapelUsuario? @map("papel_novo")
+  ativoAnterior Boolean?   @map("ativo_anterior")
+  ativoNovo     Boolean?   @map("ativo_novo")
+  ocorridoEm    DateTime   @default(now()) @map("ocorrido_em")
+
+  operador Usuario @relation("EventosOperados", fields: [operadorId], references: [id], onDelete: Restrict)
+  usuario  Usuario @relation("EventosRecebidos", fields: [usuarioId], references: [id], onDelete: Restrict)
+
+  @@index([usuarioId, ocorridoEm])
+  @@index([operadorId, ocorridoEm])
+  @@map("eventos_acesso")
 }
 
 model Sessao {
