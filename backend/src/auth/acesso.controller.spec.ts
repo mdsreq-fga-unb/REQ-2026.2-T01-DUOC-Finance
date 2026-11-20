@@ -20,7 +20,7 @@ describe('CAR-07 / RN15 / RN16 — autorização HTTP real', () => {
   const listarUsuarios = vi.fn();
   const segredoAnterior = process.env.JWT_SECRET;
 
-  const tokenValido = (papelJwt: Role = Role.ADMIN_FINANCEIRO) => {
+  const tokenValido = (papelJwt: Role = Role.ADMIN_SISTEMA) => {
     const agora = Math.floor(Date.now() / 1000);
     return assinarJwtHs256(
       { sub: USUARIO_ID, sid: SESSAO_ID, papel: papelJwt, iat: agora, exp: agora + 900 },
@@ -50,7 +50,7 @@ describe('CAR-07 / RN15 / RN16 — autorização HTTP real', () => {
   });
 
   beforeEach(() => {
-    papelBanco = Role.ADMIN_FINANCEIRO;
+    papelBanco = Role.ADMIN_SISTEMA;
     revogadaEm = null;
     encontrarSessao.mockReset();
     listarUsuarios.mockReset();
@@ -68,7 +68,7 @@ describe('CAR-07 / RN15 / RN16 — autorização HTTP real', () => {
       },
     }));
     listarUsuarios.mockResolvedValue([
-      { id: USUARIO_ID, email: 'admin@duoc.com.br', papel: Role.ADMIN_FINANCEIRO, ativo: true },
+      { id: USUARIO_ID, email: 'admin@duoc.com.br', papel: Role.ADMIN_SISTEMA, ativo: true },
     ]);
   });
 
@@ -90,7 +90,7 @@ describe('CAR-07 / RN15 / RN16 — autorização HTTP real', () => {
       .set('Authorization', `Bearer ${tokenValido()}`)
       .expect(200)
       .expect((res) => {
-        expect(res.body).toEqual({ id: USUARIO_ID, papel: Role.ADMIN_FINANCEIRO });
+        expect(res.body).toEqual({ id: USUARIO_ID, papel: Role.ADMIN_SISTEMA });
       });
   });
 
@@ -98,7 +98,7 @@ describe('CAR-07 / RN15 / RN16 — autorização HTTP real', () => {
     papelBanco = Role.TECNICO_CAMPO;
     await request(app.getHttpServer())
       .get('/api/auth/usuarios')
-      .set('Authorization', `Bearer ${tokenValido(Role.ADMIN_FINANCEIRO)}`)
+      .set('Authorization', `Bearer ${tokenValido(Role.ADMIN_SISTEMA)}`)
       .expect(403);
     expect(listarUsuarios).not.toHaveBeenCalled();
   });
@@ -110,7 +110,7 @@ describe('CAR-07 / RN15 / RN16 — autorização HTTP real', () => {
       .expect(200)
       .expect((res) => {
         expect(res.body).toEqual([
-          { id: USUARIO_ID, email: 'admin@duoc.com.br', papel: Role.ADMIN_FINANCEIRO, ativo: true },
+          { id: USUARIO_ID, email: 'admin@duoc.com.br', papel: Role.ADMIN_SISTEMA, ativo: true },
         ]);
       });
     expect(listarUsuarios).toHaveBeenCalledWith({

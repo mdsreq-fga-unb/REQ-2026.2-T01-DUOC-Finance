@@ -32,7 +32,7 @@ export class AcessoController {
 
   /** RF14 / RN15 — leitura limitada de contas, exclusiva da administração. */
   @Get('usuarios')
-  @Roles(Role.ADMIN_FINANCEIRO)
+  @Roles(Role.ADMIN_SISTEMA)
   @UseGuards(RolesGuard)
   listarUsuarios() {
     return this.prisma.usuario.findMany({

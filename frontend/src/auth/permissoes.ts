@@ -1,13 +1,13 @@
 /**
- * CAR-07 / RN15 — matriz inicial de autorização da interface.
- * Confirmar com a DUOC antes do PR. O backend deve validar papéis novamente:
+ * CAR-07 / RN15 — matriz canônica de autorização da interface.
+ * O backend deve validar papéis novamente:
  * esconder links e proteger rotas React não substitui autorização REST (403).
  */
 export const PAPEIS = [
+  'ADMIN_SISTEMA',
   'ADMIN_FINANCEIRO',
-  'GESTOR_OPERACIONAL',
+  'GESTOR_OBRAS',
   'TECNICO_CAMPO',
-  'AUDITOR_EXTERNO',
 ] as const
 
 export type Papel = (typeof PAPEIS)[number]
@@ -19,9 +19,10 @@ export function papelValido(valor: unknown): valor is Papel {
 export const PERMISSOES = {
   dashboard: PAPEIS,
   colaboradores: ['ADMIN_FINANCEIRO'],
-  novoRvt: ['TECNICO_CAMPO', 'ADMIN_FINANCEIRO'],
-  historicoRvt: ['TECNICO_CAMPO', 'GESTOR_OPERACIONAL', 'ADMIN_FINANCEIRO'],
+  novoRvt: ['TECNICO_CAMPO'],
+  historicoRvt: ['TECNICO_CAMPO', 'GESTOR_OBRAS', 'ADMIN_FINANCEIRO'],
   fechamento: ['ADMIN_FINANCEIRO'],
+  gestaoAcessos: ['ADMIN_SISTEMA'],
 } as const satisfies Record<string, readonly Papel[]>
 
 export function possuiPapel(

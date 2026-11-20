@@ -90,10 +90,10 @@ model RvtEvidencia {
 // ---------------------------------------------------------------------------
 
 enum PapelUsuario {
+  ADMIN_SISTEMA
   ADMIN_FINANCEIRO
-  GESTOR_OPERACIONAL
+  GESTOR_OBRAS
   TECNICO_CAMPO
-  AUDITOR_EXTERNO
 }
 
 model Usuario {
