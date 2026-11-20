@@ -4,7 +4,7 @@ import { PAPEIS, PERMISSOES, papelValido, possuiPapel } from './permissoes'
 describe('CAR-07 / RN15 — matriz de autorização no frontend', () => {
   it('contem exatamente os quatro papeis canonicos', () => {
     expect(PAPEIS).toEqual([
-      'ADMIN_FINANCEIRO', 'GESTOR_OPERACIONAL', 'TECNICO_CAMPO', 'AUDITOR_EXTERNO',
+      'ADMIN_SISTEMA', 'ADMIN_FINANCEIRO', 'GESTOR_OBRAS', 'TECNICO_CAMPO',
     ])
   })
   it('rejeita papel desconhecido', () => {
@@ -13,19 +13,38 @@ describe('CAR-07 / RN15 — matriz de autorização no frontend', () => {
   })
   it('somente admin acessa cadastro e fechamento financeiro', () => {
     expect(possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.colaboradores)).toBe(true)
-    expect(possuiPapel('GESTOR_OPERACIONAL', PERMISSOES.colaboradores)).toBe(false)
-    expect(possuiPapel('AUDITOR_EXTERNO', PERMISSOES.fechamento)).toBe(false)
+    expect(possuiPapel('GESTOR_OBRAS', PERMISSOES.colaboradores)).toBe(false)
+    expect(possuiPapel('ADMIN_SISTEMA', PERMISSOES.fechamento)).toBe(false)
   })
-  it('tecnico e admin podem criar novo RVT; auditor nao', () => {
+  it('somente tecnico de campo pode criar novo RVT', () => {
     expect(possuiPapel('TECNICO_CAMPO', PERMISSOES.novoRvt)).toBe(true)
-    expect(possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.novoRvt)).toBe(true)
-    expect(possuiPapel('AUDITOR_EXTERNO', PERMISSOES.novoRvt)).toBe(false)
+    expect(possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.novoRvt)).toBe(false)
+    expect(possuiPapel('ADMIN_SISTEMA', PERMISSOES.novoRvt)).toBe(false)
   })
-  it('historico fica disponivel para tecnico, gestor operacional e admin', () => {
-    expect(possuiPapel('GESTOR_OPERACIONAL', PERMISSOES.historicoRvt)).toBe(true)
+  it('historico de apontamentos proprios fica disponivel apenas ao tecnico', () => {
+    expect(possuiPapel('GESTOR_OBRAS', PERMISSOES.historicoRvt)).toBe(false)
     expect(possuiPapel('TECNICO_CAMPO', PERMISSOES.historicoRvt)).toBe(true)
-    expect(possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.historicoRvt)).toBe(true)
-    expect(possuiPapel('AUDITOR_EXTERNO', PERMISSOES.historicoRvt)).toBe(false)
+    expect(possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.historicoRvt)).toBe(false)
+    expect(possuiPapel('ADMIN_SISTEMA', PERMISSOES.historicoRvt)).toBe(false)
+  })
+  it('reserva gestão de acessos ao administrador do sistema', () => {
+    expect(possuiPapel('ADMIN_SISTEMA', PERMISSOES.gestaoAcessos)).toBe(true)
+    expect(possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.gestaoAcessos)).toBe(false)
+  })
+  it('define a matriz de acesso das sete telas para os quatro papéis', () => {
+    expect(PAPEIS.filter((papel) => possuiPapel(papel, PERMISSOES.dashboard))).toEqual(PAPEIS)
+    expect(PAPEIS.filter((papel) => possuiPapel(papel, PERMISSOES.colaboradores)))
+      .toEqual(['ADMIN_FINANCEIRO'])
+    expect(PAPEIS.filter((papel) => possuiPapel(papel, PERMISSOES.novoRvt)))
+      .toEqual(['TECNICO_CAMPO'])
+    expect(PAPEIS.filter((papel) => possuiPapel(papel, PERMISSOES.historicoRvt)))
+      .toEqual(['TECNICO_CAMPO'])
+    expect(PAPEIS.filter((papel) => possuiPapel(papel, PERMISSOES.aprovacaoDiarias)))
+      .toEqual(['ADMIN_FINANCEIRO'])
+    expect(PAPEIS.filter((papel) => possuiPapel(papel, PERMISSOES.reembolsos)))
+      .toEqual(['ADMIN_FINANCEIRO', 'GESTOR_OBRAS', 'TECNICO_CAMPO'])
+    expect(PAPEIS.filter((papel) => possuiPapel(papel, PERMISSOES.gestaoAcessos)))
+      .toEqual(['ADMIN_SISTEMA'])
   })
   it('sem usuario nao existe permissao', () => {
     expect(possuiPapel(null, PERMISSOES.dashboard)).toBe(false)

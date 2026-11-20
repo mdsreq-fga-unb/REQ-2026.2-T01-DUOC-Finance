@@ -12,6 +12,9 @@ import {
   ClipboardPlus,
   History,
   X,
+  ClipboardCheck,
+  ReceiptText,
+  ShieldCheck,
 } from "lucide-react";
 
 const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
@@ -42,10 +45,28 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
     papeis: PERMISSOES.historicoRvt,
   },
   {
+    iconName: ClipboardCheck,
+    title: 'Aprovação de Diárias',
+    path: '/diarias/aprovacao',
+    papeis: PERMISSOES.aprovacaoDiarias,
+  },
+  {
+    iconName: ReceiptText,
+    title: 'Reembolsos',
+    path: '/reembolsos',
+    papeis: PERMISSOES.reembolsos,
+  },
+  {
     iconName: CircleDollarSign,
     title: 'Fechamento',
     path: '/fechamento',
     papeis: PERMISSOES.fechamento,
+  },
+  {
+    iconName: ShieldCheck,
+    title: 'Gestão de Acessos',
+    path: '/acessos',
+    papeis: PERMISSOES.gestaoAcessos,
   },
 ]
 

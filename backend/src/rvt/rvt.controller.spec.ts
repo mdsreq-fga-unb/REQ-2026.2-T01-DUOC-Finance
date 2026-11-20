@@ -3,6 +3,7 @@ import { Test } from '@nestjs/testing';
 import request from 'supertest';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard.js';
 import { assinarJwtHs256 } from '../auth/jwt.util.js';
+import { RolesGuard } from '../auth/roles.guard.js';
 import { PrismaService } from '../prisma/prisma.service.js';
 import { RvtController } from './rvt.controller.js';
 import { RvtService } from './rvt.service.js';
@@ -10,10 +11,16 @@ import { RvtService } from './rvt.service.js';
 const SEGREDO = 'segredo-seguro-para-testes-de-autenticacao-123';
 const SESSAO_ID = 'sessao-de-teste';
 const RVT_ID = '6f1c1c1e-3f8a-4c4b-9d55-6a2f3b2f9b10';
+const PAPEIS_SEM_ACESSO_RVT = [
+  'ADMIN_SISTEMA',
+  'ADMIN_FINANCEIRO',
+  'GESTOR_OBRAS',
+];
 
 describe('RvtController (HTTP)', () => {
   let app: INestApplication;
   let usuarioAtual = 'colab-1';
+  let papelAtual = 'TECNICO_CAMPO';
   const findSessao = vi.fn();
   const service = {
     listarContratosAtivos: vi.fn(),
@@ -38,6 +45,7 @@ describe('RvtController (HTTP)', () => {
         { provide: RvtService, useValue: service },
         { provide: PrismaService, useValue: { sessao: { findUnique: findSessao } } },
         JwtAuthGuard,
+        RolesGuard,
       ],
     }).compile();
     app = modulo.createNestApplication();
@@ -53,6 +61,7 @@ describe('RvtController (HTTP)', () => {
     Object.values(service).forEach((fn) => fn.mockReset());
     findSessao.mockReset();
     usuarioAtual = 'colab-1';
+    papelAtual = 'TECNICO_CAMPO';
     findSessao.mockImplementation(async () => ({
       id: SESSAO_ID,
       usuarioId: usuarioAtual,
@@ -62,7 +71,7 @@ describe('RvtController (HTTP)', () => {
       usuario: {
         id: usuarioAtual,
         ativo: true,
-        papel: 'TECNICO_CAMPO',
+        papel: papelAtual,
         senhaAtualizadaEm: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
       },
     }));
@@ -92,6 +101,39 @@ describe('RvtController (HTTP)', () => {
     expect(service.listarDoColaborador).toHaveBeenCalledWith('colab-9');
   });
 
+  it.each(PAPEIS_SEM_ACESSO_RVT)(
+    'retorna 403 ao consultar apontamentos próprios como %s',
+    async (papel) => {
+      papelAtual = papel;
+      await request(app.getHttpServer())
+        .get('/api/rvt/meus-apontamentos')
+        .set('Authorization', `Bearer ${token('usuario-1')}`)
+        .expect(403);
+      expect(service.listarDoColaborador).not.toHaveBeenCalled();
+    },
+  );
+
+  it('lista contratos ativos para preencher RVT de técnico', async () => {
+    service.listarContratosAtivos.mockResolvedValue([]);
+    await request(app.getHttpServer())
+      .get('/api/rvt/contratos-ativos')
+      .set('Authorization', `Bearer ${token()}`)
+      .expect(200, []);
+    expect(service.listarContratosAtivos).toHaveBeenCalledOnce();
+  });
+
+  it.each(PAPEIS_SEM_ACESSO_RVT)(
+    'retorna 403 ao consultar contratos do RVT como %s',
+    async (papel) => {
+      papelAtual = papel;
+      await request(app.getHttpServer())
+        .get('/api/rvt/contratos-ativos')
+        .set('Authorization', `Bearer ${token('usuario-1')}`)
+        .expect(403);
+      expect(service.listarContratosAtivos).not.toHaveBeenCalled();
+    },
+  );
+
   it('ignora colaboradorId enviado no corpo e usa o do JWT', async () => {
     service.criar.mockResolvedValue({ id: 'rvt-1' });
     await request(app.getHttpServer())
@@ -110,6 +152,24 @@ describe('RvtController (HTTP)', () => {
       expect.not.objectContaining({ colaboradorId: expect.anything() }),
     );
   });
+
+  it.each(PAPEIS_SEM_ACESSO_RVT)(
+    'retorna 403 ao tentar criar RVT como %s',
+    async (papel) => {
+      papelAtual = papel;
+      await request(app.getHttpServer())
+        .post('/api/rvt')
+        .set('Authorization', `Bearer ${token('usuario-1')}`)
+        .send({
+          contratoId: 'contrato-1',
+          dataJornada: '2026-01-10',
+          horasTrabalhadas: 8,
+          escopoExecutado: 'Instalação de luminárias na garagem.',
+        })
+        .expect(403);
+      expect(service.criar).not.toHaveBeenCalled();
+    },
+  );
 
   it('retorna 400 com as mensagens de validação', async () => {
     const resposta = await request(app.getHttpServer())
@@ -140,6 +200,18 @@ describe('RvtController (HTTP)', () => {
     expect(arquivos[0]).toMatchObject({ originalname: 'obra.jpg', size: 4 });
     expect(Buffer.isBuffer(arquivos[0].buffer)).toBe(true);
   });
+
+  it.each(PAPEIS_SEM_ACESSO_RVT)(
+    'retorna 403 ao anexar evidências como %s',
+    async (papel) => {
+      papelAtual = papel;
+      await request(app.getHttpServer())
+        .post(`/api/rvt/${RVT_ID}/evidencias`)
+        .set('Authorization', `Bearer ${token('usuario-1')}`)
+        .expect(403);
+      expect(service.anexarEvidencias).not.toHaveBeenCalled();
+    },
+  );
 
   it('recusa arquivo acima de 5 MB com 413', async () => {
     await request(app.getHttpServer())

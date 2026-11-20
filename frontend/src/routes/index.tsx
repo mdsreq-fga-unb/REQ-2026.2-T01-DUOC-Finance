@@ -7,10 +7,20 @@ import LoginPage from '../pages/LoginPage'
 import RvtFormPage from '../pages/RvtFormPage'
 import RvtHistoricoPage from '../pages/RvtHistoricoPage'
 import AcessoNegadoPage from '../pages/AcessoNegadoPage'
+import GestaoAcessosPage from '../pages/GestaoAcessosPage'
 import TrocarSenhaPage from '../pages/TrocarSenhaPage'
 import PrivateRoute from '../components/auth/PrivateRoute'
 import RoleRoute from '../components/auth/RoleRoute'
 import { PERMISSOES } from '../auth/permissoes'
+
+function TelaEmDesenvolvimento({ titulo }: { titulo: string }) {
+  return (
+    <section className="rounded-xl border border-border bg-surface p-6">
+      <h1 className="text-xl font-bold text-dark">{titulo}</h1>
+      <p className="mt-2 text-sm text-muted">Tela em desenvolvimento.</p>
+    </section>
+  )
+}
 
 export default function AppRoutes() {
   return (
@@ -20,8 +30,11 @@ export default function AppRoutes() {
 
       <Route element={<PrivateRoute />}>
         <Route path="/" element={<AppLayout />}>
-          <Route index element={<DashboardPage />} />
           <Route path="acesso-negado" element={<AcessoNegadoPage />} />
+
+          <Route element={<RoleRoute permitidos={PERMISSOES.dashboard} />}>
+            <Route index element={<DashboardPage />} />
+          </Route>
 
           <Route element={<RoleRoute permitidos={PERMISSOES.colaboradores} />}>
             <Route path="colaboradores" element={<ColaboradoresPage />} />
@@ -35,6 +48,18 @@ export default function AppRoutes() {
           </Route>
           <Route element={<RoleRoute permitidos={PERMISSOES.historicoRvt} />}>
             <Route path="rvt/historico" element={<RvtHistoricoPage />} />
+          </Route>
+
+          <Route element={<RoleRoute permitidos={PERMISSOES.aprovacaoDiarias} />}>
+            <Route path="diarias/aprovacao" element={<TelaEmDesenvolvimento titulo="Aprovação de Diárias" />} />
+          </Route>
+
+          <Route element={<RoleRoute permitidos={PERMISSOES.reembolsos} />}>
+            <Route path="reembolsos" element={<TelaEmDesenvolvimento titulo="Reembolsos" />} />
+          </Route>
+
+          <Route element={<RoleRoute permitidos={PERMISSOES.gestaoAcessos} />}>
+            <Route path="acessos" element={<GestaoAcessosPage />} />
           </Route>
 
           <Route element={<RoleRoute permitidos={PERMISSOES.fechamento} />}>

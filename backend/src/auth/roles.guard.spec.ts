@@ -27,11 +27,11 @@ describe('RolesGuard | RF14 / RN15', () => {
   it('autoriza papel presente na lista de permissões', () => {
     reflector.getAllAndOverride.mockReturnValue([
       Role.ADMIN_FINANCEIRO,
-      Role.GESTOR_OPERACIONAL,
+      Role.GESTOR_OBRAS,
     ]);
     expect(
       guard.canActivate(
-        criarContexto({ colaboradorId: 'colab-1', papel: Role.GESTOR_OPERACIONAL }),
+        criarContexto({ colaboradorId: 'colab-1', papel: Role.GESTOR_OBRAS }),
       ),
     ).toBe(true);
   });
@@ -65,9 +65,9 @@ describe('RolesGuard | RF14 / RN15', () => {
   });
 
   it('consulta metadados do método antes dos do controller', () => {
-    reflector.getAllAndOverride.mockReturnValue([Role.AUDITOR_EXTERNO]);
+    reflector.getAllAndOverride.mockReturnValue([Role.ADMIN_SISTEMA]);
     guard.canActivate(
-      criarContexto({ colaboradorId: 'colab-4', papel: Role.AUDITOR_EXTERNO }),
+      criarContexto({ colaboradorId: 'colab-4', papel: Role.ADMIN_SISTEMA }),
     );
     expect(reflector.getAllAndOverride).toHaveBeenCalledWith(
       ROLES_KEY,
@@ -79,12 +79,12 @@ describe('RolesGuard | RF14 / RN15', () => {
 describe('@Roles', () => {
   it('registra os papéis canônicos como metadados', () => {
     class ControllerFake {
-      @Roles(Role.ADMIN_FINANCEIRO, Role.AUDITOR_EXTERNO)
+      @Roles(Role.ADMIN_FINANCEIRO, Role.ADMIN_SISTEMA)
       rota() {}
     }
     expect(Reflect.getMetadata(ROLES_KEY, ControllerFake.prototype.rota)).toEqual([
       Role.ADMIN_FINANCEIRO,
-      Role.AUDITOR_EXTERNO,
+      Role.ADMIN_SISTEMA,
     ]);
   });
 });

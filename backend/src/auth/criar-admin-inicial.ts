@@ -27,7 +27,7 @@ try {
     data: {
       email,
       senhaHash,
-      papel: PapelUsuario.ADMIN_FINANCEIRO,
+      papel: PapelUsuario.ADMIN_SISTEMA,
     },
   });
   console.log('Conta administrativa inicial criada com hash bcrypt.');
