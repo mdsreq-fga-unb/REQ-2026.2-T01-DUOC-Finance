@@ -652,7 +652,7 @@ export class RvtService {
       Boolean(leitor.colaboradorId) &&
       evidencia?.rvt.colaboradorId === leitor.colaboradorId;
     const ehGestorResponsavel =
-      leitor.papel === 'GESTOR_OPERACIONAL' &&
+      leitor.papel === 'GESTOR_OBRAS' &&
       Boolean(leitor.usuarioId) &&
       evidencia?.rvt.contrato.gestorResponsavelId === leitor.usuarioId;
     if (!evidencia || (!ehAutor && !ehGestorResponsavel)) {

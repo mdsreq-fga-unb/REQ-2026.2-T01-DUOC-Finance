@@ -32,6 +32,24 @@ O controle de acesso segue o **Princípio do Menor Privilégio** (<a href="../#r
 
 * **Trilha de Auditoria (*Append-Only*):** Toda mutação relevante grava evento imutável com timestamp UTC, operador e estados anterior/posterior (<a href="../#rn17" class="req-tag req-tag-rn"># RN17 ↗</a>, <a href="../#rn18" class="req-tag req-tag-rn"># RN18 ↗</a>, <a href="../#rnf15" class="req-tag req-tag-rnf"># RNF15 ↗</a>).
 
+#### Matriz de acesso às telas
+
+As permissões de navegação e rotas seguem a matriz abaixo. Ocultar um item do menu não substitui a validação de papel no backend.
+
+| Tela | Papéis autorizados |
+| :--- | :--- |
+| Visão geral (Dashboard) | `TECNICO_CAMPO`, `GESTOR_OBRAS`, `ADMIN_FINANCEIRO`, `ADMIN_SISTEMA` |
+| Colaboradores | `ADMIN_FINANCEIRO` |
+| Novo RVT | `TECNICO_CAMPO` |
+| Histórico RVT (apontamentos próprios) | `TECNICO_CAMPO` |
+| Aprovação de Diárias | `ADMIN_FINANCEIRO` |
+| Reembolsos | `TECNICO_CAMPO`, `GESTOR_OBRAS`, `ADMIN_FINANCEIRO` |
+| Gestão de Acessos | `ADMIN_SISTEMA` |
+
+O histórico por obra ou a consulta global de RVTs não está disponível enquanto o modelo não relacionar usuários gestores a contratos e definir o escopo financeiro; esses papéis não recebem acesso à rota de apontamentos próprios.
+
+Na migração dos papéis legados, `GESTOR_OPERACIONAL` é convertido para `GESTOR_OBRAS`. Como `AUDITOR_EXTERNO` não possui equivalência canônica segura, contas existentes com esse papel devem ser remapeadas explicitamente antes da migration; ela interrompe a aplicação se encontrar alguma, evitando conceder privilégios por associação automática.
+
 ---
 
 ## Histórico de Versão

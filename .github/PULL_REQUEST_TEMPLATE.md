@@ -6,9 +6,10 @@
 ### 🔗 Rastreabilidade e Impacto
 *Mapeie quais elementos da nossa Pirâmide de Abstração estão contidos neste PR.*
 - **Issue Relacionada:** Closes # (Insira o número da issue aqui)
+- **Ciclo / Incremento:** [ex: Incremento 2, Incremento 3...]
 - **Objetivo Específico (OE):** [ex: OE1, OE3...]
 - **Característica do Produto (CAR):** [ex: CAR-01, CAR-05...]
-- **Requisitos Implementados (RF/RNF):** [ex: RF-01, RNF-04...]
+- **Requisitos Implementados (RF/RNF):** [ex: RF07, RF08, RNF01...]
 
 ---
 
@@ -29,4 +30,4 @@
 ---
 
 ### 📸 Evidências / Screenshots
-*Adicione aqui prints de tela do terminal (build do MkDocs), do navegador com o layout renderizado ou de testes de código executados com sucesso.*
+*Cole preferencialmente aqui (ou em comentário do autor do PR) os prints da tela funcionando e dos testes passando, usando uma descrição clara no `alt` da imagem (ex: `![Tela de Reembolso](...)`) — o GitHub Actions salvará automaticamente em `docs/assets/images/evidencias/pr-<numero>/`.*

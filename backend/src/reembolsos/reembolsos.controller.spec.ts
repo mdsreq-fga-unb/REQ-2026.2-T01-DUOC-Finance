@@ -53,8 +53,8 @@ describe('POST /api/reembolsos (HTTP)', () => {
     await request(app.getHttpServer()).post('/api/reembolsos').expect(401);
     expect(criar).not.toHaveBeenCalled();
   });
-  it('recusa auditor externo com 403', async () => {
-    papel = 'AUDITOR_EXTERNO';
+  it('recusa administrador do sistema com 403', async () => {
+    papel = 'ADMIN_SISTEMA';
     await request(app.getHttpServer()).post('/api/reembolsos').set('Authorization', `Bearer ${token()}`)
       .field('contratoId', contratoId).expect(403);
     expect(criar).not.toHaveBeenCalled();

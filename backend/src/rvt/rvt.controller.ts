@@ -56,7 +56,7 @@ interface DecisaoRvtBody {
 }
 
 @Controller('rvt')
-@UseGuards(JwtAuthGuard)
+@UseGuards(JwtAuthGuard, RolesGuard)
 export class RvtController {
   constructor(private readonly rvtService: RvtService) {}
 
@@ -105,12 +105,14 @@ export class RvtController {
 
   /** Contratos disponíveis para vínculo no formulário (RN04). */
   @Get('contratos-ativos')
+  @Roles(Role.TECNICO_CAMPO)
   listarContratosAtivos(): Promise<ContratoObraResumo[]> {
     return this.rvtService.listarContratosAtivos();
   }
 
   /** RF04 — registra o apontamento para o colaborador do token. */
   @Post()
+  @Roles(Role.TECNICO_CAMPO)
   criar(
     @UsuarioAutenticado() usuario: Usuario,
     @Body(CriarRvtValidationPipe) dto: CriarRvtDto,
@@ -169,7 +171,7 @@ export class RvtController {
 
   /** RF32 — fila de homologação dos contratos sob responsabilidade do gestor */
   @Get('pendentes-homologacao')
-  @Roles(Role.GESTOR_OPERACIONAL)
+  @Roles(Role.GESTOR_OBRAS)
   @UseGuards(RolesGuard)
   listarPendentesHomologacao(
     @UsuarioDaSessao() usuario: Usuario & { usuarioId: string },
@@ -179,7 +181,7 @@ export class RvtController {
 
   /** RF32 — homologa ou rejeita (parecer obrigatório na rejeição, RN30) */
   @Post(':id/deliberacao')
-  @Roles(Role.GESTOR_OPERACIONAL)
+  @Roles(Role.GESTOR_OBRAS)
   @UseGuards(RolesGuard)
   deliberar(
     @UsuarioDaSessao() usuario: Usuario & { usuarioId: string },
@@ -198,6 +200,7 @@ export class RvtController {
 
   /** Anexa fotos/PDFs comprobatórios (multipart, campo "arquivos"). */
   @Post(':id/evidencias')
+  @Roles(Role.TECNICO_CAMPO)
   @UseInterceptors(
     FilesInterceptor('arquivos', MAX_ARQUIVOS_POR_ENVIO, {
       limits: {
@@ -220,6 +223,7 @@ export class RvtController {
 
   /** Histórico do técnico autenticado, do mais recente para o mais antigo. */
   @Get('meus-apontamentos')
+  @Roles(Role.TECNICO_CAMPO)
   listarMeusApontamentos(
     @UsuarioAutenticado() usuario: Usuario,
   ): Promise<RvtResposta[]> {

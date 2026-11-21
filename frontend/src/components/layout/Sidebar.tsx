@@ -12,10 +12,11 @@ import {
   ClipboardPlus,
   History,
   ClipboardCheck,
-  FilePlus2,
-  ReceiptText,
   X,
-} from 'lucide-react'
+  ReceiptText,
+  FilePlus2,
+  ShieldCheck,
+} from "lucide-react";
 
 const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
   {
@@ -46,19 +47,17 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
   },
   {
     iconName: ClipboardCheck,
-    title: 'Aprovação RVT',
-    path: '/rvt/aprovacao',
-    papeis: PERMISSOES.aprovacaoRvt,
-    badge: 'CAR-03',
+    title: 'Aprovação de Diárias',
+    path: '/diarias/aprovacao',
+    papeis: PERMISSOES.aprovacaoDiarias,
   },
   {
     iconName: ClipboardCheck,
-    title: 'Homologar Apontamentos',
-    path: '/rvt/homologacao',
+    title: "Homologar Apontamentos",
+    path: "/rvt/homologacao",
     papeis: PERMISSOES.homologacaoRvt,
     badge: 'RF32',
   },
-  // CAR-04 · RF07 — Prestação de contas e reembolsos
   {
     iconName: FilePlus2,
     title: 'Solicitar reembolso',
@@ -73,10 +72,23 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
     papeis: PERMISSOES.solicitarReembolso,
   },
   {
+    iconName: ReceiptText,
+    title: 'Administração de reembolsos',
+    path: '/reembolsos/administracao',
+    papeis: PERMISSOES.administrarReembolsos,
+    badge: 'RF08',
+  },
+  {
     iconName: CircleDollarSign,
     title: 'Fechamento',
     path: '/fechamento',
     papeis: PERMISSOES.fechamento,
+  },
+  {
+    iconName: ShieldCheck,
+    title: 'Gestão de Acessos',
+    path: '/acessos',
+    papeis: PERMISSOES.gestaoAcessos,
   },
 ]
 

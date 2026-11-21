@@ -1,8 +1,11 @@
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../auth/AuthContext'
+import { PERMISSOES, possuiPapel } from '../auth/permissoes'
 import Button from '../components/ui/Button'
 
 export default function DashboardPage() {
   const navigate = useNavigate()
+  const { usuario } = useAuth()
   return (
     <div className="space-y-6">
       <div>
@@ -39,21 +42,29 @@ export default function DashboardPage() {
       {/* Demonstração dos botões com a paleta do sistema */}
       <div className="p-5 bg-surface border border-border rounded-xl space-y-3 shadow-xs">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-dark">
-          Ações Rápidas & Variantes de Botão
+          Ações rápidas
         </h2>
         <div className="flex flex-wrap gap-3">
-          <Button variant="primary" onClick={() => navigate('/colaboradores/novo')}>
-            Novo Colaborador
-          </Button>
-          <Button variant="gold" onClick={() => navigate('/rvt/novo')}>
-            Novo Apontamento (RVT)
-          </Button>
-          <Button variant="secondary" onClick={() => navigate('/rvt/historico')}>
-            Meus Apontamentos
-          </Button>
-          <Button variant="outline" onClick={() => navigate('/colaboradores')}>
-            Colaboradores
-          </Button>
+          {possuiPapel(usuario?.papel, PERMISSOES.colaboradores) && (
+            <Button variant="primary" onClick={() => navigate('/colaboradores/novo')}>
+              Novo Colaborador
+            </Button>
+          )}
+          {possuiPapel(usuario?.papel, PERMISSOES.novoRvt) && (
+            <Button variant="gold" onClick={() => navigate('/rvt/novo')}>
+              Novo Apontamento (RVT)
+            </Button>
+          )}
+          {possuiPapel(usuario?.papel, PERMISSOES.historicoRvt) && (
+            <Button variant="secondary" onClick={() => navigate('/rvt/historico')}>
+              Histórico RVT
+            </Button>
+          )}
+          {possuiPapel(usuario?.papel, PERMISSOES.colaboradores) && (
+            <Button variant="outline" onClick={() => navigate('/colaboradores')}>
+              Colaboradores
+            </Button>
+          )}
         </div>
       </div>
     </div>

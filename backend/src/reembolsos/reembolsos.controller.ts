@@ -20,7 +20,7 @@ export class ReembolsosController {
 
   /** RF07 — multipart com campo de arquivo único chamado "comprovante". */
   @Post()
-  @Roles(Role.TECNICO_CAMPO, Role.GESTOR_OPERACIONAL, Role.ADMIN_FINANCEIRO)
+  @Roles(Role.TECNICO_CAMPO, Role.GESTOR_OBRAS, Role.ADMIN_FINANCEIRO)
   @UseInterceptors(FileInterceptor('comprovante',  {
     limits: { fileSize: LIMITE_COMPROVANTE_BYTES, files: 1 },
   }))
