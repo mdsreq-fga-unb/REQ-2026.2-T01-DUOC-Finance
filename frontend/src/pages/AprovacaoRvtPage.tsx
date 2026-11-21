@@ -49,9 +49,44 @@ export default function AprovacaoRvtPage() {
     }
   }, [status, contratoId])
 
-  useEffect(() => {
-    void carregar()
-  }, [carregar])
+    useEffect(() => {
+    let cancelado = false
+
+    async function carregarInicial() {
+      try {
+        const [lista, contratosAtivos] = await Promise.all([
+          RvtService.listarParaAprovacao({
+            status,
+            contratoId: contratoId || undefined,
+          }),
+          RvtService.listarContratosParaAprovacao(),
+        ])
+
+        if (cancelado) return
+
+        setErro(null)
+        setItens(lista)
+        setContratos(contratosAtivos)
+        setSelecionado((atual) =>
+          atual && lista.some((item) => item.id === atual)
+            ? atual
+            : lista[0]?.id ?? null,
+        )
+        setJustificativa('')
+      } catch (e) {
+        if (cancelado) return
+        setErro(e instanceof Error ? e.message : 'Não foi possível carregar a fila.')
+      } finally {
+        if (!cancelado) setCarregando(false)
+      }
+    }
+
+    void carregarInicial()
+
+    return () => {
+      cancelado = true
+    }
+  }, [status, contratoId])
 
   const atual = itens.find((item) => item.id === selecionado)
 
