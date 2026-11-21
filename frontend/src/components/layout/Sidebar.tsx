@@ -55,7 +55,7 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
     title: "Homologar Apontamentos",
     path: "/rvt/homologacao",
     papeis: PERMISSOES.homologacaoRvt,
-    badge: "RF32",
+    badge: 'RF32',
   },
   {
     iconName: ReceiptText,

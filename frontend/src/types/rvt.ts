@@ -40,6 +40,7 @@ export interface Rvt {
   horasTrabalhadas: number;
   escopoExecutado: string;
   status: StatusRvt;
+  justificativaRejeicao: string | null;
   evidencias: EvidenciaRvt[];
   /** RN02 — fim da janela de retificação (ISO); null quando homologado */
   prazoRetificacao: string | null;

@@ -19,8 +19,9 @@ export function papelValido(valor: unknown): valor is Papel {
 export const PERMISSOES = {
   dashboard: PAPEIS,
   colaboradores: ['ADMIN_FINANCEIRO'],
-  novoRvt: ['TECNICO_CAMPO'],
-  historicoRvt: ['TECNICO_CAMPO'],
+  novoRvt: ['TECNICO_CAMPO', 'ADMIN_FINANCEIRO'],
+  historicoRvt: ['TECNICO_CAMPO', 'GESTOR_OPERACIONAL', 'ADMIN_FINANCEIRO'],
+  aprovacaoRvt: ['ADMIN_FINANCEIRO'],
   /** RF35 — o backend ainda confere autoria, status e prazo (RN02) */
   retificarRvt: ['TECNICO_CAMPO'],
   /** RF32 / RN16 — só o gestor de obras delibera apontamentos */
