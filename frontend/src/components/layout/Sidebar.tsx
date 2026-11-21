@@ -12,6 +12,8 @@ import {
   ClipboardPlus,
   History,
   ClipboardCheck,
+  FilePlus2,
+  ReceiptText,
   X,
 } from "lucide-react";
 
@@ -48,6 +50,20 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
     path: "/rvt/homologacao",
     papeis: PERMISSOES.homologacaoRvt,
     badge: "RF32",
+  },
+  // CAR-04 · RF07 — Prestação de contas e reembolsos
+  {
+    iconName: FilePlus2,
+    title: 'Solicitar reembolso',
+    path: '/reembolsos/solicitar',
+    papeis: PERMISSOES.solicitarReembolso,
+    badge: 'RF07',
+  },
+  {
+    iconName: ReceiptText,
+    title: 'Meus reembolsos',
+    path: '/reembolsos/meus',
+    papeis: PERMISSOES.solicitarReembolso,
   },
   {
     iconName: CircleDollarSign,
