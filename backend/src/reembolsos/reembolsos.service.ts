@@ -1,8 +1,8 @@
 import {
-  BadRequestException, Injectable, UnprocessableEntityException,
+  BadRequestException, ConflictException, Injectable, NotFoundException, UnprocessableEntityException,
 } from '@nestjs/common';
 import { randomUUID } from 'node:crypto';
-import { StatusContratoObra } from '../generated/prisma/client.js';
+import { Prisma, StatusContratoObra, StatusReembolso } from '../generated/prisma/client.js';
 import type { UsuarioAutenticado } from '../auth/jwt-auth.guard.js';
 import { PrismaService } from '../prisma/prisma.service.js';
 import {
@@ -10,9 +10,43 @@ import {
   type ArquivoRecebido,
 } from '../rvt/evidencias/arquivo-evidencia.util.js';
 import type { CriarReembolsoDto } from './dto/criar-reembolso.dto.js';
+import type { DeliberarReembolsoDto } from './dto/deliberar-reembolso.dto.js';
 import { ComprovanteStorageService } from './comprovante-storage.service.js';
 
 export const LIMITE_COMPROVANTE_BYTES = 5 * 1024 * 1024;
+
+const INCLUDE_REEMBOLSO = {
+  contrato: { select: { id: true, codigo: true, nome: true } },
+  solicitante: { select: { id: true, email: true } },
+} satisfies Prisma.SolicitacaoReembolsoInclude;
+
+type ReembolsoCompleto = Prisma.SolicitacaoReembolsoGetPayload<{include: typeof INCLUDE_REEMBOLSO}>;
+
+function respostaReembolso(item: ReembolsoCompleto) {
+  return {
+    id: item.id,
+    codigo: item.codigo,
+    solicitante: item.solicitante,
+    contrato: item.contrato,
+    rvtId: item.rvtId,
+    categoria: item.categoria,
+    descricao: item.descricao,
+    valorCentavos: item.valorCentavos,
+    valorAprovadoCentavos: item.valorAprovadoCentavos,
+    dataDespesa: item.dataDespesa.toISOString().slice(0, 10),
+    status: item.status,
+    parecer: item.parecer,
+    deliberadoEm: item.deliberadoEm?.toISOString() ?? null,
+    comprovante: {
+      nomeOriginal: item.comprovanteNomeOriginal,
+      mimeType: item.comprovanteMimeType,
+      tamanhoBytes: item.comprovanteTamanhoBytes,
+    },
+    createdAt: item.createdAt.toISOString(),
+    updatedAt: item.updatedAt.toISOString(),
+  };
+}
+
 
 @Injectable()
 export class ReembolsosService {
@@ -95,5 +129,81 @@ export class ReembolsosService {
       await this.storage.remover(arquivo.chave).catch(() => undefined);
       throw erro;
     }
+  }
+  /** RF07 — consulta estritamente as solicitações da conta do JWT, nunca por ID do cliente. */
+  async listarMeus(usuarioId: string) {
+    const itens = await this.prisma.solicitacaoReembolso.findMany({
+      where: { solicitanteId: usuarioId },
+      include: INCLUDE_REEMBOLSO,
+      orderBy: { createdAt: 'desc' },
+      take: 100,
+    });
+    return itens.map(respostaReembolso);
+  }
+
+  /** RF08 — a autorização de ADMIN_FINANCEIRO ocorre também no controller. */
+  async listarAdministrativo() {
+    const itens = await this.prisma.solicitacaoReembolso.findMany({
+      include: INCLUDE_REEMBOLSO,
+      orderBy: { createdAt: 'desc' },
+      take: 100,
+    });
+    return itens.map(respostaReembolso);
+  }
+
+  /** O não titular recebe 404, sem confirmar a existência do documento. */
+  private async encontrarAutorizado(
+    usuario: UsuarioAutenticado & { usuarioId: string },
+    id: string,
+  ) {
+    const registro = await this.prisma.solicitacaoReembolso.findFirst({
+      where: {
+        id,
+        ...(usuario.papel === 'ADMIN_FINANCEIRO' ? {} : { solicitanteId: usuario.usuarioId }),
+      },
+      include: INCLUDE_REEMBOLSO,
+    });
+    if (!registro) throw new NotFoundException('Solicitação não encontrada.');
+    return registro;
+  }
+
+  async detalhar(usuario: UsuarioAutenticado & { usuarioId: string }, id: string) {
+    return respostaReembolso(await this.encontrarAutorizado(usuario, id));
+  }
+
+  async obterComprovante(usuario: UsuarioAutenticado & { usuarioId: string }, id: string) {
+    const registro = await this.encontrarAutorizado(usuario, id);
+    const conteudo = await this.storage.abrir(registro.comprovanteChaveArquivo);
+    return { conteudo, mimeType: registro.comprovanteMimeType, nomeOriginal: registro.comprovanteNomeOriginal };
+  }
+
+  /** RF08 — compare-and-swap no status: evita deliberações concorrentes/duplas. */
+  async deliberar(
+    usuarioId: string,
+    id: string,
+    dto: DeliberarReembolsoDto,
+  ) {
+    const atual = await this.prisma.solicitacaoReembolso.findUnique({
+      where: { id }, select: { id: true, valorCentavos: true, status: true },
+    });
+    if (!atual) throw new NotFoundException('Solicitação não encontrada.');
+    if (atual.status !== StatusReembolso.PENDENTE) {
+      throw new ConflictException('Solicitação já deliberada.');
+    }
+    const resultado = await this.prisma.solicitacaoReembolso.updateMany({
+      where: { id, status: StatusReembolso.PENDENTE },
+      data: {
+        status: dto.decisao === 'APROVAR' ? StatusReembolso.APROVADO : StatusReembolso.REJEITADO,
+        parecer: dto.parecer,
+        valorAprovadoCentavos: dto.decisao === 'APROVAR' ? atual.valorCentavos : null,
+        deliberadoPorId: usuarioId,
+        deliberadoEm: new Date(),
+      },
+    });
+    if (resultado.count !== 1) throw new ConflictException('Outra decisão já foi registrada.');
+    const atualizado = await this.prisma.solicitacaoReembolso.findUniqueOrThrow({
+      where: { id }, include: INCLUDE_REEMBOLSO,
+    });
+    return respostaReembolso(atualizado);
   }
 }

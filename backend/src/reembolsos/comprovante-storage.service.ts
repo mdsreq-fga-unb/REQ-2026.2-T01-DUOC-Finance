@@ -1,7 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { createHash, randomUUID } from 'node:crypto';
-import { mkdir, unlink, writeFile } from 'node:fs/promises';
-import { join, resolve } from 'node:path';
+import { mkdir, stat, unlink, writeFile } from 'node:fs/promises';
+import { createReadStream, type ReadStream } from 'node:fs';
+import { join, resolve, sep } from 'node:path';
 import type { TipoEvidencia } from '../rvt/evidencias/arquivo-evidencia.util.js';
 
 /** Storage privado local para desenvolvimento; em produção substituir por armazenamento persistente. */
@@ -18,6 +19,20 @@ export class ComprovanteStorageService {
       chave,
       hashSha256: createHash('sha256').update(buffer).digest('hex'),
     };
+  }
+
+  async abrir(chave: string): Promise<ReadStream> {
+    const destino = resolve(this.raiz, chave);
+    if (!destino.startsWith(this.raiz + sep)) {
+      throw new NotFoundException('Comprovante não encontrado.');
+    }
+    try {
+      const arquivo = await stat(destino);
+      if (!arquivo.isFile()) throw new Error('Não é arquivo.');
+    } catch {
+      throw new NotFoundException('Comprovante não encontrado.');
+    }
+    return createReadStream(destino);
   }
 
   async remover(chave: string): Promise<void> {
