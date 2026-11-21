@@ -21,7 +21,7 @@ export default function ReembolsosAdminPage(){
   const [busca,setBusca]=useState('')
   const [detalheId,setDetalheId]=useState<string|null>(null)
   useEffect(()=>{
-    let ativo=true;setCarregando(true);setErro('')
+    let ativo=true
     void ReembolsosApi.administrativos().then(r=>{if(ativo)setRegistros(r)}).catch(e=>{if(ativo)setErro(e instanceof Error?e.message:'Falha na consulta.')}).finally(()=>{if(ativo)setCarregando(false)})
     return ()=>{ativo=false}
   },[tentativa])
@@ -31,7 +31,7 @@ export default function ReembolsosAdminPage(){
   const detalhe=filtrados.find(r=>r.id===detalheId)
   return <div className="space-y-6 pb-12">
     <header><p className="mb-2 text-xs text-muted">Financeiro / Reembolsos</p><h1 className="text-2xl font-bold text-dark">Reembolsos e adiantamentos</h1><p className="text-sm text-muted">Organize solicitações e acompanhe análises financeiras.</p></header>
-    {erro&&<div role="alert" className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">{erro}<button className="ml-3 underline" onClick={()=>setTentativa(x=>x+1)}>Tentar novamente</button></div>}
+    {erro&&<div role="alert" className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">{erro}<button className="ml-3 underline" onClick={()=>{setCarregando(true);setErro('');setTentativa(x=>x+1)}}>Tentar novamente</button></div>}
     <section className="grid grid-cols-2 gap-3 lg:grid-cols-4">
       <Cartao titulo="Aguardando aprovação" valor={dinheiro(pendentes.reduce((s,r)=>s+r.valorCentavos,0))} Icone={Clock3}/>
       <Cartao titulo="Total aprovado" valor={dinheiro(aprovados.reduce((s,r)=>s+(r.valorAprovadoCentavos??r.valorCentavos),0))} Icone={CheckCircle2}/>

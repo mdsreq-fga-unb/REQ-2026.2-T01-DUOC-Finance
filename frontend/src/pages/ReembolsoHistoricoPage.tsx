@@ -28,7 +28,6 @@ export default function ReembolsoHistoricoPage() {
 
   useEffect(()=>{
     let ativo=true
-    setCarregando(true);setErro('')
     void ReembolsosApi.meus().then(d=>{if(ativo)setRegistros(d)})
       .catch(e=>{if(ativo)setErro(e instanceof Error?e.message:'Erro na consulta.')})
       .finally(()=>{if(ativo)setCarregando(false)})
@@ -54,7 +53,7 @@ export default function ReembolsoHistoricoPage() {
         <p className="text-sm text-muted">Acompanhe solicitações, status e pareceres financeiros.</p></div>
       <Link to="/reembolsos/solicitar"><Button><Plus className="h-4 w-4"/> Solicitar reembolso</Button></Link>
     </header>
-    {erro && <div role="alert" className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-800">{erro} <button className="underline ml-2" onClick={()=>setTentativa(n=>n+1)}>Tentar novamente</button></div>}
+    {erro && <div role="alert" className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-800">{erro} <button className="underline ml-2" onClick={()=>{setCarregando(true);setErro('');setTentativa(n=>n+1)}}>Tentar novamente</button></div>}
     <section className="overflow-hidden rounded-xl border border-border bg-surface">
       <div className="px-5 py-5 border-b border-border"><h2 className="flex items-center gap-2 text-lg font-semibold"><ClipboardList className="h-5 w-5 text-primary"/> Minhas solicitações</h2></div>
       <div className="grid gap-4 p-5 sm:grid-cols-3">

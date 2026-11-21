@@ -19,7 +19,7 @@ export default function ReembolsoDeliberacaoPage(){
   const [baixando,setBaixando]=useState(false)
   useEffect(()=>{
     let ativo=true
-    if(!id){setErro('Solicitação inválida.');setCarregando(false);return}
+    if(!id)return undefined
     void ReembolsosApi.detalhe(id).then(r=>{if(ativo)setItem(r)}).catch(e=>{if(ativo)setErro(e instanceof Error?e.message:'Erro na consulta.')}).finally(()=>{if(ativo)setCarregando(false)})
     return ()=>{ativo=false}
   },[id])
@@ -45,6 +45,7 @@ export default function ReembolsoDeliberacaoPage(){
     }catch(e){setErro(e instanceof Error?e.message:'Falha no comprovante.')}
     finally{setBaixando(false)}
   }
+  if(!id)return <section className="rounded-xl border border-border bg-surface p-6 space-y-3"><h1 className="text-xl font-semibold">Solicitação inválida</h1><p role="alert">Identificador não informado.</p><Link className="text-primary underline" to="/reembolsos/administracao">Voltar</Link></section>
   if(carregando)return <p className="p-8 text-sm text-muted">Carregando solicitação...</p>
   if(!item||item.status!=='PENDENTE')return <section className="rounded-xl border border-border bg-surface p-6 space-y-3"><h1 className="text-xl font-semibold">Solicitação indisponível para deliberação</h1><p role="alert">{erro||'A solicitação já foi deliberada ou não está disponível.'}</p><Link className="text-primary underline" to="/reembolsos/administracao">Voltar</Link></section>
   return <div className="space-y-6 pb-12">
