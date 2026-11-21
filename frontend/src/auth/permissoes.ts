@@ -21,6 +21,10 @@ export const PERMISSOES = {
   colaboradores: ['ADMIN_FINANCEIRO'],
   novoRvt: ['TECNICO_CAMPO'],
   historicoRvt: ['TECNICO_CAMPO'],
+  /** RF35 — o backend ainda confere autoria, status e prazo (RN02) */
+  retificarRvt: ['TECNICO_CAMPO'],
+  /** RF32 / RN16 — só o gestor de obras delibera apontamentos */
+  homologacaoRvt: ['GESTOR_OBRAS'],
   aprovacaoDiarias: ['ADMIN_FINANCEIRO'],
   reembolsos: ['TECNICO_CAMPO', 'GESTOR_OBRAS', 'ADMIN_FINANCEIRO'],
   fechamento: ['ADMIN_FINANCEIRO'],

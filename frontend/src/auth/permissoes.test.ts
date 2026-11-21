@@ -46,6 +46,15 @@ describe('CAR-07 / RN15 — matriz de autorização no frontend', () => {
     expect(PAPEIS.filter((papel) => possuiPapel(papel, PERMISSOES.gestaoAcessos)))
       .toEqual(['ADMIN_SISTEMA'])
   })
+  it('somente o gestor de obras homologa apontamentos (RF32 / RN16)', () => {
+    expect(possuiPapel('GESTOR_OBRAS', PERMISSOES.homologacaoRvt)).toBe(true)
+    expect(possuiPapel('TECNICO_CAMPO', PERMISSOES.homologacaoRvt)).toBe(false)
+    expect(possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.homologacaoRvt)).toBe(false)
+    expect(possuiPapel('ADMIN_SISTEMA', PERMISSOES.homologacaoRvt)).toBe(false)
+  })
+  it('retificacao segue quem pode criar RVT (RF35)', () => {
+    expect(PERMISSOES.retificarRvt).toEqual(PERMISSOES.novoRvt)
+  })
   it('sem usuario nao existe permissao', () => {
     expect(possuiPapel(null, PERMISSOES.dashboard)).toBe(false)
     expect(possuiPapel(undefined, PERMISSOES.colaboradores)).toBe(false)

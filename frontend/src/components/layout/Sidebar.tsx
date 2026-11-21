@@ -11,8 +11,8 @@ import {
   LogOut,
   ClipboardPlus,
   History,
-  X,
   ClipboardCheck,
+  X,
   ReceiptText,
   ShieldCheck,
 } from "lucide-react";
@@ -49,6 +49,13 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
     title: 'Aprovação de Diárias',
     path: '/diarias/aprovacao',
     papeis: PERMISSOES.aprovacaoDiarias,
+  },
+  {
+    iconName: ClipboardCheck,
+    title: "Homologar Apontamentos",
+    path: "/rvt/homologacao",
+    papeis: PERMISSOES.homologacaoRvt,
+    badge: "RF32",
   },
   {
     iconName: ReceiptText,
