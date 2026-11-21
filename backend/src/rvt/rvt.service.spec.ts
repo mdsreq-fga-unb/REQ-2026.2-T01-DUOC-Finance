@@ -1,5 +1,7 @@
 import {
   BadRequestException,
+  ConflictException,
+  ForbiddenException,
   NotFoundException,
   UnprocessableEntityException,
 } from '@nestjs/common';
@@ -18,6 +20,7 @@ function rvtDoBanco(sobrescritas: Record<string, unknown> = {}) {
     horasTrabalhadas: 8,
     escopoExecutado: 'Montagem de eletrocalhas no pavimento 2.',
     status: 'PENDENTE',
+    janelaRetificacaoInicio: new Date('2026-11-16T20:00:00.000Z'),
     createdAt: new Date('2026-11-16T20:00:00.000Z'),
     updatedAt: new Date('2026-11-16T20:00:00.000Z'),
     contrato: {
@@ -26,9 +29,15 @@ function rvtDoBanco(sobrescritas: Record<string, unknown> = {}) {
       nome: 'Residencial Noroeste',
     },
     evidencias: [],
+    historico: [],
     ...sobrescritas,
   };
 }
+
+/** Segunda 16/11 às 17h (Brasília): prazo vai até 23/11 às 23h59 */
+const SUBMISSAO = new Date('2026-11-16T20:00:00.000Z');
+const DENTRO_DO_PRAZO = new Date('2026-11-23T20:00:00.000Z');
+const FORA_DO_PRAZO = new Date('2026-11-24T03:00:00.000Z');
 
 function criarMocks() {
   const prisma = {
@@ -39,8 +48,13 @@ function criarMocks() {
       findUnique: vi.fn(),
       findUniqueOrThrow: vi.fn(),
       findMany: vi.fn(),
+      update: vi.fn(),
     },
-    rvtEvidencia: { create: vi.fn((args: unknown) => args) },
+    rvtEvidencia: {
+      create: vi.fn((args: unknown) => args),
+      delete: vi.fn(),
+      findFirst: vi.fn(),
+    },
     $transaction: vi.fn(),
   };
   // Transação interativa executa o callback com o próprio mock;
@@ -51,6 +65,7 @@ function criarMocks() {
       : Promise.all(arg as unknown[]),
   );
   const storage = {
+    abrir: vi.fn().mockResolvedValue('stream'),
     salvar: vi.fn(),
     remover: vi.fn().mockResolvedValue(undefined),
   };
@@ -77,13 +92,16 @@ describe('RvtService.criar', () => {
     });
     prisma.rvt.create.mockResolvedValue(rvtDoBanco());
 
-    const resposta = await service.criar('colab-1', DTO);
+    const resposta = await service.criar('colab-1', DTO, 'usuario-1');
 
     expect(prisma.rvt.create).toHaveBeenCalledWith(
       expect.objectContaining({
         data: expect.objectContaining({
           colaboradorId: 'colab-1',
           dataJornada: new Date('2026-11-16T00:00:00.000Z'),
+          historico: {
+            create: { tipo: 'SUBMISSAO', autorUsuarioId: 'usuario-1' },
+          },
         }),
       }),
     );
@@ -146,6 +164,7 @@ describe('RvtService.anexarEvidencias', () => {
     prisma.rvt.findUnique.mockResolvedValue({
       colaboradorId: 'colab-1',
       status: 'PENDENTE',
+      janelaRetificacaoInicio: SUBMISSAO,
       _count: { evidencias: 0 },
     });
     storage.salvar.mockResolvedValue({
@@ -154,7 +173,7 @@ describe('RvtService.anexarEvidencias', () => {
     });
     prisma.rvt.findUniqueOrThrow.mockResolvedValue(rvtDoBanco());
 
-    await service.anexarEvidencias('colab-1', 'rvt-1', [arquivo]);
+    await service.anexarEvidencias('colab-1', 'rvt-1', [arquivo], DENTRO_DO_PRAZO);
 
     expect(storage.salvar).toHaveBeenCalledWith(
       'rvt-1',
@@ -176,10 +195,11 @@ describe('RvtService.anexarEvidencias', () => {
     prisma.rvt.findUnique.mockResolvedValue({
       colaboradorId: 'colab-2',
       status: 'PENDENTE',
+      janelaRetificacaoInicio: SUBMISSAO,
       _count: { evidencias: 0 },
     });
     await expect(
-      service.anexarEvidencias('colab-1', 'rvt-1', [arquivo]),
+      service.anexarEvidencias('colab-1', 'rvt-1', [arquivo], DENTRO_DO_PRAZO),
     ).rejects.toBeInstanceOf(NotFoundException);
   });
 
@@ -188,10 +208,11 @@ describe('RvtService.anexarEvidencias', () => {
     prisma.rvt.findUnique.mockResolvedValue({
       colaboradorId: 'colab-1',
       status: 'HOMOLOGADO',
+      janelaRetificacaoInicio: SUBMISSAO,
       _count: { evidencias: 0 },
     });
     await expect(
-      service.anexarEvidencias('colab-1', 'rvt-1', [arquivo]),
+      service.anexarEvidencias('colab-1', 'rvt-1', [arquivo], DENTRO_DO_PRAZO),
     ).rejects.toBeInstanceOf(UnprocessableEntityException);
   });
 
@@ -200,6 +221,7 @@ describe('RvtService.anexarEvidencias', () => {
     prisma.rvt.findUnique.mockResolvedValue({
       colaboradorId: 'colab-1',
       status: 'PENDENTE',
+      janelaRetificacaoInicio: SUBMISSAO,
       _count: { evidencias: 0 },
     });
     const falso = {
@@ -209,7 +231,7 @@ describe('RvtService.anexarEvidencias', () => {
     };
 
     await expect(
-      service.anexarEvidencias('colab-1', 'rvt-1', [arquivo, falso]),
+      service.anexarEvidencias('colab-1', 'rvt-1', [arquivo, falso], DENTRO_DO_PRAZO),
     ).rejects.toBeInstanceOf(BadRequestException);
     expect(storage.salvar).not.toHaveBeenCalled();
   });
@@ -219,6 +241,7 @@ describe('RvtService.anexarEvidencias', () => {
     prisma.rvt.findUnique.mockResolvedValue({
       colaboradorId: 'colab-1',
       status: 'PENDENTE',
+      janelaRetificacaoInicio: SUBMISSAO,
       _count: { evidencias: 0 },
     });
     storage.salvar.mockResolvedValue({
@@ -228,9 +251,23 @@ describe('RvtService.anexarEvidencias', () => {
     prisma.$transaction.mockRejectedValueOnce(new Error('falha no banco'));
 
     await expect(
-      service.anexarEvidencias('colab-1', 'rvt-1', [arquivo]),
+      service.anexarEvidencias('colab-1', 'rvt-1', [arquivo], DENTRO_DO_PRAZO),
     ).rejects.toThrow('falha no banco');
     expect(storage.remover).toHaveBeenCalledWith('rvt/rvt-1/x.png');
+  });
+
+  it('trava novos anexos após o prazo de cinco dias úteis (RN02)', async () => {
+    const { prisma, storage, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue({
+      colaboradorId: 'colab-1',
+      status: 'PENDENTE',
+      janelaRetificacaoInicio: SUBMISSAO,
+      _count: { evidencias: 0 },
+    });
+    await expect(
+      service.anexarEvidencias('colab-1', 'rvt-1', [arquivo], FORA_DO_PRAZO),
+    ).rejects.toThrow(/terminou em 23\/11\/2026/);
+    expect(storage.salvar).not.toHaveBeenCalled();
   });
 
   it('exige ao menos um arquivo', async () => {
@@ -255,5 +292,415 @@ describe('RvtService.listarDoColaborador', () => {
       }),
     );
     expect(lista[0].contrato.codigo).toBe('OBR-001');
+  });
+});
+
+describe('mapearRvt via listarDoColaborador', () => {
+  it('expõe prazo, possibilidade de retificação e histórico', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findMany.mockResolvedValue([
+      rvtDoBanco({
+        historico: [
+          {
+            id: 'h1',
+            tipo: 'SUBMISSAO',
+            parecer: null,
+            alteracoes: null,
+            createdAt: SUBMISSAO,
+          },
+        ],
+      }),
+      rvtDoBanco({ id: 'rvt-2', status: 'HOMOLOGADO' }),
+    ]);
+
+    const [pendente, homologado] = await service.listarDoColaborador('colab-1');
+
+    expect(pendente.prazoRetificacao).toBe('2026-11-24T02:59:59.999Z');
+    expect(pendente.historico).toEqual([
+      expect.objectContaining({ tipo: 'SUBMISSAO', createdAt: SUBMISSAO.toISOString() }),
+    ]);
+    expect(homologado.prazoRetificacao).toBeNull();
+    expect(homologado.podeRetificar).toBe(false);
+  });
+});
+
+describe('RvtService.retificar (RF35)', () => {
+  const AUTOR = { colaboradorId: 'colab-1', usuarioId: 'usuario-1' };
+
+  function atual(sobrescritas: Record<string, unknown> = {}) {
+    return {
+      colaboradorId: 'colab-1',
+      status: 'PENDENTE',
+      janelaRetificacaoInicio: SUBMISSAO,
+      dataJornada: new Date('2026-11-16T00:00:00.000Z'),
+      horasTrabalhadas: 8,
+      escopoExecutado: 'Montagem de eletrocalhas no pavimento 2.',
+      ...sobrescritas,
+    };
+  }
+
+  it('retifica horas de um pendente, registra o histórico e mantém o prazo', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue(atual());
+    prisma.rvt.aggregate.mockResolvedValue({ _sum: { horasTrabalhadas: 2 } });
+    prisma.rvt.update.mockResolvedValue(rvtDoBanco({ horasTrabalhadas: 9.5 }));
+
+    await service.retificar(AUTOR, 'rvt-1', { horasTrabalhadas: 9.5 }, DENTRO_DO_PRAZO);
+
+    // RN05 desconsidera o próprio apontamento na soma do dia
+    expect(prisma.rvt.aggregate).toHaveBeenCalledWith(
+      expect.objectContaining({
+        where: expect.objectContaining({ id: { not: 'rvt-1' } }),
+      }),
+    );
+    const { data } = prisma.rvt.update.mock.calls[0][0];
+    expect(data).not.toHaveProperty('janelaRetificacaoInicio');
+    expect(data).toMatchObject({
+      horasTrabalhadas: 9.5,
+      status: 'PENDENTE',
+      historico: {
+        create: {
+          tipo: 'RETIFICACAO',
+          autorUsuarioId: 'usuario-1',
+          alteracoes: { horasTrabalhadas: { de: 8, para: 9.5 } },
+        },
+      },
+    });
+  });
+
+  it('reenvia um rejeitado: volta a PENDENTE e abre nova janela', async () => {
+    const { prisma, service } = criarMocks();
+    // Rejeitado em 20/11: o prazo antigo (23/11) já não vale
+    const rejeicao = new Date('2026-11-20T15:00:00.000Z');
+    const agora = new Date('2026-11-26T15:00:00.000Z');
+    prisma.rvt.findUnique.mockResolvedValue(
+      atual({ status: 'REJEITADO', janelaRetificacaoInicio: rejeicao }),
+    );
+    prisma.rvt.aggregate.mockResolvedValue({ _sum: { horasTrabalhadas: null } });
+    prisma.rvt.update.mockResolvedValue(rvtDoBanco());
+
+    await service.retificar(
+      AUTOR,
+      'rvt-1',
+      { escopoExecutado: 'Montagem de eletrocalhas e perfilados no pavimento 2.' },
+      agora,
+    );
+
+    const { data } = prisma.rvt.update.mock.calls[0][0];
+    expect(data).toMatchObject({
+      status: 'PENDENTE',
+      janelaRetificacaoInicio: agora,
+      historico: { create: { tipo: 'REENVIO' } },
+    });
+    // Ao voltar a contar no dia, o teto é conferido mesmo sem mudar as horas
+    expect(prisma.rvt.aggregate).toHaveBeenCalled();
+  });
+
+  it('permite reenviar um rejeitado sem alterar campos (só anexos)', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue(
+      atual({ status: 'REJEITADO', janelaRetificacaoInicio: DENTRO_DO_PRAZO }),
+    );
+    prisma.rvt.aggregate.mockResolvedValue({ _sum: { horasTrabalhadas: null } });
+    prisma.rvt.update.mockResolvedValue(rvtDoBanco());
+
+    await service.retificar(AUTOR, 'rvt-1', {}, DENTRO_DO_PRAZO);
+
+    const { data } = prisma.rvt.update.mock.calls[0][0];
+    expect(data.historico.create).not.toHaveProperty('alteracoes');
+  });
+
+  it('recusa retificação vazia de um pendente', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue(atual());
+    await expect(
+      service.retificar(AUTOR, 'rvt-1', { horasTrabalhadas: 8 }, DENTRO_DO_PRAZO),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    expect(prisma.rvt.update).not.toHaveBeenCalled();
+  });
+
+  it('trava a edição após cinco dias úteis (RN02)', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue(atual());
+    await expect(
+      service.retificar(AUTOR, 'rvt-1', { horasTrabalhadas: 7 }, FORA_DO_PRAZO),
+    ).rejects.toThrow(/prazo de retificação terminou em 23\/11\/2026/);
+    expect(prisma.rvt.update).not.toHaveBeenCalled();
+  });
+
+  it('trava a edição de apontamento homologado', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue(atual({ status: 'HOMOLOGADO' }));
+    await expect(
+      service.retificar(AUTOR, 'rvt-1', { horasTrabalhadas: 7 }, DENTRO_DO_PRAZO),
+    ).rejects.toThrow(/homologado não pode ser alterado/);
+  });
+
+  it('responde 404 para apontamento de outro colaborador', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue(atual({ colaboradorId: 'colab-2' }));
+    await expect(
+      service.retificar(AUTOR, 'rvt-1', { horasTrabalhadas: 7 }, DENTRO_DO_PRAZO),
+    ).rejects.toBeInstanceOf(NotFoundException);
+  });
+
+  it('respeita o teto diário ao aumentar as horas (RN05)', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue(atual());
+    prisma.rvt.aggregate.mockResolvedValue({ _sum: { horasTrabalhadas: 4 } });
+    await expect(
+      service.retificar(AUTOR, 'rvt-1', { horasTrabalhadas: 8.5 }, DENTRO_DO_PRAZO),
+    ).rejects.toThrow(/restam 8h/);
+  });
+
+  it('converte conflito de serialização em 409', async () => {
+    const { prisma, service } = criarMocks();
+    const { Prisma } = await import('../generated/prisma/client.js');
+    prisma.$transaction.mockRejectedValueOnce(
+      new Prisma.PrismaClientKnownRequestError('conflito', {
+        code: 'P2034',
+        clientVersion: 'teste',
+      }),
+    );
+    await expect(
+      service.retificar(AUTOR, 'rvt-1', { horasTrabalhadas: 7 }, DENTRO_DO_PRAZO),
+    ).rejects.toBeInstanceOf(ConflictException);
+  });
+});
+
+describe('RvtService.removerEvidencia (RF35)', () => {
+  const AUTOR = { colaboradorId: 'colab-1', usuarioId: 'usuario-1' };
+  const EVIDENCIA = {
+    id: 'ev-1',
+    nomeOriginal: 'foto.png',
+    hashSha256: 'abc',
+    caminhoArquivo: 'rvt/rvt-1/x.png',
+  };
+
+  it('remove o registro, guarda o rastro no histórico e só então apaga o arquivo', async () => {
+    const { prisma, storage, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue({
+      colaboradorId: 'colab-1',
+      status: 'PENDENTE',
+      janelaRetificacaoInicio: SUBMISSAO,
+      evidencias: [EVIDENCIA],
+    });
+    prisma.rvt.update.mockResolvedValue(rvtDoBanco());
+
+    await service.removerEvidencia(AUTOR, 'rvt-1', 'ev-1', DENTRO_DO_PRAZO);
+
+    expect(prisma.rvtEvidencia.delete).toHaveBeenCalledWith({ where: { id: 'ev-1' } });
+    expect(prisma.rvt.update.mock.calls[0][0].data.historico.create).toMatchObject({
+      tipo: 'RETIFICACAO',
+      alteracoes: { evidenciaRemovida: { nomeOriginal: 'foto.png', hashSha256: 'abc' } },
+    });
+    expect(storage.remover).toHaveBeenCalledWith('rvt/rvt-1/x.png');
+  });
+
+  it('não apaga o arquivo se a transação falhar', async () => {
+    const { prisma, storage, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue({
+      colaboradorId: 'colab-1',
+      status: 'PENDENTE',
+      janelaRetificacaoInicio: SUBMISSAO,
+      evidencias: [EVIDENCIA],
+    });
+    prisma.rvtEvidencia.delete.mockRejectedValue(new Error('falha no banco'));
+
+    await expect(
+      service.removerEvidencia(AUTOR, 'rvt-1', 'ev-1', DENTRO_DO_PRAZO),
+    ).rejects.toThrow('falha no banco');
+    expect(storage.remover).not.toHaveBeenCalled();
+  });
+
+  it('exige reenvio antes de mexer nos anexos de um rejeitado', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue({
+      colaboradorId: 'colab-1',
+      status: 'REJEITADO',
+      janelaRetificacaoInicio: SUBMISSAO,
+      evidencias: [EVIDENCIA],
+    });
+    await expect(
+      service.removerEvidencia(AUTOR, 'rvt-1', 'ev-1', DENTRO_DO_PRAZO),
+    ).rejects.toThrow(/Reenvie/);
+  });
+
+  it('responde 404 para evidência inexistente', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue({
+      colaboradorId: 'colab-1',
+      status: 'PENDENTE',
+      janelaRetificacaoInicio: SUBMISSAO,
+      evidencias: [],
+    });
+    await expect(
+      service.removerEvidencia(AUTOR, 'rvt-1', 'ev-x', DENTRO_DO_PRAZO),
+    ).rejects.toBeInstanceOf(NotFoundException);
+  });
+});
+
+describe('RvtService.deliberar (RF32)', () => {
+  const GESTOR = { usuarioId: 'gestor-1' };
+
+  function atual(sobrescritas: Record<string, unknown> = {}) {
+    return {
+      colaboradorId: 'colab-1',
+      status: 'PENDENTE',
+      contrato: { gestorResponsavelId: 'gestor-1' },
+      ...sobrescritas,
+    };
+  }
+
+  it('homologa: trava a edição e registra o gestor no histórico', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue(atual());
+    prisma.rvt.update.mockResolvedValue(rvtDoBanco({ status: 'HOMOLOGADO' }));
+
+    const resposta = await service.deliberar(
+      GESTOR,
+      'rvt-1',
+      { decisao: 'HOMOLOGAR' },
+      DENTRO_DO_PRAZO,
+    );
+
+    const { data } = prisma.rvt.update.mock.calls[0][0];
+    expect(data).toEqual({
+      status: 'HOMOLOGADO',
+      historico: {
+        create: { tipo: 'HOMOLOGACAO', autorUsuarioId: 'gestor-1', parecer: null },
+      },
+    });
+    expect(resposta).toMatchObject({
+      colaboradorId: 'colab-1',
+      podeRetificar: false,
+      prazoRetificacao: null,
+    });
+  });
+
+  it('rejeita com parecer e reinicia a janela a partir da notificação', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue(atual());
+    prisma.rvt.update.mockResolvedValue(rvtDoBanco({ status: 'REJEITADO' }));
+    const parecer = 'Horas acima do registrado na portaria da obra.';
+
+    await service.deliberar(
+      GESTOR,
+      'rvt-1',
+      { decisao: 'REJEITAR', parecer },
+      FORA_DO_PRAZO,
+    );
+
+    expect(prisma.rvt.update.mock.calls[0][0].data).toMatchObject({
+      status: 'REJEITADO',
+      janelaRetificacaoInicio: FORA_DO_PRAZO,
+      historico: { create: { tipo: 'REJEICAO', parecer } },
+    });
+  });
+
+  it('responde 404 para contrato sob responsabilidade de outro gestor', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue(
+      atual({ contrato: { gestorResponsavelId: 'gestor-2' } }),
+    );
+    await expect(
+      service.deliberar(GESTOR, 'rvt-1', { decisao: 'HOMOLOGAR' }),
+    ).rejects.toBeInstanceOf(NotFoundException);
+    expect(prisma.rvt.update).not.toHaveBeenCalled();
+  });
+
+  it('responde 404 para contrato sem gestor responsável', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue(
+      atual({ contrato: { gestorResponsavelId: null } }),
+    );
+    await expect(
+      service.deliberar(GESTOR, 'rvt-1', { decisao: 'HOMOLOGAR' }),
+    ).rejects.toBeInstanceOf(NotFoundException);
+  });
+
+  it('impede o gestor de deliberar o próprio apontamento (RN16)', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findUnique.mockResolvedValue(atual());
+    await expect(
+      service.deliberar(
+        { usuarioId: 'gestor-1', colaboradorId: 'colab-1' },
+        'rvt-1',
+        { decisao: 'HOMOLOGAR' },
+      ),
+    ).rejects.toBeInstanceOf(ForbiddenException);
+  });
+
+  it.each(['HOMOLOGADO', 'REJEITADO'])(
+    'recusa deliberar apontamento já %s',
+    async (status) => {
+      const { prisma, service } = criarMocks();
+      prisma.rvt.findUnique.mockResolvedValue(atual({ status }));
+      await expect(
+        service.deliberar(GESTOR, 'rvt-1', { decisao: 'HOMOLOGAR' }),
+      ).rejects.toBeInstanceOf(ConflictException);
+    },
+  );
+});
+
+describe('RvtService.listarPendentesDoGestor (RF32)', () => {
+  it('filtra pendentes dos contratos do gestor, mais antigos primeiro', async () => {
+    const { prisma, service } = criarMocks();
+    prisma.rvt.findMany.mockResolvedValue([rvtDoBanco()]);
+
+    const lista = await service.listarPendentesDoGestor('gestor-1');
+
+    expect(prisma.rvt.findMany).toHaveBeenCalledWith(
+      expect.objectContaining({
+        where: {
+          status: 'PENDENTE',
+          contrato: { gestorResponsavelId: 'gestor-1' },
+        },
+        orderBy: [{ dataJornada: 'asc' }, { createdAt: 'asc' }],
+      }),
+    );
+    expect(lista[0].colaboradorId).toBe('colab-1');
+  });
+});
+
+describe('RvtService.obterArquivoEvidencia (RN16)', () => {
+  const EVIDENCIA = {
+    nomeOriginal: 'quadro.jpg',
+    mimeType: 'image/jpeg',
+    caminhoArquivo: 'rvt/rvt-1/a.jpg',
+    rvt: {
+      colaboradorId: 'colab-1',
+      contrato: { gestorResponsavelId: 'gestor-1' },
+    },
+  };
+
+  it.each([
+    ['autor', { usuarioId: 'u-1', colaboradorId: 'colab-1', papel: 'TECNICO_CAMPO' }],
+    ['gestor responsável', { usuarioId: 'gestor-1', colaboradorId: '', papel: 'GESTOR_OPERACIONAL' }],
+  ])('libera o arquivo para o %s', async (_quem, leitor) => {
+    const { prisma, storage, service } = criarMocks();
+    prisma.rvtEvidencia.findFirst.mockResolvedValue(EVIDENCIA);
+
+    const arquivo = await service.obterArquivoEvidencia(leitor, 'rvt-1', 'ev-1');
+
+    expect(prisma.rvtEvidencia.findFirst).toHaveBeenCalledWith(
+      expect.objectContaining({ where: { id: 'ev-1', rvtId: 'rvt-1' } }),
+    );
+    expect(storage.abrir).toHaveBeenCalledWith('rvt/rvt-1/a.jpg');
+    expect(arquivo).toMatchObject({ mimeType: 'image/jpeg', nomeOriginal: 'quadro.jpg' });
+  });
+
+  it.each([
+    ['outro técnico', { usuarioId: 'u-2', colaboradorId: 'colab-2', papel: 'TECNICO_CAMPO' }],
+    ['gestor de outro contrato', { usuarioId: 'gestor-2', colaboradorId: '', papel: 'GESTOR_OPERACIONAL' }],
+    ['administrador financeiro', { usuarioId: 'gestor-1', colaboradorId: '', papel: 'ADMIN_FINANCEIRO' }],
+    ['conta sem colaborador', { usuarioId: 'u-3', colaboradorId: '', papel: 'TECNICO_CAMPO' }],
+  ])('responde 404 para %s', async (_quem, leitor) => {
+    const { prisma, storage, service } = criarMocks();
+    prisma.rvtEvidencia.findFirst.mockResolvedValue(EVIDENCIA);
+    await expect(
+      service.obterArquivoEvidencia(leitor, 'rvt-1', 'ev-1'),
+    ).rejects.toBeInstanceOf(NotFoundException);
+    expect(storage.abrir).not.toHaveBeenCalled();
   });
 });

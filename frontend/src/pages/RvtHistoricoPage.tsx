@@ -11,12 +11,27 @@ import {
   HardHat,
   AlertCircle,
   RotateCcw,
+  Lock,
+  CalendarClock,
+  PencilLine,
+  MessageSquareWarning,
 } from "lucide-react";
 import Button from "../components/ui/Button";
 import { useToast } from "../components/ui/useToast";
 import { RvtService } from "../services/rvt.service";
 import type { Rvt, StatusRvt } from "../types/rvt";
-import { STATUS_RVT_CONFIG, formatarDataJornada, formatarHoras, hojeISO } from "../utils/rvt";
+import {
+  STATUS_RVT_CONFIG,
+  formatarDataJornada,
+  formatarHoras,
+  formatarPrazo,
+  hojeISO,
+  motivoTravaEdicao,
+  ultimoParecerRejeicao,
+} from "../utils/rvt";
+import { useAuth } from "../auth/AuthContext";
+import { PERMISSOES, possuiPapel } from "../auth/permissoes";
+import HistoricoRvt from "../components/rvt/HistoricoRvt";
 
 type FiltroStatus = StatusRvt | "TODOS";
 
@@ -29,6 +44,8 @@ const FILTROS: { valor: FiltroStatus; label: string }[] = [
 
 export default function RvtHistoricoPage() {
   const toast = useToast();
+  const { usuario } = useAuth();
+  const podeRetificar = possuiPapel(usuario?.papel, PERMISSOES.retificarRvt);
 
   const [apontamentos, setApontamentos] = useState<Rvt[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -206,6 +223,8 @@ export default function RvtHistoricoPage() {
         <ul className="grid grid-cols-1 lg:grid-cols-2 gap-3">
           {filtrados.map((rvt) => {
             const status = STATUS_RVT_CONFIG[rvt.status];
+            const trava = motivoTravaEdicao(rvt);
+            const parecer = ultimoParecerRejeicao(rvt);
             return (
               <li
                 key={rvt.id}
@@ -230,6 +249,15 @@ export default function RvtHistoricoPage() {
 
                 <p className="text-xs text-dark/80 leading-relaxed line-clamp-2">{rvt.escopoExecutado}</p>
 
+                {parecer && (
+                  <div className="p-2.5 rounded-lg border border-red-200 bg-red-50 flex items-start gap-2">
+                    <MessageSquareWarning className="w-4 h-4 text-red-700 shrink-0 mt-0.5" />
+                    <p className="text-xs text-red-900 leading-relaxed">
+                      <strong>Motivo da rejeição:</strong> {parecer}
+                    </p>
+                  </div>
+                )}
+
                 <div className="flex items-center gap-4 pt-2 border-t border-border/60 text-xs text-muted">
                   <span className="flex items-center gap-1.5 font-semibold text-dark">
                     <Clock className="w-3.5 h-3.5 text-primary" />
@@ -242,6 +270,32 @@ export default function RvtHistoricoPage() {
                       : `${rvt.evidencias.length} ${rvt.evidencias.length === 1 ? "anexo" : "anexos"}`}
                   </span>
                 </div>
+
+                {/* RF35 / RN02 — prazo de retificação ou mensagem de trava */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  {trava ? (
+                    <p className="text-[11px] text-muted flex items-center gap-1.5">
+                      <Lock className="w-3.5 h-3.5 shrink-0" />
+                      {trava}
+                    </p>
+                  ) : (
+                    <p className="text-[11px] text-blue-800 flex items-center gap-1.5">
+                      <CalendarClock className="w-3.5 h-3.5 shrink-0" />
+                      {rvt.status === "REJEITADO" ? "Corrija e reenvie" : "Retificável"} até{" "}
+                      {rvt.prazoRetificacao && formatarPrazo(rvt.prazoRetificacao)}
+                    </p>
+                  )}
+                  {!trava && podeRetificar && (
+                    <Link to={`/rvt/${rvt.id}/retificar`} className="shrink-0">
+                      <Button variant={rvt.status === "REJEITADO" ? "primary" : "secondary"} size="sm" className="w-full sm:w-auto">
+                        <PencilLine className="w-3.5 h-3.5" />
+                        {rvt.status === "REJEITADO" ? "Corrigir e reenviar" : "Retificar"}
+                      </Button>
+                    </Link>
+                  )}
+                </div>
+
+                <HistoricoRvt historico={rvt.historico} />
               </li>
             );
           })}
