@@ -71,10 +71,11 @@ model Rvt {
   dataJornada      DateTime  @map("data_jornada") @db.Date
   horasTrabalhadas Decimal   @map("horas_trabalhadas") @db.Decimal(4, 2)
   escopoExecutado  String    @map("escopo_executado")
-  status           StatusRvt @default(PENDENTE)
+  status                  StatusRvt @default(PENDENTE)
+  justificativaRejeicao   String?   @map("justificativa_rejeicao")
   // RN02 — início da janela de retificação: submissão mais recente
   // ou notificação da rejeição. O prazo é calculado em dias úteis.
-  janelaRetificacaoInicio DateTime @default(now()) @map("janela_retificacao_inicio")
+  janelaRetificacaoInicio DateTime  @default(now()) @map("janela_retificacao_inicio")
   createdAt        DateTime  @default(now()) @map("created_at")
   updatedAt        DateTime  @updatedAt @map("updated_at")
 

@@ -6,6 +6,7 @@ import ColaboradorFormPage from '../pages/ColaboradorFormPage'
 import LoginPage from '../pages/LoginPage'
 import RvtFormPage from '../pages/RvtFormPage'
 import RvtHistoricoPage from '../pages/RvtHistoricoPage'
+import AprovacaoRvtPage from '../pages/AprovacaoRvtPage'
 import RvtHomologacaoPage from '../pages/RvtHomologacaoPage'
 import AcessoNegadoPage from '../pages/AcessoNegadoPage'
 import TrocarSenhaPage from '../pages/TrocarSenhaPage'
@@ -47,8 +48,11 @@ export default function AppRoutes() {
           <Route element={<RoleRoute permitidos={PERMISSOES.homologacaoRvt} />}>
             <Route path="rvt/homologacao" element={<RvtHomologacaoPage />} />
           </Route>
+          <Route element={<RoleRoute permitidos={PERMISSOES.aprovacaoRvt} />}>
+            <Route path="rvt/aprovacao" element={<AprovacaoRvtPage />} />
+          </Route>
 
-          {/* RF07 — Solicitação de reembolso */}
+          {/* RF07 — Solicitação e consulta de reembolsos */}
           <Route element={<RoleRoute permitidos={PERMISSOES.solicitarReembolso} />}>
             <Route
               path="reembolsos/solicitar"
@@ -73,12 +77,15 @@ export default function AppRoutes() {
           </Route>
 
           <Route element={<RoleRoute permitidos={PERMISSOES.fechamento} />}>
-            <Route path="fechamento" element={
-              <section className="p-6 bg-surface border border-border rounded-xl shadow-xs">
-                <h2 className="text-xl font-bold text-dark">Fechamento Financeiro</h2>
-                <p className="text-muted mt-1">Tela em desenvolvimento (RF05)...</p>
-              </section>
-            } />
+            <Route
+              path="fechamento"
+              element={
+                <section className="rounded-xl border border-border bg-surface p-6 shadow-xs">
+                  <h2 className="text-xl font-bold text-dark">Fechamento Financeiro</h2>
+                  <p className="mt-1 text-muted">Tela em desenvolvimento (RF05)...</p>
+                </section>
+              }
+            />
           </Route>
 
           <Route path="*" element={

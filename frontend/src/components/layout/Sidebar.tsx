@@ -15,7 +15,7 @@ import {
   FilePlus2,
   ReceiptText,
   X,
-} from "lucide-react";
+} from 'lucide-react'
 
 const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
   {
@@ -46,10 +46,17 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
   },
   {
     iconName: ClipboardCheck,
-    title: "Homologar Apontamentos",
-    path: "/rvt/homologacao",
+    title: 'Aprovação RVT',
+    path: '/rvt/aprovacao',
+    papeis: PERMISSOES.aprovacaoRvt,
+    badge: 'CAR-03',
+  },
+  {
+    iconName: ClipboardCheck,
+    title: 'Homologar Apontamentos',
+    path: '/rvt/homologacao',
     papeis: PERMISSOES.homologacaoRvt,
-    badge: "RF32",
+    badge: 'RF32',
   },
   // CAR-04 · RF07 — Prestação de contas e reembolsos
   {

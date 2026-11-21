@@ -23,6 +23,7 @@ function rvt(sobrescritas: Partial<Rvt> = {}): Rvt {
     createdAt: '2026-11-16T20:00:00.000Z',
     updatedAt: '2026-11-16T20:00:00.000Z',
     ...sobrescritas,
+    justificativaRejeicao: sobrescritas.justificativaRejeicao ?? null,
   }
 }
 
