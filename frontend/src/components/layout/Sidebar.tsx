@@ -13,7 +13,9 @@ import {
   History,
   ClipboardCheck,
   X,
-} from 'lucide-react'
+  ReceiptText,
+  ShieldCheck,
+} from "lucide-react";
 
 const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
   {
@@ -44,23 +46,34 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
   },
   {
     iconName: ClipboardCheck,
-    title: 'Aprovação RVT',
-    path: '/rvt/aprovacao',
-    papeis: PERMISSOES.aprovacaoRvt,
-    badge: 'CAR-03',
+    title: 'Aprovação de Diárias',
+    path: '/diarias/aprovacao',
+    papeis: PERMISSOES.aprovacaoDiarias,
   },
   {
     iconName: ClipboardCheck,
-    title: 'Homologar Apontamentos',
-    path: '/rvt/homologacao',
+    title: "Homologar Apontamentos",
+    path: "/rvt/homologacao",
     papeis: PERMISSOES.homologacaoRvt,
     badge: 'RF32',
+  },
+  {
+    iconName: ReceiptText,
+    title: 'Reembolsos',
+    path: '/reembolsos',
+    papeis: PERMISSOES.reembolsos,
   },
   {
     iconName: CircleDollarSign,
     title: 'Fechamento',
     path: '/fechamento',
     papeis: PERMISSOES.fechamento,
+  },
+  {
+    iconName: ShieldCheck,
+    title: 'Gestão de Acessos',
+    path: '/acessos',
+    papeis: PERMISSOES.gestaoAcessos,
   },
 ]
 

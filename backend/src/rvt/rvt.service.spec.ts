@@ -676,7 +676,7 @@ describe('RvtService.obterArquivoEvidencia (RN16)', () => {
 
   it.each([
     ['autor', { usuarioId: 'u-1', colaboradorId: 'colab-1', papel: 'TECNICO_CAMPO' }],
-    ['gestor responsável', { usuarioId: 'gestor-1', colaboradorId: '', papel: 'GESTOR_OPERACIONAL' }],
+    ['gestor responsável', { usuarioId: 'gestor-1', colaboradorId: '', papel: 'GESTOR_OBRAS' }],
   ])('libera o arquivo para o %s', async (_quem, leitor) => {
     const { prisma, storage, service } = criarMocks();
     prisma.rvtEvidencia.findFirst.mockResolvedValue(EVIDENCIA);
@@ -692,7 +692,7 @@ describe('RvtService.obterArquivoEvidencia (RN16)', () => {
 
   it.each([
     ['outro técnico', { usuarioId: 'u-2', colaboradorId: 'colab-2', papel: 'TECNICO_CAMPO' }],
-    ['gestor de outro contrato', { usuarioId: 'gestor-2', colaboradorId: '', papel: 'GESTOR_OPERACIONAL' }],
+    ['gestor de outro contrato', { usuarioId: 'gestor-2', colaboradorId: '', papel: 'GESTOR_OBRAS' }],
     ['administrador financeiro', { usuarioId: 'gestor-1', colaboradorId: '', papel: 'ADMIN_FINANCEIRO' }],
     ['conta sem colaborador', { usuarioId: 'u-3', colaboradorId: '', papel: 'TECNICO_CAMPO' }],
   ])('responde 404 para %s', async (_quem, leitor) => {

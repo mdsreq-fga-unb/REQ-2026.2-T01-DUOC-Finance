@@ -21,7 +21,7 @@ function sessaoBase() {
     usuario: {
       id: 'usuario-1',
       ativo: true,
-      papel: 'GESTOR_OPERACIONAL',
+      papel: 'GESTOR_OBRAS',
       senhaAtualizadaEm: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
     },
   };
@@ -69,7 +69,7 @@ describe('JwtAuthGuard | sessão real / RN16', () => {
     });
     expect(request.usuario).toMatchObject({
       usuarioId: 'usuario-1', sessaoId: 'sessao-1',
-      papel: 'GESTOR_OPERACIONAL', colaboradorId: '',
+      papel: 'GESTOR_OBRAS', colaboradorId: '',
     });
   });
 
