@@ -6,7 +6,6 @@ import ColaboradorFormPage from '../pages/ColaboradorFormPage'
 import LoginPage from '../pages/LoginPage'
 import RvtFormPage from '../pages/RvtFormPage'
 import RvtHistoricoPage from '../pages/RvtHistoricoPage'
-import AprovacaoRvtPage from '../pages/AprovacaoRvtPage';
 import RvtHomologacaoPage from '../pages/RvtHomologacaoPage';
 import AcessoNegadoPage from '../pages/AcessoNegadoPage'
 import GestaoAcessosPage from '../pages/GestaoAcessosPage'
