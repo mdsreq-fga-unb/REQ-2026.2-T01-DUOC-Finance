@@ -126,9 +126,9 @@ export default function AprovacaoRvtPage() {
         </p>
       )}
       {mensagem && (
-        <p role="status" className="rounded-lg border border-green-200 bg-green-50 p-3 text-sm text-green-800">
+        <output className="rounded-lg border border-green-200 bg-green-50 p-3 text-sm text-green-800">
           {mensagem}
-        </p>
+        </output>
       )}
 
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]">
