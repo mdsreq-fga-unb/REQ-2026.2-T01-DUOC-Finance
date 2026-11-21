@@ -14,6 +14,7 @@ import {
   ClipboardCheck,
   X,
   ReceiptText,
+  FilePlus2,
   ShieldCheck,
 } from "lucide-react";
 
@@ -58,10 +59,24 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
     badge: 'RF32',
   },
   {
+    iconName: FilePlus2,
+    title: 'Solicitar reembolso',
+    path: '/reembolsos/solicitar',
+    papeis: PERMISSOES.solicitarReembolso,
+    badge: 'RF07',
+  },
+  {
     iconName: ReceiptText,
-    title: 'Reembolsos',
-    path: '/reembolsos',
-    papeis: PERMISSOES.reembolsos,
+    title: 'Meus reembolsos',
+    path: '/reembolsos/meus',
+    papeis: PERMISSOES.solicitarReembolso,
+  },
+  {
+    iconName: ReceiptText,
+    title: 'Administração de reembolsos',
+    path: '/reembolsos/administracao',
+    papeis: PERMISSOES.administrarReembolsos,
+    badge: 'RF08',
   },
   {
     iconName: CircleDollarSign,

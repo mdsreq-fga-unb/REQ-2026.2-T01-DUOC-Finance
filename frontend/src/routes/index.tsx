@@ -9,6 +9,10 @@ import RvtHistoricoPage from '../pages/RvtHistoricoPage'
 import RvtHomologacaoPage from '../pages/RvtHomologacaoPage';
 import AcessoNegadoPage from '../pages/AcessoNegadoPage'
 import GestaoAcessosPage from '../pages/GestaoAcessosPage'
+import ReembolsoSolicitacaoPage from '../pages/ReembolsoSolicitacaoPage'
+import ReembolsoHistoricoPage from '../pages/ReembolsoHistoricoPage'
+import ReembolsosAdminPage from '../pages/ReembolsosAdminPage'
+import ReembolsoDeliberacaoPage from '../pages/ReembolsoDeliberacaoPage'
 import TrocarSenhaPage from '../pages/TrocarSenhaPage'
 import PrivateRoute from '../components/auth/PrivateRoute'
 import RoleRoute from '../components/auth/RoleRoute'
@@ -62,8 +66,21 @@ export default function AppRoutes() {
             <Route path="diarias/aprovacao" element={<TelaEmDesenvolvimento titulo="Aprovação de Diárias" />} />
           </Route>
 
+          {/* Mantém a rota de entrada definida na develop. */}
           <Route element={<RoleRoute permitidos={PERMISSOES.reembolsos} />}>
-            <Route path="reembolsos" element={<TelaEmDesenvolvimento titulo="Reembolsos" />} />
+            <Route path="reembolsos" element={<Navigate to="/reembolsos/meus" replace />} />
+          </Route>
+
+          {/* CAR-04 / RF07 — registro e histórico do próprio solicitante */}
+          <Route element={<RoleRoute permitidos={PERMISSOES.solicitarReembolso} />}>
+            <Route path="reembolsos/solicitar" element={<ReembolsoSolicitacaoPage />} />
+            <Route path="reembolsos/meus" element={<ReembolsoHistoricoPage />} />
+          </Route>
+
+          {/* CAR-04 / RF08 — decisão do administrador financeiro */}
+          <Route element={<RoleRoute permitidos={PERMISSOES.administrarReembolsos} />}>
+            <Route path="reembolsos/administracao" element={<ReembolsosAdminPage />} />
+            <Route path="reembolsos/administracao/:id/deliberar" element={<ReembolsoDeliberacaoPage />} />
           </Route>
 
           <Route element={<RoleRoute permitidos={PERMISSOES.gestaoAcessos} />}>

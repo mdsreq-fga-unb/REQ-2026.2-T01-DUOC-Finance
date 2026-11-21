@@ -28,6 +28,10 @@ export const PERMISSOES = {
   homologacaoRvt: ['GESTOR_OBRAS'],
   aprovacaoDiarias: ['ADMIN_FINANCEIRO'],
   reembolsos: ['TECNICO_CAMPO', 'GESTOR_OBRAS', 'ADMIN_FINANCEIRO'],
+  /** RF07 — solicitação e consulta de reembolsos */
+  solicitarReembolso: ['TECNICO_CAMPO', 'GESTOR_OBRAS', 'ADMIN_FINANCEIRO'],
+  /** RF08 — análise e decisão financeira */
+  administrarReembolsos: ['ADMIN_FINANCEIRO'],
   fechamento: ['ADMIN_FINANCEIRO'],
   gestaoAcessos: ['ADMIN_SISTEMA'],
 } as const satisfies Record<string, readonly Papel[]>

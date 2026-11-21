@@ -59,4 +59,14 @@ describe('CAR-07 / RN15 — matriz de autorização no frontend', () => {
     expect(possuiPapel(null, PERMISSOES.dashboard)).toBe(false)
     expect(possuiPapel(undefined, PERMISSOES.colaboradores)).toBe(false)
   })
+  it('RF07 permite solicitar reembolso aos papeis habilitados', () => {
+    expect(PAPEIS.filter((papel) => possuiPapel(papel, PERMISSOES.solicitarReembolso)))
+      .toEqual(['ADMIN_FINANCEIRO', 'GESTOR_OBRAS', 'TECNICO_CAMPO'])
+    expect(possuiPapel('ADMIN_SISTEMA', PERMISSOES.solicitarReembolso)).toBe(false)
+  })
+  it('RF08 reserva deliberacao de reembolso ao financeiro', () => {
+    expect(PAPEIS.filter((papel) => possuiPapel(papel, PERMISSOES.administrarReembolsos)))
+      .toEqual(['ADMIN_FINANCEIRO'])
+  })
+
 })
