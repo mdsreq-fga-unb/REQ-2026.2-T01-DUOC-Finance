@@ -7,7 +7,14 @@
  * Diferente da listagem de colaboradores, falhas da API remota NÃO caem no
  * modo local: um apontamento nunca deve "sumir" silenciosamente no navegador.
  */
-import type { ContratoObra, CriarRvtDTO, RascunhoRvt, Rvt } from "../types/rvt";
+import type {
+  ContratoObra,
+  CriarRvtDTO,
+  RascunhoRvt,
+  Rvt,
+  StatusRvt,
+} from "../types/rvt";
+
 import { LIMITE_HORAS_DIARIAS, formatarHoras } from "../utils/rvt";
 import { AuthApi, ErroAuth } from "./auth.service";
 
@@ -30,6 +37,7 @@ const SEED_APONTAMENTOS: Rvt[] = [
     horasTrabalhadas: 9,
     escopoExecutado: "Substituição de disjuntores do QGBT e reaperto de barramentos. Testes de isolação concluídos.",
     status: "PENDENTE",
+    justificativaRejeicao: null,
     evidencias: [
       { id: "ev-seed-1", nomeOriginal: "qgbt-antes.jpg", mimeType: "image/jpeg", tamanhoBytes: 1_480_000, createdAt: "2026-11-13T21:10:00.000Z" },
       { id: "ev-seed-2", nomeOriginal: "qgbt-depois.jpg", mimeType: "image/jpeg", tamanhoBytes: 1_320_000, createdAt: "2026-11-13T21:10:00.000Z" },
@@ -44,6 +52,7 @@ const SEED_APONTAMENTOS: Rvt[] = [
     horasTrabalhadas: 8,
     escopoExecutado: "Passagem de cabos 4mm² nos apartamentos 201 a 204 e montagem de quadros de distribuição.",
     status: "HOMOLOGADO",
+    justificativaRejeicao: null,
     evidencias: [
       { id: "ev-seed-3", nomeOriginal: "quadros-201-204.jpg", mimeType: "image/jpeg", tamanhoBytes: 980_000, createdAt: "2026-11-12T20:40:00.000Z" },
     ],
@@ -137,6 +146,32 @@ export const RvtService = {
     return ordenarRecentes(lerLocal());
   },
 
+  async listarContratosParaAprovacao(): Promise<ContratoObra[]> {
+    return requisicao<ContratoObra[]>('/api/rvt/contratos-ativos');
+  },
+
+  async listarParaAprovacao(filtros: {
+    status: StatusRvt;
+    contratoId?: string;
+  }): Promise<Rvt[]> {
+    const params = new URLSearchParams({ status: filtros.status });
+    if (filtros.contratoId) params.set('contratoId', filtros.contratoId);
+
+    return requisicao<Rvt[]>(`/api/rvt/aprovacao?${params.toString()}`);
+  },
+
+  async decidirAprovacao(
+    id: string,
+    status: 'HOMOLOGADO' | 'REJEITADO',
+    justificativa?: string,
+  ): Promise<Rvt> {
+    return requisicao<Rvt>(`/api/rvt/${id}/decisao`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status, justificativa }),
+    });
+  },
+
   /**
    * RF04 — envia o apontamento e, em seguida, as evidências.
    * São duas requisições: se só a segunda falhar, o apontamento já existe
@@ -193,6 +228,7 @@ export const RvtService = {
       horasTrabalhadas: dto.horasTrabalhadas,
       escopoExecutado: dto.escopoExecutado,
       status: "PENDENTE",
+      justificativaRejeicao: null,
       // No modo local só os metadados das fotos são guardados (limite do localStorage)
       evidencias: arquivos.map((arquivo) => ({
         id: gerarId("ev"),

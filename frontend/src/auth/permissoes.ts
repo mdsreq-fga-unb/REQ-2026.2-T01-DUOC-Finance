@@ -21,6 +21,7 @@ export const PERMISSOES = {
   colaboradores: ['ADMIN_FINANCEIRO'],
   novoRvt: ['TECNICO_CAMPO', 'ADMIN_FINANCEIRO'],
   historicoRvt: ['TECNICO_CAMPO', 'GESTOR_OPERACIONAL', 'ADMIN_FINANCEIRO'],
+  aprovacaoRvt: ['ADMIN_FINANCEIRO'],
   fechamento: ['ADMIN_FINANCEIRO'],
 } as const satisfies Record<string, readonly Papel[]>
 

@@ -56,7 +56,8 @@ model Rvt {
   dataJornada      DateTime  @map("data_jornada") @db.Date
   horasTrabalhadas Decimal   @map("horas_trabalhadas") @db.Decimal(4, 2)
   escopoExecutado  String    @map("escopo_executado")
-  status           StatusRvt @default(PENDENTE)
+  status                 StatusRvt @default(PENDENTE)
+  justificativaRejeicao  String?   @map("justificativa_rejeicao")
   createdAt        DateTime  @default(now()) @map("created_at")
   updatedAt        DateTime  @updatedAt @map("updated_at")
 

@@ -59,6 +59,7 @@ export interface RvtResposta {
   horasTrabalhadas: number;
   escopoExecutado: string;
   status: StatusRvt;
+  justificativaRejeicao: string | null;
   evidencias: EvidenciaResposta[];
   createdAt: string;
   updatedAt: string;
@@ -76,6 +77,7 @@ export function mapearRvt(rvt: RvtComRelacoes): RvtResposta {
     horasTrabalhadas: Number(rvt.horasTrabalhadas),
     escopoExecutado: rvt.escopoExecutado,
     status: rvt.status,
+    justificativaRejeicao: rvt.justificativaRejeicao ?? null,
     evidencias: rvt.evidencias.map((e) => ({
       id: e.id,
       nomeOriginal: e.nomeOriginal,
@@ -270,5 +272,74 @@ export class RvtService {
       take: 100,
     });
     return rvts.map(mapearRvt);
+  }
+    async listarParaAprovacao(filtros: {
+    status?: string;
+    contratoId?: string;
+  }): Promise<RvtResposta[]> {
+    let status: StatusRvt | undefined;
+
+    if (filtros.status) {
+      if (!Object.values(StatusRvt).includes(filtros.status as StatusRvt)) {
+        throw new BadRequestException('Status de RVT inválido.');
+      }
+      status = filtros.status as StatusRvt;
+    }
+
+    const rvts = await this.prisma.rvt.findMany({
+      where: {
+        ...(status ? { status } : { status: StatusRvt.PENDENTE }),
+        ...(filtros.contratoId ? { contratoId: filtros.contratoId } : {}),
+      },
+      include: INCLUDE_RVT,
+      orderBy: [{ dataJornada: 'asc' }, { createdAt: 'asc' }],
+      take: 100,
+    });
+
+    return rvts.map(mapearRvt);
+  }
+
+  async decidir(
+    rvtId: string,
+    decisao: 'HOMOLOGADO' | 'REJEITADO',
+    justificativa?: string,
+  ): Promise<RvtResposta> {
+    const motivo = justificativa?.trim() ?? '';
+
+    if (decisao !== 'HOMOLOGADO' && decisao !== 'REJEITADO') {
+      throw new BadRequestException('A decisão deve ser HOMOLOGADO ou REJEITADO.');
+    }
+    if (decisao === 'REJEITADO' && !motivo) {
+      throw new BadRequestException(
+        'A justificativa é obrigatória para reprovar o apontamento.',
+      );
+    }
+
+    const resultado = await this.prisma.rvt.updateMany({
+      where: { id: rvtId, status: StatusRvt.PENDENTE },
+      data: {
+        status: decisao,
+        justificativaRejeicao:
+          decisao === 'REJEITADO' ? motivo : null,
+      },
+    });
+
+    if (resultado.count === 0) {
+      const existente = await this.prisma.rvt.findUnique({
+        where: { id: rvtId },
+        select: { id: true },
+      });
+      if (!existente) throw new NotFoundException('Apontamento não encontrado.');
+      throw new ConflictException(
+        'Somente apontamentos pendentes podem ser decididos.',
+      );
+    }
+
+    const atualizado = await this.prisma.rvt.findUniqueOrThrow({
+      where: { id: rvtId },
+      include: INCLUDE_RVT,
+    });
+
+    return mapearRvt(atualizado);
   }
 }

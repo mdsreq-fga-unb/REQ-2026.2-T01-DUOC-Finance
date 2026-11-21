@@ -11,8 +11,9 @@ import {
   LogOut,
   ClipboardPlus,
   History,
+  ClipboardCheck,
   X,
-} from "lucide-react";
+} from 'lucide-react'
 
 const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
   {
@@ -40,6 +41,13 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
     title: "Meus Apontamentos",
     path: "/rvt/historico",
     papeis: PERMISSOES.historicoRvt,
+  },
+  {
+  iconName: ClipboardCheck,
+  title: 'Aprovação RVT',
+  path: '/rvt/aprovacao',
+  papeis: PERMISSOES.aprovacaoRvt,
+  badge: 'CAR-03',
   },
   {
     iconName: CircleDollarSign,

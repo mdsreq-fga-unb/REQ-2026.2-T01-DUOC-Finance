@@ -28,6 +28,7 @@ export interface Rvt {
   horasTrabalhadas: number;
   escopoExecutado: string;
   status: StatusRvt;
+  justificativaRejeicao: string | null;
   evidencias: EvidenciaRvt[];
   createdAt: string;
   updatedAt: string;

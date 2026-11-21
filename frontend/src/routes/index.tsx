@@ -6,6 +6,7 @@ import ColaboradorFormPage from '../pages/ColaboradorFormPage'
 import LoginPage from '../pages/LoginPage'
 import RvtFormPage from '../pages/RvtFormPage'
 import RvtHistoricoPage from '../pages/RvtHistoricoPage'
+import AprovacaoRvtPage from '../pages/AprovacaoRvtPage'
 import AcessoNegadoPage from '../pages/AcessoNegadoPage'
 import TrocarSenhaPage from '../pages/TrocarSenhaPage'
 import PrivateRoute from '../components/auth/PrivateRoute'
@@ -30,30 +31,51 @@ export default function AppRoutes() {
           </Route>
 
           <Route path="rvt" element={<Navigate to="/rvt/historico" replace />} />
+
           <Route element={<RoleRoute permitidos={PERMISSOES.novoRvt} />}>
             <Route path="rvt/novo" element={<RvtFormPage />} />
           </Route>
+
           <Route element={<RoleRoute permitidos={PERMISSOES.historicoRvt} />}>
             <Route path="rvt/historico" element={<RvtHistoricoPage />} />
           </Route>
 
-          <Route element={<RoleRoute permitidos={PERMISSOES.fechamento} />}>
-            <Route path="fechamento" element={
-              <section className="p-6 bg-surface border border-border rounded-xl shadow-xs">
-                <h2 className="text-xl font-bold text-dark">Fechamento Financeiro</h2>
-                <p className="text-muted mt-1">Tela em desenvolvimento (RF05)...</p>
-              </section>
-            } />
+          <Route element={<RoleRoute permitidos={PERMISSOES.aprovacaoRvt} />}>
+            <Route path="rvt/aprovacao" element={<AprovacaoRvtPage />} />
           </Route>
 
-          <Route path="*" element={
-            <section className="text-center py-12">
-              <h2 className="text-2xl font-bold text-primary">Página não encontrada (404)</h2>
-              <p className="text-muted mt-2">A rota que você tentou acessar não existe.</p>
-            </section>
-          } />
+          <Route element={<RoleRoute permitidos={PERMISSOES.fechamento} />}>
+            <Route
+              path="fechamento"
+              element={
+                <section className="rounded-xl border border-border bg-surface p-6 shadow-xs">
+                  <h2 className="text-xl font-bold text-dark">
+                    Fechamento Financeiro
+                  </h2>
+                  <p className="mt-1 text-muted">
+                    Tela em desenvolvimento (RF05)...
+                  </p>
+                </section>
+              }
+            />
+          </Route>
+
+          <Route
+            path="*"
+            element={
+              <section className="py-12 text-center">
+                <h2 className="text-2xl font-bold text-primary">
+                  Página não encontrada (404)
+                </h2>
+                <p className="mt-2 text-muted">
+                  A rota que você tentou acessar não existe.
+                </p>
+              </section>
+            }
+          />
         </Route>
       </Route>
+
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   )

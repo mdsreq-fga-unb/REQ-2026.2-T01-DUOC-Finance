@@ -1,10 +1,13 @@
 import {
+  BadRequestException,
   Body,
   Controller,
   Get,
   Param,
   ParseUUIDPipe,
+  Patch,
   Post,
+  Query,
   UploadedFiles,
   UseGuards,
   UseInterceptors,
@@ -15,6 +18,9 @@ import {
   type UsuarioAutenticado as Usuario,
 } from '../auth/jwt-auth.guard.js';
 import { UsuarioAutenticado } from '../auth/usuario-autenticado.decorator.js';
+import { Role } from '../auth/role.enum.js';
+import { Roles } from '../auth/roles.decorator.js';
+import { RolesGuard } from '../auth/roles.guard.js';
 import {
   CriarRvtValidationPipe,
   type CriarRvtDto,
@@ -30,18 +36,66 @@ import {
   type RvtResposta,
 } from './rvt.service.js';
 
+interface DecisaoRvtBody {
+  status?: unknown;
+  justificativa?: unknown;
+}
+
 @Controller('rvt')
 @UseGuards(JwtAuthGuard)
 export class RvtController {
   constructor(private readonly rvtService: RvtService) {}
 
-  /** Contratos disponíveis para vínculo no formulário (RN04) */
+  /** Fila administrativa de RVTs, filtrável por status e contrato. */
+  @Get('aprovacao')
+  @UseGuards(RolesGuard)
+  @Roles(Role.ADMIN_FINANCEIRO)
+  listarParaAprovacao(
+    @Query('status') status?: string,
+    @Query('contratoId') contratoId?: string,
+  ): Promise<RvtResposta[]> {
+    return this.rvtService.listarParaAprovacao({ status, contratoId });
+  }
+
+  /** Aprova ou reprova um RVT que ainda esteja pendente. */
+  @Patch(':id/decisao')
+  @UseGuards(RolesGuard)
+  @Roles(Role.ADMIN_FINANCEIRO)
+  decidir(
+    @Param('id', new ParseUUIDPipe()) id: string,
+    @Body() body: DecisaoRvtBody,
+  ): Promise<RvtResposta> {
+    if (!body || typeof body.status !== 'string') {
+      throw new BadRequestException('Informe a decisão do apontamento.');
+    }
+
+    if (body.status !== 'HOMOLOGADO' && body.status !== 'REJEITADO') {
+      throw new BadRequestException(
+        'A decisão deve ser HOMOLOGADO ou REJEITADO.',
+      );
+    }
+
+    if (
+      body.justificativa !== undefined &&
+      typeof body.justificativa !== 'string'
+    ) {
+      throw new BadRequestException('A justificativa deve ser um texto.');
+    }
+
+    return this.rvtService.decidir(
+      id,
+      body.status,
+      body.justificativa as string | undefined,
+    );
+  }
+
+  /** Contratos disponíveis para vínculo no formulário (RN04). */
   @Get('contratos-ativos')
   listarContratosAtivos(): Promise<ContratoObraResumo[]> {
     return this.rvtService.listarContratosAtivos();
   }
 
-  /** RF04 — registra o apontamento para o colaborador do token */
+  /** RF04 — registra o apontamento para o colaborador do token. */
   @Post()
   criar(
     @UsuarioAutenticado() usuario: Usuario,
@@ -50,10 +104,9 @@ export class RvtController {
     return this.rvtService.criar(usuario.colaboradorId, dto);
   }
 
-  /** Anexa fotos/PDFs comprobatórios (multipart, campo "arquivos") */
+  /** Anexa fotos/PDFs comprobatórios (multipart, campo "arquivos"). */
   @Post(':id/evidencias')
   @UseInterceptors(
-    // Sem "storage": o multer mantém o arquivo em memória até a validação
     FilesInterceptor('arquivos', MAX_ARQUIVOS_POR_ENVIO, {
       limits: {
         fileSize: TAMANHO_MAXIMO_EVIDENCIA_BYTES,
@@ -73,7 +126,7 @@ export class RvtController {
     );
   }
 
-  /** Histórico do técnico autenticado, do mais recente para o mais antigo */
+  /** Histórico do técnico autenticado, do mais recente para o mais antigo. */
   @Get('meus-apontamentos')
   listarMeusApontamentos(
     @UsuarioAutenticado() usuario: Usuario,

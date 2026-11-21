@@ -6,6 +6,7 @@ import { assinarJwtHs256 } from '../auth/jwt.util.js';
 import { PrismaService } from '../prisma/prisma.service.js';
 import { RvtController } from './rvt.controller.js';
 import { RvtService } from './rvt.service.js';
+import { RolesGuard } from '../auth/roles.guard.js';
 
 const SEGREDO = 'segredo-seguro-para-testes-de-autenticacao-123';
 const SESSAO_ID = 'sessao-de-teste';
@@ -20,6 +21,8 @@ describe('RvtController (HTTP)', () => {
     criar: vi.fn(),
     anexarEvidencias: vi.fn(),
     listarDoColaborador: vi.fn(),
+    listarParaAprovacao: vi.fn(),
+    decidir: vi.fn(),
   };
 
   function token(sub = 'colab-1', vinculado = true): string {
@@ -38,6 +41,7 @@ describe('RvtController (HTTP)', () => {
         { provide: RvtService, useValue: service },
         { provide: PrismaService, useValue: { sessao: { findUnique: findSessao } } },
         JwtAuthGuard,
+        RolesGuard,
       ],
     }).compile();
     app = modulo.createNestApplication();
