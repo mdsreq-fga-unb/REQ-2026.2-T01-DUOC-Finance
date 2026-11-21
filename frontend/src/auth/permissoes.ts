@@ -27,6 +27,8 @@ export const PERMISSOES = {
   homologacaoRvt: ['GESTOR_OPERACIONAL'],
   fechamento: ['ADMIN_FINANCEIRO'],
   solicitarReembolso: ['TECNICO_CAMPO', 'GESTOR_OPERACIONAL', 'ADMIN_FINANCEIRO',],
+  /** RF08 — administração das solicitações de reembolso */
+  administrarReembolsos: ['ADMIN_FINANCEIRO'],
 } as const satisfies Record<string, readonly Papel[]>
 
 export function possuiPapel(

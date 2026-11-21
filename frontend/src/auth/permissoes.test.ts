@@ -46,4 +46,21 @@ describe('CAR-07 / RN15 — matriz de autorização no frontend', () => {
   expect(possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.solicitarReembolso)).toBe(true)
   expect(possuiPapel('AUDITOR_EXTERNO', PERMISSOES.solicitarReembolso)).toBe(false)
   })
+  it('RF08 permite acesso administrativo apenas ao financeiro', () => {
+  expect(
+    possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.administrarReembolsos)
+  ).toBe(true)
+
+  expect(
+    possuiPapel('TECNICO_CAMPO', PERMISSOES.administrarReembolsos)
+  ).toBe(false)
+
+  expect(
+    possuiPapel('GESTOR_OPERACIONAL', PERMISSOES.administrarReembolsos)
+  ).toBe(false)
+
+  expect(
+    possuiPapel('AUDITOR_EXTERNO', PERMISSOES.administrarReembolsos)
+  ).toBe(false)
+  })
 })
