@@ -14,6 +14,7 @@ import RoleRoute from '../components/auth/RoleRoute'
 import ReembolsoSolicitacaoPage from '../pages/ReembolsoSolicitacaoPage'
 import ReembolsoHistoricoPage from '../pages/ReembolsoHistoricoPage'
 import ReembolsosAdminPage from '../pages/ReembolsosAdminPage'
+import ReembolsoDeliberacaoPage from '../pages/ReembolsoDeliberacaoPage'
 import { PERMISSOES } from '../auth/permissoes'
 
 export default function AppRoutes() {
@@ -59,11 +60,15 @@ export default function AppRoutes() {
             />
           </Route>
 
-          {/* RF08 — Consulta administrativa de reembolsos */}
+          {/* RF08 — Administração e deliberação de reembolsos */}
           <Route element={<RoleRoute permitidos={PERMISSOES.administrarReembolsos} />}>
             <Route
               path="reembolsos/administracao"
               element={<ReembolsosAdminPage />}
+            />
+            <Route
+              path="reembolsos/administracao/:id/deliberar"
+              element={<ReembolsoDeliberacaoPage />}
             />
           </Route>
 

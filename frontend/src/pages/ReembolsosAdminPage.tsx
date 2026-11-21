@@ -233,6 +233,14 @@ export default function ReembolsosAdminPage() {
                           <Eye aria-hidden="true" className="h-4 w-4" />
                           Detalhes
                         </button>
+                        {item.status === 'PENDENTE' && (
+                          <Link
+                            to={`/reembolsos/administracao/${item.id}/deliberar`}
+                            className="ml-3 inline-flex items-center text-sm font-semibold text-primary hover:underline"
+                          >
+                            Deliberar
+                          </Link>
+                        )}
                       </td>
                     </tr>
                   ))}
