@@ -261,11 +261,12 @@ export default function ReembolsoSolicitacaoPage() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <Input
                   label="Valor (R$) *"
-                  placeholder="185,90"
+                  placeholder="Digite o valor da despesa"
                   inputMode="decimal"
                   value={valor}
                   onChange={(evento) => setValor(evento.target.value)}
                   error={erros.valor}
+                  helperText="Exemplo: 185,90 — utilize vírgula para os centavos."
                 />
                 <Input
                   label="Data da despesa *"
