@@ -567,6 +567,7 @@ describe('RvtService.deliberar (RF32)', () => {
     const { data } = prisma.rvt.update.mock.calls[0][0];
     expect(data).toEqual({
       status: 'HOMOLOGADO',
+      gestorId: null,
       historico: {
         create: { tipo: 'HOMOLOGACAO', autorUsuarioId: 'gestor-1', parecer: null },
       },

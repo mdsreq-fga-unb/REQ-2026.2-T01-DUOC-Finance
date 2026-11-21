@@ -1,6 +1,12 @@
 // Schema do banco de dados do DUOC Finance
 // Documentação: https://pris.ly/d/prisma-schema
 //
+// Fonte única do esquema: segue o DER de docs/mvp/modelagem_bd.md.
+// Tabelas e colunas usam os nomes do DER; os nomes dos models e campos
+// em camelCase são os usados pelo código. O que o código precisa e o DER
+// não detalha está marcado como "Extensão ao DER".
+// IDs são UUID (o DER não fixa o tipo das chaves).
+//
 // Depois de alterar este arquivo, gere uma migration com:
 //   docker compose exec backend npx prisma migrate dev --name <descricao>
 
@@ -13,15 +19,257 @@ datasource db {
   provider = "postgresql"
 }
 
-// ---------------------------------------------------------------------------
-// CAR-02 · Apontamento de Campo (RVT)
-// ---------------------------------------------------------------------------
+// ===========================================================================
+// DER 2.1 · Identidade, Acesso e RH
+// ===========================================================================
 
+/// RN22 — enquadramentos aceitos: CLT, diarista ou prestador de serviço (PJ)
+enum TipoContrato {
+  CLT
+  DIARISTA
+  PJ
+}
+
+enum StatusColaborador {
+  ATIVO
+  AFASTADO
+  DESLIGADO
+}
+
+/// Papéis RBAC (CAR-07, issue #155) — coluna nivel_acesso do DER
+enum PapelUsuario {
+  ADMIN_FINANCEIRO
+  GESTOR_OPERACIONAL
+  TECNICO_CAMPO
+  AUDITOR_EXTERNO
+}
+
+model Colaborador {
+  id             String            @id @default(uuid())
+  /// Somente dígitos; validação de dígito verificador na aplicação (RN01)
+  cpf            String            @unique @db.VarChar(11)
+  nome           String            @db.VarChar(255)
+  email          String            @db.VarChar(254)
+  emailCorp      String            @unique @map("email_corp") @db.VarChar(254)
+  tipoContrato   TipoContrato      @map("tipo_contrato")
+  cargoId        String            @map("id_cargo")
+  enderecoId     String            @map("id_endereco")
+  status         StatusColaborador @default(ATIVO)
+  contratacao    DateTime          @db.Date
+  /// Referência ao bucket de documentos (S3/Supabase Storage)
+  documentos     String?           @db.VarChar(500)
+  /// Referência ao bucket de certificados e capacitações
+  cursos         String?           @db.VarChar(500)
+  createdAt      DateTime          @default(now()) @map("created_at")
+  updatedAt      DateTime          @updatedAt @map("updated_at")
+
+  cargo              Cargo              @relation(fields: [cargoId], references: [id])
+  endereco           Endereco           @relation(fields: [enderecoId], references: [id])
+  usuario            Usuario?
+  dadosBancarios     DadosBancarios[]
+  obras              ObraColaborador[]
+  apontamentos       Rvt[]              @relation("AutorApontamento")
+  apontamentosGeridos Rvt[]             @relation("GestorApontamento")
+
+  @@index([cargoId])
+  @@map("colaborador")
+}
+
+model Usuario {
+  id                String       @id @default(uuid())
+  /// DER: Usuário (1) vincula-se a (1) Colaborador. Opcional apenas para
+  /// contas administrativas criadas antes do cadastro de colaboradores.
+  colaboradorId     String?      @unique @map("id_colab")
+  /// Extensão ao DER: login por e-mail
+  email             String       @unique @db.VarChar(254)
+  /// Hash bcrypt da senha
+  senhaHash         String       @map("senha") @db.VarChar(255)
+  papel             PapelUsuario @map("nivel_acesso")
+  /// Extensão ao DER: conta desativada não autentica (RN04)
+  ativo             Boolean      @default(true)
+  /// Extensão ao DER: base da renovação periódica de senhas (RF24)
+  senhaAtualizadaEm DateTime     @default(now()) @map("senha_atualizada_em")
+  /// RF23 / RN20 — falhas consecutivas
+  tentativasFalhas  Int          @default(0) @map("tentativa_login")
+  /// RF23 — bloqueio temporário até esta data
+  bloqueadoAte      DateTime?    @map("bloqueio")
+  /// Último acesso autenticado
+  ultimoAcessoEm    DateTime?    @map("data_ultima")
+  /// RN21 — hashes das últimas senhas, para impedir reuso
+  historicoSenhas   String[]     @default([]) @map("historico_senhas")
+  createdAt         DateTime     @default(now()) @map("created_at")
+  updatedAt         DateTime     @updatedAt @map("updated_at")
+
+  colaborador      Colaborador?   @relation(fields: [colaboradorId], references: [id])
+  sessoes          Sessao[]
+  contratosGeridos ContratoObra[]
+
+  @@map("usuario")
+}
+
+/// Extensão ao DER: sessões revogáveis e refresh token (RF18, RN15)
+model Sessao {
+  id               String    @id @default(uuid())
+  usuarioId        String    @map("id_usuario")
+  criadaEm         DateTime  @default(now()) @map("criada_em")
+  expiraEm         DateTime  @map("expira_em")
+  revogadaEm       DateTime? @map("revogada_em")
+  refreshTokenHash String?   @unique @map("refresh_token_hash") @db.VarChar(64)
+
+  usuario Usuario @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+
+  @@index([usuarioId, revogadaEm])
+  @@map("sessao")
+}
+
+model Cargo {
+  id     String @id @default(uuid())
+  funcao String @db.VarChar(100)
+  /// Operacional, Administrativo...
+  setor  String @db.VarChar(100)
+
+  colaboradores Colaborador[]
+
+  @@unique([funcao, setor])
+  @@map("cargo")
+}
+
+// ===========================================================================
+// DER 2.2 · Base Financeira e Operacional
+// ===========================================================================
+
+/// RN23 — versionamento: um registro por alteração, só um ativo por vez
+model DadosBancarios {
+  id            String   @id @default(uuid())
+  colaboradorId String   @map("id_colab")
+  /// Código de compensação Febraban
+  bancoCompe    String   @map("banco_compe") @db.VarChar(3)
+  agencia       String   @db.VarChar(10)
+  conta         String   @db.VarChar(20)
+  chavePix      String?  @map("chave_pix") @db.VarChar(255)
+  ativo         Boolean  @default(true) @map("is_ativo")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  colaborador Colaborador @relation(fields: [colaboradorId], references: [id], onDelete: Cascade)
+
+  @@index([colaboradorId, ativo])
+  @@map("dados_bancarios")
+}
+
+model Endereco {
+  id     String @id @default(uuid())
+  /// Somente dígitos
+  cep    String @db.VarChar(8)
+  bairro String @db.VarChar(100)
+  /// Município/UF
+  cidade String @db.VarChar(100)
+
+  colaboradores Colaborador[]
+  obras         ContratoObra[]
+
+  @@map("endereco")
+}
+
+// ===========================================================================
+// DER 2.3 · Obras, Contratos e Custos
+// ===========================================================================
+
+enum TipoCliente {
+  PF
+  PJ
+}
+
+/// Situação do contrato (Cliente) e da obra
 enum StatusContratoObra {
   ATIVO
   SUSPENSO
   ENCERRADO
 }
+
+model Cliente {
+  id             String             @id @default(uuid())
+  nome           String             @db.VarChar(255)
+  tipo           TipoCliente
+  /// CPF (11) ou CNPJ (14), somente dígitos
+  cpfCnpj        String             @unique @map("cpf_cnpj") @db.VarChar(14)
+  /// RNF06 — valores monetários com precisão decimal
+  valorContrato  Decimal            @map("valor_contrato") @db.Decimal(15, 2)
+  vigenciaInicio DateTime           @map("vigencia_inicio") @db.Date
+  vigenciaFim    DateTime?          @map("vigencia_fim") @db.Date
+  status         StatusContratoObra @default(ATIVO)
+  createdAt      DateTime           @default(now()) @map("created_at")
+  updatedAt      DateTime           @updatedAt @map("updated_at")
+
+  obras  ContratoObra[]
+  custos Custo[]
+
+  @@map("cliente")
+}
+
+/// DER: Obras — centro de obra ao qual o apontamento é vinculado (RF04)
+model ContratoObra {
+  id                  String             @id @default(uuid())
+  /// Extensão ao DER: identificação exibida nas telas
+  codigo              String             @unique
+  nome                String
+  /// Extensão ao DER: obra suspensa/encerrada não recebe apontamentos
+  status              StatusContratoObra @default(ATIVO)
+  /// Opcional enquanto o cadastro de clientes (RF33) não existir
+  clienteId           String?            @map("id_cliente")
+  enderecoId          String?            @map("id_endereco")
+  /// Extensão ao DER: gestor que delibera os apontamentos da obra (RF32)
+  gestorResponsavelId String?            @map("gestor_responsavel_id")
+  createdAt           DateTime           @default(now()) @map("created_at")
+  updatedAt           DateTime           @updatedAt @map("updated_at")
+
+  cliente           Cliente?          @relation(fields: [clienteId], references: [id])
+  endereco          Endereco?         @relation(fields: [enderecoId], references: [id])
+  gestorResponsavel Usuario?          @relation(fields: [gestorResponsavelId], references: [id], onDelete: SetNull)
+  colaboradores     ObraColaborador[]
+  custos            Custo[]
+  apontamentos      Rvt[]
+
+  @@index([clienteId])
+  @@index([gestorResponsavelId])
+  @@map("obras")
+}
+
+/// DER: Colaborador trabalha em Obras (equipes alocadas no canteiro)
+model ObraColaborador {
+  obraId        String   @map("id_obra")
+  colaboradorId String   @map("id_colab")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  obra        ContratoObra @relation(fields: [obraId], references: [id], onDelete: Cascade)
+  colaborador Colaborador  @relation(fields: [colaboradorId], references: [id], onDelete: Cascade)
+
+  @@id([obraId, colaboradorId])
+  @@index([colaboradorId])
+  @@map("obra_colaboradores")
+}
+
+/// DER: Custos — centro de custo por categoria, com teto (RN13/RN29)
+model Custo {
+  id            String   @id @default(uuid())
+  obraId        String   @map("id_obra")
+  clienteId     String   @map("id_cliente")
+  /// Material, Hospedagem...
+  categoria     String   @db.VarChar(100)
+  orcamentoTeto Decimal  @map("orcamento_teto") @db.Decimal(15, 2)
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  obra    ContratoObra @relation(fields: [obraId], references: [id], onDelete: Cascade)
+  cliente Cliente      @relation(fields: [clienteId], references: [id])
+
+  @@unique([obraId, categoria])
+  @@index([clienteId])
+  @@map("custos")
+}
+
+// ===========================================================================
+// DER 2.4 · Prestação de Contas · Apontamentos (RVT — CAR-02)
+// ===========================================================================
 
 enum StatusRvt {
   PENDENTE
@@ -29,7 +277,7 @@ enum StatusRvt {
   REJEITADO
 }
 
-// Eventos do histórico do apontamento (RF32 / RF35)
+/// Eventos do histórico do apontamento (RF32 / RF35)
 enum TipoEventoRvt {
   SUBMISSAO
   RETIFICACAO
@@ -38,57 +286,42 @@ enum TipoEventoRvt {
   REJEICAO
 }
 
-// Contrato de obra ao qual todo apontamento deve estar vinculado (RN04).
-// O cadastro completo de contratos pertence a outra história; aqui ficam
-// apenas os campos necessários para o vínculo do RVT.
-model ContratoObra {
-  id        String             @id @default(uuid())
-  codigo    String             @unique
-  nome      String
-  cliente   String?
-  status    StatusContratoObra @default(ATIVO)
-  // RF32 — gestor operacional que delibera os apontamentos deste contrato
-  gestorResponsavelId String?  @map("gestor_responsavel_id")
-  createdAt DateTime           @default(now()) @map("created_at")
-  updatedAt DateTime           @updatedAt @map("updated_at")
-
-  gestorResponsavel Usuario? @relation(fields: [gestorResponsavelId], references: [id], onDelete: SetNull)
-  apontamentos      Rvt[]
-
-  @@index([gestorResponsavelId])
-
-  @@map("contratos_obra")
-}
-
-// Registro de Visita Técnica / apontamento diário de campo (RF04)
+/// DER: Apontamentos — RVT / apontamento diário de campo (RF04)
 model Rvt {
   id               String    @id @default(uuid())
-  // Identificador do colaborador extraído do JWT. Ainda sem FK porque o
-  // model de colaboradores não existe no banco.
-  colaboradorId    String    @map("colaborador_id")
-  contratoId       String    @map("contrato_id")
-  dataJornada      DateTime  @map("data_jornada") @db.Date
+  /// Autor do apontamento (vem da conta autenticada, nunca do corpo)
+  colaboradorId    String    @map("id_colab")
+  contratoId       String    @map("id_contrato")
+  /// Data da jornada (controle de janela D+1, RN02)
+  dataJornada      DateTime  @map("data") @db.Date
+  status           StatusRvt @default(PENDENTE)
+  /// Colaborador do gestor que homologou/rejeitou (RF32)
+  gestorId         String?   @map("gestor")
+  /// Extensão ao DER: horas e escopo executado (RF04)
   horasTrabalhadas Decimal   @map("horas_trabalhadas") @db.Decimal(4, 2)
   escopoExecutado  String    @map("escopo_executado")
-  status           StatusRvt @default(PENDENTE)
-  // RN02 — início da janela de retificação: submissão mais recente
-  // ou notificação da rejeição. O prazo é calculado em dias úteis.
+  /// Extensão ao DER — RN02: início da janela de retificação (submissão
+  /// mais recente ou notificação da rejeição), contada em dias úteis
   janelaRetificacaoInicio DateTime @default(now()) @map("janela_retificacao_inicio")
   createdAt        DateTime  @default(now()) @map("created_at")
   updatedAt        DateTime  @updatedAt @map("updated_at")
 
-  contrato   ContratoObra   @relation(fields: [contratoId], references: [id])
-  evidencias RvtEvidencia[]
-  historico  RvtHistorico[]
+  colaborador Colaborador   @relation("AutorApontamento", fields: [colaboradorId], references: [id])
+  gestor      Colaborador?  @relation("GestorApontamento", fields: [gestorId], references: [id])
+  contrato    ContratoObra  @relation(fields: [contratoId], references: [id])
+  /// DER: "comprovante" — um registro por arquivo, com hash (RNF07)
+  evidencias  RvtEvidencia[]
+  historico   RvtHistorico[]
 
   @@index([colaboradorId, dataJornada])
-  @@map("rvts")
+  @@index([contratoId, status])
+  @@map("apontamentos")
 }
 
-// Arquivo comprobatório (foto ou PDF) anexado ao RVT (RN06, RNF19)
+/// DER: comprovante do apontamento — foto ou PDF no storage (RF22, RNF07)
 model RvtEvidencia {
   id             String   @id @default(uuid())
-  rvtId          String   @map("rvt_id")
+  rvtId          String   @map("id_apontamento")
   nomeOriginal   String   @map("nome_original")
   mimeType       String   @map("mime_type")
   tamanhoBytes   Int      @map("tamanho_bytes")
@@ -99,68 +332,25 @@ model RvtEvidencia {
   rvt Rvt @relation(fields: [rvtId], references: [id], onDelete: Cascade)
 
   @@index([rvtId])
-  @@map("rvt_evidencias")
+  @@map("apontamento_evidencias")
 }
 
-// Histórico imutável de submissões, retificações e deliberações (RF32/RF35)
+/// Extensão ao DER: histórico imutável de submissões, retificações e
+/// deliberações (RF32/RF35)
 model RvtHistorico {
   id             String        @id @default(uuid())
-  rvtId          String        @map("rvt_id")
+  rvtId          String        @map("id_apontamento")
   tipo           TipoEventoRvt
-  // Conta que executou a ação (técnico ou gestor)
+  /// Conta que executou a ação (técnico ou gestor)
   autorUsuarioId String?       @map("autor_usuario_id")
-  // RN30 — parecer da deliberação (obrigatório na rejeição)
+  /// RN30 — parecer da deliberação (obrigatório na rejeição)
   parecer        String?
-  // Valores anteriores e novos dos campos alterados na retificação
+  /// Valores anteriores e novos dos campos alterados na retificação
   alteracoes     Json?
   createdAt      DateTime      @default(now()) @map("created_at")
 
   rvt Rvt @relation(fields: [rvtId], references: [id], onDelete: Cascade)
 
   @@index([rvtId, createdAt])
-  @@map("rvt_historico")
-}
-
-// ---------------------------------------------------------------------------
-// CAR-07 · Controle de acesso e sessões (issue #155)
-// O vínculo com o cadastro de colaboradores será integrado separadamente.
-// ---------------------------------------------------------------------------
-
-enum PapelUsuario {
-  ADMIN_FINANCEIRO
-  GESTOR_OPERACIONAL
-  TECNICO_CAMPO
-  AUDITOR_EXTERNO
-}
-
-model Usuario {
-  id                String       @id @default(uuid())
-  email             String       @unique @db.VarChar(254)
-  senhaHash         String       @map("senha_hash") @db.VarChar(255)
-  papel             PapelUsuario
-  ativo             Boolean      @default(true)
-  senhaAtualizadaEm DateTime     @default(now()) @map("senha_atualizada_em")
-  // RF23 — estado persistente de bloqueio após cinco falhas consecutivas.
-  tentativasFalhas  Int          @default(0) @map("tentativas_falhas")
-  bloqueadoAte      DateTime?    @map("bloqueado_ate")
-  createdAt         DateTime     @default(now()) @map("created_at")
-  updatedAt         DateTime     @updatedAt @map("updated_at")
-  sessoes           Sessao[]
-  contratosGeridos  ContratoObra[]
-
-  @@map("usuarios")
-}
-
-model Sessao {
-  id         String    @id @default(uuid())
-  usuarioId  String    @map("usuario_id")
-  criadaEm   DateTime  @default(now()) @map("criada_em")
-  expiraEm   DateTime  @map("expira_em")
-  revogadaEm DateTime? @map("revogada_em")
-  refreshTokenHash String? @unique @map("refresh_token_hash") @db.VarChar(64)
-
-  usuario Usuario @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
-
-  @@index([usuarioId, revogadaEm])
-  @@map("sessoes")
+  @@map("apontamento_historico")
 }

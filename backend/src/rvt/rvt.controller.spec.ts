@@ -15,6 +15,7 @@ describe('RvtController (HTTP)', () => {
   let app: INestApplication;
   let usuarioAtual = 'colab-1';
   let papelAtual = 'TECNICO_CAMPO';
+  let colaboradorAtual: string | null = 'colab-1';
   const findSessao = vi.fn();
   const service = {
     listarContratosAtivos: vi.fn(),
@@ -29,8 +30,10 @@ describe('RvtController (HTTP)', () => {
 
   function token(sub = 'colab-1', vinculado = true): string {
     usuarioAtual = sub;
+    // O vínculo com colaborador vem de usuario.id_colab, não do JWT
+    colaboradorAtual = vinculado ? sub : null;
     return assinarJwtHs256(
-      { sub, sid: SESSAO_ID, ...(vinculado ? { colaboradorId: sub } : {}), exp: Math.floor(Date.now() / 1000) + 300 },
+      { sub, sid: SESSAO_ID, exp: Math.floor(Date.now() / 1000) + 300 },
       SEGREDO,
     );
   }
@@ -69,6 +72,7 @@ describe('RvtController (HTTP)', () => {
         id: usuarioAtual,
         ativo: true,
         papel: papelAtual,
+        colaboradorId: colaboradorAtual,
         senhaAtualizadaEm: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
       },
     }));

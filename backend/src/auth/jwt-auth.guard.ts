@@ -13,7 +13,10 @@ import { senhaExpirada } from './politica-senha.util.js';
 export interface UsuarioAutenticado {
   usuarioId?: string;
   sessaoId?: string;
-  /** Separado do sub do JWT: a conta não é automaticamente um colaborador. */
+  /**
+   * Colaborador vinculado à conta (usuario.id_colab, DER). Vazio quando a
+   * conta não é de um colaborador de campo (ex.: admin inicial).
+   */
   colaboradorId: string;
   papel?: string;
 }
@@ -47,7 +50,6 @@ export class JwtAuthGuard implements CanActivate {
 
     let sub: string;
     let sid: string;
-    let colaboradorId: string;
     try {
       const payload = verificarJwtHs256(token, segredo);
       if (
@@ -58,9 +60,6 @@ export class JwtAuthGuard implements CanActivate {
       }
       sub = payload.sub;
       sid = payload.sid;
-      colaboradorId = typeof payload.colaboradorId === 'string'
-        ? payload.colaboradorId.trim()
-        : '';
     } catch (erro) {
       if (erro instanceof JwtInvalidoError) {
         throw new UnauthorizedException(erro.message);
@@ -87,8 +86,9 @@ export class JwtAuthGuard implements CanActivate {
     request.usuario = {
       usuarioId: sessao.usuario.id,
       sessaoId: sessao.id,
-      colaboradorId,
-      papel: sessao.usuario.papel, // Papel atual do banco; ignora role obsoleto do JWT.
+      // Vínculo e papel atuais do banco; claims antigos do JWT não prevalecem.
+      colaboradorId: sessao.usuario.colaboradorId ?? '',
+      papel: sessao.usuario.papel,
     };
     return true;
   }

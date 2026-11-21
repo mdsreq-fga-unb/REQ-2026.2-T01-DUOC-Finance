@@ -93,20 +93,20 @@ export class AuthService {
       agora.getTime() + BLOQUEIO_LOGIN_MINUTOS * 60 * 1000,
     );
     await this.prisma.$executeRaw`
-      UPDATE "usuarios"
-      SET "tentativas_falhas" =
+      UPDATE "usuario"
+      SET "tentativa_login" =
         CASE
-          WHEN "bloqueado_ate" IS NOT NULL AND "bloqueado_ate" <= ${agora}::timestamp
+          WHEN "bloqueio" IS NOT NULL AND "bloqueio" <= ${agora}::timestamp
             THEN 1
-          ELSE "tentativas_falhas" + 1
+          ELSE "tentativa_login" + 1
         END,
-        "bloqueado_ate" =
+        "bloqueio" =
           CASE
             WHEN (
               CASE
-                WHEN "bloqueado_ate" IS NOT NULL AND "bloqueado_ate" <= ${agora}::timestamp
+                WHEN "bloqueio" IS NOT NULL AND "bloqueio" <= ${agora}::timestamp
                   THEN 1
-                ELSE "tentativas_falhas" + 1
+                ELSE "tentativa_login" + 1
               END
             ) >= ${MAX_TENTATIVAS_LOGIN}
               THEN ${bloqueadoAte}::timestamp
@@ -114,7 +114,7 @@ export class AuthService {
           END
       WHERE "id" = ${usuarioId}
         AND "ativo" = TRUE
-        AND ("bloqueado_ate" IS NULL OR "bloqueado_ate" <= ${agora}::timestamp)
+        AND ("bloqueio" IS NULL OR "bloqueio" <= ${agora}::timestamp)
     `;
   }
 
@@ -152,7 +152,7 @@ export class AuthService {
         ativo: true,
         OR: [{ bloqueadoAte: null }, { bloqueadoAte: { lte: agora } }],
       },
-      data: { tentativasFalhas: 0, bloqueadoAte: null },
+      data: { tentativasFalhas: 0, bloqueadoAte: null, ultimoAcessoEm: agora },
     });
     if (reset.count !== 1) {
       throw new UnauthorizedException('Credenciais inválidas.');

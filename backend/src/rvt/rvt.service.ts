@@ -208,12 +208,21 @@ export class RvtService {
     private readonly storage: EvidenciasStorageService,
   ) {}
 
-  listarContratosAtivos(): Promise<ContratoObraResumo[]> {
-    return this.prisma.contratoObra.findMany({
+  async listarContratosAtivos(): Promise<ContratoObraResumo[]> {
+    const obras = await this.prisma.contratoObra.findMany({
       where: { status: StatusContratoObra.ATIVO },
-      select: { id: true, codigo: true, nome: true, cliente: true },
+      select: {
+        id: true,
+        codigo: true,
+        nome: true,
+        cliente: { select: { nome: true } },
+      },
       orderBy: { codigo: 'asc' },
     });
+    return obras.map(({ cliente, ...obra }) => ({
+      ...obra,
+      cliente: cliente?.nome ?? null,
+    }));
   }
 
   /** Transação serializável: evita furar o teto diário e decisões cruzadas */
@@ -513,6 +522,8 @@ export class RvtService {
         where: { id: rvtId },
         data: {
           status: rejeitar ? StatusRvt.REJEITADO : StatusRvt.HOMOLOGADO,
+          // DER: apontamentos.gestor — colaborador que avaliou
+          gestorId: gestor.colaboradorId ?? null,
           // A notificação da rejeição inicia o prazo de reenvio (RN02)
           ...(rejeitar ? { janelaRetificacaoInicio: agora } : {}),
           historico: {

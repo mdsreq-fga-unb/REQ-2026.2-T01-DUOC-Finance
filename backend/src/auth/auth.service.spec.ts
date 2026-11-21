@@ -168,9 +168,9 @@ describe('AuthService.login | RF23 — cinco falhas e bloqueio de 15 minutos', (
     expect(executeRaw).toHaveBeenCalledTimes(1);
     const [sql, ...parametros] = executeRaw.mock.calls[0] as [TemplateStringsArray, ...unknown[]];
     const comando = sql.join('?');
-    expect(comando).toContain('UPDATE "usuarios"');
-    expect(comando).toContain('"tentativas_falhas" + 1');
-    expect(comando).toContain('"bloqueado_ate"');
+    expect(comando).toContain('UPDATE "usuario"');
+    expect(comando).toContain('"tentativa_login" + 1');
+    expect(comando).toContain('"bloqueio"');
     expect(parametros).toContain(MAX_TENTATIVAS_LOGIN);
     expect(parametros).toEqual(expect.arrayContaining([USUARIO_ID]));
     const datas = parametros.filter((valor) => valor instanceof Date) as Date[];
@@ -226,7 +226,7 @@ describe('AuthService.login | RF23 — cinco falhas e bloqueio de 15 minutos', (
         ativo: true,
         OR: [{ bloqueadoAte: null }, { bloqueadoAte: { lte: expect.any(Date) } }],
       },
-      data: { tentativasFalhas: 0, bloqueadoAte: null },
+      data: { tentativasFalhas: 0, bloqueadoAte: null, ultimoAcessoEm: expect.any(Date) },
     });
     expect(executeRaw).not.toHaveBeenCalled();
     expect(sessaoCreate).toHaveBeenCalledTimes(1);

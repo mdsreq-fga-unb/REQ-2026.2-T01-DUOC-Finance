@@ -122,10 +122,20 @@ describe('JwtAuthGuard | sessão real / RN16', () => {
       .rejects.toThrow(UnauthorizedException);
   });
 
-  it('mantém vínculo com colaborador separado do sub da conta', async () => {
-    const { request, context } = contexto(jwt({colaboradorId: 'colab-autorizado'}));
+  it('usa o colaborador vinculado à conta no banco (usuario.id_colab)', async () => {
+    sessaoFindUnique.mockResolvedValue({
+      ...sessaoBase(),
+      usuario: { ...sessaoBase().usuario, colaboradorId: 'colab-autorizado' },
+    });
+    const { request, context } = contexto(jwt());
     await guard.canActivate(context);
     expect(request.usuario?.colaboradorId).toBe('colab-autorizado');
     expect(request.usuario?.usuarioId).toBe('usuario-1');
+  });
+
+  it('ignora colaboradorId forjado no JWT', async () => {
+    const { request, context } = contexto(jwt({ colaboradorId: 'colab-intruso' }));
+    await guard.canActivate(context);
+    expect(request.usuario?.colaboradorId).toBe('');
   });
 });

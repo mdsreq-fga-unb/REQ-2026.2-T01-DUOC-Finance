@@ -3,12 +3,13 @@ import { createHmac, timingSafeEqual } from 'node:crypto';
 /**
  * Verificação de JWT HS256 sem dependências externas.
  *
- * Provisório até a história de autenticação publicar o módulo de login
- * (emissão de tokens). O formato do payload esperado é o padrão JWT, com o
- * identificador do colaborador em `sub` (ou `colaboradorId`).
+ * O payload segue o padrão JWT: `sub` é o ID da conta e `sid` o da sessão.
+ * O vínculo com colaborador NÃO vem do token: o guard o lê de
+ * usuario.id_colab no banco.
  */
 export interface JwtPayload {
   sub?: string;
+  /** Ignorado pelo guard; mantido só para tokens antigos */
   colaboradorId?: string;
   papel?: string;
   exp: number;
