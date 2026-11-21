@@ -2,24 +2,16 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ClipboardList, FileClock, FilterX, Plus, ReceiptText } from 'lucide-react'
 import Button from '../components/ui/Button'
+import {
+  filtrarReembolsos,
+  type FiltroStatusReembolso,
+  type ReembolsoListavel,
+  type StatusReembolso,
+} from '../utils/reembolsos'
 
-type Status = 'PENDENTE' | 'APROVADO' | 'REJEITADO'
-type FiltroStatus = Status | 'TODOS'
-
-interface ReembolsoDemonstrativo {
-  id: string
-  codigo: string
-  categoria: string
-  descricao: string
-  dataDespesa: string // YYYY-MM-DD
-  valorCentavos: number
-  status: Status
-  contrato: { id: string; codigo: string; nome: string }
-  parecer: string | null
-}
 
 /** RF07 / CAR-04 — exemplos fictícios, sem relação com o usuário logado. */
-const REGISTROS_DEMO: ReembolsoDemonstrativo[] = [
+const REGISTROS_DEMO: ReembolsoListavel[] = [
   {
     id: 'demo-0086', codigo: 'DES-0086', categoria: 'Alimentação',
     descricao: 'Alimentação durante inspeção em campo.', dataDespesa: '2026-10-09',
@@ -43,7 +35,7 @@ const REGISTROS_DEMO: ReembolsoDemonstrativo[] = [
   },
 ]
 
-const STATUS: Record<Status, { nome: string; classe: string }> = {
+const STATUS: Record<StatusReembolso, { nome: string; classe: string }> = {
   PENDENTE: { nome: 'Pendente', classe: 'bg-amber-50 text-amber-700 border-amber-200' },
   APROVADO: { nome: 'Aprovado', classe: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
   REJEITADO: { nome: 'Rejeitado', classe: 'bg-red-50 text-red-700 border-red-200' },
@@ -73,7 +65,7 @@ function formatarPeriodo(periodo: string): string {
 export default function ReembolsoHistoricoPage() {
   const [contratoId, setContratoId] = useState('')
   const [periodo, setPeriodo] = useState('')
-  const [status, setStatus] = useState<FiltroStatus>('TODOS')
+  const [status, setStatus] = useState<FiltroStatusReembolso>('TODOS')
   const [detalheId, setDetalheId] = useState<string | null>(null)
 
   const contratos = useMemo(() => {
@@ -85,12 +77,10 @@ export default function ReembolsoHistoricoPage() {
     [...new Set(REGISTROS_DEMO.map((r) => r.dataDespesa.slice(0, 7)))].sort().reverse(),
   [])
 
-  const filtrados = useMemo(() => REGISTROS_DEMO
-    .filter((r) => !contratoId || r.contrato.id === contratoId)
-    .filter((r) => !periodo || r.dataDespesa.startsWith(periodo))
-    .filter((r) => status === 'TODOS' || r.status === status)
-    .sort((a, b) => b.dataDespesa.localeCompare(a.dataDespesa)),
-  [contratoId, periodo, status])
+  const filtrados = useMemo(
+    () => filtrarReembolsos(REGISTROS_DEMO, { contratoId, periodo, status }),
+    [contratoId, periodo, status],
+  )
 
   const detalhe = filtrados.find((r) => r.id === detalheId)
 
@@ -149,7 +139,7 @@ export default function ReembolsoHistoricoPage() {
           <div className="space-y-1.5">
             <label htmlFor="filtro-reembolso-status" className="block text-xs font-semibold">Status</label>
             <select id="filtro-reembolso-status" className={classeSelect} value={status}
-              onChange={(e) => { setStatus(e.target.value as FiltroStatus); setDetalheId(null) }}>
+              onChange={(e) => { setStatus(e.target.value as FiltroStatusReembolso); setDetalheId(null) }}>
               <option value="TODOS">Todos</option>
               <option value="PENDENTE">Pendente</option>
               <option value="APROVADO">Aprovado</option>
