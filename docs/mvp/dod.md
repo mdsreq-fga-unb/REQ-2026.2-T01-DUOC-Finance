@@ -109,6 +109,45 @@ As evidências visuais (prints de interface, logs de testes e critérios marcado
 
 <!-- AUTO-EVIDENCIAS-PR:START -->
 
+<!-- PR-185:START -->
+??? info "PR #185 — Feat/181 rbac perfis protecao rotas (gih7915 • 2026-11-21)"
+
+    - **Pull Request:** [#185](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/185) • **Issues:** #181 • **Requisitos:** `CAR-07`, `RF25`, `RNF01`, `RNF07`
+    - **CI / Verificações:** 2/3 check(s) aprovado(s) • **Critérios marcados:** 5 aceito(s), 3 pendente(s)
+
+    <div class="req-evidence-media-grid">
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-185/01-gestao-de-acessos-dados-demonstrativos.png" alt="Gestão de Acessos — dados demonstrativos">
+        <span class="req-evidence-media-caption">Gestão de Acessos — dados demonstrativos (<code>pr-185/01-gestao-de-acessos-dados-demonstrativos.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-185/02-historico-de-acesso-dados-demonstrativos.png" alt="Histórico de acesso — dados demonstrativos">
+        <span class="req-evidence-media-caption">Histórico de acesso — dados demonstrativos (<code>pr-185/02-historico-de-acesso-dados-demonstrativos.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-185/03-menu-por-perfil-admin-financeiro.png" alt="Menu por perfil — ADMIN_FINANCEIRO">
+        <span class="req-evidence-media-caption">Menu por perfil — ADMIN_FINANCEIRO (<code>pr-185/03-menu-por-perfil-admin-financeiro.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-185/04-menu-por-perfil-gestor-obras.png" alt="Menu por perfil — GESTOR_OBRAS">
+        <span class="req-evidence-media-caption">Menu por perfil — GESTOR_OBRAS (<code>pr-185/04-menu-por-perfil-gestor-obras.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-185/05-menu-por-perfil-tecnico-campo.png" alt="Menu por perfil — TECNICO_CAMPO">
+        <span class="req-evidence-media-caption">Menu por perfil — TECNICO_CAMPO (<code>pr-185/05-menu-por-perfil-tecnico-campo.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-185/06-403-perfil-sem-permissao-para-gestao-de-acessos.png" alt="403 — perfil sem permissão para Gestão de Acessos">
+        <span class="req-evidence-media-caption">403 — perfil sem permissão para Gestão de Acessos (<code>pr-185/06-403-perfil-sem-permissao-para-gestao-de-acessos.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-185/07-image.png" alt="image">
+        <span class="req-evidence-media-caption">image (<code>pr-185/07-image.png</code>)</span>
+      </div>
+    </div>
+
+<!-- PR-185:END -->
+
 <!-- PR-188:START -->
 ??? info "PR #188 — feat(ci): sincronização automática de evidências de PR para o GitHub Pages (Szervinsk • 2026-11-21)"
 
