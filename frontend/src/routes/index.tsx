@@ -12,6 +12,7 @@ import TrocarSenhaPage from '../pages/TrocarSenhaPage'
 import PrivateRoute from '../components/auth/PrivateRoute'
 import RoleRoute from '../components/auth/RoleRoute'
 import ReembolsoSolicitacaoPage from '../pages/ReembolsoSolicitacaoPage'
+import ReembolsoHistoricoPage from '../pages/ReembolsoHistoricoPage'
 import { PERMISSOES } from '../auth/permissoes'
 
 export default function AppRoutes() {
@@ -50,6 +51,10 @@ export default function AppRoutes() {
             <Route
               path="reembolsos/solicitar"
               element={<ReembolsoSolicitacaoPage />}
+            />
+            <Route
+              path="reembolsos/meus"
+              element={<ReembolsoHistoricoPage />}
             />
           </Route>
 
