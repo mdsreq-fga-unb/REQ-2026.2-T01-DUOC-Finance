@@ -21,6 +21,7 @@ export const PERMISSOES = {
   colaboradores: ['ADMIN_FINANCEIRO'],
   novoRvt: ['TECNICO_CAMPO', 'ADMIN_FINANCEIRO'],
   historicoRvt: ['TECNICO_CAMPO', 'GESTOR_OPERACIONAL', 'ADMIN_FINANCEIRO'],
+  aprovacaoRvt: ['ADMIN_FINANCEIRO'],
   /** RF35 — o backend ainda confere autoria, status e prazo (RN02) */
   retificarRvt: ['TECNICO_CAMPO', 'ADMIN_FINANCEIRO'],
   /** RF32 / RN16 — só o gestor operacional delibera apontamentos */

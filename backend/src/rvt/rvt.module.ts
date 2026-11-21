@@ -5,7 +5,6 @@ import { EvidenciasStorageService } from './evidencias/evidencias-storage.servic
 import { RvtController } from './rvt.controller.js';
 import { RvtService } from './rvt.service.js';
 
-/** CAR-02 · Apontamento de Campo (RVT) */
 @Module({
   controllers: [RvtController],
   providers: [RvtService, EvidenciasStorageService, JwtAuthGuard, RolesGuard],
