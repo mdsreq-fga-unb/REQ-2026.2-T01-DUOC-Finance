@@ -5,9 +5,10 @@ import { AuthModule } from './auth/auth.module.js';
 import { HealthController } from './health/health.controller.js';
 import { PrismaModule } from './prisma/prisma.module.js';
 import { RvtModule } from './rvt/rvt.module.js';
+import { ReembolsosModule } from './reembolsos/reembolsos.module.js';
 
 @Module({
-  imports: [PrismaModule, AuthModule, RvtModule],
+  imports: [PrismaModule, AuthModule, RvtModule, ReembolsosModule],
   controllers: [AppController, HealthController],
   providers: [AppService],
 })
