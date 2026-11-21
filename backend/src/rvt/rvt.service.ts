@@ -154,7 +154,7 @@ export function mapearRvt(
     })),
     prazoRetificacao: prazo?.toISOString() ?? null,
     podeRetificar: prazo !== null && agora.getTime() <= prazo.getTime(),
-    historico: rvt.historico.map((h) => ({
+    historico: (rvt.historico ?? []).map((h) => ({
       id: h.id,
       tipo: h.tipo,
       parecer: h.parecer,
@@ -699,7 +699,7 @@ export class RvtService {
       take: 100,
     });
 
-    return rvts.map(mapearRvt);
+    return rvts.map((rvt) => mapearRvt(rvt))
   }
 
   async decidir(
