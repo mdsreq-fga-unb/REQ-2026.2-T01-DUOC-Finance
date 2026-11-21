@@ -11,6 +11,7 @@ import AcessoNegadoPage from '../pages/AcessoNegadoPage'
 import TrocarSenhaPage from '../pages/TrocarSenhaPage'
 import PrivateRoute from '../components/auth/PrivateRoute'
 import RoleRoute from '../components/auth/RoleRoute'
+import ReembolsoSolicitacaoPage from '../pages/ReembolsoSolicitacaoPage'
 import { PERMISSOES } from '../auth/permissoes'
 
 export default function AppRoutes() {
@@ -42,6 +43,14 @@ export default function AppRoutes() {
           </Route>
           <Route element={<RoleRoute permitidos={PERMISSOES.homologacaoRvt} />}>
             <Route path="rvt/homologacao" element={<RvtHomologacaoPage />} />
+          </Route>
+
+          {/* RF07 — Solicitação de reembolso */}
+          <Route element={<RoleRoute permitidos={PERMISSOES.solicitarReembolso} />}>
+            <Route
+              path="reembolsos/solicitar"
+              element={<ReembolsoSolicitacaoPage />}
+            />
           </Route>
 
           <Route element={<RoleRoute permitidos={PERMISSOES.fechamento} />}>

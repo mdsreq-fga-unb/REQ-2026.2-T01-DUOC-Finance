@@ -26,6 +26,7 @@ export const PERMISSOES = {
   /** RF32 / RN16 — só o gestor operacional delibera apontamentos */
   homologacaoRvt: ['GESTOR_OPERACIONAL'],
   fechamento: ['ADMIN_FINANCEIRO'],
+  solicitarReembolso: ['TECNICO_CAMPO', 'GESTOR_OPERACIONAL', 'ADMIN_FINANCEIRO',],
 } as const satisfies Record<string, readonly Papel[]>
 
 export function possuiPapel(
