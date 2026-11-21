@@ -102,6 +102,19 @@ Para evitar qualquer ambiguidade, **nenhum requisito fora do Incremento 1 possui
 
 ---
 
+<a id="evidencias-automaticas-prs"></a>
+## 4. Registro Automático de Evidências por PR
+
+As evidências visuais (prints de interface, logs de testes e critérios marcados) anexadas nos Pull Requests mergeados na `develop` são coletadas automaticamente para `docs/assets/images/evidencias/pr-<numero>/` via GitHub Actions:
+
+<!-- AUTO-EVIDENCIAS-PR:START -->
+
+*Aguardando sincronização automática de PRs mergeados.*
+
+<!-- AUTO-EVIDENCIAS-PR:END -->
+
+---
+
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
