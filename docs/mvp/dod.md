@@ -109,7 +109,20 @@ As evidências visuais (prints de interface, logs de testes e critérios marcado
 
 <!-- AUTO-EVIDENCIAS-PR:START -->
 
-*Aguardando sincronização automática de PRs mergeados.*
+<!-- PR-188:START -->
+??? info "PR #188 — feat(ci): sincronização automática de evidências de PR para o GitHub Pages (Szervinsk • 2026-11-21)"
+
+    - **Pull Request:** [#188](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/188) • **Issues:** #178 • **Requisitos:** —
+    - **CI / Verificações:** 2/3 check(s) aprovado(s) • **Critérios marcados:** 6 aceito(s), 0 pendente(s)
+
+    <div class="req-evidence-media-grid">
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-188/01-image.png" alt="image">
+        <span class="req-evidence-media-caption">image (<code>pr-188/01-image.png</code>)</span>
+      </div>
+    </div>
+
+<!-- PR-188:END -->
 
 <!-- AUTO-EVIDENCIAS-PR:END -->
 
