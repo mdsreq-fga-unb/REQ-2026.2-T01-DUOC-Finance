@@ -43,11 +43,18 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
     papeis: PERMISSOES.historicoRvt,
   },
   {
-  iconName: ClipboardCheck,
-  title: 'Aprovação RVT',
-  path: '/rvt/aprovacao',
-  papeis: PERMISSOES.aprovacaoRvt,
-  badge: 'CAR-03',
+    iconName: ClipboardCheck,
+    title: 'Aprovação RVT',
+    path: '/rvt/aprovacao',
+    papeis: PERMISSOES.aprovacaoRvt,
+    badge: 'CAR-03',
+  },
+  {
+    iconName: ClipboardCheck,
+    title: 'Homologar Apontamentos',
+    path: '/rvt/homologacao',
+    papeis: PERMISSOES.homologacaoRvt,
+    badge: 'RF32',
   },
   {
     iconName: CircleDollarSign,

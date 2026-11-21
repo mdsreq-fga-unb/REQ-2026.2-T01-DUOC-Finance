@@ -27,6 +27,15 @@ describe('CAR-07 / RN15 — matriz de autorização no frontend', () => {
     expect(possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.historicoRvt)).toBe(true)
     expect(possuiPapel('AUDITOR_EXTERNO', PERMISSOES.historicoRvt)).toBe(false)
   })
+  it('somente o gestor operacional homologa apontamentos (RF32 / RN16)', () => {
+    expect(possuiPapel('GESTOR_OPERACIONAL', PERMISSOES.homologacaoRvt)).toBe(true)
+    expect(possuiPapel('TECNICO_CAMPO', PERMISSOES.homologacaoRvt)).toBe(false)
+    expect(possuiPapel('ADMIN_FINANCEIRO', PERMISSOES.homologacaoRvt)).toBe(false)
+    expect(possuiPapel('AUDITOR_EXTERNO', PERMISSOES.homologacaoRvt)).toBe(false)
+  })
+  it('retificacao segue quem pode criar RVT (RF35)', () => {
+    expect(PERMISSOES.retificarRvt).toEqual(PERMISSOES.novoRvt)
+  })
   it('sem usuario nao existe permissao', () => {
     expect(possuiPapel(null, PERMISSOES.dashboard)).toBe(false)
     expect(possuiPapel(undefined, PERMISSOES.colaboradores)).toBe(false)

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import type { ChangeEvent, FormEvent } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import {
   ArrowLeft,
   HardHat,
@@ -15,6 +15,12 @@ import {
   CloudOff,
   Save,
   RotateCcw,
+  Lock,
+  MessageSquareWarning,
+  CalendarClock,
+  Eye,
+  Trash2,
+  Undo2,
 } from "lucide-react";
 import Button from "../components/ui/Button";
 import { useToast } from "../components/ui/useToast";
@@ -26,14 +32,20 @@ import {
   ESCOPO_MAX_CARACTERES,
   TAMANHO_MAXIMO_EVIDENCIA_BYTES,
   MAX_ARQUIVOS_POR_ENVIO,
+  MAX_EVIDENCIAS_POR_RVT,
   TIPOS_EVIDENCIA_ACEITOS,
   hojeISO,
   formatarHoras,
   formatarDataJornada,
   formatarTamanhoArquivo,
   parseHoras,
+  formatarPrazo,
+  motivoTravaEdicao,
+  ultimoParecerRejeicao,
 } from "../utils/rvt";
+import type { RetificarRvtDTO } from "../types/rvt";
 import { comprimirImagem } from "../utils/imagem";
+import { abrirEvidenciaEmNovaAba } from "../utils/evidencia";
 
 const ATALHOS_HORAS = [4, 6, 8, 10];
 const PASSO_HORAS = 0.5;
@@ -59,8 +71,15 @@ export default function RvtFormPage() {
   const navigate = useNavigate();
   const toast = useToast();
 
-  // Rascunho lido uma única vez na montagem (RNF04 — tolerância a quedas)
-  const [rascunhoInicial] = useState(() => RvtService.carregarRascunho());
+  // RF35 — /rvt/:id/retificar reaproveita o formulário em modo de retificação
+  const { id: rvtId } = useParams();
+  const modoRetificacao = Boolean(rvtId);
+
+  // Rascunho lido uma única vez na montagem (RNF04 — tolerância a quedas).
+  // Na retificação o ponto de partida é o próprio apontamento, não o rascunho.
+  const [rascunhoInicial] = useState(() => (modoRetificacao ? null : RvtService.carregarRascunho()));
+  const [original, setOriginal] = useState<Rvt | null>(null);
+  const [evidenciasRemover, setEvidenciasRemover] = useState<string[]>([]);
 
   const [contratos, setContratos] = useState<ContratoObra[]>([]);
   const [historico, setHistorico] = useState<Rvt[]>([]);
@@ -98,6 +117,22 @@ export default function RvtFormPage() {
         if (!isMounted) return;
         setContratos(listaContratos);
         setHistorico(listaHistorico);
+
+        if (rvtId) {
+          const alvo = listaHistorico.find((r) => r.id === rvtId);
+          if (!alvo) {
+            toast.error("Apontamento não encontrado no seu histórico.");
+            navigate("/rvt/historico", { replace: true });
+            return;
+          }
+          setOriginal(alvo);
+          setContratoId(alvo.contrato.id);
+          setDataJornada(alvo.dataJornada);
+          setHorasStr(String(alvo.horasTrabalhadas).replace(".", ","));
+          setEscopo(alvo.escopoExecutado);
+          return;
+        }
+
         setContratoId((atual) => {
           if (atual && listaContratos.some((c) => c.id === atual)) return atual;
           // Agiliza o preenchimento quando o técnico só atua em uma obra
@@ -116,7 +151,7 @@ export default function RvtFormPage() {
     return () => {
       isMounted = false;
     };
-  }, [toast]);
+  }, [toast, rvtId, navigate]);
 
   // Indicador de conectividade
   useEffect(() => {
@@ -135,6 +170,7 @@ export default function RvtFormPage() {
 
   // Salva o rascunho no aparelho a cada alteração dos campos
   useEffect(() => {
+    if (modoRetificacao) return;
     if (!temConteudo) {
       RvtService.descartarRascunho();
       return;
@@ -145,7 +181,7 @@ export default function RvtFormPage() {
       horasTrabalhadas: horasStr,
       escopoExecutado: escopo,
     });
-  }, [temConteudo, contratoId, dataJornada, horasStr, escopo]);
+  }, [modoRetificacao, temConteudo, contratoId, dataJornada, horasStr, escopo]);
 
   // Libera as URLs de pré-visualização ao sair da tela
   useEffect(() => {
@@ -158,13 +194,26 @@ export default function RvtFormPage() {
   const horasJaApontadas = useMemo(
     () =>
       historico
-        .filter((r) => r.dataJornada === dataJornada && r.status !== "REJEITADO")
+        // Na retificação, o próprio apontamento não conta no saldo do dia
+        .filter((r) => r.id !== rvtId && r.dataJornada === dataJornada && r.status !== "REJEITADO")
         .reduce((soma, r) => soma + r.horasTrabalhadas, 0),
-    [historico, dataJornada]
+    [historico, dataJornada, rvtId]
   );
   const horasDisponiveis = Math.max(LIMITE_HORAS_DIARIAS - horasJaApontadas, 0);
   const horasNum = parseHoras(horasStr);
   const escopoLen = escopo.trim().length;
+
+  // RN02 — trava de edição (homologado ou fora da janela de 5 dias úteis)
+  const motivoTrava = original ? motivoTravaEdicao(original) : null;
+  const travado = Boolean(motivoTrava);
+  const parecerRejeicao = original ? ultimoParecerRejeicao(original) : null;
+  const evidenciasMantidas = original
+    ? original.evidencias.filter((e) => !evidenciasRemover.includes(e.id))
+    : [];
+  const limiteNovosArquivos = Math.min(
+    MAX_ARQUIVOS_POR_ENVIO,
+    MAX_EVIDENCIAS_POR_RVT - evidenciasMantidas.length
+  );
 
   const ajustarHoras = (delta: number) => {
     const atual = Number.isFinite(horasNum) ? horasNum : 0;
@@ -178,10 +227,10 @@ export default function RvtFormPage() {
     e.target.value = ""; // permite selecionar o mesmo arquivo de novo
     if (selecionados.length === 0) return;
 
-    const vagas = MAX_ARQUIVOS_POR_ENVIO - fotos.length;
+    const vagas = limiteNovosArquivos - fotos.length;
     if (selecionados.length > vagas) {
       toast.warning(
-        `Cada apontamento aceita até ${MAX_ARQUIVOS_POR_ENVIO} arquivos. ${
+        `Você pode anexar mais ${Math.max(limiteNovosArquivos, 0)} arquivo(s) neste envio. ${
           vagas > 0 ? `Apenas ${vagas} foram adicionados.` : "Remova algum para incluir outro."
         }`
       );
@@ -222,6 +271,21 @@ export default function RvtFormPage() {
       if (alvo?.previewUrl) URL.revokeObjectURL(alvo.previewUrl);
       return prev.filter((f) => f.id !== id);
     });
+  };
+
+  const alternarRemocaoEvidencia = (evidenciaId: string) => {
+    setEvidenciasRemover((prev) =>
+      prev.includes(evidenciaId) ? prev.filter((id) => id !== evidenciaId) : [...prev, evidenciaId]
+    );
+  };
+
+  const abrirEvidencia = async (evidenciaId: string) => {
+    if (!original) return;
+    try {
+      await abrirEvidenciaEmNovaAba(original.id, evidenciaId);
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Não foi possível abrir o anexo.");
+    }
   };
 
   const descartarRascunho = () => {
@@ -276,6 +340,11 @@ export default function RvtFormPage() {
       return;
     }
 
+    if (original) {
+      await enviarRetificacao(original);
+      return;
+    }
+
     try {
       setIsSubmitting(true);
       const { falhaEvidencias } = await RvtService.enviarApontamento(
@@ -307,6 +376,56 @@ export default function RvtFormPage() {
     }
   };
 
+  /** RF35 — envia só o que mudou; um rejeitado é sempre reenviado */
+  const enviarRetificacao = async (alvo: Rvt) => {
+    const dto: RetificarRvtDTO = {};
+    if (Math.abs(horasNum - alvo.horasTrabalhadas) > 1e-9) dto.horasTrabalhadas = horasNum;
+    if (escopo.trim() !== alvo.escopoExecutado) dto.escopoExecutado = escopo.trim();
+
+    const reenvio = alvo.status === "REJEITADO";
+    const semMudancas =
+      Object.keys(dto).length === 0 && evidenciasRemover.length === 0 && fotos.length === 0;
+    if (!reenvio && semMudancas) {
+      toast.warning("Nenhuma alteração para salvar.");
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      const { falhaEvidencias } = await RvtService.retificarApontamento(
+        alvo,
+        dto,
+        evidenciasRemover,
+        fotos.map((f) => f.arquivo)
+      );
+      if (falhaEvidencias) {
+        toast.warning(
+          `Dados salvos, mas os anexos não foram atualizados: ${falhaEvidencias}`,
+          "Retificação parcial"
+        );
+      } else {
+        toast.success(
+          reenvio
+            ? "Apontamento corrigido e reenviado para homologação."
+            : "Retificação salva. O apontamento segue pendente de homologação."
+        );
+      }
+      navigate("/rvt/historico");
+    } catch (err: unknown) {
+      toast.error(err instanceof Error ? err.message : "Erro ao salvar a retificação.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const titulo = !original
+    ? modoRetificacao
+      ? "Retificar Apontamento"
+      : "Novo Apontamento"
+    : original.status === "REJEITADO"
+      ? "Corrigir e Reenviar"
+      : "Retificar Apontamento";
+
   return (
     <div className="space-y-5 sm:space-y-6 pb-4 sm:pb-12 max-w-3xl mx-auto">
       {/* Cabeçalho */}
@@ -321,22 +440,58 @@ export default function RvtFormPage() {
           </Link>
           <div>
             <div className="flex flex-wrap items-center gap-2">
-              <h1 className="text-xl sm:text-2xl font-bold text-dark">Novo Apontamento</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-dark">{titulo}</h1>
               <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary-light text-primary border border-primary/20">
-                RF04 · CAR-02
+                {modoRetificacao ? "RF35 · CAR-02" : "RF04 · CAR-02"}
               </span>
             </div>
             <p className="text-xs text-muted mt-0.5">
-              Registro de horas, escopo e fotos da jornada para a supervisão
+              {modoRetificacao
+                ? "Correção de horas, escopo e anexos dentro do prazo de 5 dias úteis"
+                : "Registro de horas, escopo e fotos da jornada para a supervisão"}
             </p>
           </div>
         </div>
 
-        <p className="text-xs text-muted flex items-center gap-1.5 sm:justify-end">
-          <Save className="w-3.5 h-3.5 shrink-0" />
-          {temConteudo ? "Rascunho salvo neste aparelho" : "O rascunho é salvo automaticamente"}
-        </p>
+        {!modoRetificacao && (
+          <p className="text-xs text-muted flex items-center gap-1.5 sm:justify-end">
+            <Save className="w-3.5 h-3.5 shrink-0" />
+            {temConteudo ? "Rascunho salvo neste aparelho" : "O rascunho é salvo automaticamente"}
+          </p>
+        )}
       </div>
+
+      {/* RF35 / RN02 — trava, parecer da rejeição e prazo */}
+      {original && motivoTrava && (
+        <div role="alert" className="p-3.5 border border-border bg-surface-subtle rounded-xl flex items-start gap-3">
+          <Lock className="w-5 h-5 text-dark shrink-0 mt-0.5" />
+          <div className="text-xs text-dark leading-relaxed">
+            <p className="font-bold">Edição bloqueada</p>
+            <p>{motivoTrava} Para corrigir este registro, fale com a supervisão.</p>
+          </div>
+        </div>
+      )}
+
+      {original && !motivoTrava && parecerRejeicao && (
+        <div className="p-3.5 border border-red-200 bg-red-50 rounded-xl flex items-start gap-3">
+          <MessageSquareWarning className="w-5 h-5 text-red-700 shrink-0 mt-0.5" />
+          <div className="text-xs text-red-900 leading-relaxed">
+            <p className="font-bold">Motivo da rejeição</p>
+            <p className="whitespace-pre-line">{parecerRejeicao}</p>
+          </div>
+        </div>
+      )}
+
+      {original && !motivoTrava && original.prazoRetificacao && (
+        <div className="p-3.5 border border-blue-200 bg-blue-50 rounded-xl flex items-start gap-3">
+          <CalendarClock className="w-5 h-5 text-blue-800 shrink-0 mt-0.5" />
+          <p className="text-xs text-blue-900 leading-relaxed">
+            Você pode {original.status === "REJEITADO" ? "corrigir e reenviar" : "retificar"} até{" "}
+            <strong>{formatarPrazo(original.prazoRetificacao)}</strong>. Contrato e data da jornada não
+            podem ser alterados; se estiverem errados, registre um novo apontamento.
+          </p>
+        </div>
+      )}
 
       {/* Avisos de rascunho restaurado e conexão */}
       {!isOnline && (
@@ -367,6 +522,7 @@ export default function RvtFormPage() {
       )}
 
       <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6" noValidate>
+        <fieldset disabled={travado} className="space-y-5 sm:space-y-6 min-w-0 disabled:opacity-60">
         {/* SEÇÃO 1: Obra e Jornada */}
         <div className="bg-surface border border-border rounded-xl p-4 sm:p-6 shadow-xs space-y-4">
           <div className="flex items-center gap-2.5 pb-2 border-b border-border/60">
@@ -388,7 +544,7 @@ export default function RvtFormPage() {
               <select
                 id="contrato"
                 value={contratoId}
-                disabled={isLoading}
+                disabled={isLoading || modoRetificacao}
                 onChange={(e) => {
                   setContratoId(e.target.value);
                   setErrors((prev) => ({ ...prev, contrato: "" }));
@@ -404,6 +560,12 @@ export default function RvtFormPage() {
                     {c.codigo} · {c.nome}
                   </option>
                 ))}
+                {/* O contrato do apontamento pode não estar mais ativo */}
+                {original && !contratos.some((c) => c.id === original.contrato.id) && (
+                  <option value={original.contrato.id}>
+                    {original.contrato.codigo} · {original.contrato.nome}
+                  </option>
+                )}
               </select>
               {errors.contrato && <p className="text-xs text-primary font-medium">{errors.contrato}</p>}
             </div>
@@ -418,6 +580,7 @@ export default function RvtFormPage() {
                 type="date"
                 value={dataJornada}
                 max={hojeISO()}
+                readOnly={modoRetificacao}
                 onChange={(e) => {
                   setDataJornada(e.target.value);
                   setErrors((prev) => ({ ...prev, data: "", horas: "" }));
@@ -574,6 +737,44 @@ export default function RvtFormPage() {
             className="hidden"
           />
 
+          {original && original.evidencias.length > 0 && (
+            <ul className="space-y-2" aria-label="Anexos já enviados">
+              {original.evidencias.map((ev) => {
+                const marcada = evidenciasRemover.includes(ev.id);
+                return (
+                  <li
+                    key={ev.id}
+                    className={`flex items-center gap-3 p-2.5 rounded-lg border ${
+                      marcada ? "border-red-200 bg-red-50/60" : "border-border bg-surface-subtle"
+                    }`}
+                  >
+                    <FileText className="w-4 h-4 text-muted shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className={`text-xs font-semibold text-dark truncate ${marcada ? "line-through" : ""}`}>
+                        {ev.nomeOriginal}
+                      </p>
+                      <p className="text-[11px] text-muted">
+                        {marcada ? "Será removido ao salvar" : formatarTamanhoArquivo(ev.tamanhoBytes)}
+                      </p>
+                    </div>
+                    <Button type="button" variant="ghost" size="sm" onClick={() => abrirEvidencia(ev.id)} aria-label={`Ver ${ev.nomeOriginal}`}>
+                      <Eye className="w-3.5 h-3.5" />
+                    </Button>
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => alternarRemocaoEvidencia(ev.id)}
+                      aria-label={marcada ? `Manter ${ev.nomeOriginal}` : `Remover ${ev.nomeOriginal}`}
+                    >
+                      {marcada ? <Undo2 className="w-3.5 h-3.5" /> : <Trash2 className="w-3.5 h-3.5 text-primary" />}
+                    </Button>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+
           {fotos.length > 0 && (
             <ul className="grid grid-cols-3 sm:grid-cols-5 gap-2.5">
               {fotos.map((foto) => (
@@ -609,7 +810,7 @@ export default function RvtFormPage() {
             type="button"
             variant="outline"
             size="lg"
-            disabled={fotos.length >= MAX_ARQUIVOS_POR_ENVIO || isProcessandoFotos}
+            disabled={fotos.length >= limiteNovosArquivos || isProcessandoFotos}
             onClick={() => inputFotosRef.current?.click()}
             className="w-full border-dashed"
           >
@@ -622,12 +823,16 @@ export default function RvtFormPage() {
               <>
                 <Camera className="w-5 h-5" />
                 {fotos.length > 0
-                  ? `Adicionar mais (${fotos.length}/${MAX_ARQUIVOS_POR_ENVIO})`
-                  : "Tirar foto ou anexar arquivo"}
+                  ? `Adicionar mais (${fotos.length}/${Math.max(limiteNovosArquivos, 0)})`
+                  : modoRetificacao
+                    ? "Anexar nova foto ou arquivo"
+                    : "Tirar foto ou anexar arquivo"}
               </>
             )}
           </Button>
         </div>
+
+        </fieldset>
 
         {/* Barra de ações — fixa no rodapé em telas pequenas */}
         <div className="sticky -bottom-4 -mx-4 px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-canvas/95 backdrop-blur-sm border-t border-border sm:static sm:mx-0 sm:px-0 sm:pt-4 sm:pb-0 sm:bg-transparent sm:backdrop-blur-none flex flex-col-reverse sm:flex-row sm:items-center sm:justify-end gap-2 sm:gap-3">
@@ -645,7 +850,7 @@ export default function RvtFormPage() {
             type="submit"
             variant="primary"
             size="lg"
-            disabled={isSubmitting || isLoading || isProcessandoFotos}
+            disabled={isSubmitting || isLoading || isProcessandoFotos || travado}
             className="w-full sm:w-auto sm:px-8"
           >
             {isSubmitting ? (
@@ -656,7 +861,13 @@ export default function RvtFormPage() {
             ) : (
               <>
                 <Send className="w-5 h-5" />
-                <span>Enviar Apontamento</span>
+                <span>
+                  {!modoRetificacao
+                    ? "Enviar Apontamento"
+                    : original?.status === "REJEITADO"
+                      ? "Reenviar para Homologação"
+                      : "Salvar Retificação"}
+                </span>
               </>
             )}
           </Button>

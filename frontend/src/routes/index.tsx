@@ -6,7 +6,8 @@ import ColaboradorFormPage from '../pages/ColaboradorFormPage'
 import LoginPage from '../pages/LoginPage'
 import RvtFormPage from '../pages/RvtFormPage'
 import RvtHistoricoPage from '../pages/RvtHistoricoPage'
-import AprovacaoRvtPage from '../pages/AprovacaoRvtPage'
+import AprovacaoRvtPage from '../pages/AprovacaoRvtPage';
+import RvtHomologacaoPage from '../pages/RvtHomologacaoPage';
 import AcessoNegadoPage from '../pages/AcessoNegadoPage'
 import TrocarSenhaPage from '../pages/TrocarSenhaPage'
 import PrivateRoute from '../components/auth/PrivateRoute'
@@ -35,9 +36,14 @@ export default function AppRoutes() {
           <Route element={<RoleRoute permitidos={PERMISSOES.novoRvt} />}>
             <Route path="rvt/novo" element={<RvtFormPage />} />
           </Route>
-
+        <Route element={<RoleRoute permitidos={PERMISSOES.retificarRvt} />}>
+          <Route path="rvt/:id/retificar" element={<RvtFormPage />} />
+        </Route>
           <Route element={<RoleRoute permitidos={PERMISSOES.historicoRvt} />}>
             <Route path="rvt/historico" element={<RvtHistoricoPage />} />
+          </Route>
+          <Route element={<RoleRoute permitidos={PERMISSOES.homologacaoRvt} />}>
+            <Route path="rvt/homologacao" element={<RvtHomologacaoPage />} />
           </Route>
 
           <Route element={<RoleRoute permitidos={PERMISSOES.aprovacaoRvt} />}>

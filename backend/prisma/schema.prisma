@@ -29,6 +29,15 @@ enum StatusRvt {
   REJEITADO
 }
 
+// Eventos do histórico do apontamento (RF32 / RF35)
+enum TipoEventoRvt {
+  SUBMISSAO
+  RETIFICACAO
+  REENVIO
+  HOMOLOGACAO
+  REJEICAO
+}
+
 // Contrato de obra ao qual todo apontamento deve estar vinculado (RN04).
 // O cadastro completo de contratos pertence a outra história; aqui ficam
 // apenas os campos necessários para o vínculo do RVT.
@@ -38,10 +47,15 @@ model ContratoObra {
   nome      String
   cliente   String?
   status    StatusContratoObra @default(ATIVO)
+  // RF32 — gestor operacional que delibera os apontamentos deste contrato
+  gestorResponsavelId String?  @map("gestor_responsavel_id")
   createdAt DateTime           @default(now()) @map("created_at")
   updatedAt DateTime           @updatedAt @map("updated_at")
 
-  apontamentos Rvt[]
+  gestorResponsavel Usuario? @relation(fields: [gestorResponsavelId], references: [id], onDelete: SetNull)
+  apontamentos      Rvt[]
+
+  @@index([gestorResponsavelId])
 
   @@map("contratos_obra")
 }
@@ -56,13 +70,17 @@ model Rvt {
   dataJornada      DateTime  @map("data_jornada") @db.Date
   horasTrabalhadas Decimal   @map("horas_trabalhadas") @db.Decimal(4, 2)
   escopoExecutado  String    @map("escopo_executado")
-  status                 StatusRvt @default(PENDENTE)
-  justificativaRejeicao  String?   @map("justificativa_rejeicao")
+  status                  StatusRvt @default(PENDENTE)
+  justificativaRejeicao   String?   @map("justificativa_rejeicao")
+  // RN02 — início da janela de retificação: submissão mais recente
+  // ou notificação da rejeição. O prazo é calculado em dias úteis.
+  janelaRetificacaoInicio DateTime  @default(now()) @map("janela_retificacao_inicio")
   createdAt        DateTime  @default(now()) @map("created_at")
   updatedAt        DateTime  @updatedAt @map("updated_at")
 
   contrato   ContratoObra   @relation(fields: [contratoId], references: [id])
   evidencias RvtEvidencia[]
+  historico  RvtHistorico[]
 
   @@index([colaboradorId, dataJornada])
   @@map("rvts")
@@ -83,6 +101,25 @@ model RvtEvidencia {
 
   @@index([rvtId])
   @@map("rvt_evidencias")
+}
+
+// Histórico imutável de submissões, retificações e deliberações (RF32/RF35)
+model RvtHistorico {
+  id             String        @id @default(uuid())
+  rvtId          String        @map("rvt_id")
+  tipo           TipoEventoRvt
+  // Conta que executou a ação (técnico ou gestor)
+  autorUsuarioId String?       @map("autor_usuario_id")
+  // RN30 — parecer da deliberação (obrigatório na rejeição)
+  parecer        String?
+  // Valores anteriores e novos dos campos alterados na retificação
+  alteracoes     Json?
+  createdAt      DateTime      @default(now()) @map("created_at")
+
+  rvt Rvt @relation(fields: [rvtId], references: [id], onDelete: Cascade)
+
+  @@index([rvtId, createdAt])
+  @@map("rvt_historico")
 }
 
 // ---------------------------------------------------------------------------
@@ -110,6 +147,7 @@ model Usuario {
   createdAt         DateTime     @default(now()) @map("created_at")
   updatedAt         DateTime     @updatedAt @map("updated_at")
   sessoes           Sessao[]
+  contratosGeridos  ContratoObra[]
 
   @@map("usuarios")
 }

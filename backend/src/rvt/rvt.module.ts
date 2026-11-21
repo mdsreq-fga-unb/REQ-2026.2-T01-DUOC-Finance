@@ -7,11 +7,6 @@ import { RvtService } from './rvt.service.js';
 
 @Module({
   controllers: [RvtController],
-  providers: [
-    RvtService,
-    EvidenciasStorageService,
-    JwtAuthGuard,
-    RolesGuard,
-  ],
+  providers: [RvtService, EvidenciasStorageService, JwtAuthGuard, RolesGuard],
 })
 export class RvtModule {}
