@@ -24,13 +24,16 @@ export default function AprovacaoRvtPage() {
   const [mensagem, setMensagem] = useState<string | null>(null)
 
   const carregar = useCallback(async () => {
-    setCarregando(true)
-    setErro(null)
     try {
       const [lista, contratosAtivos] = await Promise.all([
-        RvtService.listarParaAprovacao({ status, contratoId: contratoId || undefined }),
+        RvtService.listarParaAprovacao({
+          status,
+          contratoId: contratoId || undefined,
+        }),
         RvtService.listarContratosParaAprovacao(),
       ])
+
+      setErro(null)
       setItens(lista)
       setContratos(contratosAtivos)
       setSelecionado((atual) =>
