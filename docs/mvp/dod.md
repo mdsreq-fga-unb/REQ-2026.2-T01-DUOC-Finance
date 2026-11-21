@@ -109,6 +109,77 @@ As evidências visuais (prints de interface, logs de testes e critérios marcado
 
 <!-- AUTO-EVIDENCIAS-PR:START -->
 
+<!-- PR-189:START -->
+??? info "PR #189 — Feat/184 prestacao contas reembolsos (Gustavo2703 • 2026-11-21)"
+
+    - **Pull Request:** [#189](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/189) • **Issues:** #184 • **Requisitos:** `CAR-04`, `CAR-05`, `RF07`, `RF08`
+    - **CI / Verificações:** 2/3 check(s) aprovado(s) • **Critérios marcados:** 7 aceito(s), 1 pendente(s)
+
+    <div class="req-evidence-media-grid">
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/01-formulario-integrado-de-solicitacao-de-reembolso.png" alt="Formulário integrado de solicitação de reembolso">
+        <span class="req-evidence-media-caption">Formulário integrado de solicitação de reembolso (<code>pr-189/01-formulario-integrado-de-solicitacao-de-reembolso.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/02-validacao-da-obrigatoriedade-do-comprovante-fisc.png" alt="Validação da obrigatoriedade do comprovante fiscal">
+        <span class="req-evidence-media-caption">Validação da obrigatoriedade do comprovante fiscal (<code>pr-189/02-validacao-da-obrigatoriedade-do-comprovante-fisc.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/03-consulta-sql-da-solicitacao-pendente.png" alt="Consulta SQL da solicitação pendente">
+        <span class="req-evidence-media-caption">Consulta SQL da solicitação pendente (<code>pr-189/03-consulta-sql-da-solicitacao-pendente.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/04-solicitacao-aprovada-e-parecer-consultavel-pelo-.png" alt="Solicitação aprovada e parecer consultável pelo técnico">
+        <span class="req-evidence-media-caption">Solicitação aprovada e parecer consultável pelo técnico (<code>pr-189/04-solicitacao-aprovada-e-parecer-consultavel-pelo-.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/05-tela-de-acesso-nao-autorizado-para-tecnico.png" alt="Tela de acesso não autorizado para técnico">
+        <span class="req-evidence-media-caption">Tela de acesso não autorizado para técnico (<code>pr-189/05-tela-de-acesso-nao-autorizado-para-tecnico.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/06-consulta-sql-da-aprovacao-financeira-e-parecer.png" alt="Consulta SQL da aprovação financeira e parecer">
+        <span class="req-evidence-media-caption">Consulta SQL da aprovação financeira e parecer (<code>pr-189/06-consulta-sql-da-aprovacao-financeira-e-parecer.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/07-resultado-de-39-testes-do-frontend-aprovados.png" alt="Resultado de 39 testes do frontend aprovados">
+        <span class="req-evidence-media-caption">Resultado de 39 testes do frontend aprovados (<code>pr-189/07-resultado-de-39-testes-do-frontend-aprovados.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/08-resultado-de-205-testes-do-backend-aprovados-ant.png" alt="Resultado de 205 testes do backend aprovados antes da integração com RVT">
+        <span class="req-evidence-media-caption">Resultado de 205 testes do backend aprovados antes da integração com RVT (<code>pr-189/08-resultado-de-205-testes-do-backend-aprovados-ant.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/09-prototipo-do-historico-com-estados-pendente-apro.png" alt="Protótipo do histórico com estados pendente aprovado rejeitado">
+        <span class="req-evidence-media-caption">Protótipo do histórico com estados pendente aprovado rejeitado (<code>pr-189/09-prototipo-do-historico-com-estados-pendente-apro.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/10-prototipo-de-estado-vazio-apos-filtrar.png" alt="Protótipo de estado vazio após filtrar">
+        <span class="req-evidence-media-caption">Protótipo de estado vazio após filtrar (<code>pr-189/10-prototipo-de-estado-vazio-apos-filtrar.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/11-prototipo-do-painel-financeiro-de-reembolsos.png" alt="Protótipo do painel financeiro de reembolsos">
+        <span class="req-evidence-media-caption">Protótipo do painel financeiro de reembolsos (<code>pr-189/11-prototipo-do-painel-financeiro-de-reembolsos.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/12-prototipo-da-aba-de-aprovados.png" alt="Protótipo da aba de aprovados">
+        <span class="req-evidence-media-caption">Protótipo da aba de aprovados (<code>pr-189/12-prototipo-da-aba-de-aprovados.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/13-prototipo-da-busca-administrativa.png" alt="Protótipo da busca administrativa">
+        <span class="req-evidence-media-caption">Protótipo da busca administrativa (<code>pr-189/13-prototipo-da-busca-administrativa.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/14-prototipo-da-validacao-de-parecer-obrigatorio.png" alt="Protótipo da validação de parecer obrigatório">
+        <span class="req-evidence-media-caption">Protótipo da validação de parecer obrigatório (<code>pr-189/14-prototipo-da-validacao-de-parecer-obrigatorio.png</code>)</span>
+      </div>
+      <div class="req-evidence-media-card">
+        <img src="../../assets/images/evidencias/pr-189/15-prototipo-da-revisao-de-aprovacao-financeira.png" alt="Protótipo da revisão de aprovação financeira">
+        <span class="req-evidence-media-caption">Protótipo da revisão de aprovação financeira (<code>pr-189/15-prototipo-da-revisao-de-aprovacao-financeira.png</code>)</span>
+      </div>
+    </div>
+
+<!-- PR-189:END -->
+
 <!-- PR-185:START -->
 ??? info "PR #185 — Feat/181 rbac perfis protecao rotas (gih7915 • 2026-11-21)"
 
