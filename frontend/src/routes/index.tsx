@@ -6,7 +6,8 @@ import ColaboradorFormPage from '../pages/ColaboradorFormPage'
 import LoginPage from '../pages/LoginPage'
 import RvtFormPage from '../pages/RvtFormPage'
 import RvtHistoricoPage from '../pages/RvtHistoricoPage'
-import RvtHomologacaoPage from '../pages/RvtHomologacaoPage';
+import AprovacaoRvtPage from '../pages/AprovacaoRvtPage'
+import RvtHomologacaoPage from '../pages/RvtHomologacaoPage'
 import AcessoNegadoPage from '../pages/AcessoNegadoPage'
 import GestaoAcessosPage from '../pages/GestaoAcessosPage'
 import ReembolsoSolicitacaoPage from '../pages/ReembolsoSolicitacaoPage'
@@ -16,7 +17,22 @@ import ReembolsoDeliberacaoPage from '../pages/ReembolsoDeliberacaoPage'
 import TrocarSenhaPage from '../pages/TrocarSenhaPage'
 import PrivateRoute from '../components/auth/PrivateRoute'
 import RoleRoute from '../components/auth/RoleRoute'
-import { PERMISSOES } from '../auth/permissoes'
+import { useAuth } from '../auth/AuthContext'
+import { PERMISSOES, possuiPapel } from '../auth/permissoes'
+
+function RedirecionamentoRvt() {
+  const { usuario } = useAuth()
+  if (possuiPapel(usuario?.papel, PERMISSOES.historicoRvt)) {
+    return <Navigate to="/rvt/historico" replace />
+  }
+  if (possuiPapel(usuario?.papel, PERMISSOES.homologacaoRvt)) {
+    return <Navigate to="/rvt/homologacao" replace />
+  }
+  if (possuiPapel(usuario?.papel, PERMISSOES.aprovacaoRvt)) {
+    return <Navigate to="/rvt/aprovacao" replace />
+  }
+  return <Navigate to="/acesso-negado" replace />
+}
 
 function TelaEmDesenvolvimento({ titulo }: { titulo: string }) {
   return (
@@ -47,16 +63,19 @@ export default function AppRoutes() {
             <Route path="colaboradores/:id" element={<ColaboradorFormPage />} />
           </Route>
 
-          <Route path="rvt" element={<Navigate to="/rvt/historico" replace />} />
+          <Route path="rvt" element={<RedirecionamentoRvt />} />
 
           <Route element={<RoleRoute permitidos={PERMISSOES.novoRvt} />}>
             <Route path="rvt/novo" element={<RvtFormPage />} />
           </Route>
-        <Route element={<RoleRoute permitidos={PERMISSOES.retificarRvt} />}>
-          <Route path="rvt/:id/retificar" element={<RvtFormPage />} />
-        </Route>
+          <Route element={<RoleRoute permitidos={PERMISSOES.retificarRvt} />}>
+            <Route path="rvt/:id/retificar" element={<RvtFormPage />} />
+          </Route>
           <Route element={<RoleRoute permitidos={PERMISSOES.historicoRvt} />}>
             <Route path="rvt/historico" element={<RvtHistoricoPage />} />
+          </Route>
+          <Route element={<RoleRoute permitidos={PERMISSOES.aprovacaoRvt} />}>
+            <Route path="rvt/aprovacao" element={<AprovacaoRvtPage />} />
           </Route>
           <Route element={<RoleRoute permitidos={PERMISSOES.homologacaoRvt} />}>
             <Route path="rvt/homologacao" element={<RvtHomologacaoPage />} />

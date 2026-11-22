@@ -47,6 +47,13 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
   },
   {
     iconName: ClipboardCheck,
+    title: 'Aprovação RVT',
+    path: '/rvt/aprovacao',
+    papeis: PERMISSOES.aprovacaoRvt,
+    badge: 'CAR-03',
+  },
+  {
+    iconName: ClipboardCheck,
     title: 'Aprovação de Diárias',
     path: '/diarias/aprovacao',
     papeis: PERMISSOES.aprovacaoDiarias,
@@ -159,6 +166,7 @@ export default function Sidebar({ aberta, onFechar }: SidebarProps) {
           <NavLink
             key={path}
             to={path}
+            end={path === '/'}
             onClick={onFechar}
             className={({ isActive }) =>
               `flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${
