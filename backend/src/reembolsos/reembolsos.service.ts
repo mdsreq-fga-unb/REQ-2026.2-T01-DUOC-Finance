@@ -206,4 +206,13 @@ export class ReembolsosService {
     });
     return respostaReembolso(atualizado);
   }
+
+  /** RF07 — contratos ativos para vínculo de despesas por qualquer perfil habilitado. */
+  listarContratosAtivos() {
+    return this.prisma.contratoObra.findMany({
+      where: { status: StatusContratoObra.ATIVO },
+      select: { id: true, codigo: true, nome: true, cliente: true },
+      orderBy: { nome: 'asc' },
+    });
+  }
 }

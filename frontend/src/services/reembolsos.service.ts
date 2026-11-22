@@ -17,7 +17,7 @@ async function enviar<T>(url: string, opcoes: RequestInit = {}): Promise<T> {
 }
 
 export const ReembolsosApi = {
-  listarContratosAtivos() { return enviar<ContratoReembolso[]>('/api/rvt/contratos-ativos') },
+  listarContratosAtivos() { return enviar<ContratoReembolso[]>('/api/reembolsos/contratos-ativos') },
   listarMeusRvt() { return enviar<RvtReembolso[]>('/api/rvt/meus-apontamentos') },
   meus() { return enviar<ReembolsoApi[]>('/api/reembolsos/meus') },
   administrativos() { return enviar<ReembolsoApi[]>('/api/reembolsos') },

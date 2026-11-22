@@ -39,6 +39,13 @@ export class ReembolsosController {
     return this.service.listarMeus(usuario.usuarioId);
   }
 
+  /** RF07 — contratos ativos disponíveis para vincular despesas de reembolso. */
+  @Get('contratos-ativos')
+  @Roles(Role.TECNICO_CAMPO, Role.GESTOR_OBRAS, Role.ADMIN_FINANCEIRO)
+  listarContratosAtivos() {
+    return this.service.listarContratosAtivos();
+  }
+
   /** RF08 — lista global somente para ADMIN_FINANCEIRO. */
   @Get()
   @Roles(Role.ADMIN_FINANCEIRO)
