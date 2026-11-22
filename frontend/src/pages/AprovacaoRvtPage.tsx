@@ -116,22 +116,24 @@ export default function AprovacaoRvtPage() {
   }
 
   return (
-    <main className="space-y-5 pb-10">
+    <div className="space-y-6 pb-12">
       <header className="border-b border-border pb-4">
-        <p className="text-xs font-semibold uppercase tracking-wider text-primary">
-          Financeiro / Aprovação
-        </p>
-        <h1 className="mt-1 text-2xl font-bold text-dark">Aprovação e homologação</h1>
-        <p className="mt-1 text-sm text-muted">
+        <div className="flex flex-wrap items-center gap-2">
+          <h1 className="text-xl sm:text-2xl font-bold text-dark">Aprovação e homologação</h1>
+          <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary-light text-primary border border-primary/20">
+            CAR-03 · RVT
+          </span>
+        </div>
+        <p className="mt-1 text-xs text-muted leading-relaxed">
           Confira os apontamentos pendentes antes do fechamento quinzenal.
         </p>
       </header>
 
-      <section className="grid gap-3 rounded-xl border border-border bg-surface p-4 sm:grid-cols-2">
-        <label className="text-sm font-medium text-dark">
+      <section className="grid gap-3 rounded-xl border border-border bg-surface p-4 shadow-xs sm:grid-cols-2">
+        <label className="text-xs font-semibold text-dark">
           Status
           <select
-            className="mt-1 block h-11 w-full rounded-lg border border-border bg-surface px-3 text-sm"
+            className="mt-1.5 block h-11 w-full rounded-lg border border-border bg-surface px-3.5 text-sm text-dark focus:outline-hidden focus:border-primary focus:ring-2 focus:ring-primary/20"
             value={status}
             onChange={(e) => setStatus(e.target.value as StatusRvt)}
           >
@@ -141,10 +143,10 @@ export default function AprovacaoRvtPage() {
           </select>
         </label>
 
-        <label className="text-sm font-medium text-dark">
+        <label className="text-xs font-semibold text-dark">
           Contrato
           <select
-            className="mt-1 block h-11 w-full rounded-lg border border-border bg-surface px-3 text-sm"
+            className="mt-1.5 block h-11 w-full rounded-lg border border-border bg-surface px-3.5 text-sm text-dark focus:outline-hidden focus:border-primary focus:ring-2 focus:ring-primary/20"
             value={contratoId}
             onChange={(e) => setContratoId(e.target.value)}
           >
@@ -305,6 +307,6 @@ export default function AprovacaoRvtPage() {
           )}
         </section>
       </div>
-    </main>
+    </div>
   )
 }

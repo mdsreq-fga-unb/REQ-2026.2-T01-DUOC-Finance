@@ -12,7 +12,7 @@ const classes: Record<StatusReembolso,string> = {
   REJEITADO:'border-red-200 bg-red-50 text-red-700',
 }
 const nomes: Record<StatusReembolso,string> = {PENDENTE:'Pendente',APROVADO:'Aprovado',REJEITADO:'Rejeitado'}
-const classeSelect = 'w-full h-11 rounded-lg border border-border bg-surface px-3.5 text-sm text-dark focus:outline-hidden focus:border-primary'
+const classeSelect = 'w-full h-11 rounded-lg border border-border bg-surface px-3.5 text-sm text-dark focus:outline-hidden focus:border-primary focus:ring-2 focus:ring-primary/20'
 function dinheiro(c:number) {return new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(c/100)}
 function dataBR(s:string) {return s.split('-').reverse().join('/')}
 export default function ReembolsoHistoricoPage() {
@@ -48,18 +48,25 @@ export default function ReembolsoHistoricoPage() {
     finally {setBaixando('')}
   }
   return <div className="space-y-6 pb-12">
-    <header className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-      <div><p className="mb-2 text-xs text-muted">Financeiro / Meus reembolsos</p><h1 className="text-2xl font-bold text-dark">Meus reembolsos</h1>
-        <p className="text-sm text-muted">Acompanhe solicitações, status e pareceres financeiros.</p></div>
+    <header className="flex flex-col gap-4 border-b border-border pb-4 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <div className="flex flex-wrap items-center gap-2">
+          <h1 className="text-xl sm:text-2xl font-bold text-dark">Meus reembolsos</h1>
+          <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary-light text-primary border border-primary/20">
+            RF07 · CAR-04
+          </span>
+        </div>
+        <p className="text-xs text-muted mt-1 leading-relaxed">Acompanhe solicitações, status e pareceres financeiros.</p>
+      </div>
       <Link to="/reembolsos/solicitar"><Button><Plus className="h-4 w-4"/> Solicitar reembolso</Button></Link>
     </header>
     {erro && <div role="alert" className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-800">{erro} <button className="underline ml-2" onClick={()=>{setCarregando(true);setErro('');setTentativa(n=>n+1)}}>Tentar novamente</button></div>}
-    <section className="overflow-hidden rounded-xl border border-border bg-surface">
+    <section className="overflow-hidden rounded-xl border border-border bg-surface shadow-xs">
       <div className="px-5 py-5 border-b border-border"><h2 className="flex items-center gap-2 text-lg font-semibold"><ClipboardList className="h-5 w-5 text-primary"/> Minhas solicitações</h2></div>
       <div className="grid gap-4 p-5 sm:grid-cols-3">
-        <div><label className="text-xs font-semibold" htmlFor="ct-reem">Contrato</label><select className={classeSelect} id="ct-reem" value={contratoId} onChange={e=>{setContratoId(e.target.value);setDetalheId(null)}}><option value="">Todos</option>{contratos.map(c=><option value={c.id} key={c.id}>{c.nome}</option>)}</select></div>
-        <div><label className="text-xs font-semibold" htmlFor="mes-reem">Período</label><select className={classeSelect} id="mes-reem" value={periodo} onChange={e=>{setPeriodo(e.target.value);setDetalheId(null)}}><option value="">Todos</option>{periodos.map(m=><option value={m} key={m}>{m}</option>)}</select></div>
-        <div><label className="text-xs font-semibold" htmlFor="status-reem">Status</label><select className={classeSelect} id="status-reem" value={status} onChange={e=>{setStatus(e.target.value as FiltroStatus);setDetalheId(null)}}><option value="TODOS">Todos</option><option value="PENDENTE">Pendente</option><option value="APROVADO">Aprovado</option><option value="REJEITADO">Rejeitado</option></select></div>
+        <div><label className="mb-1.5 block text-xs font-semibold text-dark" htmlFor="ct-reem">Contrato</label><select className={classeSelect} id="ct-reem" value={contratoId} onChange={e=>{setContratoId(e.target.value);setDetalheId(null)}}><option value="">Todos</option>{contratos.map(c=><option value={c.id} key={c.id}>{c.nome}</option>)}</select></div>
+        <div><label className="mb-1.5 block text-xs font-semibold text-dark" htmlFor="mes-reem">Período</label><select className={classeSelect} id="mes-reem" value={periodo} onChange={e=>{setPeriodo(e.target.value);setDetalheId(null)}}><option value="">Todos</option>{periodos.map(m=><option value={m} key={m}>{m}</option>)}</select></div>
+        <div><label className="mb-1.5 block text-xs font-semibold text-dark" htmlFor="status-reem">Status</label><select className={classeSelect} id="status-reem" value={status} onChange={e=>{setStatus(e.target.value as FiltroStatus);setDetalheId(null)}}><option value="TODOS">Todos</option><option value="PENDENTE">Pendente</option><option value="APROVADO">Aprovado</option><option value="REJEITADO">Rejeitado</option></select></div>
       </div>
       {carregando?<p className="p-8 text-sm text-muted">Carregando solicitações...</p>:
       filtrados.length===0?<div className="space-y-3 border-t border-border p-10 text-center"><FileClock className="mx-auto h-8 w-8 text-muted"/><h3 className="font-semibold">Nenhuma solicitação encontrada</h3><p className="text-sm text-muted">Você não possui reembolsos correspondentes aos filtros.</p><Button variant="secondary" onClick={()=>{setContratoId('');setPeriodo('');setStatus('TODOS')}}>Limpar filtros</Button></div>:

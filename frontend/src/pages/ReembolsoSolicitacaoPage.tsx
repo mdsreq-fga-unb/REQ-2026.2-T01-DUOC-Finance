@@ -6,6 +6,8 @@ import Button from '../components/ui/Button'
 import Input from '../components/ui/Input'
 import { ReembolsosApi } from '../services/reembolsos.service'
 import type { ContratoReembolso, RvtReembolso } from '../types/reembolso-api'
+import { useAuth } from '../auth/AuthContext'
+import { PERMISSOES, possuiPapel } from '../auth/permissoes'
 
 const CATEGORIAS = ['Alimentação', 'Transporte', 'Combustível', 'Hospedagem', 'Materiais emergenciais', 'Outros']
 const MAX_BYTES = 5 * 1024 * 1024
@@ -26,6 +28,8 @@ function dinheiro(c: number) { return new Intl.NumberFormat('pt-BR',{style:'curr
 
 /** RF07 — envio real autenticado por JWT, sem fallback para mocks. */
 export default function ReembolsoSolicitacaoPage() {
+  const { usuario } = useAuth()
+  const podeVincularRvt = possuiPapel(usuario?.papel, PERMISSOES.historicoRvt)
   const [contratos,setContratos] = useState<ContratoReembolso[]>([])
   const [rvts,setRvts] = useState<RvtReembolso[]>([])
   const [carregando,setCarregando] = useState(true)
@@ -51,7 +55,9 @@ export default function ReembolsoSolicitacaoPage() {
       try {
         const [ativos,apontamentos] = await Promise.all([
           ReembolsosApi.listarContratosAtivos(),
-          ReembolsosApi.listarMeusRvt().catch(() => [] as RvtReembolso[]),
+          podeVincularRvt
+            ? ReembolsosApi.listarMeusRvt().catch(() => [] as RvtReembolso[])
+            : Promise.resolve([] as RvtReembolso[]),
         ])
         if (ativo) { setContratos(ativos); setRvts(apontamentos) }
       } catch (e) {
@@ -60,7 +66,7 @@ export default function ReembolsoSolicitacaoPage() {
     }
     void carregar()
     return () => { ativo = false }
-  },[tentativa])
+  },[tentativa, podeVincularRvt])
 
   const rvtsDoContrato = useMemo(() => rvts.filter(r => r.contrato.id === contratoId),[rvts,contratoId])
   const contrato = contratos.find(c=>c.id===contratoId)
@@ -96,23 +102,28 @@ export default function ReembolsoSolicitacaoPage() {
     } finally { setEnviando(false) }
   }
 
-  return <div className="space-y-6 pb-10">
-    <header><p className="mb-2 text-xs text-muted">Financeiro / Solicitar reembolso</p>
-      <h1 className="text-2xl font-bold tracking-tight text-dark">Solicitar reembolso</h1>
-      <p className="mt-1 text-sm text-muted">Registre sua despesa operacional vinculada a um contrato de obra.</p>
+  return <div className="space-y-6 pb-12">
+    <header className="border-b border-border pb-4">
+      <div className="flex flex-wrap items-center gap-2">
+        <h1 className="text-xl sm:text-2xl font-bold text-dark">Solicitar reembolso</h1>
+        <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary-light text-primary border border-primary/20">
+          RF07 · CAR-04
+        </span>
+      </div>
+      <p className="mt-1 text-xs text-muted leading-relaxed">Registre sua despesa operacional vinculada a um contrato de obra.</p>
     </header>
-    {codigoCriado ? <section className="rounded-xl border border-emerald-200 bg-emerald-50 p-6 space-y-3">
+    {codigoCriado ? <section className="rounded-xl border border-emerald-200 bg-emerald-50 p-6 shadow-xs space-y-3">
       <h2 className="font-semibold text-lg">Solicitação enviada com sucesso</h2>
       <p>Protocolo <strong>{codigoCriado}</strong> registrado com status Pendente.</p>
       <Link className="text-primary font-semibold underline" to="/reembolsos/meus">Consultar meus reembolsos</Link>
-    </section> : carregando ? <p>Carregando contratos...</p> : erroCarga ?
+    </section> : carregando ? <p className="text-sm text-muted">Carregando contratos...</p> : erroCarga ?
       <div role="alert" className="rounded-xl border border-red-200 bg-red-50 p-5 space-y-3">
         <p>{erroCarga}</p><Button variant="secondary" onClick={()=>setTentativa(v=>v+1)}>Tentar novamente</Button>
-      </div> : contratos.length===0 ? <section className="rounded-xl border border-border bg-surface p-6">
+      </div> : contratos.length===0 ? <section className="rounded-xl border border-border bg-surface p-6 shadow-xs">
         <h2 className="font-semibold">Nenhum contrato disponível</h2><p className="text-sm text-muted">Peça ao gestor a vinculação a um contrato ativo.</p>
       </section> :
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1.65fr)_minmax(250px,0.9fr)]">
-        <section className="rounded-xl border border-border bg-surface p-5 sm:p-7 space-y-5">
+        <section className="rounded-xl border border-border bg-surface p-5 sm:p-7 shadow-xs space-y-5">
           <h2 className="text-lg font-semibold">{revisando?'Revisar solicitação':'Prestação de contas'}</h2>
           {erroFormulario && <p role="alert" className="rounded-lg bg-red-50 border border-red-200 p-3 text-sm text-red-700">{erroFormulario}</p>}
           {revisando ? <div className="space-y-4 text-sm">
