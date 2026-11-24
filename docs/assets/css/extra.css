@@ -6564,6 +6564,79 @@
   background: rgba(255, 255, 255, 0.015);
 }
 
+/* Cores de fundo por Ciclo / Incremento (paleta pastel divergente) */
+.uui-cal-table td.uui-cal-cell.cycle-0 { background: rgba(148, 163, 184, 0.16); }
+.uui-cal-table td.uui-cal-cell.cycle-1 { background: rgba(37, 99, 235, 0.18); }
+.uui-cal-table td.uui-cal-cell.cycle-2 { background: rgba(132, 204, 22, 0.22); }
+.uui-cal-table td.uui-cal-cell.cycle-3 { background: rgba(244, 63, 94, 0.18); }
+.uui-cal-table td.uui-cal-cell.cycle-4 { background: rgba(245, 158, 11, 0.22); }
+
+.uui-cal-table td.uui-cal-cell.cycle-0:hover { background: rgba(148, 163, 184, 0.24); }
+.uui-cal-table td.uui-cal-cell.cycle-1:hover { background: rgba(37, 99, 235, 0.26); }
+.uui-cal-table td.uui-cal-cell.cycle-2:hover { background: rgba(132, 204, 22, 0.30); }
+.uui-cal-table td.uui-cal-cell.cycle-3:hover { background: rgba(244, 63, 94, 0.26); }
+.uui-cal-table td.uui-cal-cell.cycle-4:hover { background: rgba(245, 158, 11, 0.30); }
+
+[data-md-color-scheme="slate"] .uui-cal-table td.uui-cal-cell.cycle-0 { background: rgba(148, 163, 184, 0.14); }
+[data-md-color-scheme="slate"] .uui-cal-table td.uui-cal-cell.cycle-1 { background: rgba(59, 130, 246, 0.22); }
+[data-md-color-scheme="slate"] .uui-cal-table td.uui-cal-cell.cycle-2 { background: rgba(132, 204, 22, 0.22); }
+[data-md-color-scheme="slate"] .uui-cal-table td.uui-cal-cell.cycle-3 { background: rgba(244, 63, 94, 0.22); }
+[data-md-color-scheme="slate"] .uui-cal-table td.uui-cal-cell.cycle-4 { background: rgba(245, 158, 11, 0.24); }
+
+[data-md-color-scheme="slate"] .uui-cal-table td.uui-cal-cell.cycle-0:hover { background: rgba(148, 163, 184, 0.22); }
+[data-md-color-scheme="slate"] .uui-cal-table td.uui-cal-cell.cycle-1:hover { background: rgba(59, 130, 246, 0.30); }
+[data-md-color-scheme="slate"] .uui-cal-table td.uui-cal-cell.cycle-2:hover { background: rgba(132, 204, 22, 0.30); }
+[data-md-color-scheme="slate"] .uui-cal-table td.uui-cal-cell.cycle-3:hover { background: rgba(244, 63, 94, 0.30); }
+[data-md-color-scheme="slate"] .uui-cal-table td.uui-cal-cell.cycle-4:hover { background: rgba(245, 158, 11, 0.32); }
+
+/* Legenda de Ciclos / Incrementos abaixo do calendário */
+.uui-cycle-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  padding: 14px 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.015);
+  font-size: 0.78rem;
+}
+
+[data-md-color-scheme="slate"] .uui-cycle-legend {
+  border-top-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.uui-cycle-legend-title {
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+  margin-right: 4px;
+}
+
+.uui-cycle-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--md-default-fg-color);
+}
+
+.uui-cycle-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  flex-shrink: 0;
+}
+
+[data-md-color-scheme="slate"] .uui-cycle-swatch {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.uui-cycle-swatch.cycle-0 { background: rgba(148, 163, 184, 0.45); }
+.uui-cycle-swatch.cycle-1 { background: rgba(37, 99, 235, 0.50); }
+.uui-cycle-swatch.cycle-2 { background: rgba(132, 204, 22, 0.55); }
+.uui-cycle-swatch.cycle-3 { background: rgba(244, 63, 94, 0.50); }
+.uui-cycle-swatch.cycle-4 { background: rgba(245, 158, 11, 0.55); }
+
 /* Célula Top & Números */
 .uui-cell-top {
   display: flex;
@@ -7446,6 +7519,7 @@
 
 /* Regras de ativação das abas de filtro via checked */
 #uui-filter-all:checked ~ .uui-filter-tabs-bar .filter-all,
+#uui-filter-ciclos:checked ~ .uui-filter-tabs-bar .filter-ciclos,
 #uui-filter-ritos:checked ~ .uui-filter-tabs-bar .filter-ritos,
 #uui-filter-marcos:checked ~ .uui-filter-tabs-bar .filter-marcos,
 #uui-filter-rad:checked ~ .uui-filter-tabs-bar .filter-rad {
@@ -7456,6 +7530,10 @@
 }
 
 /* Ocultação e filtragem dos event chips em tempo real */
+#uui-filter-ciclos:checked ~ .uui-calendar-body .uui-event-chip:not([data-cycle-boundary="true"]) {
+  display: none !important;
+}
+
 #uui-filter-ritos:checked ~ .uui-calendar-body .uui-event-chip:not([data-category="ritos"]) {
   display: none !important;
 }
@@ -7596,6 +7674,581 @@
 
 .uui-event-chip:hover .uui-chip-tooltip {
   display: block !important;
+}
+
+/* Evita corte de tooltips nas bordas superior e laterais da tabela */
+.uui-cal-table tbody tr:nth-child(-n+2) .uui-chip-tooltip {
+  bottom: auto;
+  top: calc(100% + 6px);
+}
+
+.uui-cal-table tbody tr:nth-child(-n+2) .uui-chip-tooltip::after {
+  top: auto;
+  bottom: 100%;
+  border-top-color: transparent;
+  border-bottom-color: #1e293b;
+}
+
+.uui-cal-table tbody td:first-child .uui-chip-tooltip {
+  left: 0;
+  transform: none;
+}
+
+.uui-cal-table tbody td:first-child .uui-chip-tooltip::after {
+  left: 18px;
+  transform: none;
+}
+
+.uui-cal-table tbody td:last-child .uui-chip-tooltip {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+
+.uui-cal-table tbody td:last-child .uui-chip-tooltip::after {
+  left: auto;
+  right: 18px;
+  transform: none;
+}
+
+/* ============================================================
+   TOOLBAR DE FILTROS & PESQUISA — DETALHAMENTO DE CICLOS
+   ============================================================ */
+
+.ciclos-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 18px 0 22px;
+  padding: 14px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  background: var(--md-default-bg-color, #ffffff);
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+[data-md-color-scheme="slate"] .ciclos-toolbar {
+  border-color: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.ciclos-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ciclos-filter-btn {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+[data-md-color-scheme="slate"] .ciclos-filter-btn {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.ciclos-filter-btn:hover {
+  border-color: var(--duoc-primary);
+  color: var(--duoc-primary);
+}
+
+.ciclos-filter-btn.active {
+  background: var(--duoc-primary);
+  color: #ffffff;
+  border-color: var(--duoc-primary);
+  box-shadow: 0 1px 3px rgba(165, 22, 43, 0.25);
+}
+
+.ciclos-search-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ciclos-search-wrap {
+  position: relative;
+  flex: 1 1 280px;
+  max-width: 480px;
+}
+
+.ciclos-search-icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--md-default-fg-color--light);
+  pointer-events: none;
+}
+
+.ciclos-search-input {
+  width: 100%;
+  padding: 7px 12px 7px 34px;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: var(--md-default-bg-color, #ffffff);
+  color: var(--md-typeset-color);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+[data-md-color-scheme="slate"] .ciclos-search-input {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.ciclos-search-input:focus {
+  border-color: var(--duoc-primary);
+  box-shadow: 0 0 0 2px rgba(165, 22, 43, 0.15);
+}
+
+.ciclos-results-count {
+  font-size: 0.76rem;
+  color: var(--md-default-fg-color--light);
+  font-weight: 500;
+}
+
+.ciclos-empty-state {
+  display: none;
+  text-align: center;
+  padding: 28px 16px;
+  border: 1px dashed rgba(0, 0, 0, 0.14);
+  border-radius: 12px;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+}
+
+[data-md-color-scheme="slate"] .ciclos-empty-state {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Roadmap integrado como botões de filtro + pesquisa */
+.roadmap-header-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.roadmap-all-btn {
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: var(--md-default-bg-color, #ffffff);
+  color: var(--md-typeset-color);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+[data-md-color-scheme="slate"] .roadmap-all-btn {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.roadmap-all-btn:hover,
+.roadmap-all-btn.active {
+  background: var(--duoc-primary);
+  color: #ffffff;
+  border-color: var(--duoc-primary);
+  box-shadow: 0 1px 4px rgba(165, 22, 43, 0.25);
+}
+
+.roadmap-track {
+  cursor: pointer;
+}
+
+/* Compacta a Linha Temporal para parecer botões de filtro reais */
+.md-typeset .iteration-roadmap {
+  padding: 14px 16px !important;
+  margin-bottom: 16px !important;
+}
+
+.md-typeset .iteration-roadmap .roadmap-header {
+  margin-bottom: 10px !important;
+}
+
+.md-typeset .roadmap-tracks.compact-tracks {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+.md-typeset a.roadmap-track {
+  flex: 1 1 155px !important;
+  padding: 8px 11px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  background: var(--md-default-bg-color, #ffffff) !important;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05) !important;
+  gap: 3px !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a.roadmap-track {
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.md-typeset a.roadmap-track:hover {
+  border-color: var(--duoc-primary) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 6px rgba(165, 22, 43, 0.12) !important;
+}
+
+.md-typeset a.roadmap-track .track-header {
+  margin-bottom: 2px !important;
+}
+
+.md-typeset a.roadmap-track .track-name {
+  font-size: 0.78rem !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+}
+
+.md-typeset a.roadmap-track .track-footer {
+  margin-top: 2px !important;
+}
+
+.md-typeset a.roadmap-track .track-dates {
+  font-size: 0.7rem !important;
+}
+
+.roadmap-track.is-selected {
+  border-color: var(--duoc-primary) !important;
+  background: rgba(165, 22, 43, 0.06) !important;
+  box-shadow: 0 0 0 2px rgba(165, 22, 43, 0.22) !important;
+}
+
+[data-md-color-scheme="slate"] .roadmap-track.is-selected {
+  background: rgba(224, 90, 109, 0.12) !important;
+}
+
+.roadmap-search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+[data-md-color-scheme="slate"] .roadmap-search-bar {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Cards de Detalhamento estilo Lumio UI / Req-Card */
+.ciclo-detail-card {
+  border-radius: 10px;
+  margin-bottom: 1.15rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+[data-md-color-scheme="slate"] .ciclo-detail-card {
+  background: rgba(22, 24, 29, 0.9);
+  border-color: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+}
+
+.ciclo-detail-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+[data-md-color-scheme="slate"] .ciclo-detail-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.ciclo-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 11px 16px;
+  background: rgba(148, 163, 184, 0.14);
+  color: var(--md-typeset-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+[data-md-color-scheme="slate"] .ciclo-card-head {
+  background: rgba(148, 163, 184, 0.14);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Headers dos cards coloridos pelo Status (Verde, Azul, Amarelo, Vermelho, Cinza) */
+.ciclo-detail-card.status-concluido .ciclo-card-head { background: rgba(34, 197, 94, 0.16); }
+.ciclo-detail-card.status-parcial .ciclo-card-head { background: rgba(59, 130, 246, 0.16); }
+.ciclo-detail-card.status-andamento .ciclo-card-head { background: rgba(234, 179, 8, 0.20); }
+.ciclo-detail-card.status-atraso .ciclo-card-head { background: rgba(239, 68, 68, 0.16); }
+.ciclo-detail-card.status-planejado .ciclo-card-head { background: rgba(148, 163, 184, 0.18); }
+
+[data-md-color-scheme="slate"] .ciclo-detail-card.status-concluido .ciclo-card-head { background: rgba(34, 197, 94, 0.20); }
+[data-md-color-scheme="slate"] .ciclo-detail-card.status-parcial .ciclo-card-head { background: rgba(59, 130, 246, 0.20); }
+[data-md-color-scheme="slate"] .ciclo-detail-card.status-andamento .ciclo-card-head { background: rgba(234, 179, 8, 0.22); }
+[data-md-color-scheme="slate"] .ciclo-detail-card.status-atraso .ciclo-card-head { background: rgba(239, 68, 68, 0.20); }
+[data-md-color-scheme="slate"] .ciclo-detail-card.status-planejado .ciclo-card-head { background: rgba(148, 163, 184, 0.16); }
+
+.ciclo-card-head-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.ciclo-rad-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #1e293b;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-md-color-scheme="slate"] .ciclo-rad-badge {
+  background: rgba(0, 0, 0, 0.25);
+  color: #f1f5f9;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.ciclo-card-title {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--md-typeset-color);
+}
+
+.ciclo-metrics-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 9px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #f8fafc;
+}
+
+[data-md-color-scheme="slate"] .ciclo-metrics-strip {
+  border-bottom-color: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.ciclo-metric-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.76rem;
+}
+
+.ciclo-metric-label {
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+}
+
+.ciclo-metric-label::after {
+  content: ":";
+}
+
+.ciclo-metric-value {
+  font-weight: 600;
+  color: var(--md-typeset-color);
+}
+
+.ciclo-body-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+.ciclo-col-box {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+  background: #fafbfc;
+}
+
+[data-md-color-scheme="slate"] .ciclo-col-box {
+  border-color: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.ciclo-col-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;
+  color: var(--md-typeset-color);
+}
+
+.ciclo-col-title::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #94a3b8;
+  flex-shrink: 0;
+}
+
+.ciclo-col-box.is-work .ciclo-col-title::before { background: #3b82f6; }
+.ciclo-col-box.is-done .ciclo-col-title::before { background: #10b981; }
+.ciclo-col-box.is-pending .ciclo-col-title::before { background: #f59e0b; }
+
+.ciclo-col-box ul {
+  margin: 0 !important;
+  padding-left: 16px !important;
+  font-size: 0.8rem;
+  line-height: 1.48;
+}
+
+.ciclo-col-box li {
+  margin-bottom: 3px;
+}
+
+/* Faixa de Rastreabilidade (DoR, DoD, Requisitos) e Débito Técnico */
+.ciclo-trace-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  padding: 9px 16px;
+  border-top: 1px solid #f1f5f9;
+  background: #f8fafc;
+  font-size: 0.76rem;
+}
+
+[data-md-color-scheme="slate"] .ciclo-trace-strip {
+  border-top-color: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.ciclo-trace-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.ciclo-trace-label {
+  font-weight: 700;
+  color: var(--md-default-fg-color--light);
+}
+
+.ciclo-debt-note {
+  margin: 0 16px 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.20);
+  color: var(--md-typeset-color);
+}
+
+[data-md-color-scheme="slate"] .ciclo-debt-note {
+  background: rgba(239, 68, 68, 0.10);
+  border-color: rgba(239, 68, 68, 0.26);
+}
+
+.md-typeset a.roadmap-track .track-subtitle {
+  font-size: 0.72rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.25;
+  margin: 1px 0 3px;
+}
+
+/* Padronização semântica das tags de status (Verde, Azul, Amarelo, Vermelho, Cinza) */
+.md-typeset .track-status-pill.done,
+.md-typeset .status-pill.concluido {
+  background: #dcfce7 !important;
+  color: #15803d !important;
+  border: 1px solid #bbf7d0 !important;
+}
+
+.md-typeset .track-status-pill.partial,
+.md-typeset .status-pill.parcial {
+  background: #dbeafe !important;
+  color: #1d4ed8 !important;
+  border: 1px solid #bfdbfe !important;
+}
+
+.md-typeset .track-status-pill.active,
+.md-typeset .status-pill.andamento {
+  background: #fef9c3 !important;
+  color: #a16207 !important;
+  border: 1px solid #fde047 !important;
+}
+
+.md-typeset .track-status-pill.delayed,
+.md-typeset .status-pill.atraso {
+  background: #fee2e2 !important;
+  color: #b91c1c !important;
+  border: 1px solid #fecaca !important;
+}
+
+.md-typeset .track-status-pill.planned,
+.md-typeset .status-pill.planejado,
+.md-typeset .status-pill.afazer {
+  background: #f1f5f9 !important;
+  color: #475569 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .track-status-pill.done,
+[data-md-color-scheme="slate"] .md-typeset .status-pill.concluido {
+  background: rgba(34, 197, 94, 0.16) !important;
+  color: #4ade80 !important;
+  border-color: rgba(34, 197, 94, 0.30) !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .track-status-pill.partial,
+[data-md-color-scheme="slate"] .md-typeset .status-pill.parcial {
+  background: rgba(59, 130, 246, 0.16) !important;
+  color: #60a5fa !important;
+  border-color: rgba(59, 130, 246, 0.30) !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .track-status-pill.active,
+[data-md-color-scheme="slate"] .md-typeset .status-pill.andamento {
+  background: rgba(234, 179, 8, 0.18) !important;
+  color: #facc15 !important;
+  border-color: rgba(234, 179, 8, 0.34) !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .track-status-pill.delayed,
+[data-md-color-scheme="slate"] .md-typeset .status-pill.atraso {
+  background: rgba(239, 68, 68, 0.16) !important;
+  color: #f87171 !important;
+  border-color: rgba(239, 68, 68, 0.30) !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .track-status-pill.planned,
+[data-md-color-scheme="slate"] .md-typeset .status-pill.planejado,
+[data-md-color-scheme="slate"] .md-typeset .status-pill.afazer {
+  background: rgba(148, 163, 184, 0.16) !important;
+  color: #94a3b8 !important;
+  border-color: rgba(148, 163, 184, 0.30) !important;
 }
 
 /* ============================================================

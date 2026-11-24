@@ -29,6 +29,15 @@ enum StatusRvt {
   REJEITADO
 }
 
+// Eventos do histórico do apontamento (RF32 / RF35)
+enum TipoEventoRvt {
+  SUBMISSAO
+  RETIFICACAO
+  REENVIO
+  HOMOLOGACAO
+  REJEICAO
+}
+
 // Contrato de obra ao qual todo apontamento deve estar vinculado (RN04).
 // O cadastro completo de contratos pertence a outra história; aqui ficam
 // apenas os campos necessários para o vínculo do RVT.
@@ -38,10 +47,16 @@ model ContratoObra {
   nome      String
   cliente   String?
   status    StatusContratoObra @default(ATIVO)
+  // RF32 — gestor operacional que delibera os apontamentos deste contrato
+  gestorResponsavelId String?  @map("gestor_responsavel_id")
   createdAt DateTime           @default(now()) @map("created_at")
   updatedAt DateTime           @updatedAt @map("updated_at")
 
-  apontamentos Rvt[]
+  gestorResponsavel Usuario? @relation(fields: [gestorResponsavelId], references: [id], onDelete: SetNull)
+  apontamentos      Rvt[]
+  reembolsos        SolicitacaoReembolso[]
+
+  @@index([gestorResponsavelId])
 
   @@map("contratos_obra")
 }
@@ -56,12 +71,18 @@ model Rvt {
   dataJornada      DateTime  @map("data_jornada") @db.Date
   horasTrabalhadas Decimal   @map("horas_trabalhadas") @db.Decimal(4, 2)
   escopoExecutado  String    @map("escopo_executado")
-  status           StatusRvt @default(PENDENTE)
+  status                  StatusRvt @default(PENDENTE)
+  justificativaRejeicao   String?   @map("justificativa_rejeicao")
+  // RN02 — início da janela de retificação: submissão mais recente
+  // ou notificação da rejeição. O prazo é calculado em dias úteis.
+  janelaRetificacaoInicio DateTime  @default(now()) @map("janela_retificacao_inicio")
   createdAt        DateTime  @default(now()) @map("created_at")
   updatedAt        DateTime  @updatedAt @map("updated_at")
 
   contrato   ContratoObra   @relation(fields: [contratoId], references: [id])
   evidencias RvtEvidencia[]
+  historico  RvtHistorico[]
+  reembolsos SolicitacaoReembolso[]
 
   @@index([colaboradorId, dataJornada])
   @@map("rvts")
@@ -84,16 +105,35 @@ model RvtEvidencia {
   @@map("rvt_evidencias")
 }
 
+// Histórico imutável de submissões, retificações e deliberações (RF32/RF35)
+model RvtHistorico {
+  id             String        @id @default(uuid())
+  rvtId          String        @map("rvt_id")
+  tipo           TipoEventoRvt
+  // Conta que executou a ação (técnico ou gestor)
+  autorUsuarioId String?       @map("autor_usuario_id")
+  // RN30 — parecer da deliberação (obrigatório na rejeição)
+  parecer        String?
+  // Valores anteriores e novos dos campos alterados na retificação
+  alteracoes     Json?
+  createdAt      DateTime      @default(now()) @map("created_at")
+
+  rvt Rvt @relation(fields: [rvtId], references: [id], onDelete: Cascade)
+
+  @@index([rvtId, createdAt])
+  @@map("rvt_historico")
+}
+
 // ---------------------------------------------------------------------------
 // CAR-07 · Controle de acesso e sessões (issue #155)
 // O vínculo com o cadastro de colaboradores será integrado separadamente.
 // ---------------------------------------------------------------------------
 
 enum PapelUsuario {
+  ADMIN_SISTEMA
   ADMIN_FINANCEIRO
-  GESTOR_OPERACIONAL
+  GESTOR_OBRAS
   TECNICO_CAMPO
-  AUDITOR_EXTERNO
 }
 
 model Usuario {
@@ -109,8 +149,38 @@ model Usuario {
   createdAt         DateTime     @default(now()) @map("created_at")
   updatedAt         DateTime     @updatedAt @map("updated_at")
   sessoes           Sessao[]
+  eventosOperados   EventoAcesso[] @relation("EventosOperados")
+  eventosRecebidos  EventoAcesso[] @relation("EventosRecebidos")
+  contratosGeridos  ContratoObra[]
+  reembolsosSolicitados SolicitacaoReembolso[] @relation("ReembolsosSolicitados")
+  reembolsosDeliberados SolicitacaoReembolso[] @relation("ReembolsosDeliberados")
 
   @@map("usuarios")
+}
+
+enum AcaoAcesso {
+  PAPEL_ALTERADO
+  CONTA_ATIVADA
+  CONTA_DESATIVADA
+}
+
+model EventoAcesso {
+  id            String     @id @default(uuid())
+  operadorId    String     @map("operador_id")
+  usuarioId     String     @map("usuario_id")
+  acao          AcaoAcesso
+  papelAnterior PapelUsuario? @map("papel_anterior")
+  papelNovo     PapelUsuario? @map("papel_novo")
+  ativoAnterior Boolean?   @map("ativo_anterior")
+  ativoNovo     Boolean?   @map("ativo_novo")
+  ocorridoEm    DateTime   @default(now()) @map("ocorrido_em")
+
+  operador Usuario @relation("EventosOperados", fields: [operadorId], references: [id], onDelete: Restrict)
+  usuario  Usuario @relation("EventosRecebidos", fields: [usuarioId], references: [id], onDelete: Restrict)
+
+  @@index([usuarioId, ocorridoEm])
+  @@index([operadorId, ocorridoEm])
+  @@map("eventos_acesso")
 }
 
 model Sessao {
@@ -125,4 +195,54 @@ model Sessao {
 
   @@index([usuarioId, revogadaEm])
   @@map("sessoes")
+}
+
+// ---------------------------------------------------------------------------
+// CAR-04 · Prestação de contas e reembolsos (issue #184, RF07 / RF08)
+// ---------------------------------------------------------------------------
+
+enum StatusReembolso {
+  PENDENTE
+  APROVADO
+  REJEITADO
+}
+
+model SolicitacaoReembolso {
+  id                String           @id @default(uuid())
+  // Código legível (ex.: DES-0086); será atribuído exclusivamente pelo backend.
+  codigo            String           @unique @db.VarChar(32)
+  solicitanteId     String           @map("solicitante_id")
+  contratoId        String           @map("contrato_id")
+  rvtId             String?          @map("rvt_id")
+  categoria         String           @db.VarChar(80)
+  descricao         String           @db.Text
+  valorCentavos     Int              @map("valor_centavos")
+  dataDespesa       DateTime         @map("data_despesa") @db.Date
+  status            StatusReembolso  @default(PENDENTE)
+  // Conferência do documento e parecer são requisitos do processo de deliberação.
+  valorAprovadoCentavos Int?         @map("valor_aprovado_centavos")
+  parecer           String?          @db.Text
+  deliberadoPorId   String?          @map("deliberado_por_id")
+  deliberadoEm      DateTime?        @map("deliberado_em")
+
+  // Guardar apenas metadados e referência privada ao arquivo, nunca URL pública.
+  comprovanteNomeOriginal String     @map("comprovante_nome_original") @db.VarChar(255)
+  comprovanteMimeType     String     @map("comprovante_mime_type") @db.VarChar(100)
+  comprovanteTamanhoBytes Int        @map("comprovante_tamanho_bytes")
+  comprovanteHashSha256   String     @map("comprovante_hash_sha256") @db.VarChar(64)
+  comprovanteChaveArquivo String     @map("comprovante_chave_arquivo") @db.VarChar(512)
+
+  createdAt         DateTime         @default(now()) @map("created_at")
+  updatedAt         DateTime         @updatedAt @map("updated_at")
+
+  solicitante       Usuario          @relation("ReembolsosSolicitados", fields: [solicitanteId], references: [id], onDelete: Restrict)
+  deliberadoPor     Usuario?         @relation("ReembolsosDeliberados", fields: [deliberadoPorId], references: [id], onDelete: Restrict)
+  contrato          ContratoObra     @relation(fields: [contratoId], references: [id], onDelete: Restrict)
+  rvt               Rvt?             @relation(fields: [rvtId], references: [id], onDelete: Restrict)
+
+  @@index([solicitanteId, dataDespesa])
+  @@index([contratoId, status])
+  @@index([status, createdAt])
+  @@index([rvtId])
+  @@map("solicitacoes_reembolso")
 }

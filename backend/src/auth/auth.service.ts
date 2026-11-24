@@ -96,7 +96,7 @@ export class AuthService {
       UPDATE "usuarios"
       SET "tentativas_falhas" =
         CASE
-          WHEN "bloqueado_ate" IS NOT NULL AND "bloqueado_ate" <= ${agora}
+          WHEN "bloqueado_ate" IS NOT NULL AND "bloqueado_ate" <= ${agora}::timestamp
             THEN 1
           ELSE "tentativas_falhas" + 1
         END,
@@ -104,17 +104,17 @@ export class AuthService {
           CASE
             WHEN (
               CASE
-                WHEN "bloqueado_ate" IS NOT NULL AND "bloqueado_ate" <= ${agora}
+                WHEN "bloqueado_ate" IS NOT NULL AND "bloqueado_ate" <= ${agora}::timestamp
                   THEN 1
                 ELSE "tentativas_falhas" + 1
               END
             ) >= ${MAX_TENTATIVAS_LOGIN}
-              THEN ${bloqueadoAte}
+              THEN ${bloqueadoAte}::timestamp
             ELSE NULL
           END
       WHERE "id" = ${usuarioId}
         AND "ativo" = TRUE
-        AND ("bloqueado_ate" IS NULL OR "bloqueado_ate" <= ${agora})
+        AND ("bloqueado_ate" IS NULL OR "bloqueado_ate" <= ${agora}::timestamp)
     `;
   }
 

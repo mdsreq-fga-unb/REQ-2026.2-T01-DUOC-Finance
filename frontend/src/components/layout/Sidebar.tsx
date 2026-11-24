@@ -11,7 +11,11 @@ import {
   LogOut,
   ClipboardPlus,
   History,
+  ClipboardCheck,
   X,
+  ReceiptText,
+  FilePlus2,
+  ShieldCheck,
 } from "lucide-react";
 
 const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
@@ -42,10 +46,56 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
     papeis: PERMISSOES.historicoRvt,
   },
   {
+    iconName: ClipboardCheck,
+    title: 'Aprovação RVT',
+    path: '/rvt/aprovacao',
+    papeis: PERMISSOES.aprovacaoRvt,
+    badge: 'CAR-03',
+  },
+  {
+    iconName: ClipboardCheck,
+    title: 'Aprovação de Diárias',
+    path: '/diarias/aprovacao',
+    papeis: PERMISSOES.aprovacaoDiarias,
+  },
+  {
+    iconName: ClipboardCheck,
+    title: "Homologar Apontamentos",
+    path: "/rvt/homologacao",
+    papeis: PERMISSOES.homologacaoRvt,
+    badge: 'RF32',
+  },
+  {
+    iconName: FilePlus2,
+    title: 'Solicitar reembolso',
+    path: '/reembolsos/solicitar',
+    papeis: PERMISSOES.solicitarReembolso,
+    badge: 'RF07',
+  },
+  {
+    iconName: ReceiptText,
+    title: 'Meus reembolsos',
+    path: '/reembolsos/meus',
+    papeis: PERMISSOES.solicitarReembolso,
+  },
+  {
+    iconName: ReceiptText,
+    title: 'Administração de reembolsos',
+    path: '/reembolsos/administracao',
+    papeis: PERMISSOES.administrarReembolsos,
+    badge: 'RF08',
+  },
+  {
     iconName: CircleDollarSign,
     title: 'Fechamento',
     path: '/fechamento',
     papeis: PERMISSOES.fechamento,
+  },
+  {
+    iconName: ShieldCheck,
+    title: 'Gestão de Acessos',
+    path: '/acessos',
+    papeis: PERMISSOES.gestaoAcessos,
   },
 ]
 
@@ -116,6 +166,7 @@ export default function Sidebar({ aberta, onFechar }: SidebarProps) {
           <NavLink
             key={path}
             to={path}
+            end={path === '/'}
             onClick={onFechar}
             className={({ isActive }) =>
               `flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${

@@ -7,8 +7,25 @@
  * Diferente da listagem de colaboradores, falhas da API remota NÃO caem no
  * modo local: um apontamento nunca deve "sumir" silenciosamente no navegador.
  */
-import type { ContratoObra, CriarRvtDTO, RascunhoRvt, Rvt } from "../types/rvt";
-import { LIMITE_HORAS_DIARIAS, formatarHoras } from "../utils/rvt";
+import type {
+  ContratoObra,
+  CriarRvtDTO,
+  DeliberarRvtDTO,
+  EventoHistoricoRvt,
+  RascunhoRvt,
+  RetificarRvtDTO,
+  Rvt,
+  RvtGestor,
+  StatusRvt,
+  TipoEventoRvt,
+} from "../types/rvt";
+
+import {
+  LIMITE_HORAS_DIARIAS,
+  calcularPrazoRetificacao,
+  formatarHoras,
+  formatarPrazo,
+} from "../utils/rvt";
 import { AuthApi, ErroAuth } from "./auth.service";
 
 const USE_REMOTE_API = import.meta.env.VITE_USE_REMOTE_API === "true";
@@ -22,7 +39,13 @@ const SEED_CONTRATOS: ContratoObra[] = [
   { id: "contrato-003", codigo: "OBR-2026-027", nome: "Centro Comercial Águas Claras", cliente: "Grupo Alvorada" },
 ];
 
-const SEED_APONTAMENTOS: Rvt[] = [
+/** Formato persistido no modo local: prazo e trava são derivados na leitura */
+type RvtLocal = Omit<Rvt, "prazoRetificacao" | "podeRetificar" | "historico"> & {
+  historico?: EventoHistoricoRvt[];
+  colaboradorId?: string;
+};
+
+const SEED_APONTAMENTOS: RvtLocal[] = [
   {
     id: "rvt-seed-002",
     contrato: { id: "contrato-002", codigo: "OBR-2026-021", nome: "Subestação Sudoeste — Retrofit Elétrico" },
@@ -30,6 +53,7 @@ const SEED_APONTAMENTOS: Rvt[] = [
     horasTrabalhadas: 9,
     escopoExecutado: "Substituição de disjuntores do QGBT e reaperto de barramentos. Testes de isolação concluídos.",
     status: "PENDENTE",
+    justificativaRejeicao: null,
     evidencias: [
       { id: "ev-seed-1", nomeOriginal: "qgbt-antes.jpg", mimeType: "image/jpeg", tamanhoBytes: 1_480_000, createdAt: "2026-11-13T21:10:00.000Z" },
       { id: "ev-seed-2", nomeOriginal: "qgbt-depois.jpg", mimeType: "image/jpeg", tamanhoBytes: 1_320_000, createdAt: "2026-11-13T21:10:00.000Z" },
@@ -44,6 +68,7 @@ const SEED_APONTAMENTOS: Rvt[] = [
     horasTrabalhadas: 8,
     escopoExecutado: "Passagem de cabos 4mm² nos apartamentos 201 a 204 e montagem de quadros de distribuição.",
     status: "HOMOLOGADO",
+    justificativaRejeicao: null,
     evidencias: [
       { id: "ev-seed-3", nomeOriginal: "quadros-201-204.jpg", mimeType: "image/jpeg", tamanhoBytes: 980_000, createdAt: "2026-11-12T20:40:00.000Z" },
     ],
@@ -80,7 +105,49 @@ async function requisicao<T>(url: string, init: RequestInit = {}): Promise<T> {
 // Persistência local (modo desenvolvimento)
 // ---------------------------------------------------------------------------
 
+function evento(tipo: TipoEventoRvt, extras: Partial<EventoHistoricoRvt> = {}): EventoHistoricoRvt {
+  return { id: gerarId("ev"), tipo, parecer: null, alteracoes: null, createdAt: new Date().toISOString(), ...extras };
+}
+
+/** RN02 — a janela começa na submissão, no último reenvio ou na última rejeição */
+function inicioJanela(rvt: RvtLocal): Date {
+  const marcos = (rvt.historico ?? []).filter((e) =>
+    e.tipo === "SUBMISSAO" || e.tipo === "REENVIO" || e.tipo === "REJEICAO"
+  );
+  return new Date(marcos.length ? marcos[marcos.length - 1].createdAt : rvt.createdAt);
+}
+
+/** Completa registros locais (inclusive os gravados antes desta versão) */
+function derivar(rvt: RvtLocal, agora = new Date()): Rvt {
+  const historico = rvt.historico ?? [
+    { id: `${rvt.id}-sub`, tipo: "SUBMISSAO" as const, parecer: null, alteracoes: null, createdAt: rvt.createdAt },
+  ];
+  const prazo = rvt.status === "HOMOLOGADO" ? null : calcularPrazoRetificacao(inicioJanela({ ...rvt, historico }));
+  return {
+    ...rvt,
+    historico,
+    prazoRetificacao: prazo?.toISOString() ?? null,
+    podeRetificar: prazo !== null && agora.getTime() <= prazo.getTime(),
+  };
+}
+
+/** Mesma trava aplicada pelo backend antes de qualquer alteração do autor */
+function garantirRetificavelLocal(rvt: Rvt | undefined): Rvt {
+  if (!rvt) throw new Error("Apontamento não encontrado.");
+  if (rvt.status === "HOMOLOGADO") throw new Error("Apontamento homologado não pode ser alterado (RN02).");
+  if (!rvt.podeRetificar) {
+    throw new Error(
+      `O prazo de retificação terminou em ${rvt.prazoRetificacao ? formatarPrazo(rvt.prazoRetificacao) : "data anterior"} (RN02).`
+    );
+  }
+  return rvt;
+}
+
 function lerLocal(): Rvt[] {
+  return lerLocalBruto().map((r) => derivar(r));
+}
+
+function lerLocalBruto(): RvtLocal[] {
   try {
     const data = localStorage.getItem(STORAGE_KEY);
     if (!data) {
@@ -93,7 +160,7 @@ function lerLocal(): Rvt[] {
   }
 }
 
-function salvarLocal(lista: Rvt[]): void {
+function salvarLocal(lista: RvtLocal[]): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(lista));
   } catch (err) {
@@ -102,7 +169,7 @@ function salvarLocal(lista: Rvt[]): void {
   }
 }
 
-function ordenarRecentes(lista: Rvt[]): Rvt[] {
+function ordenarRecentes<T extends Rvt>(lista: T[]): T[] {
   return [...lista].sort(
     (a, b) => b.dataJornada.localeCompare(a.dataJornada) || b.createdAt.localeCompare(a.createdAt)
   );
@@ -135,6 +202,32 @@ export const RvtService = {
       return requisicao<Rvt[]>("/api/rvt/meus-apontamentos");
     }
     return ordenarRecentes(lerLocal());
+  },
+
+  async listarContratosParaAprovacao(): Promise<ContratoObra[]> {
+    return requisicao<ContratoObra[]>('/api/rvt/contratos-ativos');
+  },
+
+  async listarParaAprovacao(filtros: {
+    status: StatusRvt;
+    contratoId?: string;
+  }): Promise<Rvt[]> {
+    const params = new URLSearchParams({ status: filtros.status });
+    if (filtros.contratoId) params.set('contratoId', filtros.contratoId);
+
+    return requisicao<Rvt[]>(`/api/rvt/aprovacao?${params.toString()}`);
+  },
+
+  async decidirAprovacao(
+    id: string,
+    status: 'HOMOLOGADO' | 'REJEITADO',
+    justificativa?: string,
+  ): Promise<Rvt> {
+    return requisicao<Rvt>(`/api/rvt/${id}/decisao`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status, justificativa }),
+    });
   },
 
   /**
@@ -186,13 +279,14 @@ export const RvtService = {
     }
 
     const agora = new Date().toISOString();
-    const rvt: Rvt = {
+    const rvt: RvtLocal = {
       id: gerarId("rvt"),
       contrato: { id: contrato.id, codigo: contrato.codigo, nome: contrato.nome },
       dataJornada: dto.dataJornada,
       horasTrabalhadas: dto.horasTrabalhadas,
       escopoExecutado: dto.escopoExecutado,
       status: "PENDENTE",
+      justificativaRejeicao: null,
       // No modo local só os metadados das fotos são guardados (limite do localStorage)
       evidencias: arquivos.map((arquivo) => ({
         id: gerarId("ev"),
@@ -201,12 +295,182 @@ export const RvtService = {
         tamanhoBytes: arquivo.size,
         createdAt: agora,
       })),
+      historico: [evento("SUBMISSAO", { createdAt: agora })],
       createdAt: agora,
       updatedAt: agora,
     };
 
-    salvarLocal([rvt, ...lista]);
-    return { rvt };
+    salvarLocal([rvt, ...lerLocalBruto()]);
+    return { rvt: derivar(rvt) };
+  },
+
+  /**
+   * RF35 — retifica horas/escopo e anexos, ou corrige e reenvia um rejeitado.
+   * Ordem: PATCH (que também reenvia), remoções e, por fim, novos anexos.
+   * Se só os anexos falharem, os campos já foram gravados e o chamador
+   * recebe `falhaEvidencias`.
+   */
+  async retificarApontamento(
+    original: Rvt,
+    dto: RetificarRvtDTO,
+    removerEvidenciaIds: string[],
+    novosArquivos: File[]
+  ): Promise<ResultadoEnvioRvt> {
+    const precisaPatch = Object.keys(dto).length > 0 || original.status === "REJEITADO";
+
+    if (USE_REMOTE_API) {
+      let rvt = original;
+      if (precisaPatch) {
+        rvt = await requisicao<Rvt>(`/api/rvt/${original.id}`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dto),
+        });
+      }
+      try {
+        for (const evidenciaId of removerEvidenciaIds) {
+          rvt = await requisicao<Rvt>(`/api/rvt/${original.id}/evidencias/${evidenciaId}`, { method: "DELETE" });
+        }
+        if (novosArquivos.length > 0) {
+          const form = new FormData();
+          novosArquivos.forEach((arquivo) => form.append("arquivos", arquivo));
+          rvt = await requisicao<Rvt>(`/api/rvt/${original.id}/evidencias`, { method: "POST", body: form });
+        }
+      } catch (err) {
+        if (!precisaPatch && rvt === original) throw err;
+        return { rvt, falhaEvidencias: err instanceof Error ? err.message : "Falha ao atualizar os anexos." };
+      }
+      return { rvt };
+    }
+
+    // Modo local: mesmas regras do backend
+    const brutos = lerLocalBruto();
+    const indice = brutos.findIndex((r) => r.id === original.id);
+    const atual = garantirRetificavelLocal(indice >= 0 ? derivar(brutos[indice]) : undefined);
+    const reenvio = atual.status === "REJEITADO";
+
+    const alteracoes: Record<string, { de: unknown; para: unknown }> = {};
+    if (dto.horasTrabalhadas !== undefined && dto.horasTrabalhadas !== atual.horasTrabalhadas) {
+      alteracoes.horasTrabalhadas = { de: atual.horasTrabalhadas, para: dto.horasTrabalhadas };
+    }
+    if (dto.escopoExecutado !== undefined && dto.escopoExecutado !== atual.escopoExecutado) {
+      alteracoes.escopoExecutado = { de: atual.escopoExecutado, para: dto.escopoExecutado };
+    }
+    if (!reenvio && Object.keys(alteracoes).length === 0 && removerEvidenciaIds.length === 0 && novosArquivos.length === 0) {
+      throw new Error("Nenhuma alteração informada para retificar.");
+    }
+
+    const novasHoras = dto.horasTrabalhadas ?? atual.horasTrabalhadas;
+    const jaApontadas = brutos
+      .filter((r) => r.id !== atual.id && r.dataJornada === atual.dataJornada && r.status !== "REJEITADO")
+      .reduce((soma, r) => soma + r.horasTrabalhadas, 0);
+    if (jaApontadas + novasHoras > LIMITE_HORAS_DIARIAS) {
+      const restantes = Math.max(LIMITE_HORAS_DIARIAS - jaApontadas, 0);
+      throw new Error(
+        `Limite de ${LIMITE_HORAS_DIARIAS}h diárias excedido (RN05): já existem ${formatarHoras(jaApontadas)} apontadas nesta data; restam ${formatarHoras(restantes)}.`
+      );
+    }
+
+    const agora = new Date().toISOString();
+    const historico = [...atual.historico];
+    if (reenvio || Object.keys(alteracoes).length > 0) {
+      historico.push(
+        evento(reenvio ? "REENVIO" : "RETIFICACAO", {
+          createdAt: agora,
+          alteracoes: Object.keys(alteracoes).length ? alteracoes : null,
+        })
+      );
+    }
+    for (const id of removerEvidenciaIds) {
+      const removida = atual.evidencias.find((e) => e.id === id);
+      if (removida) {
+        historico.push(evento("RETIFICACAO", { createdAt: agora, alteracoes: { evidenciaRemovida: { nomeOriginal: removida.nomeOriginal } } }));
+      }
+    }
+
+    const atualizado: RvtLocal = {
+      ...brutos[indice],
+      horasTrabalhadas: novasHoras,
+      escopoExecutado: dto.escopoExecutado ?? atual.escopoExecutado,
+      status: "PENDENTE",
+      evidencias: [
+        ...atual.evidencias.filter((e) => !removerEvidenciaIds.includes(e.id)),
+        ...novosArquivos.map((arquivo) => ({
+          id: gerarId("ev"),
+          nomeOriginal: arquivo.name,
+          mimeType: arquivo.type,
+          tamanhoBytes: arquivo.size,
+          createdAt: agora,
+        })),
+      ],
+      historico,
+      updatedAt: agora,
+    };
+    brutos[indice] = atualizado;
+    salvarLocal(brutos);
+    return { rvt: derivar(atualizado) };
+  },
+
+  /** Abre o arquivo de uma evidência (autor ou gestor do contrato) */
+  async baixarEvidencia(rvtId: string, evidenciaId: string): Promise<Blob> {
+    if (!USE_REMOTE_API) {
+      throw new Error("No modo local só os dados do anexo ficam salvos; a visualização exige a API.");
+    }
+    let res: Response;
+    try {
+      res = await AuthApi.requisicaoAutenticada(`/api/rvt/${rvtId}/evidencias/${evidenciaId}`);
+    } catch {
+      throw new Error("Sem conexão com o servidor para abrir o anexo.");
+    }
+    if (!res.ok) {
+      throw new Error(res.status === 404 ? "Anexo não encontrado ou sem permissão de acesso." : `Erro ${res.status} ao abrir o anexo.`);
+    }
+    return res.blob();
+  },
+
+  // -------------------------------------------------------------------------
+  // RF32 — Homologação pelo gestor operacional
+  // -------------------------------------------------------------------------
+
+  async listarPendentesHomologacao(): Promise<RvtGestor[]> {
+    if (USE_REMOTE_API) {
+      return requisicao<RvtGestor[]>("/api/rvt/pendentes-homologacao");
+    }
+    return lerLocalBruto()
+      .map((r) => ({ ...derivar(r), colaboradorId: r.colaboradorId ?? "colaborador-local" }))
+      .filter((r) => r.status === "PENDENTE")
+      .sort((a, b) => a.dataJornada.localeCompare(b.dataJornada) || a.createdAt.localeCompare(b.createdAt));
+  },
+
+  async deliberar(id: string, dto: DeliberarRvtDTO): Promise<RvtGestor> {
+    if (USE_REMOTE_API) {
+      return requisicao<RvtGestor>(`/api/rvt/${id}/deliberacao`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dto),
+      });
+    }
+
+    const brutos = lerLocalBruto();
+    const indice = brutos.findIndex((r) => r.id === id);
+    if (indice < 0) throw new Error("Apontamento não encontrado.");
+    if (brutos[indice].status !== "PENDENTE") {
+      throw new Error("Somente apontamentos pendentes de homologação podem ser deliberados.");
+    }
+    const rejeitar = dto.decisao === "REJEITAR";
+    const agora = new Date().toISOString();
+    const atualizado: RvtLocal = {
+      ...brutos[indice],
+      status: rejeitar ? "REJEITADO" : "HOMOLOGADO",
+      historico: [
+        ...derivar(brutos[indice]).historico,
+        evento(rejeitar ? "REJEICAO" : "HOMOLOGACAO", { createdAt: agora, parecer: dto.parecer ?? null }),
+      ],
+      updatedAt: agora,
+    };
+    brutos[indice] = atualizado;
+    salvarLocal(brutos);
+    return { ...derivar(atualizado), colaboradorId: atualizado.colaboradorId ?? "colaborador-local" };
   },
 
   // -------------------------------------------------------------------------

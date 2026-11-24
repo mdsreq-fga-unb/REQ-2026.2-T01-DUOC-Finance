@@ -31,6 +31,36 @@ function dataIsoValida(valor: string): boolean {
   return !Number.isNaN(data.getTime()) && data.toISOString().startsWith(valor);
 }
 
+/** Regras de horas compartilhadas entre criação e retificação */
+export function validarHorasTrabalhadas(valor: unknown): string | null {
+  if (typeof valor !== 'number' || !Number.isFinite(valor)) {
+    return 'horasTrabalhadas deve ser numérico.';
+  }
+  if (valor <= 0) return 'horasTrabalhadas deve ser maior que zero.';
+  if (valor > LIMITE_HORAS_DIARIAS) {
+    return `horasTrabalhadas não pode exceder ${LIMITE_HORAS_DIARIAS}h por dia (RN05).`;
+  }
+  if (Math.abs(valor * 100 - Math.round(valor * 100)) > 1e-6) {
+    return 'horasTrabalhadas aceita no máximo duas casas decimais.';
+  }
+  return null;
+}
+
+export function normalizarEscopo(valor: unknown): string {
+  return typeof valor === 'string' ? valor.trim() : '';
+}
+
+/** Recebe o escopo já normalizado */
+export function validarEscopoExecutado(escopo: string): string | null {
+  if (escopo.length < ESCOPO_MIN_CARACTERES) {
+    return `escopoExecutado deve descrever o serviço com ao menos ${ESCOPO_MIN_CARACTERES} caracteres (RN06).`;
+  }
+  if (escopo.length > ESCOPO_MAX_CARACTERES) {
+    return `escopoExecutado deve ter no máximo ${ESCOPO_MAX_CARACTERES} caracteres.`;
+  }
+  return null;
+}
+
 /**
  * Valida o corpo de POST /api/rvt. Campos desconhecidos (inclusive
  * `colaboradorId`) são descartados: o colaborador vem sempre do JWT.
@@ -56,34 +86,12 @@ export function validarCriarRvtDto(
     erros.push('dataJornada não pode estar no futuro.');
   }
 
-  if (
-    typeof horasTrabalhadas !== 'number' ||
-    !Number.isFinite(horasTrabalhadas)
-  ) {
-    erros.push('horasTrabalhadas deve ser numérico.');
-  } else if (horasTrabalhadas <= 0) {
-    erros.push('horasTrabalhadas deve ser maior que zero.');
-  } else if (horasTrabalhadas > LIMITE_HORAS_DIARIAS) {
-    erros.push(
-      `horasTrabalhadas não pode exceder ${LIMITE_HORAS_DIARIAS}h por dia (RN05).`,
-    );
-  } else if (
-    Math.abs(horasTrabalhadas * 100 - Math.round(horasTrabalhadas * 100)) > 1e-6
-  ) {
-    erros.push('horasTrabalhadas aceita no máximo duas casas decimais.');
-  }
+  const erroHoras = validarHorasTrabalhadas(horasTrabalhadas);
+  if (erroHoras) erros.push(erroHoras);
 
-  const escopo =
-    typeof escopoExecutado === 'string' ? escopoExecutado.trim() : '';
-  if (escopo.length < ESCOPO_MIN_CARACTERES) {
-    erros.push(
-      `escopoExecutado deve descrever o serviço com ao menos ${ESCOPO_MIN_CARACTERES} caracteres (RN06).`,
-    );
-  } else if (escopo.length > ESCOPO_MAX_CARACTERES) {
-    erros.push(
-      `escopoExecutado deve ter no máximo ${ESCOPO_MAX_CARACTERES} caracteres.`,
-    );
-  }
+  const escopo = normalizarEscopo(escopoExecutado);
+  const erroEscopo = validarEscopoExecutado(escopo);
+  if (erroEscopo) erros.push(erroEscopo);
 
   if (erros.length > 0) {
     throw new BadRequestException(erros);
