@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -2141,30 +2141,42 @@
 </tbody>
 </table>
 <h2 id="marco-avaliativo-3-unidade-3-design-do-usuario-rad-validacao-de-interfaces-e-construcao-rapida">Marco Avaliativo 3: Unidade 3 (Design do Usuário RAD, Validação de Interfaces e Construção Rápida)<a class="headerlink" href="#marco-avaliativo-3-unidade-3-design-do-usuario-rad-validacao-de-interfaces-e-construcao-rapida" title="Permanent link">¶</a></h2>
-<p><em>(Seção a ser consolidada ao término das entregas e da retrospectiva da Unidade 3).</em></p>
+<p>Na Unidade 3 (Entrega 3 / PC3), a equipe consolidou a arquitetura de desenvolvimento (Docker, React SPA, NestJS, Prisma ORM e PostgreSQL), reorganizou a documentação de requisitos no padrão Lumio UI e executou o Ciclo 0 (organização e estrutura) e o Incremento 1 (Cadastro unificado, Autenticação JWT, RBAC de 4 papéis e base RVT), além de estruturar as evidências objetivas de DoR e DoD. A transição entre modelagem e codificação trouxe aprendizados importantes sobre gestão de folgas, rastreabilidade de critérios por evidências e sincronização entre planejamento e execução.</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Dimensão de Avaliação</th>
-<th style="text-align: left;">Diagnóstico Previsto</th>
+<th style="text-align: left;">Diagnóstico Realizado pela Equipe</th>
 <th style="text-align: left;">Ação de Melhoria Técnica</th>
+<th style="text-align: left;">Responsável</th>
+<th style="text-align: left;">Prazo</th>
+<th style="text-align: left;">Critério de Avaliação</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Pontos Fortes</strong></td>
-<td style="text-align: left;"><em>A registrar ao final do ciclo da Unidade 3.</em></td>
-<td style="text-align: left;"><em>A definir.</em></td>
+<td style="text-align: left;"><strong>Pontos Fortes (O que funcionou bem)</strong></td>
+<td style="text-align: left;">Padronização efetiva do ambiente containerizado via Docker (<code>PR #160</code>) e entrega técnica completa do Incremento 1 (<code>PR #167</code>, <code>PR #168</code>, <code>PR #170</code>, <code>PR #172</code>), com testes unitários e de acesso passando. A separação de DoR e DoD com evidências visuais (testes, containers, endpoints) e o alinhamento interativo entre o cronograma e o detalhamento de ciclos deram transparência total ao andamento real dos incrementos e débitos técnicos.</td>
+<td style="text-align: left;">Manter a exigência de evidências técnicas verificáveis no fechamento de cada incremento (Incrementos 2 e 3) e preservar o vínculo direto entre cronograma, detalhamento de ciclos e matrizes de requisitos.</td>
+<td style="text-align: left;">Equipe Cascata Ágil</td>
+<td style="text-align: left;">Durante os Incrementos 2 e 3 (até 26/11/2026)</td>
+<td style="text-align: left;">DoR e DoD dos Incrementos 2 e 3 registrados com links para PRs, testes unitários/regressão e atas de homologação.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Pontos Fracos</strong></td>
-<td style="text-align: left;"><em>A registrar ao final do ciclo da Unidade 3.</em></td>
-<td style="text-align: left;"><em>A definir.</em></td>
+<td style="text-align: left;"><strong>Pontos Fracos (Gargalos e Dificuldades)</strong></td>
+<td style="text-align: left;">O atraso na integração inicial do banco/ORM e o saneamento de issues documentais (<code>#122</code>–<code>#133</code>) deslocaram o início da codificação do Incremento 1 para 10/11, comprimindo a folga técnica dos Incrementos 2 e 3. Além disso, identificou-se inicialmente ausência de evidências explícitas vinculadas a cada critério de DoR/DoD e descompasso entre o calendário do cronograma e o detalhamento semanal, exigindo refatoração conjunta.</td>
+<td style="text-align: left;">Antecipar o início do Incremento 3 para domingo (22/11), concentrar fechos e inícios de incrementos em marcos únicos de transição e alocar janela dedicada de correção pós-UAT (27 a 29/11) antes do Cutover.</td>
+<td style="text-align: left;">Equipe Cascata Ágil</td>
+<td style="text-align: left;">Até o início do Cutover (26/11/2026)</td>
+<td style="text-align: left;">Incremento 2 encerrado até 22/11 e Incremento 3 com motor financeiro e auditoria verificados até 26/11.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Lições Aprendidas</strong></td>
-<td style="text-align: left;"><em>A registrar ao final do ciclo da Unidade 3.</em></td>
-<td style="text-align: left;"><em>A definir.</em></td>
+<td style="text-align: left;"><strong>Lições Aprendidas (Aprendizado Prático)</strong></td>
+<td style="text-align: left;">A Unidade 3 mostrou que critérios de aceitação, DoR e DoD não podem ser tratados apenas como listas declarativas: cada item precisa estar amarrado a uma evidência concreta (teste automatizado, log de execução ou PR revisado). Também ficou evidente que separar a fase de organização estrutural (Ciclo 0) dos incrementos de código evita mascarar atrasos de infraestrutura e protege a janela crítica de UAT e Cutover na Unidade 4.</td>
+<td style="text-align: left;">Aplicar verificação contínua de DoR/DoD com evidências desde o desenvolvimento de cada módulo e realizar sessões de homologação por incremento (Incr. 1, 2, 3 e Final) integradas ao fluxo de entrega contínua.</td>
+<td style="text-align: left;">Matheus Ribeiro Szervinsk e Equipe Cascata Ágil</td>
+<td style="text-align: left;">Entrega 4 / PC4 (01/12/2026)</td>
+<td style="text-align: left;">100% dos critérios de DoR/DoD do MVP comprovados com evidências e Termo de Aceite homologado com a cliente.</td>
 </tr>
 </tbody>
 </table>
@@ -2244,6 +2256,13 @@
 <td style="text-align: left;">Refatoração e aprimoramento do Marco Avaliativo 2: alinhamento com os requisitos da issue (elicitação, FURPS+, modelagem modular, backlog e rastreabilidade), substituição de MoSCoW por valor de negócio vs. esforço técnico, refinamento dos diagnósticos e preenchimento das colunas de responsável, prazo e critério de avaliação.</td>
 <td style="text-align: left;">Gustavo Bonifácio</td>
 <td style="text-align: left;">Eric Araújo</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>1.5</code></td>
+<td style="text-align: center;">17/11/2026</td>
+<td style="text-align: left;">Consolidação do Marco Avaliativo 3 (Unidade 3 / PC3) com pontos fortes, gargalos de transição e lições aprendidas sobre evidências de DoR/DoD, Docker/Incremento 1 e sincronização do cronograma.</td>
+<td style="text-align: left;">Matheus Ribeiro Szervinsk</td>
+<td style="text-align: left;">Equipe Cascata Ágil</td>
 </tr>
 </tbody>
 </table>

@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -2093,6 +2093,48 @@
 <ul>
 <li><strong>Trilha de Auditoria (<em>Append-Only</em>):</strong> Toda mutação relevante grava evento imutável com timestamp UTC, operador e estados anterior/posterior (<a href="../#rn17" class="req-tag req-tag-rn"># RN17 ↗</a>, <a href="../#rn18" class="req-tag req-tag-rn"># RN18 ↗</a>, <a href="../#rnf15" class="req-tag req-tag-rnf"># RNF15 ↗</a>).</li>
 </ul>
+<h4 id="matriz-de-acesso-as-telas">Matriz de acesso às telas<a class="headerlink" href="#matriz-de-acesso-as-telas" title="Permanent link">¶</a></h4>
+<p>As permissões de navegação e rotas seguem a matriz abaixo. Ocultar um item do menu não substitui a validação de papel no backend.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tela</th>
+<th style="text-align: left;">Papéis autorizados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Visão geral (Dashboard)</td>
+<td style="text-align: left;"><code>TECNICO_CAMPO</code>, <code>GESTOR_OBRAS</code>, <code>ADMIN_FINANCEIRO</code>, <code>ADMIN_SISTEMA</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Colaboradores</td>
+<td style="text-align: left;"><code>ADMIN_FINANCEIRO</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Novo RVT</td>
+<td style="text-align: left;"><code>TECNICO_CAMPO</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Histórico RVT (apontamentos próprios)</td>
+<td style="text-align: left;"><code>TECNICO_CAMPO</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Aprovação de Diárias</td>
+<td style="text-align: left;"><code>ADMIN_FINANCEIRO</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Reembolsos</td>
+<td style="text-align: left;"><code>TECNICO_CAMPO</code>, <code>GESTOR_OBRAS</code>, <code>ADMIN_FINANCEIRO</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Gestão de Acessos</td>
+<td style="text-align: left;"><code>ADMIN_SISTEMA</code></td>
+</tr>
+</tbody>
+</table>
+<p>O histórico por obra ou a consulta global de RVTs não está disponível enquanto o modelo não relacionar usuários gestores a contratos e definir o escopo financeiro; esses papéis não recebem acesso à rota de apontamentos próprios.</p>
+<p>Na migração dos papéis legados, <code>GESTOR_OPERACIONAL</code> é convertido para <code>GESTOR_OBRAS</code>. Como <code>AUDITOR_EXTERNO</code> não possui equivalência canônica segura, contas existentes com esse papel devem ser remapeadas explicitamente antes da migration; ela interrompe a aplicação se encontrar alguma, evitando conceder privilégios por associação automática.</p>
 <hr>
 <h2 id="historico-de-versao">Histórico de Versão<a class="headerlink" href="#historico-de-versao" title="Permanent link">¶</a></h2>
 <table>
