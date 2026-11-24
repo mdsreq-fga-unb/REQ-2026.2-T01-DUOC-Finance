@@ -1719,7 +1719,11 @@ for i in range(1, 41):
     lines.append('      <div class="req-checklist-container">')
     lines.append('        <div class="req-checklist-header">')
     lines.append('          <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>')
-    lines.append('          <span class="req-checklist-badge">3 de 3 Verificados</span>')
+    if rf_code in {"RF03", "RF04"}:
+        lines.append('          <span class="req-checklist-badge">3 de 3 itens do checklist verificados (Incr. 1)</span>')
+        lines.append('          <span class="req-checklist-badge">UAT sociotécnica do incremento pendente</span>')
+    else:
+        lines.append('          <span class="req-checklist-badge">3 de 3 Verificados</span>')
     lines.append('        </div>')
     lines.append('        <div class="req-checklist-item">')
     lines.append('          <div class="req-check-box">')

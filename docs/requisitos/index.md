@@ -379,7 +379,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
             </div>
             <div class="req-evidence-content">
               <strong>Execução, Testes & DoR/DoD Comprovados</strong>
-              <p>Edição cadastral implementada + tsc -b 0 erros + 18/18 testes frontend. Evidência registrada em <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener">PR #167 (Issue #154) ↗</a> e no <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Checklist DoR/DoD do Incremento 1</a>.</p>
+              <p>No Incremento 1, a edição cadastral foi implementada, com build TypeScript sem erros e 18/18 testes frontend aprovados. Os registros desta entrega não comprovam a preservação da versão anterior da ficha nem a propagação em menos de 500 ms para fechamento e apropriação de custos. A validação da integração com esses módulos depende dos incrementos futuros. Evidências: <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167" target="_blank" rel="noopener">PR #167 (Issue #154) ↗</a> e <a href="../mvp/dor-dod/#registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026">Checklist DoR/DoD do Incremento 1</a>.</p>
             </div>
           </div>
           <div class="req-evidence-card">
@@ -535,8 +535,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Validados (Incr. 1)</span>
-          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
+          <span class="req-checklist-badge">3 de 3 itens do checklist verificados (Incr. 1)</span>
+          <span class="req-checklist-badge">UAT sociotécnica do incremento pendente</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box verified">
@@ -739,8 +739,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-checklist-container">
         <div class="req-checklist-header">
           <span class="req-checklist-title">Critérios Oficiais e Processo de Verificação (DoR / DoD)</span>
-          <span class="req-checklist-badge">3 de 3 Validados (Incr. 1)</span>
-          <span class="req-checklist-badge" style="background: rgba(218, 165, 32, 0.12); color: var(--duoc-gold); border-color: rgba(218, 165, 32, 0.3);">1 de 3 em Verificação (Ciclos RAD)</span>
+          <span class="req-checklist-badge">3 de 3 itens do checklist verificados (Incr. 1)</span>
+          <span class="req-checklist-badge">UAT sociotécnica do incremento pendente</span>
         </div>
         <div class="req-checklist-item">
           <div class="req-check-box verified">
@@ -2445,7 +2445,7 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
           </div>
           <div class="req-check-body">
             <span class="req-check-tag">DoR — Pré-condições & Regras de Domínio</span>
-            <p class="req-check-text">Requisito pronto para implementação sob validação obrigatória das Regras de Negócio condicionantes (<a href="#rn15" class="req-tag req-tag-rn" title="RN15 · Autenticação por JWT com Sessão Temporal Limitada"># RN15 ↗</a>) e perfil canônico de acesso <code>TODOS OS USUÁRIOS</code> autenticado.</p>
+            <p class="req-check-text">Pré-condições: conta de usuário previamente cadastrada e ativa, com e-mail corporativo e senha definidos; a regra RN15 deve estar especificada. O usuário autenticado é resultado do RF13, não uma pré-condição.</p>
           </div>
         </div>
         <div class="req-checklist-item">

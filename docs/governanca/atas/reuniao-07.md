@@ -43,8 +43,7 @@
 * **Gravação:** Vídeo oficial da apresentação da Entrega 3 gravado em 16/11/2026; será incorporado na página da [Entrega 3 (Ponto de Controle 3)](../../entregas/entrega-3.md#3-video-da-apresentacao-da-entrega-3) após publicação.
 * **Artefatos Relacionados:**
   * [Entrega 3 — Ponto de Controle 3](../../entregas/entrega-3.md)
-  * [Organização & Atualização do Backlog](../../metodologia/organizacao-atualizacao.md)
-  * [Boas Práticas no GitHub](../../metodologia/organizacao-e-boas-praticas.md)
+  * [Estratégias de Organização e Boas Práticas no GitHub](../../metodologia/organizacao-e-boas-praticas.md)
   * [Catálogo Integrado de Requisitos](../../requisitos/index.md)
 
 ---
