@@ -2128,7 +2128,7 @@ O planejamento metodológico, as folgas e o método de atualização de requisit
               <span class="uui-chip-tooltip">
                 <span class="tooltip-chip-title">Rateio por Contrato (CAR-05)</span>
                 <span class="tooltip-chip-meta">Ciclo RAD</span>
-                <span class="tooltip-chip-desc">Implementação do módulo de rateio por contrato, fechamento de folha e relatórios.</span>
+                <span class="tooltip-chip-desc">Implementação do módulo de rateio por contrato, fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas e relatórios.</span>
                 <span class="tooltip-chip-action">Clique para ver o detalhamento da semana ↗</span>
               </span>
             </a>
@@ -2624,7 +2624,7 @@ O planejamento metodológico, as folgas e o método de atualização de requisit
     <span class="uui-cycle-legend-item"><span class="uui-cycle-swatch cycle-0"></span>Ciclo 0 — Organização, Estrutura &amp; Prep. (03/11 – 09/11)</span>
     <span class="uui-cycle-legend-item"><span class="uui-cycle-swatch cycle-1"></span>Ciclo 1 / Incr. 1 — Cadastro, Auth &amp; RBAC (10/11 – 16/11)</span>
     <span class="uui-cycle-legend-item"><span class="uui-cycle-swatch cycle-2"></span>Ciclo 2 / Incr. 2 — Lançamentos, RVT &amp; Diárias (17/11 – 21/11)</span>
-    <span class="uui-cycle-legend-item"><span class="uui-cycle-swatch cycle-3"></span>Ciclo 3 / Incr. 3 — Fechamento, Folha &amp; UAT (22/11 – 26/11)</span>
+    <span class="uui-cycle-legend-item"><span class="uui-cycle-swatch cycle-3"></span>Ciclo 3 / Incr. 3 — Fechamento de Diárias e Comissões &amp; UAT (22/11 – 26/11)</span>
     <span class="uui-cycle-legend-item"><span class="uui-cycle-swatch cycle-4"></span>Ciclo 4 / Cutover — Transição, Aceite &amp; Entrega Final (27/11 – 03/12)</span>
   </div>
   </div>
@@ -2639,3 +2639,4 @@ O planejamento metodológico, as folgas e o método de atualização de requisit
 | `2.0` | 21/09/2026 | Reestruturação metodológica com desacoplamento dos marcos acadêmicos dos ciclos RAD e prototipagem UI-First. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `3.0` | 10/11/2026 | Replanejamento executado dos ciclos RAD, atualização para 40 RFs e método de controle no RAD. | Eric Araújo | Paulo Nery |
 | `3.3` | 16/11/2026 | Otimização da experiência: consolidação dos incrementos, calendário semestral interativo e links para detalhamento semanal. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `3.4` | 25/11/2026 | Ciclo 3 renomeado de "Fechamento, Folha & UAT" para "Fechamento de Diárias e Comissões & UAT", sem folha CLT no escopo (FB-19). | Paulo Nery | — |

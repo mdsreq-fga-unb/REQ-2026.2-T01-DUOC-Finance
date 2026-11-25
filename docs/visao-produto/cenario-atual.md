@@ -174,7 +174,7 @@ A mudança também pode ser percebida como fiscalização, principalmente quando
 
 ### Contenção de Escopo do MVP
 
-O escopo deve permanecer restrito ao Departamento Pessoal e ao Financeiro durante o semestre letivo. O produto mínimo viável deve concentrar-se no cadastro de usuários e papéis, registro e aprovação do RVT, consolidação das horas e apoio ao fechamento de diárias técnicas, comissões de obra e relatórios financeiros essenciais.
+O escopo deve permanecer restrito ao fluxo operacional e financeiro de campo durante o semestre letivo. O produto mínimo viável deve concentrar-se no cadastro de usuários e papéis, registro e aprovação do RVT, consolidação das horas, fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas e relatórios financeiros essenciais. A folha CLT e os encargos (INSS, FGTS, IRRF, 13º e férias) permanecem no escritório contábil externo (FB-19).
 
 Ficam fora desta entrega os módulos de gestão de engenharia e de obras, como cronogramas de Gantt, orçamentos SINAPI, controle de materiais, acompanhamento técnico detalhado e funcionalidades de um ERP de construção. Essa restrição protege o prazo, reduz a complexidade de implantação e permite validar o fluxo financeiro central antes de considerar futuras expansões.
 
@@ -240,3 +240,4 @@ A caracterização dos segmentos de usuários que interagem com o ecossistema do
 | `1.0` | 05/09/2026 | Levantamento inicial de negócio, Rich Picture, Ishikawa e perfis sociotécnicos de usuários. | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `2.0` | 15/09/2026 | Unificação integral dos artefatos de diagnóstico em página contínua e ampliação via glightbox. | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `2.5` | 02/11/2026 | Alinhamento sociotécnico de fronteiras AS-IS/TO-BE, ferramenta FLIT e saneamento terminológico financeiro. | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |
+| `2.6` | 25/11/2026 | Delimitação do escopo reescrita sem "Departamento Pessoal": fluxo operacional e financeiro de campo, fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas, folha CLT e encargos no escritório contábil externo (FB-19). | Paulo Nery | — |

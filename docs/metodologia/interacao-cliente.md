@@ -135,7 +135,7 @@ Nesta seção são detalhados os canais oficiais de comunicação, a frequência
 <ul>
   <li>É gerada uma massa de dados sintética baseada na estrutura real de custos, contratos, horas de RVT e colaboradores da DUOC.</li>
   <li>Nomes, CPFs, salários reais e documentos sensíveis de colaboradores e clientes são totalmente anonimizados/pseudonimizados.</li>
-  <li>A cliente realiza simulações ponta a ponta (ex: lançamento do ponto, fechamento da folha e cruzamento de custos por projeto).</li>
+  <li>A cliente realiza simulações ponta a ponta (ex: lançamento de apontamento de campo, fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas e cruzamento de custos por projeto).</li>
   <li>Havendo divergência de regras, o ciclo entra na janela dedicada de correções; caso contrário, a funcionalidade é homologada para release.</li>
 </ul>
 
@@ -192,3 +192,4 @@ flowchart TD
 | `1.0` | 05/09/2026 | Levantamento inicial de canais de comunicação e ritos de validação sociotécnica com a cliente. | Eric Araújo e Gustavo | Matheus Ribeiro Szervinsk |
 | `2.0` | 15/09/2026 | Unificação em página contínua e definição do fluxo de validação iterativa UI-First. | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `2.3` | 16/11/2026 | Desduplicação dos acordos de qualidade DoR/DoD em prol do documento oficial `dor-dod.md` e registro da validação presencial (Ata 06). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `2.4` | 25/11/2026 | Exemplo de simulação ponta a ponta reescrito sem "fechamento da folha": fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas (FB-19). | Paulo Nery | — |

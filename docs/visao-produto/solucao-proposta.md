@@ -24,6 +24,15 @@ A definição da proposta de solução apoia-se nas seguintes especificações e
 
 > **Centralizar o fluxo de informações sobre gestão administrativa da DUOC Arquitetura e Engenharia em um único sistema, assegurando a sustentabilidade de seus projetos sob contrato.**
 
+Neste objetivo, "gestão administrativa" designa o fluxo operacional e financeiro de campo que hoje passa por planilhas e mensagens. O DUOC Finance não substitui o departamento pessoal nem a contabilidade da DUOC:
+
+| Dentro do DUOC Finance | Fora do DUOC Finance (e quem continua responsável) |
+| :--- | :--- |
+| Cadastro de colaboradores, contratos de obra e centros de custo. | Folha de pagamento CLT, holerites, encargos (INSS, FGTS, IRRF), 13º salário e férias: escritório contábil externo ([FB-19](../requisitos/feedback.md#qualidade-dos-requisitos-papeis-e-conformidade-legal-ciclo-2-de-refinamento)). |
+| Apontamentos de campo (RVT) com envio, deliberação e retificação. | Registro oficial de frequência: sistema *FLIT*. A importação das presenças (RF20) está no backlog pós-MVP. |
+| Despesas, adiantamentos e reembolsos com comprovante. | Cronograma físico, orçamentação SINAPI e estoque de canteiro: fora do produto. |
+| Fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas, com apropriação dos custos a cada contrato. | Apuração tributária e obrigações acessórias da empresa: escritório contábil externo. |
+
 ---
 
 ### Objetivos Específicos (OE) do Produto
@@ -335,7 +344,10 @@ Os **Objetivos Específicos (OE1 a OE4)** decompõem o Objetivo Geral do produto
 <a id="23-caracteristicas-do-produto-car"></a>
 ## Características do Produto (CAR)
 
-As características do produto descrevem as capacidades funcionais do **DUOC Finance**, mapeadas diretamente aos Objetivos Específicos do negócio. Nem todas pertencem à primeira release: cada característica é classificada por fase de entrega conforme o catálogo de requisitos do [Catálogo de Requisitos](../requisitos/index.md).
+As características do produto descrevem as capacidades funcionais do **DUOC Finance**, mapeadas diretamente aos Objetivos Específicos do negócio. Nem todas pertencem à primeira release: cada característica é classificada por fase de entrega conforme o [Catálogo de Requisitos](../requisitos/index.md).
+
+!!! warning "Status do recorte do MVP"
+    O selo **MVP — Release 1** indica que a característica está no **corte consolidado de 31 RFs**, que ainda está **pendente de validação formal da cliente** (decisão D2 da [Ata 07](../governanca/atas/reuniao-07.md#3-decisoes-tomadas); sessão de validação planejada para 27/11/2026). O que a cliente aprovou, com ressalvas, na [Reunião 05](../governanca/atas/reuniao-05.md#decisao-d5-mvp) (24/09/2026) foi o **escopo preliminar**, montado sobre os 21 RFs especificados na época. A diferença entre os dois recortes está no [Registro da Priorização e Validação com a Cliente](../requisitos/priorizacao.md#evidencia-e-registro-da-validacao-do-mvp-com-o-cliente).
 
 ### Módulo de Padronização e Unificação de Dados (Suporte a OE1)
 
@@ -442,7 +454,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
         <span class="req-checklist-title">Valor de Negócio &amp; Impacto Operacional</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text">Padroniza e agiliza a captação de dados diretamente no canteiro de obras e em viagens técnicas através da aplicação web responsiva (Web App / PWA), erradicando a perda de anotações físicas em papel e mensagens dispersas no WhatsApp.</p>
+        <p class="req-desc-text">Padroniza e agiliza a captação de dados diretamente no canteiro de obras e em viagens técnicas através da aplicação web responsiva (Web App / PWA), erradicando a perda de anotações físicas em papel e mensagens dispersas no WhatsApp. O próprio técnico corrige e reenvia apontamentos pendentes ou rejeitados pela gestão dentro do prazo da <a href="../../requisitos/#rn02">RN02</a> (<a href="../../requisitos/#rf35">RF35</a>); apontamentos homologados ficam bloqueados.</p>
       </div>
     </div>
 
@@ -505,7 +517,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
         <span class="req-checklist-title">Valor de Negócio &amp; Impacto Operacional</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text">Reduz a conferência financeira mensal de dias para horas supervisionadas, apoiando o cálculo de custo de diaristas e de comissões contratuais simplificadas — sem substituir a folha de colaboradores CLT nem o cálculo de encargos (INSS, FGTS, IRRF) e provisões (13º, férias), que seguem nos sistemas contábeis já usados pela DUOC.</p>
+        <p class="req-desc-text">Reduz de dias para horas supervisionadas a conferência do fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas, calculado a partir dos apontamentos de campo homologados. O DUOC Finance não processa a folha CLT nem calcula encargos (INSS, FGTS, IRRF), 13º salário e férias: essas rotinas permanecem no escritório contábil externo da DUOC (FB-19).</p>
       </div>
     </div>
 
@@ -526,7 +538,7 @@ As características do produto descrevem as capacidades funcionais do **DUOC Fin
         <span class="req-checklist-title">Nota de Escopo</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text">A característica contempla também o estorno formal de fechamentos já homologados, mediante justificativa auditável, como único caminho para retificar lotes fechados (ver RF21 e RN08 no <a href="../../requisitos/#rf21">Capítulo 8</a>).</p>
+        <p class="req-desc-text">No MVP, a correção de um lote já homologado segue o procedimento assistido: reabertura autorizada pelo Administrador Financeiro, retificação pontual (<a href="../../requisitos/#rf35">RF35</a>), nova prévia (RF05) e nova homologação (RF06), com trilha de auditoria (<a href="../../requisitos/#rn17">RN17</a>). O estorno formal (<a href="../../requisitos/#rf21">RF21</a>) e seu requisito de não repúdio (<a href="../../requisitos/#rnf08">RNF08</a>) estão no backlog pós-MVP, conforme a decisão D2 da Reunião 05 e a reclassificação do RNF08 feita na issue #127.</p>
       </div>
     </div>
   </div>
@@ -1121,7 +1133,7 @@ Nesta seção são formalizadas as decisões de arquitetura e a composição da 
 </div>
 
 * **Tipo:** Sistema de Gerenciamento de Banco de Dados Relacional (SGBD-R) de código aberto.
-* **Justificativa Técnica e Integridade Financeira:** Aplicações de departamento pessoal e gestão financeira exigem estrita conformidade com as propriedades ACID (Atomicidade, Consistência, Isolamento e Durabilidade). A integridade referencial provida por chaves estrangeiras e *constraints* impede o registro de horas órfãs ou despesas desvinculadas de contratos válidos. 
+* **Justificativa Técnica e Integridade Financeira:** Aplicações de gestão financeira e de custos de pessoal de campo exigem estrita conformidade com as propriedades ACID (Atomicidade, Consistência, Isolamento e Durabilidade). A integridade referencial provida por chaves estrangeiras e *constraints* impede o registro de horas órfãs ou despesas desvinculadas de contratos válidos. 
   * Para o manuseio de valores monetários e cálculos de precisão, utiliza-se nativamente o tipo `NUMERIC`/`DECIMAL`, evitando problemas de arredondamento inerentes ao ponto flutuante.
 * **Gerenciamento de Schema via Scripts de Migration:** O versionamento do banco de dados é automatizado por scripts de *migration* executados no pipeline de inicialização da aplicação, garantindo que todos os ambientes (desenvolvimento e produção) mantenham schemas idênticos.
 * **Segurança e LGPD:** O PostgreSQL oferece suporte maduro a criptografia em repouso e em trânsito (SSL/TLS), além de mecanismos de controle de privilégios em nível de linha (*Row Level Security - RLS*), resguardando informações salariais e dados bancários confidenciais.
@@ -1196,10 +1208,10 @@ O problema crítico da **DUOC Arquitetura e Engenharia** situa-se exatamente na 
 
 | Solução de Mercado | Foco Principal | Recursos Atendidos | Lacuna Crítica para a DUOC | Diferencial do DUOC Finance |
 | :--- | :--- | :--- | :--- | :--- |
-| **Convenia** | Gestão de DP e RH corporativo | Admissão digital, gestão de benefícios e controle de férias. | Processos engessados de RH corporativo tradicional; não se integra a centros de custo de obras nem a relatórios de campo (RVT). | Conecta a rotina de pessoal diretamente aos contratos de engenharia e horas técnicas apropriadas a cada projeto. |
+| **Convenia** | Gestão de DP e RH corporativo | Admissão digital, gestão de benefícios e controle de férias. | Processos engessados de RH corporativo tradicional; não se integra a centros de custo de obras nem a relatórios de campo (RVT). | Liga os apontamentos de campo homologados e as diárias técnicas aos contratos de obra. Não substitui o DP nem a folha. |
 | **Tangerino** | Registro eletrônico de ponto (REP-P) | Ponto móvel por aplicativo, biometria facial e controle de jornada. | Registro estático de horários; não estabelece nexo entre o deslocamento técnico de visita de obra, despesas de viagem e contrato. | Integra ponto operacional, RVT e prestação de contas de despesas no mesmo fluxo tempestivo de homologação. |
-| **Vobi** | Gestão de projetos e obras | Orçamentação, cronograma físico, compras e acompanhamento de obras. | Trata a mão de obra como custo estimado genérico, sem processar a folha real, comissões variáveis e encargos trabalhistas. | Apropria o custo real e individualizado da folha aos centros de custos de cada contrato em andamento. |
-| **ArqProject** | Gestão financeira de escritórios de arquitetura | Fluxo de caixa de projetos, briefing e propostas comerciais. | Foco restrito à gestão comercial de projetos; não atende ao fluxo operacional dos técnicos em canteiro nem ao DP. | Solução sob medida (*tailor-made*), adaptada à linguagem, rotina e dinâmica de campo específica da DUOC. |
+| **Vobi** | Gestão de projetos e obras | Orçamentação, cronograma físico, compras e acompanhamento de obras. | Trata a mão de obra como custo estimado genérico, sem ligar horas de campo homologadas, diárias técnicas e comissões a cada contrato. | Apropria aos centros de custo de cada contrato as diárias técnicas, as comissões contratuais simplificadas e os reembolsos homologados. Folha CLT e encargos seguem no escritório contábil externo. |
+| **ArqProject** | Gestão financeira de escritórios de arquitetura | Fluxo de caixa de projetos, briefing e propostas comerciais. | Foco restrito à gestão comercial de projetos; não atende ao fluxo operacional dos técnicos em canteiro nem à apuração de diárias técnicas. | Solução sob medida (*tailor-made*), adaptada à linguagem, rotina e dinâmica de campo específica da DUOC. |
 
 As soluções acima representam o estado da arte em seus respectivos segmentos de atuação. Contudo, nenhuma delas, de forma isolada, resolve o fluxo contínuo e integrado exigido pela DUOC, além de cobrarem licenças recorrentes por usuário (*headcount*) com dezenas de funcionalidades que a empresa jamais utilizaria (*bloatware*).
 
@@ -1212,7 +1224,7 @@ Esse processo gera consequências danosas:
 2. **Retrabalho crônico e perda de histórico:** Dados dispersos em pastas locais sem trilha auditável de alterações.
 3. **Opacidade gerencial:** A diretoria só descobre o custo real da mão de obra dias após o fechamento mensal, inviabilizando ajustes de precificação e correções de desvio orçamentário em tempo hábil.
 
-O MVP do DUOC Finance elimina esse gargalo ao instituir um fluxo contínuo onde colaborador, contrato, horas de RVT, despesas e encargos compartilham a mesma base de dados confiável.
+O MVP do DUOC Finance elimina esse gargalo ao instituir um fluxo contínuo onde colaborador, contrato, horas de RVT, despesas, diárias técnicas e comissões compartilham a mesma base de dados confiável.
 
 ### Pilares Diferenciais do DUOC Finance
 
@@ -1230,7 +1242,7 @@ O DUOC Finance não pretende atuar como um ERP genérico e massivo de engenharia
 
 #### Hub Centralizador e Orquestrador do Fluxo Administrativo
 * **Captura no Campo:** A equipe técnica registra ponto e RVT em interface ágil, no próprio canteiro de serviço.
-* **Homologação Administrativa:** O setor financeiro/DP confere horas e despesas de forma contínua, apoiando a apuração de diárias e comissões.
+* **Homologação Administrativa:** O setor administrativo-financeiro confere horas e despesas de forma contínua e realiza o fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas.
 * **Inteligência de Custos:** Os sócios visualizam o custo de mão de obra apurado de cada obra contratada.
 
 #### Desenvolvimento Sob Medida e Personalização Cultural (*Tailor-Made*)
@@ -1257,7 +1269,7 @@ Diferente do compartilhamento indiscriminado de arquivos em nuvem e planilhas de
 
 ### Parecer de Viabilidade
 
-O Produto Mínimo Viável (MVP) do DUOC Finance é viável no ciclo acadêmico e técnico da disciplina porque foi estritamente delimitado ao problema de maior valor para a cliente parceira: integrar o Departamento Pessoal, o Relatório de Viagem Técnica (RVT) e a apuração financeira de custos por contrato. A equipe declara **prontidão metodológica e técnica para especificar, prototipar, implementar e homologar esse recorte**, sem a pretensão de substituir integralmente sistemas de modelagem de engenharia ou softwares contábeis legados.
+O Produto Mínimo Viável (MVP) do DUOC Finance é viável no ciclo acadêmico e técnico da disciplina porque foi estritamente delimitado ao problema de maior valor para a cliente parceira: integrar o cadastro do pessoal de campo, o Relatório de Viagem Técnica (RVT), o fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas e a apuração de custos por contrato. A equipe declara **prontidão metodológica e técnica para especificar, prototipar, implementar e homologar esse recorte**, sem a pretensão de substituir sistemas de modelagem de engenharia, o escritório contábil externo (folha CLT e encargos) ou o registro oficial de frequência no *FLIT*.
 
 ### Evidências Estruturadas de Viabilidade
 
@@ -1270,7 +1282,18 @@ O Produto Mínimo Viável (MVP) do DUOC Finance é viável no ciclo acadêmico e
 
 ### Delimitação do Escopo do MVP
 
-O MVP abrange o controle de acesso baseado em papéis (RBAC - CAR-07), o preenchimento, retificação e deliberação formal de Relatórios de Viagem Técnica (RVT de campo - CAR-02, abrangendo envio, anexos de evidências, retificação pendente, deliberação da supervisão com bloqueio e consulta própria), a gestão cadastral de colaboradores, contratos de obras e centros de custo (CAR-01, CAR-05 e CAR-06), o fluxo digital de despesas operacionais, adiantamentos e reembolsos (CAR-04), e o motor de fechamento de diárias técnicas e comissões simplificadas de campo com apropriação direta aos contratos de obra (CAR-03 e CAR-05), sem substituir a folha de pagamento CLT oficial nem rotinas contábeis de encargos e provisões.
+O MVP abrange o controle de acesso baseado em papéis (RBAC - CAR-07), o preenchimento, retificação e deliberação formal de Relatórios de Viagem Técnica (RVT de campo - CAR-02, abrangendo envio, anexos de evidências, retificação de apontamentos pendentes ou rejeitados dentro do prazo da RN02, deliberação da supervisão com bloqueio e consulta própria), a gestão cadastral de colaboradores, contratos de obras e centros de custo (CAR-01, CAR-05 e CAR-06), o fluxo digital de despesas operacionais, adiantamentos e reembolsos (CAR-04), e o fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas, com apropriação direta aos contratos de obra (CAR-03 e CAR-05). Folha de pagamento CLT, holerites, encargos (INSS, FGTS, IRRF), 13º salário e férias continuam no escritório contábil externo da DUOC ([FB-19](../requisitos/feedback.md#qualidade-dos-requisitos-papeis-e-conformidade-legal-ciclo-2-de-refinamento)).
+
+**Status de validação deste recorte:** a cliente aprovou com ressalvas o escopo preliminar do MVP na [Reunião 05](../governanca/atas/reuniao-05.md#decisao-d5-mvp), em 24/09/2026. O recorte descrito acima é o **corte consolidado de 31 RFs**, posterior a essa reunião, e continua **pendente de validação formal** da cliente ([Ata 07, D2](../governanca/atas/reuniao-07.md#3-decisoes-tomadas)). Até essa validação, as características marcadas como MVP e os benefícios da próxima seção são a proposta da equipe, não um escopo aceito pela cliente.
+
+**Efeitos das avaliações da Unidade 2 sobre este recorte.** As issues #126 (Requisitos Funcionais) e #127 (Requisitos Não Funcionais) mudaram o conteúdo da visão nos pontos abaixo. O detalhamento por requisito está no [Histórico do Catálogo](../requisitos/index.md#historico-de-versao) (versões 3.8 e 4.6).
+
+| Issue | Correção no catálogo | Onde aparece nesta visão |
+| :---: | :--- | :--- |
+| #126 | "Gerenciar contratos" (RF33) e "Gerenciar centros de custo" (RF34) foram decompostos em RF33, RF34 e RF37 a RF40, um RF por operação, com histórias 1:1. | CAR-05 cita RF33, RF37 e RF38 (contratos); CAR-06 cita RF34, RF39 e RF40 (centros de custo e tetos). O corte do MVP passou a 31 RFs. |
+| #126 | O RF35 passou a permitir a retificação de apontamentos **pendentes ou rejeitados**. A RN02 define as janelas de cinco dias úteis (desde o último envio ou desde a rejeição); apontamentos homologados ficam bloqueados. | Valor de negócio do CAR-02 e parágrafo de delimitação acima. |
+| #127 | O RNF08 (não repúdio do estorno) foi reclassificado como pós-MVP, junto com o RF21. O mínimo de 15 caracteres da justificativa ficou só no RF21. | Nota de escopo do CAR-03: no MVP, a correção de lote homologado segue o procedimento assistido, não o estorno. |
+| #127 | Formato e tamanho de anexos passaram aos RF07 e RF22; o RNF07 ficou com a validação real do arquivo e a varredura de ameaças. O RNF14 ganhou as condições de medição (somente servidor, carga do RNF02, p95 < 15 ms). | Sem mudança nas CARs: são critérios de qualidade verificados no catálogo e no DoD. |
 
 A integração direta automatizada via API com o sistema *FLIT* (CAR-09 / RF20) e as interfaces visuais analíticas dedicadas de auditoria (CAR-08 / RF15 e RF16) foram alocadas no backlog de evolução (Fase 2 / pós-MVP) conforme a priorização formal da Reunião 05. No MVP, a integridade e a governança de auditoria para fins da LGPD e trabalhistas são asseguradas a nível de infraestrutura e persistência de banco por meio de logs de eventos atômicos e imutáveis (*append-only*), garantidos pelos requisitos não funcionais RNF15 e RNF16.
 
@@ -1278,7 +1301,7 @@ Permanecem fora deste primeiro ciclo os módulos de engenharia civil pesada (com
 
 ### Riscos Mapeados e Condições de Aceite
 
-Os principais riscos identificados consistem em: restrições de agenda da cliente parceira para sessões síncronas, complexidade de fórmulas trabalhistas, expansão não autorizada do escopo (scope creep) e a proteção de dados pessoais ficar restrita apenas ao ambiente de desenvolvimento. Tais riscos são mitigados por validações quinzenais estruturadas, estabelecimento dos designs diretamente no frontend com base no Figma antes da codificação da lógica e persistência, blindagem estrita do escopo por marcos avaliativos e, para a proteção de dados, pela aplicação em produção de RLS, criptografia em trânsito/repouso e RBAC (detalhadas na seção 2.4),  o uso de dados sintéticos citado na 2.4 cobre apenas o ambiente de desenvolvimento e testes, não substituindo essas medidas em produção.
+Os principais riscos identificados consistem em: restrições de agenda da cliente parceira para sessões síncronas, complexidade das regras de diárias técnicas e comissões contratuais, expansão não autorizada do escopo (scope creep) e a proteção de dados pessoais ficar restrita apenas ao ambiente de desenvolvimento. Tais riscos são mitigados por validações quinzenais estruturadas, estabelecimento dos designs diretamente no frontend com base no Figma antes da codificação da lógica e persistência, blindagem estrita do escopo por marcos avaliativos e, para a proteção de dados, pela aplicação em produção de RLS, criptografia em trânsito/repouso e RBAC (detalhadas na seção 2.4),  o uso de dados sintéticos citado na 2.4 cobre apenas o ambiente de desenvolvimento e testes, não substituindo essas medidas em produção.
 
 O MVP será considerado concluído e apto para homologação quando todos os fluxos essenciais estiverem implementados, cobertos por testes automatizados, documentados no portal e formalmente aceitos pela cliente através de Termo de Homologação. O cronograma completo encontra-se registrado no [Capítulo 6 — Cronograma](../metodologia/cronograma.md), e o fluxo de aceite está detalhado no [Capítulo 7 — Interação com Cliente](../metodologia/interacao-cliente.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente).
 
@@ -1299,21 +1322,24 @@ Os seguintes princípios da LGPD (Lei 13.709/2018, Art. 6º) orientam o MVP e su
 <a id="27-beneficios-esperados"></a>
 ## Benefícios Esperados
 
-O DUOC Finance deverá gerar benefícios tangíveis para a organização e para as pessoas que utilizarão continuamente o portal. A centralização dos registros de campo (RVT), controle de diárias técnicas e prestação digital de contas de despesas e adiantamentos reduz a fragmentação atual e melhora a confiabilidade das informações financeiras e de custos de obra.
+O DUOC Finance deverá gerar benefícios tangíveis para a organização e para as pessoas que utilizarão continuamente o portal. A centralização dos registros de campo (RVT), do fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas e da prestação digital de contas de despesas e adiantamentos reduz a fragmentação atual e melhora a confiabilidade das informações financeiras e de custos de obra.
+
+!!! note "Benefícios esperados, não garantidos"
+    Os benefícios abaixo pressupõem a entrega do corte consolidado de 31 RFs, que ainda aguarda validação formal da cliente (ver [Status de validação](#delimitacao-do-escopo-do-mvp)). Nenhum deles inclui a folha CLT ou o cálculo de encargos, que permanecem no escritório contábil externo.
 
 ### Benefícios para a DUOC
 
 - **Visibilidade de custo por contrato:** a correlação entre horas registradas, custos de pessoal e contratos permite acompanhar o custo real da mão de obra por projeto, apoiando decisões comerciais e de precificação.
 - **Redução de erros e retrabalho:** a centralização dos apontamentos de RVT, conferência de diárias e prestação de contas em um único ambiente reduz divergências, duplicidade de lançamentos e falhas manuais na conciliação de despesas e apropriação de custos de obra.
-- **Agilidade no fechamento financeiro:** informações padronizadas e disponíveis em tempo hábil tornam mais rápida a conferência das rotinas de Departamento Pessoal e Financeiro.
-- **Conformidade jurídica e proteção de dados:** o registro formal das informações apoia a conformidade trabalhista e fiscal, enquanto o controle de acesso por perfis e a proteção dos dados pessoais contribuem para o atendimento à LGPD.
+- **Agilidade no fechamento de diárias e comissões:** apontamentos já homologados e valores de diária vigentes tornam mais rápida a conferência do fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas.
+- **Evidência documental e proteção de dados:** o registro formal e auditável de apontamentos, comprovantes e fechamentos fornece evidências para a contabilidade externa, enquanto o controle de acesso por perfis e a proteção dos dados pessoais contribuem para o atendimento à LGPD.
 - **Base histórica para gestão:** o histórico consolidado de horas e custos oferece dados para avaliar contratos, identificar desvios e aperfeiçoar futuras propostas de serviço.
 
 ### Benefícios para os Usuários
 
 - **Registro prático no canteiro de obras:** colaboradores poderão registrar suas atividades e despesas de campo de forma ágil via aplicação web responsiva (Web App / PWA), inclusive por dispositivos móveis, sem repetir o preenchimento em diferentes planilhas.
 - **Consulta facilitada de reembolsos:** o acompanhamento digital dos recibos e da situação das solicitações reduz a perda de documentos e torna mais previsível o processo de reembolso.
-- **Clareza sobre remunerações e apontamentos:** cada colaborador poderá consultar com transparência seus próprios apontamentos técnicos homologados, o status de deliberação das atividades e o andamento de solicitações de reembolso e adiantamento.
+- **Clareza sobre diárias e apontamentos:** cada colaborador poderá consultar com transparência seus próprios apontamentos técnicos homologados, o status de deliberação das atividades e o andamento de solicitações de reembolso e adiantamento.
 - **Confidencialidade das informações:** dados salariais e funcionais serão acessíveis somente aos perfis autorizados, preservando a privacidade entre os colaboradores.
 - **Maior transparência no trabalho:** o histórico dos registros e o acompanhamento das aprovações tornam mais claro como as horas informadas são conferidas e utilizadas no processamento financeiro.
 
@@ -1327,3 +1353,4 @@ O DUOC Finance deverá gerar benefícios tangíveis para a organização e para 
 | `2.0` | 15/09/2026 | Unificação integral de artefatos em página única contínua e adoção de prototipagem evolutiva UI-First. | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `3.0` | 02/11/2026 | Padronização dos cards interativos por módulo, alinhamento com RBAC canônico e ferramenta de presença FLIT. | Gustavo Bonifácio | Matheus Ribeiro Szervinsk |
 | `3.1` | 10/11/2026 | Sincronização das características com os requisitos decompostos (RF37 a RF40) e linha de corte do MVP (31 RFs). | Paulo Nery | Matheus Ribeiro Szervinsk |
+| `3.2` | 25/11/2026 | Fronteira do produto após o Objetivo Geral (o que o DUOC Finance calcula e o que permanece no escritório contábil externo, FB-19); termo "fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas" no CAR-03, na análise de mercado, na viabilidade e nos benefícios; distinção entre escopo preliminar aprovado com ressalvas (Reunião 05) e corte consolidado de 31 RFs pendente de validação; efeitos das issues #126 (retificação de pendentes ou rejeitados) e #127 (RF21 e RNF08 pós-MVP, procedimento assistido no CAR-03). | Paulo Nery | — |

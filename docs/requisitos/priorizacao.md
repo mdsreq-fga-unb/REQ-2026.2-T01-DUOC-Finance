@@ -5,7 +5,7 @@ Este documento consolida o **modelo metodológico integrado de priorização e d
 <div class="stats-grid">
   <div class="stat-card stat-accent">
     <span class="stat-num">31 <small>/ 40</small></span>
-    <span class="stat-label">Requisitos Funcionais no MVP (77,5%)</span>
+    <span class="stat-label">RFs no corte consolidado do MVP (77,5%) · pendente de validação da cliente</span>
   </div>
   <div class="stat-card">
     <span class="stat-num">18 <small>/ 20</small></span>
@@ -44,7 +44,7 @@ O recorte do MVP foi concebido para assegurar que o fluxo operacional central da
   <div class="journey-item">
     <div class="journey-dot">2</div>
     <h4 class="journey-title">Apontamento em Campo</h4>
-    <p class="journey-desc">Registro digital de horas trabalhadas em canteiros com GPS, fotos de evidência e retificações.</p>
+    <p class="journey-desc">Registro digital de horas trabalhadas em canteiros com GPS, fotos de evidência e retificação de apontamentos pendentes ou rejeitados (RN02).</p>
     <div class="journey-reqs">
       <a href="../#rf04" class="req-tag req-tag-rf"># RF04</a>
       <a href="../#rf19" class="req-tag req-tag-rf"># RF19</a>
@@ -57,7 +57,7 @@ O recorte do MVP foi concebido para assegurar que o fluxo operacional central da
   <div class="journey-item">
     <div class="journey-dot">3</div>
     <h4 class="journey-title">Fechamento e Reembolsos</h4>
-    <p class="journey-desc">Cálculo de diárias técnicas, prévias, deliberação de despesas e homologação bloqueada.</p>
+    <p class="journey-desc">Fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas, prévias, deliberação de despesas e homologação bloqueada. Folha CLT e encargos ficam fora (escritório contábil externo).</p>
     <div class="journey-reqs">
       <a href="../#rf05" class="req-tag req-tag-rf"># RF05</a>
       <a href="../#rf06" class="req-tag req-tag-rf"># RF06</a>
@@ -144,7 +144,7 @@ Navegue pelas abas abaixo para consultar as diretrizes metodológicas do julgame
     | :---: | :--- | :--- | :---: |
     | **TR-01** | Envio e homologação do Relatório de Viagem Técnica (RVT) | Coleta móvel, fotos de evidência, deliberação e consulta pelo diarista | **4 / 3** (Crítico) |
     | **TR-02** | Submissão e conferência de comprovantes de despesa | Prestação de contas digital, adiantamentos e validação de cupons fiscais | **4 / 3** (Crítico) |
-    | **TR-03** | Consolidação de diárias técnicas e comissões | Prévia automatizada, cálculo centesimal e homologação irrevogável | **4 / 2** (Crítico) |
+    | **TR-03** | Fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas (sem folha CLT nem encargos, que seguem no escritório contábil externo) | Prévia automatizada, cálculo centesimal e homologação irrevogável | **4 / 2** (Crítico) |
     | **TR-04** | Apropriação de custo por contrato e centro de custo | Vinculação direta de despesas a obras e painel orçamentário | **3 / 2** (Importante) |
     | **Transversal** | Base cadastral unificada, autenticação e auditoria probatória | Cadastro validado por CPF, perfis RBAC, logs append-only e retenção CLT | **4 a 1** (Fundacional) |
 
@@ -169,7 +169,7 @@ Navegue pelas abas abaixo para consultar as diretrizes metodológicas do julgame
 
         subgraph DEST["Linha de Corte e Destinação"]
             direction TB
-            MVP["<b>PRODUTO MÍNIMO VIÁVEL (MVP)</b><br>31 RFs selecionados (77,5% do Backlog)<br>Núcleo operacional completo para a DUOC"]
+            MVP["<b>PRODUTO MÍNIMO VIÁVEL (MVP)</b><br>31 RFs selecionados (77,5% do Backlog)<br>Corte consolidado · pendente de validação da cliente"]
             POST["<b>BACKLOG DE EVOLUÇÃO PÓS-MVP</b><br>9 RFs postergados (22,5% do Backlog)<br>Ciclos posteriores e capacidade residual"]
             MVP ~~~ POST
         end
@@ -324,7 +324,7 @@ A consolidação analítica e a priorização relativa operam por meio de duas f
 <a id="requisitos-de-granularidade-decompostos-rf37-a-rf40"></a>
 ## Composição Geral do Escopo do MVP
 
-A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** e **9 no Pós-MVP (22,5%)**. Utilize os botões abaixo para alternar entre a visão por **Características de Produto (CAR)** e a visão analítica pela **Matriz 4 × 4**:
+A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** e **9 no Pós-MVP (22,5%)**. Esse corte consolidado ainda está **pendente de validação formal da cliente**; o que ela aprovou com ressalvas foi o escopo preliminar da Reunião 05 (ver [Registro da Priorização e Validação](#evidencia-e-registro-da-validacao-do-mvp-com-o-cliente)). Utilize os botões abaixo para alternar entre a visão por **Características de Produto (CAR)** e a visão analítica pela **Matriz 4 × 4**:
 
 <div class="scope-view-toggle-bar">
   <span class="scope-toggle-label">Selecione o formato de visualização:</span>
@@ -614,16 +614,36 @@ sequenceDiagram
 <a id="tabela-de-classificacao-e-vinculacao-dos-rnfs-ao-mvp"></a>
 ## Registro da Priorização e Validação com a Cliente
 
-A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra a sessão de alinhamento com a equipe e a cliente realizada em 24/09/2026. Na ocasião, a cliente avaliou a metodologia de priorização apresentada e aprovou com ressalvas o escopo preliminar do MVP. A linha de corte oficial foi subsequentemente consolidada em **31 RFs no MVP (77,5%)** e **9 RFs no backlog evolutivo pós-MVP (22,5%)**, totalizando as 40 histórias de usuário (US01 a US40) após a incorporação de RF32 a RF35 e dos requisitos decompostos RF37 a RF40. O status formal de homologação definitiva dessa composição consolidada consta como **Pendente de validação** perante a cliente parceira, conforme discriminado a seguir:
+Há dois recortes de MVP com status diferentes perante a cliente. Eles não devem ser confundidos:
 
-| Tópico Deliberado | Decisão / Escopo Registrado | Status Perante a Cliente | Evidência Rastreável |
+| Recorte | O que contém | Status perante a cliente | Evidência |
 | :--- | :--- | :--- | :--- |
-| **Linha de corte do MVP** | Escopo aprovado internamente com ressalvas na Reunião 05 e consolidado posteriormente em 31 RFs (inclusão de RF32 a RF35 e dos decompostos RF37 a RF40). | **Pendente de validação** | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) e [Linha de Corte do MVP](#linha-de-corte-do-mvp). |
-| **Inclusão de indicadores (RF11)** | Incluir a filtragem de custos por obra no escopo prioritário do MVP. | **Pendente de validação** | [Ata 05, Decisão D1](../governanca/atas/reuniao-05.md#decisao-d1-rf11) e [Especificação do RF11](index.md#rf11). |
-| **Tratamento do estorno (RF21)** | Retirar o estorno automático do MVP e manter tratamento operacional assistido. | **Pendente de validação** | [Ata 05, Decisão D2](../governanca/atas/reuniao-05.md#decisao-d2-rf21) e [Especificação do RF21](index.md#rf21). |
-| **Postergação do modo offline (RNF01)** | Classificar a operação offline completa como evolutiva. | **Pendente de validação** | [Ata 05, Decisão D4](../governanca/atas/reuniao-05.md#decisao-d4-rnf01) e [Classificação dos RNFs](index.md#catalogo-nao-funcionais). |
-| **Exportação de auditoria (RF16)** | Manter relatórios avançados de auditoria fora do escopo inicial do MVP. | **Pendente de validação** | [Ata 05, Decisão D3](../governanca/atas/reuniao-05.md#decisao-d3-rf16) e [Especificação do RF16](index.md#rf16). |
-| **Segurança e infraestrutura** | Registrar como mandatórios no MVP os requisitos de login, RBAC e integridade. | **Pendente de validação** | [Ata 05, Decisão D6](../governanca/atas/reuniao-05.md#decisao-d6-seguranca-infraestrutura) e [Classificação dos RNFs](index.md#catalogo-nao-funcionais). |
+| **Escopo preliminar** (24/09/2026) | Priorização de 21 RFs pela MoSCoW e pela Matriz 4×4, com 7 RFs essenciais no núcleo, mais os ajustes deliberados na sessão: inclusão do RF11, retirada do RF21, RF16 fora do MVP, RNF01 postergado e requisitos de segurança e infraestrutura obrigatórios. | **Aprovado com ressalvas.** A ressalva foi a leitura detalhada posterior da documentação, com ajustes pontuais e consolidação da lista. | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) |
+| **Corte consolidado** (10/11/2026) | 31 RFs no MVP e 9 no pós-MVP (40 RFs, histórias US01 a US40). Inclui RFs especificados depois da Reunião 05, como RF32 a RF35, e RF37 a RF40, resultantes da decomposição pedida na issue #126. | **Pendente de validação formal.** A cliente ainda não aprovou formalmente esta lista. Sessão de validação planejada para 27/11/2026. | [Ata 07, Decisão D2](../governanca/atas/reuniao-07.md#3-decisoes-tomadas) e [Linha de Corte do MVP](#linha-de-corte-do-mvp) |
+
+Por isso, os números desta página (31 RFs, 18 RNFs, 266,5 h de demanda) descrevem a **proposta da equipe**. Até a validação, as características marcadas como MVP na [Solução Proposta](../visao-produto/solucao-proposta.md#23-caracteristicas-do-produto-car) e os benefícios esperados dependem desse aceite.
+
+As decisões tomadas com a cliente na Reunião 05 continuam válidas dentro do corte consolidado:
+
+| Decisão da Reunião 05 | Registro | Situação no corte consolidado | Evidência |
+| :--- | :--- | :--- | :--- |
+| **Inclusão de indicadores (RF11)** | A cliente pediu a filtragem de custos por obra no MVP; a equipe acolheu. | Mantida: RF11 no MVP. | [Ata 05, D1](../governanca/atas/reuniao-05.md#decisao-d1-rf11) e [RF11](index.md#rf11) |
+| **Estorno (RF21)** | Retirado do MVP; correções seguem o procedimento assistido. | Mantida: RF21 e o RNF08, que só se aplica a ele, no pós-MVP (issue #127). | [Ata 05, D2](../governanca/atas/reuniao-05.md#decisao-d2-rf21) e [RF21](index.md#rf21) |
+| **Exportação de auditoria (RF16)** | Mantida fora do MVP. | Mantida: RF16 no pós-MVP. | [Ata 05, D3](../governanca/atas/reuniao-05.md#decisao-d3-rf16) e [RF16](index.md#rf16) |
+| **Modo offline (RNF01)** | Postergado como evolutivo. | Mantida: RNF01 no pós-MVP. | [Ata 05, D4](../governanca/atas/reuniao-05.md#decisao-d4-rnf01) e [RNFs](index.md#catalogo-nao-funcionais) |
+| **Segurança e infraestrutura** | Login, RBAC, criptografia, expiração de token e backup obrigatórios no MVP. | Mantida. | [Ata 05, D6](../governanca/atas/reuniao-05.md#decisao-d6-seguranca-infraestrutura) e [RNFs](index.md#catalogo-nao-funcionais) |
+
+<a id="efeitos-das-issues-126-e-127-na-priorizacao"></a>
+### Efeitos das issues #126 e #127 na priorização
+
+As avaliações da Unidade 2 alteraram o conteúdo desta página, e não só o histórico do catálogo:
+
+| Issue | Correção | Efeito nesta página |
+| :---: | :--- | :--- |
+| **#126** | RF33 e RF34 ("gerenciar") foram decompostos em RF33, RF34 e RF37 a RF40, um RF por operação, com histórias US33, US34 e US37 a US40 em correspondência 1:1. | O backlog passou de 36 para 40 RFs e o MVP para 31 RFs. RF37 a RF40 têm VB, EC e quadrante próprios na Matriz 4×4. |
+| **#126** | RF35 passou a cobrir a retificação de apontamentos **pendentes ou rejeitados**. A RN02 define as janelas: cinco dias úteis desde o último envio, ou desde a notificação da rejeição. Homologados ficam bloqueados. | A jornada "Apontamento em Campo" usa o RF35 nesse sentido. Depois da homologação do lote, a correção só ocorre por reabertura autorizada no procedimento assistido. |
+| **#127** | O RNF08 (não repúdio do estorno) foi reclassificado como pós-MVP, acompanhando o RF21. O mínimo de 15 caracteres da justificativa ficou apenas no RF21. | 18 de 20 RNFs no MVP (RNF01 e RNF08 fora). Catálogo, DoD e esta página usam a mesma classificação. |
+| **#127** | Formato e tamanho de anexos passaram para RF07 e RF22; o RNF07 ficou com a validação real do arquivo e a varredura de ameaças. O RNF14 ganhou condições de medição (só servidor, carga do RNF02, p95 < 15 ms). | Sem mudança de classificação; RNF07 e RNF14 continuam no MVP. |
 
 ---
 
@@ -635,3 +655,4 @@ A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra a sessão de a
 | `2.0` | 28/09/2026 | Consolidação da Matriz 4×4 cartesiana e definição do primeiro corte preliminar do MVP alinhado na Reunião 05. | Matheus Ribeiro | Eric Araújo |
 | `3.0` | 10/11/2026 | Expansão atômica para 40 RFs (31 no MVP / 9 Pós-MVP) com desmembramento de contratos e centros de custo (RF37 a RF40) em mapeamento 1:1 com Histórias de Usuário. | Paulo Nery | Matheus Ribeiro |
 | `4.0` | 16/11/2026 | Reformulação visual compacta: resumo estatístico contido, fluxo ponta a ponta, tabelas metodológicas de avaliação (VB e EC), alternador dinâmico de visualização (Características vs Matriz 4x4), fórmulas limpas e procedimento de retificação assistida. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `4.1` | 25/11/2026 | Separação entre o escopo preliminar aprovado com ressalvas (Ata 05, D5) e o corte consolidado de 31 RFs pendente de validação formal (Ata 07, D2), com o status visível no resumo, no fluxo e na composição do escopo; situação das decisões D1 a D4 e D6 no corte consolidado; seção com os efeitos das issues #126 e #127; TR-03 e jornada de fechamento descritos como fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas, sem folha CLT (FB-19). | Paulo Nery | — |

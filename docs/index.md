@@ -27,7 +27,7 @@ A solução de software foi concebida a partir de um diagnóstico de dores reais
 | **Cliente Parceiro** | DUOC Arquitetura e Engenharia LTDA (CNPJ: `53.616.784/0001-43`) |
 | **Representante Focal** | Maria Beatryz Vieira de Sousa |
 | **Atividade Principal** | Serviços multidisciplinares de arquitetura, engenharia estrutural, instalações prediais e gestão de obras. |
-| **Escopo do MVP** | Plataforma digital integrada de controle de departamento pessoal e custos de mão de obra. O sistema apoia o cálculo de custo de mão de obra de diaristas, correlaciona relatórios de viagem técnica (RVT) com custos reais de projetos e assegura a conformidade legal com a Lei Geral de Proteção de Dados (LGPD). |
+| **Escopo do MVP** | Plataforma digital para os apontamentos de campo (RVT), despesas e reembolsos, fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas e apropriação desses custos a cada contrato de obra, com proteção de dados conforme a LGPD. A folha CLT e os encargos (INSS, FGTS, IRRF, 13º e férias) permanecem no escritório contábil externo da DUOC. O corte consolidado de 31 RFs aguarda validação formal da cliente ([Priorização](requisitos/priorizacao.md#evidencia-e-registro-da-validacao-do-mvp-com-o-cliente)). |
 | **Endereço Eletrônico** | [https://www.duoc.eng.br/](https://www.duoc.eng.br/) |
 
 ---
@@ -73,3 +73,4 @@ Os integrantes da equipe dividem suas responsabilidades operacionais e de govern
 | `1.2` | 07/09/2026 | Alinhamento do portal com a estratégia metodológica RAD | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `1.3` | 07/09/2026 | Inclusão do papel de Engenheiro de Requisitos para Eric e Matheus | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
 | `1.4` | 15/11/2026 | Reorganização sintética da estrutura de navegação e integração do eixo de Planejamento | Matheus Ribeiro Szervinsk | Matheus Ribeiro Szervinsk |
+| `1.5` | 25/11/2026 | Escopo do MVP reescrito sem "controle de departamento pessoal": fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas, folha CLT e encargos no escritório contábil externo (FB-19) e corte de 31 RFs pendente de validação. | Paulo Nery | — |

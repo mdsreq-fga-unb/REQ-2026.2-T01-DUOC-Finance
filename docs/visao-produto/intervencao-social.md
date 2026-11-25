@@ -26,9 +26,9 @@ Este capítulo é composto pelas seguintes seções analíticas:
 A implementação do **DUOC Finance** tem como objetivo promover transformações organizacionais e culturais estruturadas na empresa parceira, divididas nos seguintes tópicos:
 
 *   **Transição do Registro Informal para Contínuo e Auditável:**
-    *   Substituição do modelo baseado em comunicação verbal, memória individual e preenchimento manual de planilhas por registros contínuos de horas técnicas (RVT) e ponto eletrônico.
+    *   Substituição do modelo baseado em comunicação verbal, memória individual e preenchimento manual de planilhas por registros contínuos de horas técnicas (RVT). O ponto eletrônico oficial continua no *FLIT*.
     *   Eliminação da dependência de quem "lembra" ou "sabe" determinada informação, consolidando um histórico auditável e consistente.
-    *   Redução drástica de divergências de dados e retrabalho administrativo no fechamento mensal.
+    *   Redução drástica de divergências de dados e retrabalho administrativo no fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas.
 
 *   **Segurança da Informação e Conformidade com a LGPD:**
     *   Adequação às diretrizes da Lei Geral de Proteção de Dados no tratamento de informações salariais e pessoais dos colaboradores.
@@ -85,3 +85,4 @@ A introdução do **DUOC Finance** tende a produzir efeitos que extrapolam os ob
 | `1.0` | 05/09/2026 | Levantamento inicial dos impactos sociotécnicos e efeitos colaterais | Matheus Saraiva | Matheus Ribeiro Szervinsk |
 | `1.1` | 07/09/2026 | Preenchimento da matriz de riscos e reestruturação analítica em tópicos | Matheus Saraiva | Matheus Ribeiro Szervinsk |
 | `2.0` | 15/09/2026 | Unificação integral dos artefatos 3.1 e 3.2 em página única contínua | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
+| `2.1` | 25/11/2026 | Ajuste de escopo: ponto eletrônico permanece no FLIT e o efeito esperado passa a ser no fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas, sem folha CLT (FB-19). | Paulo Nery | — |
