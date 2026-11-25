@@ -29,14 +29,17 @@ O **DoD** é o portão de saída que confirma que um incremento está funcional,
 <a id="registro-da-aplicacao-do-dod-incremento-1-atualizado-em-16112026"></a>
 ## 2. Resultados do DoD — Incremento 1 (Concluído Tecnicamente)
 
-Registro critério por critério para os **10 Requisitos Funcionais entregues no Incremento 1** ([`RF01`](../requisitos/index.md#rf01)–[`RF04`](../requisitos/index.md#rf04), [`RF13`](../requisitos/index.md#rf13), [`RF17`](../requisitos/index.md#rf17)–[`RF19`](../requisitos/index.md#rf19), [`RF22`](../requisitos/index.md#rf22), [`RF23`](../requisitos/index.md#rf23)) e os **7 RNFs verificados** (`RNF02`, `RNF03`, `RNF04`, `RNF07`, `RNF13`, `RNF14`, `RNF20`).
+Registro critério por critério para os **10 Requisitos Funcionais entregues no Incremento 1** ([`RF01`](../requisitos/index.md#rf01)–[`RF04`](../requisitos/index.md#rf04), [`RF13`](../requisitos/index.md#rf13), [`RF17`](../requisitos/index.md#rf17)–[`RF19`](../requisitos/index.md#rf19), [`RF22`](../requisitos/index.md#rf22), [`RF23`](../requisitos/index.md#rf23)) e os RNFs avaliados no incremento (`RNF02`, `RNF03`, `RNF04`, `RNF07`, `RNF13`, `RNF14`, `RNF20`).
 
 | Critério do DoD | Situação | Evidência Comprobatória (PRs &amp; Registros) |
 | :--- | :---: | :--- |
 | **Incremento funcional (Docker / Staging)** | **Atendido** | PostgreSQL (`5432`), API NestJS (`3000`) e Frontend React (`5173`) operacionais; fluxos integrados nos PRs [#167](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167), [#170](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170) e [#172](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172). |
 | **Testes automatizados (Backend e Frontend)** | **Atendido** | **107/107 testes backend** aprovados em 15 suítes Vitest + **18/18 testes frontend** aprovados em 3 suítes ([PR #172](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172) e [PR #168](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/168)). |
 | **Código, tipagem e inspeção por pares (CI/CD)** | **Atendido** | Checks `lint`, `tsc --noEmit` e `npm run build` em `.github/workflows/ci.yml` ([PR #168](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/168)) + checklist de revisão preenchido nos PRs. |
-| **RNFs verificáveis no incremento** | **Atendido** | `RNF02` (latência `0,020s` em `/api/health` e `0,011s` em `/api/rvt/contratos-ativos`), `RNF03` (`bcrypt` custo >= 10), `RNF07` (SHA-256 + MIME real), `RNF13` (JWT 900s), `RNF14` (RBAC HTTP 401/403) e `RNF20` (DTOs). |
+| **RNF02 — desempenho da consulta cadastral** | **Pendente de verificação específica** | Os registros existentes divergem: informam `0,020s` e `0,337s` em `/api/health`, além de `0,011s` e `0,055s` em `/api/rvt/contratos-ativos`. Esses endpoints não correspondem à consulta cadastral de colaboradores e não comprovam o limite de `2,0s`. Falta medir essa consulta e registrar ambiente, volume de dados, número de requisições e método. |
+| **RNF03 — proteção de dados em repouso e em trânsito** | **Parcialmente verificado** | O teste de `bcrypt` com custo `>= 10` comprova o hash das senhas. Não comprova a criptografia em repouso dos demais dados pessoais e cadastrais nem a proteção do tráfego. A descrição do PR #172 menciona HTTPS, mas não apresenta evidência da verificação de TLS. |
+| **RNF04 — usabilidade no preenchimento de apontamentos** | **Pendente de verificação** | A Ata 06 registra a aprovação guiada do protótipo, mas não um teste da tarefa com usuários em primeiro uso. Os registros consultados não informam número de passos nem taxa de conclusão. Falta comprovar os critérios mensuráveis do RNF04. |
+| **Outros RNFs verificados no incremento** | **Atendido** | `RNF07` (SHA-256 + MIME real), `RNF13` (JWT 900s), `RNF14` (RBAC HTTP 401/403) e `RNF20` (validação DTO). |
 | **Documentação — Docs as Code** | **Atendido** | Catálogo atualizado com evidências visuais ([PR #174](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/174)) e `mkdocs build --strict` sem erros nem links quebrados. |
 | **Homologação sociotécnica do incremento** | **Pendente de UAT** | Protótipos e telas validados na [Ata 06](../governanca/atas/reuniao-06.md); sessão formal de UAT do fluxo integrado em Staging com Maria Beatryz prevista para 27/11/2026 ([Semana 12](../metodologia/detalhamento-ciclos.md#semana-12)). |
 
@@ -98,7 +101,12 @@ Para evitar qualquer ambiguidade, **nenhum requisito fora do Incremento 1 possui
 | **Incremento 2 em Desenvolvimento (6 RFs):** [`RF07`](../requisitos/index.md#rf07), [`RF08`](../requisitos/index.md#rf08), [`RF28`](../requisitos/index.md#rf28), [`RF29`](../requisitos/index.md#rf29), [`RF32`](../requisitos/index.md#rf32), [`RF35`](../requisitos/index.md#rf35) | **DoD Pendente (Em Execução)** | Implementação das rotas e telas de deliberação/reembolsos, testes automatizados, PR revisado e homologação em UAT. |
 | **Prontos para Dev (12 RFs):** [`RF05`](../requisitos/index.md#rf05), [`RF06`](../requisitos/index.md#rf06), [`RF27`](../requisitos/index.md#rf27), [`RF09`](../requisitos/index.md#rf09)–[`RF11`](../requisitos/index.md#rf11), [`RF33`](../requisitos/index.md#rf33), [`RF34`](../requisitos/index.md#rf34), [`RF37`](../requisitos/index.md#rf37)–[`RF40`](../requisitos/index.md#rf40) | **DoD Não Iniciado** | Aguardando início da codificação nos próximos ciclos do Incremento 2/3. |
 | **Aguardando Ciclo (3 RFs) e Pós-MVP (9 RFs)** | **DoD Não Iniciado** | Itens fora do ciclo atual (`RF14`, `RF25`, `RF26` e `Release 2`). |
-| **RNFs de Ciclos Futuros / Produção (`RNF05`, `RNF06`, `RNF08`–`RNF12`, `RNF15`–`RNF19`, `RNF01`)** | **DoD Não Iniciado** | Verificação condicionada à entrega do motor financeiro, auditoria e infraestrutura de produção (*Cutover*). |
+| **RNFs funcionais de ciclos futuros (`RNF05`, `RNF06`, `RNF08`–`RNF12`, `RNF01`)** | **DoD Não Iniciado** | Verificação nos ciclos que implementarem as funcionalidades correspondentes. |
+| **RNF15 — auditoria transacional** | **Pendente** | Nos incrementos que incluírem mutações abrangidas, comprovar a gravação atômica do registro de auditoria e a métrica de latência definida no requisito. |
+| **RNF16 — retenção de auditoria** | **Pendente para operação** | Prever e comprovar a política que impede a exclusão dos registros antes do prazo definido, antes da entrada em operação. |
+| **RNF17 — backup e restauração** | **Pendente para Cutover** | Comprovar rotina diária de backup e testes de restauração quando a infraestrutura operacional estiver disponível. |
+| **RNF18 — disponibilidade mensal** | **Pendente para produção** | Comprovar a meta de 99,5% por monitoramento contínuo em ambiente produtivo. |
+| **RNF19 — acessibilidade das interfaces** | **Pendente de verificação por incremento** | Avaliar os critérios WCAG nas telas entregues em cada incremento; essa verificação não depende da entrada em produção. |
 
 ---
 
@@ -243,3 +251,4 @@ As evidências visuais (prints de interface, logs de testes e critérios marcado
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 17/11/2026 | Desmembramento do DoD em documento próprio com evidências visuais em blocos expansíveis (largura total) e status explícito dos demais incrementos. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `1.1` | 24/11/2026 | Revisão dos registros do DoD para distinguir RNFs verificados, parcialmente verificados e pendentes no Incremento 1. | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |

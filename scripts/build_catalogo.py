@@ -1931,7 +1931,7 @@ lines.append('Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam o
 lines.append('')
 lines.append('<a id="rnfs-transversais"></a>')
 lines.append('!!! info "Pacote Transversal de Atributos de Qualidade (T)"')
-lines.append('    Os requisitos **RNF03** (Criptografia AES-256 / TLS 1.3), **RNF14** (Autorização RBAC em 100% dos endpoints), **RNF15** (Consistência e Atomicidade de Logs), **RNF16** (Retenção Quinquenal CLT Art. 11), **RNF17** (Rotina de Backup Diário), **RNF18** (Disponibilidade ≥ 99,5%), **RNF19** (Acessibilidade WCAG 2.1 AA) e **RNF20** (Validação de Schema em Escritas) compõem o **Pacote Transversal (T)** obrigatório, aplicando-se de forma pervasiva a todas as telas, rotinas e histórias de usuário do produto.')
+lines.append('    O Pacote Transversal (T) é obrigatório, mas sua verificação depende do escopo e do ambiente. Em cada incremento, verificar os controles aplicáveis às funcionalidades entregues: proteção de dados (RNF03), autorização (RNF14), auditoria transacional quando houver mutações abrangidas (RNF15), acessibilidade das telas implementadas (RNF19) e validação das escritas da API (RNF20). A política de retenção (RNF16) deve ser prevista no módulo de auditoria e comprovada antes da operação. Backup e restauração (RNF17) e disponibilidade mensal de 99,5% (RNF18) dependem da infraestrutura operacional e são verificados no Cutover. A classificação transversal não significa que todos esses requisitos estejam implementados ou verificados em cada incremento.')
 lines.append('')
 
 for rnf in RNFS_DATA:
@@ -2029,6 +2029,7 @@ lines.append('## Histórico de Versão')
 lines.append('')
 lines.append('| Versão | Data | Descrição | Autor(es) | Revisor(es) |')
 lines.append('| :---: | :---: | :--- | :--- | :--- |')
+lines.append('| `4.4` | 24/11/2026 | Revisão das evidências dos RNF02 e RNF03, do status do RNF04 e da aplicação do Pacote Transversal por incremento e operação. | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |')
 lines.append('| `4.3` | 02/11/2026 | **Revisão Cruzada & FLIT:** ferramenta de presença padronizada como FLIT (anteriormente registrada como Shifton) em RF20, CAR-09, critérios DoR/DoD e catálogo; refinamento dos perfis dos atores RBAC e inclusão de nota de alinhamento sociotécnico de Maria Beatryz. | Gustavo Bonifácio e Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |')
 lines.append('| `4.2` | 02/11/2026 | **Padronização Expandida & Links Bidirecionais:** migração das Regras de Negócio (cards vermelhos) e Requisitos Não Funcionais (cards azuis) para a arquitetura expansível padronizada dos RFs; estabelecimento da linkagem bidirecional recíproca entre Características de Produto (CAR-01 a CAR-10) e Requisitos Funcionais; saneamento de rotas e âncoras relativas do MkDocs. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |')
 lines.append('| `4.1` | 30/10/2026 | **Desacoplamento e Interconexão Bidirecional Total:** separação da Pirâmide de Abstração e Matriz-Síntese no documento exclusivo `rastreabilidade.md`; remoção da seção preliminar de Casos de Uso do Catálogo; reestruturação completa das 31 Regras de Negócio e 20 Requisitos Não Funcionais em cards visuais interativos com links bidirecionais diretos para os Requisitos Funcionais executores; integração com deck de navegação rápida. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |')
