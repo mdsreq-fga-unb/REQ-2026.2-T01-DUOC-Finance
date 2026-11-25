@@ -42,7 +42,7 @@ A partir das informações sobre o cenário atual da DUOC Arquitetura e Engenhar
   <div class="card">
     <span class="dot">1</span>
     <h3>Estabilidade e Flexibilidade (Abordagem Híbrida)</h3>
-    <p>O domínio financeiro exige previsibilidade e estabilidade contábil nos cálculos de folha, alíquotas e apuração de diárias (dirigido por plano). Em contrapartida, as interfaces de lançamento de horas de campo (RVT) e relatórios operacionais demandam validação ágil e experimentação visual contínua.</p>
+    <p>O fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas exige regras estáveis e homologadas com a cliente antes da codificação (dirigido por plano). A folha CLT e os encargos (INSS, FGTS, IRRF, 13º e férias) não são calculados pelo DUOC Finance: permanecem no escritório contábil externo (<a href="../../requisitos/feedback/#qualidade-dos-requisitos-papeis-e-conformidade-legal-ciclo-2-de-refinamento">FB-19</a>). Em contrapartida, as interfaces de lançamento de horas de campo (RVT) e relatórios operacionais demandam validação ágil e experimentação visual contínua.</p>
   </div>
   <div class="card">
     <span class="dot">2</span>
@@ -55,6 +55,11 @@ A partir das informações sobre o cenário atual da DUOC Arquitetura e Engenhar
     <p>O processo RAD enfatiza o planejamento conciso de requisitos seguido por modelagem de dados consistente (PostgreSQL/Supabase) e intensa prototipagem de interfaces (Figma e React SPA), alinhando a solução com a cliente parceira antes da codificação extensiva.</p>
   </div>
 </div>
+
+!!! note "Fronteira dos cálculos do DUOC Finance"
+    **O DUOC Finance calcula:** o fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas, a partir de apontamentos de campo (RVT) homologados, e a apropriação desses valores e dos reembolsos aos contratos de obra ([RF05](../requisitos/index.md#rf05), [RF06](../requisitos/index.md#rf06) e [RF09](../requisitos/index.md#rf09)).
+
+    **O DUOC Finance não calcula:** folha de pagamento CLT, encargos (INSS, FGTS, IRRF), 13º salário, férias e holerites. Essas rotinas permanecem no escritório contábil externo contratado pela DUOC, conforme a deliberação [FB-19](../requisitos/feedback.md#qualidade-dos-requisitos-papeis-e-conformidade-legal-ciclo-2-de-refinamento).
 
 #### Adaptação do Processo RAD ao Contexto da DUOC
 
@@ -76,7 +81,7 @@ Para atender à necessidade de integração sistêmica e consistência técnica,
       <span class="rad-arrow">→</span>
     </div>
     <h4>Design do Usuário</h4>
-    <p>Sessões conjuntas no Figma e validação de algoritmos de cálculo de diárias e folha.</p>
+    <p>Sessões conjuntas no Figma e validação das regras de fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas.</p>
     <span class="rad-tag">Figma + Regras</span>
   </div>
   <div class="rad-step">
@@ -134,7 +139,7 @@ O quadro a seguir apresenta uma comparação analítica entre o processo **RAD**
 
 Com base nas características intrínsecas do produto DUOC Finance, na decomposição do escopo e no perfil dos usuários, o **RAD (Rapid Application Development)** foi selecionado como o processo de desenvolvimento ideal pelas seguintes razões:
 
-1.  **Natureza Decomponível do Produto:** O DUOC Finance não é uma plataforma experimental de algoritmo obscuro, mas um sistema de gestão financeira e de departamento pessoal com um fluxo linear e claro (Lançamento de Ponto/RVT -> Apuração de Regras -> Fechamento de Folha/Comissões -> Relatórios). O RAD se adequa em projetos dessa natureza, pois permite particionar esses módulos verticais claramente. A equipe pode, por exemplo, prototipar e validar exaustivamente a interface de lançamento de RVT para os operários da obra, enquanto consolida, em paralelo, a modelagem de dados do motor de cálculos.
+1.  **Natureza Decomponível do Produto:** O DUOC Finance não é uma plataforma experimental de algoritmo obscuro, mas um sistema de gestão operacional e financeira de obras com um fluxo linear e claro (Apontamento de campo/RVT -> Homologação pela gestão -> Fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas -> Apropriação de custos por contrato e relatórios). Esse fluxo não inclui o processamento da folha CLT nem o cálculo de encargos (INSS, FGTS, IRRF, 13º e férias), que permanecem no escritório contábil externo da DUOC, e não substitui o registro oficial de frequência, que segue no *FLIT* (FB-19). O RAD se adequa em projetos dessa natureza, pois permite particionar esses módulos verticais claramente. A equipe pode, por exemplo, prototipar e validar exaustivamente a interface de lançamento de RVT para os operários da obra, enquanto consolida, em paralelo, a modelagem de dados do motor de cálculos.
 2.  **Alta Disponibilidade e Perfil dos Usuários:** O RAD exige e pressupõe um envolvimento intenso e direto do usuário final. A realidade do projeto da DUOC atende plenamente a este requisito, contando com a alta disponibilidade da representante da empresa (Maria Beatryz) para sessões frequentes de validação e refinamento de design. A interação constante elimina a necessidade de documentos prescritivos longos, reduzindo ambiguidades antes da construção das APIs no NestJS ou telas no React SPA.
 3.  **Prototipagem em Duas Vias (Usabilidade e Regras de Negócio):** O gargalo administrativo da DUOC envolve não apenas a experiência do usuário de campo ao lançar horas no sistema, mas, crucialmente, a validade dos cálculos por trás da interface. No RAD, a "prototipagem" será aplicada de forma abrangente: a equipe validará a usabilidade fluida no cliente web (React SPA) para garantir adesão, e criará testes práticos no motor de cálculo (NestJS backend) para homologar a aderência matemática da apropriação de custos da obra e das regras de diárias e comissões com a cliente.
 4.  **Evolução sobre Arquitetura Consistente:** Embora a solução exija evolução contínua, uma ferramenta financeira exige forte integridade relacional. Diferente do XP, que encoraja uma arquitetura estritamente emergente e evolutiva de baixo para cima, o RAD permite à equipe estabelecer antecipadamente a espinha dorsal dos dados (utilizando banco relacional PostgreSQL no Supabase) para suportar a LGPD e regras financeiras com firmeza, enquanto utiliza ciclos rápidos para adaptar interfaces e fluxos de trabalho gerenciais.
@@ -148,3 +153,4 @@ Com base nas características intrínsecas do produto DUOC Finance, na decomposi
 | `1.0` | 05/09/2026 | Definição da abordagem de ciclo de vida RAD, comparativo e justificativa de engenharia. | Eric Araújo | Matheus Ribeiro Szervinsk |
 | `2.0` | 15/09/2026 | Unificação integral dos artefatos metodológicos em página contínua e alinhamento de stack. | Equipe Cascata Ágil | Matheus Ribeiro Szervinsk |
 | `2.3` | 15/11/2026 | Registro da execução do Design do Usuário (Ata 06) e modernização com cards inteligentes das fases RAD. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `2.4` | 25/11/2026 | Substituição de "cálculos de folha" e "fechamento de folha/comissões" por "fechamento quinzenal de diárias técnicas e comissões contratuais simplificadas"; inclusão da fronteira dos cálculos, explicitando que folha CLT e encargos (INSS, FGTS, IRRF, 13º e férias) permanecem no escritório contábil externo (FB-19). | Paulo Nery | — |

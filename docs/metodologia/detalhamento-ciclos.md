@@ -70,7 +70,7 @@ O planejamento metodológico, as folgas e o método de atualização de requisit
         <span class="track-status-pill planned">A Fazer</span>
       </div>
       <h4 class="track-name">Ciclo 3 / Incr. 3</h4>
-      <span class="track-subtitle">Motor Financeiro, Folha &amp; UAT</span>
+      <span class="track-subtitle">Motor Financeiro (Diárias e Comissões) &amp; UAT</span>
       <div class="track-footer">
         <span class="track-dates">22/11 — 26/11 • 5 dias</span>
       </div>
@@ -767,7 +767,7 @@ O planejamento metodológico, as folgas e o método de atualização de requisit
       <div class="ciclo-metrics-strip">
         <div class="ciclo-metric-box">
           <span class="ciclo-metric-label">Ciclo RAD</span>
-          <span class="ciclo-metric-value">Incremento 3: Motor Financeiro, Folha, Auditoria &amp; UAT</span>
+          <span class="ciclo-metric-value">Incremento 3: Motor Financeiro (Diárias e Comissões), Auditoria &amp; UAT</span>
         </div>
         <div class="ciclo-metric-box">
           <span class="ciclo-metric-label">Início</span>
@@ -960,3 +960,4 @@ O planejamento metodológico, as folgas e o método de atualização de requisit
     | `1.2` | 17/11/2026 | Atualização das Semanas 08, 09 e 10 para o status "Concluído" com base nas entregas registradas; remoção das tabelas de pendências das semanas concluídas. | Eric Araújo | - |
     | `2.0` | 17/11/2026 | Alinhamento completo das datas, ciclos e status ao Cronograma (Pré-Ciclo, Ciclos 0 a 4), adição de campos estruturados (O que foi feito, Entregáveis, Status), botões de filtro por ciclo e barra de pesquisa por dia/incremento. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
     | `2.1` | 17/11/2026 | Unificação da Linha Temporal de Iterações como botões de filtro, refatoração dos cards no padrão Lumio UI com Início, Fim, Duração, Ciclo RAD, Entregues e Pendentes. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+    | `2.2` | 25/11/2026 | Incremento 3 renomeado sem "Folha": motor financeiro de diárias técnicas e comissões contratuais simplificadas (FB-19). | Paulo Nery | — |
