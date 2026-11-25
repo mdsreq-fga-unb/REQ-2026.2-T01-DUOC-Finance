@@ -9647,7 +9647,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 
 <a id="rnfs-transversais"></a>
 !!! info "Pacote Transversal de Atributos de Qualidade (T)"
-    Os requisitos **RNF03** (Criptografia AES-256 / TLS 1.3), **RNF14** (Autorização RBAC em 100% dos endpoints), **RNF15** (Consistência e Atomicidade de Logs), **RNF16** (Retenção Quinquenal CLT Art. 11), **RNF17** (Rotina de Backup Diário), **RNF18** (Disponibilidade ≥ 99,5%), **RNF19** (Acessibilidade WCAG 2.1 AA) e **RNF20** (Validação de Schema em Escritas) compõem o **Pacote Transversal (T)** obrigatório, aplicando-se de forma pervasiva a todas as telas, rotinas e histórias de usuário do produto.
+    O Pacote Transversal (T) é obrigatório, mas sua verificação depende do escopo e do ambiente. Em cada incremento, verificar os controles aplicáveis às funcionalidades entregues: proteção de dados (RNF03), autorização (RNF14), auditoria transacional quando houver mutações abrangidas (RNF15), acessibilidade das telas implementadas (RNF19) e validação das escritas da API (RNF20). A política de retenção (RNF16) deve ser prevista no módulo de auditoria e comprovada antes da operação. Backup e restauração (RNF17) e disponibilidade mensal de 99,5% (RNF18) dependem da infraestrutura operacional e são verificados no Cutover. A classificação transversal não significa que todos esses requisitos estejam implementados ou verificados em cada incremento.
 
 <details class="req-card req-card-rnf req-card-oe1" id="rnf01" data-type="rnf" data-rnf="RNF01" data-oe="oe1" data-mvp="pos-mvp" data-quad="q3" data-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf35 requisito nao funcional atributo qualidade dod" data-search-text="rnf01 operar em modo offline para coleta de dados em canteiros sem conectividade urps+ confiabilidade produto — confiabilidade módulo 1 / oe1 a aplicação web responsiva (web app / pwa) em dispositivo móvel deve armazenar localmente, sem perda de dados, no mínimo 100 apontamentos com fotos compactadas sem sinal de rede; exibir alerta visual quando o armazenamento local atingir 80% da capacidade; e sincronizar automaticamente em até 30 segundos após restabelecida a conexão. rf04 rf19 rf22 rf35 requisito nao funcional atributo qualidade dod">
 
@@ -9723,7 +9723,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
     
-      <span class="req-pill req-pill-exec req-pill-exec-concluido">Verificado · Incr. 1</span>
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Verificação pendente · Incr. 1</span>
       <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #172 no GitHub">PR #172 ↗</a>
     </div>
     <div class="req-title-row">
@@ -9780,7 +9780,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Latência medida em Docker/Staging: /api/health em 0,337s e /api/rvt/contratos-ativos em 0,055s (abaixo do teto de 2,0s). <a href="../mvp/dod/#incremento-1">Ver resultado geral e evidências do DoD (Incr. 1) ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Verificação pendente · Incr. 1):</strong> As medições registradas em <code>/api/health</code> e <code>/api/rvt/contratos-ativos</code> não correspondem à consulta cadastral de colaboradores. Os registros também divergem quanto aos tempos medidos e não informam as condições de carga. Portanto, não comprovam o limite do RNF02; falta medir a busca e paginação da ficha cadastral e registrar ambiente, volume de dados e método. <a href="../mvp/dod/#incremento-1">Ver resultado geral e evidências do DoD (Incr. 1) ↗</a></p>
       </div>
     </div>
   </div>
@@ -9792,7 +9792,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
     <div class="req-summary-chips">
       <span class="req-pill req-pill-transversal">Pacote Transversal (T)</span>
     
-      <span class="req-pill req-pill-exec req-pill-exec-concluido">Verificado · Incr. 1</span>
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Parcialmente verificado · Incr. 1</span>
       <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #172 no GitHub">PR #172 ↗</a>
     </div>
     <div class="req-title-row">
@@ -9849,7 +9849,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Hash bcrypt com custo >= 10 comprovado em senha.util.spec.ts (2 testes) e JWT HS256 em jwt.util.spec.ts (7 testes). <a href="../mvp/dod/#incremento-1">Ver resultado geral e evidências do DoD (Incr. 1) ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Parcialmente verificado · Incr. 1):</strong> O teste de <code>bcrypt</code> com custo >= 10 comprova o hash de senhas. Os registros consultados não comprovam criptografia AES-256 em repouso dos demais dados cadastrais nem verificação de TLS 1.3 em trânsito; essas partes permanecem pendentes. <a href="../mvp/dod/#incremento-1">Ver resultado geral e evidências do DoD (Incr. 1) ↗</a></p>
       </div>
     </div>
   </div>
@@ -9860,7 +9860,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
     <div class="req-summary-chips">
       <span class="req-pill req-pill-scope">Módulo 1 / OE1</span>
     
-      <span class="req-pill req-pill-exec req-pill-exec-concluido">Verificado · Incr. 1</span>
+      <span class="req-pill req-pill-exec req-pill-exec-aguardando">Verificação pendente · Incr. 1</span>
       <a href="https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170" target="_blank" rel="noopener" class="req-gh-pill" title="Abrir PR #170 no GitHub">PR #170 ↗</a>
     </div>
     <div class="req-title-row">
@@ -9917,7 +9917,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
         <span class="req-checklist-title">Evidência & Situação de Verificação (DoD)</span>
       </div>
       <div class="req-desc-box">
-        <p class="req-desc-text"><strong>Situação (Verificado · Incr. 1):</strong> Fluxo móvel de RVT implementado e demonstrado com capturas de tela anexadas no PR #170. <a href="../mvp/dod/#incremento-1">Ver resultado geral e evidências do DoD (Incr. 1) ↗</a></p>
+        <p class="req-desc-text"><strong>Situação (Verificação pendente · Incr. 1):</strong> A <a href="../governanca/atas/reuniao-06.md">Ata 06</a> registra a avaliação guiada do protótipo pela cliente, aprovado sem alterações. Esse registro não comprova a execução da tarefa por usuários em primeiro uso, o limite de cinco passos ou a taxa de conclusão mínima de 90%. O PR #170 comprova a implementação do fluxo, mas não esse teste de usabilidade. <a href="../mvp/dod/#incremento-1">Ver resultado geral e evidências do DoD (Incr. 1) ↗</a></p>
       </div>
     </div>
   </div>
@@ -11011,6 +11011,7 @@ Os **20 Requisitos Não Funcionais (RNF01 a RNF20)** especificam os atributos de
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
+| `4.7` | 24/11/2026 | Revisão das evidências dos RNF02 e RNF03, do status do RNF04 e da aplicação do Pacote Transversal por incremento e operação. | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |
 | `4.6` | 16/11/2026 | **Correções das issues #126 e #127:** alinhamento de RN02, RF32, RF35 e US35 sobre retificação de apontamentos pendentes ou rejeitados; definição do mínimo de 15 caracteres para a justificativa de estorno no RF21; separação das regras de formato e tamanho dos anexos (RF07 e RF22) dos critérios técnicos de segurança (RNF07); refinamento da métrica do RNF14 e manutenção do RNF08 restrito à auditabilidade dos estornos. | Matheus Saraiva Camargo | Equipe Cascata Ágil |
 | `4.5` | 10/11/2026 | **Reconciliação bidirecional dos vínculos:** sincronização dos RNs e RNFs de cada RF (DoR, DoD, aba de rastreabilidade e termos de busca) com os campos "RFs Executores" das RNs e "RFs Cobertos" dos RNFs, mantendo apenas vínculos sustentados pelo enunciado de cada regra; inclusões: RN01 em RF02, RN05 em RF05, RF06 e RF32 (reverso), RN07 em RF29, RN08 em RF07 e RF08, RN12 em RF09, RN14 em RF12, RN17 em RF16 e RN30 em RF35, além de RNF01, RNF03, RNF05 a RNF07, RNF09, RNF14 e RNF18 a RNF20 nos RFs correspondentes; remoções: RN10 de RF20 e RF32 (regra de ACID no rateio) e RN08 de RF21 (regra de comprovante fiscal), além dos vínculos reversos sem sustentação nos cards de RN e RNF; correção das citações nos critérios de RF06, RF20, RF21 (justificativa mínima de 20 caracteres, conforme RNF08), RF28 e RF32. | Paulo Nery | — |
 | `4.4` | 10/11/2026 | **Histórias dos requisitos decompostos:** criação das histórias próprias US37 a US40 para RF37 a RF40 (correspondência 1:1 US*nn* ↔ RF*nn*, 40 histórias); restrição dos enunciados de US33 e US34 ao cadastro, eliminando a sobreposição com atualização, consulta e tetos orçamentários; ratificação das 8 h de RF33 e RF34 como estimativa restrita ao cadastro; correção do filtro "Evolutivo Pós-MVP" (atributo `data-mvp` sem acento nos 9 RFs pós-MVP) e dos contadores do filtro (80 itens no MVP e 11 pós-MVP). | Paulo Nery | — |

@@ -43,7 +43,7 @@
 * **Gravação:** Vídeo oficial da apresentação da Entrega 3 gravado em 16/11/2026; será incorporado na página da [Entrega 3 (Ponto de Controle 3)](../../entregas/entrega-3.md#3-video-da-apresentacao-da-entrega-3) após publicação.
 * **Artefatos Relacionados:**
   * [Entrega 3 — Ponto de Controle 3](../../entregas/entrega-3.md)
-  * [Organização & Atualização do Backlog](../../metodologia/organizacao-atualizacao.md)
+  * [Organização & Atualização do Backlog](../../metodologia/planejamento.md#organizacao-e-atualizacao-dos-requisitos)
   * [Boas Práticas no GitHub](../../metodologia/organizacao-e-boas-praticas.md)
   * [Catálogo Integrado de Requisitos](../../requisitos/index.md)
 
@@ -64,3 +64,4 @@
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 16/11/2026 | Registro formal da Ata da Reunião 07 (gravação da Entrega 3 / PC3 e alinhamento dos incrementos). | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `1.1` | 24/11/2026 | Correção do link para Organização e Atualização do Backlog, direcionado à seção correspondente de `planejamento.md`. | Matheus Saraiva Camargo | Matheus Ribeiro Szervinsk |
