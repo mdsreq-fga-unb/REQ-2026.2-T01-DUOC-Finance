@@ -603,6 +603,14 @@ A tabela reflete o status de execução registrado em cada card do [Catálogo In
 
 O diagrama mostra as dependências que condicionam RF05 e RF09. As setas indicam "produz dados para"; os rótulos indicam a regra de negócio que cria a dependência.
 
+<div class="mermaid-zoom" markdown="1">
+<div class="mermaid-zoom-legend">
+  <span class="mermaid-zoom-legend-item"><span class="mermaid-zoom-dot" style="background:#10b981"></span>Concluído</span>
+  <span class="mermaid-zoom-legend-item"><span class="mermaid-zoom-dot" style="background:#0284c7"></span>Em desenvolvimento</span>
+  <span class="mermaid-zoom-legend-item"><span class="mermaid-zoom-dot" style="background:#f59e0b"></span>Pronto (DoR)</span>
+  <span class="mermaid-zoom-legend-item"><span class="mermaid-zoom-dot" style="background:#64748b"></span>Aguardando</span>
+</div>
+
 ```mermaid
 flowchart LR
     subgraph I1["Incremento 1 · Concluído"]
@@ -663,7 +671,7 @@ flowchart LR
     class RF25 wait;
 ```
 
-<small>Verde: concluído · Azul: em desenvolvimento · Âmbar: pronto para desenvolvimento (DoR) · Cinza: aguardando.</small>
+</div>
 
 <a id="rf05-dependencia-rf32"></a>
 ### RF05: dependência do RF32 e das regras de diárias
