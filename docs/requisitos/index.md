@@ -5,6 +5,8 @@ Este capítulo consolida o **Catálogo Geral de Requisitos de Software** do sist
 
 Todos os elementos estão interligados por **vínculos bidirecionais navegáveis**: ao consultar um Requisito Funcional, é possível transicionar diretamente para suas Regras de Negócio e Requisitos Não Funcionais condicionantes e, a partir de qualquer regra ou métrica, retornar imediatamente aos requisitos que a executam.
 
+**Organização do backlog.** Este catálogo é o backlog do produto. Cada requisito funcional corresponde a uma história de usuário (US01 a US40, relação 1:1 com RF01 a RF40), agrupada por Objetivo Específico (OE) e Característica (CAR), com prioridade (quadrante da Matriz 4 × 4), destinação (MVP ou Pós-MVP) e status de execução por incremento. A equipe não mantém um User Story Map separado: a leitura por jornada, com atividades, perfis e histórias por incremento, está em [Organização do Backlog](priorizacao.md#organizacao-do-backlog-por-jornada), e a ordem de execução considerando as dependências entre requisitos está em [Ordem de Execução](priorizacao.md#ordem-de-execucao).
+
 <a id="catalogo-funcionais"></a><a id="especificacao-modular-dos-requisitos"></a><a id="catalogo-geral-consolidado"></a><a id="atores-do-sistema-e-matriz-canonica-de-papeis-rbac"></a>
 Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicamente entre os **91 Itens Estruturantes** do catálogo (**40 Requisitos Funcionais**, **31 Regras de Negócio** e **20 Requisitos Não Funcionais**). Cada card consolida a especificação oficial, critérios de aceitação DoR/DoD e rastreabilidade direta com os **elementos estruturantes do projeto** como <a href="../visao-produto/solucao-proposta/#oe1-padronizar-e-unificar-os-dados" class="req-tag req-tag-oe"># OEs ↗</a>, <a href="../visao-produto/solucao-proposta/#23-caracteristicas-do-produto-car" class="req-tag req-tag-car"># CARs ↗</a>, <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix"># Matriz 4 × 4 ↗</a>, <a href="governanca-conformidade/" class="req-tag req-tag-law"># Governança & CLT/LGPD ↗</a>, <a href="#catalogo-regras-de-negocio" class="req-tag req-tag-rn"># RNs ↗</a> e <a href="#catalogo-nao-funcionais" class="req-tag req-tag-rnf"># RNFs ↗</a>.
 
@@ -1086,6 +1088,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,20</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
+      <div class="req-metrics-footer">
+        <span><strong>Dependências de execução:</strong> Depende de <strong>RF32</strong> (apontamentos homologados, RN05) e <strong>RF27</strong> (tabela de diárias vigente, RN25/RN31). Inicia a integração após a estabilização do RF32; seu DoD só é declarado após o DoD do RF32. É pré-requisito do <strong>RF06</strong>.</span>
+        <a href="priorizacao/#rf05-dependencia-rf32" class="req-tag req-tag-matrix">Ver ordem de execução ↗</a>
+      </div>
     </div>
 
   </div>
@@ -1825,6 +1831,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-metrics-footer">
         <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>0,90</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q2">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+      <div class="req-metrics-footer">
+        <span><strong>Dependências de execução:</strong> Depende de <strong>RF06</strong> (diárias homologadas), <strong>RF08</strong> (reembolsos aprovados), <strong>RF33</strong> (contratos) e <strong>RF34</strong> (ao menos um centro de custo por contrato, RN11). É pré-requisito do <strong>RF10</strong> e do <strong>RF11</strong>.</span>
+        <a href="priorizacao/#rf09-contratos-centros-de-custo" class="req-tag req-tag-matrix">Ver ordem de execução ↗</a>
       </div>
     </div>
 
@@ -6200,6 +6210,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>2,40</strong>). Destinação: <strong>MVP</strong>.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
+      <div class="req-metrics-footer">
+        <span><strong>Dependências de execução:</strong> Depende de <strong>RF04</strong> (apontamentos submetidos). É pré-requisito do <strong>RF05</strong> e, por meio do fechamento homologado, do <strong>RF09</strong> (RN05).</span>
+        <a href="priorizacao/#rf05-dependencia-rf32" class="req-tag req-tag-matrix">Ver ordem de execução ↗</a>
+      </div>
     </div>
 
   </div>
@@ -6385,6 +6399,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
         <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>. Estimativa ratificada após a decomposição: as 8 h cobrem apenas o cadastro; a atualização (RF37/US37) e a consulta (RF38/US38) possuem histórias e estimativas próprias.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
       </div>
+      <div class="req-metrics-footer">
+        <span><strong>Dependências de execução:</strong> Evolui a estrutura mínima de contratos já usada por RF04, RF32 e RF07, sem criar cadastro paralelo. É pré-requisito do <strong>RF34</strong>, <strong>RF37</strong>, <strong>RF38</strong> e <strong>RF09</strong>.</span>
+        <a href="priorizacao/#rf09-contratos-centros-de-custo" class="req-tag req-tag-matrix">Ver ordem de execução ↗</a>
+      </div>
     </div>
 
   </div>
@@ -6569,6 +6587,10 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
       <div class="req-metrics-footer">
         <span>Cálculo formal: <code>EC = (ES + CX + LC) / 3</code> e <code>IP = VB / EC</code> (Score: <strong>1,80</strong>). Destinação: <strong>MVP</strong>. Estimativa ratificada após a decomposição: as 8 h cobrem apenas o cadastro; a atualização (RF39/US39) e os tetos orçamentários (RF40/US40) possuem histórias e estimativas próprias.</span>
         <a href="priorizacao/#matriz-4-x-4-valor-de-negocio-x-esforco-tecnico" class="req-tag req-tag-matrix req-tag-matrix-q1">Ver Posição no Mapa da Matriz 4×4 ↗</a>
+      </div>
+      <div class="req-metrics-footer">
+        <span><strong>Dependências de execução:</strong> Depende de <strong>RF33</strong> (contrato ativo). É pré-requisito do <strong>RF09</strong>: contrato sem centro de custo não recebe apropriação (RN11).</span>
+        <a href="priorizacao/#rf09-contratos-centros-de-custo" class="req-tag req-tag-matrix">Ver ordem de execução ↗</a>
       </div>
     </div>
 
