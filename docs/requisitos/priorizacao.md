@@ -1,6 +1,6 @@
 # Priorização e Escopo do Produto (Linha de Corte do MVP)
 
-Este documento consolida o **modelo metodológico integrado de priorização e delimitação do escopo** do sistema ***DUOC Finance***. O método fundamenta-se no cruzamento analítico entre o **Valor de Negócio (VB)** e o **Esforço Técnico Consolidado (EC)**, orientando a linha de corte do **Produto Mínimo Viável (MVP)**.
+Este documento consolida o **modelo metodológico integrado de priorização e delimitação do escopo** do sistema ***DUOC Finance***. O método fundamenta-se no cruzamento analítico entre o **Valor de Negócio (VB)** e o **Esforço Técnico Consolidado (EC)**, orientando a linha de corte do **Produto Mínimo Viável (MVP)**. A ordem de execução dentro do MVP parte desse índice, mas o ajusta pelas dependências técnicas entre requisitos e pela formação de entregas utilizáveis a cada incremento, conforme detalhado em [Ordem de Execução](#ordem-de-execucao).
 
 <div class="stats-grid">
   <div class="stat-card stat-accent">
@@ -25,7 +25,7 @@ Este documento consolida o **modelo metodológico integrado de priorização e d
 
 ## O fluxo que precisa funcionar de ponta a ponta
 
-O recorte do MVP foi concebido para assegurar que o fluxo operacional central da DUOC Finance funcione integralmente de ponta a ponta desde a primeira versão em produção:
+O recorte do MVP foi concebido para assegurar que o fluxo operacional central da DUOC Finance funcione integralmente de ponta a ponta desde a primeira versão em produção. Essas cinco atividades são a espinha dorsal do backlog: a distribuição das histórias de cada atividade por perfil e por incremento está em [Organização do Backlog](#organizacao-do-backlog-por-jornada).
 
 <div class="journey-list">
   <div class="journey-item">
@@ -579,6 +579,192 @@ A delimitação do escopo consolida **31 Requisitos Funcionais no MVP (77,5%)** 
 
 ---
 
+<a id="ordem-de-execucao"></a>
+## Ordem de Execução: Dependências e Ajustes ao Índice VB / EC
+
+O Índice de Prioridade (`IP = VB / EC`) define **o que entra no MVP** e serve de referência para ordenar o trabalho, mas não captura dois fatores que determinam a ordem real de implementação e teste: **quais requisitos produzem os dados que outros consomem** e **quais conjuntos de requisitos formam uma entrega que a cliente consegue operar e homologar**. Por isso, a ordem de execução do MVP aplica três critérios, nesta precedência:
+
+1. **Dependência técnica de dados:** nenhum RF entra em desenvolvimento antes dos RFs que geram os dados que ele consome, e nenhum RF tem o DoD declarado antes do DoD dos seus pré-requisitos.
+2. **Entrega utilizável:** cada incremento fecha um trecho contínuo da [jornada ponta a ponta](#o-fluxo-que-precisa-funcionar-de-ponta-a-ponta), de modo que a cliente consiga executar o trecho do início ao fim na sessão de homologação.
+3. **Índice VB / EC:** desempata os RFs que estão no mesmo nível de dependência e no mesmo incremento.
+
+### Sequência por incremento
+
+A tabela reflete o status de execução registrado em cada card do [Catálogo Integrado de Requisitos](index.md). O planejamento semanal está em [Detalhamento dos Ciclos](../metodologia/detalhamento-ciclos.md#ciclo-1).
+
+| Incremento | Trecho da jornada entregue | RFs e status no catálogo | Pré-requisitos que precisam estar prontos |
+| :---: | :--- | :--- | :--- |
+| **1** | Cadastro, acesso seguro e registro do apontamento em campo | **Concluídos:** RF01, RF02, RF03, RF13, RF17, RF18, RF23 · RF04, RF19, RF22 | Nenhum (fundação). Inclui a estrutura mínima de contratos (`contratos_obra`: código, nome, cliente, status e gestor responsável) usada para vincular apontamentos a obras. |
+| **2** | Homologação do apontamento, fechamento de diárias e reembolsos | **Em desenvolvimento:** RF32, RF35, RF07, RF08, RF28, RF29 · **Pronto (DoR):** RF27, RF05, RF06 | RF04 (apontamentos submetidos), RF01 (colaboradores) e RF13 (autenticação e perfis), todos do Incremento 1. |
+| **3** | Contratos, centros de custo, apropriação de custos e painel; complementos cadastrais | **Pronto (DoR):** RF33, RF38, RF37, RF34, RF39, RF40, RF09, RF10, RF11 · **Aguardando:** RF14, RF25, RF26 | RF32 (apontamentos homologados), RF06 (fechamento homologado) e RF08 (reembolsos aprovados), todos do Incremento 2. |
+
+<a id="grafo-de-dependencias"></a>
+### Dependências do fluxo de fechamento e apropriação
+
+O diagrama mostra as dependências que condicionam RF05 e RF09. As setas indicam "produz dados para"; os rótulos indicam a regra de negócio que cria a dependência.
+
+<div class="mermaid-zoom" markdown="1">
+<div class="mermaid-zoom-legend">
+  <span class="mermaid-zoom-legend-item"><span class="mermaid-zoom-dot" style="background:#10b981"></span>Concluído</span>
+  <span class="mermaid-zoom-legend-item"><span class="mermaid-zoom-dot" style="background:#0284c7"></span>Em desenvolvimento</span>
+  <span class="mermaid-zoom-legend-item"><span class="mermaid-zoom-dot" style="background:#f59e0b"></span>Pronto (DoR)</span>
+  <span class="mermaid-zoom-legend-item"><span class="mermaid-zoom-dot" style="background:#64748b"></span>Aguardando</span>
+</div>
+
+```mermaid
+flowchart LR
+    subgraph I1["Incremento 1 · Concluído"]
+        direction TB
+        RF01["RF01<br>Cadastrar colaborador"]
+        CTR[("contratos_obra<br>estrutura mínima")]
+        RF04["RF04<br>Submeter apontamento"]
+    end
+
+    subgraph I2["Incremento 2"]
+        direction TB
+        RF35["RF35<br>Retificar apontamento"]
+        RF32["RF32<br>Deliberar apontamento"]
+        RF27["RF27<br>Tabela de diárias"]
+        RF05["RF05<br>Prévia de fechamento"]
+        RF06["RF06<br>Homologar fechamento"]
+        RF07["RF07<br>Submeter reembolso"]
+        RF08["RF08<br>Deliberar reembolso"]
+    end
+
+    subgraph I3["Incremento 3"]
+        direction TB
+        RF33["RF33<br>Cadastrar contrato"]
+        RF34["RF34<br>Cadastrar centro de custo"]
+        RF09["RF09<br>Apropriar custos"]
+        RF10["RF10<br>Rastreabilidade de custos"]
+        RF11["RF11<br>Indicadores de custos"]
+        RF25["RF25<br>Tipo de contratação"]
+    end
+
+    RF01 --> RF04
+    CTR --> RF04
+    RF04 --> RF32
+    RF35 -- "reenvio volta a Pendente" --> RF32
+    RF32 -- "RN05: só Homologado" --> RF05
+    RF27 -- "RN25 / RN31" --> RF05
+    RF05 --> RF06
+    CTR --> RF07
+    RF07 --> RF08
+    CTR -- "evoluída, não substituída" --> RF33
+    RF33 -- "RN11" --> RF34
+    RF06 -- "diárias homologadas" --> RF09
+    RF08 -- "reembolsos aprovados" --> RF09
+    RF34 -- "RN11: ao menos 1 centro" --> RF09
+    RF09 --> RF10
+    RF09 --> RF11
+    RF25 -. "RN22 (ponto de atenção)" .-> RF05
+    RF25 -. "RN22" .-> RF09
+
+    classDef done fill:#10b981,stroke:#059669,color:#ffffff;
+    classDef dev fill:#0284c7,stroke:#0369a1,color:#ffffff;
+    classDef ready fill:#f59e0b,stroke:#d97706,color:#ffffff;
+    classDef wait fill:#64748b,stroke:#475569,color:#ffffff;
+
+    class RF01,RF04,CTR done;
+    class RF32,RF35,RF07,RF08 dev;
+    class RF27,RF05,RF06,RF33,RF34,RF09,RF10,RF11 ready;
+    class RF25 wait;
+```
+
+</div>
+
+<a id="rf05-dependencia-rf32"></a>
+### RF05: dependência do RF32 e das regras de diárias
+
+O [RF05](index.md#rf05) consome dois insumos produzidos por outros requisitos:
+
+- **Apontamentos homologados**, que só existem depois da deliberação do gestor no [RF32](index.md#rf32). A [RN05](index.md#rn05) proíbe que a prévia considere apontamentos pendentes ou rejeitados.
+- **Valores de diária vigentes na competência**, cadastrados no [RF27](index.md#rf27) ([RN25](index.md#rn25)) e aplicados pela fórmula de diárias e comissões da [RN31](index.md#rn31).
+
+**Efeito na ordem de implementação (Incremento 2):**
+
+1. **RF27 corre em paralelo ao RF32.** A tabela de diárias não consome apontamentos e pode ser entregue enquanto o RF32 está em desenvolvimento.
+2. **RF05 aguarda a estabilização do RF32.** O RF32 define os dados que o RF05 lê: o status `HOMOLOGADO`, o gestor que deliberou, o momento da deliberação e o bloqueio de edição ([RN02](index.md#rn02)). Por isso o RF05 permanece em *Pronto (DoR)* enquanto o RF32 está *Em desenvolvimento*: construir a consulta da prévia sobre uma transição de status ainda instável geraria retrabalho.
+3. **RF06 vem depois do RF05**, embora tenha IP maior (1,71 contra 1,20), porque homologa o lote calculado pela prévia.
+
+**Efeito na ordem de teste:**
+
+| Nível de teste | O que é verificado | Depende do RF32 concluído? |
+| :--- | :--- | :---: |
+| Unitário das regras de cálculo | Valor vigente por competência (RN25), troca de vigência dentro do período, fórmula de diárias e comissões (RN31) e arredondamento centesimal, com dados de entrada fixos. | Não |
+| Integração do filtro da RN05 | A prévia inclui apenas apontamentos `HOMOLOGADO`; apontamentos `PENDENTE` e `REJEITADO` ficam fora. Os apontamentos de teste são produzidos pelo fluxo RF04 → RF32, e não inseridos diretamente no banco com o status já definido. | Sim |
+| Integração com a retificação (RF35) | Um apontamento rejeitado, retificado e reenviado volta a `PENDENTE` e sai da prévia até nova homologação. | Sim (RF32 e RF35) |
+| Aceitação com a cliente (DoD) | Prévia de uma competência com apontamentos homologados pelo gestor e tabela de diárias vigente. | Sim |
+
+O DoD do RF05 só é declarado depois do DoD do RF32. Se a transição de status do RF32 mudar, os testes de integração do RF05 são executados novamente.
+
+!!! warning "Ponto de atenção: tipo de contratação (RN22)"
+    A [RN22](index.md#rn22) prevê regras de apuração de diárias específicas para cada tipo de contratação (Diarista, CLT ou Prestador de Serviço), mas o [RF25](index.md#rf25), que classifica o colaborador, está no Incremento 3. Para não bloquear o fechamento, o RF05 é validado no Incremento 2 com colaboradores diaristas, que são o público das diárias técnicas de campo. Quando o RF25 for entregue, os testes do RF05 e do RF09 são executados novamente com os três tipos de contratação.
+
+<a id="rf09-contratos-centros-de-custo"></a>
+### RF09: contratos e centros de custo coerentes para testar a apropriação
+
+O [RF09](index.md#rf09) aloca aos contratos e centros de custo os valores de diárias homologadas ([RF06](index.md#rf06), que por sua vez depende do RF32) e de reembolsos aprovados ([RF08](index.md#rf08)). Três regras restringem os dados necessários: a [RN11](index.md#rn11) exige que todo contrato tenha ao menos um centro de custo antes de receber apropriação; a [RN09](index.md#rn09) exige rateio proporcional às horas quando a mesma equipe atua em mais de um contrato; e a [RN12](index.md#rn12) separa deslocamento e hospedagem de materiais operacionais.
+
+**A sequência planejada permite testar a apropriação com dados coerentes.** Os insumos financeiros (RF06 e RF08) são entregues no Incremento 2, antes do RF09. Dentro do Incremento 3, a ordem adotada é:
+
+**RF33** (cadastrar contrato) → **RF38** e **RF37** (consultar e atualizar contrato) → **RF34** (cadastrar centro de custo) → **RF39** (atualizar centro de custo) → **RF09** (apropriar custos) → **RF10** e **RF11** (rastreabilidade e indicadores).
+
+O [RF40](index.md#rf40) (tetos orçamentários) não é pré-requisito do RF09 e pode ser desenvolvido em paralelo, depois do RF34.
+
+Essa sequência só produz dados coerentes se três condições forem respeitadas:
+
+1. **Os contratos são os mesmos desde o Incremento 1.** Os apontamentos (RF04, RF32) e os reembolsos (RF07, RF08) já referenciam a estrutura mínima `contratos_obra`. O RF33 evolui essa estrutura em vez de criar um cadastro paralelo; caso contrário, o RF09 apropriaria custos a contratos diferentes daqueles aos quais os apontamentos e reembolsos estão ligados.
+2. **A RN11 é atendida antes do RF09.** Todo contrato ativo da massa de teste, inclusive os criados antes do RF33, recebe ao menos um centro de custo pelo RF34. Um caso de teste específico verifica que a apropriação é recusada para um contrato sem centro de custo.
+3. **A massa de teste é montada pelo fluxo, e não por carga direta no banco.** O roteiro mínimo é:
+    - cadastrar dois contratos (RF33), cada um com centro de custo (RF34);
+    - registrar e homologar apontamentos de um mesmo colaborador nos dois contratos (RF04 → RF32), o que exercita o rateio da RN09;
+    - gerar e homologar o fechamento da competência (RF05 → RF06);
+    - submeter e aprovar um reembolso de deslocamento e outro de material (RF07 → RF08), o que exercita a segregação da RN12;
+    - executar o RF09 e conferir que o total apropriado por contrato é igual à soma das diárias homologadas e dos reembolsos aprovados, sem duplicidade, e que o RF10 rastreia cada linha até sua origem.
+
+!!! warning "Ponto de atenção: destino ao centro de custo"
+    Apontamentos e reembolsos são vinculados ao contrato, e não ao centro de custo. Quando um contrato tiver mais de um centro de custo, a regra que define o centro de destino de cada valor precisa ser registrada como critério de aceitação do RF09 antes do início da implementação.
+
+<a id="ajustes-ao-indice-vb-ec"></a>
+### Onde a ordem prática ajustou o índice VB / EC
+
+Nos RFs abaixo, a posição pelo IP isolado diferia da posição adotada. A coluna "Posição pelo IP" indica a colocação do RF entre os 31 RFs do MVP, do maior para o menor índice.
+
+| RF | IP | Posição pelo IP | Posição adotada | Critério | Justificativa |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| [RF04](index.md#rf04) | 1,33 | 26º | Incremento 1 | Dependência | É a origem dos dados de todo o fluxo: sem apontamento submetido, não há o que homologar (RF32), calcular (RF05) ou apropriar (RF09). |
+| [RF22](index.md#rf22) | 1,29 | 27º | Incremento 1, junto do RF04 | Entrega utilizável | O apontamento sem fotos e geolocalização não substitui o RVT atual (TR-01). Entregar RF04 sem RF22 não permitiria à cliente homologar o trecho de campo. |
+| [RF32](index.md#rf32) | 2,40 | 4º | Incremento 2 | Dependência | Apesar do IP alto, só pode ser testado com apontamentos já submetidos (RF04) e com o gestor responsável vinculado ao contrato. |
+| [RF06](index.md#rf06) | 1,71 | 19º | Depois do RF05 | Dependência | Homologa o lote calculado pela prévia; não há o que homologar antes do RF05. |
+| [RF33](index.md#rf33), [RF34](index.md#rf34), [RF37](index.md#rf37), [RF38](index.md#rf38), [RF39](index.md#rf39) | 1,80 a 3,00 | 2º a 10º | Incremento 3, depois do RF05 (30º) | Entrega utilizável | O Incremento 2 fecha o ciclo de pagamento de campo (TR-01 a TR-03). O cadastro completo de contratos só gera valor junto com a apropriação (TR-04), e a estrutura mínima de contratos já sustenta os Incrementos 1 e 2. |
+| [RF33](index.md#rf33) → [RF34](index.md#rf34) | 1,80 e 1,80 | empate | RF33 antes do RF34 | Dependência | O centro de custo é cadastrado vinculado a um contrato ativo (RN11). |
+| [RF09](index.md#rf09) | 0,90 | 31º | Antes do RF10 e do RF11 (1,50) | Dependência | Menor IP do MVP, mas o RF10 e o RF11 consultam os custos que o RF09 apropria. |
+| [RF25](index.md#rf25), [RF26](index.md#rf26) | 1,80 e 1,29 | 10º e 27º | Incremento 3 | Entrega utilizável | Não bloqueiam o fluxo de pagamento: o regime trabalhista é informado no cadastro (RF01). Ver o ponto de atenção sobre a RN22 na seção do RF05. |
+
+Nos demais RFs, a ordem adotada coincide com o IP: por exemplo, [RF13](index.md#rf13) (4,00), [RF18](index.md#rf18) (3,00), [RF01](index.md#rf01) e [RF19](index.md#rf19) (2,40) estão entre os primeiros entregues.
+
+---
+
+<a id="organizacao-do-backlog-por-jornada"></a>
+## Organização do Backlog: Jornada, Perfis e Histórias
+
+A equipe **não mantém um User Story Map como artefato separado**. O backlog do produto é o [Catálogo Integrado de Requisitos](index.md), organizado na hierarquia **Objetivo Específico (OE) → Característica (CAR) → História de Usuário**, com uma história por requisito funcional (US01 a US40, relação 1:1 com RF01 a RF40). Cada card registra prioridade (quadrante da Matriz 4 × 4), destinação (MVP ou Pós-MVP) e status de execução por incremento.
+
+A [jornada ponta a ponta](#o-fluxo-que-precisa-funcionar-de-ponta-a-ponta) cumpre o papel de espinha dorsal. A tabela abaixo consolida essa organização na forma de leitura de um *story map*: as atividades da jornada nas linhas, os perfis e objetivos atendidos e as histórias distribuídas pelos incrementos, que funcionam como fatias de entrega.
+
+| Atividade da jornada | Perfis | Objetivo · CAR | Incremento 1 | Incremento 2 | Incremento 3 | Pós-MVP |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **1. Cadastro e Identificação** | `ADMIN_FINANCEIRO` | OE1 · CAR-01 | [US01](index.md#rf01), [US02](index.md#rf02), [US03](index.md#rf03) | — | [US25](index.md#rf25), [US26](index.md#rf26) | — |
+| **2. Apontamento em Campo** | `TECNICO_CAMPO`, `GESTOR_OBRAS` | OE1 · CAR-02 | [US04](index.md#rf04), [US19](index.md#rf19), [US22](index.md#rf22) | [US32](index.md#rf32), [US35](index.md#rf35) | — | [US20](index.md#rf20) (CAR-09) |
+| **3. Fechamento e Reembolsos** | `ADMIN_FINANCEIRO`, `TECNICO_CAMPO`, `GESTOR_OBRAS` | OE2 · CAR-03, CAR-04 | — | [US27](index.md#rf27), [US05](index.md#rf05), [US06](index.md#rf06), [US07](index.md#rf07), [US08](index.md#rf08), [US28](index.md#rf28), [US29](index.md#rf29) | — | [US21](index.md#rf21) |
+| **4. Apropriação por Obra** | `ADMIN_FINANCEIRO`, `GESTOR_OBRAS` | OE3 · CAR-05 | — | — | [US33](index.md#rf33), [US38](index.md#rf38), [US37](index.md#rf37), [US09](index.md#rf09), [US10](index.md#rf10) | [US30](index.md#rf30) |
+| **5. Painel e Governança** | `GESTOR_OBRAS`, `ADMIN_FINANCEIRO`, `ADMIN_SISTEMA`, todos os usuários (acesso) | OE3 · CAR-06 · OE4 · CAR-07 | [US13](index.md#rf13), [US17](index.md#rf17), [US18](index.md#rf18), [US23](index.md#rf23) | — | [US34](index.md#rf34), [US39](index.md#rf39), [US40](index.md#rf40), [US11](index.md#rf11), [US14](index.md#rf14) | [US12](index.md#rf12), [US31](index.md#rf31), [US24](index.md#rf24), [US15](index.md#rf15), [US16](index.md#rf16) (CAR-08), [US36](index.md#rf36) (CAR-10) |
+
+As histórias de cada célula seguem a ordem de execução descrita em [Ordem de Execução](#ordem-de-execucao). A coluna Pós-MVP corresponde aos 9 RFs do backlog evolutivo.
+
+---
+
 <a id="procedimento-operacional-de-retificacao-e-estorno-assistido-no-mvp"></a>
 ## Procedimento Operacional de Retificação e Estorno Assistido no MVP
 
@@ -635,3 +821,4 @@ A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra a sessão de a
 | `2.0` | 28/09/2026 | Consolidação da Matriz 4×4 cartesiana e definição do primeiro corte preliminar do MVP alinhado na Reunião 05. | Matheus Ribeiro | Eric Araújo |
 | `3.0` | 10/11/2026 | Expansão atômica para 40 RFs (31 no MVP / 9 Pós-MVP) com desmembramento de contratos e centros de custo (RF37 a RF40) em mapeamento 1:1 com Histórias de Usuário. | Paulo Nery | Matheus Ribeiro |
 | `4.0` | 16/11/2026 | Reformulação visual compacta: resumo estatístico contido, fluxo ponta a ponta, tabelas metodológicas de avaliação (VB e EC), alternador dinâmico de visualização (Características vs Matriz 4x4), fórmulas limpas e procedimento de retificação assistida. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `5.0` | 26/11/2026 | Inclusão da ordem de execução por incremento, do diagrama de dependências, da análise de dependências do RF05 (RF32, RF27) e do RF09 (RF33, RF34), da tabela de ajustes ao índice VB / EC e da organização do backlog por jornada, perfis e histórias. | Paulo Nery | — |

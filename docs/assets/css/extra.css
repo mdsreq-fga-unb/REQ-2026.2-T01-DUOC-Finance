@@ -507,6 +507,180 @@
   margin: 0 !important;
 }
 
+/* Contêiner opt-in: <div class="mermaid-zoom" markdown="1"> (ver mermaid-zoom.js).
+   Mesmo padrão visual da Pirâmide de Abstração interativa (.duoc-pyr-*). */
+.mermaid-zoom {
+  margin: 1.4rem 0 2rem 0;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: radial-gradient(circle at 50% 0%, rgba(15, 23, 42, 0.96), rgba(9, 13, 24, 0.99));
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+  font-family: inherit;
+  position: relative;
+}
+
+[data-md-color-scheme="default"] .mermaid-zoom {
+  background: radial-gradient(circle at 50% 0%, #f8fafc, #f1f5f9);
+  border-color: rgba(15, 23, 42, 0.14);
+  box-shadow: 0 14px 34px -12px rgba(15, 23, 42, 0.12);
+}
+
+.mermaid-zoom.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mermaid-zoom-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: rgba(15, 23, 42, 0.85);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+  backdrop-filter: blur(10px);
+}
+
+[data-md-color-scheme="default"] .mermaid-zoom-toolbar {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom-color: rgba(15, 23, 42, 0.1);
+}
+
+.mermaid-zoom-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.mermaid-zoom-legend-item {
+  padding: 6px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(30, 41, 59, 0.75);
+  color: #e2e8f0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+[data-md-color-scheme="default"] .mermaid-zoom-legend-item {
+  background: #ffffff;
+  color: #334155;
+  border-color: rgba(15, 23, 42, 0.15);
+}
+
+.mermaid-zoom-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.mermaid-zoom-controls {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.mermaid-zoom-btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(30, 41, 59, 0.75);
+  color: #e2e8f0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+[data-md-color-scheme="default"] .mermaid-zoom-btn {
+  background: #ffffff;
+  color: #1e293b;
+  border-color: rgba(15, 23, 42, 0.15);
+}
+
+.mermaid-zoom-btn:hover,
+.mermaid-zoom-btn:focus-visible {
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.mermaid-zoom-viewport {
+  max-height: 75vh;
+  overflow: auto;
+  overscroll-behavior: contain;
+  cursor: grab;
+  user-select: none;
+  background-image: radial-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.mermaid-zoom.is-fullscreen .mermaid-zoom-viewport {
+  flex: 1;
+  max-height: none;
+}
+
+.mermaid-zoom-viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.mermaid-zoom-stage {
+  width: 100%;
+  min-width: 100%;
+}
+
+/* Remove os limites de largura globais para que o zoom ocupe a escala escolhida */
+.mermaid-zoom .mermaid {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 1.25rem !important;
+  overflow: visible !important;
+  background: transparent !important;
+  box-sizing: border-box;
+}
+
+.mermaid-zoom .mermaid svg {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.mermaid-zoom-footer {
+  padding: 8px 18px;
+  background: rgba(15, 23, 42, 0.85);
+  border-top: 1px solid rgba(148, 163, 184, 0.14);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.73rem;
+  color: #94a3b8;
+}
+
+[data-md-color-scheme="default"] .mermaid-zoom-footer {
+  background: #ffffff;
+  color: #64748b;
+  border-top-color: rgba(15, 23, 42, 0.08);
+}
+
+.mermaid-zoom-level {
+  font-variant-numeric: tabular-nums;
+}
+
 /* ============================================================
    DIAGRAMAS DO CRONOGRAMA (FIGURES / IMAGENS COM GLIGHTBOX)
    ============================================================ */
