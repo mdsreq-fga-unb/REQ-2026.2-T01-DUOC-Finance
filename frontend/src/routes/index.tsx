@@ -15,6 +15,7 @@ import ReembolsoHistoricoPage from '../pages/ReembolsoHistoricoPage'
 import ReembolsosAdminPage from '../pages/ReembolsosAdminPage'
 import ReembolsoDeliberacaoPage from '../pages/ReembolsoDeliberacaoPage'
 import TrocarSenhaPage from '../pages/TrocarSenhaPage'
+import ContratosPage from '../pages/ContratosPage'
 import PrivateRoute from '../components/auth/PrivateRoute'
 import RoleRoute from '../components/auth/RoleRoute'
 import { useAuth } from '../auth/AuthContext'
@@ -104,6 +105,10 @@ export default function AppRoutes() {
 
           <Route element={<RoleRoute permitidos={PERMISSOES.gestaoAcessos} />}>
             <Route path="acessos" element={<GestaoAcessosPage />} />
+          </Route>
+
+          <Route element={<RoleRoute permitidos={PERMISSOES.contratos} />}>
+            <Route path="contratos" element={<ContratosPage />} />
           </Route>
 
           <Route element={<RoleRoute permitidos={PERMISSOES.fechamento} />}>

@@ -34,6 +34,7 @@ export const PERMISSOES = {
   administrarReembolsos: ['ADMIN_FINANCEIRO'],
   fechamento: ['ADMIN_FINANCEIRO'],
   gestaoAcessos: ['ADMIN_SISTEMA'],
+  contratos: ['ADMIN_SISTEMA', 'ADMIN_FINANCEIRO', 'GESTOR_OBRAS'],
 } as const satisfies Record<string, readonly Papel[]>
 
 export function possuiPapel(
