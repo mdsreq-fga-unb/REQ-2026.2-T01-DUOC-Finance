@@ -46,6 +46,11 @@ model ContratoObra {
   codigo    String             @unique
   nome      String
   cliente   String?
+  descricao String?            @db.Text
+  centroCusto String?          @map("centro_custo") @db.VarChar(80)
+  valorDiariaCentavos Int      @default(0) @map("valor_diaria_centavos")
+  dataInicio DateTime?         @map("data_inicio") @db.Date
+  dataFim    DateTime?         @map("data_fim") @db.Date
   status    StatusContratoObra @default(ATIVO)
   // RF32 — gestor operacional que delibera os apontamentos deste contrato
   gestorResponsavelId String?  @map("gestor_responsavel_id")

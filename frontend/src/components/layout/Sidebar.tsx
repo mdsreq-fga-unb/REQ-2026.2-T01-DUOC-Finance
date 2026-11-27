@@ -16,6 +16,7 @@ import {
   ReceiptText,
   FilePlus2,
   ShieldCheck,
+  BriefcaseBusiness,
 } from "lucide-react";
 
 const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
@@ -90,6 +91,13 @@ const menuItems: (NavItem & { papeis: readonly Papel[] })[] = [
     title: 'Fechamento',
     path: '/fechamento',
     papeis: PERMISSOES.fechamento,
+  },
+  {
+    iconName: BriefcaseBusiness,
+    title: 'Contratos',
+    path: '/contratos',
+    papeis: PERMISSOES.contratos,
+    badge: 'RF33',
   },
   {
     iconName: ShieldCheck,
