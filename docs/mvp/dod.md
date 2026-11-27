@@ -38,7 +38,8 @@ Registro critério por critério para os **10 Requisitos Funcionais entregues no
 | **Código, tipagem e inspeção por pares (CI/CD)** | **Atendido** | Checks `lint`, `tsc --noEmit` e `npm run build` em `.github/workflows/ci.yml` ([PR #168](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/168)) + checklist de revisão preenchido nos PRs. |
 | **RNFs verificáveis no incremento** | **Atendido** | `RNF02` (latência `0,020s` em `/api/health` e `0,011s` em `/api/rvt/contratos-ativos`), `RNF03` (`bcrypt` custo >= 10), `RNF07` (SHA-256 + MIME real), `RNF13` (JWT 900s), `RNF14` (RBAC HTTP 401/403) e `RNF20` (DTOs). |
 | **Documentação — Docs as Code** | **Atendido** | Catálogo atualizado com evidências visuais ([PR #174](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/174)) e `mkdocs build --strict` sem erros nem links quebrados. |
-| **Homologação sociotécnica do incremento** | **Pendente de UAT** | Protótipos e telas validados na [Ata 06](../governanca/atas/reuniao-06.md); sessão formal de UAT do fluxo integrado em Staging com Maria Beatryz prevista para 27/11/2026 ([Semana 12](../metodologia/detalhamento-ciclos.md#semana-12)). |
+| **Validação do protótipo** | **Realizada** | Aprovação das telas, campos e fluxos apresentados no Figma em 02/10/2026, conforme [Ata 06](../governanca/atas/reuniao-06.md). Não constitui aceite do sistema integrado. |
+| **Homologação sociotécnica do incremento (posição no PC3)** | **Pendente de UAT** | Sessão do fluxo integrado prevista para 27/11/2026 ([Semana 12](../metodologia/detalhamento-ciclos.md#semana-12)). Ver [registro posterior da homologação](#homologacao-incrementos-1-e-2). |
 
 ### Evidências Visuais Comprobatórias (DoD — Incremento 1)
 
@@ -109,6 +110,15 @@ O título e os estados do quadro acima correspondem ao registro histórico do PC
 | [RNF13](../requisitos/index.md#rnf13) | [`auth.service.spec.ts`](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/e8ecfec498f5e3ac5609c9a0a3b2e19496dd2034/backend/src/auth/auth.service.spec.ts); [`jwt-auth.guard.spec.ts`](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/e8ecfec498f5e3ac5609c9a0a3b2e19496dd2034/backend/src/auth/jwt-auth.guard.spec.ts); [`jwt.util.spec.ts`](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/e8ecfec498f5e3ac5609c9a0a3b2e19496dd2034/backend/src/auth/jwt.util.spec.ts) | JWT com validade de 900 s e rejeição de token expirado. | Parcial: não comprova a exigência de nova autenticação ao término do período máximo do requisito. |
 | [RNF14](../requisitos/index.md#rnf14) | [`roles.guard.spec.ts`](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/e8ecfec498f5e3ac5609c9a0a3b2e19496dd2034/backend/src/auth/roles.guard.spec.ts); [`acesso.controller.spec.ts`](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/e8ecfec498f5e3ac5609c9a0a3b2e19496dd2034/backend/src/auth/acesso.controller.spec.ts) | Decisão de autorização por papel e rejeição HTTP 403 nos cenários exercitados; HTTP 401 para ausência de autenticação. | Parcial: não comprova cobertura de 100% das rotas protegidas nem latência do guard inferior a 15 ms no p95 sob carga nominal. |
 | [RNF20](../requisitos/index.md#rnf20) | [`criar-rvt.dto.spec.ts`](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/e8ecfec498f5e3ac5609c9a0a3b2e19496dd2034/backend/src/rvt/dto/criar-rvt.dto.spec.ts); [`auth.controller.spec.ts`](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/e8ecfec498f5e3ac5609c9a0a3b2e19496dd2034/backend/src/auth/auth.controller.spec.ts); [`rvt.controller.spec.ts`](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/e8ecfec498f5e3ac5609c9a0a3b2e19496dd2034/backend/src/rvt/rvt.controller.spec.ts) | Validação de campos, descarte de campos extras e retorno HTTP 400 para payloads inválidos exercitados. | Parcial: não comprova schema e sanitização contra injection em 100% das rotas de escrita. |
+
+<a id="homologacao-incrementos-1-e-2"></a>
+### Registro posterior — Homologação dos Incrementos 1 e 2
+
+Em **22/11/2026**, foi realizada uma sessão conjunta de homologação com a cliente, conduzida pela equipe sobre o sistema desenvolvido. Foram demonstrados os quatro perfis de acesso, a gestão de colaboradores, os apontamentos (incluindo homologação pelo gestor e consulta pelo técnico) e os reembolsos. A versão exata do software não foi registrada na transcrição; o ambiente em nuvem ainda estava em preparação.
+
+**Resultado e encaminhamentos:** não foram registrados novos pedidos de alteração naquele momento. A equipe decidiu prosseguir com o desenvolvimento, mantendo a verificação da conformidade dos perfis, a apresentação complementar das funcionalidades e a possibilidade de coleta adicional de feedback. A sessão foi realizada, mas o aceite formal e integral dos critérios não está inequivocamente documentado; permanecem as pendências técnicas registradas neste DoD.
+
+**Fonte:** anotações e transcrição da reunião de 22/11/2026 (registro preliminar; ata formal a publicar pela equipe).
 
 ---
 
