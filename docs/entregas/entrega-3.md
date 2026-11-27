@@ -47,6 +47,35 @@ A tabela abaixo consolida os principais artefatos de documentação, governança
 
 ---
 
+## 2.1. Jornada Demonstrável e Dependências da Unidade 3
+
+A versão integrada demonstrável nesta entrega cobre o seguinte encadeamento:
+
+1. **Login e RBAC:** acesso por usuário sintético de teste e autorização das páginas conforme o perfil.
+2. **Cadastro de colaboradores:** navegação pelas telas e persistência do backend integrado em Docker/Staging.
+3. **RVT em campo:** criação de apontamento com contrato, jornada, horas, escopo e evidências em ambiente com conectividade.
+4. **Reembolsos:** submissão, consulta e deliberação das rotas implementadas no Incremento 2, usando dados sintéticos ou registros de homologação e contas sintéticas.
+
+O ambiente de demonstração deve estar disponível com Docker Compose, PostgreSQL, backend e frontend; o servidor precisa ser iniciado antes da apresentação. Os nomes, documentos, contratos, despesas, comprovantes e contas mostrados não são dados reais da DUOC e podem ser usados somente como dados sintéticos de teste. Uma interface que apresente dados fictícios deve ser apresentada como protótipo de interface ou homologação, não como operação já integrada à base real da cliente.
+
+| RF / área | Situação registrada | Tratamento na demonstração |
+| :--- | :--- | :--- |
+| **RF32** — deliberação de apontamentos | Avançou no Incremento 2 e permanece em desenvolvimento/validação | Somente demonstrar quando a API, a interface e as regras de aprovação/rejeição estiverem integradas. |
+| **RF35** — retificação de apontamentos | Avançou no Incremento 2 e permanece em desenvolvimento/validação | Somente demonstrar dentro da janela de retificação e com justificativa/evidências sintéticas. |
+| **RF05** e **RF06** — fechamento financeiro | Dependem do Ciclo 3 | Não apresentar prévia ou homologação como concluídas nesta entrega; aguardam motor financeiro e registros fechados. |
+| **RF09** — apropriação de custos | Depende do Ciclo 3 | Não apresentar apropriação por contrato como disponível; aguarda fechamento homologado e backend integrado. |
+| Backend de colaboradores | Dependência central do encadeamento financeiro | Precisa estar integrado ao ambiente da demonstração e ao ciclo que alimenta RVT, fechamento e apropriação. |
+
+O modo offline completo (**RNF01**) continua postergado pós-MVP; em campo, a demonstração hoje depende de conectividade ou de persistência local limitada a rascunhos. O estorno automático em lote (**RF21**) não integra o recorte demonstrado: a correção pós-fechamento, se aceita pela cliente, seguirá como procedimento assistido com autorização administrativa, reabertura controlada e trilha auditável.
+
+A linha consolidada de **31 RFs** também permanece pendente de homologação formal pela cliente. A equipe deve confirmar, em sessão de validação, o corte consolidado, a postergação do modo offline e o procedimento de estorno assistido. Essas decisões afetam diretamente o uso esperado:
+
+* em campo, a ausência de modo offline completo exige plano de contingência e sincronização após restabelecimento da rede;
+* após o fechamento financeiro, ajustes exigirão autorização administrativa e não poderão ser entendidos como edição direta ou estorno automático;
+* o aceite do corte não pode considerar como concluídos requisitos do Ciclo 3 ou funcionalidades somente prototipadas.
+
+---
+
 ## 3. Vídeo da Apresentação da Entrega 3
 
 A gravação oficial do Ponto de Controle 3 (realizada em **16/11/2026**) apresenta a reorganização documental do portal, o catálogo integrado de requisitos com rastreabilidade ao GitHub, a metodologia de priorização do MVP, o planejamento dos ciclos RAD e a demonstração prática do sistema em execução local via Docker.
@@ -112,9 +141,10 @@ A gravação oficial do Ponto de Controle 3 (realizada em **16/11/2026**) aprese
 
 ## 4. Considerações e Próximos Passos
 
-1. **Consolidação do Incremento 2:** Finalizar a implementação e os testes das rotas de deliberação/retificação (`RF32`, `RF35`) e fluxo de reembolsos e adiantamentos (`RF07`, `RF08`, `RF28`, `RF29`).
-2. **Validação Formal com a Cliente:** Conduzir a sessão de homologação do corte final do MVP (`31 RFs` / `9 Pós-MVP`) e dos fluxos navegáveis em Staging com Maria Beatryz.
-3. **Preparação para UAT e Entrega 4 (PC4):** Iniciar os 12 requisitos prontos (DoR) de fechamento financeiro (`RF05`, `RF06`, `RF27`) e contratos/centros de custo (`RF09`–`RF11`, `RF33`, `RF34`, `RF37`–`RF40`).
+1. **Consolidação do Incremento 2:** Finalizar a integração e os testes das rotas de deliberação/retificação (`RF32`, `RF35`) e do fluxo de reembolsos e adiantamentos (`RF07`, `RF08`, `RF28`, `RF29`), distinguindo avanço implementado de aceite ainda pendente.
+2. **Dependências do Ciclo 3:** Implementar e integrar o backend de colaboradores, o fechamento financeiro (`RF05`, `RF06`, `RF27`) e a apropriação de custos (`RF09`, além dos contratos e centros de custo associados), antes de apresentar o fechamento ponta a ponta.
+3. **Validação Formal com a Cliente:** Homologar o corte final de `31 RFs`, confirmar a postergação do modo offline (`RNF01`) e do estorno automático em lote (`RF21`) e registrar os efeitos na UAT e no aceite.
+4. **Proteção da capacidade:** Reavaliar a margem nominal de `3,5 horas` (`266,5 h` de demanda para `270 h` de capacidade). Ela não é suficiente para absorver, isoladamente, integração, correções pós-UAT e validação dos itens ainda não concluídos; reservar horas para retrabalho ou reduzir formalmente o escopo quando necessário.
 
 ---
 
@@ -124,3 +154,4 @@ A gravação oficial do Ponto de Controle 3 (realizada em **16/11/2026**) aprese
 | :---: | :---: | :--- | :--- | :--- |
 | `0.1` | 07/09/2026 | Criação da página com alerta de documento em desenvolvimento | Matheus Ribeiro | Eric Araújo |
 | `1.0` | 16/11/2026 | Estruturação completa da Entrega 3 (PC3) com matriz de artefatos, espaço reservado para o vídeo oficial e distribuição dos temas por integrante. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `1.1` | 27/11/2026 | Esclarecimento da jornada demonstrável, das dependências do Ciclo 3, das validações pendentes com a cliente e da margem insuficiente de 3,5 horas. | Giovana Ferreira | — |
