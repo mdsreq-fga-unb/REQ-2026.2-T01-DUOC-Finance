@@ -54,8 +54,6 @@ A tabela a seguir resume a distribuição quantitativa das deliberações sobre 
 
 A matriz registra a verificação dos requisitos por avaliação em pares, estabelecendo a rastreabilidade entre achado, deliberação e requisito ou artefato alterado. Os casos de teste referenciados não comprovam, isoladamente, sua execução ou aprovação. As evidências de implementação e verificação são registradas no [DoD](../mvp/dod.md#incremento-1).
 
-A matriz registra a verificação dos requisitos por avaliação em pares, estabelecendo a rastreabilidade entre achado, deliberação e requisito ou artefato alterado. Os casos de teste referenciados não comprovam, isoladamente, sua execução ou aprovação. As evidências de implementação e verificação são registradas no [DoD](../mvp/dod.md#incremento-1).
-
 ### Apontamentos Gerais e Metodológicos
 
 | ID | Item / Seção Alvo | Apontamento da Equipe Avaliadora | Deliberação | Justificativa & Decisão Técnica | Ação / Impacto no Artefato |
