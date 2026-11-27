@@ -68,5 +68,10 @@ describe('CAR-07 / RN15 — matriz de autorização no frontend', () => {
     expect(PAPEIS.filter((papel) => possuiPapel(papel, PERMISSOES.administrarReembolsos)))
       .toEqual(['ADMIN_FINANCEIRO'])
   })
+  it('CAR-05 permite acesso a contratos para sistema, financeiro e gestor de obras', () => {
+    expect(PAPEIS.filter((papel) => possuiPapel(papel, PERMISSOES.contratos)))
+      .toEqual(['ADMIN_SISTEMA', 'ADMIN_FINANCEIRO', 'GESTOR_OBRAS'])
+    expect(possuiPapel('TECNICO_CAMPO', PERMISSOES.contratos)).toBe(false)
+  })
 
 })
