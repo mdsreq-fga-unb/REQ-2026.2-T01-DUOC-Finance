@@ -85,6 +85,8 @@ A [verificação dos requisitos por avaliação em pares](../requisitos/feedback
 
 A [validação do protótipo](../governanca/atas/reuniao-06.md) no Figma não equivale à homologação do sistema integrado, ainda pendente no fechamento do PC3. A [sessão de homologação realizada em 22/11/2026](../mvp/dod.md#homologacao-incrementos-1-e-2) está registrada no DoD como evento posterior à entrega, com seus resultados e limitações.
 
+As capturas de tela do sistema e os resultados das suítes de testes estão disponíveis nas [Evidências Visuais do Incremento 1](../mvp/dod.md#evidencias-visuais-comprobatorias-dod-incremento-1).
+
 <div class="req-evidence-media-grid">
   <div class="req-evidence-media-card">
     <img src="../../assets/images/evidencias/actions2.png" alt="Execuções CI/CD no GitHub Actions" loading="lazy">
