@@ -1847,6 +1847,13 @@ lines.append('')
 lines.append('As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integridade contábil, controles temporais e políticas de segurança da informação do ***DUOC Finance***. Cada card abaixo detalha a regra oficial e lista os **Requisitos Funcionais Executores** correspondentes em links bidirecionais navegáveis:')
 lines.append('')
 
+# Reconciliação das evidências históricas — Issue #193
+lines.append('!!! note "Correspondência entre requisitos e evidências históricas — Issue #193"')
+lines.append('    Os identificadores e papéis de acesso registrados no [PR #172](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172) devem ser interpretados conforme o catálogo vigente e a consolidação dos papéis canônicos realizada pelo [PR #185](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/185).')
+lines.append('')
+lines.append('    Consulte a [Reconciliação entre Catálogo e Evidências de Implementação](rastreabilidade.md#reconciliacao-entre-catalogo-e-evidencias-de-implementacao) para verificar a correspondência dos identificadores históricos com os requisitos atuais, incluindo `RN15`, `RN16`, `RNF01`, `RNF13` e `RNF14`.')
+lines.append('')
+
 for rn in RNS_DATA:
     oe_clean = rn["oe"].lower()
     oe_anchor = OE_ANCHORS.get(rn["oe"], "oe1-padronizar-e-unificar-os-dados")

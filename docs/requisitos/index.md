@@ -7734,6 +7734,11 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 
 As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integridade contábil, controles temporais e políticas de segurança da informação do ***DUOC Finance***. Cada card abaixo detalha a regra oficial e lista os **Requisitos Funcionais Executores** correspondentes em links bidirecionais navegáveis:
 
+!!! note "Correspondência entre requisitos e evidências históricas — Issue #193"
+    Os identificadores e papéis de acesso registrados no [PR #172](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172) devem ser interpretados conforme o catálogo vigente e a consolidação dos papéis canônicos realizada pelo [PR #185](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/185).
+
+    Consulte a [Reconciliação entre Catálogo e Evidências de Implementação](rastreabilidade.md#reconciliacao-entre-catalogo-e-evidencias-de-implementacao) para verificar a correspondência dos identificadores históricos com os requisitos atuais, incluindo `RN15`, `RN16`, `RNF01`, `RNF13` e `RNF14`.
+
 <details class="req-card req-card-rn req-card-oe1" id="rn01" data-type="rn" data-rn="RN01" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn01 unicidade e validação cadastral por cpf oe1 módulo 1 car-01 integridade cadastral os dados cadastrais de colaboradores utilizam o cpf como identificador unívoco no sistema, validando os dígitos verificadores pelo algoritmo oficial e impedindo registros duplicados. rf01 rf02 regra negocio dominio" data-search-text="rn01 unicidade e validação cadastral por cpf oe1 módulo 1 car-01 integridade cadastral os dados cadastrais de colaboradores utilizam o cpf como identificador unívoco no sistema, validando os dígitos verificadores pelo algoritmo oficial e impedindo registros duplicados. rf01 rf02 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">
