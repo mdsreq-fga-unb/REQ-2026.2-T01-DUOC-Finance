@@ -1848,10 +1848,7 @@ lines.append('As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de d
 lines.append('')
 
 # Reconciliação das evidências históricas — Issue #193
-lines.append('!!! note "Correspondência entre requisitos e evidências históricas — Issue #193"')
-lines.append('    Os identificadores e papéis de acesso registrados no [PR #172](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172) devem ser interpretados conforme o catálogo vigente e a consolidação dos papéis canônicos realizada pelo [PR #185](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/185).')
-lines.append('')
-lines.append('    Consulte a [Reconciliação entre Catálogo e Evidências de Implementação](rastreabilidade.md#reconciliacao-entre-catalogo-e-evidencias-de-implementacao) para verificar a correspondência dos identificadores históricos com os requisitos atuais, incluindo `RN15`, `RN16`, `RNF01`, `RNF13` e `RNF14`.')
+lines.append('**Evidências históricas de segurança e RBAC:** consulte a [correspondência entre os identificadores dos PRs #172 e #185 e o catálogo vigente](rastreabilidade.md#reconciliacao-entre-catalogo-e-evidencias-de-implementacao).')
 lines.append('')
 
 for rn in RNS_DATA:

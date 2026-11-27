@@ -83,24 +83,13 @@ Esses esclarecimentos preservam as evidências históricas e não modificam os c
 
 ### Consolidação dos Papéis Canônicos de Acesso
 
-A implementação inicial registrada no PR #172 apresentava os papéis `ADMIN_FINANCEIRO`, `GESTOR_OPERACIONAL`, `TECNICO_CAMPO` e `AUDITOR_EXTERNO`.
+O [PR #185](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/185) consolidou os quatro papéis definidos na [Matriz Canônica de RBAC](governanca-conformidade.md#61-matriz-canonica-de-papeis-rbac), cuja correspondência com a implementação foi confirmada nos seguintes artefatos:
 
-Posteriormente, a [Issue #181](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/181), implementada pelo [PR #185](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/185), consolidou os quatro papéis canônicos definidos na [Governança e Conformidade](governanca-conformidade.md):
+- [Enum de papéis do backend](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/develop/backend/src/auth/role.enum.ts);
+- [Schema Prisma](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/develop/backend/prisma/schema.prisma);
+- [Permissões do frontend](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/develop/frontend/src/auth/permissoes.ts).
 
-- `ADMIN_SISTEMA`;
-- `ADMIN_FINANCEIRO`;
-- `GESTOR_OBRAS`;
-- `TECNICO_CAMPO`.
-
-A correspondência com o catálogo vigente foi verificada nos seguintes artefatos da implementação:
-
-- [`backend/src/auth/role.enum.ts`](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/develop/backend/src/auth/role.enum.ts);
-- [`backend/prisma/schema.prisma`](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/develop/backend/prisma/schema.prisma);
-- [`frontend/src/auth/permissoes.ts`](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/develop/frontend/src/auth/permissoes.ts).
-
-O papel `GESTOR_OPERACIONAL` foi migrado para `GESTOR_OBRAS`. O papel `AUDITOR_EXTERNO` não integra o conjunto canônico vigente e permanece apenas como referência histórica da implementação anterior, sem equivalência automática com `ADMIN_SISTEMA`.
-
-Os registros históricos dos PRs são preservados, enquanto o catálogo vigente permanece como fonte canônica para a interpretação dos requisitos e de seus identificadores.
+Os papéis `GESTOR_OPERACIONAL` e `AUDITOR_EXTERNO` mencionados no PR #172 são referências históricas. O tratamento desses papéis legados está documentado na matriz de governança vigente.
 
 ---
 
