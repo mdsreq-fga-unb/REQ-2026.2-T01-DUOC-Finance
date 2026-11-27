@@ -13,7 +13,7 @@ Este documento consolida o **modelo metodológico integrado de priorização e d
   </div>
   <div class="stat-card">
     <span class="stat-num">270 <small>horas</small></span>
-    <span class="stat-label">Capacidade Líquida (Demanda: 266,5 h)</span>
+    <span class="stat-label">Capacidade Líquida (Demanda: 266,5 h; margem: 3,5 h)</span>
   </div>
   <div class="stat-card stat-warn">
     <span class="stat-num">9 <small>RFs</small></span>
@@ -23,9 +23,24 @@ Este documento consolida o **modelo metodológico integrado de priorização e d
 
 ---
 
-## O fluxo que precisa funcionar de ponta a ponta
+## Jornada demonstrável na Entrega 3
 
-O recorte do MVP foi concebido para assegurar que o fluxo operacional central da DUOC Finance funcione integralmente de ponta a ponta desde a primeira versão em produção:
+O recorte consolidado de **31 RFs** é o escopo planejado do MVP; ele **não representa, por si só, uma jornada financeira completa já entregue** na Unidade 3. Nesta entrega, a demonstração ponta a ponta disponível hoje começa no login e no controle de acesso por perfil (**RBAC**), passa pelo cadastro e pela operação móvel de RVT e alcança a submissão e a deliberação de reembolsos. A execução deverá ser feita em ambiente Docker local ou Staging, com PostgreSQL ativo, backend e frontend acessíveis e usuários sintéticos de teste previamente cadastrados.
+
+Os dados usados nas demonstrações e nos testes são sintéticos ou de homologação, não representam dados reais de colaboradores da DUOC. Nomes, contratos, despesas e documentos mostrados pela interface devem ser tratados como dados fictícios. Quando uma tela usa dados sintéticos — como a interface administrativa de reembolsos — isso precisa permanecer identificado durante a apresentação e não deve ser interpretado como integração com a operação real.
+
+| Parte da jornada | Situação na Unidade 3 | Evidência / condição de demonstração |
+| :--- | :--- | :--- |
+| Login, autenticação e RBAC | Disponível no Incremento 1 | Executar com perfis sintéticos; validar a navegação e a autorização das rotas em Docker/Staging. |
+| Cadastro de colaboradores | Disponível no Incremento 1 | Demonstrar cadastro e edição com dados fictícios; o backend de colaboradores deve ser mantido integrado ao ambiente de demonstração. |
+| Apontamento de campo / RVT | Disponível no Incremento 1 | Criar RVT com contrato, jornada, fotos/evidências e dados sintéticos em rede disponível. |
+| Deliberação e retificação de apontamentos (`RF32`, `RF35`) | **Avançados no Incremento 2, ainda em desenvolvimento/validação** | Pode-se demonstrar o fluxo construído somente após confirmar no ambiente integrado que o backend, as regras de janela e a interface estão operacionais. |
+| Reembolsos e adiantamentos | Em desenvolvimento no Incremento 2 | Pode-se demonstrar interface e rotas implementadas com dados sintéticos ou registros de homologação; adiantamento só entra na jornada conforme o vínculo do requisito examinado. |
+| Fechamento financeiro (`RF05`, `RF06`) | Ainda depende do Ciclo 3 | Não faz parte da jornada demonstrável completa desta entrega. Prévia, homologação e bloqueio não devem ser apresentados como concluídos sem evidência integrada. |
+| Apropriação de custos (`RF09`) | Ainda depende do Ciclo 3 | Não deve ser exibida como jornada concluída; aguarda o motor financeiro, fechamento homologado e backend necessário. |
+
+!!! warning "Limite da entrega parcial"
+    Deliberação/retificação de apontamentos (`RF32` e `RF35`) já avançaram no Incremento 2, mas precisam ser claramente distinguidas dos requisitos ainda não iniciados ou sem ciclo fechado. Fechamento (`RF05` e `RF06`) e apropriação de custos (`RF09`) ainda aguardam o desenvolvimento do Ciclo 3 e o backend de colaboradores no encadeamento necessário. Por isso, esta entrega não demonstra integralmente o fluxo cadastral, operacional e financeiro do MVP consolidado.
 
 <div class="journey-list">
   <div class="journey-item">
@@ -618,12 +633,28 @@ A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra a sessão de a
 
 | Tópico Deliberado | Decisão / Escopo Registrado | Status Perante a Cliente | Evidência Rastreável |
 | :--- | :--- | :--- | :--- |
-| **Linha de corte do MVP** | Escopo aprovado internamente com ressalvas na Reunião 05 e consolidado posteriormente em 31 RFs (inclusão de RF32 a RF35 e dos decompostos RF37 a RF40). | **Pendente de validação** | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) e [Linha de Corte do MVP](#linha-de-corte-do-mvp). |
+| **Linha de corte do MVP** | Escopo aprovado internamente com ressalvas na Reunião 05 e consolidado posteriormente em 31 RFs (inclusão de RF32 a RF35 e dos decompostos RF37 a RF40). | **Pendente de validação pela cliente** | [Ata 05, Decisão D5](../governanca/atas/reuniao-05.md#decisao-d5-mvp) e [Linha de Corte do MVP](#linha-de-corte-do-mvp). Confirmar se o corte de 31 RFs permanece a base do aceite e quais itens podem seguir no backlog sem alterar a homologação. |
 | **Inclusão de indicadores (RF11)** | Incluir a filtragem de custos por obra no escopo prioritário do MVP. | **Pendente de validação** | [Ata 05, Decisão D1](../governanca/atas/reuniao-05.md#decisao-d1-rf11) e [Especificação do RF11](index.md#rf11). |
-| **Tratamento do estorno (RF21)** | Retirar o estorno automático do MVP e manter tratamento operacional assistido. | **Pendente de validação** | [Ata 05, Decisão D2](../governanca/atas/reuniao-05.md#decisao-d2-rf21) e [Especificação do RF21](index.md#rf21). |
-| **Postergação do modo offline (RNF01)** | Classificar a operação offline completa como evolutiva. | **Pendente de validação** | [Ata 05, Decisão D4](../governanca/atas/reuniao-05.md#decisao-d4-rnf01) e [Classificação dos RNFs](index.md#catalogo-nao-funcionais). |
+| **Tratamento do estorno (RF21)** | Retirar o estorno automático em lote do MVP e manter procedimento assistido após homologação. | **Pendente de validação pela cliente** | [Ata 05, Decisão D2](../governanca/atas/reuniao-05.md#decisao-d2-rf21) e [Especificação do RF21](index.md#rf21). Confirmar se correções pós-fechamento poderão exigir reabertura do lote autorizada pelo administrador financeiro, preservando a trilha de auditoria. |
+| **Postergação do modo offline (RNF01)** | Postergar o funcionamento completo offline no canteiro para evolução posterior ao MVP. | **Pendente de validação pela cliente** | [Ata 05, Decisão D4](../governanca/atas/reuniao-05.md#decisao-d4-rnf01) e [Classificação dos RNFs](index.md#catalogo-nao-funcionais). Confirmar que o uso em campo, sem conexão, exigirá contorno manual ou operação tolerante até recuperar a rede; a ausência de sincronização automática não pode ser apresentada como concluída. |
 | **Exportação de auditoria (RF16)** | Manter relatórios avançados de auditoria fora do escopo inicial do MVP. | **Pendente de validação** | [Ata 05, Decisão D3](../governanca/atas/reuniao-05.md#decisao-d3-rf16) e [Especificação do RF16](index.md#rf16). |
 | **Segurança e infraestrutura** | Registrar como mandatórios no MVP os requisitos de login, RBAC e integridade. | **Pendente de validação** | [Ata 05, Decisão D6](../governanca/atas/reuniao-05.md#decisao-d6-seguranca-infraestrutura) e [Classificação dos RNFs](index.md#catalogo-nao-funcionais). |
+
+---
+
+## Revisão da capacidade e da margem do plano
+
+A página registra demanda consolidada de **266,5 horas** sobre capacidade líquida de **270 horas**, resultando em margem nominal de apenas **3,5 horas** (≈ 1,3% da capacidade). Essa reserva é insuficiente para assumir, sem risco, correções pós-UAT, retrabalho de integração, estabilização dos requisitos ainda em desenvolvimento, preparação do ambiente de demonstração e validação formal com a cliente.
+
+Antes da consolidação do Incremento 3, a equipe deve reservar capacidade explícita para:
+
+* integração entre colaboradores, RVT, reembolsos, fechamento e apropriação;
+* correções dos fluxos de `RF32` e `RF35` e do backend de colaboradores;
+* implementação e testes de `RF05`, `RF06` e `RF09`;
+* execução da UAT, correções priorizadas e registro do aceite;
+* ajustes documentais derivados das decisões pendentes de corte, modo offline e estorno assistido.
+
+Os itens devem ser reestados pela ordem de risco e, se necessário, o corte do MVP deve ser confirmado pela cliente antes de incorporar trabalho adicional fora da capacidade atual.
 
 ---
 
@@ -635,3 +666,4 @@ A [Ata da Reunião 05](../governanca/atas/reuniao-05.md) registra a sessão de a
 | `2.0` | 28/09/2026 | Consolidação da Matriz 4×4 cartesiana e definição do primeiro corte preliminar do MVP alinhado na Reunião 05. | Matheus Ribeiro | Eric Araújo |
 | `3.0` | 10/11/2026 | Expansão atômica para 40 RFs (31 no MVP / 9 Pós-MVP) com desmembramento de contratos e centros de custo (RF37 a RF40) em mapeamento 1:1 com Histórias de Usuário. | Paulo Nery | Matheus Ribeiro |
 | `4.0` | 16/11/2026 | Reformulação visual compacta: resumo estatístico contido, fluxo ponta a ponta, tabelas metodológicas de avaliação (VB e EC), alternador dinâmico de visualização (Características vs Matriz 4x4), fórmulas limpas e procedimento de retificação assistida. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `4.1` | 27/11/2026 | Atualização da jornada demonstrável da Unidade 3, separação das dependências do Ciclo 3, registro das validações pendentes com a cliente e revisão da margem de 3,5 horas sobre a capacidade planejada. | Equipe Cascata Ágil | — |
