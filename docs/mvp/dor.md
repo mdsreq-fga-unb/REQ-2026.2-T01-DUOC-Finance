@@ -29,17 +29,24 @@ O **DoR** é o acordo de prontidão para iniciar a construção da lógica de ne
 ---
 
 <a id="incremento-1"></a>
-## 2. Resultados do DoR — Incremento 1 (Concluído)
+## 2. Resultados do DoR — Incremento 1 (Exceção registrada)
 
-Aplicado integralmente às 10 histórias/requisitos do **Incremento 1** ([`RF01`](../requisitos/index.md#rf01)–[`RF04`](../requisitos/index.md#rf04), [`RF13`](../requisitos/index.md#rf13), [`RF17`](../requisitos/index.md#rf17)–[`RF19`](../requisitos/index.md#rf19), [`RF22`](../requisitos/index.md#rf22), [`RF23`](../requisitos/index.md#rf23)):
+A equipe não aplicou integralmente o DoR antes da persistência dos 10 requisitos do **Incremento 1** ([`RF01`](../requisitos/index.md#rf01)–[`RF04`](../requisitos/index.md#rf04), [`RF13`](../requisitos/index.md#rf13), [`RF17`](../requisitos/index.md#rf17)–[`RF19`](../requisitos/index.md#rf19), [`RF22`](../requisitos/index.md#rf22), [`RF23`](../requisitos/index.md#rf23)): decidiu coletivamente aceitar a avaliação presencial do protótipo no Figma como exceção temporária à validação prévia no frontend navegável.
 
 | Verificação DoR | Estado | Evidência Rastreável |
 | :--- | :---: | :--- |
 | **Escopo, INVEST e Critérios Objetivos** | **Atendido (10/10 RFs)** | Histórias `US01`–`US04`, `US13`, `US17`–`US19`, `US22`, `US23` e regras `RN01`–`RN23` consolidadas no [Catálogo Integrado](../requisitos/index.md) e [Priorização do MVP](../requisitos/priorizacao.md#linha-de-corte-do-mvp). |
 | **Contratos de Dados e RNFs Vinculados** | **Atendido** | Schemas Prisma (`schema.prisma`), migrations (`auth_usuarios_sessoes`, `rvt_apontamento_campo`) e DTOs validados nos PRs [#170](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170) e [#172](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172). |
-| **Base Visual (Figma + Telas Frontend UI-First)** | **Atendido** | Telas de Login, Colaboradores e Apontamento RVT prototipadas e implementadas no Frontend React ([PR #167](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167) e [PR #170](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170)). |
-| **Validação Sociotécnica Prévia** | **Atendido** | Fluxos e telas aprovados presencialmente por Maria Beatryz na [Ata da Reunião 06 (02/10/2026)](../governanca/atas/reuniao-06.md) antes do avanço da persistência. |
+| **Base visual (Figma e frontend navegável)** | **Atendido com exceção temporal** | A [Ata 06 (02/10/2026)](../governanca/atas/reuniao-06.md) registra a aprovação do protótipo Figma. O frontend foi desenvolvido nos PRs [#167](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167) e [#170](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170); portanto, a validação navegável não antecedeu a persistência. |
+| **Validação sociotécnica no frontend** | **Realizada depois do início da construção** | A [Issue #182](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/182) registra a sessão de 22/11/2026. O registro descreve os fluxos `RF01`–`RF04`, `RF13`, `RF19`, `RF07`, `RF08` e `RF32`; não é evidência de aprovação dos demais RFs não descritos na sessão. |
 
+### Registro da exceção ao DoR
+
+- **Decisão:** exceção decidida coletivamente pela Equipe Cascata Ágil. A equipe informou essa decisão; seu registro é retrospectivo nesta atualização de 27/11/2026.
+- **Itens afetados:** [`RF01`](../requisitos/index.md#rf01), [`RF02`](../requisitos/index.md#rf02), [`RF03`](../requisitos/index.md#rf03), [`RF04`](../requisitos/index.md#rf04), [`RF13`](../requisitos/index.md#rf13), [`RF17`](../requisitos/index.md#rf17), [`RF18`](../requisitos/index.md#rf18), [`RF19`](../requisitos/index.md#rf19), [`RF22`](../requisitos/index.md#rf22) e [`RF23`](../requisitos/index.md#rf23).
+- **Risco aceito:** iniciar lógica e persistência sem a cliente percorrer o frontend navegável poderia revelar divergências de campos, linguagem ou sequência do fluxo somente depois da implementação, exigindo retrabalho.
+- **Prazo e realização:** a equipe previa realizar a validação restante até 27/11/2026. A sessão ocorreu em 22/11/2026 e está registrada na [Issue #182](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/182); Maria Beatryz participou pelo telefone de Eric Araújo, conforme esclarecimento da equipe.
+- **Alcance da evidência:** a sessão descreve a demonstração dos RFs indicados na tabela acima e não documenta os fluxos `RF17`, `RF18`, `RF22` ou `RF23`.
 ??? info "Evidências Visuais do DoR — Telas Base do Incremento 1 (Clique para expandir)"
     <div class="req-evidence-media-grid">
       <div class="req-evidence-media-card">
@@ -67,10 +74,14 @@ Aplicado integralmente às 10 histórias/requisitos do **Incremento 1** ([`RF01`
 | **Prontos para Dev / Incr. 2–3 (12 RFs):** [`RF05`](../requisitos/index.md#rf05), [`RF06`](../requisitos/index.md#rf06), [`RF27`](../requisitos/index.md#rf27), [`RF09`](../requisitos/index.md#rf09)–[`RF11`](../requisitos/index.md#rf11), [`RF33`](../requisitos/index.md#rf33), [`RF34`](../requisitos/index.md#rf34), [`RF37`](../requisitos/index.md#rf37)–[`RF40`](../requisitos/index.md#rf40) | **DoR Aprovado** | Especificações atômicas, regras centesimais e contratos de centro de custo validados; aguardando execução em sprint. |
 | **Aguardando Ciclo (3 RFs) e Pós-MVP (9 RFs)** | **DoR Não Iniciado** | Mantidos em refinamento/backlog futuro até atingirem seu ciclo correspondente. |
 
+Cada link de RF acima abre seu card individual no [Catálogo](../requisitos/index.md), onde estão a história, os critérios e as regras aplicáveis; os cards vinculam os itens às Issues de especificação [#59](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/59) e [#62](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/62). Esses registros sustentam a prontidão documentada pela equipe e não equivalem, por si sós, à aprovação da cliente. A sessão posterior da [Issue #182](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/182) descreve validação dos fluxos `RF07`, `RF08` e `RF32`; não registra demonstração de `RF28`, `RF29`, `RF35` nem dos 12 RFs prontos para desenvolvimento.
+
 ---
 
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
+
 | `1.0` | 17/11/2026 | Desmembramento do DoR em documento próprio com resultados por incremento e evidências visuais em bloco expansível. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `1.1` | 27/11/2026 | Registro da exceção coletiva ao DoR do Incremento 1, seus itens, riscos e prazo, e inclusão das referências individuais aos cards e à validação registrada na Issue #182. | Giovana Ferreira Santos | — |

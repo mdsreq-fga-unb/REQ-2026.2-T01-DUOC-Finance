@@ -22,11 +22,13 @@ O **DoR** é o acordo de prontidão para iniciar a construção da lógica de ne
 | **Base visual preparada** | A interface tem referência visual no Figma (identidade, tokens ou wireframe pertinente) e o fluxo completo foi estabelecido no Frontend, navegável e com dados sintéticos/mockados? | Link para Figma e preview do protótipo no Frontend associados à Issue. |
 | **Validação sociotécnica concluída** | Maria Beatryz conseguiu percorrer o fluxo e validar campos, linguagem, sequência e resultado visual antes da implementação da lógica e da persistência? Os ajustes solicitados foram incorporados ou acordados? | Aprovação ou ressalvas registradas em ata/sessão; link, data e pendências associadas ao item. |
 
-**Decisão do portão:** marque o item como **Pronto (DoR)** somente quando todas as respostas forem afirmativas e as evidências estiverem acessíveis à equipe. Se algum critério não for atendido, o item permanece em **Refinamento**; registre a dúvida, dependência ou ação pendente na Issue. A aprovação da tela não equivale à aprovação da lógica de negócio, que será verificada no DoD.
+**Decisão do portão:** marque o item como **Pronto (DoR)** somente quando todas as respostas forem afirmativas e as evidências estiverem acessíveis à equipe. Se algum critério não for atendido, o item permanece em **Refinamento**; registre a dúvida, dependência ou ação na Issue. Uma exceção não altera este critério geral: deve ser explicitamente decidida e registrada pela equipe, com itens afetados, risco aceito e prazo para a validação substitutiva; não deve ser descrita como se o critério original tivesse sido atendido.
 
-### Registro de aplicação — Incremento 1 (Atualizado em 16/11/2026)
+### Registro de aplicação — Incremento 1 (Atualizado em 27/11/2026)
 
-O checklist DoR foi aplicado e evidenciado para as histórias entregues no **Incremento 1** (`US01`–`US04`, `US13`, `US17`–`US19`, `US22`, `US23`), com rastreabilidade direta para o catálogo, protótipo Figma, atas e Pull Requests de entrega:
+Para as histórias entregues no **Incremento 1** (`US01`–`US04`, `US13`, `US17`–`US19`, `US22`, `US23`), a equipe aceitou coletivamente uma exceção temporária: a aprovação presencial no Figma permitiu iniciar a lógica e a persistência antes da validação do frontend navegável, embora o DoR vigente exigisse essa validação prévia. A exceção não significa que o checklist foi integralmente atendido antes da construção.
+
+A página de [Estratégias de Engenharia de Software](../metodologia/estrategias-esw.md#adaptacao-do-processo-rad-ao-contexto-da-duoc) descreve o estado logo após a sessão de 02/10/2026, quando a validação no frontend ainda era o próximo passo. O registro abaixo complementa essa cronologia com a decisão coletiva e a sessão posterior, sem tratar a validação no Figma como se fosse a validação prévia no frontend.
 
 | Verificação | Estado | Evidência Rastreável no Repositório |
 | :--- | :---: | :--- |
@@ -37,8 +39,17 @@ O checklist DoR foi aplicado e evidenciado para as histórias entregues no **Inc
 | **Critérios de aceitação objetivos** | **Atendido** | Critérios funcionais, DoR e DoD especificados por requisito no [Catálogo](../requisitos/index.md) e validados por suítes Vitest. |
 | **Regras de negócio explícitas** | **Atendido** | Validações de CPF (`RN01`), RBAC (`RN15`/`RN16`), bloqueio de login (`RF23`) e anexos RVT (`RN06`) formalizadas. |
 | **Qualidade, dados e dependências** | **Atendido** | Contratos DTO/Prisma (`schema.prisma` e migrations `auth_usuarios_sessoes` e `rvt_apontamento_campo`) e RNFs vinculados. |
-| **Base visual preparada** | **Atendido** | Telas prototipadas no Figma (*Node 1:3*) e implementadas no Frontend React ([PR #167](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167) e [PR #170](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170)). |
-| **Validação sociotécnica concluída** | **Atendido (Incr. 1)** | Telas do Incremento 1 validadas presencialmente com Maria Beatryz na [Ata 06 (02/10/2026)](../governanca/atas/reuniao-06.md) antes da construção do backend/persistência. |
+| **Base visual preparada** | **Exceção registrada** | O protótipo no Figma foi aprovado na [Ata 06 (02/10/2026)](../governanca/atas/reuniao-06.md). A validação do frontend navegável não ocorreu antes da persistência; os PRs [#167](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167) e [#170](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170) registram o desenvolvimento posterior. |
+| **Validação sociotécnica no frontend** | **Realizada depois do início da construção** | A sessão da [Issue #182 (22/11/2026)](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/182) descreve os fluxos `RF01`–`RF04`, `RF13`, `RF19`, `RF07`, `RF08` e `RF32`. Maria Beatryz participou pelo telefone de Eric Araújo, conforme esclarecimento da equipe. |
+
+#### Registro da decisão coletiva
+
+- **Quem decidiu:** Equipe Cascata Ágil, coletivamente.
+- **Itens afetados:** os dez RFs do Incremento 1: `RF01`–`RF04`, `RF13`, `RF17`–`RF19`, `RF22` e `RF23`, detalhados e vinculados aos cards em [Resultados do DoR](dor.md#incremento-1).
+- **Risco aceito:** possíveis divergências de campos, linguagem ou sequência entre o Figma e o frontend, descobertas somente depois da implementação da lógica/persistência e com possibilidade de retrabalho.
+- **Prazo:** a validação no frontend navegável foi prevista para até 27/11/2026 e ocorreu em 22/11/2026, conforme a [Issue #182](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/182). A evidência da sessão limita-se aos fluxos nela descritos;
+
+Para os seis RFs em desenvolvimento e os 12 RFs prontos para desenvolvimento, os links de cada card e de suas Issues de especificação estão reunidos em [Resultados do DoR — Incrementos 2 e 3](dor.md#incremento-2). A sessão da Issue #182 ocorreu depois do início da construção: nela estão descritos `RF07`, `RF08` e `RF32`, mas não `RF28`, `RF29`, `RF35` nem os 12 RFs prontos. Os cards registram a prontidão aprovada pela equipe.
 
 ### Perguntas rápidas para refinamento
 
@@ -91,7 +102,7 @@ Para cada item concluído, a Issue ou PR deve permitir localizar:
 
 ## Aplicação no processo RAD e rastreabilidade
 
-Os portões se aplicam a cada história/incremento, não apenas aos marcos acadêmicos. No ciclo **UI-First**, primeiro se planeja e refina a história, estabelece-se a interface com base no Figma e prototipa-se no Frontend com mocks; a validação pela cliente satisfaz a etapa visual do DoR. Só então se constrói a lógica e a persistência. Em seguida, o incremento passa por verificação, demonstração/homologação e refinamento do ciclo seguinte.
+Os portões se aplicam a cada história/incremento, não apenas aos marcos acadêmicos. No ciclo **UI-First**, primeiro se planeja e refina a história, estabelece-se a interface com base no Figma e prototipa-se no Frontend com mocks; a validação pela cliente satisfaz a etapa visual do DoR. Só então se constrói a lógica e a persistência, exceto quando uma exceção coletiva explícita e documentada for aprovada. Em seguida, o incremento passa por verificação, demonstração/homologação e refinamento do ciclo seguinte.
 
 O acordo complementa as fases e a adaptação do processo **RAD** descritas no [Capítulo 4 — Estratégias de Engenharia de Software](../metodologia/estrategias-esw.md#adaptacao-do-processo-rad-ao-contexto-da-duoc) e o ciclo UI-First, o fluxo `Backlog do Produto → Refinamento → Pronto (DoR) → Em Desenvolvimento → Em Verificação → Em Validação → Concluído (DoD)` e o planejamento por incrementos descritos no [Capítulo 6 — Cronograma](../metodologia/planejamento.md#5-racional-metodologico-do-cronograma). Os critérios de requisitos, regras de negócio e métricas de qualidade devem ser rastreados à [especificação do Capítulo 8](../requisitos/index.md), e a interação de validação/homologação segue o [processo com a cliente no Capítulo 7](../metodologia/interacao-cliente.md#73-processo-de-validacao-sociotecnica-e-homologacao-com-a-cliente).
 
@@ -147,3 +158,4 @@ A tabela abaixo registra a comprovação objetiva de cada critério do DoD para 
 | `1.5` | 13/10/2026 | Auditoria de governança metodológica: critérios objetivos de aceitação no DoR e inspeção Fagan no DoD. | Matheus Ribeiro Szervinsk | Eric Araújo |
 | `2.0` | 28/10/2026 | Consolidação do status de aplicação do DoR na US04 e esclarecimento dos registros comprobatórios de DoD. | Giovana Ferreira Santos | Matheus Ribeiro Szervinsk |
 | `2.1` | 17/11/2026 | Atualização dos registros reais de DoR e DoD do Incremento 1 com links diretos aos PRs (`#167`, `#168`, `#170`, `#172`, `#174`), resultados de testes (`107` backend / `18` frontend), latência medida e ajuste da homologação sociotécnica por incremento. | Matheus Ribeiro Szervinsk | Lucas Zanetti |
+| `2.2` | 27/11/2026 | Esclarecimento da exceção coletiva ao DoR do Incremento 1, dos itens, risco e prazo de validação, com distinção entre o registro de prontidão dos cards e a validação dos fluxos descritos na Issue #182. | Giovana Ferreira | — |
