@@ -7734,6 +7734,8 @@ Utilize a barra de pesquisa e os filtros rápidos abaixo para navegar dinamicame
 
 As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integridade contábil, controles temporais e políticas de segurança da informação do ***DUOC Finance***. Cada card abaixo detalha a regra oficial e lista os **Requisitos Funcionais Executores** correspondentes em links bidirecionais navegáveis:
 
+**Evidências históricas de segurança e RBAC:** consulte a [correspondência entre os identificadores dos PRs #172 e #185 e o catálogo vigente](rastreabilidade.md#reconciliacao-entre-catalogo-e-evidencias-de-implementacao).
+
 <details class="req-card req-card-rn req-card-oe1" id="rn01" data-type="rn" data-rn="RN01" data-oe="oe1" data-car="car-01" data-mvp="mvp" data-quad="q1" data-text="rn01 unicidade e validação cadastral por cpf oe1 módulo 1 car-01 integridade cadastral os dados cadastrais de colaboradores utilizam o cpf como identificador unívoco no sistema, validando os dígitos verificadores pelo algoritmo oficial e impedindo registros duplicados. rf01 rf02 regra negocio dominio" data-search-text="rn01 unicidade e validação cadastral por cpf oe1 módulo 1 car-01 integridade cadastral os dados cadastrais de colaboradores utilizam o cpf como identificador unívoco no sistema, validando os dígitos verificadores pelo algoritmo oficial e impedindo registros duplicados. rf01 rf02 regra negocio dominio">
   <summary class="req-card-summary">
     <div class="req-summary-chips">

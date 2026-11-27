@@ -1847,6 +1847,10 @@ lines.append('')
 lines.append('As **31 Regras de Negócio (RN01 a RN31)** governam a lógica de domínio, integridade contábil, controles temporais e políticas de segurança da informação do ***DUOC Finance***. Cada card abaixo detalha a regra oficial e lista os **Requisitos Funcionais Executores** correspondentes em links bidirecionais navegáveis:')
 lines.append('')
 
+# Reconciliação das evidências históricas — Issue #193
+lines.append('**Evidências históricas de segurança e RBAC:** consulte a [correspondência entre os identificadores dos PRs #172 e #185 e o catálogo vigente](rastreabilidade.md#reconciliacao-entre-catalogo-e-evidencias-de-implementacao).')
+lines.append('')
+
 for rn in RNS_DATA:
     oe_clean = rn["oe"].lower()
     oe_anchor = OE_ANCHORS.get(rn["oe"], "oe1-padronizar-e-unificar-os-dados")

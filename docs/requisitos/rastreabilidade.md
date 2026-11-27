@@ -50,6 +50,49 @@ Utilize a **barra de pesquisa interativa** abaixo para informar o código ou nom
 
 ---
 
+## Reconciliação entre Catálogo e Evidências de Implementação
+
+Em atendimento à [Issue #193](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/193), esta seção esclarece as divergências entre os identificadores registrados historicamente no [PR #172](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172) e o catálogo vigente de requisitos.
+
+### Correspondência dos Identificadores
+
+| Referência histórica no PR #172 | Funcionalidade ou atributo descrito | Correspondência no catálogo vigente |
+| :--- | :--- | :--- |
+| RN15 | Segregação de funções e matriz de autorização | [RN16](index.md#rn16) e [RNF14](index.md#rnf14). |
+| RN16 | Revogação de sessões ativas | [RF18](index.md#rf18), no contexto de encerramento manual e invalidação imediata da sessão. |
+| RNF01 | Arquitetura REST com JWT | [RN15](index.md#rn15) e [RNF13](index.md#rnf13), quanto à autenticação e à expiração dos tokens. Não corresponde ao [RNF01](index.md#rnf01) vigente, referente à operação offline. |
+| RNF13 | Criptografia forte com bcrypt e HTTPS | Evidência complementar de segurança relacionada ao [RNF03](index.md#rnf03), sem comprovação integral de seus critérios de criptografia em repouso e em trânsito. |
+| RNF14 | Princípio do menor privilégio | [RN16](index.md#rn16) e [RNF14](index.md#rnf14), quanto à segregação de funções e à autorização de acesso. |
+
+As correspondências acima são estabelecidas pelo conteúdo das funcionalidades e das evidências, e não pela simples igualdade dos identificadores. A existência de uma evidência de implementação não implica, isoladamente, o atendimento integral de todos os critérios de aceitação ou métricas de qualidade do requisito associado.
+
+### Reconciliação Complementar da Issue #181 e do PR #185
+
+A [Issue #181](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/issues/181) e o [PR #185](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/185), referentes à evolução do controle de acesso, também apresentam identificadores históricos divergentes do catálogo vigente.
+
+| Referência histórica | Funcionalidade ou evidência registrada | Correspondência no catálogo vigente |
+| :--- | :--- | :--- |
+| RF25 | Gerenciamento e edição de perfis de acesso | [RF14](index.md#rf14) — Gerenciar perfis de acesso. O RF25 vigente trata do tipo de contratação do colaborador. |
+| RNF07 | Segurança e controle de acesso baseado em papéis | [RN16](index.md#rn16) e [RNF14](index.md#rnf14). O RNF07 vigente trata da segurança no processamento e armazenamento de comprovantes. |
+| RNF01 | Medição de latência do endpoint de consulta de usuários | Evidência complementar de desempenho da API, sem equivalência direta com o RNF01 vigente, referente à operação offline. |
+
+A medição de latência registrada no PR #185 (p95 de 16,40 ms em 30 requisições sequenciais locais) não comprova integralmente a métrica do RNF14, que exige a medição específica do processamento da autorização sob condições controladas de carga.
+
+Esses esclarecimentos preservam as evidências históricas e não modificam os critérios de aceitação, os status de verificação ou o escopo dos requisitos vigentes.
+
+
+### Consolidação dos Papéis Canônicos de Acesso
+
+O [PR #185](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/185) consolidou os quatro papéis definidos na [Matriz Canônica de RBAC](governanca-conformidade.md#61-matriz-canonica-de-papeis-rbac), cuja correspondência com a implementação foi confirmada nos seguintes artefatos:
+
+- [Enum de papéis do backend](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/develop/backend/src/auth/role.enum.ts);
+- [Schema Prisma](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/develop/backend/prisma/schema.prisma);
+- [Permissões do frontend](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/blob/develop/frontend/src/auth/permissoes.ts).
+
+Os papéis `GESTOR_OPERACIONAL` e `AUDITOR_EXTERNO` mencionados no PR #172 são referências históricas. O tratamento desses papéis legados está documentado na matriz de governança vigente.
+
+---
+
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
@@ -57,3 +100,4 @@ Utilize a **barra de pesquisa interativa** abaixo para informar o código ou nom
 | `4.1` | 30/10/2026 | Desacoplamento da Pirâmide de Abstração e Matriz-Síntese em documento próprio de Rastreabilidade. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `4.2` | 02/11/2026 | Implementação da Pirâmide de Abstração Interativa nativa (com busca em tempo real, pintura de conexões RF → CAR → OE → OG, zoom automático e paleta de cores dos cards do catálogo), remoção do embed externo do Miro e organização da Matriz-Síntese em abas por Módulo/OE. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
 | `4.3` | 10/11/2026 | Recálculo da coluna de Requisitos Não Funcionais da Matriz-Síntese (visão geral e módulos) a partir dos vínculos reconciliados dos cards de RF, incluindo os RNFs dos requisitos de integração e exportação (CAR-09 e CAR-10) e padronizando um rótulo por RNF (RNF20 passa a "Validação de payload"); vínculos de RNs e RNFs da Pirâmide Interativa sincronizados com o catálogo. | Paulo Nery | — |
+| `4.4` | 27/11/2026 | Atendimento à Issue #193: reconciliação dos identificadores históricos dos PRs #172 e #185 e da Issue #181 com o catálogo vigente, registro da consolidação dos papéis canônicos e esclarecimento dos limites das evidências de verificação. | Gustavo Bonifácio | — |

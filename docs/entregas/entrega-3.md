@@ -42,7 +42,7 @@ A tabela abaixo consolida os principais artefatos de documentação, governança
 | **Rastreabilidade** | Matrizes e Pirâmide Interativa | Rastreabilidade bidirecional (`OG ➔ OE ➔ CAR ➔ RF ➔ RN/RNF`) e matriz-síntese de cobertura do produto. | [Acessar Rastreabilidade](../requisitos/rastreabilidade.md) |
 | **Priorização & MVP** | Priorização & Escopo do Produto | Abas metodológicas de Valor (`VB`) e Esforço (`EC`), fórmula corrigida, seletor dinâmico (*Características* vs *Matriz 4×4*), retificação assistida (`RF06 × RF21 × RF35`) e registro de validação. | [Acessar Priorização](../requisitos/priorizacao.md) |
 | **Planejamento** | Cronograma e Detalhamento de Ciclos | Calendário semestral interativo desacoplado do calendário acadêmico, marco da gravação em `16/11/2026` e atualização do Ciclo 1 (*Concluído*) e Semana 11 (*Em Andamento*). | [Acessar Cronograma](../metodologia/cronograma.md) |
-| **Código (Incr. 1)** | Gestão de Colaboradores, Auth/RBAC e RVT | Backend NestJS + Prisma/PostgreSQL (rotas `/api/auth`, `/api/rvt`, `/api/health`) e Frontend React/Vite com Docker Compose (`PR #167` e `PR #170`). | [Acessar Repositório](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance) |
+| **Código (Incr. 1)** | Gestão de Colaboradores, Auth/RBAC e RVT | Backend NestJS + Prisma/PostgreSQL (rotas `/api/auth`, `/api/rvt`, `/api/health`) e Frontend React/Vite com Docker Compose ([PR #167](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/167), [PR #170](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/170) e [PR #172](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance/pull/172)). | [Repositório](https://github.com/mdsreq-fga-unb/REQ-2026.2-T01-DUOC-Finance) · [Reconciliação das evidências](../requisitos/rastreabilidade.md#reconciliacao-entre-catalogo-e-evidencias-de-implementacao) |
 | **Governança** | Atas e Lições Aprendidas | Registro das decisões da equipe e gravação da apresentação da Entrega 3 na **Reunião 07 (16/11/2026)**. | [Acessar Atas](../governanca/atas/index.md) |
 
 ---
@@ -124,3 +124,4 @@ A gravação oficial do Ponto de Controle 3 (realizada em **16/11/2026**) aprese
 | :---: | :---: | :--- | :--- | :--- |
 | `0.1` | 07/09/2026 | Criação da página com alerta de documento em desenvolvimento | Matheus Ribeiro | Eric Araújo |
 | `1.0` | 16/11/2026 | Estruturação completa da Entrega 3 (PC3) com matriz de artefatos, espaço reservado para o vídeo oficial e distribuição dos temas por integrante. | Matheus Ribeiro Szervinsk | Equipe Cascata Ágil |
+| `1.1` | 27/11/2026 | Atendimento à Issue #193: inclusão do PR #172 e do vínculo para a reconciliação das evidências históricas de segurança e RBAC. | Gustavo Bonifácio | — |
