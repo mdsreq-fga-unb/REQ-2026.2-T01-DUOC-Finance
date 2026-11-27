@@ -14,6 +14,13 @@ export interface ContratoDto {
 }
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+const DATA_ISO = /^\d{4}-\d{2}-\d{2}$/;
+
+export function dataIsoValida(valor: string): boolean {
+  if (!DATA_ISO.test(valor)) return false;
+  const data = new Date(`${valor}T00:00:00.000Z`);
+  return !Number.isNaN(data.getTime()) && data.toISOString().slice(0, 10) === valor;
+}
 
 function opcionalTexto(dados: Record<string, unknown>, chave: string, tamanho: number): string | null {
   const valor = dados[chave];
@@ -47,12 +54,11 @@ export function validarContrato(corpo: unknown, atualizacao = false): ContratoDt
   if (gestor && !UUID.test(gestor)) erros.push('gestorResponsavelId deve ser um UUID válido.');
   const dataInicio = opcionalTexto(dados, 'dataInicio', 10);
   const dataFim = opcionalTexto(dados, 'dataFim', 10);
-  if (dataInicio && !/^\\d{4}-\\d{2}-\\d{2}$/.test(dataInicio)) erros.push('dataInicio deve estar no formato AAAA-MM-DD.');
-  if (dataFim && !/^\\d{4}-\\d{2}-\\d{2}$/.test(dataFim)) erros.push('dataFim deve estar no formato AAAA-MM-DD.');
+  if (dataInicio && !dataIsoValida(dataInicio)) erros.push('dataInicio deve estar no formato AAAA-MM-DD.');
+  if (dataFim && !dataIsoValida(dataFim)) erros.push('dataFim deve estar no formato AAAA-MM-DD.');
   if (dataInicio && dataFim && dataInicio > dataFim) erros.push('dataInicio não pode ser posterior a dataFim.');
   if (erros.length) throw new BadRequestException(erros);
   return {
-    ...(atualizacao ? {} : { codigo, nome }),
     ...(!atualizacao || dados.codigo !== undefined ? { codigo } : {}),
     ...(!atualizacao || dados.nome !== undefined ? { nome } : {}),
     ...(!atualizacao || dados.cliente !== undefined ? { cliente: opcionalTexto(dados, 'cliente', 160) } : {}),

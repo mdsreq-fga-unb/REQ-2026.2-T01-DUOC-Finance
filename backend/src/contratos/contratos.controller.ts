@@ -14,8 +14,19 @@ export class ContratosController {
 
   @Get('indicadores')
   @Roles(Role.ADMIN_SISTEMA, Role.ADMIN_FINANCEIRO, Role.GESTOR_OBRAS)
-  indicadores(@Query('inicio') inicio?: string, @Query('fim') fim?: string) {
-    return this.service.indicadores(inicio, fim);
+  indicadores(
+    @Query('inicio') inicio?: string,
+    @Query('fim') fim?: string,
+    @Query('status') status?: string,
+    @Query('contratoId') contratoId?: string,
+  ) {
+    return this.service.indicadores(inicio, fim, status, contratoId);
+  }
+
+  @Get('gestores')
+  @Roles(Role.ADMIN_SISTEMA, Role.ADMIN_FINANCEIRO)
+  listarGestores() {
+    return this.service.listarGestores();
   }
 
   @Get()

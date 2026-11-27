@@ -1,7 +1,10 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { StatusContratoObra, StatusReembolso, StatusRvt } from '../generated/prisma/client.js';
 import { PrismaService } from '../prisma/prisma.service.js';
-import type { ContratoDto } from './dto/contrato.dto.js';
+import { dataIsoValida, type ContratoDto } from './dto/contrato.dto.js';
+
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+const STATUS_VALIDOS = ['ATIVO', 'SUSPENSO', 'ENCERRADO'] as const;
 
 @Injectable()
 export class ContratosService {
@@ -19,6 +22,14 @@ export class ContratosService {
       where: filtro,
       include: { gestorResponsavel: { select: { id: true, email: true, ativo: true } } },
       orderBy: [{ status: 'asc' }, { codigo: 'asc' }],
+    });
+  }
+
+  async listarGestores() {
+    return this.prisma.usuario.findMany({
+      where: { ativo: true, papel: 'GESTOR_OBRAS' },
+      select: { id: true, email: true, ativo: true },
+      orderBy: { email: 'asc' },
     });
   }
 
@@ -55,8 +66,13 @@ export class ContratosService {
   }
 
   async atualizar(id: string, dto: ContratoDto) {
-    await this.obter(id);
+    const atual = await this.obter(id);
     await this.validarGestor(dto.gestorResponsavelId ?? null);
+    const dataInicio = dto.dataInicio !== undefined ? this.parseData(dto.dataInicio) : atual.dataInicio;
+    const dataFim = dto.dataFim !== undefined ? this.parseData(dto.dataFim) : atual.dataFim;
+    if (dataInicio && dataFim && dataInicio > dataFim) {
+      throw new BadRequestException('dataInicio não pode ser posterior a dataFim.');
+    }
     return this.prisma.contratoObra.update({
       where: { id },
       data: {
@@ -99,10 +115,9 @@ export class ContratosService {
   }
 
   async rateio(id: string, inicio?: string, fim?: string) {
-    await this.obter(id);
+    const contrato = await this.obter(id);
     const periodo = this.periodo(inicio, fim);
-    const [contrato, rvts, reembolsos] = await Promise.all([
-      this.prisma.contratoObra.findUnique({ where: { id } }),
+    const [rvts, reembolsos] = await Promise.all([
       this.prisma.rvt.findMany({
         where: { contratoId: id, status: StatusRvt.HOMOLOGADO, dataJornada: periodo },
         select: { id: true, dataJornada: true, horasTrabalhadas: true },
@@ -112,12 +127,13 @@ export class ContratosService {
         select: { id: true, codigo: true, categoria: true, valorAprovadoCentavos: true, valorCentavos: true, dataDespesa: true },
       }),
     ]);
-    const diariasCentavos = rvts.length * (contrato?.valorDiariaCentavos ?? 0);
+    const valorDiaria = contrato.valorDiariaCentavos ?? 0;
+    const diariasCentavos = rvts.length * valorDiaria;
     const reembolsosCentavos = reembolsos.reduce((total, item) =>
       total + (item.valorAprovadoCentavos ?? item.valorCentavos), 0);
     return {
       contratoId: id,
-      centroCusto: contrato?.centroCusto ?? null,
+      centroCusto: contrato.centroCusto ?? null,
       periodo: { inicio: inicio ?? null, fim: fim ?? null },
       diariasHomologadas: rvts.length,
       diariasCentavos,
@@ -125,26 +141,63 @@ export class ContratosService {
       reembolsosCentavos,
       totalCentavos: diariasCentavos + reembolsosCentavos,
       itens: [
-        ...rvts.map((rvt) => ({ tipo: 'DIARIA', referenciaId: rvt.id, data: rvt.dataJornada, horas: Number(rvt.horasTrabalhadas), valorCentavos: contrato?.valorDiariaCentavos ?? 0 })),
+        ...rvts.map((rvt) => ({ tipo: 'DIARIA', referenciaId: rvt.id, data: rvt.dataJornada, horas: Number(rvt.horasTrabalhadas), valorCentavos: valorDiaria })),
         ...reembolsos.map((reembolso) => ({ tipo: 'REEMBOLSO', referenciaId: reembolso.id, codigo: reembolso.codigo, data: reembolso.dataDespesa, categoria: reembolso.categoria, valorCentavos: reembolso.valorAprovadoCentavos ?? reembolso.valorCentavos })),
       ],
     };
   }
 
-  async indicadores(inicio?: string, fim?: string) {
+  async indicadores(inicio?: string, fim?: string, status?: string, contratoId?: string) {
     const periodo = this.periodo(inicio, fim);
+    if (status && !STATUS_VALIDOS.includes(status as (typeof STATUS_VALIDOS)[number])) {
+      throw new BadRequestException('status deve ser ATIVO, SUSPENSO ou ENCERRADO.');
+    }
+    if (contratoId && !UUID.test(contratoId)) {
+      throw new BadRequestException('contratoId deve ser um UUID válido.');
+    }
+    const filtroContrato = {
+      ...(status ? { status: status as StatusContratoObra } : {}),
+      ...(contratoId ? { id: contratoId } : {}),
+    };
     const [contratos, colaboradoresAtivos, apontamentosPendentes, reembolsosPendentes, rvtsHomologados, reembolsosAprovados] =
       await Promise.all([
         this.prisma.contratoObra.findMany({
-          where: {}, orderBy: { codigo: 'asc' },
+          where: filtroContrato, orderBy: { codigo: 'asc' },
           include: { gestorResponsavel: { select: { id: true, email: true } } },
         }),
         this.prisma.usuario.count({ where: { ativo: true, papel: 'TECNICO_CAMPO' } }),
-        this.prisma.rvt.count({ where: { status: StatusRvt.PENDENTE, ...(inicio || fim ? { dataJornada: periodo } : {}) } }),
-        this.prisma.solicitacaoReembolso.count({ where: { status: StatusReembolso.PENDENTE, ...(inicio || fim ? { dataDespesa: periodo } : {}) } }),
-        this.prisma.rvt.findMany({ where: { status: StatusRvt.HOMOLOGADO, ...(inicio || fim ? { dataJornada: periodo } : {}) }, select: { contratoId: true } }),
-        this.prisma.solicitacaoReembolso.findMany({ where: { status: StatusReembolso.APROVADO, ...(inicio || fim ? { dataDespesa: periodo } : {}) }, select: { contratoId: true, valorAprovadoCentavos: true, valorCentavos: true } }),
+        this.prisma.rvt.count({
+          where: {
+            status: StatusRvt.PENDENTE,
+            ...(contratoId ? { contratoId } : {}),
+            ...(inicio || fim ? { dataJornada: periodo } : {}),
+          },
+        }),
+        this.prisma.solicitacaoReembolso.count({
+          where: {
+            status: StatusReembolso.PENDENTE,
+            ...(contratoId ? { contratoId } : {}),
+            ...(inicio || fim ? { dataDespesa: periodo } : {}),
+          },
+        }),
+        this.prisma.rvt.findMany({
+          where: {
+            status: StatusRvt.HOMOLOGADO,
+            ...(contratoId ? { contratoId } : {}),
+            ...(inicio || fim ? { dataJornada: periodo } : {}),
+          },
+          select: { contratoId: true },
+        }),
+        this.prisma.solicitacaoReembolso.findMany({
+          where: {
+            status: StatusReembolso.APROVADO,
+            ...(contratoId ? { contratoId } : {}),
+            ...(inicio || fim ? { dataDespesa: periodo } : {}),
+          },
+          select: { contratoId: true, valorAprovadoCentavos: true, valorCentavos: true },
+        }),
       ]);
+    const diariaPorContrato = new Map(contratos.map((contrato) => [contrato.id, contrato.valorDiariaCentavos ?? 0]));
     const porContrato = new Map(contratos.map((contrato) => [contrato.id, {
       contratoId: contrato.id, codigo: contrato.codigo, nome: contrato.nome, status: contrato.status,
       centroCusto: contrato.centroCusto, diariasHomologadas: 0, diariasCentavos: 0,
@@ -152,10 +205,9 @@ export class ContratosService {
     }]));
     rvtsHomologados.forEach((rvt) => {
       const item = porContrato.get(rvt.contratoId);
-      const contrato = contratos.find((c) => c.id === rvt.contratoId);
       if (item) {
         item.diariasHomologadas += 1;
-        item.diariasCentavos += contrato?.valorDiariaCentavos ?? 0;
+        item.diariasCentavos += diariaPorContrato.get(rvt.contratoId) ?? 0;
       }
     });
     reembolsosAprovados.forEach((reembolso) => {
@@ -188,7 +240,7 @@ export class ContratosService {
   }
 
   private validarPeriodo(valor: string) {
-    if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(valor) || Number.isNaN(Date.parse(valor))) {
+    if (!dataIsoValida(valor)) {
       throw new BadRequestException('Período deve usar o formato AAAA-MM-DD.');
     }
   }
