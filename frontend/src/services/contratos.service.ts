@@ -48,6 +48,28 @@ export interface Indicadores {
   contratos: ContratoIndicador[]
 }
 
+export interface RateioItem {
+  tipo: 'DIARIA' | 'REEMBOLSO'
+  referenciaId: string
+  codigo?: string
+  data: string
+  horas?: number
+  categoria?: string
+  valorCentavos: number
+}
+
+export interface RateioContrato {
+  contratoId: string
+  centroCusto: string | null
+  periodo: { inicio: string | null; fim: string | null }
+  diariasHomologadas: number
+  diariasCentavos: number
+  reembolsosAprovados: number
+  reembolsosCentavos: number
+  totalCentavos: number
+  itens: RateioItem[]
+}
+
 async function requisicao<T>(url: string, init: RequestInit = {}): Promise<T> {
   let resposta: Response
   try { resposta = await AuthApi.requisicaoAutenticada(url, init) }
@@ -64,6 +86,9 @@ async function requisicao<T>(url: string, init: RequestInit = {}): Promise<T> {
 }
 
 export const ContratosApi = {
+  listarGestores() {
+    return requisicao<{ id: string; email: string; ativo: boolean }[]>('/api/contratos/gestores')
+  },
   listar(status?: StatusContrato) {
     const params = status ? `?status=${status}` : ''
     return requisicao<Contrato[]>(`/api/contratos${params}`)
@@ -85,10 +110,19 @@ export const ContratosApi = {
   encerrar(id: string) {
     return requisicao<Contrato>(`/api/contratos/${id}/encerrar`, { method: 'PATCH' })
   },
-  indicadores(inicio?: string, fim?: string) {
+  rateio(id: string, inicio?: string, fim?: string) {
     const params = new URLSearchParams()
     if (inicio) params.set('inicio', inicio)
     if (fim) params.set('fim', fim)
+    const query = params.size ? `?${params}` : ''
+    return requisicao<RateioContrato>(`/api/contratos/${id}/rateio${query}`)
+  },
+  indicadores(inicio?: string, fim?: string, status?: StatusContrato, contratoId?: string) {
+    const params = new URLSearchParams()
+    if (inicio) params.set('inicio', inicio)
+    if (fim) params.set('fim', fim)
+    if (status) params.set('status', status)
+    if (contratoId) params.set('contratoId', contratoId)
     const query = params.size ? `?${params}` : ''
     return requisicao<Indicadores>(`/api/contratos/indicadores${query}`)
   },
