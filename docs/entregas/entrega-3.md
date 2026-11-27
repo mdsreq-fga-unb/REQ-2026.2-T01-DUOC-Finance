@@ -81,27 +81,11 @@ A gravação oficial do Ponto de Controle 3 (realizada em **16/11/2026**) aprese
 
 ### Evidências de Execução e Qualidade (Staging/Docker, Testes e CI/CD)
 
+A [verificação dos requisitos por avaliação em pares](../requisitos/feedback.md) registra os achados, as deliberações e as alterações decorrentes. A [verificação técnica do Incremento 1](../mvp/dod.md#incremento-1) concentra as evidências de execução, a inspeção por PR e os testes associados aos critérios de aceitação. A aprovação das suítes não comprova, isoladamente, o atendimento integral dos requisitos.
+
+A [validação do protótipo](../governanca/atas/reuniao-06.md) no Figma não equivale à homologação do sistema integrado, ainda pendente no fechamento do PC3. A [sessão de homologação realizada em 22/11/2026](../mvp/dod.md#homologacao-incrementos-1-e-2) está registrada no DoD como evento posterior à entrega, com seus resultados e limitações.
+
 <div class="req-evidence-media-grid">
-  <div class="req-evidence-media-card">
-    <img src="../../assets/images/evidencias/containers.png" alt="Containers Docker em execução" loading="lazy">
-    <span class="req-evidence-media-caption">Containers Docker ativos (db, backend e frontend)</span>
-  </div>
-  <div class="req-evidence-media-card">
-    <img src="../../assets/images/evidencias/dashboard.png" alt="Dashboard DUOC Finance autenticado" loading="lazy">
-    <span class="req-evidence-media-caption">Visão Geral (Dashboard) após login autenticado</span>
-  </div>
-  <div class="req-evidence-media-card">
-    <img src="../../assets/images/evidencias/apontamento.png" alt="Listagem de Apontamentos RVT" loading="lazy">
-    <span class="req-evidence-media-caption">Módulo de Apontamentos de Campo (RVT) em execução</span>
-  </div>
-  <div class="req-evidence-media-card">
-    <img src="../../assets/images/evidencias/testes-backend.png" alt="Testes Backend Vitest" loading="lazy">
-    <span class="req-evidence-media-caption">107/107 testes backend aprovados</span>
-  </div>
-  <div class="req-evidence-media-card">
-    <img src="../../assets/images/evidencias/testes-frontend.png" alt="Testes Frontend Vitest" loading="lazy">
-    <span class="req-evidence-media-caption">18/18 testes frontend aprovados</span>
-  </div>
   <div class="req-evidence-media-card">
     <img src="../../assets/images/evidencias/actions2.png" alt="Execuções CI/CD no GitHub Actions" loading="lazy">
     <span class="req-evidence-media-caption">Workflows CI/CD e Deploy aprovados no GitHub Actions</span>
